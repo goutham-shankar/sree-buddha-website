@@ -1,0 +1,66 @@
+.landing_page{
+    position: relative;
+    height: max-content;
+}
+.college_background{
+    width: 100%; 
+    z-index: -1;    
+}
+.landing_page_content{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    font-family: 'poppins';
+    color: white;
+    /* background-color: red; */
+    /* width: max-content; */
+}
+.landing_page_title1{
+    font-size: 100px;
+    font-weight: 500;
+}
+.landing_page_title2{
+    font-size: 32px;
+    font-weight: 400;
+}
+.landing_page_title3{
+    font-size: 32px;
+    background-color: rgba(0, 0, 0, 0.325);
+    width: min-content;
+    padding: 10px 20px;
+    font-weight: 400;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+.landing_page_about_us{
+    font-size: 18px;
+    font-weight: 300;
+    width: 50%;
+    margin-top: 5px;
+    
+}
+.landing_page_buttons{
+    display: flex;
+    margin-top: 20px;
+}
+
+.landing_page_buttons a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 50px;
+    margin-right: 30px;
+    transition: 0.2s;
+}
+.landing_page_buttons :nth-child(1){
+    background-color: #E6B66D;
+}
+.landing_page_buttons :nth-child(1):hover{
+    background-color: #e59215;
+}
+.landing_page_buttons :nth-child(2):hover{
+    background-color: #c0c0c0;
+}
+
+
