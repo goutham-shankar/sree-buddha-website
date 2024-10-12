@@ -57,7 +57,8 @@
     left: 0px;
     width: max-content;
     background-color: white;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow:0px 1px rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
     height: 0px;
     /* transition: height 0.5s; */
     transition: height 0.4s ease-out;

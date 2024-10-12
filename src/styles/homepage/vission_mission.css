@@ -1,0 +1,28 @@
+.vision_and_mission{
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'poppins';
+    background-color: #E6B66E;
+    padding: 0px 100px;
+}
+.vision_and_mission div{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+}
+.vision_and_mission div h3{
+    font-size: 35px;
+    font-weight: 800;
+    /* width: 200px; */
+}
+.vision_and_mission div p{
+    font-size: 18px;
+    width:90%;
+}

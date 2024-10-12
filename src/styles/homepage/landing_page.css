@@ -1,6 +1,11 @@
 .landing_page{
     position: relative;
-    height: max-content;
+    /* height: max-content; */
+    /* height: min-content; */
+    /* width: max-content; */
+    /* width: 100%; */
+    background-color: #E6B66E;
+
 }
 .college_background{
     width: 100%; 
@@ -14,6 +19,10 @@
     color: white;
     /* background-color: red; */
     /* width: max-content; */
+}
+.landing_page h3{
+    text-shadow: 2px 2px 5px #000000;
+
 }
 .landing_page_title1{
     font-size: 100px;
