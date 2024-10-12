@@ -16,3 +16,43 @@
   background-color: #eaeaea;
   height: 100%;
 }
+.extracontents {
+  margin-left: 120px;
+}
+.advisorys {
+  margin-left: 100px;
+  font-size: 37px;
+  /* font-weight: 600; */
+  padding: 10px;
+  margin-top: 20px;
+  font-weight: 1000;
+}
+
+.listofppl {
+  margin-top: 10px;
+  font-size: 22px;
+  line-height: 40px;
+}
+.content2 {
+  font-size: 22px;
+  line-height: 30px;
+  margin-top: 40px;
+}
+.list {
+  font-size: 22px;
+  line-height: 40px;
+  padding-top: 10px;
+  padding-left: 40px;
+}
+.others {
+  margin: 20px;
+  font-size: 37px;
+  margin-left: 100px;
+  font-weight: 600;
+}
+.members {
+  font-size: 22px;
+  margin-bottom: 40px;
+  /* padding-left: 20px; */
+  line-height: 30px;
+}

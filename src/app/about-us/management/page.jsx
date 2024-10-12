@@ -56,48 +56,84 @@ const management = () => {
           pic={ASunilKumar.src}
         />
         <img className="line" src={Line2.src} alt="Unable to load image" />
-        <h2>Advisory Committee</h2>
-        <p>
-          Dr. Ramesh Unnikrishnan <br />
-          Regional Officer(SWRO/AICTE) & Director,AICTE
-          <br /> Dr. A. Ajayaghosh
-          <br />
-          Distinguished Scientist, CSIR,NIIST, Thiruvananthapuram
-          <br /> Dr. Gangan Prathap Former
-          <br />
-          Vice Chancellor, CUSAT and Scientist at CSIR,NIIST, Thiruvananthapuram
-          <br />
-          Mr. John Mathai
-          <br />
-          FormerChief Secretary, Govt.of Kerala
-          <br />
-          Mr. S. D. Shibulal
-          <br />
-          Former Chief Executive Officer & Managing Director, INFOSYS.
-        </p>
 
-        <p>
-          The Managing body consists of persons from different walks of life.
-          Many of them are professionals and are associated with a number of
-          other educational institutions like: Sree Narayana Public School,
-          Kollam [The most reputed CBSE affiliated Senior Secondary School in
-          Kollam District]. Sree Buddha Central School, Karunagapally [A reputed
-          Senior Secondary School affiliated to CBSE]. Sree Narayana College of
-          Technology, Kollam [A college offering MCA, B.Sc. Biotechnology and
-          B.Com. Computer Applications – affiliated to the University of Kerala.
-          Sree Buddha Central School, Pattoor. Sree Narayana Institute of
-          Ayurvedic Studies And Research, Puthur.
-        </p>
-        <h2>Other Members</h2>
-        <p>
-          Sri. G. Yatheesh Sri. G. Venugopal Smt. Kavita Narayanan Smt. P.
-          Indira Vipin Dr. Ravindran G Sri. T. V. Rajan Dr. Raji Raveendran Dr.
-          K. B. Manoj Sri. R. Ravi Dr. M. Asokan Sri. A. C .Vijayachandran Sri.
-          G .Suseelan Sri. G. Sundaresan Sri. K K Sivadasan Sri. K Ravindran
-          Sri. R Uthaman Sri. M.Jayamon Sri. K N Muraleedharan Sri. K K
-          Chandrasena Panicker Sri. K K Sunil Kumar Sri. Swamidas C Sri.
-          Karunakaran Raffi
-        </p>
+        <div className="advisorys">Advisory Committee</div>
+        <div className="extracontents">
+          <p className="listofppl">
+            Dr. Ramesh Unnikrishnan <br />
+            Regional Officer(SWRO/AICTE) & Director,AICTE
+            <br /> Dr. A. Ajayaghosh
+            <br />
+            Distinguished Scientist, CSIR,NIIST, Thiruvananthapuram
+            <br /> Dr. Gangan Prathap Former
+            <br />
+            Vice Chancellor, CUSAT and Scientist at
+            CSIR,NIIST, Thiruvananthapuram
+            <br />
+            Mr. John Mathai
+            <br />
+            FormerChief Secretary, Govt.of Kerala
+            <br />
+            Mr. S. D. Shibulal
+            <br />
+            Former Chief Executive Officer & Managing Director, INFOSYS.
+          </p>
+
+          <p className="content2">
+            The Managing body consists of persons from different walks of life.
+            Many of them are professionals and are associated with a number of
+            other educational institutions like:
+          </p>
+          <ul className="list">
+            <li>
+              Sree Narayana Public School, Kollam [The most reputed CBSE
+              affiliated Senior Secondary School in Kollam District].
+            </li>
+            <li>
+              {" "}
+              Sree Buddha Central School, Karunagapally [A reputed Senior
+              Secondary School affiliated to CBSE].
+            </li>
+            <li>
+              Sree Narayana College of Technology, Kollam [A college offering
+              MCA, B.Sc. Biotechnology and B.Com. Computer Applications –
+              affiliated to the University of Kerala.{" "}
+            </li>
+            <li>
+              Sree Buddha Central School, Pattoor. Sree Narayana Institute of
+              Ayurvedic Studies And Research, Puthur.
+            </li>
+          </ul>
+        </div>
+        <h2 className="others">Other Members</h2>
+        <div className="extracontents">
+          <p className="members">
+            Sri. G. Yatheesh
+            <br />
+            Sri. G. Venugopal
+            <br />
+            Smt. Kavita Narayanan <br />
+            Smt. P. Indira Vipin <br />
+            Dr. Ravindran G<br /> Sri. T. V. Rajan
+            <br /> Dr. Raji Raveendran
+            <br /> Dr. K. B. Manoj <br />
+            Sri. R. Ravi <br />
+            Dr. M. Asokan <br />
+            Sri. A. C .Vijayachandran <br />
+            Sri. G .Suseelan <br />
+            Sri. G. Sundaresan <br />
+            Sri. K K Sivadasan <br />
+            Sri. K Ravindran
+            <br />
+            Sri. R Uthaman
+            <br /> Sri. M.Jayamon
+            <br /> Sri. K N Muraleedharan <br />
+            Sri. K K Chandrasena Panicker <br />
+            Sri. K K Sunil Kumar <br />
+            Sri. Swamidas C <br />
+            Sri. Karunakaran Raffi
+          </p>
+        </div>
       </div>
       <Footer />
     </div>
