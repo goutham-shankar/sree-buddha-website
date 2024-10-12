@@ -1,12 +1,13 @@
 /* components/Footer.module.css */
 .footer {
     min-height: 222px;
-    width: 200%;
+    width: 100%;
     display: flex;
     column-gap: 20px;
     justify-content: center;
     background-color: #141212;
     padding: 35px 100px;
+    box-sizing: border-box;
     color: #fff; 
     font-family: 'Poppins';
     flex-wrap: wrap;
