@@ -1,0 +1,77 @@
+/* General Styles */
+.profile {
+    color: #845714;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vw; /* Using viewport width for responsive text size */
+    font-weight: 700;
+    line-height: 1.2em; /* Make the line-height relative */
+    text-align: left;
+}
+
+/* Container spans the full width of the viewport */
+.container {
+    width: 100vw;
+}
+
+/* Padding scales for smaller screens */
+.main {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.college_background {
+    width: 100%;
+}
+
+.paragraph {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Text in Paragraph */
+.paragraph b {
+    font-size: 1.5rem; /* Adjusted for responsiveness */
+}
+
+/* Media Queries for Better Responsiveness */
+
+/* For tablets and medium devices */
+@media only screen and (max-width: 1024px) {
+    .profile {
+        font-size: 4vw; /* Smaller text for medium screens */
+    }
+
+    .main {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .paragraph b {
+        font-size: 1.2rem;
+    }
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 768px) {
+    .profile {
+        font-size: 5vw; /* Further reduce font size */
+    }
+
+    .main {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .paragraph b {
+        font-size: 1rem;
+    }
+    
+    .pic {
+        flex-direction: column; /* Stack images vertically on small screens */
+    }
+}
