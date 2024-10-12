@@ -5,6 +5,7 @@
   margin-top: 20px;
   font-family: "Poppins", sans-serif;
   margin-bottom: 40px;
+  overflow-x: hidden;
 }
 .name {
   font-size: 35px;
@@ -28,8 +29,8 @@
   padding-top: 20px;
 }
 .pic {
-  max-height: 25dvh;
-  margin-right: 20px;
+  max-height: 30dvh;
+  margin-right: 10px;
 }
 .container {
   display: flex;
@@ -38,4 +39,8 @@
   /* margin: 10px; */
   margin-right: 30px;
   /* padding: 0px; */
+  gap: 30px;
+}
+.line {
+  margin-left: 100px;
 }
