@@ -5,9 +5,20 @@
   margin: 0px;
 }
 
+html, body{
+  width: 100%;
+  /* overflow-x: hidden; */
+}
+
 
 
 :root{
 
   --font1: 'poppins'
+}
+
+@media( max-width : 100vh){
+  .navbar{
+    display: none;
+  }
 }

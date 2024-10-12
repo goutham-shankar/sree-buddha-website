@@ -26,3 +26,23 @@
     font-size: 18px;
     width:90%;
 }
+
+@media ( max-width : 100vh){
+    .vision_and_mission {
+        
+        flex-direction: column;
+        height: max-content;
+    }
+    .vision_and_mission div{
+        width: 80vw;
+        box-sizing: border-box;
+        padding: 30px;
+    }
+    .vision_and_mission div h3{
+        font-size: 1.6rem;
+    }
+    .vision_and_mission div p{
+        font-size: 1rem;
+        text-align: center;
+    }
+}

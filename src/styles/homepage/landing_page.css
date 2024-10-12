@@ -1,10 +1,8 @@
 .landing_page{
     position: relative;
-    /* height: max-content; */
-    /* height: min-content; */
-    /* width: max-content; */
-    /* width: 100%; */
+    width: 100vw;
     background-color: #E6B66E;
+    overflow-x: hidden;
 
 }
 .college_background{
@@ -17,15 +15,14 @@
     left: 5%;
     font-family: 'poppins';
     color: white;
-    /* background-color: red; */
-    /* width: max-content; */
 }
 .landing_page h3{
     text-shadow: 2px 2px 5px #000000;
 
 }
 .landing_page_title1{
-    font-size: 100px;
+    /* font-size: 100px; */
+    font-size: 10vh;
     font-weight: 500;
 }
 .landing_page_title2{
@@ -72,4 +69,58 @@
     background-color: #c0c0c0;
 }
 
+
+@media ( max-width : 100vh) {
+    .landing_page{
+        align-items: flex-end;
+        width: 100vw;
+        /* justify-content: flex-end; */
+        align-items: flex-end;
+        /* background-color: red; */
+        /* overflow: hidden; */
+        /* justify-content: right; */
+    }
+    .college_background{
+        width: auto;
+        height: 70vh;
+        margin-left: -90%;
+    }
+
+    .landing_page_title1{
+        font-size: 3.4rem;
+    }
+    .landing_page_title2{
+        font-size: 1.2rem;
+    }
+    .landing_page_title3{
+        font-size: 1.3rem;
+        margin-top: 30px;
+        
+    }
+    .landing_page_about_us{
+        font-size: 1rem;
+        
+        width: 90%;
+    }
+    .landing_page_buttons{
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+    }
+    .landing_page_content{
+        /* background-color: green; */
+        width: 100%;
+        justify-content: center;
+        /* align-items: center; */
+        display: flex;
+        flex-direction: column;
+        padding: 0px 21px;
+        box-sizing: border-box;
+        left: 0px;
+        /* right: auto; */
+    }
+}
 

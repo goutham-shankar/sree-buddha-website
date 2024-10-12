@@ -1,19 +1,19 @@
 "use client"
 
 import React from 'react'
-import "@/styles/homepage/Events.css"
+import "@/styles/homepage/research.css"
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 
-export default function Events() {
+export default function Research() {
   return (
     <div className="events">
 
       <div className="events_container">
         <div className="events_title_area">
-          <h3>EVENTS</h3>
+          <h3>Research</h3>
         </div>
 
         <div className="carousal_container">

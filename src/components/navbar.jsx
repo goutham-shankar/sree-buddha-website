@@ -1,9 +1,16 @@
+"use client"
+
 import React from 'react'
 import "../styles/navbar.css"
 import logo from "../assets/images/sree_buddha_logo.png"
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function Navbar() {
+
+    // const [visibleSubMenus, setVisibleSubMenus]  = useState([0,0,0,0,0,0,0,0])
+   
+
   return (
     <div className = "navbar">
 
@@ -22,7 +29,7 @@ export default function Navbar() {
 
                 <div className ="navbar_menu">   
                     <span>About Us</span>       
-                    <div className="submenu">
+                    <div className="submenu"   >
                         <ul>
                             <Link className = "submenu_link" href = "">Profile</Link>
                             <Link className = "submenu_link" href = "">Vision and Mission</Link>
@@ -44,7 +51,7 @@ export default function Navbar() {
                 </div>
                 <div className ="navbar_menu" >   
                     <span>Research</span>    
-                    <div className="submenu">
+                    <div className="submenu" >
                         <ul>
                             <Link className = "submenu_link" href = "">Reserach Coucil</Link>
                             <Link className = "submenu_link" href = "">Projects</Link>
@@ -57,7 +64,7 @@ export default function Navbar() {
                 </div>
                 <div className ="navbar_menu" > 
                       <span>Facilities</span>  
-                      <div className="submenu">
+                      <div className="submenu" >
                         <ul>
                             <Link className = "submenu_link" href = "">Cells and Centers</Link>
                             <Link className = "submenu_link" href = "">Central Library </Link>
@@ -73,7 +80,7 @@ export default function Navbar() {
                 </div>
                 <div className ="navbar_menu" >   
                     <span>Cells and Chapters</span>           
-                    <div className="submenu">
+                    <div className="submenu" >
                         <ul>
                             <Link className = "submenu_link" href = "">Various Cells and Commities </Link>
                             <Link className = "submenu_link" href = "">IEEE</Link>
@@ -91,7 +98,7 @@ export default function Navbar() {
                  </div>
                 <div className ="navbar_menu" >   
                     <span>Accreditation</span>      
-                    <div className="submenu">
+                    <div className="submenu" >
                         <ul>
                             <Link className = "submenu_link" href = "">Various Cells and Commities </Link>
                             <Link className = "submenu_link" href = "">IEEE</Link>
@@ -108,7 +115,7 @@ export default function Navbar() {
                 </div>
                 <div className ="navbar_menu" >   
                     <span>Academics</span>  
-                    <div className="submenu">
+                    <div className="submenu" >
                         <ul>
                             <Link className = "submenu_link" href = "">advisory system</Link>
                             <Link className = "submenu_link" href = "">acadamic calendar</Link>
@@ -124,7 +131,7 @@ export default function Navbar() {
                 </div>
                 <div className ="navbar_menu" >   
                     <span>Autonomous</span>  
-                    <div className="submenu">
+                    <div className="submenu" >
                         <ul>
                             <Link className = "submenu_link" href = "">conferments</Link>
                             <Link className = "submenu_link" href = "">governing body</Link>
@@ -141,7 +148,7 @@ export default function Navbar() {
                 </div>
                 <div className ="navbar_menu" >   
                     <span>Departments</span>      
-                    <div className="submenu">
+                    <div className="submenu" >
                         <ul>
                             <Link className = "submenu_link" href = "">Computer Science and engineering</Link>
                             <Link className = "submenu_link" href = "">EEE</Link>
