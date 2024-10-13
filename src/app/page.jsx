@@ -7,6 +7,7 @@ import Research from "@/components/homepage/Research";
 import Register202425 from "@/components/homepage/register2024-25";
 import Cells_Chapters from "@/components/homepage/Cells_Chapters";
 import Affiliations from "@/components/homepage/Affiliations";
+import Counts from "@/components/homepage/Counts";
 import NavbarMobile from "@/components/navbar_mobile";
 
 
@@ -21,6 +22,7 @@ export default function Home() {
     <Events/>
     <Register202425/>
     <Research/>
+    <Counts/>
     <Affiliations/>
     <Cells_Chapters/>
     <Footer/>
