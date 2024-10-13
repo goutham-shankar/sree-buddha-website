@@ -1,44 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .management {
   overflow-x: hidden;
 }
 .heading {
-  margin-left: 70px;
-  margin-top: 30px;
+  margin-left: 80px;
+  /* max-width: 50dvw; */
+  margin-top: 40px;
   font-size: 50px;
-  padding-left: 35px;
+  /* padding-left: 35px; */
   color: #73501c;
   font-family: "Poppins", sans-serif;
   font-weight: 1000;
+  overflow-x: hidden;
 }
 .majContainer {
   padding: 5px;
   background-color: #eaeaea;
   height: 100%;
+  overflow-x: hidden;
 }
 .extracontents {
   margin-left: 120px;
 }
 .advisorys {
-  margin-left: 100px;
+  margin-left: 80px;
   font-size: 37px;
   /* font-weight: 600; */
   padding: 10px;
   margin-top: 20px;
-  font-weight: 1000;
+  font-weight: 800;
 }
 
 .listofppl {
+  margin-left: 100px;
   margin-top: 10px;
   font-size: 18px;
   line-height: 40px;
+  /* margin-left: px; */
 }
 .content2 {
+  margin-left: 100px;
   font-size: 18px;
   line-height: 30px;
   margin-top: 40px;
 }
 .list {
+  margin-left: 100px;
   font-size: 18px;
   line-height: 40px;
   padding-top: 10px;
@@ -48,11 +60,12 @@
   margin: 20px;
   font-size: 37px;
   margin-left: 100px;
-  font-weight: 600;
+  font-weight: 800;
 }
 .members {
+  margin-left: 100px;
   font-size: 18px;
   margin-bottom: 40px;
-  /* padding-left: 20px; */
+  padding-left: 20px;
   line-height: 35px;
 }
