@@ -10,8 +10,7 @@ const profile = () => {
     <>
       <div className="container">
         <div>
-          <Navbar />
-          <NavbarMobile />
+
         </div>
         <div className="main">
           <br /><br />
@@ -60,7 +59,7 @@ const profile = () => {
         </div>
       </div>
 
-      <Footer />
+      
     </>
   );
 };

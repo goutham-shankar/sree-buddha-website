@@ -1,0 +1,20 @@
+.oronogram *{
+    font-family: 'poppins';
+}
+.oronogram{
+    width: 80%;
+    /* padding: 0px 70px; */
+    margin: auto;
+    /* background-color: red; */
+}
+.oronogram h3{
+    color: #73501C;
+    font-size: 50px;
+    margin: 40px 0px;
+
+}
+
+.oronogram img {
+    width: 100%;
+    margin-bottom: 100px;
+}

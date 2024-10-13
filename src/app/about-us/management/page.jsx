@@ -14,7 +14,7 @@ import Line2 from "@/assets/Line 2.png";
 const management = () => {
   return (
     <div className="management">
-      <Navbar />
+   
       <div className="majContainer">
         <h1 className="heading">The Management</h1>
         <Person
@@ -135,7 +135,7 @@ const management = () => {
           </p>
         </div>
       </div>
-      <Footer />
+     
     </div>
   );
 };
