@@ -1,0 +1,60 @@
+/* Base styles for larger screens (desktop) */
+.cells_and_chapters h3{
+    font-family: 'Poppins';
+    font-size: 50px;
+    margin:  30px 160px;
+}
+.cells_and_chapters ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 150px;
+    list-style: none;
+    flex-wrap: wrap; /* Allow the items to wrap into the next line if needed */
+}
+
+.cells_and_chapters li {
+    margin-right: 20px;
+}
+
+.cells_and_chapters img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+    .cells_and_chapters ul {
+        padding: 30px; /* Reduce padding */
+    }
+
+    .cells_and_chapters li {
+        flex: 0 0 45%; /* Two images per row for tablets */
+        margin-bottom: 20px; /* Space between rows */
+    }
+}
+
+/* For mobile phones (480px and below) */
+@media (max-width: 480px) {
+    .cells_and_chapters h3 {
+        width: 300px;
+        text-align: left;
+        margin-left: 50px;
+        font-size: 50px;
+    }
+
+    .cells_and_chapters ul {
+        padding-left: 50px; /* Remove padding */
+        justify-content: center;
+    }
+
+    .cells_and_chapters li {
+        flex: 0 0 45%; /* Two images per row for mobile */
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    .cells_and_chapters img {
+        max-width: 80px; /* Reduce image size */
+    }
+}
