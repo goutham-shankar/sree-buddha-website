@@ -55,7 +55,7 @@
     .profile {
         font-size: 4vw; 
         text-align: left;
-        text-indent: 0px;
+        text-indent: 50px;
     }
 
     .main {
@@ -64,7 +64,7 @@
     }
 
     .pic img {
-        width: 70%; 
+        width: 80%; 
         max-width: 500px;
     }
 
