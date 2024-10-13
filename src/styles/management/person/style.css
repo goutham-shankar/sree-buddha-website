@@ -4,7 +4,7 @@
   margin-left: 80px;
   margin-top: 20px;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   overflow-x: hidden;
 }
 .name {
@@ -17,7 +17,7 @@
   padding-left: 30px;
 }
 .captionline {
-  font-size: 22px;
+  font-size: 18px;
   padding-top: 5px;
   padding-left: 30px;
 }
@@ -29,7 +29,7 @@
   padding-top: 20px;
 }
 .pic {
-  max-height: 30dvh;
+  max-height: 25dvh;
   margin-right: 10px;
 }
 .container {
