@@ -15,7 +15,8 @@ export default function Navbar() {
     <div className = "navbar">
 
         <div className="logo_section">
-            <img src={logo.src} alt="" />
+            <a href="/"><img src={logo.src} alt="" /></a>
+            
         </div>
         <div className="navbar_right">
             <div className="important_links">
@@ -31,11 +32,11 @@ export default function Navbar() {
                     <span>About Us</span>       
                     <div className="submenu"   >
                         <ul>
-                            <Link className = "submenu_link" href = "">Profile</Link>
+                            <a className = "submenu_link" href = "/about-us/profile">Profile</a>
                             <Link className = "submenu_link" href = "">Vision and Mission</Link>
-                            <Link className = "submenu_link" href = "">Management</Link>
+                            <a className = "submenu_link" href = "/about-us/management">Management</a>
                             <Link className = "submenu_link" href = "">Principal</Link>
-                            <Link className = "submenu_link" href = "">Oranogram</Link>
+                            <a className = "submenu_link" href = "/about-us/oronogram">Oranogram</a>
                             <Link className = "submenu_link" href = "">Mandatory Disclosure</Link>
                             <Link className = "submenu_link" href = "">AICTCE EOA</Link>
                             <Link className = "submenu_link" href = "">Student code of conduct and ethics</Link>

@@ -53,11 +53,11 @@ export default function NavbarMobile() {
                     <span onClick={()=>{toggleSubmenu(0)}} >About Us</span>       
                     <div className="sidebar_submenu" style={{maxHeight: (visibleSubMenus[0]?maxHeight: "0px" )}}>
                         <ul>
-                            <Link className = "sidebar_submenu_link" href = "">Profile</Link>
-                            <Link className = "sidebar_submenu_link" href = "">Vision and Mission</Link>
-                            <Link className = "sidebar_submenu_link" href = "">Management</Link>
+                            <a className = "sidebar_submenu_link" href = "/about-us/profile">Profile</a>
+                            <a className = "sidebar_submenu_link" href = "">Vision and Mission</a>
+                            <a className = "sidebar_submenu_link" href = "/about-us/management">Management</a>
                             <Link className = "sidebar_submenu_link" href = "">Principal</Link>
-                            <Link className = "sidebar_submenu_link" href = "">Oranogram</Link>
+                            <a className = "sidebar_submenu_link" href = "/about-us/oronogram">Oranogram</a>
                             <Link className = "sidebar_submenu_link" href = "">Mandatory Disclosure</Link>
                             <Link className = "sidebar_submenu_link" href = "">AICTCE EOA</Link>
                             <Link className = "sidebar_submenu_link" href = "">Student code of conduct and ethics</Link>

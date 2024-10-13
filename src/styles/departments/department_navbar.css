@@ -1,0 +1,32 @@
+.department_navbar{
+    /* background-color: blue; */
+}
+
+.department_navbar ul{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    width: max-content;
+    padding: 10px;
+
+}
+.department_navbar ul li{
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    /* justify-content: center; */
+}
+.department_navbar ul li:hover {
+    /* background-color: rgb(227, 227, 227); */
+}
+.department_navbar ul li a{
+    color: #73501C;
+    text-decoration: none;
+}
+
+@media( max-width : 100vh){
+    .department_navbar{
+        display: none;
+    }
+}

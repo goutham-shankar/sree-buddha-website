@@ -1,13 +1,30 @@
 "use client"
 
 import React from 'react'
+
 import "@/styles/homepage/Events.css"
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import { useEffect, useState } from "react"
 
 
 export default function Events() {
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth); // Set initial screen width
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth); // Update state on resize
+    };
+
+    window.addEventListener('resize', handleResize); // Add resize event listener
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); 
   return (
     <div className="events">
 
@@ -27,7 +44,7 @@ export default function Events() {
             swipeable
             dynamicHeight={false}
             centerMode
-            centerSlidePercentage={33.33}
+            centerSlidePercentage={100/( screenWidth / 512  )}
             renderArrowPrev={(onClickHandler, hasPrev, label) =>
               hasPrev && (
                 <button type="button" onClick={onClickHandler} className="custom-arrow prev">

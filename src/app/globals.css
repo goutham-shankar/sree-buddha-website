@@ -3,10 +3,12 @@
 *{
   padding: 0px;
   margin: 0px;
+  font-family: 'poppins';
 }
 
 html, body{
   width: 100%;
+  background-color: #E6E6E6;
   /* overflow-x: hidden; */
 }
 
