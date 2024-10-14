@@ -1,0 +1,88 @@
+.container {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-align: left;
+    color: #845714;
+}
+
+.content {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.content ul {
+    list-style: none; /* Remove default bullet points */
+}
+
+.content ul li {
+    padding-left: 20px; /* Space for the arrow */
+    text-indent: -10px; /* Negative indent to align the text properly */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+
+.content ul li::before {
+    content: "\25B6"; /* Unicode for right-pointing triangle (►) */
+    padding-right: 0px;
+    color: black; /* Change the color of the arrow if needed */
+    position: absolute;
+    margin-left: -20px; /* Align the arrow with text */
+}
+
+/* Responsive styles for tablets (800px and below) */
+@media only screen and (max-width: 800px) {
+    .container {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .title {
+        font-size: 5vw; /* Larger font for tablets */
+    }
+
+    .content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .content ul li {
+        padding-left: 15px;
+        text-indent: -7px; /* Adjust indent for tablet */
+    }
+
+    .content ul li::before {
+        margin-left: -15px; /* Align arrow for tablet */
+    }
+}
+
+/* Responsive styles for mobile (480px and below) */
+@media only screen and (max-width: 480px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .title {
+        font-size: 6vw; /* Smaller font for mobile */
+    }
+
+    .content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .content ul li {
+        padding-left: 15px;
+        text-indent: -5px; /* Adjust indent for mobile */
+    }
+
+    .content ul li::before {
+        margin-left: -15px; /* Align arrow for mobile */
+    }
+}
