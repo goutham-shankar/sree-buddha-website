@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600&display=swap");
+
 .management {
   overflow-x: hidden;
+  width: 80%;
+  margin: auto;
 }
+
 .heading {
-  margin-left: 30px;
   margin-top: 30px;
   font-size: 50px;
   padding-left: 35px;
@@ -11,18 +14,18 @@
   font-family: "Poppins", sans-serif;
   font-weight: 1000;
 }
+
 .majContainer {
   padding: 10px;
-  background-color: #eaeaea;
   height: 100%;
 }
-.extracontents {
-  margin-left: 120px;
+
+.extracontents p {
+  font-size: 22px;
 }
+
 .advisorys {
-  margin-left: 100px;
-  font-size: 37px;
-  /* font-weight: 600; */
+  font-size: 28px;
   padding: 10px;
   margin-top: 20px;
   font-weight: 1000;
@@ -30,29 +33,109 @@
 
 .listofppl {
   margin-top: 10px;
-  font-size: 22px;
   line-height: 40px;
 }
+
 .content2 {
   font-size: 22px;
   line-height: 30px;
   margin-top: 40px;
 }
+
 .list {
   font-size: 22px;
   line-height: 40px;
   padding-top: 10px;
   padding-left: 40px;
 }
+
 .others {
   margin: 20px;
-  font-size: 37px;
   margin-left: 100px;
   font-weight: 600;
 }
+
 .members {
-  font-size: 22px;
   margin-bottom: 40px;
-  /* padding-left: 20px; */
   line-height: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .management {
+    width: 90%;
+    margin: auto;
+  }
+
+  .heading {
+    font-size: 40px;
+    padding-left: 10px;
+  }
+
+  .majContainer {
+    padding: 5px;
+  }
+
+  .list, .content2 {
+    font-size: 20px;
+    padding-left: 20px;
+  }
+
+  .listofppl {
+    font-size: 16px;
+  }
+}
+/* phone screen */
+@media (max-width: 480px) {
+  .management {
+    width: 95%;
+    margin: auto;
+  }
+
+  .heading {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 40px;
+    padding-left: 25px;
+  }
+
+  .majContainer {
+    padding: 0%;
+    background-color: #eaeaea;
+    height: 100%;
+    margin-left: 0%;
+  }
+
+  .advisorys {
+    font-size: 18px;
+    padding-left: 29px;
+  }
+
+  .listofppl, .list, .content2 {
+    font-size: 14px;
+    line-height: 24px;
+    padding-left: 5px;
+  }
+
+  .extracontents p {
+    font-size: 14px;
+  }
+
+  .members {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .others {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  .extracontents{
+    /* background-color: #73501c; */
+      padding-left:13px;
+      padding-right:13px;
+      margin-left: 10px ;
+      width: 90%;
+      margin-right: 10px;
+  }
 }

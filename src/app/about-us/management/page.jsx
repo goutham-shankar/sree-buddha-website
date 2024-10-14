@@ -97,7 +97,7 @@ const management = () => {
             <li>
               Sree Narayana College of Technology, Kollam [A college offering
               MCA, B.Sc. Biotechnology and B.Com. Computer Applications –
-              affiliated to the University of Kerala.{" "}
+              affiliated to the University of Kerala].{" "}
             </li>
             <li>
               Sree Buddha Central School, Pattoor. Sree Narayana Institute of
