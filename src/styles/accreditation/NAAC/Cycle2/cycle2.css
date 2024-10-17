@@ -1,0 +1,32 @@
+@media (min-width: 1025px) {
+  .Nav {
+    margin: 40px;
+    height: 40px;
+    /* background-color: #c65050; Light grey background */
+    border-bottom: 2px solid #090707; /* Bottom border to mimic the underline */
+  }
+
+  .Nav ul {
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+  }
+
+  .Nav li {
+    padding: 0 15px; /* Spacing between list items */
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* .Nav li.active {
+    border-bottom: 2px solid #cd3b3b; /* Active tab underline */
+  /* } */
+  .Nav li:hover {
+    /* border-bottom: 2px solid #000000;  */
+    color: rgba(0, 0, 0, 0.393);
+  }
+}

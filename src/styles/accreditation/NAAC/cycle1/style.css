@@ -2,9 +2,6 @@
 
 /* For desktop devices (screens larger than 1024px) */
 @media (min-width: 1024px) {
-  .body {
-    overflow-x: hidden;
-  }
   .Container {
     /* width: 85dvw; */
     /* padding-left: 30px; */
