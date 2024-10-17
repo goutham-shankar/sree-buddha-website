@@ -72,22 +72,32 @@
 
 @media ( max-width : 100vh) {
     .landing_page{
-        align-items: flex-end;
-        width: 100vw;
+        /* align-items: flex-end; */
+        /* display: flex; */
+        align-items: center;
+        justify-content: center;
+        /* width: 100vw; */
+        /* height: 100%; */
+        width: auto;
+        height: max-content;
+        /* height: 60vh; */
+        /* background-color: red; */
         /* justify-content: flex-end; */
-        align-items: flex-end;
+        /* align-items: flex-end; */
         /* background-color: red; */
         /* overflow: hidden; */
         /* justify-content: right; */
     }
     .college_background{
         width: auto;
-        height: 70vh;
-        margin-left: -90%;
+        /* height: 100%; */
+        /* height: 70vh; */
+        /* margin-left: -90%; */
     }
 
     .landing_page_title1{
         font-size: 3.4rem;
+        line-height: 100%;
     }
     .landing_page_title2{
         font-size: 1.2rem;
@@ -105,9 +115,10 @@
     .landing_page_buttons{
         /* background-color: red; */
         display: flex;
-        justify-content: center;
-        align-items: center;
+        /* justify-content: center; */
+        /* align-items: center; */
         width: 100%;
+        font-size: 12px;
 
     }
     .landing_page_content{

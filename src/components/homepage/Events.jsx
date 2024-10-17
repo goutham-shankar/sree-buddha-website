@@ -11,7 +11,7 @@ import { useEffect, useState } from "react"
 
 export default function Events() {
 
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth); // Set initial screen width
+  const [screenWidth, setScreenWidth] = useState(1); // Set initial screen width
 
   useEffect(() => {
     const handleResize = () => {

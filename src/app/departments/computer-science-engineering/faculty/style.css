@@ -1,0 +1,32 @@
+.faculty_table{
+    margin: 30px;
+}
+
+.faculty_table img{
+    
+    width: 80px;
+    margin-right: 20px;
+}
+
+.faculty_table tr{
+    font-size: 12px;
+    border: 1px solid black;
+    /* background-color: red; */
+}
+.faculty_table td{
+    padding: 5px 10px;
+
+    /* width: max-content; */
+}
+
+@media ( max-width  : 100vh){
+    .faculty_table{
+        width: 100vw;
+    }
+    .faculty_table tr{
+        width: 100%;
+    }
+    .faculty_table img{
+        width: 60px;
+    }
+}

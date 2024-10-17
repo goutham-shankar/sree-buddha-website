@@ -10,7 +10,7 @@ import { Carousel } from "react-responsive-carousel";
 
 
 export default function Research() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth); // Set initial screen width
+  const [screenWidth, setScreenWidth] = useState(1); // Set initial screen width
 
   useEffect(() => {
     const handleResize = () => {
