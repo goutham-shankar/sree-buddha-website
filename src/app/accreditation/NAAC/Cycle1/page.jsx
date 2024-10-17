@@ -1,6 +1,6 @@
 import React from "react";
 import "@/styles/accreditation/NAAC/cycle1/style.css";
-import cycle1 from "@/assets/images/accreditation/cycle1.png";
+// import cycle1 from "/assets/images/accreditation/cycle1.png";
 const page = () => {
   return (
     <div>
@@ -33,7 +33,7 @@ const page = () => {
 
         <div className="container1">
           <img
-            src={cycle1.src}
+            src={"/assets/images/accreditation/cycle1.png"}
             alt="certificate of accreditation"
             className="certificate"
           />
