@@ -1,0 +1,235 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Default font family */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.main {
+    padding: 40px 150px; /* Top, Left & Right padding */
+    overflow-x: hidden;   
+}
+
+.title {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 84.75px;
+    text-align: left;
+    color: #73501C;
+}
+
+.pic {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo {
+    height: 150px;
+}
+
+.headings {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 37.5px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.title2 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 33px;
+    text-align: left;
+}
+
+.programs {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 50px;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.link {
+    width: 436px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6B66D;
+    border-radius: 40px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.link:hover {
+    background-color: #d6a94d; /* Darker shade on hover */
+}
+
+.paragraph {
+    font-size: 22px;
+    /* font-weight: 300; */
+    line-height: 33px;
+    text-align: justify;
+}
+
+.mtech {
+    margin-bottom: 20px;
+    font-size: 22px;
+    /* font-weight: 500; */
+    line-height: 33px;
+    /* text-align: justify; */
+}
+/* ----------------------------------------------------------------------------- */
+.feestructure {
+    display: flex; /* Use Flexbox to arrange children in a row */
+    flex-direction: row; /* Ensure they are in a row by default */
+    justify-content: space-between; /* Space out items */
+    align-items: flex-start; /* Align items at the start */
+    padding: 10px; /* Optional padding */
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+
+.feename, .fee {
+    font-weight: 500;
+    font-family: 'poppins';
+    font-size: 20px;
+    flex: 1; /* Make both columns flexible */
+    min-width: 200px; /* Set a minimum width for better responsiveness */
+    margin-right: 20px; /* Add space between the columns */
+}
+
+/* Remove right margin from the last element */
+.fee {
+    margin-right: 0; /* No right margin for the last element */
+}
+
+.title2 {
+    font-weight: bold; /* Make title2 bold */
+    margin-top: 10px; /* Add margin for spacing */
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+.bold {
+    font-size: 22px;
+    /* font-weight: 500; */
+    line-height: 35px;
+    margin: 15px 0; /* Top and bottom margin */
+}
+
+.last {
+    padding-left: 22px;
+}
+
+/* Responsive Styles */
+
+/* For tablets (800px and below) */
+@media only screen and (max-width: 800px) {
+    .main {
+        padding: 40px 50px; /* Adjust padding for tablets */
+    }
+
+    .title {
+        font-size: 40px; /* Adjust font size for tablets */
+    }
+
+    .headings {
+        font-size: 22px; /* Adjust heading size for tablets */
+    }
+
+    .link {
+        width: 100%; /* Full width on tablets */
+        height: 60px; /* Adjust height */
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .programs,
+    .title2,
+    .mtech,
+    .paragraph {
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .feename,
+    .fee {
+        font-size: 16px; /* Adjust fee text size */
+        width: 100%; /* Full width for fee items */
+    }
+}
+
+/* For mobile (480px and below) */
+@media  (max-width: 480px) {
+    .main {
+        padding-left: 30px;
+        padding-right: 30px; /* Adjust padding for mobile */
+        overflow-x: hidden;
+        
+    }
+    .photo{
+        width: 100px;
+        height: 60px;
+    }
+    .pic{
+        height: 60px;
+        margin-top: 0px;
+    }
+    .title{
+        font-size: 35px;
+        padding-bottom: 0px;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+    /* -------------------------------------------------------------- */
+    .feestructure {
+
+        flex-direction: row; /* Stack items vertically on small screens */
+        background-color: aqua;
+    }
+
+    .feename, .fee {
+        width: 40%;
+        margin-right: 0; /* Remove right margin for mobile */
+    }
+
+    .fee ul {
+        list-style: none; /* Remove bullet points */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+    }
+    
+    .fee ul li {
+        display: flex; /* Use Flexbox for list items */
+        justify-content: space-between; /* Space between items */
+        padding: 5px 0; /* Add padding for spacing */
+    }
+/* ---------------------------------------------------------------------------- */
+    .bold{
+        font-size: 16px;
+    }
+    .programs{
+        font-size: 16px;
+        line-height: 30px;
+        padding-left: 10px;
+    }
+    .programs ul{
+        margin-bottom: 10px;
+    }
+    .link{
+        height: 40px;
+        width: 280px;
+        margin-left: 20px;
+    }
+    .paragraph{
+        font-size: 16px;
+    }
+    .mtech{
+        font-size: 16px;
+    }
+    
+}
