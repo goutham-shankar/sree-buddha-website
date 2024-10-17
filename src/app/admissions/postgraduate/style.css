@@ -32,7 +32,15 @@ body {
 .photo {
     height: 150px;
 }
+.no-underline {
+    text-decoration: none;
+    color: inherit; /* Optional: Ensures the text color remains default or inherited */
+}
 
+.no-underline:hover {
+    color: #f48208;
+    text-decoration: none; /* Ensures no underline appears on hover */
+}
 .headings {
     font-size: 25px;
     font-weight: 700;
@@ -155,7 +163,15 @@ body {
     .headings {
         font-size: 22px; /* Adjust heading size for tablets */
     }
-
+    .pic{
+        align-items: center;
+        justify-content: center;
+        padding-right: 50px;
+    }
+    .photo{
+        width: 190px;
+        height: 130px;
+    }
     .link {
         width: 300px; /* Full width on tablets */
         height: 60px; /* Adjust height */
