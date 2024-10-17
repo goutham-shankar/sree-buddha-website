@@ -21,7 +21,7 @@ export default function page() {
         
     </div>
     <br />
-    <div className="headings">programs offered</div>
+    <div className="headings">Programs Offered</div>
     <div className="programs">
         <ul>Electronics & Communication Engineering - Embedded Systems</ul>
         <ul>Biotechnology and Biochemical Engineering</ul>
@@ -31,8 +31,9 @@ export default function page() {
         <ul> Electrical Engineering - Electrical Machines</ul>
     </div>
       <div className="links">
-      <div className="link"><a href="  https://docs.google.com/forms/d/e/1FAIpQLSe3RvBGmTslrxDMHBYn0vGufABqCvqUZnumUazbylQZ3J5lgQ/viewform">Quick Registration</a></div>
-    <div className="link"><a href="https://sbce.ac.in/m-tech-application-form/">Online Application form</a></div><br />
+        <a className='no-underline' href="https://docs.google.com/forms/d/e/1FAIpQLSe3RvBGmTslrxDMHBYn0vGufABqCvqUZnumUazbylQZ3J5lgQ/viewform"><div className="link">Quick Registration</div></a>
+        <a className='no-underline' href="https://sbce.ac.in/m-tech-application-form/"><div className="link">Online Application form</div></a>
+      
 
       </div>
    

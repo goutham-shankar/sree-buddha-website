@@ -1,0 +1,41 @@
+.container{
+    padding: 40px 150px;
+    overflow-x: hidden;
+   
+    
+}
+.title{
+    font-family: Poppins;
+    font-size: 50px;
+    font-weight: 700;
+    /* line-height: 84.75px; */
+    text-align: left;
+    color:   #73501C;
+    margin-bottom: 15px;
+}
+.para1,.para2{
+    font-family: poppins;
+    font-size: 22px;
+    font-weight: 400;
+    padding-bottom: 50px;
+}
+.para3{
+    font-family: poppins;
+    font-size: 18px;
+}
+.no-line{
+    text-decoration: none;
+}
+
+@media (max-width:480px){
+    .container{
+        padding: 10px 30px;
+        margin-left: 20px;
+    }
+    .title{
+        font-size: 40px;
+    }
+    .para1,.para2,.para3{
+        font-size: 16px;
+    }
+}
