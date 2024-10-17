@@ -21,7 +21,7 @@ export default function page() {
         
     </div>
     <br />
-    <div className="headings">programs offered</div>
+    <div className="headings">Programs Offered</div>
     <div className="programs">
         <ul>Electronics & Communication Engineering - Embedded Systems</ul>
         <ul>Biotechnology and Biochemical Engineering</ul>
