@@ -32,11 +32,13 @@ const page = () => {
         </div>
 
         <div className="container1">
-          <img
-            src={"/assets/images/accreditation/cycle1.png"}
-            alt="certificate of accreditation"
-            className="certificate"
-          />
+          <div className="cerimage">
+            <img
+              src={"/assets/images/accreditation/cycle1.png"}
+              alt="certificate of accreditation"
+              className="certificate"
+            />
+          </div>
           <div className="content2">
             A NAAC Peer Team comprising of eminent academic experts visited Sree
             Buddha College of Engineering on 18,19  and 20 September 2014. NAAC
