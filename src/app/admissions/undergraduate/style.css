@@ -1,0 +1,30 @@
+body{
+    /* background-color: aqua; */
+    font-family: 'poppins';
+   
+}
+.container{
+    padding: 40px 150px;
+}
+.title{
+    font-family: Poppins;
+    font-size: 50px;
+    font-weight: 700;
+    /* line-height: 84.75px; */
+    text-align: left;
+    color:   #73501C;
+    margin-bottom: 15px;
+}
+
+.pic{
+    background-color: aqua;
+    height: 150px;
+}
+.headings{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 37.5px;
+    text-align: justify;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}

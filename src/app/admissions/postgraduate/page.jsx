@@ -30,10 +30,12 @@ export default function page() {
         <ul>Civil Engineering - Structural Engineering</ul>
         <ul> Electrical Engineering - Electrical Machines</ul>
     </div>
-  
-    <div className="link"><a href="  https://docs.google.com/forms/d/e/1FAIpQLSe3RvBGmTslrxDMHBYn0vGufABqCvqUZnumUazbylQZ3J5lgQ/viewform">Quick Registration</a></div>
+      <div className="links">
+      <div className="link"><a href="  https://docs.google.com/forms/d/e/1FAIpQLSe3RvBGmTslrxDMHBYn0vGufABqCvqUZnumUazbylQZ3J5lgQ/viewform">Quick Registration</a></div>
     <div className="link"><a href="https://sbce.ac.in/m-tech-application-form/">Online Application form</a></div><br />
 
+      </div>
+   
     <div className="headings">Eligibility Criteria</div>
     <div className="paragraph">
         The applicant must be of Indian Nationality. <br /><br />
