@@ -16,7 +16,9 @@ export default function page() {
         <img className="photo" src={nba.src} alt="" /></a>
         
         <a href="#"><img className="photo" src={apply.src} alt="" /></a>
+
         <a href="#"><img className="photo" src={placement.src} alt="" /></a>
+        
     </div>
     <br />
     <div className="headings">programs offered</div>

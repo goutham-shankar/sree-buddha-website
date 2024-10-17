@@ -133,6 +133,7 @@ body {
 @media only screen and (max-width: 800px) {
     .main {
         padding: 40px 50px; /* Adjust padding for tablets */
+        /* background-color: aqua; */
     }
 
     .title {
