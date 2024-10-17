@@ -1,11 +1,11 @@
 import React from 'react'
 import "@/styles/homepage/landing_page.css"
-import college_image from "@/assets/images/sree_buddha_college_image1.png"
+
 
 export default function LandingPage() {
   return (
     <div className="landing_page">
-      <img className="college_background" src={college_image.src} alt="" />
+      <img className="college_background" src={"/assets/images/sree_buddha_college_image1.png"} alt="" />
 
       <div className="landing_page_content">
         <h3 className="landing_page_title1">Sree Buddha</h3>

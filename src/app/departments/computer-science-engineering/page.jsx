@@ -1,5 +1,4 @@
 import React from 'react'
-import image1 from "@/assets/images/departments/cs_dept_img1.png"
 import DepartmentNavbar from '@/components/departments/department_navbar'
 
 import "../department_style.css"
@@ -10,7 +9,7 @@ export default function ComputerScienceDepartment() {
 
 
             <div className="top_img_section">
-                <img src={image1.src} alt="image" />
+                <img src={"/assets/images/departments/cs_dept_img1.png"} alt="image" />
             </div>
 
             <div className="mid_section">

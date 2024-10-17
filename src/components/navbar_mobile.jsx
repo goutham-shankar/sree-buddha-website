@@ -1,7 +1,7 @@
 "use client"
 
 import React , { useState } from 'react'
-import logo from "../assets/images/sree_buddha_logo.png"
+
 import "@/styles/navbar_mobile.css"
 import Link from 'next/link'
 
@@ -30,7 +30,7 @@ export default function NavbarMobile() {
         <div className="navbar_mobile">
 
             <div className="logo_section">
-                <img src={logo.src} alt="" />
+                <img src={"/assets/images/sree_buddha_logo.png"} alt="" />
             </div>
 
             <div className="menu_icon" onClick={()=>{
@@ -172,7 +172,7 @@ export default function NavbarMobile() {
                     <span onClick={()=>{toggleSubmenu(7)}}>Departments</span>      
                     <div className="sidebar_submenu"   style={{maxHeight: (visibleSubMenus[7]?maxHeight: "0px" )}}>
                         <ul>
-                            <Link className = "sidebar_submenu_link" href = "">Computer Science and engineering</Link>
+                            <Link className = "sidebar_submenu_link" href = "/departments/computer-science-engineering/">Computer Science and engineering</Link>
                             <Link className = "sidebar_submenu_link" href = "">EEE</Link>
                             <Link className = "sidebar_submenu_link" href = "">ECE</Link>
                             <Link className = "sidebar_submenu_link" href = "">Mechanical</Link>

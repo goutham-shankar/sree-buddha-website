@@ -7,8 +7,8 @@ export default function DepartmentNavbar() {
 
          <ul>
             <li> <a href="">About</a>  </li>
-            <li> <a href="">Faculty</a>  </li>
             <li> <a href="">Vision & Mission</a>  </li>
+            <li> <a href="">Faculty</a>  </li>
             <li> <a href="">Faculty Profile</a>  </li>
             <li> <a href="">PEO'S,POs and PSos</a>  </li>
             <li> <a href="">Facilities</a>  </li>

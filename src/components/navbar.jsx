@@ -2,7 +2,7 @@
 
 import React from 'react'
 import "../styles/navbar.css"
-import logo from "../assets/images/sree_buddha_logo.png"
+
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -15,7 +15,7 @@ export default function Navbar() {
     <div className = "navbar">
 
         <div className="logo_section">
-            <a href="/"><img src={logo.src} alt="" /></a>
+            <a href="/"><img src={"assets/images/sree_buddha_logo.png"} alt="" /></a>
             
         </div>
         <div className="navbar_right">
@@ -151,7 +151,7 @@ export default function Navbar() {
                     <span>Departments</span>      
                     <div className="submenu" >
                         <ul>
-                            <Link className = "submenu_link" href = "">Computer Science and engineering</Link>
+                            <Link className = "submenu_link" href = "/departments/computer-science-engineering/">Computer Science and engineering</Link>
                             <Link className = "submenu_link" href = "">EEE</Link>
                             <Link className = "submenu_link" href = "">ECE</Link>
                             <Link className = "submenu_link" href = "">Mechanical</Link>

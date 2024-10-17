@@ -19,7 +19,7 @@
 .mid_section{
 
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     
 }
@@ -40,6 +40,12 @@
     margin-top: 20px;
     width: 90%;
     text-align: justify;
+}
+
+.para2{
+    width: 90%;
+    text-align: justify;
+    margin-bottom: 50px;
 }
 
 @media( max-width : 100vh){
