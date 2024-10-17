@@ -2,11 +2,16 @@
 
 /* For desktop devices (screens larger than 1024px) */
 @media (min-width: 1024px) {
+  .body {
+    overflow-x: hidden;
+  }
   .Container {
     /* width: 85dvw; */
     /* padding-left: 30px; */
     padding-right: 30px;
     margin: 0 auto;
+    overflow-x: hidden;
+    background-color: yellow;
   }
 
   .heading {
@@ -36,6 +41,7 @@
     margin-left: 100px;
     font-size: 18px;
     width: 80dvw;
+    background-color: aqua;
     padding-right: 30px;
     text-align: justify;
   }
@@ -45,6 +51,7 @@
     flex-direction: row;
     gap: 100px;
     max-width: 80dvw;
+    background-color: green;
     margin-left: 100px;
     margin-top: 40px;
   }
@@ -67,6 +74,7 @@
     text-align: justify;
     padding-right: 30px;
     padding-bottom: 40px;
+    background-color: azure;
   }
 }
 
