@@ -5,11 +5,13 @@ body {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    /* background-color: white; */
 }
 
 .main {
     padding: 40px 150px; /* Top, Left & Right padding */
-    overflow-x: hidden;   
+    overflow-x: hidden; 
+      
 }
 
 .title {
@@ -47,13 +49,23 @@ body {
 }
 
 .programs {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 50px;
     text-align: left;
-    padding-left: 50px;
+    /* padding-left: 50px; */
 }
 
+.links{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: aqua; */
+    padding-bottom: 0px;
+    padding-top: 10px;
+}
 .link {
     width: 436px;
     height: 68px;
@@ -73,7 +85,7 @@ body {
 }
 
 .paragraph {
-    font-size: 22px;
+    font-size: 18px;
     /* font-weight: 300; */
     line-height: 33px;
     text-align: justify;
@@ -81,7 +93,7 @@ body {
 
 .mtech {
     margin-bottom: 20px;
-    font-size: 22px;
+    font-size: 18px;
     /* font-weight: 500; */
     line-height: 33px;
     /* text-align: justify; */
@@ -99,7 +111,7 @@ body {
 .feename, .fee {
     font-weight: 500;
     font-family: 'poppins';
-    font-size: 20px;
+    font-size: 18px;
     flex: 1; /* Make both columns flexible */
     min-width: 200px; /* Set a minimum width for better responsiveness */
     margin-right: 20px; /* Add space between the columns */
@@ -117,7 +129,7 @@ body {
 
 /* ---------------------------------------------------------------------------------------------- */
 .bold {
-    font-size: 22px;
+    font-size: 18px;
     /* font-weight: 500; */
     line-height: 35px;
     margin: 15px 0; /* Top and bottom margin */
@@ -130,7 +142,7 @@ body {
 /* Responsive Styles */
 
 /* For tablets (800px and below) */
-@media only screen and (max-width: 800px) {
+@media (max-width:1200px) {
     .main {
         padding: 40px 50px; /* Adjust padding for tablets */
         /* background-color: aqua; */
@@ -145,7 +157,7 @@ body {
     }
 
     .link {
-        width: 100%; /* Full width on tablets */
+        width: 300px; /* Full width on tablets */
         height: 60px; /* Adjust height */
         font-size: 20px; /* Adjust font size */
     }
