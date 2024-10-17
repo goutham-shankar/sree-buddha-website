@@ -1,29 +1,29 @@
 import React from "react";
 import "@/app/about-us/profile/style.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-import college_image from "@/assets/images/sree_buddha_college_image1.png";
+// import Navbar from "@/components/navbar";
+// import Footer from "@/components/footer";
 import NavbarMobile from "@/components/navbar_mobile";
 
 const profile = () => {
   return (
     <>
       <div className="container">
-        <div>
-
-        </div>
+        <div></div>
         <div className="main">
-          <br /><br />
+          <br />
+          <br />
           <div className="profile">PROFILE</div>
-          <br /><br />
+          <br />
+          <br />
           <div className="pic">
             <img
               className="college_background"
-              src={college_image.src}
+              src={"/assets/images/sree_buddha_college_image1.png"}
               alt=""
             />
           </div>
-          <br /><br />
+          <br />
+          <br />
           <div className="paragraph">
             <b className="name">Sree Buddha College of Engineering</b>,
             affiliated to APJ Abdul Kalam Technological University, has been par
@@ -36,7 +36,8 @@ const profile = () => {
             Board of Accreditation for 4 Undergraduate Programmes and
             re-accredited with NAAC with effect from Nov 2019.  Also the college
             has been conferred Autonomy by the UGC from 2024-25 Academic Year
-            onwards <br /><br />
+            onwards <br />
+            <br />
             Founded in 2002, Sree Buddha College of Engineering follows the
             cardinal teaching of Lord Buddha for educating the whole generation
             imbued with real values of life. The college focuses on the overall
@@ -49,17 +50,17 @@ const profile = () => {
             landscape spread over an area of land overlooking a panoramic lagoon
             bordered by hillocks. The environment friendly and serene atmosphere
             of the campus provides a refreshing ambiance for the mind and soul.
-            <br /><br />
+            <br />
+            <br />
             Listed in Wikipedia: 
             <a href="https://en.wikipedia.org/wiki/Sree_Buddha_College_of_Engineering">
               Wikipedia link
             </a>
-            <br /><br />
+            <br />
+            <br />
           </div>
         </div>
       </div>
-
-      
     </>
   );
 };

@@ -3,59 +3,71 @@ import "@/styles/management/style.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Person from "@/components/management/Person";
-import chairperson from "@/assets/images/chairperson.png";
-import DharmaRajan from "@/assets/images/DharmaRajan.png";
-import ASunilKumar from "@/assets/images/ASunilKumar.png";
-import VPrasad from "@/assets/images/VPrasad.png";
-import BUdhayan from "@/assets/images/Budhayan.png";
-import Line from "@/assets/Line.svg";
-import Line2 from "@/assets/Line 2.png";
 
 const management = () => {
   return (
     <div className="management">
-   
       <div className="majContainer">
         <h1 className="heading">The Management</h1>
         <Person
           name="Prof. K. Sasikumar"
           position="The Chairperson"
           content="Prof. K. Sasikumar is the Founder Chairman of Sree Buddha Group of Educational Institutions. He is the former President of Kerala Self Financing Engineering Colleges Management Association. Prof. K Sasikumar was a member of the Board of Governors of APJ Abdul Kalam Technological University, Kerala. He is the former Principal of Sree Narayana College, Kollam and Chief organizer of a number of institutions like Sree Narayana Public School, Kollam, Sree Narayana Ayurveda College, Kollam, Sree Narayana College of Technology, Kollam and Sree Narayana Institute of Technology, Kollam"
-          pic={chairperson.src}
+          pic={"/assets/images/chairperson.png"}
         />
-        <img className="line" src={Line2.src} alt="Unable to load image" />
+        <img
+          className="line"
+          src={"/assets/Line_2.png"}
+          alt="Unable to load image"
+        />
 
         <Person
           name="Sri. V Dharma Rajan"
           position="Vice-Chairman"
           content="A retired businessman from the UAE, involved with various socio-cultural and charitable activities, Founder Treasurer of Sevanam UAE, which is the largest Sree Narayana Cultural & Charity Organisation with over ten thousand members, represented as Union Counsellor from Dubai Union to SNDP Yogam,  an active member of Guru Dharma Prachrana Sabha, a Class Trustee & Director Board Member of Sree Narayana Institute of Medical Science, Chalkka, Ernakulam and Patroon Trustee of Vidya International Charitable Trust  & Director Board Member of Vidya International College of Engineering, Trissur & Trivandrum. "
-          pic={DharmaRajan.src}
+          pic={"/assets/images/DharmaRajan.png"}
         />
-        <img className="line" src={Line2.src} alt="Unable to load image" />
+        <img
+          className="line"
+          src={"/assets/Line 2.png"}
+          alt="Unable to load image"
+        />
 
         <Person
           name="Prof. V Prasad"
           position="The Secretary"
           content="Prof. V Prasad, who has years of experience in teaching and administration, is associated with educational endeavours as the founder secretary of Sree Buddha Group of Educational Institutions. His perspective on education has made his signature in his profession. He retired as the Vice Principal of an aided college. Presently he is the Secretary of Sree Buddha Educational Society Kollam, the managing body of Sree Buddha College of Engineering, Pattoor and Sree Buddha Central School, Pattoor. He is also a member of the executive committee, Sree Narayana Institute of Ayurvedic Study & Research, Puthur."
-          pic={VPrasad.src}
+          pic={"/assets/images/VPrasad.png"}
         />
-        <img className="line" src={Line2.src} alt="Unable to load image" />
+        <img
+          className="line"
+          src={"/assets/Line 2.png"}
+          alt="Unable to load image"
+        />
 
         <Person
           name="Sri. B Udhayan"
           position="Joint Secretary"
           content="A successful businessman with social commitment. He is also a Director Board Member, Sree Narayana Trust, the Councillor, SNDP Union, Pandalam, and the Treasurer, Bodhi Educational Trust, Elavumthitta."
-          pic={BUdhayan.src}
+          pic={"/assets/images/Budhayan.png"}
         />
-        <img className="line" src={Line2.src} alt="Unable to load image" />
+        <img
+          className="line"
+          src={"/assets/Line 2.png"}
+          alt="Unable to load image"
+        />
 
         <Person
           name="Sri. A Sunil Kumar"
           position="The Treasurer"
           content="A vibrant businessman and Aircraft Maintenance Engineer. Is an active social worker with integrity and insight in the field of business and a diligent patron member of Sree Buddha Educational society. Executive member of Sree Narayana Educational Society (Convenor - R Sankar College of Arts & Science, Chathanoor) and Executive Member of Sree Narayana Ayurvedic Studies & Research Center, Puthoor."
-          pic={ASunilKumar.src}
+          pic={"/assets/images/ASunilKumar.png"}
         />
-        <img className="line" src={Line2.src} alt="Unable to load image" />
+        <img
+          className="line"
+          src={"/assets/Line 2.png"}
+          alt="Unable to load image"
+        />
 
         <div className="advisorys">Advisory Committee</div>
         <div className="extracontents">
@@ -135,7 +147,6 @@ const management = () => {
           </p>
         </div>
       </div>
-     
     </div>
   );
 };

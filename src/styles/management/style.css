@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600&display=swap");
-
+body {
+  overflow-x: hidden;
+}
 .management {
   overflow-x: hidden;
   width: 80%;
@@ -9,7 +11,7 @@
 .heading {
   margin-top: 30px;
   font-size: 50px;
-  padding-left: 35px;
+  /* padding-left: 35px; */
   color: #73501c;
   font-family: "Poppins", sans-serif;
   font-weight: 1000;
@@ -21,12 +23,12 @@
 }
 
 .extracontents p {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .advisorys {
   font-size: 28px;
-  padding: 10px;
+  /* padding: 2px; */
   margin-top: 20px;
   font-weight: 1000;
 }
@@ -34,6 +36,7 @@
 .listofppl {
   margin-top: 10px;
   line-height: 40px;
+  font-size: 18px;
 }
 
 .content2 {
@@ -43,7 +46,7 @@
 }
 
 .list {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 40px;
   padding-top: 10px;
   padding-left: 40px;
@@ -51,8 +54,8 @@
 
 .others {
   margin: 20px;
-  margin-left: 100px;
-  font-weight: 600;
+  margin-left: 0px;
+  font-weight: 800;
 }
 
 .members {
@@ -76,7 +79,8 @@
     padding: 5px;
   }
 
-  .list, .content2 {
+  .list,
+  .content2 {
     font-size: 20px;
     padding-left: 20px;
   }
@@ -111,7 +115,9 @@
     padding-left: 29px;
   }
 
-  .listofppl, .list, .content2 {
+  .listofppl,
+  .list,
+  .content2 {
     font-size: 14px;
     line-height: 24px;
     padding-left: 5px;
@@ -130,12 +136,12 @@
     margin-left: 20px;
     font-size: 16px;
   }
-  .extracontents{
+  .extracontents {
     /* background-color: #73501c; */
-      padding-left:13px;
-      padding-right:13px;
-      margin-left: 10px ;
-      width: 90%;
-      margin-right: 10px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-left: 10px;
+    width: 90%;
+    margin-right: 10px;
   }
 }
