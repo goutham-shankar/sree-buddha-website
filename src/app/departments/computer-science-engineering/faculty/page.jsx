@@ -1,6 +1,6 @@
 import React from 'react'
 // import image1 from "@/assets/images/departments/cs_dept_img1.png"
-import DepartmentNavbar from '@/components/departments/department_navbar'
+// import DepartmentNavbar from '@/components/departments/department_navbar'
 
 import "../../department_style.css"
 import Image from 'next/image'
@@ -31,7 +31,8 @@ export default function ComputerScienceDepartmentFaculty() {
 
     return (
 
-        <div className="department">
+        <div className="cs_department_faculty">
+        
 
 
             {/* <div className="top_img_section"> */}
@@ -69,7 +70,7 @@ export default function ComputerScienceDepartmentFaculty() {
 
                 </div>
 
-                <DepartmentNavbar />
+                {/* <DepartmentNavbar /> */}
 
 
 

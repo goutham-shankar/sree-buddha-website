@@ -1,11 +1,12 @@
 import React from 'react'
-import DepartmentNavbar from '@/components/departments/department_navbar'
+// import DepartmentNavbar from '@/components/departments/department_navbar'
 
 import "../department_style.css"
 
 export default function ComputerScienceDepartment() {
     return (
-        <div className="department">
+        // <div className="department">
+        <>
 
 
             <div className="top_img_section">
@@ -29,12 +30,13 @@ export default function ComputerScienceDepartment() {
 
                 </div>
 
-                <DepartmentNavbar />
+                {/* <DepartmentNavbar /> */}
 
 
 
             </div>
+            
 
-        </div>
+        </>
     )
 }

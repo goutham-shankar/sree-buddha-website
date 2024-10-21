@@ -47,7 +47,7 @@ export default function Navbar() {
                 <Link className="submenu_link" href="">
                   Mandatory Disclosure
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/about-us/Eoa">
                   AICTCE EOA
                 </Link>
                 <Link className="submenu_link" href="">
@@ -71,7 +71,7 @@ export default function Navbar() {
                 <Link className="submenu_link" href="">
                   contact us
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/about-us/feedback">
                   feedback
                 </Link>
               </ul>

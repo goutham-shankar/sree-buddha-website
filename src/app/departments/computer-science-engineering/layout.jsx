@@ -1,7 +1,9 @@
 import localFont from "next/font/local";
-import DepartmentNavbar from "@/components/departments/department_navbar";
+// import DepartmentNavbar from "@/components/departments/department_navbar";
 // import "./globals.css";
+import DepartmentNavbar from '@/components/departments/department_navbar'
 
+import "../department_style.css"
 
 export const metadata = {
     title: "Create Next App",
@@ -11,9 +13,13 @@ export const metadata = {
 export default function ComputerScienceLayout({ children }) {
     return (
 
-        <div className = "department">
+        <div className = "department_layout">
         
+        <div className="department">
         { children }
+        </div>
+        <DepartmentNavbar  department= {"computer-science-engineering"} />
+
         
         </div>
     );

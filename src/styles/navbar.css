@@ -1,13 +1,14 @@
 .navbar{
     height:90px;
-    width: 93vw;
+    width: 100%;
 
     padding: 0vw 60px;
     padding-top: 1vw;
     display: flex;
     background-color: white;
+    /* background-color: red; */
+    box-sizing: border-box;
    
-    
 }  
 
 @media( max-width : 100vh){
