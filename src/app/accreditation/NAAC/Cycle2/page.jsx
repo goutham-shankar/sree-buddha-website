@@ -1,22 +1,58 @@
-import React from "react";
-import { useSate } from "react";
+"use client";
+
+import React, { useState } from "react";
 import "@/styles/accreditation/NAAC/Cycle2/cycle2.css";
-const page = () => {
+
+const Page = () => {
+  const [activeCriteria, setActiveCriteria] = useState(null);
+
+  const handleCriteriaClick = (criteria) => {
+    setActiveCriteria(criteria === activeCriteria ? null : criteria);
+  };
+
   return (
-    <div className="Nav">
-      <ul>
-        <li>IIQA</li>
-        <li>Criteria 1</li>
-        <li>Criteria 2</li>
-        <li>Criteria 3</li>
-        <li>Criteria 4</li>
-        <li>Criteria 5</li>
-        <li>Criteria 6</li>
-        <li>Criteria 7</li>
-        <li>Peer Team Visit Video</li>
-      </ul>
+    <div className="Container">
+      <div className="Nav">
+        <ul>
+          <li onClick={() => handleCriteriaClick(0)}>IIQA</li>
+          <li onClick={() => handleCriteriaClick(1)}>Criteria 1</li>
+          <li onClick={() => handleCriteriaClick(2)}>Criteria 2</li>
+          <li onClick={() => handleCriteriaClick(3)}>Criteria 3</li>
+          <li onClick={() => handleCriteriaClick(4)}>Criteria 4</li>
+          <li onClick={() => handleCriteriaClick(5)}>Criteria 5</li>
+          <li onClick={() => handleCriteriaClick(6)}>Criteria 6</li>
+          <li onClick={() => handleCriteriaClick(7)}>Criteria 7</li>
+          <li onClick={() => handleCriteriaClick(8)}>Peer Team Visit Video</li>
+        </ul>
+      </div>
+
+      {activeCriteria === 0 && <div className="iiqa">Content for IIQA</div>}
+      {activeCriteria === 1 && (
+        <div className="criteria1">Content for Criteria 1</div>
+      )}
+      {activeCriteria === 2 && (
+        <div className="criteria2">Content for Criteria 2</div>
+      )}
+      {activeCriteria === 3 && (
+        <div className="criteria3">Content for Criteria 3</div>
+      )}
+      {activeCriteria === 4 && (
+        <div className="criteria4">Content for Criteria 4</div>
+      )}
+      {activeCriteria === 5 && (
+        <div className="criteria5">Content for Criteria 5</div>
+      )}
+      {activeCriteria === 6 && (
+        <div className="criteria6">Content for Criteria 6</div>
+      )}
+      {activeCriteria === 7 && (
+        <div className="criteria7">Content for Criteria 7</div>
+      )}
+      {activeCriteria === 8 && (
+        <div className="peerTeamVisit">Peer Team Visit Video</div>
+      )}
     </div>
   );
 };
 
-export default page;
+export default Page;
