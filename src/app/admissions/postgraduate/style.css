@@ -119,13 +119,14 @@ body {
 .feename, .fee {
     font-weight: 500;
     font-family: 'poppins';
-    font-size: 18px;
+    font-size: 16px;
     flex: 1; /* Make both columns flexible */
-    min-width: 200px; /* Set a minimum width for better responsiveness */
+    /* min-width: 200px;  */
     margin-right: 20px; /* Add space between the columns */
 }
 
-/* Remove right margin from the last element */
+
+
 .fee {
     margin-right: 0; /* No right margin for the last element */
 }
@@ -170,7 +171,7 @@ body {
     }
     .photo{
         width: 190px;
-        height: 130px;
+        height: 110px;
     }
     .link {
         width: 300px; /* Full width on tablets */
@@ -216,27 +217,46 @@ body {
     }
     /* -------------------------------------------------------------- */
     .feestructure {
-
+        display: flex;
         flex-direction: row; /* Stack items vertically on small screens */
-        background-color: aqua;
+        /* background-color: aqua; */
+        font-size: 15px;
     }
-
-    .feename, .fee {
-        width: 40%;
-        margin-right: 0; /* Remove right margin for mobile */
+    .feename{
+        /* margin-right: 0px;
+        margin-left: 0px; */
+        /* background-color: #e2cfbb; */
+        width: 60%;
     }
-
-    .fee ul {
-        list-style: none; /* Remove bullet points */
-        padding: 0; /* Remove default padding */
-        margin: 0; /* Remove default margin */
+    .fee{
+        /* background-color: rgb(0, 4, 3); */
+        /* width:40%; */
+        width: 50px;
     }
+    .ndiv1{
+        margin-bottom: 23px;
+    }
+    .ndiv2{
+        margin-bottom: 25px;
+    }
+    .ndiv3{
+        margin-bottom: 45px
+    }
+   .fdiv4{
+    margin-bottom: 24px;
+   }
+   .ndiv8{
+    margin-bottom: 5px;
+   }
+   .ndiv9{
+    margin-bottom: 31px;
+   }
     
-    .fee ul li {
-        display: flex; /* Use Flexbox for list items */
-        justify-content: space-between; /* Space between items */
-        padding: 5px 0; /* Add padding for spacing */
+    .title2{
+      /* background-color: #E6B66D; */
+      width: 150px;
     }
+  
 /* ---------------------------------------------------------------------------- */
     .bold{
         font-size: 16px;

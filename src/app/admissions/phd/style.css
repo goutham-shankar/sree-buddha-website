@@ -31,6 +31,7 @@
     .container{
         padding: 10px 30px;
         margin-left: 20px;
+        height: 100vh;
     }
     .title{
         font-size: 40px;
@@ -38,4 +39,21 @@
     .para1,.para2,.para3{
         font-size: 16px;
     }
+}
+@media (max-width:1200){
+    .container{
+        /* padding: 30px 100px; */
+        padding-left: 0px;
+        /* width: 200%; */
+        background-color: rgb(230, 16, 16);
+        padding-bottom: 500px;
+        /* margin-bottom: 100px; */
+    }
+    .title{
+        background-color: aquamarine;
+    }
+    .para1{
+        padding-left: 50px;
+    }
+    
 }

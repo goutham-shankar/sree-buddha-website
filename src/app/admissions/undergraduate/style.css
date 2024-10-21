@@ -15,11 +15,40 @@ body{
     color:   #73501C;
     margin-bottom: 15px;
 }
+/* ---------------------- */
 
-.pic{
-    background-color: aqua;
-    height: 150px;
+.photolinks{
+    margin: 80px auto;
+    width: 90%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    margin: 30px 30px 30px ;
+    /* justify-content: space-between; */
+
 }
+.photolink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    width: 300px;
+    background-size: contain;
+    background-image: url('../../../assets/images/admissions/arrow.png');
+}
+.phototext{
+    padding-left: 25px;
+    font-size: 18px;
+    font-family: 'poppins';
+    color:#000000 ;
+    font-weight: 500;
+}
+.phototext:hover {
+    color: #f48208;
+    text-decoration: none; /* Ensures no underline appears on hover */
+}
+
+/* ----------------------------------------- */
 .headings{
     font-size: 22px;
     font-weight: 700;
@@ -72,7 +101,7 @@ body{
     border: 3px solid red;
     border-radius: 20px;
     height: 50px;
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,6 +118,11 @@ body{
     }
     .box{
         width: 80%;
+        padding-left: 30px;
+       /* display: flex; */
+       /* align-items: center; */
+       /* justify-content: center; */
+       /* text-align: justify; */
     }
 }
 
@@ -112,6 +146,9 @@ body{
         width: 100%;
         height: auto;
     }
+    .pic-container{
+        height: 90px;
+    }
     .link {
         width: 300px;
         font-size: 16px;
@@ -119,6 +156,9 @@ body{
     .box{
         width: 100%;
         padding-left: 15px;
+        font-size: 14px;
+        /* padding-right: 15px; */
+        width: 300px;
         display: flex;
         text-align:center;
     }
@@ -128,5 +168,36 @@ body{
     .last .headings{
         /* color: rebeccapurple; */
         text-align: left;
+    }
+
+.photolinks{
+    height: 100px;
+    width: 350px;
+    padding-left: 0px;
+    margin-left: 0px;
+    display:flex;
+    /* justify-content: space-between; */
+    /* gap: 0px; */
+    }
+
+    .photolink{
+        height: 60px;
+        width: 200px;
+        background-size:contain;  
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0px;
+    }
+
+    .phototext{
+        padding-top: 9px;
+        /* padding-left: 15px; */
+        height: 50px;
+        font-size: 9px;
+        font-weight:500;
+        display: flex;
+
     }
 }

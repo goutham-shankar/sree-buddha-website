@@ -1,13 +1,48 @@
 import React from 'react'
 import './style.css'
  import course from '@/assets/images/admissions/ug_course.png'
+ import arrow from '@/assets/images/admissions/arrow.png'
 export default function page() {
   return (
     <>
     <div>
     <div className="container">
-        <div className="title">UNDER GRADUATE</div>     
-        <div className="pic"></div> 
+        <div className="title">UNDER GRADUATE</div>   
+
+
+
+        
+          
+        <div className="photolinks">
+          <div className="photolink">
+            {/* <img src={arrow.src} alt="" /> */}
+            <div className="phototext">NBA Accredited</div>
+          </div>
+
+          <div className="photolink">
+            {/* <img src={arrow.src} alt="" /> */}
+            <div className="phototext">NAAC Accredited</div>
+          </div>
+          <div className="photolink">
+            {/* <img src={arrow.src} alt="" /> */}
+            <div className="phototext">Excellent Placement</div>
+          </div>
+          <div className="photolink">
+            {/* <img src={arrow.src} alt="" /> */}
+            <div className="phototext">Apply Now</div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
         <div className="headings">Programs Offered</div>
         <img className='photo' src={course.src} alt="" />
 

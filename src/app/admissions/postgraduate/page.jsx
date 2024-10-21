@@ -86,31 +86,42 @@ export default function page() {
 
             <div className="feestructure">
                 <div className="feename">
-                    <ol>
-                        <li>Tuition Fee</li>
-                        <li>Admission fee </li>
-                        <li>Caution Deposit</li>
-                        <li>University Student Administration fee</li>
-                        <li>University Affiliation Fee</li>
-                        <li>University Exam fee </li>
-                        <li>University Arts & Sports Fee </li>
-                        <li>Stationery charges</li>
-                        <li>PTA</li>
-                    </ol>
+
+                    <div className="ndiv1"> 1. Tuition Fee</div>
+                    <div className="ndiv2">2.Admission fee</div>
+                    <div className="ndiv3">3.Caution Deposit</div>
+                    <div className="ndiv4">4.University Student Administration fee</div>
+                    <div className="ndiv5">5.University Affiliation Fee</div>
+                    <div className="ndiv6">6.University Exam fee</div>
+                    <div className="ndiv7">7.University Arts & Sports Fee</div>
+                    <div className="ndiv8">8.Stationery charges</div>
+                    <div className="ndiv9">9.PTA</div>
+                    {/* <ol>
+                        <li className='1'>Tuition Fee</li>
+                        <li className='2'>Admission fee </li>
+                        <li className='3'>Caution Deposit</li>
+                        <li className='4'>University Student Administration fee</li>
+                        <li className='5'>University Affiliation Fee</li>
+                        <li className='6'>University Exam fee </li>
+                        <li className='7'>University Arts & Sports Fee </li>
+                        <li className='8'>Stationery charges</li>
+                        <li className='9'>PTA</li>
+                    </ol> */}
                     <div className="title2">Total</div>
                 </div>
                 <div className="fee">
-                    <ul>
-                            <ul>: ₹ 35,000 (Per Semester*)</ul>
-                            <ul>: ₹ 500 (One Time)</ul>
-                            <ul>: ₹ 2,500 (One Time Refundable)</ul>
-                            <ul>: ₹ 1,000 (One Time)</ul>
-                            <ul>: ₹ 1,000 (One Time)</ul>
-                            <ul>: ₹ 1,500 (1st Semester)</ul>
-                            <ul>: ₹ 500 (One Time)</ul>
-                            <ul>: ₹ 200 (One Time)</ul>
-                            <ul>: ₹ 2,000 (One Time)</ul>
-                    </ul>
+
+                            <div className='fdiv1'>: ₹ 35,000 (Per Semester*)</div>
+                            <div className='fdiv2'>: ₹ 500 (One Time)</div>
+                            <div className='fdiv3'>: ₹ 2,500 (One Time Refundable)</div>
+                            <div className='fdiv4'>: ₹ 1,000 (One Time)</div>
+                            <div className='fdiv5'>: ₹ 1,000 (One Time)</div>
+                            <div className='fdiv6'>: ₹ 1,500 (1st Semester)</div>
+                            <div className='fdiv7'>: ₹ 500 (One Time)</div>
+                            <div className='fdiv8'>: ₹ 200 (One Time)</div>
+                            <div className='fdiv9'>: ₹ 2,000 (One Time)</div>
+
+              
                     <div className="title2">₹. 44,200/-</div>
                 </div>
             </div>
