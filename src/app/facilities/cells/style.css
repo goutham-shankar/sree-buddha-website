@@ -19,11 +19,22 @@
     text-align: justify;
     margin-bottom: 20px;    
 }
+.headingtwo{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 37.5px;
+    text-align: justify;
+    margin-bottom: 0px;  
+    padding-bottom: 0px;
+}
 
 .paragraphone{
     line-height: 35px;
 }
-
+.paragraph{
+    font-family: 'poppins';
+    font-size: 18px;
+}
 
 .faculty-table {
     width: 80%;
@@ -34,7 +45,7 @@
 }
 
 .faculty-table tr {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #ddd;
 }
 
 .faculty-table td {
@@ -50,7 +61,62 @@
     width: 40%;
 }
 .image{
-    height: 200px;
-    width: 400px;
+    height: 400px;
+    width: 800px;
     background-color: aqua;
+}
+.no-underline {
+    text-decoration: none;
+    color: inherit; /* Optional: Ensures the text color remains default or inherited */
+}
+
+.no-underline:hover {
+    color: #f48208;
+    text-decoration: none; /* Ensures no underline appears on hover */
+}
+.link {
+    width: 436px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6B66D;
+    border-radius: 40px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+/* .tablediv
+{
+    display: flex;
+    flex-direction: row;
+} */
+.sino,.ssino,.tsino{
+    width: 100px;
+}
+
+.positionname,.spositionname,.tpositionname{
+    width: 200px;
+}
+
+.stablediv,.ttablediv,.tablediv
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.snamep,.namep
+{
+    width: 300px;
+}
+.tnamep{
+    width: 400px;
+}
+.tnoseven,.tpseven{
+    margin-top: 28px;
+}
+.no,.tno,.sno,.name,.sname,.tname ,.position,.sposition,.tposition{
+    font-weight: 600;
+    margin-bottom: 5px;
 }
