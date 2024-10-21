@@ -1,68 +1,204 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600&display=swap");
 
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
-body {
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-  /* font-size: 20px; */
-}
-.Container {
-  width: 90dvw;
-  /* background-color: yellow; */
-  margin-right: 0px;
-  padding-left: 30px;
-  padding-right: 50px;
-}
-.heading {
-  margin-left: 100px;
-  /* background-color: green; */
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 40px;
-  font-weight: 900;
-  color: #73501c;
-  stroke: #845714;
-}
-.subheading {
-  font-size: 30px;
-  font-weight: 700;
-  margin-left: 100px;
-  /* background-color: blue; */
-}
-.caption {
-  margin-left: 100px;
-  font-weight: 500;
-  padding-bottom: 30px;
-}
-.content1 {
-  margin-left: 100px;
-  font-size: 18px;
-  padding-right: 30px;
-  /* background-color: blue; */
-  width: 85dvw;
-  /* background-color: green; */
-}
-.container1 {
-  max-width: 80dvw;
-  margin-top: 30px;
-  margin-left: 100px;
-  display: flex;
-  flex-direction: row;
-  gap: 100px;
-  font-size: 18px;
-  margin-bottom: 10dvh;
-  /* width: 90dvw;
-  background-color: blue; */
-}
-.certificate {
-  width: 80dvw;
-  height: 80dvh;
+/* For desktop devices (screens larger than 1024px) */
+@media (min-width: 1024px) {
+  .Container {
+    /* width: 85dvw; */
+    /* padding-left: 30px; */
+    padding-right: 30px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    background-color: yellow;
+  }
+
+  .heading {
+    margin-left: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 40px; /* Larger heading size for desktop */
+    color: #73501c;
+    stroke: #845714;
+    font-weight: 900;
+  }
+
+  .subheading {
+    font-size: 30px; /* Larger subheading */
+    margin-left: 100px;
+    font-weight: 700;
+  }
+
+  .caption {
+    margin-left: 100px;
+    font-size: 20px;
+    padding-bottom: 30px;
+    font-weight: 500;
+  }
+
+  .content1 {
+    margin-left: 100px;
+    font-size: 18px;
+    width: 80dvw;
+    background-color: aqua;
+    padding-right: 30px;
+    text-align: justify;
+  }
+
+  .container1 {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    max-width: 80dvw;
+    background-color: green;
+    margin-left: 100px;
+    margin-top: 40px;
+  }
+
+  .cerimage {
+    margin-bottom: 40px;
+    text-align: center;
+    padding-right: 20px;
+  }
+
+  .certificate {
+    width: 600px; /* Larger image for desktop */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 5px;
+  }
+
+  .content2 {
+    padding-top: 60px;
+    font-size: 18px; /* Larger text size for desktop */
+    text-align: justify;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    background-color: azure;
+  }
 }
 
-.content2 {
-  padding-top: 80px;
+@media (max-width: 768px) {
+  .Container {
+    /* width: 100dvw; */
+    padding-left: 20px;
+    padding-right: 20px;
+
+    /* background-color: yellow; */
+  }
+
+  .heading {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 28px; /* Smaller heading size for mobile */
+    color: #73501c;
+    stroke: #845714;
+    font-weight: 800;
+    font-size: 35px;
+  }
+
+  .subheading {
+    font-size: 22px; /* Smaller subheading */
+    margin-left: 20px;
+    font-weight: 600;
+  }
+
+  .caption {
+    margin-left: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .content1 {
+    margin-left: 20px;
+    font-size: 16px;
+    /* width: 500px; */
+    padding-right: 20px;
+    text-align: justify;
+    margin-bottom: 40px;
+  }
+
+  .container1 {
+    flex-direction: column; /* Stack elements vertically */
+    margin-left: 20px;
+    gap: 20px;
+    max-width: 100dvw;
+  }
+  .cerimage {
+    margin-bottom: 20px;
+    text-align: center;
+    padding-right: 20px;
+  }
+  .certificate {
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-left: 5px;
+  }
+
+  .content2 {
+    padding-top: 20px;
+    font-size: 16px; /* Smaller text size */
+    text-align: justify;
+    padding-right: 20px;
+    padding-bottom: 30px;
+  }
+}
+
+/* For tablet devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Container {
+    /* width: 95dvw; */
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #73501c;
+    overflow-x: hidden;
+  }
+
+  .heading {
+    margin-left: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 34px; /* Medium heading size for tablets */
+    color: #73501c;
+    stroke: #845714;
+    font-weight: 800;
+    font-size: 35px;
+  }
+
+  .subheading {
+    font-size: 26px; /* Adjusted for tablets */
+    margin-left: 50px;
+  }
+
+  .caption {
+    margin-left: 50px;
+    font-size: 18px;
+    padding-bottom: 25px;
+  }
+
+  .content1 {
+    margin-left: 50px;
+    font-size: 17px;
+    /* width: 90dvw; */
+    background-color: aliceblue;
+    padding-right: 20px;
+  }
+
+  .container1 {
+    flex-direction: row;
+    gap: 50px;
+    max-width: 90dvw;
+    background-color: yellow;
+    margin-left: 50px;
+  }
+
+  .certificate {
+    width: 60dvw;
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .content2 {
+    padding-top: 40px;
+    font-size: 17px;
+  }
 }
