@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
+import Criteria1 from "@/components/accreditation/criteria1";
+import Criteria2 from "@/components/accreditation/criteria2";
+import Criteria4 from "@/components/accreditation/criteria4";
 import "@/styles/accreditation/NAAC/Cycle2/cycle2.css";
 
 const Page = () => {
@@ -28,16 +31,22 @@ const Page = () => {
 
       {activeCriteria === 0 && <div className="iiqa">Content for IIQA</div>}
       {activeCriteria === 1 && (
-        <div className="criteria1">Content for Criteria 1</div>
+        <div className="criteria1">
+          <Criteria1 />
+        </div>
       )}
       {activeCriteria === 2 && (
-        <div className="criteria2">Content for Criteria 2</div>
+        <div className="criteria2">
+          <Criteria2 />
+        </div>
       )}
       {activeCriteria === 3 && (
         <div className="criteria3">Content for Criteria 3</div>
       )}
       {activeCriteria === 4 && (
-        <div className="criteria4">Content for Criteria 4</div>
+        <div className="criteria4">
+          <Criteria4 />
+        </div>
       )}
       {activeCriteria === 5 && (
         <div className="criteria5">Content for Criteria 5</div>
