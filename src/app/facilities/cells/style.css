@@ -1,0 +1,56 @@
+.container {
+    padding-left: 150px;
+    padding-right: 150px;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-align: left;
+    color: #845714;
+}   
+.heading{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 37.5px;
+    text-align: justify;
+    margin-bottom: 20px;    
+}
+
+.paragraphone{
+    line-height: 35px;
+}
+
+
+.faculty-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.faculty-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.faculty-table td {
+    padding: 12px;
+    vertical-align: top;
+}
+
+.faculty-table td:first-child {
+    width: 40%;
+}
+
+.faculty-table td:last-child {
+    width: 40%;
+}
+.image{
+    height: 200px;
+    width: 400px;
+    background-color: aqua;
+}
