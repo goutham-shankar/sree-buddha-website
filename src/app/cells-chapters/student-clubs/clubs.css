@@ -1,0 +1,69 @@
+.club {
+    padding: 50px 50px; /* Adjusted padding for responsiveness */
+}
+
+.club h2 {
+    text-align: left;
+    font-size: 40px; /* Adjusted font size for responsiveness */
+    color: #73501C;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout for different screen sizes */
+.club-ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Default: 1 column for small screens */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.club-box {
+    background-color: #E6B66D;
+    padding: 20px;
+    width: 100%; /* Ensure boxes take full width on smaller screens */
+    max-width: 250px;
+    height: 151px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin: 0 auto; /* Center the boxes */
+}
+
+.club-box h3 {
+    font-size: larger;
+    text-align: center;
+    margin-top: 55px;
+}
+
+/* For tablets (2 boxes in a row) */
+@media (min-width: 600px) {
+    .club-ul {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+
+    .club h2 {
+        font-size: 45px; /* Larger heading for tablets */
+    }
+    .club{
+        padding-right: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* For larger devices like laptops (3 boxes in a row) */
+@media (min-width: 900px) {
+    .club-ul {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+
+    .club-box {
+        max-width: 250px; /* Slightly larger boxes for bigger screens */
+    }
+}
+
+/* For desktops or large laptops (4 boxes in a row) */
+@media (min-width: 1200px) {
+    .club-ul {
+        grid-template-columns: repeat(3, 1fr); /* 4 columns on large devices */
+    }
+}
