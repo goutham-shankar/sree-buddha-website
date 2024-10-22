@@ -1,0 +1,184 @@
+.container {
+    padding-left: 150px;
+    padding-right: 150px;
+    font-weight: 400;
+    overflow-x: hidden;
+    font-size: 18px;
+}
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-align: left;
+    color: #845714;
+    margin-top: 20px;
+}
+.paragraph{
+    font-family: 'poppins';
+    font-size: 18px;
+}
+/* images */
+.imageone{
+    height: 200px;
+    width: 600px;
+    background-color:aqua ;
+}
+.imagetwo{
+    height: 200px;
+    width: 600px;
+    background-color:aqua ;
+}
+.imagethree{
+    height: 200px;
+    width: 600px;
+    background-color:aqua ;
+}
+.imagefour{
+    height: 200px;
+    width: 600px;
+    background-color:aqua ;
+}
+.imagefive{
+    height: 200px;
+    width: 600px;
+    background-color:aqua ;
+}
+
+.heading{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 37.5px;
+    text-align: justify;
+    margin-bottom: 20px;    
+}
+.content ul {
+    list-style: none; /* Remove default bullet points */
+    font-weight: 400;
+}
+
+.content ul li {
+    font-weight: 400;
+    padding-left: 20px; /* Space for the arrow */
+    text-indent: -10px; /* Negative indent to align the text properly */
+    font-weight: 400;
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+
+.content ul li::before {
+    content: "\25B6"; /* Unicode for right-pointing triangle (►) */
+    padding-left: 10px;
+    color: black; /* Change the color of the arrow if needed */
+    position: absolute;
+    margin-left: -20px; /* Align the arrow with text */
+    font-weight: 400;
+}
+.faculty-table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.faculty-table tr {
+    border-bottom: 3px solid #ddd;
+}
+
+.faculty-table td {
+    padding: 12px;
+    vertical-align: top;
+}
+
+.faculty-table td:first-child {
+    width: 50%;
+}
+
+.faculty-table td:last-child {
+    width: 50%;
+}
+
+/* for tab */
+@media (max-width:1400px){
+    .container{
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+}
+
+@media (max-width:1200px){
+    .container{
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+}
+@media (max-width:800px){
+    .imageone{
+        width: 500px;
+        height: 200px;
+    }
+    .imagetwo{
+        width: 500px;
+        height: 200px;
+    }.imagethree{
+        width: 500px;
+        height: 200px;
+    }.imagefour{
+        width: 500px;
+        height: 200px;
+    }.imagefive{
+        width: 500px;
+        height: 200px;
+    }
+    .faculty-table{
+        width: 90%;
+    }
+}
+/* for mobiles */
+@media (max-width:480px){
+    .container{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .imageone{
+        width: 350px;
+        height: 200px;
+    }
+    .imagetwo{
+        width: 350px;
+        height: 200px;
+    }.imagethree{
+        width: 350px;
+        height: 200px;
+    }.imagefour{
+        width: 350px;
+        height: 200px;
+    }.imagefive{
+        width: 350px;
+        height: 200px;
+    }
+    .faculty-table{
+        width: 90%;
+    }
+}
+
+@media (max-width:400px){
+    .imageone{
+        width: 300px;
+        height: 180px;
+    }
+    .imagetwo{
+        width: 300px;
+        height: 180px;
+    }.imagethree{
+        width: 300px;
+        height: 180px;
+    }.imagefour{
+         width: 300px;
+        height: 180px;
+    }.imagefive{
+        width: 300px;
+        height: 180px;
+    }
+}
+

@@ -1,0 +1,97 @@
+.container {
+    padding-left: 150px;
+    padding-right: 150px;
+    font-weight: 400;
+    overflow-x: hidden;
+    font-size: 18px;
+}
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-align: left;
+    color: #845714;
+    margin-top: 20px;
+}
+.paragraph{
+    font-family: 'poppins';
+    font-size: 22px;
+}
+.photo{
+    width: 90%;
+    height:auto;
+    background-color: aqua;
+}
+
+/* for tab */
+@media (max-width:1400px){
+    .container{
+        padding-right: 150px;
+        padding-left: 150px;
+        height: 90vh;
+    }
+    .photo{
+        width: 900px;
+        height: 400px;
+    }
+}
+
+@media (max-width:1200px){
+    .container{
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+    .photo{
+        width: 800px;
+    }
+}
+@media (max-width:950px){
+    .container{
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+    .photo{
+        width: 700px;
+        height: 400px;
+    }
+}
+@media (max-width:950px){
+.photo{
+    width: 600px;
+    height: 300px;
+}
+}
+/* phone */
+@media (max-width:480px){
+.container{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.title{
+    font-size: 20px;
+}
+.paragraph{
+    font-size: 16px;
+}
+.photo{
+    width: 350px;
+    height: 180px;
+}
+}
+@media (max-width:700px){
+    .container{
+        padding-right: 40px;
+        height: 100vh;
+    }
+    .photo{
+        width: 500px;
+    }
+}
+
+@media (max-width:480px){
+.photo{
+    width: 300px;
+
+}
+}
