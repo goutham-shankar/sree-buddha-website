@@ -50,7 +50,7 @@
 /* Media Queries for Responsiveness */
 
 /* For screens smaller than 768px (tablets and smaller) */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .footer {
         justify-content: space-between;
         padding: 70px; /* Adjust padding for smaller screens */
