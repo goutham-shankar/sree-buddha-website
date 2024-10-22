@@ -8,39 +8,22 @@ export default function page() {
     <div>
     <div className="container">
         <div className="title">UNDER GRADUATE</div>   
-
-
-
-        
           
         <div className="photolinks">
           <div className="photolink">
-            {/* <img src={arrow.src} alt="" /> */}
-            <div className="phototext">NBA Accredited</div>
+            <a href="#"><div className="phototextone">NBA Accredited</div></a>
           </div>
 
           <div className="photolink">
-            {/* <img src={arrow.src} alt="" /> */}
-            <div className="phototext">NAAC Accredited</div>
+              <a href="#"> <div className="phototexttwo">NAAC Accredited</div></a>
           </div>
           <div className="photolink">
-            {/* <img src={arrow.src} alt="" /> */}
-            <div className="phototext">Excellent Placement</div>
+            <a href="#"><div className="phototextthree">Excellent Placement</div></a>
           </div>
           <div className="photolink">
-            {/* <img src={arrow.src} alt="" /> */}
-            <div className="phototext">Apply Now</div>
+            <a href="#"><div className="phototextfour">Apply Now</div></a>
           </div>
         </div>
-
-
-
-
-
-
-
-
-
 
 
         <div className="headings">Programs Offered</div>

@@ -34,19 +34,46 @@ body{
     height: 160px;
     width: 300px;
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0%;
     background-image: url('../../../assets/images/admissions/arrow.png');
 }
-.phototext{
+.phototextone,.phototextthree,.phototexttwo,.phototextone{
     padding-left: 25px;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'poppins';
     color:#000000 ;
     font-weight: 500;
+    cursor: pointer;
 }
-.phototext:hover {
+.phototextthree,.phototexttwo{
+    width: 100px;
+}
+a{
+text-decoration: none;
+}
+.phototextfour{
+    color: #000000;
+    font-weight: 500;
+}
+.phototextone:hover {
     color: #f48208;
     text-decoration: none; /* Ensures no underline appears on hover */
 }
+.phototexttwo:hover{
+    color: #f48208;
+    text-decoration: none; /* Ensures no underline appears on hover */
+}
+.phototextthree:hover{
+    color: #f48208;
+    text-decoration: none; /* Ensures no underline appears on hover */
+}
+
+.phototextfour:hover{
+    color: #f48208;
+    text-decoration: none; /* Ensures no underline appears on hover */
+}
+
 
 /* ----------------------------------------- */
 .headings{
@@ -126,6 +153,34 @@ body{
     }
 }
 
+@media(max-width:1200px){
+    .title{
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .photolinks{
+        height: 150px;
+        margin-top: 0px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .phototextone,.phototexttwo,.phototextthree,.phototextfour{  
+        display:flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .phototextone{
+        width: 100px;
+        padding-right: 15px;
+    }
+    .phototexttwo,.phototextthree{
+        padding-right: 15px;
+    }
+    .phototextfour{
+        padding-left: 18px;
+    }
+}
 
 /* for phone */
 @media (max-width:480px){
@@ -171,33 +226,43 @@ body{
     }
 
 .photolinks{
-    height: 100px;
     width: 350px;
     padding-left: 0px;
     margin-left: 0px;
     display:flex;
-    /* justify-content: space-between; */
-    /* gap: 0px; */
+    height: 100px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    
     }
 
     .photolink{
         height: 60px;
-        width: 200px;
+        width: 150px;
         background-size:contain;  
         background-repeat: no-repeat;
         display: flex;
         justify-content: center;
-        align-items: center;
         padding-left: 0px;
+        font-size: 10px;
     }
 
-    .phototext{
-        padding-top: 9px;
-        /* padding-left: 15px; */
-        height: 50px;
-        font-size: 9px;
-        font-weight:500;
-        display: flex;
-
+    .phototextone,.phototexttwo,.phototextthree,.phototextfour{
+        padding-top: 6px;
+        font-size: 8px;
+        width: 50px;
+        display:flex;
+        text-align: center;
+        justify-content: center;
+    }
+        
+    .phototextone,.phototexttwo,.phototextthree{
+        padding-right: 15px;
+        padding-bottom: 5px;
+    }
+    
+    .phototextfour{
+        padding-top: 2px;
+        padding-left: 13px;
     }
 }
