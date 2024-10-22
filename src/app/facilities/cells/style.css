@@ -61,8 +61,8 @@
     width: 40%;
 }
 .image{
-    height: 400px;
-    width: 800px;
+    height: 500px;
+    width: 1000px;
     background-color: aqua;
 }
 .no-underline {
@@ -114,9 +114,118 @@
     width: 400px;
 }
 .tnoseven,.tpseven{
-    margin-top: 28px;
+    margin-top: 23px;
 }
 .no,.tno,.sno,.name,.sname,.tname ,.position,.sposition,.tposition{
     font-weight: 600;
     margin-bottom: 5px;
+}
+@media(max-width:1200px){
+    .image{
+        width: 800px;
+        height: 350px;
+    }
+}
+
+/* for tab */
+@media (max-width:1000px){
+    .container{
+        padding-left: 60px;
+        padding-right: 60px;
+        overflow-x: hidden;
+    }
+    .title{
+        font-size: 40px;
+    }
+    .image{
+        width: 500px;
+        height: 250px;
+    }
+}
+
+/* for mobiel */
+@media (max-width:480px){
+    .container{
+        padding-left: 30px;
+        padding-right: 30px; /* Adjust padding for mobile */
+        overflow-x: hidden;
+        
+    }
+    .title{
+        font-size: 25px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .heading{
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        /* justify-content: end; */
+    }
+    .link{
+        width: 300px;
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .paragraph{
+        font-size: 16px;
+    }
+    .faculty-table tr {
+        border-bottom: 2px solid #ddd;
+    }
+    
+    .faculty-table td {
+        padding: 12px;
+        vertical-align: top;
+        font-size: 16px;
+    }
+    
+    .faculty-table td:first-child {
+        width: 40%;
+    }
+    
+    .faculty-table td:last-child {
+        width: 10%;
+    }
+    .namep{
+        width: 350px;
+        margin-right: 10px;
+    }
+    .snothree,.snthree{
+        margin-top: 25px;
+    }
+    .tsino{
+        width: 100px;
+    }
+    .tnamep{
+        width: 300px;
+    }
+    .tnotwo,.tptwo{
+        margin-top: 25px;
+    }
+    .tnothree{
+        margin-top: 22px;
+    }
+    /* .noseven,.pseven{
+        margin-top: 25px;
+    } */
+    .image{
+        width: 300px;
+        height: 150px;
+    }
+    
+
+}
+@media (max-width:380px){
+    .noseven,.pseven{
+        margin-top: 25px;
+    }
+    .faculty-table td:first-child {
+        width: 40%;
+    }
+    
+    .faculty-table td:last-child {
+        width: 40%;
+    }
 }

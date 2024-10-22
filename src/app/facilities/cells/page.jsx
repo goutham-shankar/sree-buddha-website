@@ -5,9 +5,9 @@ import "./style.css"
 export default function page() {
   return (
     <div>
-       <div className="container">
+       <div className="container"><br />
             <div className="title">Cells & Centers</div>
-            <hr /><br /><br />
+            <hr /><br />
 
 
             <div className="heading">Industry Institute Interaction Cell (III -CELL)</div>
@@ -24,7 +24,7 @@ export default function page() {
             9.Dr.Ragesh NK,TATA ELxsi,Thiruvanathapuram Member<br />
             </div><br /><br />
 
-            <div className="heading">Continuing Education Cell (CEC)</div><br />
+            <div className="heading">Continuing Education Cell (CEC)</div>
             <div className="paragraph">The Continuing Education Cell (CEC) is designed to meet the continuing and non formal education needs 
                 of the local industry,<br /><br />business and community.It is through of as courses of programmed which include a wide variety of topics
                  or subjects which learners would under to develop a new skill or enhance their knowledge in particular area,<br /><br />In this circumstances,
@@ -36,6 +36,7 @@ export default function page() {
             </div>
 
             <table class="faculty-table">
+                <tbody>
                 <tr>
                     <td>Ms.Lakshmi S,</td>
                     <td>Asst.Professor, CS Dept</td>
@@ -56,10 +57,11 @@ export default function page() {
                     <td>Ms.Ritzy.R</td>
                     <td>Asst.Professor, CE Dept</td>
                 </tr>
+                </tbody>
             </table>
             <br /><br />
 
-            <div className="heading">Entrepreneurship Development Cell</div><br /><br />
+            <div className="heading">Entrepreneurship Development Cell</div><br />
             <div className="image"></div><br /><br />
 
             <div className="paragraph">In order to create the entrepreneurship culture among the students, 
@@ -88,7 +90,7 @@ export default function page() {
                   
                   <a  className="no-underline" href="#"><div className='link'>visit the page for updates</div></a><br /><br />
 
-                  <div className="heading">Grievance Redressal Committee</div><br />
+                  <div className="heading">Grievance Redressal Committee</div>
                   <div className="paragraph">Grievance Redressal Committee has been constituted in the college for the purpose of redressal of grievances of the Students,Parents and Others.
                     <br />
                                 The committee comprises of following members : <br />
@@ -98,6 +100,7 @@ export default function page() {
                   </div>
 
                   <table class="faculty-table">
+                    <tbody>
                 <tr>
                     <td>Dr.K.Gopakumar</td>
                     <td>Dean of P.G.Students</td>
@@ -118,6 +121,7 @@ export default function page() {
                     <td>Miss.Vidya V</td>
                     <td>Convener.Ethics Committe</td>
                 </tr>
+                </tbody>
             </table>
             <br /><br />
             <div className="heading">The Innovation and Entrepreneurship Development Centre launched in Sree Buddha College of Engineering</div>
@@ -136,6 +140,7 @@ export default function page() {
                     Ms.Ms.Abhilasha Parthan, Assistant Professor (EEE) <br />
                     <b>Members</b><br />
                     <table class="faculty-table">
+                    <tbody>
                         <tr>
                             <td>Ms.Abhilasha Parthan</td>
                             <td>Assistant Professor (EEE)</td>
@@ -148,6 +153,7 @@ export default function page() {
                             <td>Ms.Asha Rani</td>
                             <td>Assistant Professor (Chemistry)</td>
                         </tr>
+                        </tbody>
                     </table>    
             </div><br /><br />
             <div className="heading">Minority Cell</div>
@@ -187,7 +193,7 @@ export default function page() {
 
                   <div className="tablediv">
                         <div className="sino">
-                            <div className="no">SI. No.</div>
+                            <div className="no">SI.No</div>
                             <div className="noone">1.</div>
                             <div className="notwo">2.</div>
                             <div className="nothree">3.</div>
@@ -232,7 +238,7 @@ export default function page() {
                    
                    <div className="stablediv">
                             <div className="ssino">
-                                <div className="sno">SI. No.</div>
+                                <div className="sno">SI.No</div>
                                 <div className="snoone">1.</div>
                                 <div className="snotwo">2.</div>
                                 <div className="snothree">3.</div>
@@ -243,10 +249,10 @@ export default function page() {
                             <div className="snamep"> 
                                 <div className="sname">Name of the staff</div>
                                 <div className="snone"> Prof .K . Vijayan</div>
-                                <div className="sntwo">	Prof.Arun P.S.   </div>
+                                <div className="sntwo">	Prof.Arun P.S  </div>
                                 <div className="snthree">Prof. Aswathy Lal</div>
                                 <div className="snfour"> Prof. Kalpana Ashokan </div>
-                                <div className="snfive"> Prof.Saritha N.R. </div>
+                                <div className="snfive"> Prof.Saritha N.R </div>
                             </div>
 
                             <div className="spositionname">
@@ -292,7 +298,7 @@ export default function page() {
                     {/* jhjkhkh */}
                     <div className="ttablediv">
                         <div className="tsino">
-                            <div className="tno">SI. No.</div>
+                            <div className="tno">SI.No</div>
                             <div className="tnoone">1.</div>
                             <div className="tnotwo">2.</div>
                             <div className="tnothree">3.</div>
