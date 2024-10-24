@@ -1,77 +1,48 @@
-"use client"
+"use client";
 
-import React from 'react'
-
-import "@/styles/homepage/Events.css"
-
+import React from 'react';
+import "@/styles/homepage/Events.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { useEffect, useState } from "react"
-
 
 export default function Events() {
+    return (
+        <div className="events">
+            <div className="events_container">
+                <div className="events_title_area">
+                    <h3>EVENTS</h3>
+                </div>
 
-  const [screenWidth, setScreenWidth] = useState(1); // Set initial screen width
-
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth); // Update state on resize
-    };
-
-    window.addEventListener('resize', handleResize); // Add resize event listener
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []); 
-  return (
-    <div className="events">
-
-      <div className="events_container">
-        <div className="events_title_area">
-          <h3>EVENTS</h3>
+                <div className="carousal_container">
+                    <Carousel
+                        showThumbs={false}
+                        infiniteLoop
+                        showIndicators={true}
+                        showStatus={false}
+                        swipeable
+                        dynamicHeight={true}
+                        renderArrowPrev={(onClickHandler, hasPrev) =>
+                            hasPrev && (
+                                <button type="button" onClick={onClickHandler} className="custom-arrow prev">
+                                    &#9664; {/* Custom left arrow */}
+                                </button>
+                            )
+                        }
+                        renderArrowNext={(onClickHandler, hasNext) =>
+                            hasNext && (
+                                <button type="button" onClick={onClickHandler} className="custom-arrow next">
+                                    &#9654; {/* Custom right arrow */}
+                                </button>
+                            )
+                        }
+                    >
+                        <div className="event"><img src="/assets/images/home images/events/future digi.png" alt="slide1" /></div>
+                        <div className="event"><img src="/assets/images/home images/events/ieee-conference.png" alt="slide2" /></div>
+                        <div className="event"><img src="/assets/images/home images/events/kids in lab.png" alt="slide3" /></div>
+                        <div className="event"><img src="/assets/images/home images/events/save-image.png" alt="slide4" /></div>
+                    </Carousel>
+                </div>
+            </div>
         </div>
-
-        <div className="carousal_container">
-
-          <Carousel
-            className='carousal'
-            showThumbs={false}
-            infiniteLoop
-            showIndicators={true}
-            showStatus={false}
-            swipeable
-            dynamicHeight={false}
-            centerMode
-            centerSlidePercentage={100/( screenWidth / 512  )}
-            renderArrowPrev={(onClickHandler, hasPrev, label) =>
-              hasPrev && (
-                <button type="button" onClick={onClickHandler} className="custom-arrow prev">
-                  &#9664; {/* Custom left arrow */}
-                </button>
-              )
-            }
-            renderArrowNext={(onClickHandler, hasNext, label) =>
-              hasNext && (
-                <button type="button" onClick={onClickHandler} className="custom-arrow next">
-                  &#9654; {/* Custom right arrow */}
-                </button>
-              )
-            }
-          >
-
-            <div className="event1 event">fasdfsadf</div>
-            <div className="event2 event">fasdfasdf</div>
-            <div className="event3 event">fadsfasdf</div>
-            <div className="event4 event">fasdfasd</div>
-
-          </Carousel>
-
-        </div>
-      </div>
-
-
-    </div>
-  )
+    );
 }
