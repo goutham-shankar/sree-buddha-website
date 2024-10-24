@@ -1,0 +1,139 @@
+/* Style for the main container */
+.container {
+    height: 100vh;
+    padding-left: 150px;
+    padding-right: 150px;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+  .title
+  {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3vw;
+      font-weight: 700;
+      line-height: 1.5em;
+      text-align: left;
+      color: #845714   
+  }
+  .paragraph{
+    font-family: 'poppins';
+    font-size: 18px;
+}
+  
+  /* Button style */
+  .routeone {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #E6B66D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border-radius: 20px;
+  }
+  
+  .routeone:hover {
+    color: #ffe600;
+  }
+
+  
+  /* Overlay styling (makes the background darker when the new screen is open) */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(46, 42, 42, 0.7); /* semi-transparent black */
+  }
+  
+  /* Style for the routeo-content (new window screen) */
+  .routenno,.routetwo,.routethree ,
+  .routefour,.routefive,.routesix
+  ,.routeseven,.routeeight{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    z-index: 20;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Close button styling */
+  .off {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: white;
+    background-color: #E6B66D;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .off:hover {
+    background-color: #e60000;
+  }
+  .btn{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+  }
+
+  .faculty-table {
+    width: 80%;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.faculty-table th, .faculty-table td {
+    padding: 5px;
+    /* border-bottom: 2px solid #ddd; */
+    vertical-align: top;
+}
+
+.faculty-table th:first-child{
+    width: 10%;
+}
+.faculty-table td:first-child {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faculty-table th:nth-child(2),
+.faculty-table td:nth-child(2) {
+    width: 50%;
+}
+
+.faculty-table th:last-child,
+.faculty-table td:last-child {
+    width: 20%;
+}
+
+/* phone  */
+
+@media (max-width:480px){
+
+.container{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.title{
+  font-size: 25px;
+}
+.paragraph{
+  font-size: 16px;
+}
+}
