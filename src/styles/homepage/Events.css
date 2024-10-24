@@ -60,15 +60,9 @@
 
 /* Responsive styling */
 @media (max-width: 768px) {
-    .event{
-        height: 300px;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-    }
     .event img{
         width: 60%;
-        height: 300px;
+        height: 490px;
         font-size: 1.5rem;
     }
 
