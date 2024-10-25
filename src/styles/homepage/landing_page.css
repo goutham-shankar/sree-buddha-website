@@ -1,13 +1,15 @@
 .landing_page{
     position: relative;
-    width: 100vw;
+    width: 100%;
     background-color: #E6B66E;
     overflow-x: hidden;
+    box-sizing: border-box;
 
 }
 .college_background{
     width: 100%; 
     z-index: -1;    
+    /* border: 2px solid red; */
 }
 .landing_page_content{
     position: absolute;

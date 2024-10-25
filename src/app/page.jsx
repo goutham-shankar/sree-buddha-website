@@ -24,7 +24,7 @@ export default function Home() {
     <Counts/>
     <Affiliations/>
     <Cells_Chapters/>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   )
 }

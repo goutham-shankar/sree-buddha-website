@@ -50,7 +50,7 @@ export default function Page() {
         <br />
         <hr /><br />
         <div className="paragraph">Our college provides a reliable and well-organized bus service for day scholars. Buses are available for all major 
-       locations, offering convenience and flexibility based on students' needs. Whether you're traveling from nearby or 
+       locations, offering convenience and flexibility based on students needs. Whether you&apos;re traveling from nearby or 
        distant areas, our bus service ensures timely arrivals and departures.
         </div>
 

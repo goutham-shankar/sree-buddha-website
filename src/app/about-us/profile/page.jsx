@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import "@/app/about-us/profile/style.css";
 // import Navbar from "@/components/navbar";

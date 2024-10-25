@@ -1,77 +1,77 @@
-"use client"
+"use client";
 
-import React from 'react'
-import "@/styles/homepage/research.css"
-import { useState , useEffect } from 'react';
-
-
+import React, { useEffect, useState } from 'react';
+// import "@/styles/homepage/research.css";
+import "@/styles/homepage/carousal.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-
 export default function Research() {
-  const [screenWidth, setScreenWidth] = useState(1); // Set initial screen width
+    const [slidesToShow, setSlidesToShow] = useState(3); // Default 3 slides for desktop
 
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth); // Update state on resize
-    };
+    useEffect(() => {
+        const handleResize = () => {
+            const screenWidth = window.innerWidth;
 
-    window.addEventListener('resize', handleResize); // Add resize event listener
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []); 
-  return (
-    <div className="events">
-
-      <div className="events_container">
-        <div className="events_title_area">
-          <h3>Research</h3>
-        </div>
-
-        <div className="carousal_container">
-
-          <Carousel
-            className='carousal'
-            showThumbs={false}
-            infiniteLoop
-            showIndicators={true}
-            showStatus={false}
-            swipeable
-            dynamicHeight={false}
-            centerMode
-            // centerSlidePercentage={33.33}
-            centerSlidePercentage={100/( screenWidth / 512  )}
-            renderArrowPrev={(onClickHandler, hasPrev, label) =>
-              hasPrev && (
-                <button type="button" onClick={onClickHandler} className="custom-arrow prev">
-                  &#9664; {/* Custom left arrow */}
-                </button>
-              )
+            if (screenWidth <= 768) {
+                setSlidesToShow(1); // 1 slide for mobile
+            } else if (screenWidth <= 1024) {
+                setSlidesToShow(2); // 2 slides for tablet
+            } else {
+                setSlidesToShow(3); // 3 slides for desktop
             }
-            renderArrowNext={(onClickHandler, hasNext, label) =>
-              hasNext && (
-                <button type="button" onClick={onClickHandler} className="custom-arrow next">
-                  &#9654; {/* Custom right arrow */}
-                </button>
-              )
-            }
-          >
+        };
 
-            <div className="event1 event">fasdfsadf</div>
-            <div className="event2 event">fasdfasdf</div>
-            <div className="event3 event">fadsfasdf</div>
-            <div className="event4 event">fasdfasd</div>
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Set initial number of slides based on current window size
 
-          </Carousel>
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
+    return (
+        <div className="events">
+            <div className="events_container">
+                <div className="events_title_area">
+                    <h3>RESEARCH</h3>    
+                </div>
+                <span></span>
+
+                <div className="carousal_container">
+                    <Carousel
+                        showThumbs={false}
+                        infiniteLoop
+                        showIndicators={true}
+                        showStatus={false}
+                        swipeable
+                        dynamicHeight={false}
+                        centerMode
+                        centerSlidePercentage={100 / slidesToShow} // Dynamic slide percentage
+                        renderArrowPrev={(onClickHandler, hasPrev) =>
+                            hasPrev && (
+                                <button type="button" onClick={onClickHandler} className="custom-arrow prev">
+                                    &#9664;
+                                </button>
+                            )
+                        }
+                        renderArrowNext={(onClickHandler, hasNext) =>
+                            hasNext && (
+                                <button type="button" onClick={onClickHandler} className="custom-arrow next">
+                                    &#9654;
+                                </button>
+                            )
+                        }
+                    >
+                        <div className="event">Event 1</div>
+                        <div className="event">Event 2</div>
+                        <div className="event">Event 3</div>
+                        <div className="event">Event 4</div>
+                        <div className="event">Event 5</div>
+                        <div className="event">Event 6</div>
+                    </Carousel>
+                </div>
+            </div>
         </div>
-      </div>
-
-
-    </div>
-  )
+    );
 }

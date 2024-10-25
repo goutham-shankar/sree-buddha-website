@@ -1,0 +1,107 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.events {
+    width: 100%;
+    box-sizing: border-box;
+    /* background-color: red; */
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.events_container {
+    width: 80%;
+    text-align: center;
+}
+
+.events_title_area h3 {
+    margin: 10px;
+    font-weight: 600;
+    font-size: 2.5rem;
+    /* background-color: red; */
+    text-align: left;
+}
+
+.carousal_container {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.event {
+    height: 500px;
+    width: 96%;
+    margin: 0 auto;
+    background-color: rgb(221, 221, 221);
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    border-radius: 20px;
+}
+
+/* Custom arrow styling */
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.153);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 20px;
+    justify-content: center;
+}
+
+.prev span{
+    /* background-color: red; */
+    margin-right: 15%;
+}
+
+.next {
+    right: 20px;
+    align-items: flex-end;
+}
+
+.next span{
+    margin-left: 15%;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .event img {
+        width: 60%;
+        height: 490px;
+        font-size: 1.5rem;
+    }
+
+    .custom-arrow {
+        height: 40px;
+        width: 40px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .event {
+        height: 200px;
+        font-size: 1.2rem;
+    }
+}
