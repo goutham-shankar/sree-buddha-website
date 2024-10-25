@@ -7,6 +7,7 @@
     justify-content: space-between;
     box-sizing: border-box;
     background-color: white;
+    box-sizing: border-box;
     /* background-color: red; */
 }
 .logo_section{
@@ -112,7 +113,7 @@
 
 
 
-@media (  max-width : 100vh )  {
+@media (  max-width : 150vh )  {
 
     .navbar_mobile{
         display: flex;

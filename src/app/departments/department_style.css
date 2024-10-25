@@ -75,10 +75,35 @@ p{
 
 .heading2{
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     margin-top: 40px;
+    width: 100%;
 }
 
+.heading3{
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+
+}
+
+p{
+    margin: 20px 0px;
+}
+
+li{
+    
+    /* list-style-position: inside;  */
+    
+
+    /* background-color: red; */
+}
+
+ul{
+    /* list-style-position: inside; */
+    margin-left: 1em
+    /* background-color: 2rem; */
+}
 .para1{
     margin-top: 20px;
     width: 100%;

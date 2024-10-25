@@ -282,7 +282,7 @@ export default function Navbar() {
                 >
                   Computer Science and engineering
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/departments/electrical-electronics-engineering/">
                   EEE
                 </Link>
                 <Link className="submenu_link" href="">
