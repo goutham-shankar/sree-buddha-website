@@ -1,83 +1,81 @@
-*{
-    font-family: 'poppins';
+* {
+    font-family: 'Poppins', sans-serif;
 }
-.events{
-    /* height: 100vh; */
+
+.events {
     width: 100vw;
     margin-top: 30px;
     display: flex;
-    width: 100%;
-
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.events_container{
+
+.events_container {
     width: 80%;
-    font-size: 3rem;
-    font-weight: 400;
+    text-align: center;
 }
-.events_title_area h3{
+
+.events_title_area h3 {
     margin: 10px;
     font-weight: 600;
-    /* background-color: red; */
-
 }
-.event{
+
+.carousal_container {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.event {
     height: 500px;
-    width: 95%;
-    margin: 10px;
+    width: 100%;
+    margin: 0 auto;
     background-color: rgb(221, 221, 221);
     display: flex;
-    border-radius: 20px;
-    /* gap: 5px; */
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     color: white;
-}
-.carousal{
-    /* background-color: green; */
-    width: 100%;
-    /* margin: auto; */
-    /* justify-content: space-between; */
-    padding: 20px 0px;
-
+    border-radius: 20px;
 }
 
-/* custom arrows */
-
+/* Custom arrow styling */
 .custom-arrow {
     position: absolute;
     top: 50%;
     height: 50px;
     width: 50px;
-    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.153);
     border: none;
     color: white;
     font-size: 2rem;
     cursor: pointer;
     z-index: 1;
-    padding: 10px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 50px;
-    scale: 0.8;
-    background-color: rgba(0, 0, 0, 0.058);
+    align-items: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
 }
 
-.custom-arrow.prev {
-    left: 10px; 
-    justify-content: flex-start;
+/* Responsive styling */
+@media (max-width: 768px) {
+    .event img{
+        width: 60%;
+        height: 490px;
+        font-size: 1.5rem;
+    }
+
+    .custom-arrow {
+        height: 40px;
+        width: 40px;
+        font-size: 1.5rem;
+    }
 }
 
-.custom-arrow.next {
-    right: 10px;  
-    justify-content: flex-end;  
-    /* Position the right arrow */
-}
-
-.custom-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.219); /* Change background on hover */
+@media (max-width: 480px) {
+    .event {
+        height: 200px;
+        font-size: 1.2rem;
+    }
 }
