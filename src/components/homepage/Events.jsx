@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import "@/styles/homepage/Events.css";
+// import "@/styles/homepage/Events.css";
+import "@/styles/homepage/carousal.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
@@ -49,14 +50,14 @@ export default function Events() {
                         renderArrowPrev={(onClickHandler, hasPrev) =>
                             hasPrev && (
                                 <button type="button" onClick={onClickHandler} className="custom-arrow prev">
-                                    &#9664;
+                                    <span>&#9664;</span>
                                 </button>
                             )
                         }
                         renderArrowNext={(onClickHandler, hasNext) =>
                             hasNext && (
                                 <button type="button" onClick={onClickHandler} className="custom-arrow next">
-                                    &#9654;
+                                    <span>&#9654;</span>
                                 </button>
                             )
                         }
