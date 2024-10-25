@@ -58,10 +58,10 @@ export default function ComputerScienceDepartmentFaculty() {
                     </tr>
 
                     {
-                        faculty.map((singleFaculty) => {
+                        faculty.map((singleFaculty, index) => {
                             return (
 
-                                <tr>
+                                <tr key = {index}>
 
                                     <td> <img src={`/assets/images/departments/faculty/cs/${singleFaculty[0]}`} alt="image" /> </td>
                                     {/* <td> <img src= {image.src} alt="image" /> </td> */}
