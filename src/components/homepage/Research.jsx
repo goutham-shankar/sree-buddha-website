@@ -34,8 +34,9 @@ export default function Research() {
         <div className="events">
             <div className="events_container">
                 <div className="events_title_area">
-                    <h3>RESEARCH</h3>
+                    <h3>RESEARCH</h3>    
                 </div>
+                <span></span>
 
                 <div className="carousal_container">
                     <Carousel
