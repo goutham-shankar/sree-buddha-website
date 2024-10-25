@@ -1,139 +1,274 @@
 /* Style for the main container */
 .container {
-    height: 100vh;
-    padding-left: 150px;
-    padding-right: 150px;
-    font-weight: 400;
-    overflow-x: hidden;
-  }
-  .title
-  {
-      font-family: 'Poppins', sans-serif;
-      font-size: 3vw;
-      font-weight: 700;
-      line-height: 1.5em;
-      text-align: left;
-      color: #845714   
-  }
-  .paragraph{
-    font-family: 'poppins';
-    font-size: 18px;
+  height: 100vh;
+  padding-left: 10vw; /* Adjust for better scaling on all devices */
+  padding-right: 10vw;
+  font-weight: 400;
+  overflow-x: hidden;
 }
-  
-  /* Button style */
-  .routeone {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #E6B66D;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-bottom: 15px;
-    border-radius: 20px;
-  }
-  
-  .routeone:hover {
-    color: #ffe600;
-  }
 
-  
-  /* Overlay styling (makes the background darker when the new screen is open) */
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(46, 42, 42, 0.7); /* semi-transparent black */
-  }
-  
-  /* Style for the routeo-content (new window screen) */
-  .routenno,.routetwo,.routethree ,
-  .routefour,.routefive,.routesix
-  ,.routeseven,.routeeight{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 600px;
-    background: white;
-    padding: 20px;
-    z-index: 20;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Close button styling */
-  .off {
-    display: block;
-    margin-top: 20px;
-    padding: 10px 15px;
-    font-size: 14px;
-    color: white;
-    background-color: #E6B66D;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .off:hover {
-    background-color: #e60000;
-  }
-  .btn{
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-  }
+/* Title style */
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3vw; /* Adjust based on viewport width for scaling */
+  font-weight: 700;
+  line-height: 1.5em;
+  text-align: left;
+  color: #845714;
+}
 
-  .faculty-table {
-    width: 80%;
-    margin: 20px 0;
-    font-size: 18px;
-    text-align: left;
+/* Paragraph style */
+.paragraph {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem; /* Font-size in rem for scaling */
+}
+.heading{
+font-size: 20px;
+font-family: 'poppins';
+font-weight: 600;
+}
+
+/* Button style */
+.routeone {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #E6B66D;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+  border-radius: 20px;
+}
+
+.routeone:hover {
+  color: #ffe600;
+}
+
+/* Overlay styling */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(46, 42, 42, 0.7); /* semi-transparent black */
+}
+
+/* Responsive layout for modal (route screens) */
+.routenno, .routetwo, .routethree, .routefour, .routefive, .routesix, .routeseven, .routeeight {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  z-index: 20;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button styling */
+.off {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: white;
+  background-color: #E6B66D;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right:60px;
+}
+
+.off:hover {
+  background-color: #e60000;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Faculty table styling */
+.faculty-table {
+  width: 80%;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
 }
 
 .faculty-table th, .faculty-table td {
-    padding: 5px;
-    /* border-bottom: 2px solid #ddd; */
-    vertical-align: top;
+  padding: 5px;
+  vertical-align: top;
 }
 
-.faculty-table th:first-child{
-    width: 10%;
+.faculty-table th:first-child {
+  width: 10%;
 }
+
 .faculty-table td:first-child {
-    width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.faculty-table th:nth-child(2),
-.faculty-table td:nth-child(2) {
-    width: 50%;
+.faculty-table th:nth-child(2), .faculty-table td:nth-child(2) {
+  width: 50%;
 }
 
-.faculty-table th:last-child,
-.faculty-table td:last-child {
-    width: 20%;
+.faculty-table th:last-child, .faculty-table td:last-child {
+  width: 20%;
 }
 
-/* phone  */
+/* Responsive design for tablets */
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 5vw; /* Reduced padding */
+    padding-right: 5vw;
+  }
 
-@media (max-width:480px){
+  .faculty-table {
+    width: 100%; /* Full width on smaller screens */
+    margin: 20px 0;
+    width: 90vw;
+    overflow-y: scroll;
+  }
 
-.container{
-  padding-left: 30px;
-  padding-right: 30px;
+  /* --------------------------------------- */
+  .btn{
+    padding-top: 200px;
+    /* padding-top: 50px; */
+  }
+}
+/* 
+@media (max-width:850px)
+{
+  .btn{
+    margin-top: 50px;
+    padding-top: 50px;
+  }
+} */
+/* Landscape mode for phones and tablets */
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  .container {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    font-size: 14px;
+  }
+.heading{
+  font-size: 18px;
+}
+  .title {
+    font-size: 4vw;
+  }
+
+  .faculty-table {
+    width: 100%;
+    font-size: 12px;
+    color: black;
+  }
+
+  .faculty-table td:first-child {
+    font-size: 14px;
+  }
 }
 
-.title{
-  font-size: 25px;
+@media screen and (max-width: 950px) and (orientation: landscape) {
+  .container {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+  .title {
+    font-size: 5vw;
+  }
+
+  .faculty-table {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 3px;
+    overflow-y: scroll;
+  }
+  .btn{
+    margin-top: 20px;
+    width: 80%;
+  }
+  .off{
+    margin-right: 0px;
+    height: 35px;
+  }
 }
-.paragraph{
+
+@media screen and (max-width: 850px)
+{
+  .btn{
+    margin-top: 0px;
+    padding-top: 20px;
+  }
+  .off{
+    margin-right: 80px;
+  }
+} 
+
+/* Responsive design for phones */
+@media (max-width: 700px) {
+  .btn {
+    margin-top: 10px;
+    padding-right: 170px;
+  }
+.heading{
   font-size: 16px;
 }
+  .container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+.faculty-table{
+  width: 90vw;
+  overflow-y: scroll;
 }
+
+}
+
+/* Very small phones and landscape mode */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 6vw; /* Dynamic font size for very small devices */
+    margin-top: 15px;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+  }
+
+  .faculty-table {
+    width: 100%;
+    font-size: 14px;
+    color: black;
+  }
+
+  .faculty-table td:first-child {
+    font-size: 16px;
+  }
+  .off{
+    margin-left: 80px;
+  }
+  .btn{
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+}
+
