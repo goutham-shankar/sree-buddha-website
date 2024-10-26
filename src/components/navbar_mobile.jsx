@@ -170,9 +170,9 @@ export default function NavbarMobile() {
             </div>
 
             {/* Watermark with conditional class */}
-            <div className={`watermark ${sidebarVisible ? "watermark-active" : ""}`}>
+            {/* <div className={`watermark ${sidebarVisible ? "watermark-active" : ""}`}>
                 <img src="assets/images/sree_buddha_logo.png" alt="Watermark" className="watermark-image" />
-            </div>
+            </div> */}
         </div>
     );
 }
