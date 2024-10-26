@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import photo from '@/assets/images/facilities/seminar_hall.jpg'
 
 export default function page() {
   return (
@@ -8,7 +9,11 @@ export default function page() {
             <hr /><br />
             <div className="paragraph">Multimedia Hall with video conferencing facilities are available</div>
             <br />
-            <div className="photo"></div><br /><br /><br />
+            <div className="photo">
+              <img src={photo.src} alt="" />
+            </div>
+            
+            <br /><br /><br />
     </div>
   )
 }
