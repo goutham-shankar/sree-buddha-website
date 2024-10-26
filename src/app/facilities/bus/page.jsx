@@ -196,7 +196,7 @@ export default function Page() {
             <div className="routefour">
                         <div className="routeo-content">
                             <div className="btn"> 
-                                <h2>Changankulangara</h2>
+                                <div className="heading">Changankulangara</div>
                                 <button className="off" onClick={ toggleRouteFour}>
                                 Close
                             </button></div>
@@ -290,7 +290,7 @@ export default function Page() {
             <div className="routesix">
                         <div className="routeo-content">
                             <div className="btn"> 
-                                <h2>Chettikulangara</h2>
+                                <div className="heading">Chettikulangara</div>
                                 <button className="off" onClick={ toggleRouteSix}>
                                 Close
                             </button></div>
