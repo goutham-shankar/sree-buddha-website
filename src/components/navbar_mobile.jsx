@@ -50,7 +50,7 @@ export default function NavbarMobile() {
 
 
             <div className ="sidebar_menu">   
-                    <span onClick={()=>{toggleSubmenu(0)}} >About Us</span>       
+                    <span onClick={()=>{toggleSubmenu(0)}} >About Us</span>   
                     <div className="sidebar_submenu" style={{maxHeight: (visibleSubMenus[0]?maxHeight: "0px" )}}>
                         <ul>
                             <a className = "sidebar_submenu_link" href = "/about-us/profile">Profile</a>
@@ -71,6 +71,8 @@ export default function NavbarMobile() {
                         </ul>
                     </div>      
                 </div>
+                <hr width="100%" size="2"/>
+
                 <div className ="sidebar_menu" >   
                     <span  onClick={()=>{toggleSubmenu(1)}}>Research</span>    
                     <div className="sidebar_submenu"  style={{maxHeight: (visibleSubMenus[1]?maxHeight: "0px" )}}>
@@ -84,6 +86,8 @@ export default function NavbarMobile() {
                         </ul>
                     </div>                
                 </div>
+                <hr width="100%" size="2"/>
+
                 <div className ="sidebar_menu" > 
                       <span onClick={()=>{toggleSubmenu(2)}}>Facilities</span>  
                       <div className="sidebar_submenu"   style={{maxHeight: (visibleSubMenus[2]?maxHeight: "0px" )}}>
@@ -100,6 +104,8 @@ export default function NavbarMobile() {
                         </ul>
                     </div>                  
                 </div>
+                <hr width="100%" size="2"/>
+
                 <div className ="sidebar_menu" >   
                     <span onClick={()=>{toggleSubmenu(3)}}> Cells and Chapters</span>           
                     <div className="sidebar_submenu"   style={{maxHeight: (visibleSubMenus[3]?maxHeight: "0px" )}}>
@@ -116,6 +122,8 @@ export default function NavbarMobile() {
                             <Link className = "sidebar_submenu_link" href = "">IIT-remote center</Link>
                         </ul>
                     </div>       
+                    <hr width="100%" size="2"/>
+
                     
                  </div>
                 <div className ="sidebar_menu" >   
@@ -135,6 +143,8 @@ export default function NavbarMobile() {
                         </ul>
                     </div>            
                 </div>
+                <hr width="100%" size="2"/>
+
                 <div className ="sidebar_menu" >   
                     <span onClick={()=>{toggleSubmenu(5)}}>Academics</span>  
                     <div className="sidebar_submenu"  style={{maxHeight: (visibleSubMenus[5]?maxHeight: "0px" )}}>
@@ -151,6 +161,8 @@ export default function NavbarMobile() {
                     </div>         
                             
                 </div>
+                <hr width="100%" size="2"/>
+
                 <div className ="sidebar_menu" >   
                     <span onClick={()=>{toggleSubmenu(6)}}>Autonomous</span>  
                     <div className="sidebar_submenu"   style={{maxHeight: (visibleSubMenus[6]?maxHeight: "0px" )}}>
@@ -168,6 +180,8 @@ export default function NavbarMobile() {
                         </ul>
                     </div>                   
                 </div>
+                <hr width="100%" size="2"/>
+
                 <div className ="sidebar_menu" >   
                     <span onClick={()=>{toggleSubmenu(7)}}>Departments</span>      
                     <div className="sidebar_submenu"   style={{maxHeight: (visibleSubMenus[7]?maxHeight: "0px" )}}>
@@ -185,8 +199,17 @@ export default function NavbarMobile() {
                         </ul>
                     </div>                       
                 </div>
+                
 
 
+            </div>
+            <div className="watermark">
+                <img 
+                    src="assets/images/sree_buddha_logo.png" 
+                    alt="Watermark" 
+                    className="watermark-image"
+                />
+                
             </div>
 
         </div>
