@@ -113,7 +113,7 @@
 
 
 
-@media (  max-width : 150vh )  {
+@media (  max-width : 1000px )  {
 
     .navbar_mobile{
         display: flex;

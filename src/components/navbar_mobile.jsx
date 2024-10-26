@@ -88,10 +88,10 @@ export default function NavbarMobile() {
                       <span onClick={()=>{toggleSubmenu(2)}}>Facilities</span>  
                       <div className="sidebar_submenu"   style={{maxHeight: (visibleSubMenus[2]?maxHeight: "0px" )}}>
                         <ul>
-                            <Link className = "sidebar_submenu_link" href = "">Cells and Centers</Link>
-                            <Link className = "sidebar_submenu_link" href = "">Central Library </Link>
-                            <Link className = "sidebar_submenu_link" href = "">Conference hall</Link>
-                            <Link className = "sidebar_submenu_link" href = "">conveyance and bus routes</Link>
+                            <Link className = "sidebar_submenu_link" href = "/facilities/cells">Cells and Centers</Link>
+                            <Link className = "sidebar_submenu_link" href = "/facilities/library">Central Library </Link>
+                            <Link className = "sidebar_submenu_link" href = "/facilities/hall">Conference hall</Link>
+                            <Link className = "sidebar_submenu_link" href = "/facilities/bus">conveyance and bus routes</Link>
                             <Link className = "sidebar_submenu_link" href = "">repographics facilities</Link>
                             <Link className = "sidebar_submenu_link" href = "">internal Lab</Link>
                             <Link className = "sidebar_submenu_link" href = "">hostel </Link>

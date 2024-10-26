@@ -106,16 +106,16 @@ export default function Navbar() {
             <span>Facilities</span>
             <div className="submenu">
               <ul>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/facilities/cells">
                   Cells and Centers
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/facilities/library">
                   Central Library{" "}
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/facilities/hall">
                   Conference hall
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/facilities/bus">
                   conveyance and bus routes
                 </Link>
                 <Link className="submenu_link" href="">
