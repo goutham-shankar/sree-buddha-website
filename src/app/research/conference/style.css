@@ -27,6 +27,7 @@
   .headingtwo{
     font-size: 18px;
     margin-bottom: 15px;
+    font-weight: 600;
 }
   .meetone,.meettwo{
     height: 40vw;
@@ -46,6 +47,13 @@
   }
   .fotor{
     width: 80vw;
+  }
+  .light,.lighttwo{
+    height: 30vw;
+  }
+  .news{
+    height: 30vw;
+    margin: 30px 0px 30px;
   }
   
 .table-container {
@@ -77,14 +85,30 @@ thead th {
     .table-container{
         width: 90%;
     }
+    .light,.lighttwo,.news{
+      width: 80vw;
+      height: 50vw;
+    }
+    .meetone,.meettwo{
+      height: 65vw;
+      width: 30vw;
+    }
+   .dmeetone,.dmeettwo{
+    height: 40vw;
+    width: 70vw;
+   }
 }
 
 @media (max-width:480px)
 {
+  .title{
+    font-size: 30px;
+  }
     .container{
         font-family: 'poppins';
         font-size: 16px;
     }
+  
     .photoone{
         flex-direction: column;
     }
@@ -97,6 +121,13 @@ thead th {
     .dmeetone,.dmeettwo{
         height: 50vw;
         width: 80vw;
+    }
+    .news{
+      height: 65vw;
+    }
+    .light,.lighttwo{
+      width: 80vw;
+      height: 50vw;
     }
     .table-container {
         /* padding-left: 20px; */

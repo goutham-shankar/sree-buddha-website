@@ -6,6 +6,10 @@ import meettwo from '../../../../public/assets/images/research/meettwo.jpg'
 import dmeetone from '../../../../public/assets/images/research/dmeetone.jpg'
 import dmeettwo from '../../../../public/assets/images/research/dmeettwo.jpg'
 import fotor from '../../../../public/assets/images/research/Collage_Fotor.png'
+import light from '../../../../public/assets/images/research/lighting.jpg'
+import lighttwo from '../../../../public/assets/images/research/lightingtwo.jpg'
+import news from '../../../../public/assets/images/research/newspic.png'
+
 
 
 
@@ -95,6 +99,50 @@ export default function page() {
             <div className="photothree">
                     <img className="fotor"src={fotor.src} alt="" />
             </div>
+
+            <div className="headingtwo">2ND ANNUAL CONFERENCE SERIES ON “ENGINEERING EDUCATION FOR FACING THE FUTURE (E2F2 2018)”   ON 17TH APRIL 2018</div>
+
+            <div className="paragraph">
+            The inaugural function of the events organized under the 2nd Annual Conference Series on “Engineering Education for Facing the Future 
+            (E2F2 2018)” was held at 10 AM on 17th April 2018 in the Main Auditorium in the Central Library Building of the Sree Buddha College of 
+            Engineering (SBCE), Pattoor, Alappuzha. Registration counters for the delegates were open from 8.30 AM in the Front Office area of the 
+            Administrative Block. Prof.K. Sasikumar, Chairman, Sree Buddha Group of institutions presided over the inaugural function. The program 
+            started with the prayer song by the college choir. Dr.R. Gopakumar, Organizing Secretary of E2F2 2018 warmly welcomed the dignitaries 
+            and the gathering to the function. Dr. S. Suresh Babu, Conference Chair (E2F2 2018) and Principal, SBCE presented the Conference Rationale.
+             In his speech, he expressed the hope that the E2F2 conference will serve as an effective  platform for the faculty members, researchers 
+             and students to discuss their innovative research ideas. <br /><br />
+
+             The conferences under the E2F2 2018 series are inaugurated by the Chief Guest, Padmashree Dr.G. Shankar, Founder Chairman &Chief
+              Architect, Habitat Technology Group.In the inaugural address, he advised the teachers of engineering colleges to impart basic 
+              knowledge to the students in various subjects together with their practical applications, so that, the students get more 
+              interested in those subjects. Shri.K.K. Sivadasan, Treasurer, Sree Buddha Educational society offered felicitations and 
+              wished all the conferences to be successful. Dr. M. S. Senthil Saravanan delivered the vote of thanks. <br /><br />
+
+              The focus of the keynote address by Padma Shree  Dr.G. Shankar was on all aspects of needs of the society – stressing on 
+              sustainability – from drinking water to clothing to shelters, pavements, apartments and infrastructure development. The necessity 
+              and importance of water conservation through recycling and water management through rain water harvesting and efficient 
+              use of water was highlighted with ease with his wide and rich experience. He was also critical in the usage of materials of
+               construction which are not sustainable, and logically explained the necessity of using locally available materials like
+                mud, bamboo and the like.  He was eloquent about the rich engineering qualities of Bamboo as a building material and 
+                stressed upon the need for further studies in bamboo structures. <br /><br />
+            
+            <img className='light' src={light.src} alt="" />
+
+            <img className='news' src={news.src} alt="" />
+            </div>
+            <div className="headingtwo">Two day National Conference E2F2(Engineering Education for Facing the Future) 2017</div>
+            
+            <div className="paragraph">
+            Our college has conducted a 2 day National Conference on Eco friendly Technological innovations for sustainable developments under the conference titles 
+            E2F2(Engineering Education for Facing the Future) from6-7 April 2017. The conference was conducted jointly by all the departments of the college and 
+            around 130 papers were presented and 12 papers were selected for awards. The conference was inaugurated by K Balakrishnan Nair, General Manager
+             (Operations) ALIND switchgear Ltd.
+            </div> <br /><br />
+
+            <div className="photolast">
+                <img className='lighttwo' src={lighttwo.src} alt="" />
+            </div><br />
+            Chief guest inaugurating the function by lighting the lamp <br /><br />
       
     </div>
   )
