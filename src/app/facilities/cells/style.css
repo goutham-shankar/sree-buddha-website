@@ -60,10 +60,9 @@
 .faculty-table td:last-child {
     width: 40%;
 }
-.image{
-    height: 500px;
-    width: 1000px;
-    background-color: aqua;
+.image img{
+    height: 35vw;
+  
 }
 .no-underline {
     text-decoration: none;
@@ -122,8 +121,7 @@
 }
 @media(max-width:1200px){
     .image{
-        width: 800px;
-        height: 350px;
+
     }
 }
 
@@ -138,8 +136,7 @@
         font-size: 40px;
     }
     .image{
-        width: 500px;
-        height: 250px;
+       
     }
 }
 
@@ -210,9 +207,8 @@
     /* .noseven,.pseven{
         margin-top: 25px;
     } */
-    .image{
-        width: 300px;
-        height: 150px;
+    .image img{
+        height: 55vw;
     }
     
 

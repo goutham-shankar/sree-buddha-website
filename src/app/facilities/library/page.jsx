@@ -1,5 +1,12 @@
 import React from 'react'
 import './style.css'
+import picone from '../../../../public/assets/images/facilities/libpicone.jpg'
+import pictwo from '../../../../public/assets/images/facilities/libpictwo.jpg'
+import picthree from '../../../../public/assets/images/facilities/libpicthree.jpg'
+import picfour from '../../../../public/assets/images/facilities/libpicfour.jpg'
+import picfive from '../../../../public/assets/images/facilities/libpicfive.jpg'
+
+
 export default function page() {
   return (
     <>
@@ -12,7 +19,9 @@ export default function page() {
             in the main campus. 
          </div>
         <br />
-        <div className="imageone"></div>
+        <div className="imageone">
+            <img src={picone.src} alt="" />
+        </div>
         <br />
 
         <div className="heading">Digital Library</div>
@@ -24,7 +33,9 @@ export default function page() {
                 ELSEVIER, SPRINGER, Access Engineering Library (McGraw Hill), ASTM Digital Library, ASCE, ASME, J-GATE,
                 ISO, JTC1, DELNET Membership and NPTEL facility.
                 </div><br />
-                <div className="imagetwo"></div>
+                <div className="imagetwo">
+                    <img src={pictwo.src} alt="" />
+                </div>
         </div><br />
 
         <div className="services">
@@ -43,7 +54,9 @@ export default function page() {
                         <li>OPAC</li>
                     </ul>
                 </div><br />
-                <div className="imagethree"></div>
+                <div className="imagethree">
+                    <img src={picthree.src} alt="" />
+                </div>
                 <br />
 
                 <b>Library Staff</b><br />
@@ -81,7 +94,9 @@ export default function page() {
                 </tr>
             </tbody>
             </table>
-        <div className="imagefour"></div>
+        <div className="imagefour">
+            <img src={picfour.src} alt="" />
+        </div>
         </div><br />
        
        <div className="reference">
@@ -93,7 +108,9 @@ export default function page() {
                     editions of reference books, handbooks, conference proceedings, encyclopedias and various reference documents.
                     The fully air conditioned section is located in the first floor.
             </div><br />
-            <div className="imagefive"></div>
+            <div className="imagefive">
+                <img src={picfive.src} alt="" /><br />
+            </div>
         </div><br /><br />
 
     </div>

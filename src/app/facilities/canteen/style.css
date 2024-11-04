@@ -4,7 +4,6 @@
     font-weight: 400;
     overflow-x: hidden;
     font-size: 18px;
-    height: 100vh;
    
 }
 .title {
@@ -34,12 +33,9 @@
         padding-left: 150px;
      
     }
-    .photo{
-        width: 900px;
-        height: 400px;
-    }
-    .paragraph{
-        margin-top: 240px;
+    .photo img{
+         width: 60vw;
+       
     }
 }
 
@@ -52,11 +48,10 @@
     .photo img{
         width: 800px;
         height: 600px;
-        margin-bottom: 50px;
+    
     }
     .paragraph{
         font-size: 16px;
-        margin-top: 200px;
     }
 }
 @media (max-width:950px){

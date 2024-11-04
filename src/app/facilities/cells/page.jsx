@@ -1,6 +1,6 @@
 import React from 'react'
 import "./style.css"
-
+import pic from '../../../../public/assets/images/facilities/cellpicone.jpg'
 
 export default function page() {
   return (
@@ -62,7 +62,9 @@ export default function page() {
             <br /><br />
 
             <div className="heading">Entrepreneurship Development Cell</div><br />
-            <div className="image"></div><br /><br />
+            <div className="image">
+                    <img src={pic.src} alt="" />    
+            </div><br /><br />
 
             <div className="paragraph">In order to create the entrepreneurship culture among the students, 
                 the Sree Buddha College of Engineering and Technopark – Technology Business Incubator (T–TBI) jointly 

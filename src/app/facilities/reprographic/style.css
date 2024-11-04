@@ -19,7 +19,7 @@
     font-family: 'poppins';
     font-size: 22px;
 }
-.link {
+.links {
     width: 436px;
     height: 68px;
     display: flex;
@@ -31,15 +31,13 @@
     font-weight: 500;
     margin-bottom: 20px;
     transition: background-color 0.3s;
+    text-decoration: none;
 }
 
-.btn:hover{
-    color: rgb(0, 0, 0);
+.links:hover{
+    color: rgb(211, 145, 3);
 }
-.no-underline:hover {
-    color: #f48208;
-    text-decoration: none; /* Ensures no underline appears on hover */
-}
+
 @media (max-width:1200)
 {
  .paragraph{

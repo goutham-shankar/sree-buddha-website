@@ -19,30 +19,24 @@
     font-size: 18px;
 }
 /* images */
-.imageone{
-    height: 200px;
-    width: 600px;
-    background-color:aqua ;
+.imageone img{
+   height: 40vw;    
 }
-.imagetwo{
-    height: 200px;
-    width: 600px;
-    background-color:aqua ;
+.imagetwo img{
+    height: 35vw;
 }
-.imagethree{
-    height: 200px;
-    width: 600px;
-    background-color:aqua ;
+.imagethree img{
+    height: 40vw;
+   
 }
-.imagefour{
-    height: 200px;
-    width: 600px;
-    background-color:aqua ;
+.imagefour img{
+    height: 35vw;
+    width: 60vw;
+  
 }
-.imagefive{
-    height: 200px;
-    width: 600px;
-    background-color:aqua ;
+.imagefive img{
+    height:40vw;
+    margin-bottom: 60px;
 }
 
 .heading{
@@ -53,7 +47,7 @@
     margin-bottom: 20px;    
 }
 .content ul {
-    list-style: none; /* Remove default bullet points */
+   padding-left: 5%;
     font-weight: 400;
 }
 
@@ -65,14 +59,7 @@
     line-height: 1.5; /* Adjust line height for better readability */
 }
 
-.content ul li::before {
-    content: "\25B6"; /* Unicode for right-pointing triangle (►) */
-    padding-left: 10px;
-    color: black; /* Change the color of the arrow if needed */
-    position: absolute;
-    margin-left: -20px; /* Align the arrow with text */
-    font-weight: 400;
-}
+
 .faculty-table {
     width: 60%;
     border-collapse: collapse;
@@ -111,25 +98,21 @@
         padding-right: 100px;
         padding-left: 100px;
     }
+    .imageone img{
+        width: 80vw;
+        height: 50vw;
+    }
+    .imagethree img,.imagefour img{
+        width:70vw;
+        height: 50vw;
+    }
+    .imagefive img{
+        width: 80vw;
+        height: 50vw;
+    }
 }
 @media (max-width:800px){
-    .imageone{
-        width: 500px;
-        height: 200px;
-    }
-    .imagetwo{
-        width: 500px;
-        height: 200px;
-    }.imagethree{
-        width: 500px;
-        height: 200px;
-    }.imagefour{
-        width: 500px;
-        height: 200px;
-    }.imagefive{
-        width: 500px;
-        height: 200px;
-    }
+    
     .faculty-table{
         width: 90%;
     }
@@ -139,46 +122,25 @@
     .container{
         padding-right: 30px;
         padding-left: 30px;
+        font-size: 16px;
     }
-    .imageone{
-        width: 350px;
-        height: 200px;
-    }
-    .imagetwo{
-        width: 350px;
-        height: 200px;
-    }.imagethree{
-        width: 350px;
-        height: 200px;
-    }.imagefour{
-        width: 350px;
-        height: 200px;
-    }.imagefive{
-        width: 350px;
-        height: 200px;
-    }
+   .title{
+    font-size: 35px;
+   }
     .faculty-table{
         width: 90%;
     }
+    .imagetwo img{
+        height: 50vw;
+        width: 80vw;
+    }
+    .imagefour img ,.imagethree img{
+        width: 80vw;
+    }
+    .paragraph{
+        font-size: 16px
+    }
 }
 
-@media (max-width:400px){
-    .imageone{
-        width: 300px;
-        height: 180px;
-    }
-    .imagetwo{
-        width: 300px;
-        height: 180px;
-    }.imagethree{
-        width: 300px;
-        height: 180px;
-    }.imagefour{
-         width: 300px;
-        height: 180px;
-    }.imagefive{
-        width: 300px;
-        height: 180px;
-    }
-}
+
 

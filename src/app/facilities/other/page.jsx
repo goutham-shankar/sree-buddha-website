@@ -30,7 +30,7 @@ export default function page() {
         <div className="heading">Stationary Store</div>
         <div className="paragraph">The College store provides all text books, note books and equipments for laboratory
              work including graphics. Most of the stationery for hostelers are available at reasonable rates.</div>
-        <br />
+        
 
         <div className="heading">Transport</div>
         <div className="paragraph">We provide daily transport facility for student’s pick and drop. 
