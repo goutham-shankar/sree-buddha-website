@@ -285,23 +285,26 @@ export default function Navbar() {
                 <Link className="submenu_link" href="/departments/electrical-electronics-engineering/">
                   EEE
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/departments/electronics-communication-engineering">
                   ECE
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/departments/mechanical-engineering">
                   Mechanical
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/departments/artificial-intelligence-machine-learning">
                   Computer Science with AI
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/departments/electronics-computer-engineering">
                   Electronics and Computer Engineering
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/departments/mathematics-and-basic-sciences">
                   Basic Science and Humanities
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/departments/food-technology">
                   Food Science
+                </Link>
+                <Link className="submenu_link" href="/departments/biotechnology-biochemical-engineering">
+                  Biotechnology and Biochemical Engineering
                 </Link>
               </ul>
             </div>

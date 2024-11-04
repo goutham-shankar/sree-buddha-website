@@ -8,6 +8,7 @@
 .top_img_section img{
    
     width: 100%;
+  
     /* margin: 30px; */
     /* background-color: red; */
 }
@@ -53,6 +54,7 @@
 
 p{
     font-size: 18px;
+    margin-bottom: 30px;
 }
 
 .hod-image{
@@ -99,11 +101,6 @@ li{
     /* background-color: red; */
 }
 
-ul{
-    /* list-style-position: inside; */
-    margin-left: 1em
-    /* background-color: 2rem; */
-}
 .para1{
     margin-top: 20px;
     width: 100%;
@@ -127,7 +124,41 @@ ul{
     flex-direction: row;
 }
 
+img{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.list {
+    /* background-color: red; */
+    /* margin-left: 0px; */
+    width: 100%;
+    margin-bottom: 20px;
+  
+
+}
+
+.list li{
+
+    margin-left: 1em;
+    margin-bottom: 8px;
+}
+
+.list a{
+
+        text-decoration: none;
+}
+
+
+.img_small{
+    width: 40% !important;
+}
+
 @media( max-width : 100vh){
+
+    .img_small{
+        width: 90% !important;
+    }
 
     .top_img_section{
         /* background-color: red; */
