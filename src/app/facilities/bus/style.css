@@ -101,11 +101,13 @@ font-weight: 600;
   margin: 20px 0;
   font-size: 18px;
   text-align: left;
+  border-collapse: collapse;
 }
 
 .faculty-table th, .faculty-table td {
   padding: 5px;
   vertical-align: top;
+  border: none;
 }
 
 .faculty-table th:first-child {
@@ -142,19 +144,9 @@ font-weight: 600;
   }
 
   /* --------------------------------------- */
-  .btn{
-    padding-top: 200px;
-    /* padding-top: 50px; */
-  }
+ 
 }
-/* 
-@media (max-width:850px)
-{
-  .btn{
-    margin-top: 50px;
-    padding-top: 50px;
-  }
-} */
+
 /* Landscape mode for phones and tablets */
 @media screen and (max-width: 700px) and (orientation: landscape) {
   .container {

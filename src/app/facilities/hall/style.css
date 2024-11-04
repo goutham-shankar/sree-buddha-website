@@ -21,61 +21,24 @@
 }
 .photo img{
     width: 60vw;
-    height: 60vh;
+    height: 80vh;
 }
 
 /* for tab */
+
 @media (max-width:1400px){
     .container{
-        padding-right: 150px;
-        padding-left: 150px;
-        height: 90vh;
+        padding-right: 100px;
+        padding-left: 100px;
     }
-    .photo{
-        width: 900px;
-        height: 400px;
+    .photo img{
+       height: 50vw;
+       width: 80vw;
     }
 }
 
-@media (max-width:1200px){
-    .container{
-        padding-right: 100px;
-        padding-left: 100px;
-    }
-    .photo img{
-        width: 800px;
-        height: 600px;
-    }
-}
-@media (max-width:950px){
-    .container{
-        padding-right: 100px;
-        padding-left: 100px;
-    }
-    .photo img{
-        width: 75vw;
-        height: 40vh;
-    }
-}
-@media(max-width:920px)
-{
-    .photo img{
-        height: 450px;
-    }
-}
-@media (max-width:700px){
-    .container{
-        padding-right: 40px;
-        height: 100vh;
-    }
-    .title{
-        font-size: 25px;
-    }
-    .photo img{
-        width: 350px;
-        height: 230px;
-    }
-}
+
+
 
 /* phone */
 @media (max-width:480px){
@@ -89,14 +52,9 @@
 .paragraph{
     font-size: 16px;
 }
-.photo{
-    width: 350px;
-    height: 180px;
-}
+
 }
 @media(max-width:400px)
 {
-    .photo img{
-        width: 300px;
-    }
+    
 }

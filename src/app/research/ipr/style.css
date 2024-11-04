@@ -1,0 +1,77 @@
+.container {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-weight: 400;
+    overflow-x: hidden;
+    font-size: 18px;
+    /* height: 100vh; */
+    font-family: 'Poppins', sans-serif;
+   
+  }
+  .title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-align: left;
+    color: #845714;
+    margin-top: 20px;
+  }
+  .heading {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37.5px;
+    /* text-align: justify; */
+    margin-bottom: 20px;
+  }
+  
+/* .onea{
+    padding-left: 450px;
+    color: rgb(25, 0, 255);
+}
+
+.threea{
+    padding-left: 298px;
+    color: rgb(25, 0, 255);
+}
+.foura{
+    padding-left: 53px;
+    color: rgb(25, 0, 255);
+} */
+.twoa{
+    /* padding-left: 383px; */
+    color: rgb(25, 0, 255);
+}
+.patent{
+    margin-bottom: 15px;
+}
+a:hover {
+    color: #845714; /* Hover color */
+    text-decoration: underline; /* Hover underline */
+}
+
+
+@media (max-width:480px)
+{
+    .container{
+        font-size: 16px;
+    }
+    .title{
+        font-size: 25px;
+    }
+    .heading{
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+    .onea,.twoa,.threea,.foura{
+        padding-left: 0px;
+        /* margin-bottom: 20px; */
+    }
+    p a {
+        text-decoration: none;
+        transition: color 0.3s ease;
+        word-wrap: break-word;  /* Ensures long links wrap onto multiple lines */
+        overflow-wrap: anywhere; /* Forces break on long URLs to fit within container */
+    }
+}
+
