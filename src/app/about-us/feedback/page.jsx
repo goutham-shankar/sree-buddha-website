@@ -8,10 +8,12 @@ export default function Feedback() {
     <div className="container">
 
       <div className="main">
-          <br /><p className="feedback">Feedback</p><br /><br />
-          <p className='feedback-analysis'>FEEDBACK ANALYSIS</p><br />
+          <br /><p className="title">Feedback</p><br />
+
+          <div className="heading">FEEDBACK ANALYSIS</div>
           <p >The institution follows three types of feedback system.</p><br />
-          <h3>Direct Feedback from the Students</h3>
+          <div className="heading">Direct Feedback from the Students</div>
+
           <p>Each department has constituted class committees for each semester with staff and student members. 
             Student members are invited to express their view on subjects on the academic environment of the department
             and the feedback is collected by the Chairman of the committee and submitted to the HOD for further actions.</p><br />
@@ -42,7 +44,7 @@ export default function Feedback() {
           Updated information till 7 Feb  2019 11.00 am IST</p><br />
 
           <div className="pic">
-            <img className="image" src={feedback_image.src} alt="" />
+            <img src={feedback_image.src} alt="" />
           </div><br /><br />
 
         
