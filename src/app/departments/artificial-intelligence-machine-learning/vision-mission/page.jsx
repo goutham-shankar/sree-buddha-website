@@ -11,26 +11,25 @@ export default function ComputerScienceDepartment() {
 
 
             {/* <div className="top_img_section"> */}
-                {/* <img src={image1.src} alt="image" /> */}
+            {/* <img src={image1.src} alt="image" /> */}
             {/* </div> */}
 
-                    <div className="vision_mission">
+            <div className="vision_mission">
 
-                    <h3 className="">VISION</h3>
-                    <p className="">
-                    To create skilful Electrical & Electronics engineers with societal commitment
-                    </p>
+                <h3 class="heading1">VISION</h3>
+                <p>To be globally recognized in the field of Artificial Intelligence and Machine Learning through the production of competent professionals and the conduct of applied research for the benefit of society.</p>
 
-                    <h3 className="">MISSION</h3>
-                  
-                       <ul>
-                        <li>Create professionally qualified Electrical & Electronics engineers by imparting necessary knowledge and relevant skills.</li>
-                        <li>Encourage students to inculcate a culture of lifelong learning necessary for jobs or higher studies.</li>
-                        <li>Induce human values and social commitment to meet societal needs</li>
-                       </ul>
-                  
+                <h3 class="heading1">MISSION</h3>
+                <ul className='list'>
+                    <li>To establish an essential environment with required infrastructure and faculty for imparting domain knowledge.</li>
+                    <li>To bring out the competent and industry ready students by practicing theoretical aspects with experiential Learning.</li>
+                    <li>To prepare the students with holistic personality by means of appropriate technical and communication skills for solving real world problems.</li>
+                    <li>To foster academia-business collaborations in the area of artificial intelligence.</li>
+                </ul>
 
-                    </div>
+
+
+            </div>
 
 
 
