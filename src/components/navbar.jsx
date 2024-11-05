@@ -294,11 +294,14 @@ export default function Navbar() {
                 <Link className="submenu_link" href="/departments/electronics-computer-engineering">
                   Electronics and Computer Engineering
                 </Link>
+                <Link className="submenu_link" href="/departments/civil-engineering">
+                  Civil Engineering
+                </Link>
                 <Link className="submenu_link" href="/departments/mathematics-and-basic-sciences">
                   Basic Science and Humanities
                 </Link>
                 <Link className="submenu_link" href="/departments/food-technology">
-                  Food Science
+                  Food Sciencess
                 </Link>
                 <Link className="submenu_link" href="/departments/biotechnology-biochemical-engineering">
                   Biotechnology and Biochemical Engineering

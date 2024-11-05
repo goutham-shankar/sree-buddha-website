@@ -11,26 +11,21 @@ export default function ComputerScienceDepartment() {
 
 
             {/* <div className="top_img_section"> */}
-                {/* <img src={image1.src} alt="image" /> */}
+            {/* <img src={image1.src} alt="image" /> */}
             {/* </div> */}
 
-                    <div className="vision_mission">
+            <h3 class="heading1">Vision & Mission</h3>
 
-                    <h3 className="">VISION</h3>
-                    <p className="">
-                    To create skilful Electrical & Electronics engineers with societal commitment
-                    </p>
+            <h3 class="heading2">Vision</h3>
+            <p>To breed professionally competent Civil Engineers for a sustainable society</p>
 
-                    <h3 className="">MISSION</h3>
-                  
-                       <ul>
-                        <li>Create professionally qualified Electrical & Electronics engineers by imparting necessary knowledge and relevant skills.</li>
-                        <li>Encourage students to inculcate a culture of lifelong learning necessary for jobs or higher studies.</li>
-                        <li>Induce human values and social commitment to meet societal needs</li>
-                       </ul>
-                  
+            <h3 class="heading2">Mission</h3>
+            <ul className='list'>
+                <li>Provide theoretical, practical and industry knowledge in Civil Engineering</li>
+                <li>Encourage students for higher studies, lifelong learning and research</li>
+                <li>Motivate students to apply knowledge and expertise for the development of a sustainable society</li>
+            </ul>
 
-                    </div>
 
 
 
