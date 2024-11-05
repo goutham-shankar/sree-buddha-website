@@ -1,12 +1,14 @@
 import React from "react";
-
+import "@/components/accreditation/criteria1.css";
 const criteria1 = () => {
   return (
     <div>
       <div className="topContainer">
         <div className="curriculum-container">
-          <h2>1.1 Curricular Planning and Implementation</h2>
-          <ul>
+          <h2 className="subheading">
+            1.1 Curricular Planning and Implementation
+          </h2>
+          <ul className="list">
             <li>
               <a href="#">
                 1.1.1 The Institution ensures effective curriculum delivery
@@ -29,8 +31,8 @@ const criteria1 = () => {
             </li>
           </ul>
 
-          <h2>1.2 Academic Flexibility</h2>
-          <ul>
+          <h2 className="subheading">1.2 Academic Flexibility</h2>
+          <ul className="list">
             <li>
               <a href="#">
                 1.2.1 Percentage of new Courses introduced of the total number
@@ -53,8 +55,8 @@ const criteria1 = () => {
             </li>
           </ul>
 
-          <h2>1.3 Curriculum Enrichment</h2>
-          <ul>
+          <h2 className="subheading">1.3 Curriculum Enrichment</h2>
+          <ul className="list">
             <li>
               <a href="#">
                 1.3.1 Institution integrates cross cutting issues relevant to
@@ -76,8 +78,8 @@ const criteria1 = () => {
             </li>
           </ul>
 
-          <h2>1.4 Feedback System</h2>
-          <ul>
+          <h2 className="subheading">1.4 Feedback System</h2>
+          <ul className="list">
             <li>
               <a href="#">
                 1.4.1 Structured feedback received from Students, Teachers,
