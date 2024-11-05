@@ -19,7 +19,6 @@ const profile = () => {
           <br />
           <div className="pic">
             <img
-              className="college_background"
               src={"/assets/images/sree_buddha_college_image1.png"}
               alt=""
             />

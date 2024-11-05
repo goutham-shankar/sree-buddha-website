@@ -75,14 +75,14 @@ body {
     padding-top: 10px;
 }
 .link {
-    width: 436px;
-    height: 68px;
+    width: 20vw;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #E6B66D;
     border-radius: 40px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 20px;
     transition: background-color 0.3s;
@@ -91,6 +91,71 @@ body {
 .link:hover {
     background-color: #d6a94d; /* Darker shade on hover */
 }
+
+/* ---------------------- */
+
+.photolinks{
+    margin: 80px auto;
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin: 0px 30px 30px ;
+    /* justify-content: space-between; */
+
+}
+.photolink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 130px;
+    width: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-image: url('/assets/images/admission/arrowmark.png');
+}
+.phototextone,.phototextthree,.phototextone{
+    padding-right: 15px;
+    padding-bottom: 10px; ;
+    font-size: 18px;
+    font-family: 'poppins';
+    color:#000000 ;
+    font-weight: 500;
+    cursor: pointer;
+}
+.phototextthree{
+    width: 100px;
+}
+a{
+text-decoration: none;
+}
+.phototextfour{
+    color: #000000;
+    font-weight: 500;
+    padding-bottom: 15px;
+    padding-right: 20px;
+}
+.phototextone:hover {
+    color: #f48208;
+    text-decoration: none; /* Ensures no underline appears on hover */
+}
+.phototexttwo:hover{
+    color: #f48208;
+    text-decoration: none; /* Ensures no underline appears on hover */
+}
+.phototextthree:hover{
+    color: #f48208;
+    text-decoration: none; /* Ensures no underline appears on hover */
+}
+
+.phototextfour:hover{
+    color: #f48208;
+    text-decoration: none; /* Ensures no underline appears on hover */
+}
+
+/* ---------------------------- */
+
 
 .paragraph {
     font-size: 18px;
@@ -106,37 +171,27 @@ body {
     line-height: 33px;
     /* text-align: justify; */
 }
-/* ----------------------------------------------------------------------------- */
-.feestructure {
-    display: flex; /* Use Flexbox to arrange children in a row */
-    flex-direction: row; /* Ensure they are in a row by default */
-    justify-content: space-between; /* Space out items */
-    align-items: flex-start; /* Align items at the start */
-    padding: 10px; /* Optional padding */
-    flex-wrap: wrap; /* Allow items to wrap if needed */
+
+
+.table-container {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    max-width: 60%;
+    /* padding-left: 10%; */
 }
 
-.feename, .fee {
-    font-weight: 500;
-    font-family: 'poppins';
-    font-size: 16px;
-    flex: 1; /* Make both columns flexible */
-    /* min-width: 200px;  */
-    margin-right: 20px; /* Add space between the columns */
+table {
+    width: 90%; /* Make the table take the full width */
+    border-collapse: collapse;
+    border: 1px solid #000;
+    text-align: left;
 }
 
-
-
-.fee {
-    margin-right: 0; /* No right margin for the last element */
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    font-size: 1rem;
 }
 
-.title2 {
-    font-weight: bold; /* Make title2 bold */
-    margin-top: 10px; /* Add margin for spacing */
-}
-
-/* ---------------------------------------------------------------------------------------------- */
 .bold {
     font-size: 18px;
     /* font-weight: 500; */
@@ -148,9 +203,12 @@ body {
     padding-left: 22px;
 }
 
-/* Responsive Styles */
+
+
 
 /* For tablets (800px and below) */
+
+
 @media (max-width:1200px) {
     .main {
         padding: 40px 50px; /* Adjust padding for tablets */
@@ -191,7 +249,41 @@ body {
         font-size: 16px; /* Adjust fee text size */
         width: 100%; /* Full width for fee items */
     }
+
+    .photolinks{
+        height: 150px;
+        margin-top: 0px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .phototextone,.phototexttwo,.phototextthree,.phototextfour{  
+        display:flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .phototextone{
+        width: 100px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .phototextthree{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .phototextfour{
+        padding-left: 18px;
+    }
 }
+@media (width:1180px )
+{
+    .phototextone,.phototextthree{
+        padding: 0px 30px 10px 0px ;
+        /* color: aquamarine; */
+    }
+}
+
+
 
 /* For mobile (480px and below) */
 @media  (max-width: 480px) {
@@ -216,45 +308,23 @@ body {
         margin-bottom: 15px;
     }
     /* -------------------------------------------------------------- */
-    .feestructure {
-        display: flex;
-        flex-direction: row; /* Stack items vertically on small screens */
-        /* background-color: aqua; */
-        font-size: 15px;
+    .table-container {
+        /* padding-left: 20px; */
+        padding-right: 10%;
+        overflow-x: hidden; /* Disable horizontal scrolling */
+        max-width: 90%;
     }
-    .feename{
-        /* margin-right: 0px;
-        margin-left: 0px; */
-        /* background-color: #e2cfbb; */
-        width: 60%;
+    th, td {
+        font-size: 0.8rem; /* Further reduce font size */
+        padding: 4px; /* Reduce padding */
     }
-    .fee{
-        /* background-color: rgb(0, 4, 3); */
-        /* width:40%; */
-        width: 50px;
+
+    .division td {
+        font-size: 0.9rem; /* Slightly larger for division */
     }
-    .ndiv1{
-        margin-bottom: 23px;
-    }
-    .ndiv2{
-        margin-bottom: 25px;
-    }
-    .ndiv3{
-        margin-bottom: 45px
-    }
-   .fdiv4{
-    margin-bottom: 24px;
-   }
-   .ndiv8{
-    margin-bottom: 5px;
-   }
-   .ndiv9{
-    margin-bottom: 31px;
-   }
-    
-    .title2{
-      /* background-color: #E6B66D; */
-      width: 150px;
+
+    table {
+        width: 100%; /* Ensure the table is responsive */
     }
   
 /* ---------------------------------------------------------------------------- */
@@ -280,5 +350,49 @@ body {
     .mtech{
         font-size: 16px;
     }
+
+
+
+    .photolinks{
+        width: 80vw;
+        padding-left: 0px;
+        margin-left: 0px;
+        display:flex;
+        height: 100px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        
+        }
+    
+        .photolink{
+            height: 60px;
+            width: 150px;
+            background-size:contain;  
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            padding-left: 0px;
+            font-size: 10px;
+        }
+    
+        .phototextone,.phototextthree,.phototextfour{
+            padding-top: 6px;
+            font-size: 11px;
+            width: 50px;
+            display:flex;
+            text-align: center;
+            justify-content: center;
+        }
+            
+        .phototextone ,.phototextthree{
+            padding-right: 15px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+        }
+        
+        .phototextfour{
+            padding-top: 12px;
+            padding-left: 13px;
+        }
     
 }
