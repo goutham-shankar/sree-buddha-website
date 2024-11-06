@@ -43,8 +43,15 @@
     text-decoration: none;
     background-color: #b77d27;
   }
+  .pic{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
   .pic img{
     height: 30vw;
+    padding-left: 0px;
+    margin-left: 0px;
   }
 
   @media (max-width:1200px) {
@@ -67,8 +74,7 @@
       }
     .heading{
       font-size: 16px;
-      display: flex;
-     
+      display: flex; 
     }
       .title {
         font-size: 30px;
@@ -82,6 +88,16 @@
       }
       .pic img{
         height: 40vw;
-        width: 80vw;
+        width: 75vw;
+      }
+      .main{
+        padding: 0px;
+      }
+      .pic
+      {
+        display: flex;
+        padding: 0px;
+        justify-content: left;
+        align-items: center;
       }
   }

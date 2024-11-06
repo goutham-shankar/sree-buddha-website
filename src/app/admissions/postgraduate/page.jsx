@@ -11,7 +11,7 @@ export default function page() {
     <div className="title">POST GRADUATE</div>
     <br />
 
-    <div className="pic">
+    {/* <div className="pic">
     <a href='https://docs.google.com/forms/d/e/1FAIpQLSe3RvBGmTslrxDMHBYn0vGufABqCvqUZnumUazbylQZ3J5lgQ/viewform'>
         <img className="photo" src={nba.src} alt="" /></a>
         
@@ -19,7 +19,24 @@ export default function page() {
 
         <a href="#"><img className="photo" src={placement.src} alt="" /></a>
         
-    </div>
+    </div> */}
+{/* ----------------------- */}
+
+<div className="photolinks">
+          <div className="photolink">
+            <a href="#"><div className="phototextone">NBA Accredited</div></a>
+          </div>
+          <div className="photolink">
+            <a href="#"><div className="phototextthree">Excellent Placement</div></a>
+          </div>
+          <div className="photolink">
+            <a href="#"><div className="phototextfour">Apply Now</div></a>
+          </div>
+        </div>
+
+
+
+    {/* ------------------------ */}
     <br />
     <div className="headings">Programs Offered</div>
     <div className="programs">
@@ -84,7 +101,64 @@ export default function page() {
             
             <div className="headings">M Tech Degree Course – Fees Structure 2022-23</div>
 
-            <div className="feestructure">
+
+
+
+{/* -------------------------------------------- */}
+
+<div class="table-container">
+                                <table>
+                                <tbody>
+                                        <tr>
+                                            <td> 1. Tuition Fee</td>
+                                            <td>₹ 35,000 (Per Semester*)</td>
+                                        </tr>                                    
+                                        <tr>
+                                            <td>2.Admission fee</td>
+                                            <td> ₹ 500 (One Time)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.Caution Deposit</td>
+                                            <td>₹ 2,500 (One Time Refundable)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4.University Student Administration fee</td>
+                                            <td>₹ 1,000 (One Time)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5.University Affiliation Fee</td>
+                                            <td>₹ 1,000 (One Time)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6.University Exam fee</td>
+                                            <td>₹ 1,500 (1st Semester)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.University Arts & Sports Fee</td>
+                                            <td>₹ 500 (One Time)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8.Stationery charges</td>
+                                            <td>₹ 200 (One Time)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9.PTA</td>
+                                            <td>₹ 2,000 (One Time)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Total</b></td>
+                                            <td><b>₹44,200/-</b></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                <br /><br />
+            </div>
+
+
+{/* -------------------------------------------- */}
+
+            {/* <div className="feestructure">
                 <div className="feename">
 
                     <div className="ndiv1"> 1. Tuition Fee</div>
@@ -96,17 +170,8 @@ export default function page() {
                     <div className="ndiv7">7.University Arts & Sports Fee</div>
                     <div className="ndiv8">8.Stationery charges</div>
                     <div className="ndiv9">9.PTA</div>
-                    {/* <ol>
-                        <li className='1'>Tuition Fee</li>
-                        <li className='2'>Admission fee </li>
-                        <li className='3'>Caution Deposit</li>
-                        <li className='4'>University Student Administration fee</li>
-                        <li className='5'>University Affiliation Fee</li>
-                        <li className='6'>University Exam fee </li>
-                        <li className='7'>University Arts & Sports Fee </li>
-                        <li className='8'>Stationery charges</li>
-                        <li className='9'>PTA</li>
-                    </ol> */}
+                   
+
                     <div className="title2">Total</div>
                 </div>
                 <div className="fee">
@@ -122,9 +187,9 @@ export default function page() {
                             <div className='fdiv9'>: ₹ 2,000 (One Time)</div>
 
               
-                    <div className="title2">₹. 44,200/-</div>
+                    <div className="title2">₹44,200/-</div>
                 </div>
-            </div>
+            </div> */}
             <div className="bold">For more information, please contact our PRO @ 9446014317</div>
             <div className="bold">Documents are to be produced in original at the time of Admission</div>
             
