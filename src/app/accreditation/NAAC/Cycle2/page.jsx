@@ -24,6 +24,7 @@ const Page = () => {
 
   return (
     <div className="Container">
+      <div className="Heading">NAAC CYCLE 2</div>
       <div className="Nav">
         <ul>
           <li
