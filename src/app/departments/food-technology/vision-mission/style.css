@@ -1,0 +1,26 @@
+.vision_mission{
+     margin-top: 100px;
+     /* background-color: green; */
+
+}
+
+h3{
+    margin-bottom: 10px;
+}
+
+p{
+    margin-bottom: 40px;
+    text-align: justify;
+    width: 80%;
+}
+
+@media( max-width : 100vh){
+    .vision_mission{
+
+        /* background-color: red; */
+        width: 90%;
+    }
+    p{
+        width: 100%;
+    }
+}

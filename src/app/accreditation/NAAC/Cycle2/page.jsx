@@ -28,7 +28,9 @@ const Page = () => {
         <ul>
           <li
             onClick={() =>
-              handlepdfOpen("/assets/documents/accreditation/IIQA.pdf")
+              handlepdfOpen(
+                "/assets/documents/accreditation/Criteria1/IIQA.pdf"
+              )
             }
           >
             IIQA

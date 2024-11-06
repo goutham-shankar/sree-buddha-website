@@ -84,19 +84,16 @@ export default function Navbar() {
                 <Link className="submenu_link" href="">
                   Reserach Coucil
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/research/projects">
                   Projects
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/research/ipr">
                   IPR
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/research/consultancy">
                   Consultency
                 </Link>
-                <Link className="submenu_link" href="">
-                  Oranogram
-                </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/research/conference">
                   Conferences organized
                 </Link>
               </ul>
@@ -118,19 +115,19 @@ export default function Navbar() {
                 <Link className="submenu_link" href="/facilities/bus">
                   conveyance and bus routes
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/facilities/reprographic">
                   repographics facilities
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/facilities/lab">
                   internal Lab
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/facilities/hostel">
                   hostel{" "}
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/facilities/canteen">
                   canteen{" "}
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/facilities/other">
                   other facilities{" "}
                 </Link>
               </ul>
@@ -285,23 +282,29 @@ export default function Navbar() {
                 <Link className="submenu_link" href="/departments/electrical-electronics-engineering/">
                   EEE
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/departments/electronics-communication-engineering">
                   ECE
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/departments/mechanical-engineering">
                   Mechanical
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/departments/artificial-intelligence-machine-learning">
                   Computer Science with AI
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/departments/electronics-computer-engineering">
                   Electronics and Computer Engineering
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/departments/civil-engineering">
+                  Civil Engineering
+                </Link>
+                <Link className="submenu_link" href="/departments/mathematics-and-basic-sciences">
                   Basic Science and Humanities
                 </Link>
-                <Link className="submenu_link" href="">
-                  Food Science
+                <Link className="submenu_link" href="/departments/food-technology">
+                  Food Sciencess
+                </Link>
+                <Link className="submenu_link" href="/departments/biotechnology-biochemical-engineering">
+                  Biotechnology and Biochemical Engineering
                 </Link>
               </ul>
             </div>

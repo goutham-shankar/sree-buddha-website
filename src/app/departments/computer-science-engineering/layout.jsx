@@ -18,6 +18,7 @@ export default function ComputerScienceLayout({ children }) {
         ["Faculty", "faculty"],
         ["PEO'S,POs and PSos", "peos-pos-psos"],
         ["Facilities", "facilities"],
+        ["hod", "hod"],
         ["Achievements", "achievements"],
         ["Activities", "activities"],
         ["Associations and Clubs", "associations-and-clubs"],

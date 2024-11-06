@@ -11,24 +11,24 @@ export default function ComputerScienceDepartment() {
 
 
             {/* <div className="top_img_section"> */}
-                {/* <img src={image1.src} alt="image" /> */}
+            {/* <img src={image1.src} alt="image" /> */}
             {/* </div> */}
 
-                    <div className="vision_mission">
+            <div className="vision_mission">
 
-                    <h3 className="">VISION</h3>
-                    <p className="">
-                        To create competent computer engineers with social commitment
-                    </p>
+                <h3 className="">VISION</h3>
+                <p className="">
+                    To create competent computer engineers with social commitment
+                </p>
 
-                    <h3 className="">MISSION</h3>
-                    <p className="">
-                        Provide student- centric learning environment to create competent Computer Engineers
-                        Instigate research, innovation and entrepreneurship initiatives
-                        Impart  skills and creative thinking ability to promote lifelong learning.
-                    </p>
+                <h3 className="">MISSION</h3>
+                <p className="">
+                    Provide student- centric learning environment to create competent Computer Engineers
+                    Instigate research, innovation and entrepreneurship initiatives
+                    Impart  skills and creative thinking ability to promote lifelong learning.
+                </p>
 
-                    </div>
+            </div>
 
 
 

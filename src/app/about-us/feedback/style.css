@@ -1,75 +1,87 @@
-.feedback {
+.container {
+    /* height: 100vh; */
+    padding-left: 10vw; /* Adjust for better scaling on all devices */
+    padding-right: 10vw;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+  
+  /* Title style */
+  .title {
     font-family: 'Poppins', sans-serif;
-    font-size: 3vw; 
+    font-size: 3vw; /* Adjust based on viewport width for scaling */
     font-weight: 700;
-    line-height: 1.5em; 
+    line-height: 1.5em;
     text-align: left;
     color: #845714;
-}
-
-
-.container {
-    padding-left: 6%;
-    padding-right: 6%;
-    font-family: 'Poppins', sans-serif; 
-}
-
-
-.feedback-analysis {
+  }
+  
+  /* Paragraph style */
+  .main {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 800;
-    line-height: 2.5em;
-    text-align: left;
-}
+    font-size: 1.1rem; /* Font-size in rem for scaling */
+  }
+  .heading{
+  font-size: 20px;
+  font-family: 'poppins';
+  font-weight: 600;
+  margin-bottom: 5px;
+  }
+  .link{
+    text-decoration: none;
+    height: 25px;
+    color:black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #E6B66D;
+    border-radius: 20px;
+  }
+  .link:hover{
+    color: #845714;
+    text-decoration: none;
+    background-color: #b77d27;
+  }
+  .pic img{
+    height: 30vw;
+  }
 
-.feedbacklinks {
-    padding-left: 5%;
-}
-
-.link {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-}
-
-
-.image {
-    width: 100%; 
-    max-width: 1219px; 
-    height: auto; 
-    opacity: 0px; 
-}
-
-/* For mobile devices */
-@media only screen and (max-width: 480px) {
-    .feedback {
-        font-size: 2rem;  
+  @media (max-width:1200px) {
+    .title{
+        font-size: 35px;
     }
-
-    .feedback-analysis {
-        font-size: 1.2rem;
+    .heading{
+        font-size: 23px;
     }
-
-    .image {
-        width: 100%;  
-        max-width: 400px; 
-        height: auto;  
+    b{
+        font-size: 20px;
     }
-}
+  }
 
-/* For tablets and other devices */
-@media only screen and (max-width: 768px) {
-    .feedback {
-        font-size: 5vw;
+  @media (max-width:480px) {
+    .container {
+        padding-left: 10vw;
+        padding-right: 10vw;
+        font-size: 14px;
+      }
+    .heading{
+      font-size: 16px;
+      display: flex;
+     
     }
-
-    .feedback-analysis {
-        font-size: 1.3rem;
-    }
-
-    .image {
-        width: 100%; 
-        max-width: 600px;  
-        height: auto;  
-    }
-}
+      .title {
+        font-size: 30px;
+        margin-top: 0px;
+      }
+      p{
+        font-size: 14px;
+      }
+      .link{
+        font-size: 14px;
+      }
+      .pic img{
+        height: 40vw;
+        width: 80vw;
+      }
+  }

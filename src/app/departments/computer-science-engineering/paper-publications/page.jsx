@@ -10,7 +10,7 @@ export default function ComputerScienceDepartmentPaperPublications() {
 
     <h3 className="heading2">PUBLICATIONS/CONFERENCE DETAILS</h3>
 
-    <ul>
+    <ul className='publication_list'>
       <li>Athira Sankar, <strong>Soumya Murali</strong> (2017),” A Survey On An Efficient Privacy-preserving Ranked Keyword Search Method ”,International Research Journal Of Engineering And Technology(IRJET)Volume-4,Issue 11,november 2017,ISSN:2395-0072</li>
       <li>KETCON 2018: “A Privacy Preserving Approach For Multikeyword Search Method Over Encrypted Cloud “- January 23 2018</li>
       <li>National Conference On Advanced Computing And Communication E2F2 “A Privacy Preserving Hierarchical Clustering Keyword Rank Search Method Over An Encrypted Cloud”
