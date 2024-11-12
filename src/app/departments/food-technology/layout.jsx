@@ -13,15 +13,19 @@ export const metadata = {
 export default function ComputerScienceLayout({ children }) {
 
     const links =  [
-        ["about" , "/"] , 
+        ["about" , "/about-us"] , 
         ["Vision & Mission", "vision-mission"],
+        ["PEO'S,POs and PSos", "peos-pos-psos"],
+        ["Achievements", "achievements"],
+        ["placements", "placements"],
         ["Faculty", "faculty"],
         ["hod", "hod"],
-        ["PEO'S,POs and PSos", "peos-pos-psos"],
         ["Facilities", "facilities"],
-        ["Achievements", "achievements"],
         ["Activities", "activities"],
         ["Associations and Clubs", "associations-and-clubs"],
+        ["consultancy", "consultancy"],
+        ["fundings", "fundings"],
+        ["Research Centre", "research-centre"],
         ["Paper Publications", "paper-publications"],
     ]
 
@@ -32,7 +36,7 @@ export default function ComputerScienceLayout({ children }) {
         <div className="department">
         { children }
         </div>
-        <DepartmentNavbar  department= {"electrical-electronics-engineering"} links = {links} />
+        <DepartmentNavbar  department= {"food-technology"} links = {links} />
 
         
         </div>

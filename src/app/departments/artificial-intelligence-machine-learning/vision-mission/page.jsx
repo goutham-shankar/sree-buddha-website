@@ -16,16 +16,21 @@ export default function ComputerScienceDepartment() {
 
             <div className="vision_mission">
 
-                <h3 class="heading1">VISION</h3>
+                <h3 class="heading1">Vision & Mission</h3>
+
+                <h3 class="heading2">VISION</h3>
                 <p>To be globally recognized in the field of Artificial Intelligence and Machine Learning through the production of competent professionals and the conduct of applied research for the benefit of society.</p>
 
-                <h3 class="heading1">MISSION</h3>
+                <h3 class="heading2">MISSION</h3>
                 <ul className='list'>
                     <li>To establish an essential environment with required infrastructure and faculty for imparting domain knowledge.</li>
-                    <li>To bring out the competent and industry ready students by practicing theoretical aspects with experiential Learning.</li>
-                    <li>To prepare the students with holistic personality by means of appropriate technical and communication skills for solving real world problems.</li>
+                    <li>To bring out competent and industry-ready students by practicing theoretical aspects with experiential learning.</li>
+                    <li>To prepare students with a holistic personality by means of appropriate technical and communication skills for solving real-world problems.</li>
                     <li>To foster academia-business collaborations in the area of artificial intelligence.</li>
                 </ul>
+
+              
+
 
 
 

@@ -12,17 +12,17 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="logo_section">
-        <a href="/">
+        <Link href="/">
           <img src={"/assets/images/sree_buddha_logo.png"} alt="" />
-        </a>
+        </Link>
       </div>
       <div className="navbar_right">
         <div className="important_links">
-          <a href="#">Admissions</a>
+          <a href="#">Internation Admissions</a>
           <a href="#">CareersSBCE</a>
           <a href="#">Fees Payment</a>
           <a href="">University</a>
-          <a href="">Result Analysis</a>
+          {/* <a href="">Result Analysis</a> */}
         </div>
         <div className="navbar_menus">
           <div className="navbar_menu">
@@ -78,167 +78,6 @@ export default function Navbar() {
             </div>
           </div>
           <div className="navbar_menu">
-            <span>Research</span>
-            <div className="submenu">
-              <ul>
-                <Link className="submenu_link" href="">
-                  Reserach Coucil
-                </Link>
-                <Link className="submenu_link" href="">
-                  Projects
-                </Link>
-                <Link className="submenu_link" href="">
-                  IPR
-                </Link>
-                <Link className="submenu_link" href="">
-                  Consultency
-                </Link>
-                <Link className="submenu_link" href="">
-                  Oranogram
-                </Link>
-                <Link className="submenu_link" href="">
-                  Conferences organized
-                </Link>
-              </ul>
-            </div>
-          </div>
-          <div className="navbar_menu">
-            <span>Facilities</span>
-            <div className="submenu">
-              <ul>
-                <Link className="submenu_link" href="/facilities/cells">
-                  Cells and Centers
-                </Link>
-                <Link className="submenu_link" href="/facilities/library">
-                  Central Library{" "}
-                </Link>
-                <Link className="submenu_link" href="/facilities/hall">
-                  Conference hall
-                </Link>
-                <Link className="submenu_link" href="/facilities/bus">
-                  conveyance and bus routes
-                </Link>
-                <Link className="submenu_link" href="">
-                  repographics facilities
-                </Link>
-                <Link className="submenu_link" href="">
-                  internal Lab
-                </Link>
-                <Link className="submenu_link" href="">
-                  hostel{" "}
-                </Link>
-                <Link className="submenu_link" href="">
-                  canteen{" "}
-                </Link>
-                <Link className="submenu_link" href="">
-                  other facilities{" "}
-                </Link>
-              </ul>
-            </div>
-          </div>
-          <div className="navbar_menu">
-            <span>Cells and Chapters</span>
-            <div className="submenu">
-              <ul>
-                <Link className="submenu_link" href="">
-                  Various Cells and Commities{" "}
-                </Link>
-                <Link className="submenu_link" href="">
-                  IEEE
-                </Link>
-                <Link className="submenu_link" href="">
-                  IE(I)
-                </Link>
-                <Link className="submenu_link" href="">
-                  SAE India
-                </Link>
-                <Link className="submenu_link" href="">
-                  NSS
-                </Link>
-                <Link className="submenu_link" href="">
-                  SAC
-                </Link>
-                <Link className="submenu_link" href="">
-                  Virual Lab{" "}
-                </Link>
-                <Link className="submenu_link" href="">
-                  IEDC
-                </Link>
-                <Link className="submenu_link" href="">
-                  NPTEL
-                </Link>
-                <Link className="submenu_link" href="">
-                  IIT-remote center
-                </Link>
-              </ul>
-            </div>
-          </div>
-          <div className="navbar_menu">
-            <span>Accreditation</span>
-            <div className="submenu">
-              <ul>
-                <Link className="submenu_link" href="">
-                  Various Cells and Commities{" "}
-                </Link>
-                <Link className="submenu_link" href="">
-                  IEEE
-                </Link>
-                <Link className="submenu_link" href="">
-                  IE(I)
-                </Link>
-                <Link className="submenu_link" href="">
-                  SAE India
-                </Link>
-                <Link className="submenu_link" href="">
-                  NSS
-                </Link>
-                <Link className="submenu_link" href="">
-                  SAC
-                </Link>
-                <Link className="submenu_link" href="">
-                  Virual Lab{" "}
-                </Link>
-                <Link className="submenu_link" href="">
-                  IEDC
-                </Link>
-                <Link className="submenu_link" href="">
-                  NPTEL
-                </Link>
-                <Link className="submenu_link" href="">
-                  IIT-remote center
-                </Link>
-              </ul>
-            </div>
-          </div>
-          <div className="navbar_menu">
-            <span>Academics</span>
-            <div className="submenu">
-              <ul>
-                <Link className="submenu_link" href="">
-                  advisory system
-                </Link>
-                <Link className="submenu_link" href="">
-                  acadamic calendar
-                </Link>
-                <Link className="submenu_link" href="">
-                  proffetinal bodies
-                </Link>
-                <Link className="submenu_link" href="">
-                  handbook{" "}
-                </Link>
-                <Link className="submenu_link" href="">
-                  NSS
-                </Link>
-                <Link className="submenu_link" href="">
-                  syllubus{" "}
-                </Link>
-                <Link className="submenu_link" href="">
-                  campus newsletter
-                </Link>
-              </ul>
-            </div>
-          </div>
-          <div className="navbar_menu">
             <span>Autonomous</span>
             <div className="submenu">
               <ul>
@@ -272,6 +111,37 @@ export default function Navbar() {
               </ul>
             </div>
           </div>
+
+          <div className="navbar_menu">
+            <span>Academics</span>
+            <div className="submenu">
+              <ul>
+                <Link className="submenu_link" href="">
+                  advisory system
+                </Link>
+                <Link className="submenu_link" href="">
+                  acadamic calendar
+                </Link>
+                <Link className="submenu_link" href="">
+                  proffetinal bodies
+                </Link>
+                <Link className="submenu_link" href="">
+                  handbook{" "}
+                </Link>
+                <Link className="submenu_link" href="">
+                  NSS
+                </Link>
+                <Link className="submenu_link" href="">
+                  syllubus{" "}
+                </Link>
+                <Link className="submenu_link" href="">
+                  campus newsletter
+                </Link>
+              </ul>
+            </div>
+          </div>
+
+
           <div className="navbar_menu">
             <span>Departments</span>
             <div className="submenu">
@@ -312,6 +182,210 @@ export default function Navbar() {
               </ul>
             </div>
           </div>
+
+          <div className="navbar_menu">
+            <span>Admissions</span>
+            <div className="submenu">
+              <ul>
+                <Link className="submenu_link" href="">
+                  Under Grdaduate
+                </Link>
+                <Link className="submenu_link" href="">
+                  Post Graduate
+                </Link>
+                <Link className="submenu_link" href="">
+                  PHD Research
+                </Link>
+                <Link className="submenu_link" href="">
+                  International Students Admimission
+                </Link>
+               
+              </ul>
+            </div>
+          </div>
+
+          <div className="navbar_menu">
+            <span>Placements</span>
+            <div className="submenu">
+              <ul>
+                <Link className="submenu_link" href="">
+                  Team
+                </Link>
+                <Link className="submenu_link" href="">
+                  Activities
+                </Link>
+                <Link className="submenu_link" href="">
+                  Recruiters
+                </Link>
+                <Link className="submenu_link" href="">
+                  Placement Details
+                </Link>
+                <Link className="submenu_link" href="">
+                  Contact Us
+                </Link>
+               
+              </ul>
+            </div>
+          </div>
+
+          <div className="navbar_menu">
+            <span>Cells and Chapters</span>
+            <div className="submenu">
+              <ul>
+                <Link className="submenu_link" href="">
+                  Various Cells and Commities{" "}
+                </Link>
+                <Link className="submenu_link" href="">
+                  IEEE
+                </Link>
+                <Link className="submenu_link" href="">
+                  IE(I)
+                </Link>
+                <Link className="submenu_link" href="">
+                  SAE India
+                </Link>
+                <Link className="submenu_link" href="">
+                  NSS
+                </Link>
+                <Link className="submenu_link" href="">
+                  SAC
+                </Link>
+                <Link className="submenu_link" href="">
+                  Virual Lab{" "}
+                </Link>
+                <Link className="submenu_link" href="">
+                  IEDC
+                </Link>
+                <Link className="submenu_link" href="">
+                  NPTEL
+                </Link>
+                <Link className="submenu_link" href="">
+                  IIT-remote center
+                </Link>
+              </ul>
+            </div>
+          </div>
+
+          <div className="navbar_menu">
+            <span>Facilities</span>
+            <div className="submenu">
+              <ul>
+                <Link className="submenu_link" href="/facilities/cells">
+                  Cells and Centers
+                </Link>
+                <Link className="submenu_link" href="/facilities/library">
+                  Central Library{" "}
+                </Link>
+                <Link className="submenu_link" href="/facilities/hall">
+                  Conference hall
+                </Link>
+                <Link className="submenu_link" href="/facilities/bus">
+                  conveyance and bus routes
+                </Link>
+                <Link className="submenu_link" href="">
+                  repographics facilities
+                </Link>
+                <Link className="submenu_link" href="">
+                  internal Lab
+                </Link>
+                <Link className="submenu_link" href="">
+                  hostel{" "}
+                </Link>
+                <Link className="submenu_link" href="">
+                  canteen{" "}
+                </Link>
+                <Link className="submenu_link" href="">
+                  other facilities{" "}
+                </Link>
+              </ul>
+            </div>
+          </div>
+
+          <div className="navbar_menu">
+            <span>Accreditation</span>
+            <div className="submenu">
+              <ul>
+                <div className="submenu_link" href="">
+                  NAAC
+                  <div className="submenu_2">
+                    <ul>
+                      <Link href="" className="submenu_2_link">NAAC CYCLE1</Link>
+                      <Link href="" className="submenu_2_link">NAAC CYCLE1</Link>
+                      <Link href="" className="submenu_2_link">NAAC CYCLE1</Link>
+                    </ul>
+                  </div>
+                </div>
+
+                <Link className="submenu_link" href="">
+                  NBA
+
+
+
+                </Link>
+                <Link className="submenu_link" href="">
+                  NIRF
+                </Link>
+                <Link className="submenu_link" href="">
+                  ARIIA
+                </Link>
+               
+              </ul>
+            </div>
+          </div>
+
+          <div className="navbar_menu">
+            <span>Alumini</span>
+            <div className="towards_left submenu">
+              <ul>
+                <Link className="submenu_link" href="">
+                    Alumini Registration
+                </Link>
+                <Link className="submenu_link" href="">
+                  Executive Body
+                </Link>
+                <Link className="submenu_link" href="">
+                  IPR
+                </Link>
+                <Link className="submenu_link" href="">
+                  Alumini Reports
+                </Link>
+            
+              </ul>
+            </div>
+          </div>
+
+ 
+
+          <div className="navbar_menu">
+            <span>Research</span>
+            <div className="towards_left submenu">
+              <ul>
+                <Link className="submenu_link" href="">
+                  Reserach Coucil
+                </Link>
+                <Link className="submenu_link" href="">
+                  Projects
+                </Link>
+                <Link className="submenu_link" href="">
+                  IPR
+                </Link>
+                <Link className="submenu_link" href="">
+                  Consultency
+                </Link>
+                <Link className="submenu_link" href="">
+                  Oranogram
+                </Link>
+                <Link className="submenu_link" href="">
+                  Conferences organized
+                </Link>
+              </ul>
+            </div>
+          </div>
+
+
+        
+
+
         </div>
       </div>
     </div>

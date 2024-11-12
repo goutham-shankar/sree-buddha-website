@@ -14,14 +14,13 @@ import "./style.css"
 export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
-        ["eee_faculty1.jpg", "Sindhu V.M.E", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty2.jpg", "Abhilasha Parthan", "M.Tech", "Assistant Professor", "Industrial Drives and Control"],
-        ["eee_faculty3.jpg", "Juna John Daniel", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty4.jpg", "Gayathri V", "M.Tech", "Assistant Professor", "Power Electronics & Power Systems"],
-        ["eee_faculty5.jpg", "Ananthu Vijayakumar", "M.Tech", "Assistant Professor", "Power Electronics & Power Systems"],
-        ["eee_faculty6.jpg", "Chama R Chandran", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty7.jpg", "Atheena A", "M.Tech", "Assistant Professor", "Power and Energy"],
-        ["eee_faculty8.jpg", "Athira B", "M.Tech", "Assistant Professor", "Power Systems"]
+        ["ai_faculty_1.jpg", "Dr. Anil A.R", "M.Tech, PhD", "Associate Professor & HOD", "Digital Image Computing"],
+        ["ai_faculty_2.jpg", "Dr. Sunil S", "B.Tech, M.Tech, PhD", "Associate Professor", "Artificial Intelligence"],
+        ["ai_faculty_3.jpg", "Minu Lalitha Madhav", "B.Tech, M.Tech", "Assistant Professor", "Data Security"],
+        ["ai_faculty_4.jpg", "Parvathy S Kurup", "B.Tech, M.Tech", "Assistant Professor", "Machine Learning"],
+        ["ai_faculty_5.jpg", "Chinchu M.S", "B.Tech, M.Tech", "Assistant Professor", "Deep Learning"],
+        ["ai_faculty_6.jpg", "Divya M.K", "B.E, M.Tech", "Assistant Professor", "Artificial Intelligence"],
+        ["ai_faculty_7.jpg", "Lekshmi V.S", "B.Tech, M.Tech", "Assistant Professor", "Internet of Things"]
       ];
       
 
@@ -57,7 +56,7 @@ export default function ComputerScienceDepartmentFaculty() {
 
                                 <tr key = {index}>
 
-                                    <td> <img src={`/assets/images/departments/faculty/eee/${singleFaculty[0]}`} alt="image" /> </td>
+                                    <td> <img src={`/assets/images/departments/faculty/ai/${singleFaculty[0]}`} alt="image" /> </td>
                                     {/* <td> <img src= {image.src} alt="image" /> </td> */}
                                     {/* <td> <img src= {"/assets/images/departments/faculty/cs/cs_f1.jpg"} alt="image" /> </td> */}
                                     <td>{singleFaculty[1]}</td>

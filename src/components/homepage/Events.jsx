@@ -18,7 +18,7 @@ export default function Events() {
             } else if (screenWidth <= 1024) {
                 setSlidesToShow(2); // 2 slides for tablet
             } else {
-                setSlidesToShow(3); // 3 slides for desktop
+                setSlidesToShow(screenWidth/250); // 3 slides for desktop
             }
         };
 

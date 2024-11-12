@@ -5,85 +5,46 @@ export default function ComputerScienceDepartmentAssociations() {
     return (
         <div className='cs_dept_activities'>
 
-            <h3>INAUGURATION OF THE ACTIVITIES BYCOMPUTER SCIENCE DEPARTMENT ASSOCIATION-CYBORG 2024</h3>
-            <img src={"/assets/images/departments/activities/cs_dept_event1.jpg"} alt="" />
-            <p>
-                The activities by computer science department association-Cyborg, for the academic year was inaugurated by Mr.Resal V,Cyber Security Professional, Infosys on 6th of February 2024 at the Conference Hall, Library Block. Dr Anju J Prakash, Asst. Professor, Dept. of CSE welcomed the gathering. The presidential address was given by Dr. S.V. Annlin Jeba, HOD – CSE.
-            </p>
+            <div class="col-md-9 right_portion">
 
-            {/* event2 */}
+                <h1 class="right_heading">Associations &amp; Clubs</h1>
+                <h3 ><strong>ACTIVITIES OF DEPT. OF CIVIL ENGINEERING UNDER CASTELLOS</strong></h3>
 
-            <h3>INAUGURATION OF THE ACTIVITIES BYCOMPUTER SCIENCE DEPARTMENT ASSOCIATION-CYBORG 2023</h3>
-            <p>
-                The activities by computer science department association-Cyborg 2023 was inaugurated by Mr. Bilal Bin Nazr, Co-Founder, Crypt4bits on 10th of March 2023 at the Conference Hall, Library Block. Dr. Anju J Prakash, Asst. Professor, Dept. of CSE (Faculty Advisor-Cyborg) welcomed the gathering. The presidential address was given by Dr. S.V. Annlin Jeba, HOD – CSE, Sree Buddha College of Engineering. Felicitation was given by Dr. Anil A. R (HOD-AI & ML). Vote of thanks was delivered by Miss.Aparna Vijaykumar, Student Representative, Cyborg. More than 100 participants attended the event.
-                Prizes were distributed for student toppers from First, Second, Third and Fourth year. The inaugural ceremony was followed by an Expert Talk on the topic “Navigating the changing landscape of Tech Careers” by Mr. Bilal Bin Nazar, Co-Founder, Crypt4bits for Second year, Third Year and Final Year B.Tech students at the Library Seminar Hall, SBCE. The session covered various tips to crack technical interviews and about emerging technologies. From his knowledge, he presented various experience he had gone through by interviewing various students. The session was very motivational and was very informative.
-            </p>
-            <img src={"/assets/images/departments/activities/cs_dept_event2.jpg"} alt="" />
-
-            {/* event3 */}
-
-            <h3>IDEA PITCHING COMPETITION REPORT</h3>
-            <p>The Department of computer science and engineering of Sree Buddha College of Engineering has organized an Idea Pitching Competition as part of Department Association activities on 03/06/2022. Around 10 teams consisting of students in various departments participated in this competition.They presented their idea of innovative product designs . IEDC officers Prof Regi P Mohan and Dr Trijo Tharayil were the judges of the event.
-                Team ULTRA with team members Christo Johnson, Jeo varghese, kalias nath, criz Stephen, akshu madhu of S2 EEE won the first prize. Team Bespoke IT with team members P.S.Krishnendhu, Hitha R, Gowri Menon, Sandra J of S4 CSE won the second prize</p>
-
-            <img src={"/assets/images/departments/activities/cs_dept_event3.jpg"} alt="" />
-
-            <p>SECURITY DAY CELEBRATION-‘LEND AN EAR
-                ‘An idea Presentation Competition’
-                Date:22.03.21
-                Time:10:00 am to 1:00 pm
-                The Institution of Engineers (India) Students Chapter of Department of Computer Science and Engineering, Sree Buddha College of Engineering and The Institution of Engineers (India) Kollam Local Centre jointly conducted “LEND AN EAR” ’An idea Presentation Competition from 10.00 am to 1:00pm on 22.03.2021through google meet.
-                5 teams of four members each have attended the Competition.They have presented their innovative ideas in this competition. The faculty advisor Ms. DhanyaSreedharan welcomed the judging panel and participants. The judjing panel included Prof Anil A R,Associate Professor, Dept of CSE , Mr. Gopudarsan and Mr Arun P S ,Assistant Professors of Department of Computer Science and Engineering,
-                E-certificates were distributed for the participants who have actively participated the Webinar</p>
-
-
-            {/* event 4 */}
-
-            <h3>Computer Society of India</h3>
-            <p>
-                Computer Society of India is the first and largest body of computer professionals in India. Formed in 1965, the CSI has been instrumental in guiding the Indian IT industry down the right path since its formative years. Today, the CSI has 72 chapters all over India, 511 student branches, and more than 100000 members including India’s most famous IT industry leaders, brilliant scientists and dedicated academicians. The wide spectrum of members is committed to the advancement of theory and practice of Computer Engineering and Technology Systems, Science and Engineering, Information Processing and related Arts and Sciences. The Society encourages and assists professionals to maintain integrity and competence of the profession and fosters a sense of partnership amongst members. Besides the activities held at the Chapters and Student Branches, the Society also conducts periodic conferences and seminars.
-                The Computer Society of India Student Branch started its functioning in Sree Buddha College of Engineering in July 2012. In a time span of 9 years since its formation, the branch was instrumental in organizing many technical events including National Conferences, a number of workshops, seminars, technical talks, motivational talks, hackathons etc. In account of the activities conducted by the student branch, the Computer Society of India awarded the CSI Student Branch of SBCE the ‘Best Accredited Student Branch’ at the National Level in the years 2012 and 2013. It was observed by the award committee that the seminars, workshops, symposiums, National Conference and different expert lectures organized by the SBCE Student Branch has helped in making the students aware of the recent trends in IT field. The Student Branch presently has 122 student members
-            </p>
-
-
-            {/* event 5 */}
-
-            <h3>Cyborg</h3>
-
-            <p>
-                INAUGURATION OF THE ACTIVITIES BY
-                COMPUTER SCIENCE DEPARTMENT ASSOCIATION-CYBORG
-                DATE : 11th MAY 2022
-                INAUGRATED BY: MR. PRAMOD CHANDRAN, SENIOR PROJECT MANAGER, IBS SOFTWARE
-                The activities by computer science department association-Cyborg was inaugurated by Mr. Pramod Chandran, senior project manager, IBS software on 11th of May 2022 at the Conference Hall, Library Block. Ms. Minu Lalitha Madhavu, Asst. Professor, Dept. of CSE welcomed the gathering. The presidential address was given by Dr. S.V. Annlin Jeba, HOD – CSE , AI & ML , Sree Buddha College of Engineering.Felicitaion was given by Dr. Anil A.R, Associate Professor, Dept. of CSE.Vote of thanks was delivered by Miss.U R Ritu Pournami, Secretary Cyborg.More than 100 participants attended the event.
-                PHD Holders Dr. Anil A.R , Associate Professor in CSE and Dr Anju J Prakash, Assistant Professor in CSE were honoured during the function.Miss. Ruksana Jalaludeen was awarded the Best outgoing student of 2021 batch.Prizes were distributed for student toppers from First,Second,Third and Fourth year.
-                The inaugural ceremony was followed by an Expert Talk on the topic “How to effectively Tackle Interviews” by Mr. Pramod Chandran, senior project manager, IBS software for Third year B.Tech students at the Skill Development Lab(SDPK Lab),CS Block,SBCE. The session covered various tips to face technical interviews as part of campus selection process. As a technical interviewer he presented various experience he had gone through by interviewing various students in various engineering college campuses. The session received good feedback and were very informative and valuable to the students
-            </p>
-
-            <img src={"/assets/images/departments/activities/cs_dept_event4.jpg"} alt="" />
-
-
-            {/* event 6 */}
-
-            <h3>Computer Science Association (CYBORG) Inauguration
-            </h3>
-
-            <p>
-                Resource Person:-Dr. Robin Tommy ,
-                Innovation Strategist, Story Teller, Startup Mentor, EmTech Advisor,
-                Human Centric Innovator,
-                Tata Consultancy Services.
-                Date : 07/1/2021 to 08/01/2021
-                Time:10:00 am
-                Department of Computer Science and Engineering inaugurated the association activities for the academic year 2020-21 on 09th January 2021 through Google meet.The Welcome address was given by Mr.Gopu Darsan ,Assistant Professor & Department Association Coordinator , Dept of CSE. The activities were inaugurated by Dr. S.V. Annlin Jeba, Head of Department , Computer Science and Engineering . As part of the inaugural session an expert talk on Leadership and Innovation was given by Dr. Robin Tommy ,Innovation Strategist, Story Teller, Start up Mentor, EmTech Advisor, Human Centric Innovator, Tata Consultancy Services. The Vote of Thanks was given by Ms. Megha P.S., Student Coordinator, Cyborg. The participants for the event were the students from various semesters of Computer Science and Engineering DepartmentCYBORG is the department association of Department of Computer Science & Engineering. It was established in the year 2010. CYBORG is instrumental in coordinating all the cultural as well as the technical events in the department including the departmental events of ASTRAL the annual Techno – cultural Fest of SBCE
-            </p>
-
-            <img src={"/assets/images/departments/activities/cs_dept_event5.1.jpg"} alt="" />
-            <img src={"/assets/images/departments/activities/cs_dept_event5.2.jpg"} alt="" />
+                <p>REPORT ONINAUGURAL CEREMONY OF CASTELLOS ACTIVITY 2022-23</p>
+                <p>Date of the event: 30th November 2022</p>
+                <p>Venue: Library Seminar Hall</p>  
+                <p>Castellos activity inauguration 2022-23 was held on Wednesday, 30th November. The chief guest of the program was Dr .K Balan, Retd. Professor, College of Engineering, Trivandrum and former director of CERD. Dr. Gouri Antherjanam, HoD, CE, SBCE welcomed the gathering. Dr.Sivasankar S, Associate professor, CE, SBCE delivered felicitation for the program. Dr.Saji Varghese(Principal ,CE, SBCE) Dr Gouri Antherjanam (HoD, CE, SBCE), Ms. Aswathy lal (Faculty coordinator), Student committee members, UG &amp; PG students were present for the inaugural function. Dr. K Balan inaugurated the initiation of the Castellos activities for the year 2022-23 and appreciated the efforts taken by the coordinators in his inaugural address and he also took a session on future of civil engineers and the recent trends in civil engineering. Vote of thanks was expressed by Mr.Suneeth S, S7 CE, Secretary, Castellos, SBCE. The programme ended by 12.45 pm.</p>
+                <p><img alt="" class="alignnone size-full wp-image-6992" loading="lazy" src="/assets/images/departments/associations/civil_associations_1.jpg" /></p>
+                <p><img alt="" class="alignnone size-full wp-image-6994" loading="lazy" src="/assets/images/departments/associations/civil_associations_2.jpg" /></p>
+                <p><img alt="" class="alignnone size-full wp-image-6993" loading="lazy" src="/assets/images/departments/associations/civil_associations_3.jpg" /></p>
+                <h3>CASTELLOS ACTIVITY INAUGURATION 26-04-2022</h3>
+                <p>The Dept. of Civil Engineering organized CASTELLOS activity inauguration for the academic year 2021-22 on 26th April 2022 at 10.00 am at conference hall, library block. The session was inaugurated by Dr. Cini A., Retired Executive Chief Engineer, PWD and HOD of Civil &amp; Architecture IIIC Chavara. Dr. Cini is the Alumnae of TKMCE and NIT Calicut.</p>
+                <p>Ms. Aswathy Lal, coordinator of castellos welcomed the gathering and HoD Dr. Gouri Antherjanam gave presidential address. The technical session handled by Dr. Cini covered her life experiences as a Civil Engineer in various bridge construction projects. She explained various risks she faced as a civil engineer during various disasters faced by the state. Assistant Professor Mr. Ashok Mathew and Dr. S. Sivasankar gave felicitations. After the technical session, toppers of each batch were appreciated by giving momentos. Mr. Bharath Nair, final year student of the department also shared his experiences of running a construction firm. The chief guest also unveiled a hand-written magazine prepared by the students of the department. The session ended by 12.00 pm. B. Tech as well as M. Tech students of the Civil department attended the session. In the AN session a quiz program was conducted for the students of all departments.</p>
+                <p><img alt="" class="alignnone size-full wp-image-6991" loading="lazy" src="/assets/images/departments/associations/civil_associations_4.jpg" /></p>
+                <p><img alt="" class="aligncenter size-full wp-image-5385" loading="lazy" src="/assets/images/departments/associations/civil_associations_5.jpg" /><br />
+                    <img alt="" class="aligncenter size-full wp-image-5386" loading="lazy" src="/assets/images/departments/associations/civil_associations_6.jpg" /><br />
+                    <img alt="" class="aligncenter size-full wp-image-5387" loading="lazy" src="/assets/images/departments/associations/civil_associations_7.jpg" /></p>
+                <h3><strong>CASTELLOS 2018</strong></h3>
+                <p>On February 27th 2018, the Inaugural Ceremony of CASTELLOS was conducted by the department of Civil Engineering of Sree Buddha College of Engineering, Pattoor. CASTELLOS, the Civil Engineering department association marked its beginning on 17th March 2010, throughout its journey it has conducted various seminars, workshops, faculty development programs and promoted the ideas and thought process in different fields.</p>
+                <p>Chief Guest for the day was Engineer Satheesh Gopi, Marine Surveyor of Kerala Port Department. He handled a technical session for all the young civil engineers on the recent developments in Geo-informatics.</p>
+                <p>Mr Satheesh Gopi, is the senior team member in Digital cartography, Costal digitization, Geographic Information System and a senior faculty member in the Kerala institute of hydrography and advanced studies. He has been commissioned to supervise surveys with the most advanced DGPS, smart stations, digital level from 90s itself. He has also carried out LIDAR based hydrographic investigation. He was also the Team leader in establishing 10 coastal Tide-Meteorological stations along the Kerala coast.</p>
+                <p>The main highlight of the entire function was the exhibition organized by the Department in the Civil Block. The theme of the Expo titled LEGACE was Construction Materials. Various companies showcased their building material samples at the Expo which spread awareness to many who attended it, including children from various schools. The Expo also portrayed the talent of the students, who made various models and exhibits of civil engineering significance.</p>
+                <p><img alt="" class="aligncenter wp-image-3322" loading="lazy" src="/assets/images/departments/associations/civil_associations_8.jpg" /></p>
+                <p><img alt="" class="aligncenter wp-image-3323" loading="lazy" src="/assets/images/departments/associations/civil_associations_9.jpg" /></p>
+                <p><img alt="" class="aligncenter wp-image-3324" loading="lazy" src="/assets/images/departments/associations/civil_associations_10.jpg" /></p>
+                <p></p>
+                <h3><strong>CASTELLOS 2015</strong></h3>
+                <p>The activities of Civil Engineering association (CASTELLOS) for the academic year 2015-2016 were inaugurated on 03.09.15. The function was presided by Dr E K Bhass, HoD CE. He delivered the welcome and presidential address. Principal Dr. S. Suresh Babu delivered principals address. Arch. Sajan P B, Joint Director, COSTFORD delivered inaugural address and officially inaugurated the association by lighting the lamp. Ms Cinaya Tony presented the annual report for the year 2014-2015.</p>
+                <p>A talk on Alternate Building Materials was delivered by Arch. Sajan P B, Joint Director, COSTFORD on 03.09.15. He stressed upon the importance of Sustainable Development, impact of construction on environment, pollution etc. The session was highly motivating and informative.</p>
+                <p><img alt="" class="aligncenter wp-image-3325" loading="lazy" src="/assets/images/departments/associations/civil_associations_11.jpg" /></p>
+                <h3><strong>CASTELLOS 2013</strong></h3>
+                <p>The Association activities of Civil Engineers of SBCE, CASTELLOS for the year 2013 was inaugurated by Dr Reji G Nair, MD, CONSUMER FED, Govt. of Kerala on 26 July 2013. The programme started at 11 a.m. by the welcome address of Ms. Devika Das, Secretary, CASTELLOS. The presidential address was delivered by Dr Somi Sebastian, Principal, SBCE, Prof. V Prasad, Secretary, SBCE, and Sri K K Sivadasn, Treasurer, SBCE, felicitated the session. Mr Basho Vikram delivered vote of thanks. A quiz competition was conducted in the afternoon session and prizes were given for the winners. The programme concluded with cultural events.</p>
+                <p>CASTELLOS, the department Association of Civil Engineers of SBCE conducted a mix design competition in association with Ultratech Cement on 11 January 2013. Mr. M A Joseph, Regional Manager, Ultratech was the Chief Guest. Many student groups from SBCE participated and prizes were given for the winners.</p>
+                <p><img alt="" class="aligncenter wp-image-3326" loading="lazy" src="/assets/images/departments/associations/civil_associations_12.jpg" /></p>
 
 
 
-
+            </div>
 
 
 
