@@ -6,8 +6,20 @@ import "@/styles/homepage/carousal.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function Events() {
     const [slidesToShow, setSlidesToShow] = useState(3); // Default 3 slides for desktop
+
+    useEffect(() => {
+        AOS.init({
+            once: true,
+        //   disable: "phone",
+          duration: 700,
+          easing: "ease-out-cubic",
+        });
+      }, []);
 
     useEffect(() => {
         const handleResize = () => {
@@ -18,7 +30,7 @@ export default function Events() {
             } else if (screenWidth <= 1024) {
                 setSlidesToShow(2); // 2 slides for tablet
             } else {
-                setSlidesToShow(screenWidth/250); // 3 slides for desktop
+                setSlidesToShow(3); // 3 slides for desktop
             }
         };
 
@@ -62,12 +74,12 @@ export default function Events() {
                             )
                         }
                     >
-                        <div className="event">Event 1</div>
-                        <div className="event">Event 2</div>
-                        <div className="event">Event 3</div>
-                        <div className="event">Event 4</div>
-                        <div className="event">Event 5</div>
-                        <div className="event">Event 6</div>
+                        <div data-aos="fade-up" className="event">Event 1</div>
+                        <div data-aos="fade-up" className="event">Event 2</div>
+                        <div data-aos="fade-up" className="event">Event 3</div>
+                        <div data-aos="fade-up" className="event">Event 4</div>
+                        <div data-aos="fade-up" className="event">Event 5</div>
+                        <div data-aos="fade-up" className="event">Event 6</div>
                     </Carousel>
                 </div>
             </div>

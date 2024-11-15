@@ -6,8 +6,21 @@ import "@/styles/homepage/carousal.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function Research() {
-    const [slidesToShow, setSlidesToShow] = useState(3); // Default 3 slides for desktop
+    const [slidesToShow, setSlidesToShow] = useState(3); 
+    
+    
+    useEffect(() => {
+        AOS.init({
+            once: true,
+        //   disable: "phone",
+          duration: 700,
+          easing: "ease-out-cubic",
+        });
+      }, []);
 
     useEffect(() => {
         const handleResize = () => {
@@ -63,12 +76,12 @@ export default function Research() {
                             )
                         }
                     >
-                        <div className="event">Event 1</div>
-                        <div className="event">Event 2</div>
-                        <div className="event">Event 3</div>
-                        <div className="event">Event 4</div>
-                        <div className="event">Event 5</div>
-                        <div className="event">Event 6</div>
+                        <div  data-aos="fade-up" className="event">Event 1</div>
+                        <div  data-aos="fade-up" className="event">Event 2</div>
+                        <div  data-aos="fade-up" className="event">Event 3</div>
+                        <div  data-aos="fade-up" className="event">Event 4</div>
+                        <div  data-aos="fade-up" className="event">Event 5</div>
+                        <div  data-aos="fade-up" className="event">Event 6</div>
                     </Carousel>
                 </div>
             </div>
