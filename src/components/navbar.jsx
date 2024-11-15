@@ -78,6 +78,167 @@ export default function Navbar() {
             </div>
           </div>
           <div className="navbar_menu">
+<<<<<<< HEAD
+=======
+            <span>Research</span>
+            <div className="submenu">
+              <ul>
+                <Link className="submenu_link" href="">
+                  Reserach Coucil
+                </Link>
+                <Link className="submenu_link" href="/research/projects">
+                  Projects
+                </Link>
+                <Link className="submenu_link" href="/research/ipr">
+                  IPR
+                </Link>
+                <Link className="submenu_link" href="/research/consultancy">
+                  Consultency
+                </Link>
+                <Link className="submenu_link" href="/research/conference">
+                  Conferences organized
+                </Link>
+              </ul>
+            </div>
+          </div>
+          <div className="navbar_menu">
+            <span>Facilities</span>
+            <div className="submenu">
+              <ul>
+                <Link className="submenu_link" href="/facilities/cells">
+                  Cells and Centers
+                </Link>
+                <Link className="submenu_link" href="/facilities/library">
+                  Central Library{" "}
+                </Link>
+                <Link className="submenu_link" href="/facilities/hall">
+                  Conference hall
+                </Link>
+                <Link className="submenu_link" href="/facilities/bus">
+                  conveyance and bus routes
+                </Link>
+                <Link className="submenu_link" href="/facilities/reprographic">
+                  repographics facilities
+                </Link>
+                <Link className="submenu_link" href="/facilities/lab">
+                  internal Lab
+                </Link>
+                <Link className="submenu_link" href="/facilities/hostel">
+                  hostel{" "}
+                </Link>
+                <Link className="submenu_link" href="/facilities/canteen">
+                  canteen{" "}
+                </Link>
+                <Link className="submenu_link" href="/facilities/other">
+                  other facilities{" "}
+                </Link>
+              </ul>
+            </div>
+          </div>
+          <div className="navbar_menu">
+            <span>Cells and Chapters</span>
+            <div className="submenu">
+              <ul>
+                <Link className="submenu_link" href="">
+                  Various Cells and Commities{" "}
+                </Link>
+                <Link className="submenu_link" href="">
+                  IEEE
+                </Link>
+                <Link className="submenu_link" href="">
+                  IE(I)
+                </Link>
+                <Link className="submenu_link" href="">
+                  SAE India
+                </Link>
+                <Link className="submenu_link" href="">
+                  NSS
+                </Link>
+                <Link className="submenu_link" href="">
+                  SAC
+                </Link>
+                <Link className="submenu_link" href="">
+                  Virual Lab{" "}
+                </Link>
+                <Link className="submenu_link" href="">
+                  IEDC
+                </Link>
+                <Link className="submenu_link" href="">
+                  NPTEL
+                </Link>
+                <Link className="submenu_link" href="">
+                  IIT-remote center
+                </Link>
+              </ul>
+            </div>
+          </div>
+          <div className="navbar_menu">
+            <span>Accreditation</span>
+            <div className="submenu">
+              <ul>
+                <Link className="submenu_link" href="">
+                  Various Cells and Commities{" "}
+                </Link>
+                <Link className="submenu_link" href="">
+                  IEEE
+                </Link>
+                <Link className="submenu_link" href="">
+                  IE(I)
+                </Link>
+                <Link className="submenu_link" href="">
+                  SAE India
+                </Link>
+                <Link className="submenu_link" href="">
+                  NSS
+                </Link>
+                <Link className="submenu_link" href="">
+                  SAC
+                </Link>
+                <Link className="submenu_link" href="">
+                  Virual Lab{" "}
+                </Link>
+                <Link className="submenu_link" href="">
+                  IEDC
+                </Link>
+                <Link className="submenu_link" href="">
+                  NPTEL
+                </Link>
+                <Link className="submenu_link" href="">
+                  IIT-remote center
+                </Link>
+              </ul>
+            </div>
+          </div>
+          <div className="navbar_menu">
+            <span>Academics</span>
+            <div className="submenu">
+              <ul>
+                <Link className="submenu_link" href="">
+                  advisory system
+                </Link>
+                <Link className="submenu_link" href="">
+                  acadamic calendar
+                </Link>
+                <Link className="submenu_link" href="">
+                  proffetinal bodies
+                </Link>
+                <Link className="submenu_link" href="">
+                  handbook{" "}
+                </Link>
+                <Link className="submenu_link" href="">
+                  NSS
+                </Link>
+                <Link className="submenu_link" href="">
+                  syllubus{" "}
+                </Link>
+                <Link className="submenu_link" href="">
+                  campus newsletter
+                </Link>
+              </ul>
+            </div>
+          </div>
+          <div className="navbar_menu">
+>>>>>>> 0282e4472582885cd77c92735bb48b2fd284d6d1
             <span>Autonomous</span>
             <div className="submenu">
               <ul>

@@ -31,7 +31,7 @@ export default function LandingPage() {
         <p className="landing_page_about_us" data-aos="fade-right" data-aos-duration="600" >Sree Buddha College of Engineering, affiliated with KeralaTech nological University, excels in technical education, guided by the teachings of Lord Buddha. The institution nurtures a spring technocrats and strives to be a model for the world.</p>
         <div className="landing_page_buttons" data-aos="fade-up" data-aos-duration="600">
           <a href="" className= "landing_page_about_us_button">About Us</a>
-          <a href="">Brouchere</a>
+          <a href="">Brochure</a>
         </div>
       </div>
     </div>

@@ -24,11 +24,14 @@ const Page = () => {
 
   return (
     <div className="Container">
+      <div className="Heading">NAAC CYCLE 2</div>
       <div className="Nav">
         <ul>
           <li
             onClick={() =>
-              handlepdfOpen("/assets/documents/accreditation/IIQA.pdf")
+              handlepdfOpen(
+                "/assets/documents/accreditation/Criteria1/IIQA.pdf"
+              )
             }
           >
             IIQA

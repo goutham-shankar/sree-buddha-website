@@ -29,4 +29,11 @@
     /* border-bottom: 2px solid #000000;  */
     color: rgba(0, 0, 0, 0.393);
   }
+  .Heading {
+    margin-left: 120px;
+    margin-top: 40px;
+    font-size: 40px;
+    color: #73501c;
+    font-weight: 800;
+  }
 }

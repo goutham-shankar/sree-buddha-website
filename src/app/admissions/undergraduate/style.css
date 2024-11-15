@@ -36,10 +36,11 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 0%;
-    background-image: url('../../../assets/images/admissions/arrow.png');
+    background-image: url('/assets/images/admission/arrowmark.png');
 }
 .phototextone,.phototextthree,.phototexttwo,.phototextone{
     padding-left: 25px;
+    padding-bottom: 10px; ;
     font-size: 16px;
     font-family: 'poppins';
     color:#000000 ;
@@ -55,6 +56,7 @@ text-decoration: none;
 .phototextfour{
     color: #000000;
     font-weight: 500;
+    padding-bottom: 15px;
 }
 .phototextone:hover {
     color: #f48208;
@@ -258,11 +260,11 @@ text-decoration: none;
         
     .phototextone,.phototexttwo,.phototextthree{
         padding-right: 15px;
-        padding-bottom: 5px;
+        padding-bottom: 10px;
     }
     
     .phototextfour{
-        padding-top: 2px;
+        padding-top: 12px;
         padding-left: 13px;
     }
 }
