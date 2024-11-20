@@ -4,6 +4,9 @@ import Navbar from "@/components/navbar";
 import NavbarMobile from "@/components/navbar_mobile";
 import Footer from "@/components/footer";
 
+
+
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -21,6 +24,9 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+
+
   return (
     <html lang="en">
       <body

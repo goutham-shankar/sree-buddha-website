@@ -11,7 +11,7 @@ export default function StudentClubs() {
       window.open(url, '_blank');  // Opens the PDF in a new tab
     };
   
-    return (
+    return ( 
       <div className='club'>
         <h2>Various Cells & Committees</h2>
         <div className="club-ul">

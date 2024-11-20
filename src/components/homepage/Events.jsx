@@ -6,8 +6,20 @@ import "@/styles/homepage/carousal.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function Events() {
     const [slidesToShow, setSlidesToShow] = useState(3); // Default 3 slides for desktop
+
+    useEffect(() => {
+        AOS.init({
+            once: true,
+        //   disable: "phone",
+          duration: 700,
+          easing: "ease-out-cubic",
+        });
+      }, []);
 
     useEffect(() => {
         const handleResize = () => {

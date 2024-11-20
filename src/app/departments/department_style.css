@@ -136,9 +136,16 @@ li {
 img {
     margin-top: 15px;
     margin-bottom: 15px;
+    width: 100%;
+}
+.single_line {
+    width: 100%;
+    /* background-color: red; */
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 
-.list {
+.list { 
     /* background-color: red; */
     /* margin-left: 0px; */
     width: 100%;

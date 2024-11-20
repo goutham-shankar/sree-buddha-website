@@ -14,15 +14,20 @@ import "./style.css"
 export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
-        ["eee_faculty1.jpg", "Sindhu V.M.E", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty2.jpg", "Abhilasha Parthan", "M.Tech", "Assistant Professor", "Industrial Drives and Control"],
-        ["eee_faculty3.jpg", "Juna John Daniel", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty4.jpg", "Gayathri V", "M.Tech", "Assistant Professor", "Power Electronics & Power Systems"],
-        ["eee_faculty5.jpg", "Ananthu Vijayakumar", "M.Tech", "Assistant Professor", "Power Electronics & Power Systems"],
-        ["eee_faculty6.jpg", "Chama R Chandran", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty7.jpg", "Atheena A", "M.Tech", "Assistant Professor", "Power and Energy"],
-        ["eee_faculty8.jpg", "Athira B", "M.Tech", "Assistant Professor", "Power Systems"]
+        ["maths_science_faculty_1.jpg", "Mr. Somanadhan A", "RMPEd", "PED", "Physical Education"],
+        ["maths_science_faculty_2.jpg", "Ms. Priya R", "MSc", "Asst. Professor", "Mathematics"],
+        ["maths_science_faculty_3.jpg", "Ms. Rakhi Rajeev", "MSc, BEd", "Asst. Professor", "Mathematics"],
+        ["maths_science_faculty_4.jpg", "Ms. Divya Suresh", "MSc, BEd", "Asst. Professor", "Mathematics"],
+        ["maths_science_faculty_5.jpg", "Ms. Asha S", "M.Sc., B.Ed, M.Phil", "Asst. Professor", "Mathematics"],
+        ["maths_science_faculty_6.jpg", "Ms. Anju B I", "M.Sc., B.Ed, SET", "Asst. Professor", "Physics"],
+        ["maths_science_faculty_7.jpg", "Ms. Raji Sankar", "MSc", "Asst. Professor", "Chemistry"],
+        ["maths_science_faculty_8.jpg", "Ms. Asha V", "M.Sc., B.Ed, SET", "Asst. Professor", "Polymer Chemistry"],
+        ["maths_science_faculty_9.jpg", "Ms. Shalini C G", "MSc., B.Ed", "Asst. Professor", "Mathematics"],
+        ["maths_science_faculty_10.jpg", "Ms. Prabhiya P S", "M.Sc., B.Ed, SET", "Asst. Professor", "Mathematics"],
+        ["maths_science_faculty_11.jpg", "Ms. Smitha N K", "MA, B.Ed, SET", "Asst. Professor", "English"],
+        ["maths_science_faculty_12.jpg", "Ms. Suryamol O", "MSc", "Asst. Professor", "Physics"]
       ];
+      
       
 
     return (
@@ -57,7 +62,7 @@ export default function ComputerScienceDepartmentFaculty() {
 
                                 <tr key = {index}>
 
-                                    <td> <img src={`/assets/images/departments/faculty/eee/${singleFaculty[0]}`} alt="image" /> </td>
+                                    <td> <img src={`/assets/images/departments/faculty/maths_and_science/${singleFaculty[0]}`} alt="image" /> </td>
                                     {/* <td> <img src= {image.src} alt="image" /> </td> */}
                                     {/* <td> <img src= {"/assets/images/departments/faculty/cs/cs_f1.jpg"} alt="image" /> </td> */}
                                     <td>{singleFaculty[1]}</td>

@@ -130,7 +130,7 @@
     z-index: 1000; 
 }
 
-@media (  max-width : 1000px )  {
+@media (  max-width : 1200px )  {
 
     .navbar_mobile{
         display: flex;
