@@ -101,7 +101,7 @@
 
 @media (max-width: 480px) {
     .event {
-        height: 200px;
+        height: 400px;
         font-size: 1.2rem;
     }
 }
