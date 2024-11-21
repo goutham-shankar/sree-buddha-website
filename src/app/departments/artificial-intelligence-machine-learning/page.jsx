@@ -22,7 +22,7 @@ export default function ComputerScienceDepartment() {
 
             <p>To emphasize lifelong learning and applying knowledge to solve real-world problems, we conduct various technical events such as hackathons, coding competitions, training programs, workshops, and seminars. We aim to provide the best learning experience to our students, enriching their skills and knowledge.</p>
 
-            <p>Our initiatives will undoubtedly shape students to face the outside world with technical, interpersonal, and problem-solving skills. We collaborate with various firms and regularly organize industry visits, technical talks, and real-time projects to hone students' technical and soft skills, preparing them to be industry-ready with holistic personalities.</p>
+            <p>Our initiatives will undoubtedly shape students to face the outside world with technical, interpersonal, and problem-solving skills. We collaborate with various firms and regularly organize industry visits, technical talks, and real-time projects to hone students technical and soft skills, preparing them to be industry-ready with holistic personalities.</p>
 
             <h3 className='heading2'>Career Opportunities in Artificial Intelligence & Machine Learning</h3>
             <ul className='list'>

@@ -8,11 +8,11 @@ export default function ComputerScienceDepartmentActivities() {
   <h3 class="heading1">Activities</h3>
   
   <h3 class="heading2"><strong>WORKSHOP ON ROBOTICS</strong></h3>
-  <p>Department of Artificial Intelligence and Machine Learning successfully conducted a 3-day workshop on "Robotics" from 19/2/24 to 21/2/24. The workshop was conducted by "Stem Robotics" Founder and CEO, Mr. Rajasekharan A H. Around 128 school students and 63 AI&ML students attended the workshop.</p>
+  <p>Department of Artificial Intelligence and Machine Learning successfully conducted a 3-day workshop on "&apos;obotics&apos; from 19/2/24 to 21/2/24. The workshop was conducted by &apos;Stem Robotics&apos; Founder and CEO, Mr. Rajasekharan A H. Around 128 school students and 63 AI&ML students attended the workshop.</p>
   <p><img alt="Robotics Workshop" class="alignnone size-full wp-image-8368" loading="lazy" src="/assets/images/departments/activities/ai_activities_1.jpg"/></p>
   
   <h3 class="heading2"><strong>WORKSHOP ON MACHINE LEARNING USING PYTHON</strong></h3>
-  <p>Two-Day Workshop on Machine Learning: The Department of Artificial Intelligence and Machine Learning hosted a two-day workshop on "MACHINE LEARNING USING PYTHON" on 15th and 16th September 2023 from 9 am to 4 pm in the SDPK lab of the CSE building. The resource person was Prof. Shiju Thomas, Assistant Professor, Rajagiri College of Social Sciences, Ernakulam.</p>
+  <p>Two-Day Workshop on Machine Learning: The Department of Artificial Intelligence and Machine Learning hosted a two-day workshop on &apos;MACHINE LEARNING USING PYTHON&apos; on 15th and 16th September 2023 from 9 am to 4 pm in the SDPK lab of the CSE building. The resource person was Prof. Shiju Thomas, Assistant Professor, Rajagiri College of Social Sciences, Ernakulam.</p>
   <p><img alt="Machine Learning Workshop" class="alignnone size-full wp-image-8370" loading="lazy" src="/assets/images/departments/activities/ai_activities_2.jpg"/></p>
 
   <h3 class="heading2"><strong>REPORT - TALK ON STARTUPS</strong></h3>
