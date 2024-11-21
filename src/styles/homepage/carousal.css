@@ -45,6 +45,9 @@
     color: white;
     border-radius: 20px;
 }
+.event img{
+    height: 100%;
+}
 
 /* Custom arrow styling */
 .custom-arrow {

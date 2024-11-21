@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import "@/styles/homepage/affiliations.css"
+import "@/styles/homepage/affiliations.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

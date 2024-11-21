@@ -76,12 +76,13 @@ export default function Research() {
                             )
                         }
                     >
-                        <div  data-aos="fade-up" className="event">Event 1</div>
-                        <div  data-aos="fade-up" className="event">Event 2</div>
-                        <div  data-aos="fade-up" className="event">Event 3</div>
-                        <div  data-aos="fade-up" className="event">Event 4</div>
-                        <div  data-aos="fade-up" className="event">Event 5</div>
-                        <div  data-aos="fade-up" className="event">Event 6</div>
+                        <div  data-aos="fade-up" className="event"><img src="/assets/images/home images/research/event1.png" alt="event-1" /></div>
+                        <div  data-aos="fade-up" className="event"><img src="/assets/images/home images/research/event2.png" alt="event-1" /></div>
+                        <div  data-aos="fade-up" className="event"><img src="/assets/images/home images/research/event3.png" alt="event-1" /></div>
+                        <div  data-aos="fade-up" className="event"><img src="/assets/images/home images/research/event4.png" alt="event-1" /></div>
+                        <div  data-aos="fade-up" className="event"><img src="/assets/images/home images/research/event5.png" alt="event-1" /></div>
+                        <div  data-aos="fade-up" className="event"><img src="/assets/images/home images/research/event6.png" alt="event-1" /></div>
+                        
                     </Carousel>
                 </div>
             </div>
