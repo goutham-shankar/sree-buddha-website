@@ -86,7 +86,7 @@ export default function ComputerScienceDepartment() {
         </figure>
         
         <p class="has-text-align-center has-small-font-size"><strong>Program Report</strong><br/>
-            "Safe Food Today for a Healthy Tomorrow" stresses that the production and consumption of safe food have immediate and long-term benefits for people, the planet, and the economy. Ms. Jisha emphasized the complex nature of food safety and the importance of an effective national food control system. Food safety is a joint responsibility of government, industry, and consumers. She provided a detailed explanation of Hazard Analysis and Critical Control Point (HACCP) principles and an additional decision tree for identifying critical control points (CCPs).
+        &quot;Safe Food Today for a Healthy Tomorrow&quot; stresses that the production and consumption of safe food have immediate and long-term benefits for people, the planet, and the economy. Ms. Jisha emphasized the complex nature of food safety and the importance of an effective national food control system. Food safety is a joint responsibility of government, industry, and consumers. She provided a detailed explanation of Hazard Analysis and Critical Control Point (HACCP) principles and an additional decision tree for identifying critical control points (CCPs).
         </p>
         
         <p><strong>SRAAVANOLSAVAM - E Onam, Nammude Onam</strong></p>

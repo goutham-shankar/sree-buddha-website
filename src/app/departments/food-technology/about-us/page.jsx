@@ -11,7 +11,7 @@ export default function FoodTechnologyAboutUs() {
                 </p>
 
                 <p class="has-normal-font-size">
-                    A significant aspect of the curriculum is the inclusion of industry visits, aimed at enhancing students' practical knowledge and skills in food technology. These visits expose students to real-world applications, broaden their perspectives, and refine their technical abilities within the field.
+                    A significant aspect of the curriculum is the inclusion of industry visits, aimed at enhancing students practical knowledge and skills in food technology. These visits expose students to real-world applications, broaden their perspectives, and refine their technical abilities within the field.
                 </p>
 
                 <p class="has-normal-font-size">
