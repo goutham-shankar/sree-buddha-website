@@ -77,7 +77,7 @@ export default function ComputerScienceDepartmentActivities() {
 
     <div class="heading3">
         <h3 class="heading3">Awareness Program</h3>
-        <p>An enlightening awareness talk on the topic "Eat right, stay healthy" was delivered by guest speaker Ms. Sreelekshmi S Vasavan...</p>
+        <p>An enlightening awareness talk on the topic &apos;Eat right, stay healthy&apos; was delivered by guest speaker Ms. Sreelekshmi S Vasavan...</p>
         <img alt="" class="alignnone size-full wp-image-8190" loading="lazy" src="/assets/images/departments/activities/food_technology_activity_8.jpg"/>
     </div>
 
