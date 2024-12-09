@@ -14,15 +14,23 @@ import "./style.css"
 export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
-        ["eee_faculty1.jpg", "Sindhu V.M.E", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty2.jpg", "Abhilasha Parthan", "M.Tech", "Assistant Professor", "Industrial Drives and Control"],
-        ["eee_faculty3.jpg", "Juna John Daniel", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty4.jpg", "Gayathri V", "M.Tech", "Assistant Professor", "Power Electronics & Power Systems"],
-        ["eee_faculty5.jpg", "Ananthu Vijayakumar", "M.Tech", "Assistant Professor", "Power Electronics & Power Systems"],
-        ["eee_faculty6.jpg", "Chama R Chandran", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty7.jpg", "Atheena A", "M.Tech", "Assistant Professor", "Power and Energy"],
-        ["eee_faculty8.jpg", "Athira B", "M.Tech", "Assistant Professor", "Power Systems"]
-      ];
+        ["civil_faculty_1.jpg", "Dr. Gouri Antherjanam", "Ph.D", "Professor & HoD", "CIVIL ENGINEERING"],
+        ["civil_faculty_2.jpg", "Dr. Sivsankar S.", "Ph.D", "Professor", "Structural Engineering"],
+        ["civil_faculty_3.jpg", "Mr. Ashok Mathew", "M.Tech", "Assistant Professor", "STRUCTURAL ENGINEERING"],
+        ["civil_faculty_4.jpg", "Mr. Unnikrishnan S", "M.Tech", "Assistant Professor", "CONSTRUCTION ENGINEERING"],
+        ["civil_faculty_5.jpg", "Ms. Regi P Mohan", "M.Tech", "Assistant Professor", "ENVIRONMENTAL GEOTECHNOLOGY"],
+        ["civil_faculty_6.jpg", "Ms. Sobha Elizabeth Thomas", "M.Tech", "Assistant Professor", "STRUCTURAL ENGINEERING"],
+        ["civil_faculty_7.jpg", "Mr. Pradeep P. (LEAVE)", "M.Tech", "Assistant Professor", "Habitat Technology"],
+        ["civil_faculty_8.jpg", "Ms. Sreelekshmi S. (leave)", "M.Tech", "Assistant Professor", "Transportation Engineering"],
+        ["civil_faculty_9.jpg", "Ms. Cinaya Tony", "M.Tech", "Assistant Professor", "HYDRAULICS ENGINEERING"],
+        ["civil_faculty_10.jpg", "Ritzy R", "M.Tech", "Assistant Professor", "STRUCTURAL ENGINEERING"],
+        ["civil_faculty_11.jpg", "Namitha Chandran", "M.Tech", "Assistant Professor", "CIVIL ENGINEERING"],
+        ["civil_faculty_12.jpg", "Anusree Lal", "M.Tech", "Assistant Professor", "Structural Engineering"],
+        ["civil_faculty_13.jpg", "Mr. Sooraj S", "M.Tech", "Assistant Professor", "Structural Engineering"],
+        ["civil_faculty_14.jpg", "Mr. Kailas G Nath", "M.Tech", "Assistant Professor", "Structural Engineering"],
+        ["civil_faculty_15.jpg", "Ms. Neethu Roy", "M.Tech", "Assistant Professor", "Structural Engineering"]
+    ];
+    
       
 
     return (
@@ -57,7 +65,7 @@ export default function ComputerScienceDepartmentFaculty() {
 
                                 <tr key = {index}>
 
-                                    <td> <img src={`/assets/images/departments/faculty/eee/${singleFaculty[0]}`} alt="image" /> </td>
+                                    <td> <img src={`/assets/images/departments/faculty/civil/${singleFaculty[0]}`} alt="image" /> </td>
                                     {/* <td> <img src= {image.src} alt="image" /> </td> */}
                                     {/* <td> <img src= {"/assets/images/departments/faculty/cs/cs_f1.jpg"} alt="image" /> </td> */}
                                     <td>{singleFaculty[1]}</td>

@@ -18,15 +18,15 @@ export default function ComputerScienceDepartment() {
 
                     <h3 className="">VISION</h3>
                     <p className="">
-                    To create skilful Electrical & Electronics engineers with societal commitment
+                    To raise competent professionals, researchers and entrepreneurs in food technology through value based quality education to address social needs.
                     </p>
 
                     <h3 className="">MISSION</h3>
                   
-                       <ul>
-                        <li>Create professionally qualified Electrical & Electronics engineers by imparting necessary knowledge and relevant skills.</li>
-                        <li>Encourage students to inculcate a culture of lifelong learning necessary for jobs or higher studies.</li>
-                        <li>Induce human values and social commitment to meet societal needs</li>
+                       <ul className='list'>
+                        <li>To emphasis the development of graduate with a professional approach</li>
+                        <li>To perform research with an insight towards life long learning, entrepreneurship and environmental sustainability</li>
+                        <li>To equip students with innovative product and technology development</li>
                        </ul>
                   
 

@@ -15,14 +15,14 @@ export default function ComputerScienceLayout({ children }) {
     const links =  [
         ["about" , "/"] , 
         ["Vision & Mission", "vision-mission"],
-        ["Faculty", "faculty"],
         ["hod", "hod"],
-        ["PEO'S,POs and PSos", "peos-pos-psos"],
-        ["Facilities", "facilities"],
-        ["Achievements", "achievements"],
-        ["Activities", "activities"],
-        ["Associations and Clubs", "associations-and-clubs"],
-        ["Paper Publications", "paper-publications"],
+        ["Faculty", "faculty"],
+        // ["PEO'S,POs and PSos", "peos-pos-psos"],
+        // ["Facilities", "facilities"],
+        // ["Achievements", "achievements"],
+        // ["Activities", "activities"],
+        // ["Associations and Clubs", "associations-and-clubs"],
+        // ["Paper Publications", "paper-publications"],
     ]
 
     return (
@@ -32,7 +32,7 @@ export default function ComputerScienceLayout({ children }) {
         <div className="department">
         { children }
         </div>
-        <DepartmentNavbar  department= {"electrical-electronics-engineering"} links = {links} />
+        <DepartmentNavbar  department= {"mathematics-and-basic-sciences"} links = {links} />
 
         
         </div>

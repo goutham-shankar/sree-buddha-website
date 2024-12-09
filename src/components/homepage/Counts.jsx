@@ -1,49 +1,85 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "@/styles/homepage/counts.css";
 
 export default function Counts() {
-  const handleMouseEnter = (e) => {
-    const countItem = e.currentTarget.querySelector(".count-number");
-    const finalCount = parseInt(e.currentTarget.dataset.count, 10);
-    let currentCount = 0;
+  const countsRef = useRef([]);
 
-    const interval = setInterval(() => {
-      currentCount += Math.ceil(finalCount / 50); // Adjust speed
-      if (currentCount >= finalCount) {
-        currentCount = finalCount;
-        clearInterval(interval);
-      }
-      countItem.textContent = currentCount;
-    }, 50); // Speed of counting
-  };
+  useEffect(() => {
+    const handleCounting = (entry) => {
+      const countItem = entry.target.querySelector(".count-number");
+      const finalCount = parseInt(entry.target.dataset.count, 10);
+      let currentCount = 0;
+
+      const interval = setInterval(() => {
+        currentCount += Math.ceil(finalCount / 50); // Adjust speed
+        if (currentCount >= finalCount) {
+          currentCount = finalCount;
+          clearInterval(interval);
+        }
+        countItem.textContent = currentCount;
+      }, 50); // Speed of counting
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            handleCounting(entry);
+            observer.unobserve(entry.target); // Stop observing after animation starts
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    countsRef.current.forEach((ref) => observer.observe(ref));
+
+    return () => observer.disconnect(); // Cleanup observer
+  }, []);
 
   return (
     <div className="counts">
       <ul>
         <li>
-          <div className="count-item" data-count="18500" onMouseEnter={handleMouseEnter}>
+          <div
+            className="count-item"
+            data-count="18500"
+            ref={(el) => countsRef.current[0] = el}
+          >
             <h3>ADMISSIONS</h3>
-            <span className="count-number">18500</span>
+            <span className="count-number">0</span>
           </div>
         </li>
         <li>
-          <div className="count-item" data-count="1500" onMouseEnter={handleMouseEnter}>
+          <div
+            className="count-item"
+            data-count="1500"
+            ref={(el) => countsRef.current[1] = el}
+          >
             <h3>FACULTIES</h3>
-            <span className="count-number">1500</span>
+            <span className="count-number">0</span>
           </div>
         </li>
         <li>
-          <div className="count-item" data-count="50" onMouseEnter={handleMouseEnter}>
+          <div
+            className="count-item"
+            data-count="50"
+            ref={(el) => countsRef.current[2] = el}
+          >
             <h3>CELLS & CHAPTERS</h3>
-            <span className="count-number">50</span>
+            <span className="count-number">0</span>
           </div>
         </li>
         <li>
-          <div className="count-item" data-count="2004" onMouseEnter={handleMouseEnter}>
+          <div
+            className="count-item"
+            data-count="2004"
+            ref={(el) => countsRef.current[3] = el}
+          >
             <h3>ESTABLISHED</h3>
-            <span className="count-number">2004</span>
+            <span className="count-number">0</span>
           </div>
         </li>
       </ul>

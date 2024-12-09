@@ -2,7 +2,7 @@
     height:110px;
     width: 100%;
 
-    padding: 0vw 60px;
+    padding: 0vw 20px;
     /* padding-top: 1vw; */
     display: flex;
     background-color: white;
@@ -13,7 +13,7 @@
    
 }  
 
-@media( max-width : 1000px){
+@media( max-width : 1200px){
     .navbar{
       display: none;
     }
@@ -55,20 +55,24 @@
 .navbar_menus{
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 96%;
+    /* background-color: green; */
 }
 .navbar_menu{
     font-family: var(--font1);
     font-size: 16px;
     position: relative;
     padding-bottom: 10px;
-    margin: 1px;
+    margin: 30px 10px;
+    /* background-color: red; */
 }
 .submenu{
     /* display: none; */
     overflow: hidden;
     position: absolute;
     top: 100% ;
+    min-width: 150px;
+    /* overflow: visible; */
     left: 0px;
     width: max-content;
     background-color: white;
@@ -85,10 +89,45 @@
     
 }
 
-.navbar_menu:hover   .submenu {
+.submenu_2{
+    position: absolute;
+    /* right: 100%; */
+    left: 100%;
+    top: 0px;
+    min-width: 150px;
+    /* background-color: red; */
+    background-color: white;
+    display: none;
+}
 
+.submenu_2_link{
+    color: black;
+    padding: 8px 30px;
+    /* width:100%; */
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.submenu_2_link:hover{
+    background-color: rgb(238, 238, 238);
+}
+
+/* .submenu_link */
+
+.navbar_menu:hover   .submenu {
+    overflow: visible;
     height: max-content;
 } 
+
+.submenu_link:hover .submenu_2{
+    display: flex;
+}
+
+.towards_left{
+    left: unset;
+    right: 0px;
+    /* background-color: red; */
+}
 
 .submenu:hover{
     height: max-content;

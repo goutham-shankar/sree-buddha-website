@@ -1,0 +1,32 @@
+.iedc-page{
+    padding: 50px;
+    font-family: 'Poppins';
+}
+.iedc-intro h2{
+    font-size: 40px;
+    color: #73501c;
+    margin-bottom: 40px;
+}
+.iedc-logo img{
+    height: 150px;
+}
+.iedc-nav{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+.iedc-link ul{
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    align-content: center;
+    justify-items: center;    
+}
+.iedc-list li{
+    list-style: none;
+    font-size: larger;
+}
+.iedc-list{
+    margin-left: 200px ;
+    margin-top: 40px;
+}

@@ -9,85 +9,100 @@ export default function ComputerScienceDepartment() {
         <>
 
 
-            <div className="top_img_section">
-                <img src={"/assets/images/departments/ece_dept_img1.png"} alt="image" />
-            </div>
+            {/* <div className="top_img_section"> */}
+                {/* <img src={"/assets/images/departments/ece_dept_img1.png"} alt="image" /> */}
+            {/* </div> */}
 
-            <h3 class="heading1">Programmes Offered</h3>
-
-            <h3 className = "heading2">B Tech in Electrical and Electronics Engineering</h3>
-            <h3 className = "heading3">M Tech in Electrical Machines</h3>
-
-            <p>The Department of Electrical and Electronics Engineering was established in 2004, as the sixth department of this college, with an annual intake of 60 students for the B Tech in Electrical and Electronics Engineering program. An M Tech programme in Electrical Machines was started in 2014 with an annual intake of 24 students. The department is dedicated to the promotion of excellence in Engineering education, imparting knowledge to students in the field of Electrical and Electronics Engineering so that they can successfully complete their graduation and secure proper placement. Many of our students stand in a better position in Kerala Technological University, and a good number of them occupy prestigious positions both within the country and abroad.</p>
-
-            <p>The department&apos;s laboratories are well-equipped for the conduct of the existing courses. The facilities available in the department are sufficient to meet the requirements of B Tech and M Tech project works. The department has a well-equipped computer center with internet access. In addition to the central library, there is a departmental library where most of the books prescribed in the syllabus are available. The existing faculty and supporting staff are highly qualified, experienced, and dedicated. All teachers hold M Tech/M.E. degrees, and some are pursuing their PhDs. The advisory system is very effective in regular evaluation of students and in informing progress to students&apos; parents. Almost all students who have passed out from the department are well placed, and many have obtained GATE scores. The department has excellent contacts with neighboring industries like KSEB and NTPC. It also publishes a monthly newsletter called &quot;Impulse.&quot;</p>
-
-            <h3 class="heading2">Opportunities in Electrical Engineering</h3>
-
-            <ul>
-                <li>Central government jobs from UPSC, SSC, and IES (Engineering Services)</li>
-                <li>State Government Jobs from Kerala PSC, including KSEB</li>
-                <li>More than 30+ firms offering jobs based on GATE qualification</li>
-                <li>The building industry and services, including lighting, heating, and ventilation</li>
-                <li>Transportation and transport networks</li>
-                <li>Manufacturing and construction industries</li>
-                <li>Industries involved in the production and distribution of power</li>
-                <li>Energy auditing of different firms like industries, hospitals, banks, etc.</li>
-            </ul>
-
-            <p>Most electrical engineers work in multidisciplinary project teams, including engineers from other specialist areas as well as architects, marketing and sales staff, manufacturers, technicians, and customer service personnel.</p>
-
-            <h3 class="heading2">Skills and Competencies for Electrical Engineers</h3>
-
-            <ul>
-                <li>A commitment to continuing professional development throughout the career</li>
-                <li>The ability to work in a multidisciplinary team</li>
-                <li>Relevant technical knowledge and up-to-date sector knowledge</li>
-                <li>Project management skills</li>
-                <li>The ability to multitask</li>
-                <li>Commercial awareness</li>
-                <li>An analytical and problem-solving approach to work</li>
-                <li>Oral and written communication skills to make technical information easy to understand for non-technical people</li>
-                <li>Flexibility to adapt to evolving technologies</li>
-                <li>Planning and organizational skills, such as time and resource allocation</li>
-                <li>Leadership and management skills to help with career progression</li>
-            </ul>
-
-            <h3 class="heading2">PSU Jobs Offered in Electrical Engineering</h3>
-
-            <ul>
-                <li>UPSC Indian Engineering Services (IES)</li>
-                <li>Staff Selection Commission (SSC) Various Posts</li>
-                <li>CPWD (Central Public Works Department), MES (Military Engineering Services)</li>
-                <li>Airports Authority of India (AAI)</li>
-                <li>Service Selection Board (SSB) for all Military Services (Engineering)</li>
-                <li>Indian Railways (All Engineering Posts)</li>
-                <li>Kerala State Electricity Board (KSEB)</li>
-                <li>Kerala State Electricity Licensing Board (KSELB)</li>
-                <li>Bharat Earth Movers Ltd. (BEML)</li>
-                <li>Bharat Heavy Electricals Ltd. (BHEL)</li>
-                <li>Central Electronics Ltd. (CEL)</li>
-                <li>Delhi Metro Rail Corporation Ltd. (DMRC)</li>
-                <li>Gas Authority of India Ltd. (GAIL)</li>
-                <li>Hindustan Aeronautics Ltd. (HAL)</li>
-                <li>Hindustan Petroleum Corporation Ltd. (HPCL)</li>
-                <li>Indian Oil Corporation Ltd. (IOCL)</li>
-                <li>Indian Railway Construction Company Ltd. (IRCON)</li>
-                <li>Mazagon Dock Shipbuilders Ltd. (MDL)</li>
-                <li>National Aluminium Company Ltd. (NALCO)</li>
-                <li>National Fertilizers Ltd. (NFL)</li>
-                <li>National Hydroelectric Power Corporation Ltd. (NHPC)</li>
-                <li>National Thermal Power Corporation (NTPC)</li>
-                <li>NLC India Ltd. (NLC)</li>
-                <li>Nuclear Power Corporation of India Ltd. (NPCIL)</li>
-                <li>Oil and Natural Gas Corporation Ltd. (ONGC)</li>
-                <li>Power Grid Corporation of India Ltd. (PGCIL)</li>
-                <li>Rail India Technical and Economic Service (RITES)</li>
-                <li>Steel Authority of India Ltd. (SAIL)</li>
-                <li>Tehri Hydro Development Corporation India Ltd. (THDC)</li>
-            </ul>
-
-
+            <div class="col-md-9 right_portion">
+        <p class="has-text-align-center has-normal-font-size"><strong>About the Department</strong></p>
+        
+        <p class="has-normal-font-size">
+            Food processing has been identified as the sunrise industry due to its enormous impact and significance in the Indian development sector. The importance of food &amp; process engineering lies in the fact that it has the capability to provide food to our population through scientific conservations, eliminating available losses and making available more balanced and nutritious food. To work in a food processing industry, one has to learn and acquire detailed knowledge of the subject and earn a degree in the field. Recognizing the potential in this sector, the department was started in 2020. Our courses are designed to expand understanding of the biological, microbiological, chemical, physical, sensory, nutritional, and engineering properties of foods and beverages.
+            <br/><strong>TOP RECRUITERS</strong>
+        </p>
+        
+        <p><strong>Government organizations</strong></p>
+        <p>
+            Ministry of Food Processing Industries (MOFPI)<br/>
+            Bhabha Atomic Research Centre (BARC)<br/>
+            Defence Food Research Laboratory (DFRL)<br/>
+            Food and Agricultural Organization (FAO-India)<br/>
+            Food Corporation of India (FCI)<br/>
+            Food Safety and Standards Authority of India (FSSAI)<br/>
+            Indian Council of Agricultural Research (ICAR-NRC)<br/>
+            Ministry of Food Processing Industries (MOFPI)
+        </p>
+        
+        <p><strong>Private organizations</strong></p>
+        <p>
+            Britannia Industries Limited<br/>
+            Parle Products Private Limited<br/>
+            ITC Limited<br/>
+            PepsiCo India Holdings<br/>
+            Dabur India Limited<br/>
+            Godrej Industrial Limited<br/>
+            Tasty Foods<br/>
+            Modern Food Corporation<br/>
+            MTR Foods Limited<br/>
+            Hindustan Lever Limited<br/>
+            Nestle India Private Limited<br/>
+            Coca-Cola India Limited<br/>
+            Agro Tech Foods<br/>
+            Perfetti India Limited<br/>
+            Cadbury India Limited<br/>
+            Amul<br/>
+            Quatex
+        </p>
+        
+        <p><strong>Achievements</strong></p>
+        <p>
+            Students from the Department of Food Technology participated in a rice bran-based innovative product development competition as part of World Food Day celebrations 2022, held at Musaliar College of Engineering, Chirankeezh on 17th Oct 2022. They bagged 2nd prize in the competition.
+        </p>
+        
+        <figure class="wp-block-image size-large">
+            <img alt="" class="wp-image-6845" loading="lazy" src="/assets/images/departments/about_us/mech_dept_img_1.jpg"/>
+            <figcaption>Arathy, Gowri Murali, Devika from S5 FT receiving the prize</figcaption>
+        </figure>
+        
+        <figure class="wp-block-image size-large">
+            <img alt="" class="wp-image-6847" loading="lazy" src="/assets/images/departments/about_us/mech_dept_img_2.jpg"/>
+            <figcaption>Nandana Shaji, Arathi Ashok, and Basila Basheer from S3 FT receiving the prize</figcaption>
+        </figure>
+        
+        <p><strong><em>Activities</em></strong></p>
+        
+        <p>
+            <strong>BLOOM Association Inauguration</strong><br/>
+            BLOOM department association was inaugurated on 31st December 2020 by the Head of Department, Dr. Anoop Raj. During the COVID-19 pandemic, students were feeling overwhelmed with online classes. To help them relax, the association inauguration provided an opportunity for all BT &amp; FT students to showcase their talents through Google Meet. Over 100 participants performed in dance, singing, essay writing, photography, recitation, and more.
+        </p>
+        
+        <figure class="wp-block-image size-large">
+            <img alt="" class="wp-image-5998" loading="lazy" src="/assets/images/departments/about_us/mech_dept_img_3.jpg"/>
+        </figure>
+        
+        <figure class="wp-block-image size-large">
+            <img alt="" class="wp-image-6000" loading="lazy" src="/assets/images/departments/about_us/mech_dept_img_4.jpg"/>
+            <figcaption><strong>Webinar on Food Safety and HACCP</strong></figcaption>
+        </figure>
+        
+        <p class="has-text-align-center has-small-font-size"><strong>Program Report</strong><br/>
+        &quot;Safe Food Today for a Healthy Tomorrow&quot; stresses that the production and consumption of safe food have immediate and long-term benefits for people, the planet, and the economy. Ms. Jisha emphasized the complex nature of food safety and the importance of an effective national food control system. Food safety is a joint responsibility of government, industry, and consumers. She provided a detailed explanation of Hazard Analysis and Critical Control Point (HACCP) principles and an additional decision tree for identifying critical control points (CCPs).
+        </p>
+        
+        <p><strong>SRAAVANOLSAVAM - E Onam, Nammude Onam</strong></p>
+        
+        <p class="has-small-font-size">
+            The Department of Food Technology, Sree Buddha College of Engineering, Pattoor, organized SRAAVANOLSAVAM - E-Onam, Nammude Onam, an online Onam celebration, on 24th August 2021 at 5:00 PM. Dr. Manoj Narayanan (Associate Professor, Dept. of BT &amp; BCE) welcomed the gathering, and the program was inaugurated by Prof. Meera Bai S (HoD, Dept. of BT &amp; BCE). The online Onam program was attended by students and faculty members. Active student participation in games and cultural programs such as group songs, dances, and more brought vibrancy to the celebration. Highlights included the Malayali Manka Kerala Sreeman contest and athapookalam competition. The event concluded with a vote of thanks by Ms. Prarthana Prabudhan, the program coordinator.
+        </p>
+        
+        <figure class="wp-block-image size-large">
+            <img alt="" class="wp-image-6008" loading="lazy" src="/assets/images/departments/about_us/mech_dept_img_5.jpg"/>
+        </figure>
+        
+        <figure class="wp-block-image size-large">
+            <img alt="" class="wp-image-6009" loading="lazy" src="/assets/images/departments/about_us/mech_dept_img_6.jpg"/>
+        </figure>
+    </div>
 
 
 

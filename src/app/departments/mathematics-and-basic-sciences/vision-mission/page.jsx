@@ -18,17 +18,13 @@ export default function ComputerScienceDepartment() {
 
                     <h3 className="">VISION</h3>
                     <p className="">
-                    To create skilful Electrical & Electronics engineers with societal commitment
+                    To strengthen the scientific skills of  the students to  acquire further  intellectual and technological growth.
                     </p>
 
                     <h3 className="">MISSION</h3>
                   
-                       <ul>
-                        <li>Create professionally qualified Electrical & Electronics engineers by imparting necessary knowledge and relevant skills.</li>
-                        <li>Encourage students to inculcate a culture of lifelong learning necessary for jobs or higher studies.</li>
-                        <li>Induce human values and social commitment to meet societal needs</li>
-                       </ul>
-                  
+                    Creating a generation of skillful human beings
+
 
                     </div>
 

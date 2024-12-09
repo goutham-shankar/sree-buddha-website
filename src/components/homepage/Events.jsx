@@ -6,8 +6,20 @@ import "@/styles/homepage/carousal.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function Events() {
     const [slidesToShow, setSlidesToShow] = useState(3); // Default 3 slides for desktop
+
+    useEffect(() => {
+        AOS.init({
+            once: true,
+        //   disable: "phone",
+          duration: 700,
+          easing: "ease-out-cubic",
+        });
+      }, []);
 
     useEffect(() => {
         const handleResize = () => {
@@ -62,12 +74,13 @@ export default function Events() {
                             )
                         }
                     >
-                        <div className="event">Event 1</div>
-                        <div className="event">Event 2</div>
-                        <div className="event">Event 3</div>
-                        <div className="event">Event 4</div>
-                        <div className="event">Event 5</div>
-                        <div className="event">Event 6</div>
+                        <div className="event"><img src="/assets/images/home images/events/event-1.png" alt="event-1" /></div>
+                        <div className="event"><img src="/assets/images/home images/events/event-2.png" alt="event-2" /></div>
+                        <div className="event"><img src="/assets/images/home images/events/event-3.png" alt="event-3" /></div>
+                        <div className="event"><img src="/assets/images/home images/events/event-1.png" alt="event-4" /></div>
+                        <div className="event"><img src="/assets/images/home images/events/event-5.png" alt="event-5" /></div>
+                        <div className="event"><img src="/assets/images/home images/events/event-6.png" alt="event-6" /></div>
+                        
                     </Carousel>
                 </div>
             </div>
