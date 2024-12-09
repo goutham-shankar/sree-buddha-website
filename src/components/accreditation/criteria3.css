@@ -29,6 +29,10 @@ body {
   margin-left: 120px;
 }
 .p {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
+}
+.small-heading{
+  font-weight:650;
+  line-height: 30px;
 }

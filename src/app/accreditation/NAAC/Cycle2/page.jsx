@@ -5,9 +5,9 @@ import Criteria1 from "@/components/accreditation/criteria1";
 import Criteria2 from "@/components/accreditation/criteria2";
 import Criteria3 from "@/components/accreditation/criteria3";
 import Criteria4 from "@/components/accreditation/criteria4";
-// import Criteria5 from "@/components/accreditation/criteria5";
-// import Criteria6 from "@/components/accreditation/criteria6";
-// import Criteria7 from "@/components/accreditation/criteria7";
+import Criteria5 from "@/components/accreditation/criteria5";
+import Criteria6 from "@/components/accreditation/criteria6";
+import Criteria7 from "@/components/accreditation/criteria7";
 
 import "@/styles/accreditation/NAAC/Cycle2/cycle2.css";
 
@@ -69,13 +69,15 @@ const Page = () => {
         </div>
       )}
       {activeCriteria === 5 && (
-        <div className="criteria5">Content for Criteria 5</div>
+        <div className="criteria5">  <Criteria5 /><div className="criteria5">
+      
+      </div></div>
       )}
       {activeCriteria === 6 && (
-        <div className="criteria6">Content for Criteria 6</div>
+        <div className="criteria6"><Criteria6/></div>
       )}
       {activeCriteria === 7 && (
-        <div className="criteria7">Content for Criteria 7</div>
+        <div className="criteria7"><Criteria7/></div>
       )}
       {activeCriteria === 8 && (
         <div className="peerTeamVisit">Peer Team Visit Video</div>

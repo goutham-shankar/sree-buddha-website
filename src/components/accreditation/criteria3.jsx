@@ -10,81 +10,82 @@ const Criteria3 = () => {
     <div>
       <div className="topContainer">
         <div className="curriculum-container">
-          <h2>3.13.2 Industry-Academia Innovative Practices</h2>
+          <p className="p">3.2 Industry-Academia Innovative Practices</p>
           <div>
-            <a>
-              Awareness of IPR
+            <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/3.2.2.1-iedc-programmes.pdf")}}>
+              1. Awareness of IPR
               <br />
             </a>
-            <a>
-              Entrepreneur Awareness Programme
+            <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/2016-2.pdf")}}>
+              2. Entrepreneur Awareness Programme
               <br />
             </a>
-            <a>
-              Remote Infrastructure and Management
+            <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/2016-2.pdf")}}>
+              3. Remote Infrastructure and Management
               <br />
             </a>
-            <a>
-              Python Workshop
+            <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/REPORT-PYTHON-Nov-1415-2015.pdf")}}>
+              4. Python Workshop
               <br />
             </a>
-            <a>
-              Embracing The Future: Innovation And Disruption
+            <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/Report_PGIF-Binu-Sankar-Aug-12-2016.pdf")}}>
+              5. Embracing The Future: Innovation And Disruption
+            </a>
+            
+          </div>
+
+          
+          <div>
+            <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/3.2.2.1-NEED-FOR-INDUSTRIIAL-AUTOMATION.pdf")}}>3.2.2.1 Need For Industrial Automation<br/></a>
+            <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/3.2.2.1enterpreneur-awarenessmeet-the-enterpreneurquality-management-.pdf")}}>
+              3.2.2.1 Entrepreneur Awareness, Meet the Entrepreneur, Quality Management
+              <br />
+            </a>
+            <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/3.2.2.1professional-ethicsimportance-of-research.pdf")}}>
+              3.2.2.1 Professional Ethics, Importance of Research
               <br />
             </a>
           </div>
 
-          <h2>3.2.2.1 Need For Industrial Automation</h2>
+         
           <div>
-            <a>
-              Entrepreneur Awareness, Meet the Entrepreneur, Quality Management
-              <br />
-            </a>
-            <a>
-              Professional Ethics, Importance of Research
-              <br />
-            </a>
-          </div>
-
-          <h2>3.3 Academic Years</h2>
-          <div>
-            <a>
+            <a className="small-heading">
               Academic Year 2020-21
               <br />
             </a>
-            <a>
+            <a className="small-heading">
               Academic Year 2021-22
               <br />
             </a>
-            <a>
+            <a className="tilted">
               Conference Proceedings
               <br />
             </a>
-            <a>
-              React 21
+            <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/REACT21-proceedings.pdf")}}>
+              1. React 21
               <br />
             </a>
-            <a>
-              Rtact21
+            <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/RTACT21.pdf")}}>
+              2. Rtact21
               <br />
             </a>
-            <a>
+            <a className="sub-heading">
               Academic Year 2022-23
               <br />
             </a>
           </div>
 
-          <h2>3.4 Additional Information</h2>
+        
           <div>
-            <a>
+            <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/proof-of-linkages.pdf")}}>
               3.5.1 Proof Of Linkages
               <br />
             </a>
-            <a>
+            <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/3.5.2-maks-automation.pdf")}} >
               3.5 Proof Of MoUs
               <br />
             </a>
-            <a>
+            <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/prayaana_001.pdf")}}>
               3.5.2 Prayana Activities
               <br />
             </a>
