@@ -59,7 +59,9 @@ const Page = () => {
         </div>
       )}
       {activeCriteria === 3 && (
-        <div className="criteria3">Content for Criteria 3</div>
+        <div className="criteria3">
+          <Criteria3 />
+          </div>
       )}
       {activeCriteria === 4 && (
         <div className="criteria4">
