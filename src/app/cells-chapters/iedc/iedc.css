@@ -1,5 +1,5 @@
 .iedc-page{
-    padding: 50px;
+    padding: 50px 150px;
     font-family: 'Poppins';
 }
 .iedc-intro h2{
@@ -12,21 +12,79 @@
 }
 .iedc-nav{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 20px;
 }
-.iedc-link ul{
+.iedc-list{
     display: flex;
-    flex-direction: row;
-    column-gap: 40px;
-    align-content: center;
-    justify-items: center;    
+    flex-direction: column;
+    row-gap: 40px;
+    justify-content: start;
+    align-items: flex-start;    
 }
-.iedc-list li{
-    list-style: none;
+.iedc-list button{
+    border-radius: 10px;
+    background-color: #ab8246;
+    color: black;
+    text-align: center;
     font-size: larger;
+    width: 500px;
+    height: 50px;
 }
 .iedc-list{
-    margin-left: 200px ;
     margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+    .iedc-page {
+        padding: 50px;
+    }
+
+    .iedc-intro h2 {
+        font-size: 28px;
+    }
+
+    .iedc-list button {
+        font-size: medium;
+        max-width: 400px; /* Scaled down for tablets */
+    }
+}
+
+/* For Mobile Screens */
+@media (max-width: 768px) {
+    .iedc-page {
+        padding: 40px;
+    }
+
+    .iedc-intro h2 {
+        font-size: 24px;
+    }
+
+    .iedc-logo img {
+        height: auto;
+        max-width: 80%; /* Slight margin for small devices */
+    }
+
+    .iedc-list button {
+        font-size: small;
+        max-width: 100%;
+        width: 100%; /* Buttons stretch fully */
+    }
+}
+
+/* For Extra Small Screens */
+@media (max-width: 480px) {
+    .iedc-page {
+        padding: 30px;
+    }
+
+    .iedc-intro h2 {
+        font-size: 20px;
+    }
+
+    .iedc-list button {
+        font-size: small;
+        height: auto;
+        padding: 10px;
+    }
 }
