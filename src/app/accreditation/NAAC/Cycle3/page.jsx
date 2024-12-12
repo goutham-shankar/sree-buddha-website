@@ -50,34 +50,40 @@ const Page = () => {
       {/* {activeCriteria === 0 && <div className="iiqa">Content for IIQA</div>} */}
       {activeCriteria === 1 && (
         <div className="criteria1">
-          <Criteria1 />
+          ew
+          {/* <Criteria1 /> */}
         </div>
       )}
       {activeCriteria === 2 && (
-        <div className="criteria2">
-          <Criteria2 />
-        </div>
+        // <div className="criteria2">
+        //   <Criteria2 />
+        // </div>
+        <div className="">cri 2</div>
       )}
       {activeCriteria === 3 && (
         <div className="criteria3">
-          <Criteria3 />
+          {/* <Criteria3 /> */}
+          <div className="">cri 3</div>
           </div>
       )}
       {activeCriteria === 4 && (
         <div className="criteria4">
-          <Criteria4 />
+          {/* <Criteria4 /> */}
+        <div className="">cri 4</div>
         </div>
       )}
       {activeCriteria === 5 && (
-        <div className="criteria5">  <Criteria5 /></div>
-      
-    
+        // <div className="criteria5">  <Criteria5 /></div>
+      <div className="">cri 5</div>
+   
       )}
       {activeCriteria === 6 && (
-        <div className="criteria6"><Criteria6/></div>
+        <div className="">cri 6</div>
+        // <div className="criteria6"><Criteria6/></div>
       )}
       {activeCriteria === 7 && (
-        <div className="criteria7"><Criteria7/></div>
+        // <div className="criteria7"><Criteria7/></div>
+        <div className="">cri 7</div>
       )}
       {/* {activeCriteria === 8 && (
         <div className="peerTeamVisit">Peer Team Visit Video</div>

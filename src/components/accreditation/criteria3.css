@@ -9,7 +9,7 @@ body {
   margin-left: 50px;
   flex-direction: column;
   margin-top: 2px;
-  gap: 20px;
+  gap: 40px;
   padding: 20px;
 }
 .l1,
@@ -19,7 +19,7 @@ body {
   gap: 10px;
   flex-direction: column;
   margin-left: 20px;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
 }
 .l3 {
@@ -29,10 +29,27 @@ body {
   margin-left: 120px;
 }
 .p {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
+  margin-bottom:20px;
 }
 .small-heading{
   font-weight:650;
   line-height: 30px;
+}
+.open{
+  font-size: 17px;
+}
+.open1{
+  font-size:17px;
+  font-weight: 600;
+}
+.cont{
+  line-height: 33px;
+}
+
+.open2{
+  font-size:17px;
+  font-style: italic;
+  font-weight: 600;
 }

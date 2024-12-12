@@ -30,25 +30,25 @@ p {
 .li2,
 .li3,
 .li4 {
-  margin: 25px;
+  margin: 0px;
   display: flex;
   flex-direction: column;
   gap: 3px;
-  font-size: 18px;
+  font-size: 17px;
 }
 /* .li4 {
   gap: 5px;
 } */
 .subHeading1 {
-  font-size: 18px;
+  font-size: 17px;
 }
 .subHeading {
-  font-size: 18px;
-  color: ;
+  font-size: 17px;
+
 }
 .lastSec {
   margin-left: 30px;
-  font-size: 18px;
+  font-size: 17px;
   display: flex;
   flex-direction: column;
   gap: 5px;
