@@ -1,0 +1,27 @@
+[
+    {
+      "Sl No": 1,
+      "Score": ">=90",
+      "Type of Certificate": "Elite + Gold Medal",
+      "Qualified Participants": 1
+    },
+    {
+      "Sl No": 2,
+      "Score": "60-89",
+      "Type of Certificate": "Elite",
+      "Qualified Participants": 145
+    },
+    {
+      "Sl No": 3,
+      "Score": "40-59",
+      "Type of Certificate": "Successful Completion",
+      "Qualified Participants": 28
+    },
+    {
+      "Sl No": 4,
+      "Score": "<40",
+      "Type of Certificate": "No Certificate",
+      "Qualified Participants": 3
+    }
+  ]
+  
