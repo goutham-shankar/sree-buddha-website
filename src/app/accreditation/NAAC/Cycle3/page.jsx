@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Criteria1 from "@/components/accreditation/criteria1";
+import Plus from "@/components/accreditation/cycle3/plus";
 import Criteria2 from "@/components/accreditation/criteria2";
 import Criteria3 from "@/components/accreditation/criteria3";
 import Criteria4 from "@/components/accreditation/criteria4";
@@ -12,7 +12,7 @@ import Criteria7 from "@/components/accreditation/criteria7";
 import "@/styles/accreditation/NAAC/Cycle2/cycle2.css";
 
 const Page = () => {
-  const [activeCriteria, setActiveCriteria] = useState(1);
+  const [activeCriteria, setActiveCriteria] = useState(0    );
 
   const handleCriteriaClick = (criteria) => {
     setActiveCriteria(criteria === activeCriteria ? criteria : criteria);
@@ -24,17 +24,18 @@ const Page = () => {
 
   return (
     <div className="Container">
-      <div className="Heading">NAAC CYCLE 2</div>
+      <div className="Heading">NAAC CYCLE 3</div>
       <div className="Nav">
         <ul>
           <li
-            onClick={() =>
-              handlepdfOpen(
-                "/assets/documents/accreditation/Criteria1/IIQA.pdf"
-              )
-            }
+            // onClick={() =>
+            //   handlepdfOpen(
+            //     "/assets/documents/accreditation/Cycle3/Criteria1/IIQA.pdf"
+            //   )
+            // }
+            onClick={() => handleCriteriaClick(0)}
           >
-            IIQA
+            More
           </li>
           <li onClick={() => handleCriteriaClick(1)}>Criteria 1</li>
           <li onClick={() => handleCriteriaClick(2)}>Criteria 2</li>
@@ -47,7 +48,7 @@ const Page = () => {
         </ul>
       </div>
 
-      {/* {activeCriteria === 0 && <div className="iiqa">Content for IIQA</div>} */}
+      {activeCriteria === 0 && <div className="iiqa"><Plus/></div>}
       {activeCriteria === 1 && (
         <div className="criteria1">
           ew
