@@ -13,10 +13,10 @@ export default function Iedc() {
                 </div>
                 <div className="iedc-link">
                     <div className='iedc-list'>
-                        <button>IEDC</button>
-                        <button>NIISP</button>
-                        <button>ARIIA</button>
-                        <button>IIC</button>
+                        <a href="./iedc/about"><button>IEDC</button></a>
+                        <a href="./iedc/niisp"><button>NIISP</button></a>
+                        <a href="./iedc/ariia"><button>ARIIA</button></a>
+                        <a href="./iedc/iic"><button>IIC</button></a>
                         <button>IEDC CORPORATE</button>
                     </div>
                 </div>                
