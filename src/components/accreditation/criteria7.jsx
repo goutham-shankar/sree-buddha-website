@@ -1,11 +1,12 @@
 import React from 'react'
+import "@/components/accreditation/criteria7.css";
 
 const criteria7 = () => {
     const handlePdfOpen = (url) => {
         window.open(url, "_blank");
       };
   return (
-    <div>
+    <div className='topContainer'>
         <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/7.1.1.pdf")}}>7.1.1 Report<br/></a>
 <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/7.1.15-NEW1.pdf")}}>7.1. Institute offers Course on Human values and professional Ethics<br/></a>
 <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/HS210-Life-Skills.pdf")}}>HS210 Life Skills<br/></a>
