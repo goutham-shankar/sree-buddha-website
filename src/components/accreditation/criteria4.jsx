@@ -31,7 +31,7 @@ const criteria4 = () => {
 
       <h3>Geotagged Photos of LCS</h3>
     
-        <div>
+        <div className="">
           <a onClick={() => {handlePdfOpen("/assets/documents/accreditation/IMG2019071912154700001.jpg")}}>Pic 1</a>
         </div>
         <div>
