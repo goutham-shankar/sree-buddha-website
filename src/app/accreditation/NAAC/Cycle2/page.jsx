@@ -101,6 +101,7 @@ import Criteria5 from "@/components/accreditation/criteria5";
 import Criteria6 from "@/components/accreditation/criteria6";
 import Criteria7 from "@/components/accreditation/criteria7";
 
+
 import "@/styles/accreditation/NAAC/Cycle2/cycle2.css";
 
 const Page = () => {
@@ -121,12 +122,15 @@ const Page = () => {
       <div className="Heading">NAAC CYCLE 2</div>
       <div className="Nav">
         {/* Dropdown button for mobile/tablet */}
+        <div className="btn">
         <button
           className="dropdown-button-mob"
           onClick={() => setShowMenu((prev) => !prev)}
         >
           Menu
+          {/* <img src="/assets/dropdown-svgrepo-com.svg" alt="menu" className="icon"/>  */}
         </button>
+        </div>
         <ul className={`dropdown-menu ${showMenu ? "active" : ""}`}>
           <li
             onClick={() =>
