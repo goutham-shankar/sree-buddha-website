@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600&display=swap");
 body {
   font-family: "Poppins", "sans-serif";
 }   
@@ -10,4 +10,73 @@ body {
     margin-bottom:40px;
     padding-bottom: 30px;
     font-size:17px;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600&display=swap");
+
+body {
+  font-family: "Poppins", "sans-serif";
+}
+
+.facilities-container {
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  font-size: 17px;
+}
+
+/* Add Hand Cursor on Links */
+a {
+  cursor: pointer;
+  text-decoration: none; /* Removes underline if desired */
+}
+
+/* Style for headings */
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* Media query for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+  .facilities-container {
+    margin-left: 20px; /* Reduce left margin for smaller screens */
+    padding: 15px; /* Adjust padding */
+  }
+
+  /* Adjust font size for links and paragraphs */
+  .facilities-container a {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+  .facilities-container {
+    margin-left: 10px; /* Even smaller margin for mobile */
+    padding: 10px; /* Adjust padding for small screens */
+  }
+
+  /* Reduce font size further for mobile */
+  .facilities-container a {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  /* Ensure the content doesn't stretch too wide */
+  .facilities-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

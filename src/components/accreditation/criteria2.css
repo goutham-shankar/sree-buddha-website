@@ -52,10 +52,10 @@ body {
 }
 
 /* Media query for tablets and mobile devices */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px)  {
   .learning-process-container {
     margin-left: 20px; /* Reduce margin for smaller screens */
-  
+    /* background-color: yellow; */
     padding: 15px; /* Adjust padding */
   }
 
