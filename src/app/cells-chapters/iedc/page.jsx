@@ -12,13 +12,13 @@ export default function Iedc() {
                     <img src="/assets/images/cells-chapters/iedc.png" alt="iedc logo" />
                 </div>
                 <div className="iedc-link">
-                    <ul className='iedc-list'>
-                        <li>IEDC</li>
-                        <li>NIISP</li>
-                        <li>ARIIA</li>
-                        <li>IIC</li>
-                        <li>IEDC CORPORATE</li>
-                    </ul>
+                    <div className='iedc-list'>
+                        <a href="./iedc/about"><button>IEDC</button></a>
+                        <a href="./iedc/niisp"><button>NIISP</button></a>
+                        <a href="./iedc/ariia"><button>ARIIA</button></a>
+                        <a href="./iedc/iic"><button>IIC</button></a>
+                        <button>IEDC CORPORATE</button>
+                    </div>
                 </div>                
                 
             </div>

@@ -1,0 +1,62 @@
+[
+    {
+        "SlNo": 1,
+        "NameOfStaff": "Dr Manoj Narayanan",
+        "Position": "Coordinator"
+    },
+    {
+        "SlNo": 2,
+        "NameOfStaff": "Prof. Pradeep Kumar",
+        "Position": "Joint Coordinator"
+    },
+    {
+        "SlNo": 3,
+        "NameOfStaff": "Prof. Vishnu V S",
+        "Position": "Joint Coordinator"
+    },
+    {
+        "SlNo": 4,
+        "NameOfStaff": "Prof Venugopal N",
+        "Position": "Joint Coordinator"
+    },
+    {
+        "SlNo": 5,
+        "NameOfStaff": "Prof. Unnikrishnan S",
+        "Position": "Member"
+    },
+    {
+        "SlNo": 6,
+        "NameOfStaff": "Prof. Kiran Sankar M S",
+        "Position": "Member"
+    },
+    {
+        "SlNo": 7,
+        "NameOfStaff": "Prof Nandan G",
+        "Position": "Member"
+    },
+    {
+        "SlNo": 8,
+        "NameOfStaff": "Prof. Minu Lalitha Madhav",
+        "Position": "Member"
+    },
+    {
+        "SlNo": 9,
+        "NameOfStaff": "Dr. Anoop Raj",
+        "Position": "Member"
+    },
+    {
+        "SlNo": 10,
+        "NameOfStaff": "Prof. Rakhee Rajeev",
+        "Position": "Member"
+    },
+    {
+        "SlNo": 11,
+        "NameOfStaff": "Prof. Thomas Mathew",
+        "Position": "Member"
+    },
+    {
+        "SlNo": 12,
+        "NameOfStaff": "Prof A R Somanathan",
+        "Position": "Member"
+    }
+]

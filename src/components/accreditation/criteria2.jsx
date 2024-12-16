@@ -10,11 +10,11 @@ const Criteria2 = () => {
 
   return (
     <div>
-      <h1 className="heading">TEACHING LEARNING PROCESS</h1>
+      <h2 className="heading">TEACHING LEARNING PROCESS</h2>
       <div className="learning-process-container">
         <p className="p">2.1 Domicile Certificates</p>
         <div className="l1">
-          <a
+          <a className="open"
             onClick={() =>
               handlePdfOpen(
                 "/assets/documents/accreditation/Criteria2/Dhiman-Sha.pdf"
@@ -23,7 +23,7 @@ const Criteria2 = () => {
           >
             Dimansha
           </a>
-          <a
+          <a className="open"
             onClick={() =>
               handlePdfOpen(
                 "/assets/documents/accreditation/Criteria2/Suraj-Sharma.pdf"
@@ -36,7 +36,7 @@ const Criteria2 = () => {
 
         <p className="p">2.3.2 Geo tagged photos of ICT</p>
         <div className="l2">
-          <a
+          <a className="open"
             onClick={() =>
               handlePdfOpen(
                 "/assets/documents/accreditation/Criteria2/first.jpg"
@@ -45,7 +45,7 @@ const Criteria2 = () => {
           >
             First
           </a>
-          <a
+          <a className="open"
             onClick={() =>
               handlePdfOpen(
                 "/assets/documents/accreditation/Criteria2/second.jpg"
@@ -58,7 +58,7 @@ const Criteria2 = () => {
 
         <p className="p">2.4 Position sanctioned letters</p>
         <div className="l3">
-          <a
+          <a className="open"
             onClick={() =>
               handlePdfOpen(
                 "/assets/documents/accreditation/Criteria2/14-15.pdf"
@@ -67,7 +67,7 @@ const Criteria2 = () => {
           >
             2014-15
           </a>
-          <a
+          <a className="open"
             onClick={() =>
               handlePdfOpen(
                 "/assets/documents/accreditation/Criteria2/15-16.pdf"
@@ -76,7 +76,7 @@ const Criteria2 = () => {
           >
             2015-16
           </a>
-          <a
+          <a className="open"
             onClick={() =>
               handlePdfOpen(
                 "/assets/documents/accreditation/Criteria2/16-17.pdf"
@@ -85,7 +85,7 @@ const Criteria2 = () => {
           >
             2016-17
           </a>
-          <a
+          <a className="open"
             onClick={() =>
               handlePdfOpen(
                 "/assets/documents/accreditation/Criteria2/17-18.pdf"
@@ -94,7 +94,7 @@ const Criteria2 = () => {
           >
             2017-18
           </a>
-          <a
+          <a className="open"
             onClick={() =>
               handlePdfOpen(
                 "/assets/documents/accreditation/Criteria2/18-19.pdf"

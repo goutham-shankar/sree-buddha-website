@@ -1,0 +1,81 @@
+[
+    {
+      "SlNo": 1,
+      "NameOfTheElectedMember": "Shamnad S",
+      "Branch": "ME(B) (7)",
+      "Designation": "Chairman"
+    },
+    {
+      "SlNo": 2,
+      "NameOfTheElectedMember": "Gauri S",
+      "Branch": "EC (7)",
+      "Designation": "Vice Chairman"
+    },
+    {
+      "SlNo": 3,
+      "NameOfTheElectedMember": "Sourav S Kumar",
+      "Branch": "EEE (7)",
+      "Designation": "Gen.Secretary"
+    },
+    {
+      "SlNo": 4,
+      "NameOfTheElectedMember": "Alina M George",
+      "Branch": "CS (7)",
+      "Designation": "Councilor(S) To University Union"
+    },
+    {
+      "SlNo": 5,
+      "NameOfTheElectedMember": "Ananthu H Kumar",
+      "Branch": "ME(A) (7)",
+      "Designation": "Councilor(S) To University Union"
+    },
+    {
+      "SlNo": 6,
+      "NameOfTheElectedMember": "Mrudhula S Unnithan",
+      "Branch": "CS (5)",
+      "Designation": "College Magazine Editor"
+    },
+    {
+      "SlNo": 7,
+      "NameOfTheElectedMember": "Vishnu S Kumar",
+      "Branch": "BT (7)",
+      "Designation": "Arts Club Secretary"
+    },
+    {
+      "SlNo": 8,
+      "NameOfTheElectedMember": "Aditya V",
+      "Branch": "CS (7)",
+      "Designation": "Secretary To Sports"
+    },
+    {
+      "SlNo": 9,
+      "NameOfTheElectedMember": "Priya V",
+      "Branch": "BT (7)",
+      "Designation": "Lady Representative"
+    },
+    {
+      "SlNo": 10,
+      "NameOfTheElectedMember": "Sharan Prasad S",
+      "Branch": "ME(B) (1)",
+      "Designation": "B.Tech (1 Year)"
+    },
+    {
+      "SlNo": 11,
+      "NameOfTheElectedMember": "Ananthu D",
+      "Branch": "CS (3)",
+      "Designation": "B.Tech (2 Year)"
+    },
+    {
+      "SlNo": 12,
+      "NameOfTheElectedMember": "Amrutha S",
+      "Branch": "EEE (7)",
+      "Designation": "B.Tech (3 Year)"
+    },
+    {
+      "SlNo": 13,
+      "NameOfTheElectedMember": "Anandu Sreenivas",
+      "Branch": "EC (7)",
+      "Designation": "B.Tech (4 Year)"
+    }
+  ]
+  

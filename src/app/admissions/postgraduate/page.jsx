@@ -11,16 +11,6 @@ export default function page() {
     <div className="title">POST GRADUATE</div>
     <br />
 
-    {/* <div className="pic">
-    <a href='https://docs.google.com/forms/d/e/1FAIpQLSe3RvBGmTslrxDMHBYn0vGufABqCvqUZnumUazbylQZ3J5lgQ/viewform'>
-        <img className="photo" src={nba.src} alt="" /></a>
-        
-        <a href="#"><img className="photo" src={apply.src} alt="" /></a>
-
-        <a href="#"><img className="photo" src={placement.src} alt="" /></a>
-        
-    </div> */}
-{/* ----------------------- */}
 
 <div className="photolinks">
           <div className="photolink">

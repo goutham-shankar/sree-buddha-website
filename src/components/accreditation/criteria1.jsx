@@ -12,8 +12,7 @@ const Criteria1 = () => {
         <div className="curriculum-container">
           <h2>1.1 Curricular Planning and Implementation</h2>
           <div className="li1">
-            <a
-              onClick={() =>
+            <a className="open" onClick={() =>
                 handlePdfOpen(
                   "/assets/documents/accreditation/Criteria1/1.1.1.pdf"
                 )
@@ -23,7 +22,7 @@ const Criteria1 = () => {
               through a well-planned and documented process
               <br />
             </a>
-            <a
+            <a className="open"
               onClick={() =>
                 handlePdfOpen(
                   "/assets/documents/accreditation/Criteria1/1.1.2.pdf"
@@ -34,7 +33,7 @@ const Criteria1 = () => {
               last five years
               <br />
             </a>
-            <a
+            <a className="open"
               onClick={() =>
                 handlePdfOpen(
                   "/assets/documents/accreditation/Criteria1/1.1.3.pdf"
@@ -48,9 +47,9 @@ const Criteria1 = () => {
             </a>
           </div>
 
-          <h2 className="subheading">1.2 Academic Flexibility</h2>
+          <h2 className="subheading1">1.2 Academic Flexibility</h2>
           <div className="li2">
-            <a>
+            <a className="open">
               1.2.1 Percentage of new courses introduced of the total number of
               courses across all programmes offered during the last five years
               <br />
@@ -67,7 +66,7 @@ const Criteria1 = () => {
               data)
               <br />
             </a>
-            <a
+            <a className="open"
               onClick={() =>
                 handlePdfOpen(
                   "/assets/documents/accreditation/Criteria1/1.2.3.pdf"
@@ -83,7 +82,7 @@ const Criteria1 = () => {
 
           <h2>1.3 Curriculum Enrichment</h2>
           <div className="li3">
-            <a
+            <a className="open"
               onClick={() =>
                 handlePdfOpen(
                   "/assets/documents/accreditation/Criteria1/1.3.1.pdf"
@@ -95,7 +94,7 @@ const Criteria1 = () => {
               Professional Ethics into the Curriculum
               <br />
             </a>
-            <a
+            <a className="open"
               onClick={() =>
                 handlePdfOpen(
                   "/assets/documents/accreditation/Criteria1/1.3.2.pdf"
@@ -106,7 +105,7 @@ const Criteria1 = () => {
               life skills offered during the last five years
               <br />
             </a>
-            <a
+            <a className="open"
               onClick={() =>
                 handlePdfOpen(
                   "/assets/documents/accreditation/Criteria1/1.3.3.pdf"
@@ -121,7 +120,7 @@ const Criteria1 = () => {
 
           <h2>1.4 Feedback System</h2>
           <div className="li4">
-            <a
+            <a className="open"
               onClick={() =>
                 handlePdfOpen(
                   "/assets/documents/accreditation/Criteria1/1.4.1.pdf"
@@ -133,7 +132,7 @@ const Criteria1 = () => {
               Semester wise/year wise
               <br />
             </a>
-            <a
+            <a className="open"
               onClick={() =>
                 handlePdfOpen(
                   "/assets/documents/accreditation/Criteria1/1.4.2.pdf"
@@ -150,7 +149,7 @@ const Criteria1 = () => {
                 available on website
                 <br />
               </p>
-              <a
+              <a className="open"
                 onClick={() =>
                   handlePdfOpen(
                     "/assets/documents/accreditation/Criteria1/f1.pdf"

@@ -1,0 +1,31 @@
+[
+    {
+      "Sl No": 1,
+      "Score": ">=90",
+      "Type of Certificate": "Elite+Gold medal",
+      "Number of Qualifier": 30,
+      "Percentage": "9.5%"
+    },
+    {
+      "Sl No": 2,
+      "Score": "60-90",
+      "Type of Certificate": "Elite",
+      "Number of Qualifier": 266,
+      "Percentage": "84.44%"
+    },
+    {
+      "Sl No": 3,
+      "Score": "35-59",
+      "Type of Certificate": "Successful Completion",
+      "Number of Qualifier": 18,
+      "Percentage": "5.75%"
+    },
+    {
+      "Sl No": 4,
+      "Score": "<35",
+      "Type of Certificate": "Certificate of participation",
+      "Number of Qualifier": 1,
+      "Percentage": "0.31%"
+    }
+  ]
+  
