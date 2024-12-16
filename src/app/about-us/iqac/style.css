@@ -1,0 +1,77 @@
+.iqac{
+    display: flex;
+    /* background-color: green; */
+    justify-content: space-around;
+    /* background-color: red; */
+}
+
+.iqac_content{
+    width: 70%;
+    /* background-color: red; */
+}
+
+.meeting_minutes{
+    margin-top: 40px;
+}
+
+.all_minutes{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.single_meeting{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgb(127, 127, 127);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 14px 0px;
+    transition: 0.2s;
+}
+
+.single_meeting:hover{
+   background-color: rgb(215, 215, 215);
+}
+
+
+.download_meeting_minutes{
+    height: 40px;
+    background-color: transparent;
+    border: 0px;
+    padding: 6px;
+}
+.download_meeting_minutes img{
+    height: 100%;
+}
+
+.criteria{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+a{
+    color: rgb(4, 4, 107);
+    text-decoration: none;
+    /* margin: 0px 5px; */
+}
+
+.iqac_criterias p{
+    margin: 8px 0px;
+}
+
+
+@media ( max-width : 100vh){
+    .iqac_content{
+    
+        width: 100%;
+    }
+
+    td{
+        /* font-size: 10px; */
+        width: min-content;
+    }
+}

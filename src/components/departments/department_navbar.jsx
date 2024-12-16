@@ -8,7 +8,8 @@ export default function DepartmentNavbar(props) {
         {
           props.links.map((link, index) => {
             return (
-              <li key = {index}> <a href={`/departments/${props.department}/${link[1]}`}>{link[0]}</a>  </li>
+
+              <li key = {index}> <a href={`${ (props.department == undefined )? "": `/departments/${props.department}/`}${link[1]}`}>{link[0]}</a>  </li>
             )
           })
         }

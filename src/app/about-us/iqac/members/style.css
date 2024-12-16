@@ -1,0 +1,51 @@
+.members_details{
+    display: none;
+    flex-direction: column;
+}
+
+.members_table{
+    display: flex;
+}
+table{
+
+    border-collapse: collapse;
+}
+th{
+    border: "1px solid black";
+    padding: "10px";
+    background-color: "#f2f2f2";
+    text-align: "left";
+}
+
+th, td{
+    border: 1px solid black;
+    padding: "10px";
+    text-align: "left";
+    
+    padding: 10px ;
+}
+
+.single_member{
+
+    /* background-color: rebeccapurple; */
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(187, 187, 187);
+
+}
+.member_name{
+    font-weight: 600;
+}
+
+@media ( max-width : 100vh){
+
+    .members_details{
+        display: flex;
+    }
+    .members_table{
+        display: none;
+    }
+
+}

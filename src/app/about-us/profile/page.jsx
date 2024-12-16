@@ -11,10 +11,10 @@ const profile = () => {
     <>
       <div className="container">
         <div></div>
-        <div className="main">
+        <div className="page">
           <br />
           <br />
-          <div className="profile">PROFILE</div>
+          <div className="page_heading">PROFILE</div>
           <br />
           <br />
           <div className="pic">

@@ -44,10 +44,10 @@ export default function Navbar() {
                 <a className="submenu_link" href="/about-us/oronogram">
                   Oranogram
                 </a>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/about-us/mandatory_disclosure">
                   Mandatory Disclosure
                 </Link>
-                <Link className="submenu_link" href="/about-us/Eoa">
+                <Link className="submenu_link" href="/about-us/EoA">
                   AICTCE EOA
                 </Link>
                 <Link className="submenu_link" href="">
@@ -59,7 +59,7 @@ export default function Navbar() {
                 <Link className="submenu_link" href="">
                   Gallery{" "}
                 </Link>
-                <Link className="submenu_link" href="">
+                <Link className="submenu_link" href="/about-us/admission_and_accounts">
                   admission and accounts{" "}
                 </Link>
                 <Link className="submenu_link" href="">
