@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import "@/components/accreditation/criteria3.css";
+import "../criteria1/criteria1.css";
+import "../page.css"
 import NAAC from "@/components/accreditation/NAAC/naac";
 
 const Criteria3 = () => {
@@ -9,7 +10,7 @@ const Criteria3 = () => {
     <div>
       <div className="topContainer">
         <div className="curriculum-container">
-          <div className="cont">
+          <div className="li1">
             <p className="p">3.2 Industry-Academia Innovative Practices</p>
             <NAAC
               name="1. Awareness of IPR"
