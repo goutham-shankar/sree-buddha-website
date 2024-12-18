@@ -6,12 +6,12 @@ export default function page({children}) {
     const links =  [
         ["IIQA" , "/accreditation/NAAC/Cycle2"] , 
         ["Criteria 1", "/accreditation/NAAC/Cycle2/criteria1"],
-        ["Criteria 2", "/about-us/iqac/aqars"],
-        ["Criteria 3", "/about-us/iqac/aquar_2020-2021"],
-        ["Criteria 4", "/about-us/iqac/aquar_2021-2022"],
-        ["Criteria 5", "/about-us/iqac/aquar_2022-2023"],
-        ["Criteria 6", "/about-us/iqac/minutes_and_atr"],
-        ["Criteria 7", "/about-us/iqac/faculty_appraisal"],
+        ["Criteria 2", "/accreditation/NAAC/Cycle2/criteria2"],
+        ["Criteria 3", "/accreditation/NAAC/Cycle2/criteria3"],
+        ["Criteria 4", "/accreditation/NAAC/Cycle2/criteria4"],
+        ["Criteria 5", "/accreditation/NAAC/Cycle2/criteria2"],
+        ["Criteria 6", "/accreditation/NAAC/Cycle2/criteria2"],
+        ["Criteria 7", "/accreditation/NAAC/Cycle2/criteria2"],
 
     ]
   return (  
