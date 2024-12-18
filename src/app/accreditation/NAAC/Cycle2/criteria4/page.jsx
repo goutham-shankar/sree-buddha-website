@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
-import "@/components/accreditation/criteria4.css";
+import "../criteria1/criteria1.css";
+import "../page.css"
 import NAAC from "@/components/accreditation/NAAC/naac";
 
 const Criteria4 = () => {
   return (
-    <div className="facilities-container">
+    <div className="topContainer">
       <div>
         <NAAC
           name="Criteria 4.1.2 Sports Facilities & Achievements"

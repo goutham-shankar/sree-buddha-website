@@ -1,16 +1,16 @@
 "use client";
 
 import React from "react";
-import "@/components/accreditation/criteria2.css";
 import NAAC from "@/components/accreditation/NAAC/naac";
-
+import "../criteria1/criteria1.css";
+import "../page.css";
 const page = () => {
   return (
-    <div>
+    <div className="topContainer">
       <h2 className="heading">TEACHING LEARNING PROCESS</h2>
       <div className="learning-process-container">
         <p className="p">2.1 Domicile Certificates</p>
-        <div className="l1">
+        <div className="li1">
           <NAAC
             name="Dimansha"
             link="/assets/documents/accreditation/Criteria2/Dhiman-Sha.pdf"
@@ -22,7 +22,7 @@ const page = () => {
         </div>
 
         <p className="p">2.3.2 Geo tagged photos of ICT</p>
-        <div className="l2">
+        <div className="li2">
           <NAAC
             name="First"
             link="/assets/documents/accreditation/Criteria2/first.jpg"
@@ -34,7 +34,7 @@ const page = () => {
         </div>
 
         <p className="p">2.4 Position sanctioned letters</p>
-        <div className="l3">
+        <div className="li3">
           <NAAC
             name="2014-15"
             link="/assets/documents/accreditation/Criteria2/14-15.pdf"
