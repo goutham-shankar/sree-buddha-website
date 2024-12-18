@@ -1,0 +1,12 @@
+.iiqa{
+    display: flex;
+    flex-direction: row;
+    gap:15dvw;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap:120px;
+    width: 100%;
+}
