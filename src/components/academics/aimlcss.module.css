@@ -1,0 +1,80 @@
+/* Base Styling */
+.container {
+  margin: 20px auto;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 10px; /* Padding for smaller screens */
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.noAdvisors {
+  color: #ff5e5e;
+  font-weight: bold;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .table {
+    display: block;
+    overflow-x: auto; /* Horizontal scroll for small screens */
+  }
+
+  .table thead {
+    display: table-header-group; /* Keep table header visible */
+  }
+
+  .table th,
+  .table td {
+    font-size: 14px; /* Reduce font size */
+    padding: 8px; /* Compact padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 5px; /* Compact padding for very small screens */
+  }
+
+  .title {
+    font-size: 18px; /* Smaller title font */
+  }
+
+  .table th,
+  .table td {
+    font-size: 12px; /* Smaller table font size */
+    padding: 6px; /* Compact table cell padding */
+  }
+}
