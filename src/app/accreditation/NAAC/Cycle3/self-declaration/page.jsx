@@ -4,8 +4,8 @@ const page = () => {
   return (
     <div>
       <NAAC
-        name="IIQA 2024"
-        link="/assets/documents/accreditation/Cycle3/IIQA-2024.pdf"
+        name="Self declaration by Head Of Institution"
+        link="/assets/documents/accreditation/Cycle3/self-declaration.pdf"
       />
     </div>
   );

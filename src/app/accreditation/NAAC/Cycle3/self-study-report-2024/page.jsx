@@ -4,8 +4,8 @@ const page = () => {
   return (
     <div>
       <NAAC
-        name="IIQA 2024"
-        link="/assets/documents/accreditation/Cycle3/IIQA-2024.pdf"
+        name="SSR 2024"
+        link="/assets/documents/accreditation/Cycle3/SSR-2024.pdf"
       />
     </div>
   );
