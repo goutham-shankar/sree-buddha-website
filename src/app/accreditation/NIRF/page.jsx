@@ -11,9 +11,11 @@ const page = () => {
         <img src="/assets/images/accreditation/nirf-banner.png" alt="" />
       </div>
       <div className="caption">
-        The National Institutional Ranking Framework (NIRF) was approved by the
-        MHRD and launched by the Honourable Minister of Human Resource
-        Development on 29th September 2015.
+        <div className="con">
+          The National Institutional Ranking Framework (NIRF) was approved by
+          the MHRD and launched by the Honourable Minister of Human Resource
+          Development on 29th September 2015.
+        </div>
       </div>
 
       <div className="content">
