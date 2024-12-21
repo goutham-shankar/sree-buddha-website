@@ -1,0 +1,14 @@
+.container {
+  margin: 65px 150px;
+  padding: 20px;
+}
+.line {
+  width: 60dvw;
+}
+.caption {
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
