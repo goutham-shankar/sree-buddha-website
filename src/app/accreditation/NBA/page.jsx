@@ -88,12 +88,13 @@ const page = () => {
       <a href="https://www.nbaind.org/Error/Error_404?aspxerrorpath=/accreditation.aspx">
         Courtesy: NBA Website
       </a>
-
-      <img
-        src="/assets/images/accreditation/NBA.png"
-        className="NBA"
-        alt="NBA Logo"
-      />
+      <div className="img-tag">
+        <img
+          src="/assets/images/accreditation/NBA.png"
+          className="NBA"
+          alt="NBA Logo"
+        />
+      </div>
       <div className="content">The Accredited Programmes are as follows</div>
       <NAAC
         name=" POAP USER MANUAL"

@@ -6,6 +6,7 @@
   width: 60dvw;
 }
 .img-tag {
+  margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +20,7 @@ p {
 }
 .caption {
   font-weight: 700;
-  font-size:18px;
+  font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,4 +52,7 @@ ul li::before {
   left: -20px;
   color: #007bff; /* Change this color to match your theme */
   font-size: 20px;
+}
+.NBA {
+  margin: 50px;
 }
