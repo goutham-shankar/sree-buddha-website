@@ -56,3 +56,9 @@ ul li::before {
 .NBA {
   margin: 50px;
 }
+
+a {
+  padding-top: 80px;
+  text-decoration: none;
+  color: #543fb4; /* Optional: to inherit the color from the parent element */
+}
