@@ -17,9 +17,9 @@ export default function page({ children }) {
     ["Criteria 2", "/accreditation/NAAC/Cycle3/criteria2"],
     ["Criteria 3", "/accreditation/NAAC/Cycle3/criteria3"],
     ["Criteria 4", "/accreditation/NAAC/Cycle3/criteria4"],
-    ["Criteria 5", "/accreditation/NAAC/Cycle2/criteria4"],
-    ["Criteria 6", "/accreditation/NAAC/Cycle2/criteria5"],
-    ["Criteria 7", "/accreditation/NAAC/Cycle2/criteria6"],
+    ["Criteria 5", "/accreditation/NAAC/Cycle3/criteria5"],
+    ["Criteria 6", "/accreditation/NAAC/Cycle3/criteria6"],
+    ["Criteria 7", "/accreditation/NAAC/Cycle3/criteria6"],
     ["DVV", "/accreditation/NAAC/Cycle2/criteria7"],
   ];
   return (
