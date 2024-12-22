@@ -14,7 +14,7 @@ export default function page({ children }) {
       "/accreditation/NAAC/Cycle3/statement-of-compliance",
     ],
     ["Criteria 1", "/accreditation/NAAC/Cycle3/criteria1"],
-    ["Criteria 2", "/accreditation/NAAC/Cycle2/criteria5"],
+    ["Criteria 2", "/accreditation/NAAC/Cycle3/criteria2"],
     ["Criteria 3", "/accreditation/NAAC/Cycle2/criteria6"],
     ["Criteria 4", "/accreditation/NAAC/Cycle2/criteria7"],
     ["Criteria 5", "/accreditation/NAAC/Cycle2/criteria4"],
