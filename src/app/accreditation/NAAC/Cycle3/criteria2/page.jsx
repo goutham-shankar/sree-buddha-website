@@ -361,7 +361,7 @@ const page = () => {
       <br />
       <br />
       <NAAC
-        name="PASS PERCENTAGE OF STUDENTS"
+        name="2.6.3 PASS PERCENTAGE OF STUDENTS"
         link="/assets/documents/accreditation/Cycle3/PASS-PERCENTAGE-OF-STUDENTS.pdf"
       />
       <NAAC
