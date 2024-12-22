@@ -1,4 +1,5 @@
 import React from "react";
+import "../../Cycle2/page.css";
 import NAAC from "@/components/accreditation/NAAC/naac";
 const page = () => {
   return (
