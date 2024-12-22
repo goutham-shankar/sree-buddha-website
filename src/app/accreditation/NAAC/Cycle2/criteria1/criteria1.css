@@ -1,11 +1,14 @@
-.curriculum-container{
-    display: flex;
-    flex-direction: column;
-    /* background-color: teal; */
-    gap:30px;
+.curriculum-container {
+  display: flex;
+  flex-direction: column;
+  /* background-color: teal; */
+  gap: 30px;
 }
-.li1,.li2,.li3,.li4{
-    display: flex;
-    flex-direction: column;
-    gap:5x;
+.li1,
+.li2,
+.li3,
+.li4 {
+  display: flex;
+  flex-direction: column;
+  gap: 5x;
 }
