@@ -19,8 +19,8 @@ export default function page({ children }) {
     ["Criteria 4", "/accreditation/NAAC/Cycle3/criteria4"],
     ["Criteria 5", "/accreditation/NAAC/Cycle3/criteria5"],
     ["Criteria 6", "/accreditation/NAAC/Cycle3/criteria6"],
-    ["Criteria 7", "/accreditation/NAAC/Cycle3/criteria6"],
-    ["DVV", "/accreditation/NAAC/Cycle2/criteria7"],
+    ["Criteria 7", "/accreditation/NAAC/Cycle3/criteria7"],
+    ["DVV", "/accreditation/NAAC/Cycle3/DVV"],
   ];
   return (
     <div className="page">
