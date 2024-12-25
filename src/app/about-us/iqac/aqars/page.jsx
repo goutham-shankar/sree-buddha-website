@@ -17,10 +17,10 @@ export default function page() {
         <div className='page'>
 
             {
-                meetings.map((meeting) => {
+                meetings.map((meeting, index) => {
 
                     return (
-                        <a target = "_blank" className='single_meeting_link' href={meeting[1]}>
+                        <a target = "_blank" className='single_meeting_link' href={meeting[1]} key = {index}>
                         <div className="single_meeting">
                             
                             <span className='single_meeting_name'>{meeting[0]}</span>

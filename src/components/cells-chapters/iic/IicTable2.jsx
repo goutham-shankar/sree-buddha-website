@@ -28,11 +28,11 @@ export const IicTable2 = () => {
       <table {...getTableProps()}>
         <thead>
             {
-                headerGroups.map((headerGroup) =>(
-                    <tr {...headerGroup.getHeaderGroupProps()}>
+                headerGroups.map((headerGroup, index) =>(
+                    <tr {...headerGroup.getHeaderGroupProps()} key = {index}>
                         {
-                            headerGroup.headers.map((column)=>(
-                                <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                            headerGroup.headers.map((column, index2)=>(
+                                <th key = {index2} {...column.getHeaderProps()}>{column.render('Header')}</th>
                             ))
                         }
                         
