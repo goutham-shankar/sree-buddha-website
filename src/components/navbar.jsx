@@ -247,7 +247,10 @@ export default function Navbar() {
                 <a className="submenu_link" href="/about-us/oronogram">
                   Oranogram
                 </a>
-                <Link className="submenu_link" href="/about-us/mandatory_disclosure">
+                <Link
+                  className="submenu_link"
+                  href="/about-us/mandatory_disclosure"
+                >
                   Mandatory Disclosure
                 </Link>
                 <Link className="submenu_link" href="/about-us/EoA">
@@ -262,7 +265,10 @@ export default function Navbar() {
                 <Link className="submenu_link" href="">
                   Gallery{" "}
                 </Link>
-                <Link className="submenu_link" href="/about-us/admission_and_accounts">
+                <Link
+                  className="submenu_link"
+                  href="/about-us/admission_and_accounts"
+                >
                   admission and accounts{" "}
                 </Link>
                 <Link className="submenu_link" href="">
@@ -344,7 +350,6 @@ export default function Navbar() {
             </div>
           </div>
 
-
           <div className="navbar_menu">
             <span>Departments</span>
             <div className="submenu">
@@ -355,31 +360,58 @@ export default function Navbar() {
                 >
                   Computer Science and engineering
                 </Link>
-                <Link className="submenu_link" href="/departments/electrical-electronics-engineering/">
+                <Link
+                  className="submenu_link"
+                  href="/departments/electrical-electronics-engineering/"
+                >
                   EEE
                 </Link>
-                <Link className="submenu_link" href="/departments/electronics-communication-engineering">
+                <Link
+                  className="submenu_link"
+                  href="/departments/electronics-communication-engineering"
+                >
                   ECE
                 </Link>
-                <Link className="submenu_link" href="/departments/mechanical-engineering">
+                <Link
+                  className="submenu_link"
+                  href="/departments/mechanical-engineering"
+                >
                   Mechanical
                 </Link>
-                <Link className="submenu_link" href="/departments/artificial-intelligence-machine-learning">
+                <Link
+                  className="submenu_link"
+                  href="/departments/artificial-intelligence-machine-learning"
+                >
                   Computer Science with AI
                 </Link>
-                <Link className="submenu_link" href="/departments/electronics-computer-engineering">
+                <Link
+                  className="submenu_link"
+                  href="/departments/electronics-computer-engineering"
+                >
                   Electronics and Computer Engineering
                 </Link>
-                <Link className="submenu_link" href="/departments/civil-engineering">
+                <Link
+                  className="submenu_link"
+                  href="/departments/civil-engineering"
+                >
                   Civil Engineering
                 </Link>
-                <Link className="submenu_link" href="/departments/mathematics-and-basic-sciences">
+                <Link
+                  className="submenu_link"
+                  href="/departments/mathematics-and-basic-sciences"
+                >
                   Basic Science and Humanities
                 </Link>
-                <Link className="submenu_link" href="/departments/food-technology">
+                <Link
+                  className="submenu_link"
+                  href="/departments/food-technology"
+                >
                   Food Sciencess
                 </Link>
-                <Link className="submenu_link" href="/departments/biotechnology-biochemical-engineering">
+                <Link
+                  className="submenu_link"
+                  href="/departments/biotechnology-biochemical-engineering"
+                >
                   Biotechnology and Biochemical Engineering
                 </Link>
               </ul>
@@ -402,7 +434,6 @@ export default function Navbar() {
                 <Link className="submenu_link" href="">
                   International Students Admimission
                 </Link>
-               
               </ul>
             </div>
           </div>
@@ -426,7 +457,6 @@ export default function Navbar() {
                 <Link className="submenu_link" href="">
                   Contact Us
                 </Link>
-               
               </ul>
             </div>
           </div>
@@ -512,18 +542,30 @@ export default function Navbar() {
                   NAAC
                   <div className="submenu_2">
                     <ul>
-                      <Link href="" className="submenu_2_link">NAAC CYCLE1</Link>
-                      <Link href="" className="submenu_2_link">NAAC CYCLE1</Link>
-                      <Link href="" className="submenu_2_link">NAAC CYCLE1</Link>
+                      <Link
+                        href="/accreditation/NAAC/Cycle1"
+                        className="submenu_2_link"
+                      >
+                        NAAC CYCLE1
+                      </Link>
+                      <Link
+                        href="/accreditation/NAAC/Cycle2"
+                        className="submenu_2_link"
+                      >
+                        NAAC CYCLE1
+                      </Link>
+                      <Link
+                        href="/accreditation/NAAC/Cycle3"
+                        className="submenu_2_link"
+                      >
+                        NAAC CYCLE1
+                      </Link>
                     </ul>
                   </div>
                 </div>
 
                 <Link className="submenu_link" href="">
                   NBA
-
-
-
                 </Link>
                 <Link className="submenu_link" href="">
                   NIRF
@@ -531,7 +573,6 @@ export default function Navbar() {
                 <Link className="submenu_link" href="">
                   ARIIA
                 </Link>
-               
               </ul>
             </div>
           </div>
@@ -541,7 +582,7 @@ export default function Navbar() {
             <div className="towards_left submenu">
               <ul>
                 <Link className="submenu_link" href="">
-                    Alumini Registration
+                  Alumini Registration
                 </Link>
                 <Link className="submenu_link" href="">
                   Executive Body
@@ -552,12 +593,9 @@ export default function Navbar() {
                 <Link className="submenu_link" href="">
                   Alumini Reports
                 </Link>
-            
               </ul>
             </div>
           </div>
-
- 
 
           <div className="navbar_menu">
             <span>Research</span>
