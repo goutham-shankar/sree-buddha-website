@@ -69,10 +69,10 @@ const Page = () => {
 
             <div className="members_details">
                 {
-                    tableData.map((row) => {
+                    tableData.map((row, index) => {
                         return (
 
-                            <div className="single_member">
+                            <div className="single_member" key={index}>
 
                                 <span className="member_name">{row[1]}</span>
                                 <span>{row[2]}</span>

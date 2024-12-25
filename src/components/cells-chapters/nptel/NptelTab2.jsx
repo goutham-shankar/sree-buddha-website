@@ -28,11 +28,11 @@ export const NptelTab2 = () => {
       <table {...getTableProps()}>
         <thead>
             {
-                headerGroups.map((headerGroup) =>(
-                    <tr {...headerGroup.getHeaderGroupProps()}>
+                headerGroups.map((headerGroup, index) =>(
+                    <tr {...headerGroup.getHeaderGroupProps()} key = {index}>
                         {
-                            headerGroup.headers.map((column)=>(
-                                <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                            headerGroup.headers.map((column, index)=>(
+                                <th key = {index} {...column.getHeaderProps()}>{column.render('Header')}</th>
                             ))
                         }
                         

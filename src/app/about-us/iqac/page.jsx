@@ -32,17 +32,17 @@ export default function page() {
                 <div className="all_minutes">
 
                     {
-                        meetings.map((meeting) => {
+                        meetings.map((meeting, index) => {
 
                             return (
-                                <div className="single_meeting">
+                                <div className="single_meeting" key = {index}>
 
-                                <span className='single_meeting_name'>Minutes-of-7-th-IQAC-meeting-held-on-13-03-2017</span>
-                                <button className="download_meeting_minutes">
-                                    <img src={"/assets/images/icons/download.png"} alt="" />
-                                </button>
+                                    <span className='single_meeting_name'>Minutes-of-7-th-IQAC-meeting-held-on-13-03-2017</span>
+                                    <button className="download_meeting_minutes">
+                                        <img src={"/assets/images/icons/download.png"} alt="" />
+                                    </button>
 
-                            </div>
+                                </div>
                             )
 
 
