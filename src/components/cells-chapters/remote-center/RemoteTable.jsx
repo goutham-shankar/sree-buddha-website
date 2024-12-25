@@ -28,11 +28,11 @@ export const RemoteTable = () => {
       <table {...getTableProps()}>
         <thead>
             {
-                headerGroups.map((headerGroup) =>(
-                    <tr {...headerGroup.getHeaderGroupProps()}>
+                headerGroups.map((headerGroup, index) =>(
+                    <tr key = {index} {...headerGroup.getHeaderGroupProps()}>
                         {
-                            headerGroup.headers.map((column)=>(
-                                <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                            headerGroup.headers.map((column, index)=>(
+                                <th key = {index} {...column.getHeaderProps()}>{column.render('Header')}</th>
                             ))
                         }
                         

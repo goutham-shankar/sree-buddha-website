@@ -65,7 +65,7 @@
 
 }
 
-.sidebar_menu span{
+.submenu_head {
     font-weight: 600;
     font-size: 30px;
     
@@ -76,11 +76,21 @@
    
 }
 
-.sidebar_submenu_link {
-    text-decoration: none;
-    color: black;
+.sidebar_submenu_2{
+    /* background-color: red; */
+    overflow: hidden;
+    padding-left: 20px;
     font-size: 20px;
+    transition: 0.4s;
+    color: rgb(27, 27, 27);
+}
+
+.sidebar_submenu_link,  .sidebar_submenu_2_link{
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+    font-size: 25px;
     margin-left: 30px;
+    font-weight: 600;
     padding: 2px 5px;
 }
 .sidebar_submenu_link:hover{

@@ -21,32 +21,9 @@
     margin-top: 30px;
 }
 
-.single_meeting{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid rgb(127, 127, 127);
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin: 14px 0px;
-    transition: 0.2s;
-}
-
-.single_meeting:hover{
-   background-color: rgb(215, 215, 215);
-}
 
 
-.download_meeting_minutes{
-    height: 40px;
-    background-color: transparent;
-    border: 0px;
-    padding: 6px;
-}
-.download_meeting_minutes img{
-    height: 100%;
-}
+
 
 .criteria{
     margin-top: 10px;
