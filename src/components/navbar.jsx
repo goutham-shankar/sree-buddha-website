@@ -175,34 +175,34 @@ export default function Navbar() {
 
         <div className="navbar_menus">
           {
-            link_map.map((menu) => {
+            link_map.map((menu, index) => {
               return (
 
-                <div className="navbar_menu">
+                <div className="navbar_menu" key = {index}>
                   <span>{menu.name}</span>
                   <div className="submenu">
 
                     <ul>
 
                       {
-                        menu.links.map((menul2) => {
+                        menu.links.map((menul2, index2) => {
                           if (menul2.link != undefined) {
                             return (
-                              <a className="submenu_link" href={menul2.link}>
+                              <a className="submenu_link" href={menul2.link} key = {index2}>
                                 {menul2.name}
                               </a>
                             )
                           } else {
 
                             return (
-                              <div className="submenu_link" href="">
+                              <div className="submenu_link" href="" key = {index2}>
                                 {menul2.name}
                                 <div className="submenu_2">
                                   <ul>
                                     {
-                                      menul2.links.map((menul3) => {
+                                      menul2.links.map((menul3, index3) => {
                                         return (
-                                          <Link href={menul3.link} className="submenu_2_link">{menul3.name}</Link>
+                                          <Link key = {index3} href={menul3.link} className="submenu_2_link">{menul3.name}</Link>
                                         )
                                       })}
                                   </ul>

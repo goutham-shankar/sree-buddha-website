@@ -215,7 +215,7 @@ export default function NavbarMobile() {
                     link_map.map((menu_link, menu_link_index) => {
                         return (
 
-                            <div className="sidebar_menu">
+                            <div className="sidebar_menu" key = {menu_link_index}>
                                 <span className="submenu_head" onClick={() => toggleSubmenu(menu_link_index)}>{menu_link.name}</span>
                                 <div className="sidebar_submenu" style={{ maxHeight: menu_link.visible ? maxHeight : "0px" }}>
                                     <ul>
@@ -224,12 +224,12 @@ export default function NavbarMobile() {
                                                 console.log(menu_linkl2.links)
                                                 if (menu_linkl2.links == undefined) {
                                                     return (
-                                                        <Link className="sidebar_submenu_link" href={menu_linkl2.link}>{menu_linkl2.name}</Link>
+                                                        <Link key = {index2} className="sidebar_submenu_link" href={menu_linkl2.link}>{menu_linkl2.name}</Link>
                                                     )
                                                 } else {
 
                                                     return (
-                                                        <>
+                                                        < div key = {index2}>
                                                             <span className="sidebar_submenu_2_link" onClick={() => { toggleSubmenu2(menu_link_index, index2) }}
 
                                                             >{menu_linkl2.name}</span>
@@ -239,11 +239,11 @@ export default function NavbarMobile() {
                                                                 <ul>
                                                                     {
 
-                                                                        menu_linkl2.links.map((menu_linkl3) => {
+                                                                        menu_linkl2.links.map((menu_linkl3, index3) => {
 
                                                                             return (
                                                                                 <>
-                                                                                    <span className="sidebar_submenu_link" >{menu_linkl3.name}</span>
+                                                                                    <span key = {index3} className="sidebar_submenu_link" >{menu_linkl3.name}</span>
                                                                                 </>
                                                                             )
 
@@ -252,7 +252,7 @@ export default function NavbarMobile() {
                                                                     }
                                                                 </ul>
                                                             </div>
-                                                        </>
+                                                        </div>
                                                     )
 
                                                 }
