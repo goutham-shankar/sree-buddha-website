@@ -2,26 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 
-
-
-
 .landing_page{
     position: relative;
     width: 100%;
-    background-color: #E6B66E;
+    text-align: center;
+    background-color: #ffffff;
     overflow-x: hidden;
     box-sizing: border-box;
 
 }
-.college_background{
-    width: 100%; 
-    z-index: -1;    
-    /* border: 2px solid red; */
+.college_background {
+    width: 98.5%; /* Full container width */
+    height: 90vh; /* Full viewport height */
+    object-fit: cover; /* Crop video while maintaining aspect ratio */
+    margin: 0px 10px;
+    z-index: -1; /* Ensure it sits behind other content */
+    background-color: black; /* Fallback color in case the video doesn't load */
 }
+
 .landing_page_content{
     position: absolute;
-    top: 10%;
-    left: 5%;
+    left: 30%;
+    top: 25%;
     font-family: 'poppins';
     color: white;
 }
@@ -31,23 +33,22 @@
 }
 .landing_page_title1{
     /* font-size: 100px; */
-    font-size: 10vh;
-    font-weight: 500;
+    font-size: 100px;
+    font-weight: 800;
+    text-align: center;
 }
 .landing_page_title2{
-    font-size: 32px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
 }
 .landing_page_title3{
-    font-size: 30px;
-    background-color: rgba(0, 0, 0, 0.225);
-    width: min-content;
-    padding: 10px 20px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 900;
     border-radius: 50px;
     margin-top: 10px;
-    font-family: 'Montserrat', sans-serif;
     color:rgba(197, 128, 44, 0.88);
+    text-align: center;
 
     text-transform: uppercase;
     text-shadow: 
@@ -55,102 +56,57 @@
        2px 2px 4px rgba(0, 0, 0, 0.2);
     
 
-    font-weight: bold;
-}
-.landing_page_about_us{
-    font-size: 18px;
-    font-weight: 300;
-    width: 50%;
-    margin-top: 5px;
-    
-}
-.landing_page_buttons{
-    display: flex;
-    margin-top: 20px;
-}
-
-.landing_page_buttons a{
-    text-decoration: none;
-    color: black;
-    padding: 10px 30px;
-    background-color: white;
-    border-radius: 50px;
-    margin-right: 30px;
-    transition: 0.2s;
-}
-.landing_page_buttons :nth-child(1){
-    background-color: #E6B66D;
-}
-.landing_page_buttons :nth-child(1):hover{
-    background-color: #e59215;
-}
-.landing_page_buttons :nth-child(2):hover{
-    background-color: #c0c0c0;
+    font-weight: 900;
 }
 
 
-@media ( max-width : 100vh) {
-    .landing_page{
-        /* align-items: flex-end; */
-        /* display: flex; */
-        align-items: center;
-        justify-content: center;
-        /* width: 100vw; */
-        /* height: 100%; */
-        width: auto;
-        height: max-content;
-        /* height: 60vh; */
-        /* background-color: red; */
-        /* justify-content: flex-end; */
-        /* align-items: flex-end; */
-        /* background-color: red; */
-        /* overflow: hidden; */
-        /* justify-content: right; */
-    }
-    .college_background{
-        width: auto;
-        /* height: 100%; */
-        /* height: 70vh; */
-        /* margin-left: -90%; */
+
+
+@media (max-width: 900px) { /* For tablets and small screens */
+    .college_background {
+        height: 80vh; /* Reduce height for smaller screens */
+        width: 98.5%;
     }
 
-    .landing_page_title1{
-        font-size: 3.4rem;
-        line-height: 100%;
+    .landing_page_content {
+        top: 20%; /* Adjust top positioning */
     }
-    .landing_page_title2{
-        font-size: 1.2rem;
-    }
-    .landing_page_title3{
-        font-size: 1.3rem;
-        margin-top: 30px;
-        
-    }
-    .landing_page_about_us{
-        font-size: 1rem;
-        
-        width: 90%;
-    }
-    .landing_page_buttons{
-        /* background-color: red; */
-        display: flex;
-        /* justify-content: center; */
-        /* align-items: center; */
-        width: 100%;
-        font-size: 12px;
 
+    .landing_page_title1 {
+        font-size: 12vw; /* Scale text size down */
     }
-    .landing_page_content{
-        /* background-color: green; */
-        width: 100%;
-        justify-content: center;
-        /* align-items: center; */
-        display: flex;
-        flex-direction: column;
-        padding: 0px 21px;
-        box-sizing: border-box;
-        left: 0px;
-        /* right: auto; */
+
+    .landing_page_title2 {
+        font-size: 6vw;
+    }
+
+    .landing_page_title3 {
+        font-size: 5vw;
+        margin-top: 20px;
     }
 }
 
+@media (max-width: 480px) { /* For mobile devices */
+    .college_background {
+        height: 23vh; /* Further reduce height */
+        width: 94%;
+        margin: 0px 5px;
+    }
+
+    .landing_page_content {
+        top: 20%; /* Adjust top positioning */
+        left: 16%;
+    }
+
+    .landing_page_title1 {
+        font-size: 20px; /* Smaller text for small devices */
+    }
+
+    .landing_page_title2 {
+        font-size: 16px;
+    }
+
+    .landing_page_title3 {
+        font-size: 18px;
+    }
+}

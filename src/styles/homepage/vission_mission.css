@@ -5,8 +5,10 @@
     align-items: center;
     justify-content: center;
     font-family: 'poppins';
-    background-color: #E6B66E;
+    background-color:rgba(255, 233, 200, 1);
+    border-radius: 15px;
     padding: 0px 100px;
+    margin: 10px;
 }
 .vision_and_mission div{
 
