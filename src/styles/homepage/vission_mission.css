@@ -13,11 +13,15 @@
 .vision_and_mission div{
 
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    /* width: 50%; */
 
+}
+.v-m{
+    /* background-color: red; */
+    align-items: center;
 }
 .vision_and_mission div h3{
     font-size: 35px;
@@ -27,6 +31,42 @@
 .vision_and_mission div p{
     font-size: 18px;
     width:90%;
+}
+.about_us{
+    background-color: black;
+    border-radius: 15px;
+    padding: 10px 30px;
+    font-size: 18px;
+    width: max-content;
+    margin-top: 20px;
+    color: white;
+    border: 0px;
+
+}
+
+.about_us:hover{
+    background-color: rgb(57, 57, 57);
+    transition: 0.2s;
+}
+
+.about {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start ; */
+
+}
+.v-m{
+    /* background-color: blue; */
+}
+.vision{
+    /* background-color: green; */
+    width: 100%;
+}
+.vision p, .mission p{
+    color: #775A2D;
+    /* background-color: red; */
+    font-style: italic;
 }
 
 @media ( max-width : 100vh){
@@ -45,6 +85,18 @@
     }
     .vision_and_mission div p{
         font-size: 1rem;
+        text-align: center;
+    }
+    .about{
+        /* background-color: red; */
+        align-items: center;
+    }
+    .v-m div{
+        justify-content: center;
+        /* background-color: green; */
+    }
+    .v-m h3{
+        /* background-color: blue; */
         text-align: center;
     }
 }

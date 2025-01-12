@@ -166,10 +166,11 @@ export default function Navbar() {
       </div>
       <div className="navbar_right">
         <div className="important_links">
-          <a href="#">Internation Admissions</a>
-          <a href="#">CareersSBCE</a>
-          <a href="#">Fees Payment</a>
-          <a href="">University</a>
+          <a href="#" className="important_link"> <img src="/assets/images/home/international_admissions.png" alt="" /> Internation Admissions</a>
+          <a href="#" className="important_link"> <img src="/assets/images/home/careers.png" alt="" /> CareersSBCE</a>
+          <a href="#" className="important_link"> <img src="/assets/images/home/fees.png" alt="" /> Fees Payment</a>
+          <a href="" className="important_link">  <img src="/assets/images/home/university.png" alt="" /> University</a>
+          <a href="#" className="important_links_button">admissions</a>
           {/* <a href="">Result Analysis</a> */}
         </div>
 

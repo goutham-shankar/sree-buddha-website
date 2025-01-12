@@ -1,6 +1,40 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+.social_media_links{
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    right: 15px;
+    bottom: 50%;
+    transform: translateY(50%);
+    /* background-color: green; */
+    width: 80px;
+
+}
+.social_media_links a{
+    margin: 10px;
+    /* background-color: red; */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    /* width: 100%; */
+}
+.social_media_links a:hover{
+    background-color: rgba(34, 34, 34, 0.268);
+
+}
+.social_media_links img{
+    /* height: 80%; */
+    transform: scale(0.8);
+
+}
 
 .landing_page{
     position: relative;
@@ -63,6 +97,9 @@
 
 
 @media (max-width: 900px) { /* For tablets and small screens */
+
+    
+
     .college_background {
         height: 80vh; /* Reduce height for smaller screens */
         width: 98.5%;
@@ -87,26 +124,46 @@
 }
 
 @media (max-width: 480px) { /* For mobile devices */
+
+
+    .social_media_links{
+        flex-direction: row;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%) translateY(0%);
+        /* background-color: red; */
+        width: max-content;
+        height: 40px;
+
+    }
     .college_background {
-        height: 23vh; /* Further reduce height */
+        height: 90vh; /* Further reduce height */
         width: 94%;
         margin: 0px 5px;
     }
 
     .landing_page_content {
         top: 20%; /* Adjust top positioning */
-        left: 16%;
+        /* left: 16%; */
+        left: 50%;
+        transform: translateX(-50%);
+        /* background-color: red ; */
+        width: 90%;
     }
 
     .landing_page_title1 {
-        font-size: 20px; /* Smaller text for small devices */
+        font-size: 60px; /* Smaller text for small devices */
+        line-height: 60px;
     }
 
     .landing_page_title2 {
-        font-size: 16px;
+        font-size: 30px;
     }
 
     .landing_page_title3 {
-        font-size: 18px;
+        font-size: 25px;
+        
+
     }
+ 
 }

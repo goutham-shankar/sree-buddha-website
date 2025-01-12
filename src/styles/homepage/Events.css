@@ -36,7 +36,8 @@
     align-items: center;
     font-size: 2rem;
     color: white;
-    border-radius: 20px;
+    /* border-radius: 20px; */
+    background-color: red;
 }
 
 /* Custom arrow styling */
