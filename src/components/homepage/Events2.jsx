@@ -2,7 +2,6 @@
 
 import React from 'react'
 import "../../styles/homepage/events2.css"
-import "../../styles/homepage/research2.css"
 
 import "@/styles/homepage/carousal.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -10,7 +9,7 @@ import { Carousel } from "react-responsive-carousel";
 
 import { useEffect, useState } from 'react';
 
-export default function Research() {
+export default function Events2() {
 
     const [slidesToShow, setSlidesToShow] = useState(3); // Default 3 slides for desktop
     useEffect(() => {
@@ -35,7 +34,7 @@ export default function Research() {
     }, []);
 
     return (
-        <div className='carousal_section research' >
+        <div className='carousal_section events' >
 
             <div className="events_container">
                 <div className="events_title_area">
@@ -76,19 +75,28 @@ export default function Research() {
                             <h3 className="event_title">SEMINAR</h3>
                             <img src="/assets/images/home/events_sample.png" alt="" className="event_image" />
                             <p className="event_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, deleniti.</p>
-
+                            <div className="event_date"> 
+                                 <img src="/assets/images/home/calendar.png" alt=""  />
+                                 <span>5th December 2024</span>
+                            </div>
                         </div>
                         <div className="event">
                             <h3 className="event_title">SEMINAR</h3>
                             <img src="/assets/images/home/events_sample.png" alt="" className="event_image" />
                             <p className="event_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, deleniti.</p>
-                            
+                            <div className="event_date"> 
+                                 <img src="/assets/images/home/calendar.png" alt=""  />
+                                 <span>5th December 2024</span>
+                            </div>
                         </div>
                         <div className="event">
                             <h3 className="event_title">SEMINAR</h3>
                             <img src="/assets/images/home/events_sample.png" alt="" className="event_image" />
                             <p className="event_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, deleniti.</p>
-
+                            <div className="event_date"> 
+                                 <img src="/assets/images/home/calendar.png" alt=""  />
+                                 <span>5th December 2024</span>
+                            </div>
                         </div>
                         
 

@@ -48,8 +48,12 @@ export default function Counts() {
             data-count="18500"
             ref={(el) => countsRef.current[0] = el}
           >
-            <h3>ADMISSIONS</h3>
-            <span className="count-number">0</span>
+            <img src="/assets/images/home/counts_admissions.png" alt="" />
+            <div className="count_data">
+              <h3>ADMISSIONS</h3>
+              <span className="count-number">0</span>
+            </div>
+
           </div>
         </li>
         <li>
@@ -58,8 +62,12 @@ export default function Counts() {
             data-count="1500"
             ref={(el) => countsRef.current[1] = el}
           >
-            <h3>FACULTIES</h3>
-            <span className="count-number">0</span>
+             <img src="/assets/images/home/counts_admissions.png" alt="" />
+            <div className="count_data">
+              <h3>UNDERGRADUATE</h3>
+              <span className="count-number">0</span>
+            </div>
+
           </div>
         </li>
         <li>
@@ -68,8 +76,12 @@ export default function Counts() {
             data-count="50"
             ref={(el) => countsRef.current[2] = el}
           >
-            <h3>CELLS & CHAPTERS</h3>
-            <span className="count-number">0</span>
+             <img src="/assets/images/home/counts_admissions.png" alt="" />
+            <div className="count_data">
+              <h3>POSTGRADUATE</h3>
+              <span className="count-number">0</span>
+            </div>
+
           </div>
         </li>
         <li>
@@ -78,8 +90,13 @@ export default function Counts() {
             data-count="2004"
             ref={(el) => countsRef.current[3] = el}
           >
-            <h3>ESTABLISHED</h3>
-            <span className="count-number">0</span>
+             <img src="/assets/images/home/counts_admissions.png" alt="" />
+            <div className="count_data">
+              <h3>RESEARCH</h3>
+              <span className="count-number">0</span>
+
+            </div>
+
           </div>
         </li>
       </ul>

@@ -1,4 +1,8 @@
 /* Base styles for larger screens (desktop) */
+
+.affiliations_and_cells{
+  display: flex;
+}
 .affiliations {
     text-align: center;
     margin-bottom: 30px;
@@ -13,12 +17,11 @@
   }
   
   .affiliations ul {
-    display: flex;
-    flex-wrap: wrap; /* Enables items to wrap into rows */
-    justify-content: space-between;
-    align-items: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     list-style: none;
-    padding: 0;
+
   }
   
   .affiliation-item {
@@ -46,6 +49,9 @@
   
   /* For tablets (768px and below) */
   @media (max-width: 768px) {
+    .affiliations_and_cells{
+      flex-direction: column;
+    }
     .affiliations h3{
         margin: 30px 90px;
         text-align: left;
@@ -71,3 +77,64 @@
     }
   }
   
+
+  /* Base styles for larger screens (desktop) */
+.cells_and_chapters h3{
+  font-family: 'Poppins';
+  /* width: 50%; */
+  font-size: 50px;
+  margin:  30px 160px;
+}
+.cells_and_chapters ul {
+  display: grid !important;
+  list-style: none;
+  grid-template-columns: 1fr 1fr;
+  /* background-color: red; */
+
+}
+
+.cells_and_chapters li {
+  margin-right: 20px;
+}
+
+.cells_and_chapters img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+  .cells_and_chapters ul {
+      padding: 30px; /* Reduce padding */
+  }
+
+  .cells_and_chapters li {
+      flex: 0 0 45%; /* Two images per row for tablets */
+      margin-bottom: 20px; /* Space between rows */
+  }
+}
+
+/* For mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .cells_and_chapters h3 {
+      width: 300px;
+      text-align: left;
+      margin-left: 50px;
+      font-size: 50px;
+  }
+
+  .cells_and_chapters ul {
+      padding-left: 50px; /* Remove padding */
+      justify-content: center;
+  }
+
+  .cells_and_chapters li {
+      flex: 0 0 45%; /* Two images per row for mobile */
+      margin-bottom: 15px;
+      margin-right: 0;
+  }
+
+  .cells_and_chapters img {
+      max-width: 80px; /* Reduce image size */
+  }
+}

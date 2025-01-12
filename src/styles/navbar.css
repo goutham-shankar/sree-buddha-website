@@ -37,7 +37,8 @@
     justify-content: space-between;
     /* justify-content: center; */
     /* background-color: red; */
-    align-items: center;
+    align-items: flex-end;
+
 }    
 .important_links{
     padding-top: 10px;
@@ -45,13 +46,35 @@
     width: 90%;
     /* background-color: red; */
     justify-content: flex-end;
+    align-items: center;
 }
-.important_links a{
+
+.important_link{
     font-family: 'poppins';
     color: blue;
     text-decoration: none;
     margin: 0px 10px;
+    color: #734A0C;
+    border-right: 1px solid #3D2502;
+    padding-right: 20px;
+    border-right: 2px solid #734A0C;
 }
+
+.important_links_button{
+    border: 0px ;
+    background-color: #251C0E;
+    padding: 5px 20px ;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+
+}
+.last_link{
+    border: 0px;
+}
+
+
 .navbar_menus{
     display: flex;
     justify-content: space-between;
@@ -66,6 +89,8 @@
     margin: 30px 10px;
     /* background-color: red; */
 }
+
+
 .submenu{
     /* display: none; */
     overflow: hidden;
