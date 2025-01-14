@@ -1,0 +1,126 @@
+.sae{
+    padding: 50px 150px;
+    font-family: 'Poppins';
+}
+.sae-intro h2{
+    font-size: 40px;
+    color: #73501c;
+    margin-bottom: 20px;
+    max-width: 500px;
+    text-align: left;
+}
+.sae-intro span{
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.sae-content{
+    margin: 10px 0px;
+}
+.sae-para{
+    margin: 30px 0px;
+}
+.sae-event-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+.sae-event-content img{
+    max-width: 1000px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .sae {
+        padding: 30px 80px;
+    }
+
+    .sae-intro h2 {
+        font-size: 35px;
+    }
+
+    .sae-intro span {
+        font-size: 20px;
+    }
+
+    .sae-event-content {
+        row-gap: 15px;
+    }
+
+    .sae-event-title {
+        font-size: 24px;
+    }
+
+    .sae-event-para {
+        font-size: 16px;
+    }
+
+    .sae-event-content img {
+        max-width: 80%;
+    }
+}
+
+/* For screens smaller than 768px (tablets in portrait mode and mobile devices) */
+@media only screen and (max-width: 768px) {
+    .sae {
+        padding: 20px 45px;
+    }
+
+    .sae-intro h2 {
+        font-size: 30px;
+        max-width: 100%;
+    }
+
+    .sae-intro span {
+        font-size: 18px;
+    }
+
+    .sae-event-content {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .sae-event-title {
+        font-size: 20px;
+    }
+
+    .sae-event-para {
+        font-size: 14px;
+    }
+
+    .sae-event-content img {
+        max-width: 100%;
+    }
+}
+
+/* For screens smaller than 480px (very small mobile devices) */
+@media only screen and (max-width: 480px) {
+    .sae {
+        padding: 15px 30px;
+    }
+
+    .sae-intro h2 {
+        font-size: 26px;
+    }
+
+    .sae-intro span {
+        font-size: 16px;
+    }
+
+    .sae-event-content {
+        row-gap: 10px;
+    }
+
+    .sae-event-title {
+        font-size: 18px;
+    }
+
+    .sae-event-para {
+        font-size: 12px;
+    }
+
+    .sae-event-content img {
+        max-width: 100%;
+    }
+}
