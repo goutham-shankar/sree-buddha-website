@@ -36,6 +36,17 @@
 
 }
 
+/* .black_overlay{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ height: 100%;
+ width: 100%;
+
+ opacity: 0.2;
+ background-color: black; */
+/* } */
+
 .landing_page{
     position: relative;
     width: 100%;
@@ -52,6 +63,13 @@
     margin: 0px 10px;
     z-index: -1; /* Ensure it sits behind other content */
     background-color: black; /* Fallback color in case the video doesn't load */
+    overflow: hidden;
+    /* background-color: red; */
+    /* position: relative; */
+}
+
+.video{
+    opacity: 0.8;
 }
 
 .landing_page_content{

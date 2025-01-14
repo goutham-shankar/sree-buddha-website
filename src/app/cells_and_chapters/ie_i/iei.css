@@ -1,0 +1,88 @@
+.iei{
+    padding: 50px 150px;
+    font-family: 'Poppins';
+}
+
+.iei-intro h2{
+    font-size: 40px;
+    color: #73501c;
+    margin-bottom: 40px;
+    max-width: 500px;
+    text-align: left;
+}
+
+.iei-intro{
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 400px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.iei-logo{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 20px;
+    text-align: left;
+    max-width: 300px;
+}
+.iei-activities{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.iei-event-content{
+    text-align: left;
+    font-size: 16px;
+    margin: 10px 0px;
+    max-width: 1200px;
+}
+.iei-para{
+    display: flex;
+    justify-content: space-between;
+}
+.iei-event-pic{
+    margin-left: 50px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .iei {
+        padding: 40px; /* Adjust padding for smaller screens */
+    }
+
+    .iei-intro {
+        flex-direction: column; /* Stack content vertically */
+        align-items: flex-start; /* Align items to the start */
+        gap: 20px; /* Add space between stacked elements */
+    }
+
+    .iei-intro h2 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+        text-align: left; /* Center the title for better UX */
+        margin-bottom: 10px;
+    }
+
+    .iei-logo {
+        max-width: 150px; /* Reduce logo size */
+        margin: 0 auto; /* Center the logo */
+    }
+
+    .iei-para {
+        flex-direction: column; /* Stack text and image */
+        gap: 20px;
+    }
+
+    .iei-event-content {
+        font-size: 14px; /* Slightly reduce font size for readability */
+        max-width: 100%; /* Ensure it takes the full width */
+    }
+
+    .iei-event-pic {
+        margin: 0 auto; /* Center the image */
+        max-width: 100%; /* Make the image responsive */
+        height: auto;
+        border-radius: 10px; /* Retain the existing style */
+    }
+}
