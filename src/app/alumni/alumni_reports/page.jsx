@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./page.css";
 const page = () => {
   return (
     <div>
@@ -57,8 +57,7 @@ const page = () => {
         alt=""
         className="img-tag"
       />
-      <h4>Report on SANGAMAM 2018 (ALUMNI MEET 2018)
-      </h4>
+      <h4>Report on SANGAMAM 2018 (ALUMNI MEET 2018)</h4>
       <p className="content">
         The Department of Computer Science & Engineering had organized an alumni
         meeting “Sangamam 2018” for all batches (2006 – 2018) on 1st December
@@ -71,11 +70,167 @@ const page = () => {
         Students and staff shared the memories, most of them volunteered to
         render services for the benefit of the current students of SBCE
       </p>
-      <img src="/assets/images/alumni/11-1-300x225.jpg" alt="" className="img-tag2" />
-      <div className="subheading">Electrical and Electronics Alumni Meet 2018
+      <img
+        src="/assets/images/alumni/11-1-300x225.jpg"
+        alt=""
+        className="img-tag2"
+      />
+      <div className="subheading">
+        Electrical and Electronics Alumni Meet 2018
       </div>
-      <p className="content">Department of Electrical and Electronics, Sree Buddha College of Engineering, organized an Alumni Meet 2018 on 29 December 2018 at Electrical seminar hall.Ms. Gayathri Vijayachandran, Assistant professor of EEE Department welcomed the gathering. The function was presided over by Prof. Vinod V P, HOD of EEE Department. Dr. Saji Varghese, HOD of Mechanical Engineering Department was the chief guest of the event and he inaugurated the Function and also gave a talk on “The Importance of Alumni Meet”. Prof. Thomas Mathew, Head of Human Resource Department felicitated the gathering. The inaugural session was concluded by Vote of thanks delivered by Department Alumni association faculty in charge Asst. Prof. Ananthu Vijayakumar.
-      During the meeting, an alumni representative was elected from the students for further annual meets. The programme also included an interactive session with Students of various Passed out Batches and Staffs of EEE Department. Around 40 students of various Passed out batches attended the function. The students also shared their memories during the meet. Various Heads of departments, faculty members and non-teaching staff of EEE Department attended the function.</p>
+      <p className="content">
+        Department of Electrical and Electronics, Sree Buddha College of
+        Engineering, organized an Alumni Meet 2018 on 29 December 2018 at
+        Electrical seminar hall.Ms. Gayathri Vijayachandran, Assistant professor
+        of EEE Department welcomed the gathering. The function was presided over
+        by Prof. Vinod V P, HOD of EEE Department. Dr. Saji Varghese, HOD of
+        Mechanical Engineering Department was the chief guest of the event and
+        he inaugurated the Function and also gave a talk on “The Importance of
+        Alumni Meet”. Prof. Thomas Mathew, Head of Human Resource Department
+        felicitated the gathering. The inaugural session was concluded by Vote
+        of thanks delivered by Department Alumni association faculty in charge
+        Asst. Prof. Ananthu Vijayakumar. During the meeting, an alumni
+        representative was elected from the students for further annual meets.
+        The programme also included an interactive session with Students of
+        various Passed out Batches and Staffs of EEE Department. Around 40
+        students of various Passed out batches attended the function. The
+        students also shared their memories during the meet. Various Heads of
+        departments, faculty members and non-teaching staff of EEE Department
+        attended the function.
+      </p>
+      <img src="/assets/images/alumni/light.png" alt="" className="img-tag3" />
+      <h4>
+        Dr. Saji Varghese HOD of Mechanical Engineering Lightning the lamp
+        ceremony., Department inaugurating the Alumni Meet
+      </h4>
+      <img src="/assets/images/alumni/group.jpg" alt="" className="img-tag3" />
+      <h4>Group Photo, Members Attended</h4>
+      <div className="subheading">
+        Report on Alumni Meet by Department of Mechanical Engineering (22nd
+        December 2018)
+      </div>
+      <p className="content">
+        Department of Mechanical Engineering organized an Alumni Meet on 22nd
+        December 2018. The meeting started at 10 am in the Ashoka Auditorium.
+        Dr. Saji Varghese, Head of Department of Mechanical Engineering welcomed
+        the audience. The keynote address was given by Dr. S. Suresh Babu,
+        Principal, SBCE. Prof. Anilkumar A V, Prof. Thomas Mathew, Prof. Vishnu
+        V S delivered felicitation. Alumni shared their experiences during and
+        after their campus life. Alumni survey was conducted during the meeting.
+        Prof. Amjith T R delivered the vote of thanks. The programme was
+        concluded with a delicious lunch.
+      </p>
+      <img src="/assets/images/alumni/IMG_9463.jpg" alt="" />
+      <img src="/assets/images/alumni/IMG_9488.jpg" alt="" />
+      <img src="/assets/images/alumni/IMG_9522.jpg" alt="" />
+      <div className="subheading">
+        Report on Alumni Meet by Department of Biotechnology and Biochemical
+        Engineering (20th October 2018)
+      </div>
+      <p className="content">
+        The Alumni Meet 2018 organised by the Department of Biotechnology &
+        Biochemical Engineering, SBCE Pattoor was conducted on 20th October
+        2018.20 Alumni from various batches from 2005 to 2013 were present for
+        this meet. This meet was organised to give information about the current
+        NBA accreditation process and important role of alumni in the
+        accreditation process.
+      </p>
+      <li>
+        <ul>
+          Welcome address was given by Dr.J.R Anoop Raj, HoD, Department of
+          Biotechnology & Biochemical Engineering in which he briefed the
+          department progress, highlighted the department activities and
+          facilities available in the department.
+        </ul>
+        <ul>
+          Dr. S. Suresh Babu, Principal, Sree Buddha College of Engineering
+          delivered the Presidential address in which he pointed the involvement
+          of the Alumni in the NBA accreditation process and asked alumni to
+          come forward with suggestions for our institutional growth.
+        </ul>
+        <ul>
+          Shri K.K.Sivadasan, Treasurer, Sree Buddha Educational Society was
+          present for the function and addressed the students with his valuable
+          experiences and suggestion to the alumni.
+        </ul>
+        <ul>
+          Dr.Malu Ravi, NBA coordinator of the Dept of BT & BCE gave the
+          felicitation wherein she explained about NBA and the importance of NBA
+          accreditation in technical institutions.
+        </ul>
+        <ul>
+          Prof. Thomas Mathew, Head of Human Resource department also addressed
+          the alumni through his felicitation speech.
+        </ul>
+        <ul>
+          Finally, at the end of inaugural session, the vote of thanks was given
+          by Ms. Anju Raj, Assistant Professor, Biotechnology& Biochemical
+          Engineering.
+        </ul>
+      </li>
+      <p className="content">
+        Some of the students from our department also attended the function.
+        After the inaugural session, alumni’s shared their nostalgic thoughts.
+        Alumni coordinator distributed the Alumni feedback form which included
+        feedback on curriculum and on the infrastructural facilities provided by
+        the institute and collected their opinions through filled Alumni
+        feedback form. Alumni attended the meet shared their experiences with
+        the students who are perusing the education in our college. Alumni
+        shared their thoughts and guided regarding opportunities and scope in
+        biotech-industries.Vision & Mission of the department and importance of
+        the PEO’s & PO’s were explained to the Alumni. All the Faculty members
+        were involved in a discussion of the various academic Programs and
+        activities with the alumni. The program came to an end by 1.30 PM.
+        Simultaneously lunch was provided to all the alumni and their family
+        members. In general, the alumni were given good feedback about
+        hospitality and food.
+      </p>
+      <h3>Alumni Meet photos</h3>
+      <img src="/assets/images/alumni/alumni1.jpg" alt="" />
+      <img src="/assets/images/alumni/alumni2.jpg" alt="" />
+      <img src="/assets/images/alumni/alumni3.jpg" alt="" />
+      <h4>Group Photo BT Alumni</h4>
+      <div className="subheading">
+        Alumni Report on Alumni Meet by Department of Civil Engineering (22nd
+        September 2018)
+        <img src="/assets/images/alumni/alumni4.jpg" alt="" />
+        <p className="content">
+          Third Alumni meet conducted by the department was inaugurated by Mr. K
+          K Sivadasan, Treasurer, SBCE. The meet was presided by Dr. E K Bhass,
+          PG Dean, Civil Dept and Dr. GouriAntherjanam, HoD, Civil Department,
+          felicitated the meeting. Ms. Sreelekshmi S, Asst. Professor, Civil
+          Department, welcomed the gathering. A total of 24 alumni were present
+          for the function.Sri K K Sivadasan stressed the importance of alumni
+          meeting and he requested the gathering to strengthen and continue
+          meeting every year. Dr. E K Bhass, gave an inspiring speech and advice
+          them to soar great heights and make SBCE proud.Dr. GouriAntherjanam
+          presented the ongoing activities and status of the department. Mr.
+          Ashok Mathew, Asst. Professor, Civil Department gave a presentation on
+          NBA activities and made the alumni aware of the Vision, Mission and
+          PEOs of the department.Gathering decided to create a ‘WHATSAPP’ group
+          named ‘CE Alumni Association SBCE’ for the Alumni association of Civil
+          Department and to accommodate the group with Alumni Association office
+          bearers and four members from each batch (2boys and 2 girls). Then
+          22nd December of every year was fixed as Alumni day for Civil
+          Department. Ms. NamithaChandran, Asst. Professor, Civil Department
+          delivered Vote of Thanks and the meeting was dispersed for the lunch.{" "}
+        </p>
+        <div className="subheading">Report on Sangamam 2018</div>
+        <p className="content">
+          The Dept. of Computer Science & Engineering had organized an alumni
+          meeting “Sangamam 2018” for all batches (2006- 2018) on 1st December
+          2018 at the Seminar Hall, CS block. The meeting started at 10.00 a.m.
+          with a prayer. Dr. S.V.Annlin Jeba, HOD, Department of CSE welcomed
+          the gathering. Presidential address was delivered by Dr. S.Suresh
+          Babu, Principal, SBCE. The meeting was inaugurated by Sri K K
+          Sivadasan, Treasurer, Sree Buddha Educational Society. 46 alumni from
+          all batches and teachers who had worked here are participated in the
+          function. Students and staff shared the memories, most of them
+          volunteered to render services for the benefit of the current students
+          of SBCE.
+        </p>
+        <img src="/assets/images/alumni/CSE-Alu-768x425.jpg" alt="" />
+      </div>
     </div>
   );
 };
