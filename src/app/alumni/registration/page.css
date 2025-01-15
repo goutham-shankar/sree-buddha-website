@@ -1,6 +1,4 @@
-/* page.css */
 
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +7,7 @@
   
   .container {
     font-family: Arial, sans-serif;
-    background-color: #D9D9D9;
+    background-color: #E6E6E6;
     color: #333;
     display: flex;
     justify-content: center;
@@ -31,10 +29,10 @@
   
   /* Form title */
   .form-title {
-    font-size: 24px;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #73501C;
   }
   
   /* Labels */
@@ -66,7 +64,7 @@
   
   /* Submit button */
   .form-button {
-    background-color: #007bff;
+    background-color: #73501C;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -78,7 +76,7 @@
   }
   
   .form-button:hover {
-    background-color: #0056b3;
+    background-color: #73501cb5;
   }
   
   /* Error message style */
