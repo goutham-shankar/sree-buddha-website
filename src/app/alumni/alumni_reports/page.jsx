@@ -2,15 +2,17 @@ import React from "react";
 import "./page.css";
 const page = () => {
   return (
-    <div>
-      <h1>Alumni Reports</h1>
+    <div className="container">
+      <h1 className="heading">Alumni Reports</h1>
       <p className="details">
         ALUMNI MEET 2024 <br />
         Date: February 10th, 2024
         <br />
         Time: 10am
       </p>
-      <img src="/assets/images/alumni/Collage-1.jpg" alt="" />
+      <div className="img-div">
+      <img src="/assets/images/alumni/Collage-1.jpg" className="img-tag4" alt="" />
+      </div>
       <p className="content">
         Alumni Association, Sree Buddha College of Engineering, Conducted an
         alumni meet for the year 2024. Alumnus who is working in different
@@ -28,7 +30,7 @@ const page = () => {
         audiences and they appreciated the talents of students. It was followed
         by a delicious lunch and meeting ended by 1.30pm with greater
         expectations for the next year.
-        <br />
+        <br /><br/>
         Secretary
         <br />
         Alumni Association
@@ -55,9 +57,9 @@ const page = () => {
       <img
         src="/assets/images/alumni/Collage4.jpg"
         alt=""
-        className="img-tag"
+        className="img-tag4"
       />
-      <h4>Report on SANGAMAM 2018 (ALUMNI MEET 2018)</h4>
+      <h3>Report on SANGAMAM 2018 (ALUMNI MEET 2018)</h3>
       <p className="content">
         The Department of Computer Science & Engineering had organized an alumni
         meeting “Sangamam 2018” for all batches (2006 – 2018) on 1st December
@@ -73,7 +75,7 @@ const page = () => {
       <img
         src="/assets/images/alumni/11-1-300x225.jpg"
         alt=""
-        className="img-tag2"
+        className="img-tag4"
       />
       <div className="subheading">
         Electrical and Electronics Alumni Meet 2018
@@ -98,13 +100,13 @@ const page = () => {
         departments, faculty members and non-teaching staff of EEE Department
         attended the function.
       </p>
-      <img src="/assets/images/alumni/light.png" alt="" className="img-tag3" />
-      <h4>
+      <img src="/assets/images/alumni/light.png" alt="" className="img-tag4" />
+      <h3>
         Dr. Saji Varghese HOD of Mechanical Engineering Lightning the lamp
         ceremony., Department inaugurating the Alumni Meet
-      </h4>
-      <img src="/assets/images/alumni/group.jpg" alt="" className="img-tag3" />
-      <h4>Group Photo, Members Attended</h4>
+      </h3>
+      <img src="/assets/images/alumni/group.jpg" alt="" className="img-tag4" />
+      <h3>Group Photo, Members Attended</h3>
       <div className="subheading">
         Report on Alumni Meet by Department of Mechanical Engineering (22nd
         December 2018)
@@ -120,9 +122,9 @@ const page = () => {
         Prof. Amjith T R delivered the vote of thanks. The programme was
         concluded with a delicious lunch.
       </p>
-      <img src="/assets/images/alumni/IMG_9463.jpg" alt="" />
-      <img src="/assets/images/alumni/IMG_9488.jpg" alt="" />
-      <img src="/assets/images/alumni/IMG_9522.jpg" alt="" />
+      <img src="/assets/images/alumni/IMG_9463.jpg" alt="" className="img-tag4"/>
+      <img src="/assets/images/alumni/IMG_9488.jpg" alt="" className="img-tag4"/>
+      <img src="/assets/images/alumni/IMG_9522.jpg" alt="" className="img-tag4" />
       <div className="subheading">
         Report on Alumni Meet by Department of Biotechnology and Biochemical
         Engineering (20th October 2018)
@@ -135,39 +137,39 @@ const page = () => {
         NBA accreditation process and important role of alumni in the
         accreditation process.
       </p>
-      <li>
-        <ul>
+      <ul className="list1">
+        <li>
           Welcome address was given by Dr.J.R Anoop Raj, HoD, Department of
           Biotechnology & Biochemical Engineering in which he briefed the
           department progress, highlighted the department activities and
           facilities available in the department.
-        </ul>
-        <ul>
+        </li>
+        <li>
           Dr. S. Suresh Babu, Principal, Sree Buddha College of Engineering
           delivered the Presidential address in which he pointed the involvement
           of the Alumni in the NBA accreditation process and asked alumni to
           come forward with suggestions for our institutional growth.
-        </ul>
-        <ul>
+        </li>
+        <li>
           Shri K.K.Sivadasan, Treasurer, Sree Buddha Educational Society was
           present for the function and addressed the students with his valuable
           experiences and suggestion to the alumni.
-        </ul>
-        <ul>
+        </li>
+        <li>
           Dr.Malu Ravi, NBA coordinator of the Dept of BT & BCE gave the
           felicitation wherein she explained about NBA and the importance of NBA
           accreditation in technical institutions.
-        </ul>
-        <ul>
+        </li>
+        <li>
           Prof. Thomas Mathew, Head of Human Resource department also addressed
           the alumni through his felicitation speech.
-        </ul>
-        <ul>
+        </li>
+        <li>
           Finally, at the end of inaugural session, the vote of thanks was given
           by Ms. Anju Raj, Assistant Professor, Biotechnology& Biochemical
           Engineering.
-        </ul>
-      </li>
+        </li>
+      </ul>
       <p className="content">
         Some of the students from our department also attended the function.
         After the inaugural session, alumni’s shared their nostalgic thoughts.
@@ -186,14 +188,15 @@ const page = () => {
         hospitality and food.
       </p>
       <h3>Alumni Meet photos</h3>
-      <img src="/assets/images/alumni/alumni1.jpg" alt="" />
-      <img src="/assets/images/alumni/alumni2.jpg" alt="" />
-      <img src="/assets/images/alumni/alumni3.jpg" alt="" />
-      <h4>Group Photo BT Alumni</h4>
+      <img src="/assets/images/alumni/alumni1.jpg" alt=""  className="img-tag4"/>
+      <img src="/assets/images/alumni/alumni2.jpg" alt="" className="img-tag4" />
+      <img src="/assets/images/alumni/alumni3.jpg" alt="" className="img-tag4"/>
+      <h3 className="h3-tag"> Group Photo BT Alumni</h3>
       <div className="subheading">
         Alumni Report on Alumni Meet by Department of Civil Engineering (22nd
         September 2018)
-        <img src="/assets/images/alumni/alumni4.jpg" alt="" />
+        </div>
+        <img src="/assets/images/alumni/alumni4.jpg" alt="" className="img-tag4" />
         <p className="content">
           Third Alumni meet conducted by the department was inaugurated by Mr. K
           K Sivadasan, Treasurer, SBCE. The meet was presided by Dr. E K Bhass,
@@ -229,8 +232,8 @@ const page = () => {
           volunteered to render services for the benefit of the current students
           of SBCE.
         </p>
-        <img src="/assets/images/alumni/CSE-Alu-768x425.jpg" alt="" />
-      </div>
+        <img src="/assets/images/alumni/CSE-Alu-768x425.jpg" alt="" className="img-tag4" />
+      
     </div>
   );
 };
