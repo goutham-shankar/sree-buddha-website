@@ -11,6 +11,33 @@ function Page() {
         <p>SBCE welcomes international students and NRI candidates to its various undergraduate and postgraduate programs. The admission process is designed to be straightforward and student-friendly.</p>
       </section>
 
+      <section className="college-showcase">
+        <h2>Experience SBCE</h2>
+        <div className="image-slider">
+          <div className="slider-item">
+            <img src="/images/college-main.jpg" alt="SBCE Main Building" />
+            <div className="image-caption">
+              <h3>Main Campus Building</h3>
+              <p>Our iconic main building featuring modern architecture</p>
+            </div>
+          </div>
+          <div className="slider-item">
+            <img src="/images/college-lab.jpg" alt="Advanced Research Lab" />
+            <div className="image-caption">
+              <h3>Research Facilities</h3>
+              <p>State-of-the-art laboratories for hands-on learning</p>
+            </div>
+          </div>
+          <div className="slider-item">
+            <img src="/images/college-campus.jpg" alt="Campus Life" />
+            <div className="image-caption">
+              <h3>Campus Life</h3>
+              <p>Vibrant campus atmosphere with modern amenities</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="why-choose-section">
         <h2>Why Choose SBCE</h2>
         <div className="features-grid">
@@ -52,6 +79,7 @@ function Page() {
         </div>
       </section>
 
+
       <section className="eligibility-section">
         <h2>Eligibility Criteria</h2>
         <div className="criteria-list">
@@ -88,9 +116,6 @@ function Page() {
 
             <div className="programs-grid">
               <div className="program-card">
-                <div className="program-icon">
-                  <i className="fas fa-laptop-code"></i>
-                </div>
                 <div className="program-details">
                   <h4>Computer Science and Engineering</h4>
                   <span className="program-duration">4 Years • B.E.</span>
@@ -98,9 +123,6 @@ function Page() {
               </div>
 
               <div className="program-card">
-                <div className="program-icon">
-                  <i className="fas fa-microchip"></i>
-                </div>
                 <div className="program-details">
                   <h4>Electronics and Communication</h4>
                   <span className="program-duration">4 Years • B.E.</span>
@@ -108,9 +130,6 @@ function Page() {
               </div>
 
               <div className="program-card">
-                <div className="program-icon">
-                  <i className="fas fa-bolt"></i>
-                </div>
                 <div className="program-details">
                   <h4>Electrical and Electronics</h4>
                   <span className="program-duration">4 Years • B.E.</span>
@@ -118,9 +137,6 @@ function Page() {
               </div>
 
               <div className="program-card">
-                <div className="program-icon">
-                  <i className="fas fa-cogs"></i>
-                </div>
                 <div className="program-details">
                   <h4>Mechanical Engineering</h4>
                   <span className="program-duration">4 Years • B.E.</span>
@@ -128,9 +144,6 @@ function Page() {
               </div>
 
               <div className="program-card">
-                <div className="program-icon">
-                  <i className="fas fa-network-wired"></i>
-                </div>
                 <div className="program-details">
                   <h4>Information Technology</h4>
                   <span className="program-duration">4 Years • B.Tech</span>
@@ -138,9 +151,6 @@ function Page() {
               </div>
 
               <div className="program-card">
-                <div className="program-icon">
-                  <i className="fas fa-industry"></i>
-                </div>
                 <div className="program-details">
                   <h4>Chemical Engineering</h4>
                   <span className="program-duration">4 Years • B.Tech</span>
@@ -158,9 +168,6 @@ function Page() {
 
             <div className="programs-grid">
               <div className="program-card">
-                <div className="program-icon">
-                  <i className="fas fa-database"></i>
-                </div>
                 <div className="program-details">
                   <h4>Data Science</h4>
                   <span className="program-duration">2 Years • M.Tech</span>
@@ -168,9 +175,6 @@ function Page() {
               </div>
 
               <div className="program-card">
-                <div className="program-icon">
-                  <i className="fas fa-chart-line"></i>
-                </div>
                 <div className="program-details">
                   <h4>Business Administration</h4>
                   <span className="program-duration">2 Years • MBA</span>
@@ -178,9 +182,6 @@ function Page() {
               </div>
 
               <div className="program-card">
-                <div className="program-icon">
-                  <i className="fas fa-satellite-dish"></i>
-                </div>
                 <div className="program-details">
                   <h4>Communication Systems</h4>
                   <span className="program-duration">2 Years • M.E.</span>
@@ -188,9 +189,6 @@ function Page() {
               </div>
 
               <div className="program-card">
-                <div className="program-icon">
-                  <i className="fas fa-memory"></i>
-                </div>
                 <div className="program-details">
                   <h4>VLSI Design</h4>
                   <span className="program-duration">2 Years • M.E.</span>
@@ -198,9 +196,6 @@ function Page() {
               </div>
 
               <div className="program-card">
-                <div className="program-icon">
-                  <i className="fas fa-robot"></i>
-                </div>
                 <div className="program-details">
                   <h4>Manufacturing Engineering</h4>
                   <span className="program-duration">2 Years • M.E.</span>
@@ -208,9 +203,6 @@ function Page() {
               </div>
 
               <div className="program-card">
-                <div className="program-icon">
-                  <i className="fas fa-project-diagram"></i>
-                </div>
                 <div className="program-details">
                   <h4>Software Engineering</h4>
                   <span className="program-duration">2 Years • M.E.</span>
