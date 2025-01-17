@@ -13,8 +13,8 @@ export default function LandingPage() {
 
   useEffect(() => {
     AOS.init({
-        once: true,
-    //   disable: "phone",
+      once: true,
+      //   disable: "phone",
       duration: 700,
       easing: "ease-out-cubic",
     });
@@ -26,17 +26,23 @@ export default function LandingPage() {
 
 
       {/* <img className="college_background" src={"/assets/images/sree_buddha_college_image1.png"} alt="" /> */}
-      <video className="college_background" loop autoPlay muted>
-      <source src="/assets/sbce-home.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-      </video>
+      <div className="college_background">
+        <video className='video' loop autoPlay muted>
+          <source src="/assets/videos/sree_buddha.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="black_overlay"></div>
+      </div>
+
+
+
 
       <div className="social_media_links">
         <a href=""><img src={"/assets/images/home images/instagram.png"} alt="" /></a>
-        <a href=""><img src={"/assets/images/home images/youtube.png" }alt="" /></a>
+        <a href=""><img src={"/assets/images/home images/youtube.png"} alt="" /></a>
         <a href=""><img src={"/assets/images/home images/whatsapp.png"} alt="" /></a>
         <a href=""><img src={"/assets/images/home images/facebook.png"} alt="" /></a>
-        <a href=""><img src={"/assets/images/home images/x.png" } /></a>
+        <a href=""><img src={"/assets/images/home images/x.png"} /></a>
 
       </div>
 

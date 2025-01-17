@@ -1,0 +1,81 @@
+.vlab {
+    padding: 50px 90px;
+    font-family: 'Poppins';
+}
+.lab-team ul{
+    list-style: none;
+}
+
+/* Media query for laptops */
+@media (max-width: 1800px) {
+    .vlab {
+        padding: 40px 60px;
+    }
+    .vlab-intro{
+        margin-bottom: 20px;
+    }
+    .vlab-intro h2 {
+        font-size: 36px;
+        color: #73501c;
+        margin-bottom: 20px;
+    }
+    .vlab-intro p {
+        font-size: 18px;
+    }
+    .lab-team h3 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+    .lab-team h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Media query for tablets */
+@media (max-width: 900px) {
+    .vlab {
+        padding: 30px 40px;
+    }
+    .vlab-intro h2 {
+        font-size: 32px;
+    }
+    .vlab-intro p {
+        font-size: 16px;
+    }
+    .lab-team h3 {
+        font-size: 24px;
+    }
+    .lab-team h4 {
+        font-size: 16px;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 543px) {
+    .vlab {
+        padding: 40px;
+    }
+    .vlab-intro h2 {
+        font-size: 28px;
+        text-align: left;
+    }
+    .vlab-intro p {
+        font-size: 16px;
+    }
+    .lab-team h3 {
+        font-size: 22px;
+        text-align: left;
+    }
+    .lab-team h4 {
+        font-size: 18px;
+        text-align: left;
+    }
+    .lab-team ul {
+        padding: 0;
+    }
+    .lab-team ul li {
+        font-size: 14px;
+    }
+}
+ 

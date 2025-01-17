@@ -4,7 +4,7 @@ import "./page.css";
 
 const page = () => {
   return (
-    <div className="container">
+    <div className="containers">
       <title>NBA Accreditation SBCE</title>
       <h1 className="page_heading">NBA</h1>
       <div className="line"></div>
@@ -85,7 +85,7 @@ const page = () => {
         </li>
         <li> Promotes intra and inter-Institutional interactions.</li>
       </ul>
-      <a href="https://www.nbaind.org/Error/Error_404?aspxerrorpath=/accreditation.aspx">
+      <a className= "a-tags" href="https://www.nbaind.org/Error/Error_404?aspxerrorpath=/accreditation.aspx">
         Courtesy: NBA Website
       </a>
       <div className="img-tag">

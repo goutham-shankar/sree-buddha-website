@@ -1,0 +1,118 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    font-family: Arial, sans-serif;
+    background-color: #E6E6E6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:30px;
+    padding-top:30px;
+  }
+  
+  /* Form container */
+  .form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    margin: 20px;
+  }
+  
+  /* Form title */
+  .form-title {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #73501C;
+  }
+  
+  /* Labels */
+  .form-label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  
+  /* Input fields and select */
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  textarea.form-input {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  /* Radio buttons */
+  .form-radio {
+    margin-right: 10px;
+  }
+  
+  /* Submit button */
+  .form-button {
+    background-color: #73501C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .form-button:hover {
+    background-color: #73501cb5;
+  }
+  
+  /* Error message style */
+  .error-message {
+    font-size: 12px;
+    color: #d9534f;
+  }
+  
+  /* File input style */
+  input[type="file"] {
+    padding: 5px;
+    margin: 10px 0;
+  }
+  
+  /* Section spacing */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 20px;
+      width: 100%;
+    }
+  
+    .form-title {
+      font-size: 20px;
+    }
+  
+    .form-button {
+      font-size: 14px;
+    }
+  }
+  

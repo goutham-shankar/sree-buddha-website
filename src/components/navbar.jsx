@@ -47,13 +47,13 @@ export default function Navbar() {
     {
       name: "Academics",
       links: [
-        { name: "Advisory System", link: "/academics/advisory_system" },
+        { name: "Advisory System", link: "/academics/advisory_systems" },
         { name: "Academic Calendar", link: "/academics/academic_calendar" },
         { name: "Professional Bodies", link: "/academics/professional_bodies" },
         { name: "Handbook", link: "/academics/handbook" },
         { name: "NSS", link: "/academics/nss" },
-        { name: "Syllabus", link: "/academics/syllabus" },
-        { name: "Campus Newsletter", link: "/academics/campus_newsletter" },
+        { name: "Syllabus", link: "https://ktu.edu.in/" },
+        { name: "Campus Newsletter", link: "/academics/newsletter" },
       ],
     },
     {
@@ -77,7 +77,7 @@ export default function Navbar() {
         { name: "Undergraduate", link: "/admissions/undergraduate" },
         { name: "Postgraduate", link: "/admissions/postgraduate" },
         { name: "PhD Research", link: "/admissions/phd_research" },
-        { name: "International Students Admission", link: "/admissions/international_students" },
+        { name: "International Students Admission", link: "/admissions/international" },
       ],
     },
     {
@@ -130,9 +130,9 @@ export default function Navbar() {
             { name: "Cycle3", link: "/accreditation/NAAC/Cycle3" },
           ]
         },
-        { name: "NBA", link: "/accreditation/nba" },
-        { name: "NIRF", link: "/accreditation/nirf" },
-        { name: "ARIIA", link: "/accreditation/ariia" },
+        { name: "NBA", link: "/accreditation/NBA" },
+        { name: "NIRF", link: "/accreditation/NIRF" },
+        { name: "ARIIA", link: "/accreditation/ARIIA" },
       ],
     },
     {
@@ -169,7 +169,7 @@ export default function Navbar() {
           <a href="#" className="important_link"> <img src="/assets/images/home/international_admissions.png" alt="" /> Internation Admissions</a>
           <a href="#" className="important_link"> <img src="/assets/images/home/careers.png" alt="" /> CareersSBCE</a>
           <a href="#" className="important_link"> <img src="/assets/images/home/fees.png" alt="" /> Fees Payment</a>
-          <a href="" className="important_link">  <img src="/assets/images/home/university.png" alt="" /> University</a>
+          <a href="" className="important_link last_link">  <img src="/assets/images/home/university.png" alt="" /> University</a>
           <a href="#" className="important_links_button">admissions</a>
           {/* <a href="">Result Analysis</a> */}
         </div>
