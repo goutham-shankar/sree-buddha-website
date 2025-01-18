@@ -166,7 +166,7 @@ export default function Navbar() {
       </div>
       <div className="navbar_right">
         <div className="important_links">
-          <a href="#" className="important_link"> <img src="/assets/images/home/international_admissions.png" alt="" /> International Admission</a>
+          <a href="/admissions/international2" className="important_link"> <img src="/assets/images/home/international_admissions.png" alt="" /> International Admission</a>
           <a href="#" className="important_link"> <img src="/assets/images/home/careers.png" alt="" /> CareersSBCE</a>
           <a href="#" className="important_link"> <img src="/assets/images/home/fees.png" alt="" /> Fees Payment</a>
           <a href="" className="important_link last_link">  <img src="/assets/images/home/university.png" alt="" /> University</a>
