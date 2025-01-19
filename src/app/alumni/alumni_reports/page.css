@@ -32,29 +32,27 @@
   max-width: 50%;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.img-tag2{
-  height: auto;
-  width: 50%;
-  height: 50%;
-  border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
+
 .img-tag3 {
   height: auto;
   max-width: 55%;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 img[src*="11-1-300x225.jpg"] {
   max-width: 65%;
+  background: #fff;
+  padding: 10px;
 }
 
 .content {
