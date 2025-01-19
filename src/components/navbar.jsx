@@ -141,7 +141,7 @@ export default function Navbar() {
         { name: "Alumni Registration", link: "/alumni/registration" },
         { name: "Executive Body", link: "/alumni/executive_body" },
         { name: "IPR", link: "/alumni/ipr" },
-        { name: "Alumni Reports", link: "/alumni/reports" },
+        { name: "Alumni Reports", link: "/alumni/alumni_reports" },
       ],
     },
     {
