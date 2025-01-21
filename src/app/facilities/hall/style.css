@@ -4,7 +4,8 @@
     font-weight: 400;
     overflow-x: hidden;
     font-size: 18px;
-    height: 100vh;
+    /* height: 100vh; */
+    overflow-x: hidden;
 }
 .title {
     font-family: 'Poppins', sans-serif;
