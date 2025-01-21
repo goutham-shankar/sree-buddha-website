@@ -11,22 +11,31 @@
     color: #333;
     font-size: 16px;
     line-height: 1.5;
-    padding: 20px; /* Added some space around the body */
   }
   
-  h1 {
-    color: #74501C;
-    font-size: 2.5rem;
-    font-weight: bold;
+  /* Header styles (if you have a header, add its styles here) */
+  header {
+    /* Example header styling, customize as needed */
+    padding: 20px;
+    background-color: #2980b9;
+    color: #fff;
     text-align: center;
-    margin-bottom: 20px;
+  }
+  
+  /* Footer styles (if you have a footer, add its styles here) */
+  footer {
+    /* Example footer styling, customize as needed */
+    /* padding: 20px; */
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
   }
   
   /* Calendar container */
   .calendar-container {
     width: 90%;
     max-width: 1200px;
-    margin: 40px auto; /* Added margin for space around the container */
+    margin: 40px auto; /* Space above and below the calendar container */
     padding: 30px;
     background-color: #fff;
     border-radius: 8px;
