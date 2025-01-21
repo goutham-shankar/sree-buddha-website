@@ -1,46 +1,79 @@
 /* General Styles */
 
-
 .container {
-    width: 100vw;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.main {
-    padding-left: 10%;
-    padding-right: 10%;
-    background-color: #e3e3e3;
+.heading {
+    color: #73510C;
+    font-size: 3rem;
+    font-weight: 750;
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.heading:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #73510C;
 }
 
 .pic {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: green;
-    
+    margin: 40px auto;
+    max-width:90dvw;
 }
 
 .pic img {
-    /* height: 1; */
     width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(161, 99, 99, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Paragraph styles */
+.pic img:hover {
+    transform: scale(1.02);
+}
+
 .paragraph {
+    text-align: justify;
     font-family: 'Poppins', sans-serif;
-    /* padding-left: 8%; */
-    /* padding-right: 8%; */
+    font-size: 1.18rem;
+    width: 90%;
+    margin: 30px auto;
+    padding: 40px;
+    /* background-color: #ffffff; */
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(77, 67, 55, 0.1);
+    line-height: 1.8;
+    color: #333;
 }
 
 .paragraph b {
-    font-size: 1.5rem; 
+    font-size: 2.2rem; 
 }
 
 .name {
-    font-size: 5rem;
+    font-size: 2.5rem;
     font-weight: 700;
+    color: #73510C;
+    display: inline;
+    margin-bottom: 0;
 }
 
-/* For tablets and medium devices */
 @media only screen and (max-width: 1200px) {
     .profile {
         font-size: 4vw; 
@@ -48,14 +81,7 @@
         text-indent: 50px;
     }
 
-    .main {
-        padding-left: 8%;
-        padding-right: 8%;
-    }
-
     .pic img {
-        /* width: 80%; 
-        max-width: 500px; */
         width: 70vw;
     }
 
@@ -72,16 +98,6 @@
         text-indent: 0px;
     }
 
-    .main {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    /* .pic img {
-        width: 100%; 
-        max-width: 500px; 
-    } */
-
     .paragraph b {
         font-size: 1rem;
     }
@@ -92,11 +108,29 @@
 }
 
 @media (max-width:480px) {
-
-    .pic img{
-        height: 40vw;
-        width: 80vw;
+    .heading {
+        font-size: 2rem;
     }
+
+    .paragraph {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+        font-size: 1rem;
+    }
+
+    .name {
+        font-size: 1.8rem;
+    }
+
+    .pic {
+        margin: 20px auto;
+    }
+
+    .pic img {
+        border-radius: 15px;
+    }
+
     .container
     {
         font-size: 14px;
