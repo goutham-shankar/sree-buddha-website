@@ -12,10 +12,10 @@ export default function NavbarMobile() {
 
     function toggleSubmenu(menu_link_index) {
         // let temp = [...visibleSubMenus];
-        console.log(link_map[menu_link_index].visible)
+        // console.log(link_map[menu_link_index].visible)
         let temp = [...link_map]
         if (temp[menu_link_index].visible) {
-            console.log("visible")
+            // console.log("visible")
             temp[menu_link_index].visible = false
         } else {
             temp[menu_link_index].visible = true
@@ -26,7 +26,7 @@ export default function NavbarMobile() {
     function toggleSubmenu2(index1, index2) {
 
         let temp = [...link_map]
-        console.log(temp[index1].links[index2])
+        // console.log(temp[index1].links[index2])
         if (temp[index1].links[index2].visible) {
             temp[index1].links[index2].visible = false
         } else {
@@ -221,7 +221,7 @@ export default function NavbarMobile() {
                                     <ul>
                                         {
                                             menu_link.links.map((menu_linkl2, index2) => {
-                                                console.log(menu_linkl2.links)
+                                                // console.log(menu_linkl2.links)
                                                 if (menu_linkl2.links == undefined) {
                                                     return (
                                                         <Link key = {index2} className="sidebar_submenu_link" href={menu_linkl2.link}>{menu_linkl2.name}</Link>
