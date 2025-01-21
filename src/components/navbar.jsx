@@ -93,7 +93,7 @@ export default function Navbar() {
     {
       name: "Cells and Chapters",
       links: [
-        { name: "Various Cells and Committees", link: "/cells_and_chapters/various_cells" },
+        { name: "Various Cells and Committees", link: "/cells_and_chapters/student-clubs" },
         { name: "IEEE", link: "/cells_and_chapters/ieee" },
         { name: "IE(I)", link: "/cells_and_chapters/ie_i" },
         { name: "SAE India", link: "/cells_and_chapters/sae_india" },
@@ -102,7 +102,7 @@ export default function Navbar() {
         { name: "Virtual Lab", link: "/cells_and_chapters/virtual_lab" },
         { name: "IEDC", link: "/cells_and_chapters/iedc" },
         { name: "NPTEL", link: "/cells_and_chapters/nptel" },
-        { name: "IIT Remote Center", link: "/cells_and_chapters/iit_remote_center" },
+        { name: "IIT Remote Center", link: "/cells_and_chapters/remote_center" },
       ],
     },
     {
