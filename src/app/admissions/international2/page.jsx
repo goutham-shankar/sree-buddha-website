@@ -44,8 +44,8 @@ function Page() {
           <div className="feature-item">
             <i className="fas fa-award"></i>
             <h3>Academic Excellence</h3>
-            <p>Consistently ranked among top engineering colleges in India with NAAC 'A++' grade accreditation</p>
-          </div>
+            <p>Consistently ranked among top engineering colleges in India with NAAC &apos;A++&apos; grade accreditation</p>
+            </div>
 
           <div className="feature-item">
             <i className="fas fa-globe-asia"></i>

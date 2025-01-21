@@ -33,7 +33,7 @@
 }
 .paragraph{
     font-family: 'poppins';
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .faculty-table {
@@ -119,9 +119,12 @@
     font-weight: 600;
     margin-bottom: 5px;
 }
+.list1{
+    padding-left: 2%;
+}
 @media(max-width:1200px){
-    .image{
-
+    .list1{
+        padding-left: 4%;
     }
 }
 
@@ -210,7 +213,10 @@
     .image img{
         height: 55vw;
     }
-    
+    .list1 ul{
+        /* color: red; */
+        padding-left: 6%;
+    }
 
 }
 @media (max-width:380px){
