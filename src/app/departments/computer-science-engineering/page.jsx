@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 // import DepartmentNavbar from '@/components/departments/department_navbar'
 
