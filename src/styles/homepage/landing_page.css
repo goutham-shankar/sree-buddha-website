@@ -64,12 +64,17 @@
     z-index: -1; /* Ensure it sits behind other content */
     background-color: black; /* Fallback color in case the video doesn't load */
     overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* background-color: red; */
     /* position: relative; */
 }
 
 .video{
     opacity: 0.8;
+
 }
 
 .landing_page_content{
