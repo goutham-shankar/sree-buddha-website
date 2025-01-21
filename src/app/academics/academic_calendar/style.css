@@ -11,6 +11,7 @@
     color: #333;
     font-size: 16px;
     line-height: 1.5;
+    padding: 20px; /* Added some space around the body */
   }
   
   h1 {
@@ -25,12 +26,11 @@
   .calendar-container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto; /* Added margin for space around the container */
     padding: 30px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 2%;
   }
   
   .search-container {
