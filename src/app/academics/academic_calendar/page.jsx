@@ -6,9 +6,9 @@ function Page() {
   const [searchTerm, setSearchTerm] = useState('');
 
   const pdfFiles = [
-    { name: "Academic Calendar 2023-24", path: "/pdfs/academic-calendar-2023-24.pdf" },
-    { name: "Academic Calendar 2022-23", path: "/pdfs/document4.pdf" },
-    { name: "Academic Calendar 2021-22", path: "/pdfs/document5.pdf" },
+    
+    
+    
     { name: "Academic Calendar 2020-21", path: "/pdfs/document1.pdf" },
     { name: "Academic Calendar 2019-20", path: "/pdfs/document2.pdf" },
     { name: "Academic Calendar 2018-19", path: "/pdfs/document3.pdf" },
