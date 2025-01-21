@@ -47,16 +47,15 @@
     margin-bottom: 20px;    
 }
 .content ul {
-   padding-left: 5%;
+   padding-left: 2%;
     font-weight: 400;
 }
 
 .content ul li {
-    font-weight: 400;
-    padding-left: 20px; /* Space for the arrow */
-    text-indent: -10px; /* Negative indent to align the text properly */
-    font-weight: 400;
-    line-height: 1.5; /* Adjust line height for better readability */
+    font-weight: 500;
+    /* padding-left: 2%;
+    text-indent: -10px; 
+    line-height: 1.5;  */
 }
 
 
@@ -110,6 +109,9 @@
         width: 80vw;
         height: 50vw;
     }
+    .content{
+        padding-left: 2%;
+    }
 }
 @media (max-width:800px){
     
@@ -139,6 +141,9 @@
     }
     .paragraph{
         font-size: 16px
+    }
+    .content{
+        padding-left: 5%;
     }
 }
 

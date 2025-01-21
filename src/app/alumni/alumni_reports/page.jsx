@@ -11,7 +11,11 @@ const page = () => {
         Time: 10am
       </p>
       <div className="img-div">
-      <img src="/assets/images/alumni/Collage-1.jpg" className="img-tag4" alt="" />
+        <img
+          src="/assets/images/alumni/Collage-1.jpg"
+          className="img-tag4"
+          alt=""
+        />
       </div>
       <p className="content">
         Alumni Association, Sree Buddha College of Engineering, Conducted an
@@ -30,7 +34,8 @@ const page = () => {
         audiences and they appreciated the talents of students. It was followed
         by a delicious lunch and meeting ended by 1.30pm with greater
         expectations for the next year.
-        <br /><br/>
+        <br />
+        <br />
         Secretary
         <br />
         Alumni Association
@@ -54,11 +59,13 @@ const page = () => {
         the session. An online feedback was also collected. The virtual meet
         ended at 9.20 pm.
       </p>
-      <img
-        src="/assets/images/alumni/Collage4.jpg"
-        alt=""
-        className="img-tag4"
-      />
+      <div className="img-div">
+        <img
+          src="/assets/images/alumni/Collage4.jpg"
+          alt=""
+          className="img-tag4"
+        />
+      </div>
       <h3>Report on SANGAMAM 2018 (ALUMNI MEET 2018)</h3>
       <p className="content">
         The Department of Computer Science & Engineering had organized an alumni
@@ -72,11 +79,13 @@ const page = () => {
         Students and staff shared the memories, most of them volunteered to
         render services for the benefit of the current students of SBCE
       </p>
-      <img
-        src="/assets/images/alumni/11-1-300x225.jpg"
-        alt=""
-        className="img-tag4"
-      />
+      <div className="img-div">
+        <img
+          src="/assets/images/alumni/11-1-300x225.jpg"
+          alt=""
+          className="img-tag2"
+        />
+      </div>
       <div className="subheading">
         Electrical and Electronics Alumni Meet 2018
       </div>
@@ -100,12 +109,24 @@ const page = () => {
         departments, faculty members and non-teaching staff of EEE Department
         attended the function.
       </p>
-      <img src="/assets/images/alumni/light.png" alt="" className="img-tag4" />
+      <div className="img-div">
+        <img
+          src="/assets/images/alumni/light.png"
+          alt=""
+          className="img-tag4"
+        />
+      </div>
       <h3>
         Dr. Saji Varghese HOD of Mechanical Engineering Lightning the lamp
         ceremony., Department inaugurating the Alumni Meet
       </h3>
-      <img src="/assets/images/alumni/group.jpg" alt="" className="img-tag4" />
+      <div className="img-div">
+        <img
+          src="/assets/images/alumni/group.jpg"
+          alt=""
+          className="img-tag4"
+        />
+      </div>
       <h3>Group Photo, Members Attended</h3>
       <div className="subheading">
         Report on Alumni Meet by Department of Mechanical Engineering (22nd
@@ -122,9 +143,30 @@ const page = () => {
         Prof. Amjith T R delivered the vote of thanks. The programme was
         concluded with a delicious lunch.
       </p>
-      <img src="/assets/images/alumni/IMG_9463.jpg" alt="" className="img-tag4"/>
-      <img src="/assets/images/alumni/IMG_9488.jpg" alt="" className="img-tag4"/>
-      <img src="/assets/images/alumni/IMG_9522.jpg" alt="" className="img-tag4" />
+      <div className="img-div1">
+        {/* <div className="img-div"> */}
+          <img
+            src="/assets/images/alumni/IMG_9463.jpg"
+            alt=""
+            className="img-tag3"
+          />
+        {/* </div> */}
+
+        {/* <div className="img-div"> */}
+          <img
+            src="/assets/images/alumni/IMG_9488.jpg"
+            alt=""
+            className="img-tag3"
+          />
+        {/* </div> */}
+        {/* <div className="img-div"> */}
+          <img
+            src="/assets/images/alumni/IMG_9522.jpg"
+            alt=""
+            className="img-tag3"
+          />
+        {/* </div> */}
+      </div>
       <div className="subheading">
         Report on Alumni Meet by Department of Biotechnology and Biochemical
         Engineering (20th October 2018)
@@ -188,52 +230,80 @@ const page = () => {
         hospitality and food.
       </p>
       <h3>Alumni Meet photos</h3>
-      <img src="/assets/images/alumni/alumni1.jpg" alt=""  className="img-tag4"/>
-      <img src="/assets/images/alumni/alumni2.jpg" alt="" className="img-tag4" />
-      <img src="/assets/images/alumni/alumni3.jpg" alt="" className="img-tag4"/>
+      <div className="img-div">
+        <img
+          src="/assets/images/alumni/alumni1.jpg"
+          alt=""
+          className="img-tag4"
+        />
+      </div>
+      <div className="img-div">
+        <img
+          src="/assets/images/alumni/alumni2.jpg"
+          alt=""
+          className="img-tag4"
+        />
+      </div>
+      <div className="img-div">
+        <img
+          src="/assets/images/alumni/alumni3.jpg"
+          alt=""
+          className="img-tag4"
+        />
+      </div>
       <h3 className="h3-tag"> Group Photo BT Alumni</h3>
       <div className="subheading">
         Alumni Report on Alumni Meet by Department of Civil Engineering (22nd
         September 2018)
-        </div>
-        <img src="/assets/images/alumni/alumni4.jpg" alt="" className="img-tag4" />
-        <p className="content">
-          Third Alumni meet conducted by the department was inaugurated by Mr. K
-          K Sivadasan, Treasurer, SBCE. The meet was presided by Dr. E K Bhass,
-          PG Dean, Civil Dept and Dr. GouriAntherjanam, HoD, Civil Department,
-          felicitated the meeting. Ms. Sreelekshmi S, Asst. Professor, Civil
-          Department, welcomed the gathering. A total of 24 alumni were present
-          for the function.Sri K K Sivadasan stressed the importance of alumni
-          meeting and he requested the gathering to strengthen and continue
-          meeting every year. Dr. E K Bhass, gave an inspiring speech and advice
-          them to soar great heights and make SBCE proud.Dr. GouriAntherjanam
-          presented the ongoing activities and status of the department. Mr.
-          Ashok Mathew, Asst. Professor, Civil Department gave a presentation on
-          NBA activities and made the alumni aware of the Vision, Mission and
-          PEOs of the department.Gathering decided to create a ‘WHATSAPP’ group
-          named ‘CE Alumni Association SBCE’ for the Alumni association of Civil
-          Department and to accommodate the group with Alumni Association office
-          bearers and four members from each batch (2boys and 2 girls). Then
-          22nd December of every year was fixed as Alumni day for Civil
-          Department. Ms. NamithaChandran, Asst. Professor, Civil Department
-          delivered Vote of Thanks and the meeting was dispersed for the lunch.{" "}
-        </p>
-        <div className="subheading">Report on Sangamam 2018</div>
-        <p className="content">
-          The Dept. of Computer Science & Engineering had organized an alumni
-          meeting “Sangamam 2018” for all batches (2006- 2018) on 1st December
-          2018 at the Seminar Hall, CS block. The meeting started at 10.00 a.m.
-          with a prayer. Dr. S.V.Annlin Jeba, HOD, Department of CSE welcomed
-          the gathering. Presidential address was delivered by Dr. S.Suresh
-          Babu, Principal, SBCE. The meeting was inaugurated by Sri K K
-          Sivadasan, Treasurer, Sree Buddha Educational Society. 46 alumni from
-          all batches and teachers who had worked here are participated in the
-          function. Students and staff shared the memories, most of them
-          volunteered to render services for the benefit of the current students
-          of SBCE.
-        </p>
-        <img src="/assets/images/alumni/CSE-Alu-768x425.jpg" alt="" className="img-tag4" />
-      
+      </div>
+      <div className="img-div">
+        <img
+          src="/assets/images/alumni/alumni4.jpg"
+          alt=""
+          className="img-tag4"
+        />
+      </div>
+      <p className="content">
+        Third Alumni meet conducted by the department was inaugurated by Mr. K K
+        Sivadasan, Treasurer, SBCE. The meet was presided by Dr. E K Bhass, PG
+        Dean, Civil Dept and Dr. GouriAntherjanam, HoD, Civil Department,
+        felicitated the meeting. Ms. Sreelekshmi S, Asst. Professor, Civil
+        Department, welcomed the gathering. A total of 24 alumni were present
+        for the function.Sri K K Sivadasan stressed the importance of alumni
+        meeting and he requested the gathering to strengthen and continue
+        meeting every year. Dr. E K Bhass, gave an inspiring speech and advice
+        them to soar great heights and make SBCE proud.Dr. GouriAntherjanam
+        presented the ongoing activities and status of the department. Mr. Ashok
+        Mathew, Asst. Professor, Civil Department gave a presentation on NBA
+        activities and made the alumni aware of the Vision, Mission and PEOs of
+        the department.Gathering decided to create a ‘WHATSAPP’ group named ‘CE
+        Alumni Association SBCE’ for the Alumni association of Civil Department
+        and to accommodate the group with Alumni Association office bearers and
+        four members from each batch (2boys and 2 girls). Then 22nd December of
+        every year was fixed as Alumni day for Civil Department. Ms.
+        NamithaChandran, Asst. Professor, Civil Department delivered Vote of
+        Thanks and the meeting was dispersed for the lunch.{" "}
+      </p>
+      <div className="subheading">Report on Sangamam 2018</div>
+      <p className="content">
+        The Dept. of Computer Science & Engineering had organized an alumni
+        meeting “Sangamam 2018” for all batches (2006- 2018) on 1st December
+        2018 at the Seminar Hall, CS block. The meeting started at 10.00 a.m.
+        with a prayer. Dr. S.V.Annlin Jeba, HOD, Department of CSE welcomed the
+        gathering. Presidential address was delivered by Dr. S.Suresh Babu,
+        Principal, SBCE. The meeting was inaugurated by Sri K K Sivadasan,
+        Treasurer, Sree Buddha Educational Society. 46 alumni from all batches
+        and teachers who had worked here are participated in the function.
+        Students and staff shared the memories, most of them volunteered to
+        render services for the benefit of the current students of SBCE.
+      </p>
+      <div className="img-div">
+        <img
+          src="/assets/images/alumni/CSE-Alu-768x425.jpg"
+          alt=""
+          className="img-tag4"
+        />
+      </div>
     </div>
   );
 };
