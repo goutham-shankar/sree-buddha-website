@@ -166,7 +166,8 @@ export default function page() {
                  castes, creed and Nationality. The Minority Cell basically helps minority students including Christian,
                   Muslim, Buddhist, etc for their overall development <br /><br />
                   <div className="headingtwo">Objectives</div>
-                  <ul>
+                   <div className="list1">
+                   <ul>
                     <li>To enhance equal opportunities for the education of minorities.</li>
                     <li>To facilitate financial support to students from minority communities from State/Central governmental and other sources.</li>            
                     <li>Provide awareness among the minority students regarding various scholarships program of State /Central Government</li>   
@@ -176,8 +177,10 @@ export default function page() {
                     <li>To provide prompt counseling for any emotional emergencies arising on account of any event at the campus.</li>
                     <li>To ensure protection and reservation as provided in the constitution of India.</li>
                   </ul>
+                   </div>
                   <br /><br />
                   <div className="headingtwo">The Nature of Activities of the Cell</div>
+                  <div className="list1">
                   <ul>
                     <li>To collect reports and information of State Government and UGC’s orders on various aspects of 
                         education, employment of minority students.</li>
@@ -189,6 +192,7 @@ export default function page() {
                     <li>The Cell is actively engaged in coordinating and resolves the problems in the matter of conduct of coaching and other measures with a view to 
                         see that the education system succeeds in bringing to a level quantitatively as well as qualitatively indistinguishable from the level of the rest of the society.</li>
                   </ul>
+                  </div>
                   <br />
 
                   <div className="headingtwo">Minority Cell Committee</div>
@@ -268,11 +272,13 @@ export default function page() {
                         </div>
                    </div><br />
                 <div className="headingtwo">Activities of OBC Cell</div>
-                <ul>
+                 <div className="list1">
+                 <ul>
                     <li>Collect reports and information of State Government and UGC orders on various aspects of education, employment of OBC students</li>
                     <li>Circulate State Government and UGC decisions about different scholarship programs</li>
                     <li>Communicate with the students and motivate them for better future planning</li>
                 </ul>
+                 </div>
             {/*end of paragraph  */}
             </div><br /><br />
             <hr /><br />
@@ -332,20 +338,22 @@ export default function page() {
                         </div>
                   </div><br /><br />
                   The overall functions of SC/ST cell are as follows <br /><br />
-                       I. Advisory Committee on SCs/STs <br />
-                       II.Ensuring Reservation policies in regard to SCs/STs <br />
-                       III. Reservation Register for SCs/STs <br />
-                       IV.To ensure compliance of the orders of reservation issued and other benefits admissible from time 
-                        to time in favour of SC/ST <br />
-                       V.To ensure provisions for an environment where all such students feel safe and secure. <br />
-                       VI.To provide prompt counselling for any emotional emergencies arising on account of any events at the campus. <br />
-                       VII.To communicate with the UGC/ DoPT/ MHRD/ etc. with respect to supply of required information, answering queries and clearing doubts with 
-                                     respect to reservations data/information etc. <br />
-                       VIII.To arrange for special opportunities to enhance the career growth of SCs/STs students. <br />
-                       IX.To circulate State Government and UGC’s decisions about different scholarship programs. <br />
-                       X.To communicate with Office of the Commissioner for SC/ST in response of representations/ complaints <br />
+                <b>I</b>. Advisory Committee on SCs/STs <br />
+              <b>II</b>.Ensuring Reservation policies in regard to SCs/STs <br />
+                <b>III</b>. Reservation Register for SCs/STs <br />
+                <b>IV</b>.To ensure compliance of the orders of reservation issued and other benefits admissible from time 
+                to time in favour of SC/ST <br />
+               <b>V</b>.To ensure provisions for an environment where all such students feel safe and secure. <br />
+               <b>VI</b>.To provide prompt counselling for any emotional emergencies arising on account of any events at the campus. <br />
+               <b>VII</b>.To communicate with the UGC/ DoPT/ MHRD/ etc. with respect to supply of required information, answering queries and clearing doubts with 
+               respect to reservations data/information etc. <br />
+              <b> VIII</b>.To arrange for special opportunities to enhance the career growth of SCs/STs students. <br />
+               <b>IX</b>.To circulate State Government and UGC’s decisions about different scholarship programs. <br />
+              <b>X</b>. To communicate with Office of the Commissioner for SC/ST in response of representations/ complaints <br />
                                 
             </div>
+
+            
 
                 <br /><br />
        </div>

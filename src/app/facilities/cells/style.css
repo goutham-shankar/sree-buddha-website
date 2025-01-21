@@ -210,7 +210,10 @@
     .image img{
         height: 55vw;
     }
-    
+    .list1 ul{
+        /* color: red; */
+        padding-left: 6%;
+    }
 
 }
 @media (max-width:380px){
