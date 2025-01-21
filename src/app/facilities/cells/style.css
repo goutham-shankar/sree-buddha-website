@@ -119,9 +119,12 @@
     font-weight: 600;
     margin-bottom: 5px;
 }
+.list1{
+    padding-left: 2%;
+}
 @media(max-width:1200px){
-    .image{
-
+    .list1{
+        padding-left: 4%;
     }
 }
 
