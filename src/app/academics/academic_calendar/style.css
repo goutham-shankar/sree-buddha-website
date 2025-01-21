@@ -14,7 +14,7 @@
   }
   
   h1 {
-    color: #2980b9;
+    color: #74501C;
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
@@ -40,7 +40,7 @@
   
   .search-icon {
     font-size: 1.2rem;
-    color: #2980b9;
+    color: #e09628;
   }
   
   .search-input {
@@ -54,7 +54,7 @@
   }
   
   .search-input:focus {
-    border-color: #2980b9;
+    border-color: #e09628;
     box-shadow: 0 0 3px rgba(41, 128, 185, 0.5);
   }
   
@@ -78,7 +78,7 @@
   }
   
   .calendar-item:hover {
-    background-color: #2980b9;
+    background-color: #e09628;
     color: #fff;
   }
   
