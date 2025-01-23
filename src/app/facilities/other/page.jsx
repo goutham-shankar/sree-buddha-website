@@ -40,8 +40,10 @@ export default function page() {
         <div className="heading">Solar Power Plant 50 KW</div>
         <div className="paragraph">College has established solar power plant of 50 KW 
             on the roof top of Homi J Bhabha Block</div>
-        <div className="photopl"><img src={panelf.src} alt="" /></div><br />
-        <div className="photopt"><img src={panelt.src} alt="" /></div><br />
+        <div className="last">
+            <div className="photopl"><img src={panelf.src} alt="" /></div><br />
+            <div className="photopt"><img src={panelt.src} alt="" /></div><br />
+        </div>
 
 
     </div>
