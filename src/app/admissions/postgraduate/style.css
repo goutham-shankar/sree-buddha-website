@@ -38,7 +38,7 @@ body {
 }
 
 .no-underline:hover {
-    color: #f48208;
+    color: #eb902e;
     text-decoration: none; /* Ensures no underline appears on hover */
 }
 .headings {
@@ -89,7 +89,7 @@ body {
 }
 
 .link:hover {
-    background-color: #d6a94d; /* Darker shade on hover */
+    /* background-color: #d6a94d;  */
 }
 
 /* ---------------------- */
@@ -175,7 +175,7 @@ text-decoration: none;
 
 .table-container {
     overflow-x: hidden; /* Disable horizontal scrolling */
-    max-width: 60%;
+    max-width: 90%;
     /* padding-left: 10%; */
 }
 
@@ -213,6 +213,8 @@ th, td {
     .main {
         padding: 40px 50px; /* Adjust padding for tablets */
         /* background-color: aqua; */
+        padding-left: 10%;
+        padding-right: 15%;
     }
 
     .title {
@@ -273,6 +275,12 @@ th, td {
     }
     .phototextfour{
         padding-left: 18px;
+    }
+    .table-container {
+        width: 90vw;
+    }
+    .table-container table,.table-container tbody{
+    width: 100%;
     }
 }
 @media (width:1180px )

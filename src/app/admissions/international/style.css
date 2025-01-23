@@ -18,10 +18,11 @@
     padding-left: 50px;
     padding-right: 50px;
     font-weight: 400;
+    font-size: 18px;
 }
 
 .content ul {
-    list-style: none; /* Remove default bullet points */
+    /* list-style: none;  */
     font-weight: 400;
 }
 
@@ -33,14 +34,7 @@
     line-height: 1.5; /* Adjust line height for better readability */
 }
 
-.content ul li::before {
-    content: "\25B6"; /* Unicode for right-pointing triangle (►) */
-    padding-right: 0px;
-    color: black; /* Change the color of the arrow if needed */
-    position: absolute;
-    margin-left: -20px; /* Align the arrow with text */
-    font-weight: 400;
-}
+
 
 /* Responsive styles for tablets (800px and below) */
 @media only screen and (max-width: 800px) {
@@ -63,9 +57,7 @@
         text-indent: -7px; /* Adjust indent for tablet */
     }
 
-    .content ul li::before {
-        margin-left: -15px; /* Align arrow for tablet */
-    }
+   
 }
 
 /* Responsive styles for mobile (480px and below) */
@@ -80,16 +72,15 @@
     }
 
     .content {
-        padding-left: 10px;
+        padding-left: 18px;
         padding-right: 10px;
+        font-size: 14px;
     }
 
     .content ul li {
-        padding-left: 15px;
-        text-indent: -5px; /* Adjust indent for mobile */
+        padding-left: 1.5%;
+      
     }
 
-    .content ul li::before {
-        margin-left: -15px; /* Align arrow for mobile */
-    }
+    
 }
