@@ -1,7 +1,7 @@
 .container {
     padding-left: 150px;
     padding-right: 150px;
-    font-weight: 400;
+    /* font-weight: 400; */
     overflow-x: hidden;
     font-size: 18px;
 }
@@ -20,13 +20,13 @@
 }
 /* images */
 .imageone img{
-   height: 40vw;    
+   height: 25vw;    
 }
 .imagetwo img{
-    height: 35vw;
+    height: 25vw;
 }
 .imagethree img{
-    height: 40vw;
+    height: 25vw;
    
 }
 .imagefour img{
@@ -48,14 +48,7 @@
 }
 .content ul {
    padding-left: 2%;
-    font-weight: 400;
-}
-
-.content ul li {
-    font-weight: 500;
-    /* padding-left: 2%;
-    text-indent: -10px; 
-    line-height: 1.5;  */
+    /* font-weight: 400; */
 }
 
 

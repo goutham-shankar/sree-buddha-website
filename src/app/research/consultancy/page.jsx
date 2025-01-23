@@ -90,14 +90,17 @@ export default function page() {
         Telephone: +91 9562562754, +91 8281868205 <br /><br />
         <b>Attachments</b><br />
 
+        <div className="last">
         <Link href="/assets/documents/research/Work-Order-Form-1.pdf"  target="_blank">
-          <div className="btn"><ul><li> Work Order Form</li></ul></div>
+          <div className="btn"> Work Order Form</div>
         </Link>
           
         <Link href="/assets/documents/research/instructions.pdf"  target="_blank">
-          <div className="btn"><ul><li> Instructions</li></ul></div>
+          <div className="btn">Instructions</div>
         </Link> <br /><br />
+        </div>
 
+           
         </div>
     </div>
   )
