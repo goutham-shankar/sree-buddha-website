@@ -129,7 +129,7 @@ section h2 {
 }
 
 .document-item:hover {
-  border-color: #4f46e5;
+ border-color: #f78a24;;
   transform: translateY(-2px);
 }
 
@@ -232,7 +232,7 @@ section h2 {
 .feature-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  border-color: #4f46e5;
+  border-color: #f78a24;
 }
 
 .feature-item i {
