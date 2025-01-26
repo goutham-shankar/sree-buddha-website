@@ -7,9 +7,9 @@ export default function page() {
   return (
     <div className='container'>
         <div className="title">Reprographic Facilities</div>
-        <br />
+       
         <hr />
-        <br />
+        
         <div className="paragraph">Our college provides comprehensive reprographic facilities to support students and staff 
             in their academic and administrative needs. These services include high-quality photocopying, both color and 
             black-and-white printing, and document scanning for easy digitization. </div>

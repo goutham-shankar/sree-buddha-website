@@ -47,22 +47,37 @@
     /* background-color: red; */
     justify-content: flex-end;
     align-items: center;
+    /* background-color: black; */
+    height: 20%;
 }
 
 .important_link{
     font-family: 'poppins';
-    color: blue;
     text-decoration: none;
     margin: 0px 10px;
+    height: 100%;
     color: #734A0C;
+    /* background-color: green; */
     border-right: 1px solid #3D2502;
     padding-right: 20px;
+    width: max-content;
+    align-items: center;
     border-right: 2px solid #734A0C;
+    display: flex;
+    flex-direction: row;
+}
+
+.important_link img{
+    height: 15px;
+    width: 20px;
+    margin-right: 5px;
+    
 }
 
 .important_links_button{
     border: 0px ;
     background-color: #251C0E;
+    /* background-color: blue; */
     padding: 5px 20px ;
     text-align: center;
     text-decoration: none;
@@ -101,6 +116,7 @@
     left: 0px;
     width: max-content;
     background-color: white;
+    background-color: red;
     box-shadow:0px 1px rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     
     height: 0px;

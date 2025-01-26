@@ -8,7 +8,10 @@ const management = () => {
   return (
     <div className="management">
       <div className="majContainer">
-        <h1 className="heading">The Management</h1>
+        <div className="m-title">
+          <h1 className="heading">The Management</h1>
+          <hr />
+        </div>
         <Person
           name="Prof. K. Sasikumar"
           position="The Chairman"
