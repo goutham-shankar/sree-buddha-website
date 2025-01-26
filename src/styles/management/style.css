@@ -10,16 +10,17 @@ body {
 
 .m-title{
   display:flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: 20px;
-  margin-bottom: 30px;
+  flex-direction: column;
+  align-items: left;
+  /* column-gap: 20px; */
+  gap:0.5rem;
+  margin-bottom: 4rem;
 }
 .m-title hr{
-  margin-top: 60px;
-  height: 3px;
-  width: 500px;
-  background-color: #73501c;
+  /* margin-top: 60px; */
+  height: 1px;
+  width: 60dvw;
+  background-color: #73501c5f;
 }
 
 .heading {
@@ -82,11 +83,13 @@ body {
   .management {
     width: 90%;
     margin: auto;
+    /* background-color: yellow; */
   }
 
-  .m-title hr{
+  /* .m-title hr{
     margin-top: 100px;
-  }
+  } */
+
 
   .heading {
     font-size: 40px;
@@ -116,9 +119,7 @@ body {
   }
 
   .m-title hr{
-    margin-top: 80px;
-    width: 100px;
-    height: 2px;
+    margin-left:25px;
   }
 
   .heading {
