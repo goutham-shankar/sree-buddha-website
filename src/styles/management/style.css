@@ -12,12 +12,12 @@ body {
   display:flex;
   flex-direction: column;
   align-items: left;
-  /* column-gap: 20px; */
   gap:0.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1.7rem;
+  margin-top:2rem;
+  
 }
 .m-title hr{
-  /* margin-top: 60px; */
   height: 1px;
   width: 60dvw;
   background-color: #73501c5f;
@@ -26,7 +26,6 @@ body {
 .heading {
   margin-top: 30px;
   font-size: 50px;
-  /* padding-left: 35px; */
   color: #73501c;
   font-family: "Poppins", sans-serif;
   font-weight: 1000;
