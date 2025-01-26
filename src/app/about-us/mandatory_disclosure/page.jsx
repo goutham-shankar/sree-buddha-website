@@ -5,6 +5,8 @@ export default function page() {
   return (
     <div className="page">
       <h3 className="page_heading">Mandatory Disclosure</h3>
+      <hr/>
+      <br />
       <br />
 
       <NAAC
