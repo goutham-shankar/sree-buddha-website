@@ -10,6 +10,8 @@ export default function EoA() {
   return (
     <div className="eoa">
       <h2>AICTE EoA</h2>
+      <hr />
+      <br/>
       <div className="eoa-ul">
         <div
           className="eoa-box"
@@ -18,7 +20,7 @@ export default function EoA() {
               "/assets/documents/EoA%20docs/EOA-Report-2024-2025.pdf"
             )
           }
-        >
+        > 
           <h3>EoA 2024-2025</h3>
         </div>
         <div
