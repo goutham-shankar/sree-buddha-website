@@ -52,7 +52,7 @@ const management = () => {
           name="Sri. B Udhayan"
           position="Joint Secretary"
           content="A successful businessman with social commitment. He is also a Director Board Member, Sree Narayana Trust, the Councillor, SNDP Union, Pandalam, and the Treasurer, Bodhi Educational Trust, Elavumthitta."
-          pic={"/assets/images/Budhayan.png"}
+          pic={"/assets/images/BUdhayan.png"}
         />
         <img
           className="line"
