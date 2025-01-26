@@ -1,5 +1,5 @@
 import React from 'react'
-import "./style.css"
+import NAAC from "@/components/accreditation/NAAC/naac";
 
 export default function page() {
   return (
@@ -7,14 +7,17 @@ export default function page() {
 
         <h3 className='page_heading'>Mandatory Disclosure</h3>
         <br />
-        <div className="single_meeting download_button">
-
-                <span className='download_button_title '><a target='_blank' href={"/assets/documents/mandatory_disclosure/mandatory_disclosure_2024-25.pdf"} className='link'>Mandatory Disclosure 2024-2025</a></span>
+        
+                {/* <span className='download_button_title '><a target='_blank' href={"/assets/documents/mandatory_disclosure/mandatory_disclosure_2024-25.pdf"} className='link'>Mandatory Disclosure 2024-2025</a></span>
                 <button className="download_button_button">
                     <img src={"/assets/images/icons/download.png"} alt="" />
-                </button>
+                </button> */}
+                <NAAC
+            name="mandatory disclosure 2024-2025"
+            link="/assets/images/icons/download.png"
+          />
 
-        </div>
+        
         
       
     </div>
