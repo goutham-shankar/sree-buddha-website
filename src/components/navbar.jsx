@@ -93,7 +93,7 @@ export default function Navbar() {
     {
       name: "Cells and Chapters",
       links: [
-        { name: "Various Cells and Committees", link: "/cells_and_chapters/various_cells" },
+        { name: "Various Cells and Committees", link: "/cells_and_chapters/student-clubs" },
         { name: "IEEE", link: "/cells_and_chapters/ieee" },
         { name: "IE(I)", link: "/cells_and_chapters/ie_i" },
         { name: "SAE India", link: "/cells_and_chapters/sae_india" },
@@ -102,7 +102,7 @@ export default function Navbar() {
         { name: "Virtual Lab", link: "/cells_and_chapters/virtual_lab" },
         { name: "IEDC", link: "/cells_and_chapters/iedc" },
         { name: "NPTEL", link: "/cells_and_chapters/nptel" },
-        { name: "IIT Remote Center", link: "/cells_and_chapters/iit_remote_center" },
+        { name: "IIT Remote Center", link: "/cells_and_chapters/remote_center" },
       ],
     },
     {
@@ -165,8 +165,8 @@ export default function Navbar() {
       </div>
       <div className="navbar_right">
         <div className="important_links">
-          <a href="#" className="important_link"> <img src="/assets/images/home/international_admissions.png" alt="" /> International Admissions</a>
-          <a href="#" className="important_link"> <img src="/assets/images/home/careers.png" alt="" /> Career at SBCE</a>
+          <a href="/admissions/international_admissions" className="important_link"> <img src="/assets/images/home/international_admissions.png" alt="" /> Internation Admissions</a>
+          <a href="#" className="important_link"> <img src="/assets/images/home/careers.png" alt="" /> CareersSBCE</a>
           <a href="#" className="important_link"> <img src="/assets/images/home/fees.png" alt="" /> Fees Payment</a>
           <a href="" className="important_link last_link">  <img src="/assets/images/home/university.png" alt="" /> University</a>
           <a href="#" className="important_links_button">admissions</a>

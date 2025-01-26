@@ -8,6 +8,20 @@ body {
   margin: auto;
 }
 
+.m-title{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 20px;
+  margin-bottom: 30px;
+}
+.m-title hr{
+  margin-top: 60px;
+  height: 3px;
+  width: 500px;
+  background-color: #73501c;
+}
+
 .heading {
   margin-top: 30px;
   font-size: 50px;
@@ -70,6 +84,10 @@ body {
     margin: auto;
   }
 
+  .m-title hr{
+    margin-top: 100px;
+  }
+
   .heading {
     font-size: 40px;
     padding-left: 10px;
@@ -95,6 +113,12 @@ body {
   .management {
     width: 95%;
     margin: auto;
+  }
+
+  .m-title hr{
+    margin-top: 80px;
+    width: 100px;
+    height: 2px;
   }
 
   .heading {

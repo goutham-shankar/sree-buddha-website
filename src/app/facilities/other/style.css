@@ -4,7 +4,7 @@
   font-weight: 400;
   overflow-x: hidden;
   font-size: 18px;
-  height: 100vh;
+  /* height: 100vh; */
  
 }
 .title {
@@ -25,7 +25,7 @@
 }
 .paragraph{
   font-family: 'poppins';
-  font-size: 22px;
+  font-size: 16px;
   margin-bottom: 50px;
 }
 .photop img,.photog img,.photopl img,.photopt img,.photot img{
@@ -38,6 +38,14 @@
 }
 .photog img{
   height: 400px;
+}
+.last{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2%
+}
+.photopl {
+margin-right: 2%;
 }
 /* for tab */
 @media (max-width:1400px){
@@ -72,6 +80,9 @@
   .paragraph{
       font-size: 16px;
       margin-top: 30px;
+  }
+  .photopt img,.photopl img{
+    height: 30vw;
   }
 }
 @media (max-width:950px){
@@ -141,6 +152,9 @@
   width: 350px;
   height: 180px;
 }
+.last{
+  flex-direction: column;
+}
 }
 @media(max-width:400px)
 {
@@ -156,4 +170,5 @@
     margin-top: 0px;
     margin-bottom: 10px;
   }
+  
 }

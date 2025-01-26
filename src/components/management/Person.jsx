@@ -3,13 +3,18 @@ import "@/styles/management/person/style.css";
 const Person = ({ name, position, content, pic }) => {
   return (
     <div className="Person">
-      <h2 className="name">{name}</h2>
-      <h4 className="position">{position}</h4>
-      <p className="captionline">Sree Buddha Group of Institution </p>
+      
       <div className="container">
-        <p className="content">{content}</p>
+        <div className="person-head">
+          <h2 className="name">{name}</h2>
+          <h4 className="position">{position}</h4>
+          <p className="captionline">Sree Buddha Group of Institution </p>
+          <p className="content">{content}</p>
+        </div>
         <img className="pic" src={pic} alt="Unable to load image" />
       </div>
+      <br />
+      <hr />
     </div>
   );
 };

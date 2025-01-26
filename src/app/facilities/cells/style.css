@@ -33,7 +33,7 @@
 }
 .paragraph{
     font-family: 'poppins';
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .faculty-table {
@@ -61,7 +61,7 @@
     width: 40%;
 }
 .image img{
-    height: 35vw;
+    height: 28vw;
   
 }
 .no-underline {
@@ -69,7 +69,7 @@
     color: inherit; /* Optional: Ensures the text color remains default or inherited */
 }
 
-.no-underline:hover {
+.link:hover {
     color: #f48208;
     text-decoration: none; /* Ensures no underline appears on hover */
 }
@@ -119,9 +119,12 @@
     font-weight: 600;
     margin-bottom: 5px;
 }
+.list1{
+    padding-left: 2%;
+}
 @media(max-width:1200px){
-    .image{
-
+    .list1{
+        padding-left: 4%;
     }
 }
 
@@ -146,10 +149,11 @@
         padding-left: 30px;
         padding-right: 30px; /* Adjust padding for mobile */
         overflow-x: hidden;
+        font-size: 16px;
         
     }
     .title{
-        font-size: 25px;
+        font-size: 36px;
         margin-bottom: 0px;
         padding-bottom: 0px;
     }
@@ -163,9 +167,10 @@
     .link{
         width: 300px;
         font-size: 16px;
-        margin-left: 20px;
+        margin-bottom:0% ;
+        /* margin-left: 20px; */
     }
-    .paragraph{
+    .paragraph,.paragraphone{
         font-size: 16px;
     }
     .faculty-table tr {
@@ -210,8 +215,11 @@
     .image img{
         height: 55vw;
     }
+    .list1 ul{
+        /* color: red; */
+        padding-left: 6%;
+    }
     
-
 }
 @media (max-width:380px){
     .noseven,.pseven{

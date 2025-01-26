@@ -62,14 +62,36 @@ thead th {
     background-color: #e8e8e8;
     text-align: left;
 }
-ul{
-    padding-left: 30px;
-}
-.btn ul li{
-    color: rgb(43, 0, 255);
-}
 
 
+/* Remove underline and set color to black for links */
+.btn {
+    text-decoration: none; /* Removes underline */
+    color: black; /* Changes text color to black */
+    padding: 10px 15px; /* Optional: Add padding for better styling */
+    display: inline-block; /* Keeps the button styling consistent */
+    border-radius: 20px; /* Optional: Round the corners */
+    text-align: center; /* Centers text inside the button */
+    cursor: pointer; /* Makes it look clickable */
+    margin-top: 1%;
+    background-color: #E6B66D;
+    width: 10vw;
+  }
+  
+  .btn:hover {
+    color: white; /* Changes text color on hover */
+    background-color: rgb(211, 145, 3);
+  }
+  .last{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (max-width: 1200px){
+.btn{
+    width: 20vw;
+}
+  }
 /* Responsive Design */
 @media (max-width: 480px) {
     .body{
@@ -108,5 +130,8 @@ ul{
 
     .paragraph{
         font-size: 16px;
+    }
+    .btn{
+        width: 45vw;
     }
 }
