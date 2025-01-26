@@ -6,9 +6,10 @@ export default function page() {
     <div className="page">
       <h3 className="page_heading">Mandatory Disclosure</h3>
       <br />
+
       <NAAC
         name="mandatory disclosure 2024-2025"
-        link="/assets/images/icons/download.png"
+        link="/assets/documents/mandatory_disclosure/mandatory_disclosure_2024-25.pdf"
       />
     </div>
   );
