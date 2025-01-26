@@ -10,6 +10,8 @@ export default function EoA() {
   return (
     <div className="eoa">
       <h2>AICTE EoA</h2>
+      <hr />
+      <br/>
       <div className="eoa-ul">
         <div
           className="eoa-box"
