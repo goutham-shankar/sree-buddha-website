@@ -8,7 +8,7 @@ body {
 .app-container {
   padding: 20px;
   width: 100%; /* Ensure full width */
-  max-width: 800px; /* Increase max-width */
+  max-width: 60%; /* Increase max-width */
   margin: 0 auto;
 }
 
