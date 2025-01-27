@@ -19,7 +19,12 @@ function Page() {
 
   return (
     <div className="app-container">
-      <h1 style={{ textAlign: 'left', fontFamily: 'Poppins, sans-serif' }}>Hand book</h1>
+<h1 style={{ textAlign: 'left', fontFamily: 'Poppins, sans-serif', color: '#73501c' }}>
+  Hand book
+</h1>
+
+<hr />
+<br />
       <ul className="pdf-list">
         {pdfFiles.map((pdf, index) => (
           <li
