@@ -1,54 +1,66 @@
 .eoa {
-    padding: 50px 100px;
-  }
-.eoa h2{
-    text-align: left;
-    font-size: 50px;
-    color: #73501C;
-
+  padding: 50px 100px;
+  /* background-color: #f9f7f1; */
+  font-family: Arial, sans-serif;
+  color: #333;
 }
-  
-  .eoa-ul {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Default for small screens */
-    gap: 20px;
-    margin-top: 30px;
-  }
-  
-  .eoa-box {
-    background-color: #E6B66D;
+
+.eoa h2 {
+  text-align: center;
+  font-size: 48px;
+  color: #5a3e1b;
+  margin-bottom: 10px;
+}
+
+.eoa-description {
+  text-align: center;
+  font-size: 18px;
+  color: #7a6a5f;
+  margin-bottom: 40px;
+}
+
+.eoa-ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.eoa-box {
+  background: linear-gradient(135deg, #f7d9b0, #e6b66d);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.eoa-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.eoa-box h3 {
+  font-size: 22px;
+  color: #4a3418;
+}
+
+@media (max-width: 768px) {
+  .eoa {
     padding: 20px;
-    width: 250px;
-    height: 151px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
   }
 
-  .eoa-box h3{
-    font-size: larger;
-    text-align: center;
-    margin-top: 55px;
+  .eoa h2 {
+    font-size: 36px;
   }
-  
-  /* For tablets (3 boxes in a row) */
-  @media (min-width: 600px) {
-    .eoa-ul {
-      grid-template-columns: repeat(2, 1fr);
-    }
+
+  .eoa-description {
+    font-size: 16px;
   }
-  
-  /* For larger devices (4 boxes in a row) */
-  @media (min-width: 900px) {
-    .eoa-ul {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  /* For laptops (4 boxes in a row) */
-  @media (min-width: 1200px) {
-    .eoa-ul {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
+}

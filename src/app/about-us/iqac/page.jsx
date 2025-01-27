@@ -1,4 +1,5 @@
 import React from 'react'
+import DownloadButton from '@/components/common/DownloadButton'
 
 export default function page() {
 
@@ -35,14 +36,10 @@ export default function page() {
                         meetings.map((meeting, index) => {
 
                             return (
-                                <div className="single_meeting" key = {index}>
 
-                                    <span className='single_meeting_name'>Minutes-of-7-th-IQAC-meeting-held-on-13-03-2017</span>
-                                    <button className="download_meeting_minutes">
-                                        <img src={"/assets/images/icons/download.png"} alt="" />
-                                    </button>
-
-                                </div>
+                                <DownloadButton title = {"Minutes-of-7-th-IQAC-meeting-held-on-13-03-2017"} />
+                                
+                             
                             )
 
 

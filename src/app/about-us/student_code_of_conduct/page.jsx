@@ -1,17 +1,11 @@
 import React from 'react'
+import DownloadButton from '@/components/common/DownloadButton'
 
 export default function page() {
     return (
         <div className='page'>
 
-            <div className="single_meeting download_button">
-
-                <span className='download_button_title '>Student Code of Conduct</span>
-                <button className="download_button_button">
-                    <img src={"/assets/images/icons/download.png"} alt="" />
-                </button>
-
-            </div>
+            <DownloadButton title = {"Student Code of Conduct"} link = {"/assets/documents/student_code_of_conduct/SBCE-Student-Code-of-Conduct-and-Ethics.pdf"} />
 
         </div>
     )
