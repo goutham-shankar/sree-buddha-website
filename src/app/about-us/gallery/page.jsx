@@ -45,6 +45,9 @@ const ImageGallery = () => {
   };
 
   return (
+    <div className="page">
+      <div className="page_heading">Gallery</div> 
+      <hr />
     <div className="image-gallery">
       <div className="slider-container">
         <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} />
@@ -56,6 +59,8 @@ const ImageGallery = () => {
         </button>
       </div>
     </div>
+    </div>
+    
   );
 };
 
