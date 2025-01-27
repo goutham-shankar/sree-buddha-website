@@ -7,15 +7,16 @@ body {
 
 .app-container {
   padding: 20px;
-  max-width: 600px;
+  width: 100%; /* Ensure full width */
+  max-width: 800px; /* Increase max-width */
   margin: 0 auto;
 }
 
 .pdf-list {
   list-style: none;
   padding: 0;
+  width: 100%; /* Ensure full width */
 }
-
 
 .pdf-item {
   padding: 15px;
@@ -24,15 +25,9 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
-
   font-family: 'Poppins', sans-serif;
-
-
-
-}
-
-.pdf-item:hover {
-  background-color: #e0e0e0;
+  width: 100%; /* Ensure it takes the full width of the parent */
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
 }
 
 .pdf-item:hover {
