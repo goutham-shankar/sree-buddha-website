@@ -1,0 +1,56 @@
+/* Wrapper for the image gallery */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 16px;
+    background-color: #f4f4f4;
+  }
+  
+  /* Slider container */
+  .slider-container {
+    position: relative;
+    width: 80%; /* 80% of the viewport width */
+    max-width: 1200px;
+    height: 500px; /* Set a fixed height */
+    overflow: hidden;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for images in the slider */
+  .slider-container img {
+    width: 100%; /* Ensure images cover the full width of the container */
+    height: 100%; /* Ensure images take up the full height */
+    object-fit: cover; /* Ensure images maintain their aspect ratio */
+    transition: transform 0.3s ease;
+  }
+  
+  /* Navigation buttons (Next/Previous) */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  .prev {
+    left: 16px;
+  }
+  
+  .next {
+    right: 16px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
