@@ -1,140 +1,90 @@
-/* Base styles for larger screens (desktop) */
-
-.affiliations_and_cells{
+.affiliations_and_cells {
   display: flex;
-}
-.affiliations {
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 20px;
-  }
-  
-  .affiliations h3 {
-    margin: 30px 160px;
-    text-align: left;
-    font-size: 50px;
-    color:black; /* Assuming a dark background */
-  }
-  
-  .affiliations ul {
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    list-style: none;
-
-  }
-  
-  .affiliation-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 0 0 23%; /* 4 items per row, taking up 23% each */
-    margin-bottom: 20px;
-  }
-  
-  .affiliation-item img {
-    max-width: 100px;
-    height: auto;
-    max-height: 100px;
-  }
-  
-  .affiliation-item span {
-    margin-top: 10px;
-    color: grey;
-    font-size: 14px;
-    width: 150px;
-  }
-  
-  /* Responsive Styles */
-  
-  /* For tablets (768px and below) */
-  @media (max-width: 768px) {
-    .affiliations_and_cells{
-      flex-direction: column;
-    }
-    .affiliations h3{
-        margin: 30px 90px;
-        text-align: left;
-        font-size: 50px;
-    }
-    .affiliation-item {
-      flex: 0 0 45%; /* Two items per row */
-      margin-bottom: 20px;
-    }
-  }
-  
-  /* For mobile phones (480px and below) */
-  @media (max-width: 480px) {
-    .affiliations h3{
-        width: 300px;
-        text-align: left;
-        margin-left: 30px;
-        font-size: 50px;
-    }
-    .affiliation-item {
-      flex: 0 0 45%; /* One item per row on mobile */
-      margin-bottom: 20px;
-    }
-  }
-  
-
-  /* Base styles for larger screens (desktop) */
-.cells_and_chapters h3{
-  font-family: 'Poppins';
-  /* width: 50%; */
-  font-size: 50px;
-  margin:  30px 160px;
-}
-.cells_and_chapters ul {
-  display: grid !important;
-  list-style: none;
-  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjusts spacing between sections */
+  margin: 20px;
   /* background-color: red; */
-
+  width: 80%;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 100px;
 }
 
-.cells_and_chapters li {
-  margin-right: 20px;
+.affiliations, .cells_and_chapters {
+  width: 100%;
 }
 
-.cells_and_chapters img {
+.affiliations h3, .cells_and_chapters h3 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.affiliations ul, .cells_and_chapters ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.affiliation-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.affiliation-item:hover {
+  transform: translateY(-5px);
+}
+
+.affiliation-item img {
   max-width: 100px;
   height: auto;
+  margin-bottom: 10px;
 }
+
+.affiliation-item span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive Styles */
 
 /* For tablets (768px and below) */
 @media (max-width: 768px) {
-  .cells_and_chapters ul {
-      padding: 30px; /* Reduce padding */
+  .affiliations_and_cells {
+    flex-direction: column;
+    gap: 40px; /* Increase spacing between sections */
   }
 
-  .cells_and_chapters li {
-      flex: 0 0 45%; /* Two images per row for tablets */
-      margin-bottom: 20px; /* Space between rows */
+  .affiliations ul, .cells_and_chapters ul {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 }
 
 /* For mobile phones (480px and below) */
 @media (max-width: 480px) {
-  .cells_and_chapters h3 {
-      width: 300px;
-      text-align: left;
-      margin-left: 50px;
-      font-size: 50px;
+  .affiliations ul, .cells_and_chapters ul {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .cells_and_chapters ul {
-      padding-left: 50px; /* Remove padding */
-      justify-content: center;
+  .affiliation-item img {
+    max-width: 80px;
   }
 
-  .cells_and_chapters li {
-      flex: 0 0 45%; /* Two images per row for mobile */
-      margin-bottom: 15px;
-      margin-right: 0;
-  }
-
-  .cells_and_chapters img {
-      max-width: 80px; /* Reduce image size */
+  .affiliation-item span {
+    font-size: 12px;
   }
 }

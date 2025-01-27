@@ -38,8 +38,8 @@ export default function LandingPage() {
 
 
       <div className="social_media_links">
-        <a href=""><img src={"/assets/images/home images/instagram.png"} alt="" /></a>
-        <a href=""><img src={"/assets/images/home images/youtube.png"} alt="" /></a>
+        <a href="https://www.instagram.com/sreebuddha.sbce/"><img src={"/assets/images/home images/instagram.png"} alt="" /></a>
+        <a href="https://www.youtube.com/@sbceofficialyoutube2182"><img src={"/assets/images/home images/youtube.png"} alt="" /></a>
         <a href=""><img src={"/assets/images/home images/whatsapp.png"} alt="" /></a>
         <a href=""><img src={"/assets/images/home images/facebook.png"} alt="" /></a>
         <a href=""><img src={"/assets/images/home images/x.png"} /></a>
