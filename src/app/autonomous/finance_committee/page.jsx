@@ -6,21 +6,17 @@
     export default function page() {
 
        const pdfDocuments =  [
-            {
-              title: "KTU Conferment of Autonomous Status",
-              link: "/assets/documents/autonomous/conferments/ktu-autonomous-status-notification.pdf"
-            },
-            {
-              title: "UGC Conferment of Autonomous Status",
-              link: "/assets/documents/autonomous/conferments/SBCE-Student-Code-of-Conduct-and-Ethics.pdf"
-            }
-          ]
-          
+        {
+          title: "First Academic Council Agenda",
+          link: "/assets/documents/autonomous/finance_commitee/Constitution-of-Academic-Council-and-finance-committee.pdf"
+        },
+
+      ]
         
-    return (
+    return (    
         <div className='page'>
 
-            <h3 className='page_heading'>Conferments</h3>
+            <h3 className='page_heading'>Finance Commitee</h3>
 
             <div>
                 {
