@@ -1,17 +1,31 @@
-'use client'
-import React from 'react';
+'use client';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 
-
 function Page() {
-  const pdfFiles = [
-    { name: "Seminar and Project Hand book 2020 - 2021 ", path: "/pdfs/document1.pdf" },
-    { name: "College Hand book 2018 - 2019", path: "/pdfs/document2.pdf" },
-    { name: "College Hand book 2018 - 2019", path: "/pdfs/document3.pdf" },
-    { name: "College Hand book 2018 - 2019", path: "/pdfs/document4.pdf" },
-    { name: "College Hand book 2018 - 2019", path: "/pdfs/document5.pdf" },
-    { name: "Ktu handbook  for B-Tech students", path: "/pdfs/document6.pdf" },
-  ];
+  const [pdfFiles, setPdfFiles] = useState([]);
+  const API_URL = 'http://192.168.1.50:1337/api/handbooks?populate=*';
+
+  useEffect(() => {
+    const fetchPdfFiles = async () => {
+      try {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+        
+        // Map the response to extract handbook names and PDF URLs
+        const files = data.data.map((item) => ({
+          name: item.handbook_name,
+          path: `http://192.168.1.50:1337${item.pdf_name[0].url}`, // Full URL for the PDF
+        }));
+
+        setPdfFiles(files);
+      } catch (error) {
+        console.error('Error fetching PDF files:', error);
+      }
+    };
+
+    fetchPdfFiles();
+  }, []);
 
   const handleClick = (pdfPath) => {
     window.open(pdfPath, '_blank');
@@ -19,12 +33,11 @@ function Page() {
 
   return (
     <div className="app-container">
-<h1 style={{ textAlign: 'left', fontFamily: 'Poppins, sans-serif', color: '#73501c' }}>
-  Hand book
-</h1>
-
-<hr />
-<br />
+      <h1 style={{ textAlign: 'left', fontFamily: 'Poppins, sans-serif', color: '#73501c' }}>
+        Hand book
+      </h1>
+      <hr />
+      <br />
       <ul className="pdf-list">
         {pdfFiles.map((pdf, index) => (
           <li
@@ -33,11 +46,12 @@ function Page() {
             onClick={() => handleClick(pdf.path)}
           >
             <i className="far fa-file-pdf" style={{ marginRight: '10px', color: '#e74c3c' }}></i>
-            <span style={{ fontFamily: 'Poppins, sans-serif', cursor: 'pointer' }}>{pdf.name}</span>
+            <span style={{ fontFamily: 'Poppins, sans-serif', cursor: 'pointer' }}>
+              {pdf.name}
+            </span>
           </li>
         ))}
       </ul>
-
     </div>
   );
 }
