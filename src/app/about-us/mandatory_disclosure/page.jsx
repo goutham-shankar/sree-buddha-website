@@ -1,14 +1,18 @@
-import React from 'react'
-import "./style.css"
+import React from "react";
+import NAAC from "@/components/accreditation/NAAC/naac";
 
 export default function page() {
   return (
-    <div className='page'>
+    <div className="page">
+      <h3 className="page_heading">Mandatory Disclosure</h3>
+      <hr/>
+      <br />
+      <br />
 
-        <h3 className='page_heading'>Mandatory Disclosure</h3>
-        <div className="line"></div>
-        <a target='_blank' href={"/assets/documents/mandatory_disclosure/mandatory_disclosure_2024-25.pdf"} className='link'>Mandatory Disclosure 2024-2025</a>
-      
+      <NAAC
+        name="mandatory disclosure 2024-2025"
+        link="/assets/documents/mandatory_disclosure/mandatory_disclosure_2024-25.pdf"
+      />
     </div>
-  )
+  );
 }

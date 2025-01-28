@@ -6,8 +6,8 @@ export default function international() {
     <div className='container'>
       <div className="title">International Student Admissions</div>
       <hr/>
-      <br /><br />
-      <h2>Admission Process</h2>
+      <br />
+      <h3>Admission Process</h3>
       <div className="content">
         <ul>
             <li>Download the registration form</li>
@@ -17,7 +17,7 @@ export default function international() {
         </ul>
       </div><br />
 
-      <h2>How to Pay fees</h2>
+      <h3>How to Pay fees</h3>
       <div className="content">
         <ul>
             <li>Student can pay the fees as per details shared in expenditure chart given along with the letter of acceptance.</li>
@@ -31,7 +31,7 @@ export default function international() {
 
       <u><h2>supports</h2></u><br />
 
-      <h2>Pre Arrival</h2>
+      <h3>Pre Arrival</h3>
       <div className="content">
         <ul>
             <li>Assistance for Student Visa will be provided after provisional admission</li>
@@ -39,7 +39,7 @@ export default function international() {
         </ul>
       </div><br />
 
-      <h2>Post Arrival</h2>
+      <h3>Post Arrival</h3>
       <div className="content">
         <ul>
             <li>Pickup facility from Airport</li>
@@ -50,7 +50,7 @@ export default function international() {
         </ul>
       </div><br />
 
-      <h2>Visa Information</h2>
+      <h3>Visa Information</h3>
       <div className="content">
         <ul>
             <li>After receiving the admission letter, student should immediately apply for the student visa with the Indian embassy located in your country.</li>
@@ -60,7 +60,7 @@ export default function international() {
         </ul>
       </div><br />
 
-      <h2>Why SBCE?</h2>
+      <h3>Why SBCE?</h3>
       <div className="content">
         <ul>
             <li>Dedicated team to support international Students</li>
