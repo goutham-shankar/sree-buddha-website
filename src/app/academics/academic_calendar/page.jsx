@@ -1,29 +1,37 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 
 function Page() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [calendarData, setCalendarData] = useState([]);
 
-  const pdfFiles = [
-    
-    
-    
-    { name: "Academic Calendar 2020-21", path: "/pdfs/document1.pdf" },
-    { name: "Academic Calendar 2019-20", path: "/pdfs/document2.pdf" },
-    { name: "Academic Calendar 2018-19", path: "/pdfs/document3.pdf" },
-    { name: "Academic Calendar 2017-18", path: "/pdfs/document4.pdf" },
-    { name: "Academic Calendar 2016-17", path: "/pdfs/document5.pdf" },
-    
-  ]
+  // Fetch the calendar data from the API
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://192.168.1.50:1337/api/academic-calenders?populate=*');
+        const data = await response.json();
+        setCalendarData(data.data); // Extract data from the response
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, []);
 
   const handleClick = (pdfPath) => {
     window.open(pdfPath, '_blank');
   };
 
-  const filteredFiles = pdfFiles.filter(pdf =>
-    pdf.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredFiles = calendarData
+    .map(item => ({
+      name: item.Calender_name,
+      path: item.Calender[0].url, // Extracting the PDF URL from the response
+    }))
+    .filter(pdf =>
+      pdf.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
   return (
     <div className="calendar-container">
