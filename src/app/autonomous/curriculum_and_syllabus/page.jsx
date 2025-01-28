@@ -48,9 +48,9 @@ export default function page() {
 
       <div>
         {
-          pdfDocuments.map((document) => {
+          pdfDocuments.map((document, index) => {
             return (
-              <DownloadButton title={document.title} link={document.path} />
+              <DownloadButton key = {index} title={document.title} link={document.path} />
             )
           })
         }
