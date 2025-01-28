@@ -1,39 +1,59 @@
-"use client";
-import React from "react";
-import "./eoa.css";
+'use client';
+import React, { useState, useEffect } from 'react';
+import './eoa.css';
 
-export default function EoA() {
-  const handlePdfClick = (url) => {
-    window.open(url, "_blank");
+function Page() {
+  const [pdfFiles, setPdfFiles] = useState([]);
+  const API_URL = 'http://192.168.1.50:1337/api/eoas?populate=*';
+
+  useEffect(() => {
+    const fetchPdfFiles = async () => {
+      try {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+        
+        // Map the response to extract handbook names and PDF URLs
+        const files = data.data.map((item) => ({
+          name: item.heading,
+          path: `http://192.168.1.50:1337${item.EoA_pdf[0].url}`, // Full URL for the PDF
+        }));
+
+        setPdfFiles(files);
+      } catch (error) {
+        console.error('Error fetching PDF files:', error);
+      }
+    };
+
+    fetchPdfFiles();
+  }, []);
+
+  const handleClick = (pdfPath) => {
+    window.open(pdfPath, '_blank');
   };
 
   return (
-    <div className="eoa">
-      <h2>AICTE EoA Reports</h2>
-      <p className="eoa-description">
-        Explore and download the AICTE Extension of Approval (EoA) reports for various academic years. Click on a report to view it.
-      </p>
-      <div className="eoa-ul">
-        {[
-          { year: "2024-2025", url: "/assets/documents/EoA%20docs/EOA-Report-2024-2025.pdf" },
-          { year: "2023-2024", url: "/assets/documents/EoA%20docs/AICTE-EOA-2023-24.pdf" },
-          { year: "2022-2023", url: "/assets/documents/EoA%20docs/EOA-Report-22-23.pdf" },
-          { year: "2021-2022", url: "/assets/documents/EoA%20docs/EOA_Report-21-22_Pattoor-F.pdf" },
-          { year: "2020-2021", url: "/assets/documents/EoA%20docs/AICTE-EOA_Report_2020-21.pdf" },
-          { year: "2019-2020", url: "/assets/documents/EoA%20docs/EOA-Report-2019-20-_New.pdf" },
-          { year: "2018-2019", url: "/assets/documents/EoA%20docs/EOA-Report_2018-19.pdf" },
-          { year: "2017-2018", url: "/assets/documents/EoA%20docs/EOA_Report_2017-18.pdf" },
-          { year: "2016-2017", url: "/assets/documents/EoA%20docs/AICTE-Approval-2016-17.pdf" },
-        ].map((report, index) => (
-          <div
-            className="eoa-box"
+    <div className="app-container">
+      <h1 style={{ textAlign: 'left', fontFamily: 'Poppins, sans-serif', color: '#73501c' }}>
+        AICTE&nbsp; EoA
+      </h1>
+      <hr />
+      <br />
+      <ul className="pdf-list">
+        {pdfFiles.map((pdf, index) => (
+          <li
             key={index}
-            onClick={() => handlePdfClick(report.url)}
+            className="pdf-item"
+            onClick={() => handleClick(pdf.path)}
           >
-            <h3>EoA {report.year}</h3>
-          </div>
+            <i className="far fa-file-pdf" style={{ marginRight: '10px', color: '#e74c3c' }}></i>
+            <span style={{ fontFamily: 'Poppins, sans-serif', cursor: 'pointer' }}>
+              {pdf.name}
+            </span>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }
+
+export default Page;
