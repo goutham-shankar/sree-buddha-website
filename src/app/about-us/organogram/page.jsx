@@ -7,7 +7,7 @@ import Image from 'next/image'
 export default function Oronogram() {
   return (
     <div className='oronogram'>
-         <h3>ORONOGRAM</h3>
+         <h3>ORGANOGRAM</h3>
          <img src = {"/assets/images/oronogram.png"} />
     </div>
   )
