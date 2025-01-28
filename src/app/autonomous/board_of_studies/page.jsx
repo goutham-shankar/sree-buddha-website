@@ -100,9 +100,9 @@ export default function page() {
 
             <div>
                 {
-                    pdfDocuments.map((document) => {
+                    pdfDocuments.map((document , index) => {
                         return (
-                            <DownloadButton title={document.title} link={document.link} />
+                            <DownloadButton key = {index} title={document.title} link={document.link} />
                         )
                     })
                 }
@@ -113,9 +113,9 @@ export default function page() {
 
             <div>
                 {
-                    pdfDocuments2.map((document) => {
+                    pdfDocuments2.map((document, index) => {
                         return (
-                            <DownloadButton title={document.title} link={document.link} />
+                            <DownloadButton key = {index} title={document.title} link={document.link} />
                         )
                     })
                 }

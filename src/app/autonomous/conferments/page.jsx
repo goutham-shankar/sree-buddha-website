@@ -24,9 +24,9 @@
 
             <div>
                 {
-                    pdfDocuments.map((document)=>{
+                    pdfDocuments.map((document, index)=>{
                         return(
-                            <DownloadButton title={document.title} link={document.link} />
+                            <DownloadButton key = {index} title={document.title} link={document.link} />
                         )
                     })
                 }

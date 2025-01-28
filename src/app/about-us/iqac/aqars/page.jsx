@@ -21,7 +21,7 @@ export default function page() {
                 meetings.map((meeting, index) => {
 
                     return (
-                        <DownloadButton title = {meeting[0]} link = {meeting[1]}/>
+                        <DownloadButton key ={index} title = {meeting[0]} link = {meeting[1]}/>
 
                
                     )

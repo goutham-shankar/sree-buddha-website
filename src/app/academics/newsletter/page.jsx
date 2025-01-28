@@ -81,7 +81,7 @@ export default function Newsletter() {
             <ul className="editors">
               {pdfLinks.map((pdf, index) => (
                
-                <DownloadButton title = {pdf.title} link = {pdf.url} />
+                <DownloadButton key = {index} title = {pdf.title} link = {pdf.url} />
               ))}
             </ul>
           </div>
