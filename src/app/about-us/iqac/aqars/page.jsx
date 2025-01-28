@@ -1,5 +1,6 @@
 import React from 'react'
-
+import DownloadButton from '@/components/common/DownloadButton';
+import { Download } from 'lucide-react';
 export default function page() {
 
    const meetings = [
@@ -20,17 +21,8 @@ export default function page() {
                 meetings.map((meeting, index) => {
 
                     return (
-                        <a target = "_blank" className='single_meeting_link' href={meeting[1]} key = {index}>
-                        <div className="single_meeting">
-                            
-                            <span className='single_meeting_name'>{meeting[0]}</span>
-                            <button className="download_meeting_minutes">
-                                <img src={"/assets/images/icons/download.png"} alt="" />
-                            </button>
-                            
+                        <DownloadButton title = {meeting[0]} link = {meeting[1]}/>
 
-                        </div>
-                        </a>
                
                     )
 
