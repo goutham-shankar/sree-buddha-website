@@ -140,6 +140,7 @@ export default function Navbar() {
         { name: "Executive Body", link: "/alumni/executive_body" },
         { name: "Alumni Reports", link: "/alumni/alumni_reports" },
       ],
+       side: "left"
     },
     {
       name: "Research",
@@ -150,6 +151,7 @@ export default function Navbar() {
         { name: "Consultancy", link: "/research/consultancy" },
         { name: "Conferences Organized", link: "/research/conference" },
       ],
+      side: "left"
     },
   ];
 
@@ -173,12 +175,15 @@ export default function Navbar() {
 
         <div className="navbar_menus">
           {
+
+
             link_map.map((menu, index) => {
+              // console.log(menu.side)
               return (
 
-                <div className="navbar_menu" key = {index}>
+                <div className={`navbar_menu `} key = {index} >
                   <span>{menu.name}</span>
-                  <div className="submenu">
+                  <div className={`submenu ${ (menu.side == "left")? "towards_left" : "" }`}>
 
                     <ul>
 
