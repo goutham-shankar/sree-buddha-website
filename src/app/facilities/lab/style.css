@@ -17,10 +17,10 @@
 }
 .paragraph{
     font-family: 'poppins';
-    font-size: 16px;
+    font-size: 18px;
 }
 .photo img{
-    width: 60vw;
+    width: 40vw;
     
 }
 
@@ -33,10 +33,13 @@
         padding-left: 100px;
     }
     .title{
-        font-size: 40px;
+        font-size: 30px;
+    }
+    .paragraph{
+        font-size: 16px;
     }
     .photo img{
-        width: 80vw;
+        width: 40vw;
     }
 }
 
@@ -54,7 +57,9 @@
 .paragraph{
     font-size: 16px;
 }
-
+.photo img{
+      width: 80vw;  
+}
 }
 @media(max-width:400px)
 {

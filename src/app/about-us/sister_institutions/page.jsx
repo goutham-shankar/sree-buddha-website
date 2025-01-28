@@ -4,6 +4,9 @@ import "./style.css"
 export default function page() {
     return (
         <div className='page'>
+            <div className="page_heading">Sister Institution</div>
+            <hr/>
+            <br />
             <a href="https://sbcs.edu.in/">
             <div className="single_meeting download_button">
 

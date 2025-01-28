@@ -58,7 +58,7 @@
 }
 .college_background {
     width: 98.5%; /* Full container width */
-    height: 90vh; /* Full viewport height */
+    height: 80vh; /* Full viewport height */
     object-fit: cover; /* Crop video while maintaining aspect ratio */
     margin: 0px 10px;
     z-index: -1; /* Ensure it sits behind other content */
@@ -73,7 +73,7 @@
 }
 
 .video{
-    opacity: 0.8;
+    opacity: 0.7;
 
 }
 

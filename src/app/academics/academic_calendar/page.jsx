@@ -27,7 +27,7 @@ function Page() {
 
   return (
     <div className="calendar-container">
-      <h1 className="calendar-title">Academic Calendars</h1>
+      <h1 className="calendar-title" style={{color:'#73501c'}}>Academic Calendars</h1>
 
       <div className="search-container">
         <i className="fas fa-search search-icon"></i>

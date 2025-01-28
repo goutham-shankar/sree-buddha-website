@@ -10,18 +10,21 @@
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
     font-weight: 700;
-    line-height: 1.5em;
+    /* line-height: 1.5em; */
     text-align: left;
     color: #845714;
     margin-top: 20px;
+    margin-bottom: .5%;
 }
 .paragraph{
     font-family: 'poppins';
-    font-size: 16px;
+    font-size: 18px;
+    margin-top: .8%;
 }
 .links {
     width: 436px;
-    height: 68px;
+    /* height: 68px; */
+    padding: .5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,14 +46,21 @@
  .paragraph{
     font-size: 16px;
  }   
+ .links{
+    width: 50vw;
+ }
     
 }
 @media (max-width:480px)
 {
     .title{
-        font-size: 30px;
+        font-size: 26px;
     }
     .paragraph{
         font-size: 16px;
     }
+    .links{
+        width: 50vw;
+        font-size: 16px;
+     }
 }

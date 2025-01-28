@@ -99,7 +99,7 @@ export default function page() {
             <div className="photothree">
                     <img className="fotor"src={fotor.src} alt="" />
             </div>
-
+<br />
             <div className="headingtwo">2ND ANNUAL CONFERENCE SERIES ON “ENGINEERING EDUCATION FOR FACING THE FUTURE (E2F2 2018)”   ON 17TH APRIL 2018</div>
 
             <div className="paragraph">
@@ -130,6 +130,7 @@ export default function page() {
 
             <img className='news' src={news.src} alt="" />
             </div>
+            <br />
             <div className="headingtwo">Two day National Conference E2F2(Engineering Education for Facing the Future) 2017</div>
             
             <div className="paragraph">
