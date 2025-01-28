@@ -40,7 +40,7 @@ export default function Research() {
             <div className="events_container">
                 <div className="events_title_area">
                     <span className="event_left_border"></span>
-                    <h3>EVENTS</h3>
+                    <h3>RESEARCH</h3>
                     <a href="" className="events_know_more">KNOW MORE</a>
                 </div>
 

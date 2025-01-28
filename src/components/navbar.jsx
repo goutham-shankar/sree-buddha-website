@@ -17,7 +17,7 @@ export default function Navbar() {
         { name: "Vision and Mission", link: "/about-us/vision_and_mission" },
         { name: "Management", link: "/about-us/management" },
         { name: "Principal", link: "/about-us/principal" },
-        { name: "Oranogram", link: "/about-us/oronogram" },
+        { name: "Organogram", link: "/about-us/organogram" },
         { name: "Mandatory Disclosure", link: "/about-us/mandatory_disclosure" },
         { name: "AICTE EOA", link: "/about-us/EoA" },
         { name: "Student Code of Conduct and Ethics", link: "/about-us/student_code_of_conduct" },
