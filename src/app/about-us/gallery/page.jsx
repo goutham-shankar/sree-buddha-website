@@ -32,35 +32,53 @@ const ImageGallery = () => {
     "/assets/images/gallery/mou.jpg",
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+  const handleImageClick = (index) => {
+    setCurrentIndex(index);
+  };
+
+  const handleCloseModal = () => {
+    setCurrentIndex(null);
+  };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
   return (
     <div className="page">
-      <div className="page_heading">Gallery</div> 
+      <div className="page_heading">Gallery</div>
       <hr />
-    <div className="image-gallery">
-      <div className="slider-container">
-        <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} />
-        <button className="prev" onClick={handlePrev}>
-          &#10094;
-        </button>
-        <button className="next" onClick={handleNext}>
-          &#10095;
-        </button>
+      <div className="image-gallery">
+        {images.map((image, index) => (
+          <div key={index} className="gallery-item" onClick={() => handleImageClick(index)}>
+            <img src={image} alt={`Image ${index + 1}`} />
+          </div>
+        ))}
       </div>
+
+      {currentIndex !== null && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+            <button className="close-btn" onClick={handleCloseModal}>
+              &#10005;
+            </button>
+            <button className="prev-btn" onClick={handlePrev}>
+              &#10094;
+            </button>
+            <button className="next-btn" onClick={handleNext}>
+              &#10095;
+            </button>
+          </div>
+        </div>
+      )}
     </div>
-    </div>
-    
   );
 };
 
