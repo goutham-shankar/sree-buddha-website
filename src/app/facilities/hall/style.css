@@ -16,13 +16,17 @@
     color: #845714;
     margin-top: 20px;
 }
-.paragraph{
+.hall-div .paragraph{
     font-family: 'poppins';
-    font-size: 22px;
+    font-size: 18px;
+    padding-right: 3%;
 }
 .photo img{
     width: auto;
-    height: 60vh;
+    height: 65vh;
+}
+.hall-div{
+    display: flex;
 }
 
 /* for tab */
@@ -37,12 +41,20 @@
         font-size: 26px;
     } */
     .photo img{
-       height: 50vw;
+       height: 45vw;
        width: 80vw;
+    }
+    .hall-div{
+        flex-direction: column-reverse;
     }
 }
 
-
+@media (max-width:900px)
+{
+    .photo img{
+        height: 38vw;
+    }
+}
 
 
 /* phone */
@@ -58,8 +70,4 @@
     font-size: 16px;
 }
 
-}
-@media(max-width:400px)
-{
-    
 }

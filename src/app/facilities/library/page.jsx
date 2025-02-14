@@ -13,34 +13,52 @@ export default function page() {
     <div className='container'>
         <div className="title">Central Library</div><br />
         <hr /><br />
+        <div className="first-div">
         <div className="paragraph">
-            The Central Library caters to the informational needs of the faculty, 
-            students and other staff of the institute. It is housed in a 1500 Sq. m. three storied building
-            in the main campus. 
+        The Central Library is a vital resource center catering to the faculty, 
+        students, and staff of the institute. Spanning 1,500 sq. meters, this three-story facility is located at the heart of 
+        the campus, offering a well-equipped space for study and research.  
+        <br /><br />
+        With a vast collection of books, journals, and digital resources, it supports academic excellence and
+         innovation. The library provides spacious reading areas, quiet study zones, and digital access
+          to a wide range of materials, making it an ideal place for learning and research.
          </div>
         <br />
         <div className="imageone">
             <img src={picone.src} alt="" />
         </div>
         <br />
-
+        </div>
+        
+<br />
         <div className="heading">Digital Library</div>
         <div className="digital">
                 <div className="paragraph">
-                The faculty, students& research scholars can access online and offline electronic resources.The Digital
-                Library is housed in the first floor and has a capacity to accommodate 40 users. More than 15000 International
-                Journals, e-books, standards in different areas subscribed through different consortium like IEEE POP, 
-                ELSEVIER, SPRINGER, Access Engineering Library (McGraw Hill), ASTM Digital Library, ASCE, ASME, J-GATE,
-                ISO, JTC1, DELNET Membership and NPTEL facility.
+                The Digital Library is a hub of knowledge, providing faculty, students, and research scholars with seamless access to 
+                a vast collection of online and offline electronic resources. Located on the first floor, it is designed to accommodate 40 users, 
+                offering a conducive environment for digital learning and research.
+                <br /><br />
+                With access to over 15,000 international journals, e-books, research papers, and technical standards, the library ensures
+                that users stay updated with the latest advancements in various fields. These resources are made available through renowned 
+                consortiums such as IEEE POP, ELSEVIER, SPRINGER, Access Engineering Library (McGraw Hill), ASTM Digital Library, ASCE, ASME, J-GATE, ISO, 
+                JTC1, DELNET Membership, and NPTEL.
+                <br /><br />
+                In addition to these, the Digital Library features high-speed internet, multimedia resources, and dedicated systems for
+                 accessing scholarly databases. Interactive e-learning modules, video lectures, and research repositories further enhance
+                  the learning experience. 
                 </div><br />
                 <div className="imagetwo">
                     <img src={pictwo.src} alt="" />
                 </div>
-        </div><br />
+        </div>
+        <br />
 
+
+        <br />
         <div className="services">
-                <div className="heading">Library Services</div>
+               
                 <div className="content">
+                <div className="heading">Library Services</div>
                     <ul>
                         <li>Reference</li>
                         <li>Document lending service</li>
@@ -56,6 +74,7 @@ export default function page() {
                 </div><br />
                 <div className="imagethree">
                     <img src={picthree.src} alt="" />
+                </div>
                 </div>
                 <br />
 
@@ -97,7 +116,7 @@ export default function page() {
         <div className="imagefour">
             <img src={picfour.src} alt="" />
         </div>
-        </div><br />
+       <br />
        
        <div className="reference">
             <div className="heading">Reference Section</div>

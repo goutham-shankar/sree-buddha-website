@@ -9,7 +9,8 @@ export default function page() {
             <div className="title">CANTEEN</div>
             <hr /><br />
             <br />
-            <div className="photo">
+           <div className="canteen-div">
+           <div className="photo">
               <img src={photo.src} alt="" /><br />
             </div>
             <br/>
@@ -22,7 +23,9 @@ export default function page() {
              provided to accommodate students and staff even during peak time.
              <br /><br />
              Canteen has a neat and clean kitchen with cooking facility and kitchen staff take extra care to provide our students with a modern & good hygiene .  <br />
-             </div><br />
+             </div>
+           </div>
+           <br />
             
             
     </div>
