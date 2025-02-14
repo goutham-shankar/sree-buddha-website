@@ -28,7 +28,7 @@ export default function LandingPage() {
       {/* <img className="college_background" src={"/assets/images/sree_buddha_college_image1.png"} alt="" /> */}
       <div className="college_background">
         <video className='video' loop autoPlay muted>
-          <source src="/assets/videos/sree_buddha.mp4" type="video/mp4" />
+          <source src="/assets/videos/sree_budha_final.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="black_overlay"></div>
@@ -38,8 +38,8 @@ export default function LandingPage() {
 
 
       <div className="social_media_links">
-        <a href=""><img src={"/assets/images/home images/instagram.png"} alt="" /></a>
-        <a href=""><img src={"/assets/images/home images/youtube.png"} alt="" /></a>
+        <a href="https://www.instagram.com/sreebuddha.sbce/"><img src={"/assets/images/home images/instagram.png"} alt="" /></a>
+        <a href="https://www.youtube.com/@sbceofficialyoutube2182"><img src={"/assets/images/home images/youtube.png"} alt="" /></a>
         <a href=""><img src={"/assets/images/home images/whatsapp.png"} alt="" /></a>
         <a href=""><img src={"/assets/images/home images/facebook.png"} alt="" /></a>
         <a href=""><img src={"/assets/images/home images/x.png"} /></a>

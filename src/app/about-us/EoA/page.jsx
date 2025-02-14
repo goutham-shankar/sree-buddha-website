@@ -1,103 +1,59 @@
-"use client";
-import React from "react";
-import "./eoa.css";
+'use client';
+import React, { useState, useEffect } from 'react';
+import './eoa.css';
 
-export default function EoA() {
-  const handlePdfClick = (url) => {
-    window.open(url, "_blank");
+function Page() {
+  const [pdfFiles, setPdfFiles] = useState([]);
+  const API_URL = 'http://192.168.1.50:1337/api/eoas?populate=*';
+
+  useEffect(() => {
+    const fetchPdfFiles = async () => {
+      try {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+        
+        // Map the response to extract handbook names and PDF URLs
+        const files = data.data.map((item) => ({
+          name: item.heading,
+          path: `http://192.168.1.50:1337${item.EoA_pdf[0].url}`, // Full URL for the PDF
+        }));
+
+        setPdfFiles(files);
+      } catch (error) {
+        console.error('Error fetching PDF files:', error);
+      }
+    };
+
+    fetchPdfFiles();
+  }, []);
+
+  const handleClick = (pdfPath) => {
+    window.open(pdfPath, '_blank');
   };
 
   return (
-    <div className="eoa">
-      <h2>AICTE EoA</h2>
-      <div className="eoa-ul">
-        <div
-          className="eoa-box"
-          onClick={() =>
-            handlePdfClick(
-              "/assets/documents/EoA%20docs/EOA-Report-2024-2025.pdf"
-            )
-          }
-        >
-          <h3>EoA 2024-2025</h3>
-        </div>
-        <div
-          className="eoa-box"
-          onClick={() =>
-            handlePdfClick("/assets/documents/EoA%20docs/AICTE-EOA-2023-24.pdf")
-          }
-        >
-          <h3>EoA 2023-2024</h3>
-        </div>
-        <div
-          className="eoa-box"
-          onClick={() =>
-            handlePdfClick("/assets/documents/EoA%20docs/EOA-Report-22-23.pdf")
-          }
-        >
-          <h3>EoA 2022-2023</h3>
-        </div>
-        <div
-          className="eoa-box"
-          onClick={() =>
-            handlePdfClick(
-              "/assets/documents/EoA%20docs/EOA_Report-21-22_Pattoor-F.pdf"
-            )
-          }
-        >
-          <h3>EoA 2021-2022</h3>
-        </div>
-        <div
-          className="eoa-box"
-          onClick={() =>
-            handlePdfClick(
-              "/assets/documents/EoA%20docs/AICTE-EOA_Report_2020-21.pdf"
-            )
-          }
-        >
-          <h3>EoA 2020-2021</h3>
-        </div>
-        <div
-          className="eoa-box"
-          onClick={() =>
-            handlePdfClick(
-              "/assets/documents/EoA%20docs/EOA-Report-2019-20-_New.pdf"
-            )
-          }
-        >
-          <h3>EoA 2019-2020</h3>
-        </div>
-        <div
-          className="eoa-box"
-          onClick={() =>
-            handlePdfClick(
-              "/assets/documents/EoA%20docs/EOA-Report_2018-19.pdf"
-            )
-          }
-        >
-          <h3>EoA 2018-2019</h3>
-        </div>
-        <div
-          className="eoa-box"
-          onClick={() =>
-            handlePdfClick(
-              "/assets/documents/EoA%20docs/EOA_Report_2017-18.pdf"
-            )
-          }
-        >
-          <h3>EoA 2017-2018</h3>
-        </div>
-        <div
-          className="eoa-box"
-          onClick={() =>
-            handlePdfClick(
-              "/assets/documents/EoA%20docs/AICTE-Approval-2016-17.pdf"
-            )
-          }
-        >
-          <h3>EoA 2016-2017</h3>
-        </div>
-      </div>
+    <div className="app-container">
+      <h1 style={{ textAlign: 'left', fontFamily: 'Poppins, sans-serif', color: '#73501c' }}>
+        AICTE&nbsp; EoA
+      </h1>
+      <hr />
+      <br />
+      <ul className="pdf-list">
+        {pdfFiles.map((pdf, index) => (
+          <li
+            key={index}
+            className="pdf-item"
+            onClick={() => handleClick(pdf.path)}
+          >
+            <i className="far fa-file-pdf" style={{ marginRight: '10px', color: '#e74c3c' }}></i>
+            <span style={{ fontFamily: 'Poppins, sans-serif', cursor: 'pointer' }}>
+              {pdf.name}
+            </span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
+
+export default Page;

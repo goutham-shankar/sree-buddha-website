@@ -17,7 +17,7 @@ export default function Navbar() {
         { name: "Vision and Mission", link: "/about-us/vision_and_mission" },
         { name: "Management", link: "/about-us/management" },
         { name: "Principal", link: "/about-us/principal" },
-        { name: "Oranogram", link: "/about-us/oronogram" },
+        { name: "Organogram", link: "/about-us/organogram" },
         { name: "Mandatory Disclosure", link: "/about-us/mandatory_disclosure" },
         { name: "AICTE EOA", link: "/about-us/EoA" },
         { name: "Student Code of Conduct and Ethics", link: "/about-us/student_code_of_conduct" },
@@ -39,7 +39,6 @@ export default function Navbar() {
         { name: "Finance Committee", link: "/autonomous/finance_committee" },
         { name: "Board of Studies", link: "/autonomous/board_of_studies" },
         { name: "Regulations", link: "/autonomous/regulations" },
-        { name: "Academic Calendar", link: "/autonomous/academic_calendar" },
         { name: "Examinations Cell", link: "/autonomous/examinations_cell" },
         { name: "Curriculum and Syllabus", link: "/autonomous/curriculum_and_syllabus" },
       ],
@@ -51,7 +50,6 @@ export default function Navbar() {
         { name: "Academic Calendar", link: "/academics/academic_calendar" },
         { name: "Professional Bodies", link: "/academics/professional_bodies" },
         { name: "Handbook", link: "/academics/handbook" },
-        { name: "NSS", link: "/academics/nss" },
         { name: "Syllabus", link: "https://ktu.edu.in/" },
         { name: "Campus Newsletter", link: "/academics/newsletter" },
       ],
@@ -142,6 +140,7 @@ export default function Navbar() {
         { name: "Executive Body", link: "/alumni/executive_body" },
         { name: "Alumni Reports", link: "/alumni/alumni_reports" },
       ],
+       side: "left"
     },
     {
       name: "Research",
@@ -152,6 +151,7 @@ export default function Navbar() {
         { name: "Consultancy", link: "/research/consultancy" },
         { name: "Conferences Organized", link: "/research/conference" },
       ],
+      side: "left"
     },
   ];
 
@@ -165,7 +165,7 @@ export default function Navbar() {
       </div>
       <div className="navbar_right">
         <div className="important_links">
-          <a href="/admissions/international_admissions" className="important_link"> <img src="/assets/images/home/international_admissions.png" alt="" /> Internation Admissions</a>
+          <a href="/admissions/international2" className="important_link"> <img src="/assets/images/home/international_admissions.png" alt="" /> International Admissions</a>
           <a href="#" className="important_link"> <img src="/assets/images/home/careers.png" alt="" /> CareersSBCE</a>
           <a href="#" className="important_link"> <img src="/assets/images/home/fees.png" alt="" /> Fees Payment</a>
           <a href="" className="important_link last_link">  <img src="/assets/images/home/university.png" alt="" /> University</a>
@@ -175,12 +175,15 @@ export default function Navbar() {
 
         <div className="navbar_menus">
           {
+
+
             link_map.map((menu, index) => {
+              // console.log(menu.side)
               return (
 
-                <div className="navbar_menu" key = {index}>
+                <div className={`navbar_menu `} key = {index} >
                   <span>{menu.name}</span>
-                  <div className="submenu">
+                  <div className={`submenu ${ (menu.side == "left")? "towards_left" : "" }`}>
 
                     <ul>
 

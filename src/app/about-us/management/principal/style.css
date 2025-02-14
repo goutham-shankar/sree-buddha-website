@@ -1,0 +1,206 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; 
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit; /* Inherit the box-sizing property */
+  }
+  
+  /* Flexbox layout for the entire app to push footer to the bottom */
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the page takes the full height */
+  }
+  
+  /* Ensures the main content stretches to take up available space */
+  .App {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  header {
+    background-color: #ffffff;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Contain logo and navbars together */
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 102px;
+    width: 92px;
+  }
+  
+  /* Container to hold both navbars */
+  .navbars-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .navbar ul, .navbar-secondary ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+  }
+  
+  .navbar ul li, .navbar-secondary ul li {
+    margin-right: 15px;
+  }
+  
+  .navbar ul li a, .navbar-secondary ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+  }
+  
+  .navbar {
+    margin-bottom: 5px;
+    width: auto;
+  }
+  
+  .navbar-secondary {
+    width: auto;
+  }
+  
+  /* Principal section styling */
+  .principal-section {
+    background-color: rgb(230,230,230);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 50%;
+  }
+  
+  .principal-section h1 {
+    font-size: 50px;
+    color: rgb(115,80,28);
+    font-family: Poppins;
+    font-weight: 700px;
+  }
+  
+  .principal-section .text {
+    width: 60%;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  
+  .m-box .text {
+    line-height: 50.72px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    /* font-weight: 800px; */
+    padding-right: 15px;
+  
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%; /* Use 100% instead of 100vw to prevent overflow */
+    justify-content: space-between;
+    min-height: 100vh;
+  
+  }
+  
+  .principal_image img {
+    width: 100%; /* Make the image take 100% of the container width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 1200px; /* Prevents overflow beyond the container */
+    min-width: 700px;
+  }
+  
+  .m-box {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(230,230,230);
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%; /* Ensure the container takes the full available width */
+    padding-left: 5%;
+  }
+  
+  footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    flex-shrink: 0;
+  }
+  
+  .footer-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-column {
+    width: 23%;
+  }
+  
+  .footer-column h3 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-column ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer-column p {
+    margin: 0;
+  }
+  
+  /* Media query for small screens */
+  @media(max-width: 500px) {
+    .content {
+      flex-direction: column;
+      width: 100%; /* Use 100% to prevent overflow */
+    }
+  
+    .principal_image img {
+      width: 100%; /* Make the image take 100% of the container width */
+      height: auto; /* Maintain aspect ratio */
+      max-width: 1200px; /* Prevents overflow beyond the container */
+      min-width: 300px;
+    }
+  
+    .m-box .text {
+      line-height: 30.33px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      /* font-weight: 800px; */
+    }
+  
+    .m-box {
+      max-width: 100%;
+      padding: 2px;
+    }
+  }
+  
