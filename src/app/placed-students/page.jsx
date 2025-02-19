@@ -248,10 +248,132 @@ const students = [
   },
 ];
 
+const students2 = [
+  { id: 1, name: "Mr. ANANTHU H KUMAR", company: "AMAZON" },
+  { id: 2, name: "Mr. TINU THAMPY", company: "WIPRO" },
+  { id: 3, name: "Mr. ARAVIND S", company: "WIPRO" },
+  { id: 4, name: "Ms. ALINA M GEORGE", company: "ICON CLINICAL RESEARCH" },
+  { id: 5, name: "Ms. RIYA GEORGE", company: "ICON CLINICAL RESEARCH" },
+  { id: 6, name: "Ms. JISHA MOHAN", company: "ICON CLINICAL RESEARCH" },
+  { id: 7, name: "Mr. NIRMAL U", company: "UST Global" },
+  { id: 8, name: "Ms. ASWATHI S", company: "UST Global" },
+  { id: 9, name: "Mr. BILAL BIN NAZAR", company: "UST Global" },
+  { id: 10, name: "Ms. SHILPA S PILLAI", company: "UST Global" },
+  { id: 11, name: "Ms. LEKSHMY P S", company: "UST Global" },
+  { id: 12, name: "Ms. ALINA M GEORGE", company: "HEXAWARE" },
+  { id: 13, name: "Mr. FARIS WAHID", company: "SPERIDIAN" },
+  { id: 14, name: "Ms. ALINA M GEORGE", company: "SPERIDIAN" },
+  { id: 15, name: "Mr. ARAVIND R", company: "SPERIDIAN" },
+  { id: 16, name: "Mr. SURAJ SARMA", company: "EXPERION" },
+  { id: 17, name: "Ms. SHILPA S PILLAI", company: "POORNAM INFOVISION" },
+  { id: 18, name: "Ms. SNEHA RAJAN", company: "POORNAM INFOVISION" },
+  { id: 19, name: "Mr. SURAJ SARMA", company: "POORNAM INFOVISION" },
+  { id: 20, name: "Mr. BILAL BIN NAZAR", company: "POORNAM INFOVISION" },
+
+  { id: 21, name: "Mr. ANATHAKRISHNAN A", company: "POORNAM INFOVISION" },
+  { id: 22, name: "Ms. ALINA M GEORGE", company: "POORNAM INFOVISION" },
+  { id: 23, name: "Ms. J AARCHA RAJ", company: "ACCENTA" },
+  { id: 24, name: "Ms. GAURI MOHAN", company: "ACCENTA" },
+  { id: 25, name: "Ms. RIYA GEORGE", company: "ACCENTA" },
+  { id: 26, name: "Mr. SURAJ SARMA", company: "ACCENTA" },
+  { id: 27, name: "Mr. NARAYANAN N", company: "ACCENTA" },
+  { id: 28, name: "Ms. EMAAN FATHIMA", company: "ACCENTA" },
+  { id: 29, name: "Mr. VISHNU MAHESH", company: "ACCENTA" },
+  { id: 30, name: "Ms. MEENAKSHI VISWOM", company: "ACCENTA" },
+  { id: 31, name: "Ms. POOJA HARI", company: "ACCENTA" },
+  { id: 32, name: "Ms. VRINDHA R", company: "ACCENTA" },
+  { id: 33, name: "Mr. SACHINMAYAN S", company: "ACCENTA" },
+  { id: 34, name: "Ms. ANISHA P", company: "ACCENTA" },
+  { id: 35, name: "Ms. ABEL ALEX NINAN", company: "ACCENTA" },
+  { id: 36, name: "Mr. ABHISHEK S", company: "ACCENTA" },
+  { id: 37, name: "Ms. PRASHANTI S", company: "ACCENTA" },
+  { id: 38, name: "Ms. SHERRIN THOMAS", company: "ACCENTA" },
+  { id: 39, name: "Mr. AKHIL RAVI", company: "ACCENTA" },
+  { id: 40, name: "Mr. AMAL RAJ", company: "ACCENTA" },
+  { id: 41, name: "Ms. GOPIKA R", company: "ACCENTA" },
+  { id: 42, name: "Ms. SREDHA R", company: "ACCENTA" },
+  { id: 43, name: "Ms. SURYA BABU", company: "ACCENTA" },
+  { id: 44, name: "Ms. SOORA U", company: "ACCENTA" },
+  { id: 45, name: "Mr. NIRMAL U", company: "ACCENTA" },
+  { id: 46, name: "Ms. SNEHA RAJAN", company: "ACCENTA" },
+  { id: 47, name: "Ms. ANILA L", company: "ACCENTA" },
+  { id: 48, name: "Ms. KAVYA S NAIR", company: "ACCENTA" },
+  { id: 49, name: "Mr. ARAVIND S", company: "ACCENTA" },
+  { id: 50, name: "Ms. RIYA GEORGE", company: "INFINIZ IT SOLUTIONS" },
+  { id: 51, name: "Mr. SURAJ SARMA", company: "INFINIZ IT SOLUTIONS" },
+  { id: 52, name: "Mr. NARAYANAN N", company: "INFINIZ IT SOLUTIONS" },
+  { id: 53, name: "Ms. SHILPA S PILLAI", company: "INFINIZ IT SOLUTIONS" },
+  { id: 54, name: "Ms. ASWATHI S", company: "INFINIZ IT SOLUTIONS" },
+  { id: 55, name: "Ms. GOPIKA R", company: "INFINIZ IT SOLUTIONS" },
+  { id: 56, name: "Mr. JITTO SUNNY", company: "INFINIZ IT SOLUTIONS" },
+  { id: 57, name: "Mr. FIROZ L", company: "INFINIZ IT SOLUTIONS" },
+  { id: 58, name: "Mr. KIRAN S", company: "INFINIZ IT SOLUTIONS" },
+  { id: 59, name: "Ms. ARYALEKSHI J", company: "INFINIZ IT SOLUTIONS" },
+  { id: 60, name: "Mr. JISHNU S MOHAN", company: "INFINIZ IT SOLUTIONS" },
+  { id: 61, name: "Ms. VARSHA S PILLAI", company: "INFINIZ IT SOLUTIONS" },
+  { id: 62, name: "Ms. KAVYA S NAIR", company: "INFINIZ IT SOLUTIONS" },
+  { id: 63, name: "Mr. ANANDU SRINIVAS", company: "INFINIZ IT SOLUTIONS" },
+  { id: 64, name: "Ms. DIVYA VANAMALI D", company: "INFINIZ IT SOLUTIONS" },
+  { id: 65, name: "Ms. ANILA A", company: "INFINIZ IT SOLUTIONS" },
+  { id: 66, name: "Ms. TISHA CATHERINE TOM", company: "INFINIZ IT SOLUTIONS" },
+  { id: 67, name: "Ms. AMMU VIJAY", company: "INFINIZ IT SOLUTIONS" },
+  { id: 68, name: "Mr. JEEVAN P VENU", company: "INFINIZ IT SOLUTIONS" },
+  { id: 69, name: "Ms. VIJISHA V", company: "INFINIZ IT SOLUTIONS" },
+  { id: 70, name: "Ms. ANISHA P", company: "INFINIZ IT SOLUTIONS" },
+  { id: 71, name: "Mr. SOURAV S", company: "INFINIZ IT SOLUTIONS" },
+  { id: 72, name: "Ms. ALINA M GEORGE", company: "INFINIZ IT SOLUTIONS" },
+  { id: 73, name: "Ms. VRINDHA R", company: "INFINIZ IT SOLUTIONS" },
+  { id: 74, name: "Mr. STENY RAJ STEPHEN", company: "AGILE BUSINESS SOLUTION" },
+  { id: 75, name: "Mr. MANU KRISHNAN", company: "AGILE BUSINESS SOLUTION" },
+  { id: 76, name: "Ms. PARVATHI NAIR", company: "AGILE BUSINESS SOLUTION" },
+  { id: 77, name: "Ms. LEKSHMY P S", company: "SUPPORT SAGES" },
+];
+const images = Array.from(
+  { length: 98 },
+  (_, i) => `assets/images/placement-students/image_${i + 3}.jpg`
+);
+
 const page = () => {
   return (
     <div className="page">
       <div className="page_heading">Academic Year : 2017-18 (18 Passouts)</div>
+      <div className="line"></div>
+      <div className="gallery-container">
+        {images.map((src, index) => (
+          <div key={index} className="image-card">
+            <img src={src} alt={`Image ${index + 1}`} className="image" />
+          </div>
+        ))}
+      </div>
+      <div className="container">
+        <table className="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Companies</th>
+            </tr>
+          </thead>
+          <tbody>
+            {students.map((person) => (
+              <tr key={person.id}>
+                <td>{person.id}</td>
+                <td>{person.name}</td>
+                <td>
+                  {Array.isArray(person.companies) ? (
+                    person.companies.map((company, index) => (
+                      <div key={index}>{`${index + 1}. ${company}`}</div> // Remove extra numbering
+                    ))
+                  ) : (
+                    <div>{person.company}</div>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="page_heading">Academic Year : 2018-19 (19 Passouts)</div>
       <div className="line"></div>
       <div className="container">
         <table className="table">
