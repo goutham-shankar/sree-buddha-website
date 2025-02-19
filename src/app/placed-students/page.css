@@ -32,7 +32,8 @@
 .table th,
 .table td {
   padding: 12px;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #ddd; /* Adds lines between columns and rows */
+  text-align: left;
 }
 
 /* Hover Effect */
