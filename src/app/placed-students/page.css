@@ -1,0 +1,71 @@
+/* Container Styling */
+.container {
+  width: 100%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Arial", sans-serif;
+  text-align: justify;
+  gap: 2dvh;
+}
+
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table Header */
+.table thead {
+  background-color: #735120;
+  color: white;
+  font-weight: bold;
+}
+
+/* Table Rows */
+.table th,
+.table td {
+  padding: 12px;
+  border: 1px solid #ddd; /* Adds lines between columns and rows */
+  text-align: left;
+}
+
+/* Hover Effect */
+.table tbody tr:hover {
+  background-color: #7350202d;
+  transition: background-color 0.3s ease-in-out;
+}
+.placement {
+  color: #462c07;
+}
+/* Table Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.table tbody tr {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Companies List Styling */
+.companies-list {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.companies-list div {
+  padding: 4px 0;
+}

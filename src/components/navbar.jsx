@@ -17,13 +17,22 @@ export default function Navbar() {
         { name: "Vision and Mission", link: "/about-us/vision_and_mission" },
         { name: "Management", link: "/about-us/management" },
         { name: "Principal", link: "/about-us/principal" },
-        { name: "Oranogram", link: "/about-us/oronogram" },
-        { name: "Mandatory Disclosure", link: "/about-us/mandatory_disclosure" },
+        { name: "Organogram", link: "/about-us/organogram" },
+        {
+          name: "Mandatory Disclosure",
+          link: "/about-us/mandatory_disclosure",
+        },
         { name: "AICTE EOA", link: "/about-us/EoA" },
-        { name: "Student Code of Conduct and Ethics", link: "/about-us/student_code_of_conduct" },
+        {
+          name: "Student Code of Conduct and Ethics",
+          link: "/about-us/student_code_of_conduct",
+        },
         { name: "Internal Quality Assurance Cell", link: "/about-us/iqac" },
         { name: "Gallery", link: "/about-us/gallery" },
-        { name: "Admission and Accounts", link: "/about-us/admission_and_accounts" },
+        {
+          name: "Admission and Accounts",
+          link: "/about-us/admission_and_accounts",
+        },
         { name: "PTA", link: "/about-us/pta" },
         { name: "Sister Institutions", link: "/about-us/sister_institutions" },
         { name: "Contact Us", link: "/about-us/contact_us" },
@@ -40,7 +49,10 @@ export default function Navbar() {
         { name: "Board of Studies", link: "/autonomous/board_of_studies" },
         { name: "Regulations", link: "/autonomous/regulations" },
         { name: "Examinations Cell", link: "/autonomous/examinations_cell" },
-        { name: "Curriculum and Syllabus", link: "/autonomous/curriculum_and_syllabus" },
+        {
+          name: "Curriculum and Syllabus",
+          link: "/autonomous/curriculum_and_syllabus",
+        },
       ],
     },
     {
@@ -57,16 +69,37 @@ export default function Navbar() {
     {
       name: "Departments",
       links: [
-        { name: "Computer Science and Engineering", link: "/departments/computer-science-engineering" },
-        { name: "EEE", link: "/departments/electrical-electronics-engineering" },
-        { name: "ECE", link: "/departments/electronics-communication-engineering" },
+        {
+          name: "Computer Science and Engineering",
+          link: "/departments/computer-science-engineering",
+        },
+        {
+          name: "EEE",
+          link: "/departments/electrical-electronics-engineering",
+        },
+        {
+          name: "ECE",
+          link: "/departments/electronics-communication-engineering",
+        },
         { name: "Mechanical", link: "/departments/mechanical-engineering" },
-        { name: "Computer Science with AI", link: "/departments/artificial-intelligence-machine-learning" },
-        { name: "Electronics and Computer Engineering", link: "/departments/electronics-computer-engineering" },
+        {
+          name: "Computer Science with AI",
+          link: "/departments/artificial-intelligence-machine-learning",
+        },
+        {
+          name: "Electronics and Computer Engineering",
+          link: "/departments/electronics-computer-engineering",
+        },
         { name: "Civil Engineering", link: "/departments/civil-engineering" },
-        { name: "Basic Science and Humanities", link: "/departments/mathematics-and-basic-sciences" },
+        {
+          name: "Basic Science and Humanities",
+          link: "/departments/mathematics-and-basic-sciences",
+        },
         { name: "Food Sciences", link: "/departments/food-technology" },
-        { name: "Biotechnology and Biochemical Engineering", link: "/departments/biotechnology-biochemical-engineering" },
+        {
+          name: "Biotechnology and Biochemical Engineering",
+          link: "/departments/biotechnology-biochemical-engineering",
+        },
       ],
     },
     {
@@ -75,7 +108,10 @@ export default function Navbar() {
         { name: "Undergraduate", link: "/admissions/undergraduate" },
         { name: "Postgraduate", link: "/admissions/postgraduate" },
         { name: "PhD Research", link: "/admissions/phd_research" },
-        { name: "International Students Admission", link: "/admissions/international" },
+        {
+          name: "International Students Admission",
+          link: "/admissions/international",
+        },
       ],
     },
     {
@@ -91,7 +127,10 @@ export default function Navbar() {
     {
       name: "Cells and Chapters",
       links: [
-        { name: "Various Cells and Committees", link: "/cells_and_chapters/student-clubs" },
+        {
+          name: "Various Cells and Committees",
+          link: "/cells_and_chapters/student-clubs",
+        },
         { name: "IEEE", link: "/cells_and_chapters/ieee" },
         { name: "IE(I)", link: "/cells_and_chapters/ie_i" },
         { name: "SAE India", link: "/cells_and_chapters/sae_india" },
@@ -100,7 +139,10 @@ export default function Navbar() {
         { name: "Virtual Lab", link: "/cells_and_chapters/virtual_lab" },
         { name: "IEDC", link: "/cells_and_chapters/iedc" },
         { name: "NPTEL", link: "/cells_and_chapters/nptel" },
-        { name: "IIT Remote Center", link: "/cells_and_chapters/remote_center" },
+        {
+          name: "IIT Remote Center",
+          link: "/cells_and_chapters/remote_center",
+        },
       ],
     },
     {
@@ -121,12 +163,12 @@ export default function Navbar() {
       name: "Accreditation",
       links: [
         {
-          name: "NAAC", links: [
-
+          name: "NAAC",
+          links: [
             { name: "Cycle1", link: "/accreditation/NAAC/Cycle1" },
             { name: "Cycle2", link: "/accreditation/NAAC/Cycle2" },
             { name: "Cycle3", link: "/accreditation/NAAC/Cycle3" },
-          ]
+          ],
         },
         { name: "NBA", link: "/accreditation/NBA" },
         { name: "NIRF", link: "/accreditation/NIRF" },
@@ -140,6 +182,7 @@ export default function Navbar() {
         { name: "Executive Body", link: "/alumni/executive_body" },
         { name: "Alumni Reports", link: "/alumni/alumni_reports" },
       ],
+      side: "left",
     },
     {
       name: "Research",
@@ -150,9 +193,9 @@ export default function Navbar() {
         { name: "Consultancy", link: "/research/consultancy" },
         { name: "Conferences Organized", link: "/research/conference" },
       ],
+      side: "left",
     },
   ];
-
 
   return (
     <div className="navbar">
@@ -163,65 +206,83 @@ export default function Navbar() {
       </div>
       <div className="navbar_right">
         <div className="important_links">
-          <a href="/admissions/international2" className="important_link"> <img src="/assets/images/home/international_admissions.png" alt="" /> International Admissions</a>
-          <a href="#" className="important_link"> <img src="/assets/images/home/careers.png" alt="" /> CareersSBCE</a>
-          <a href="#" className="important_link"> <img src="/assets/images/home/fees.png" alt="" /> Fees Payment</a>
-          <a href="" className="important_link last_link">  <img src="/assets/images/home/university.png" alt="" /> University</a>
-          <a href="#" className="important_links_button">admissions</a>
+          <a href="/admissions/international2" className="important_link">
+            {" "}
+            <img
+              src="/assets/images/home/international_admissions.png"
+              alt=""
+            />{" "}
+            International Admissions
+          </a>
+          <a href="#" className="important_link">
+            {" "}
+            <img src="/assets/images/home/careers.png" alt="" /> CareersSBCE
+          </a>
+          <a href="/fee-payment" className="important_link">
+            {" "}
+            <img src="/assets/images/home/fees.png" alt="" /> Fees Payment
+          </a>
+          <a href="" className="important_link last_link">
+            {" "}
+            <img src="/assets/images/home/university.png" alt="" /> University
+          </a>
+          <a href="#" className="important_links_button">
+            admissions
+          </a>
           {/* <a href="">Result Analysis</a> */}
         </div>
 
         <div className="navbar_menus">
-          {
-            link_map.map((menu, index) => {
-              return (
-
-                <div className="navbar_menu" key = {index}>
-                  <span>{menu.name}</span>
-                  <div className="submenu">
-
-                    <ul>
-
-                      {
-                        menu.links.map((menul2, index2) => {
-                          if (menul2.link != undefined) {
-                            return (
-                              <a className="submenu_link" href={menul2.link} key = {index2}>
-                                {menul2.name}
-                              </a>
-                            )
-                          } else {
-
-                            return (
-                              <div className="submenu_link" href="" key = {index2}>
-                                {menul2.name}
-                                <div className="submenu_2">
-                                  <ul>
-                                    {
-                                      menul2.links.map((menul3, index3) => {
-                                        return (
-                                          <Link key = {index3} href={menul3.link} className="submenu_2_link">{menul3.name}</Link>
-                                        )
-                                      })}
-                                  </ul>
-                                </div>
-
-                              </div>
-
-                            )
-
-                          }
-
-                        })
+          {link_map.map((menu, index) => {
+            // console.log(menu.side)
+            return (
+              <div className={`navbar_menu `} key={index}>
+                <span>{menu.name}</span>
+                <div
+                  className={`submenu ${
+                    menu.side == "left" ? "towards_left" : ""
+                  }`}
+                >
+                  <ul>
+                    {menu.links.map((menul2, index2) => {
+                      if (menul2.link != undefined) {
+                        return (
+                          <a
+                            className="submenu_link"
+                            href={menul2.link}
+                            key={index2}
+                          >
+                            {menul2.name}
+                          </a>
+                        );
+                      } else {
+                        return (
+                          <div className="submenu_link" href="" key={index2}>
+                            {menul2.name}
+                            <div className="submenu_2">
+                              <ul>
+                                {menul2.links.map((menul3, index3) => {
+                                  return (
+                                    <Link
+                                      key={index3}
+                                      href={menul3.link}
+                                      className="submenu_2_link"
+                                    >
+                                      {menul3.name}
+                                    </Link>
+                                  );
+                                })}
+                              </ul>
+                            </div>
+                          </div>
+                        );
                       }
-                    </ul>
-
-                  </div>
+                    })}
+                  </ul>
                 </div>
-
-              )
-            })
-          }
+              </div>
+            );
+          })}
         </div>
 
         {/*  
