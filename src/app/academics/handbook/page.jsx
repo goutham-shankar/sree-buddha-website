@@ -4,7 +4,7 @@ import './style.css';
 
 function Page() {
   const [pdfFiles, setPdfFiles] = useState([]);
-  const API_URL = 'http://192.168.1.50:1337/api/handbooks?populate=*';
+  const API_URL = 'http://13.51.85.192:1337/api/handbooks?populate=*';
 
   useEffect(() => {
     const fetchPdfFiles = async () => {
@@ -15,7 +15,7 @@ function Page() {
         // Map the response to extract handbook names and PDF URLs
         const files = data.data.map((item) => ({
           name: item.handbook_name,
-          path: `http://192.168.1.50:1337${item.pdf_name[0].url}`, // Full URL for the PDF
+          path: `http://13.51.85.192:1337${item.pdf_name[0].url}`, // Full URL for the PDF
         }));
 
         setPdfFiles(files);
