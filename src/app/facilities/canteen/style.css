@@ -4,6 +4,7 @@
     font-weight: 400;
     overflow-x: hidden;
     font-size: 18px;
+    height: 80vh;
    
 }
 .title {
@@ -15,15 +16,20 @@
     color: #845714;
     margin-top: 20px;
 }
-.paragraph{
+ .canteen-div .paragraph{
     font-family: 'poppins';
     font-size: 18px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+    padding-left: 3%;
 }
 .photo img{
     width: 35vw;
     /* height: 60vh;
      */
+}
+.canteen-div
+{
+    display: flex;
 }
 
 /* for tab */
@@ -34,8 +40,11 @@
      
     }
     .photo img{
-         width: 60vw;
+         width: 80vw;
        
+    }
+    .canteen-div{
+        flex-direction: column;
     }
 }
 
@@ -46,7 +55,7 @@
         height: 100vh;
     }
     .photo img{
-        width: 50vw
+        width: 65vw
         /* height: 600px; */
     
     }
@@ -62,7 +71,7 @@
         height: 100vh;
     }
     .photo img{
-        width: 40vw;
+        width: 50vw;
         /* height: 20vw; */
     }
     .paragraph{
