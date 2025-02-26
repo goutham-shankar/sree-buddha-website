@@ -5,6 +5,7 @@ import './eoa.css';
 function Page() {
   const [pdfFiles, setPdfFiles] = useState([]);
   const API_URL = 'http://13.51.85.192:1337/api/eoas?populate=*';
+  
 
   useEffect(() => {
     const fetchPdfFiles = async () => {
