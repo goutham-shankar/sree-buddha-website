@@ -4,7 +4,7 @@ import './eoa.css';
 
 function Page() {
   const [pdfFiles, setPdfFiles] = useState([]);
-  const API_URL = 'http://192.168.1.50:1337/api/eoas?populate=*';
+  const API_URL = 'http://13.51.85.192:1337/api/eoas?populate=*';
 
   useEffect(() => {
     const fetchPdfFiles = async () => {
@@ -15,7 +15,7 @@ function Page() {
         // Map the response to extract handbook names and PDF URLs
         const files = data.data.map((item) => ({
           name: item.heading,
-          path: `http://192.168.1.50:1337${item.EoA_pdf[0].url}`, // Full URL for the PDF
+          path: `http://13.51.85.192:1337${item.EoA_pdf[0].url}`, // Full URL for the PDF
         }));
 
         setPdfFiles(files);
@@ -30,7 +30,7 @@ function Page() {
   const handleClick = (pdfPath) => {
     window.open(pdfPath, '_blank');
   };
-  
+
 
   return (
     <div className="app-container">
