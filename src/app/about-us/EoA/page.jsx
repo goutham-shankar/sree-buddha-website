@@ -30,6 +30,7 @@ function Page() {
   const handleClick = (pdfPath) => {
     window.open(pdfPath, '_blank');
   };
+  
 
   return (
     <div className="app-container">
