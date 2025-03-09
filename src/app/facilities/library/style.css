@@ -20,22 +20,24 @@
 }
 /* images */
 .imageone img{
-   height: 25vw;    
+   height: 30vw;   
+   width: 50vw; 
 }
 .imagetwo img{
     height: 25vw;
 }
 .imagethree img{
     height: 25vw;
+    padding-left: 8%;
    
 }
 .imagefour img{
-    height: 35vw;
-    width: 60vw;
+    height: 30vw;
+    width: 53vw;
   
 }
 .imagefive img{
-    height:40vw;
+    height:28vw;
     margin-bottom: 60px;
 }
 
@@ -76,12 +78,45 @@
 .faculty-table td:last-child {
     width: 50%;
 }
+.first-div
+{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.first-div .paragraph{
+    padding-left: 5%;
+}
+.digital{
+    display: flex;
+}
+.services{
+    display: flex;
+}
+.services .content{
+width: 30vw;
+}
+
 
 /* for tab */
 @media (max-width:1400px){
     .container{
         padding-right: 100px;
         padding-left: 100px;
+    }
+    .first-div{
+        flex-direction:column-reverse;
+    }
+    .first-div .paragraph{
+        padding-left: 0;
+    }
+    .digital{
+        flex-direction: column-reverse;
+    }
+    .services{
+        flex-direction: column;
+    }
+    .services .content{
+        width: 100vw;
     }
 }
 
@@ -92,18 +127,28 @@
     }
     .imageone img{
         width: 80vw;
-        height: 50vw;
+        height: 40vw;
+    }
+    .imagetwo img{
+        width: 80vw;
+        height: 40vw;
     }
     .imagethree img,.imagefour img{
         width:70vw;
-        height: 50vw;
+        height: 40vw;
     }
     .imagefive img{
         width: 80vw;
-        height: 50vw;
+        height: 40vw;
     }
     .content{
         padding-left: 2%;
+    }
+    .first-div{
+        flex-direction:column-reverse;
+    }
+    .first-div .paragraph{
+        padding-left: 0;
     }
 }
 @media (max-width:800px){
@@ -125,12 +170,19 @@
     .faculty-table{
         width: 90%;
     }
+    .imageone img{
+        height: 50vw;
+    }
     .imagetwo img{
         height: 50vw;
         width: 80vw;
     }
     .imagefour img ,.imagethree img{
         width: 80vw;
+        height: 45vw;
+    }
+    .imagefive img{
+        height: 45vw;
     }
     .paragraph{
         font-size: 16px

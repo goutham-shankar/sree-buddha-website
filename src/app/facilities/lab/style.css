@@ -15,13 +15,19 @@
     color: #845714;
     margin-top: 20px;
 }
-.paragraph{
+.lab-div .paragraph{
     font-family: 'poppins';
     font-size: 18px;
+    padding-right: 3%;
 }
 .photo img{
-    width: 40vw;
+    width: 45vw;
+    height: 30vw;
     
+}
+.lab-div
+{
+    display: flex;
 }
 
 /* for tab */
@@ -39,7 +45,11 @@
         font-size: 16px;
     }
     .photo img{
-        width: 40vw;
+        width: 70vw;
+        height: auto;
+    }
+    .lab-div{
+        flex-direction: column-reverse;
     }
 }
 
