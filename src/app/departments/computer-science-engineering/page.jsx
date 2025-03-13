@@ -47,7 +47,7 @@ export default function ComputerScienceDepartment() {
             <div className="cs-dept-profile-image">
               {/* Replace with your actual image path */}
               <Image 
-                src="/images/cs-dept-building.jpg" 
+                src="/images/cs-dept-building.png" 
                 alt="Computer Science Department Building"
                 width={600}
                 height={400}
@@ -200,7 +200,7 @@ export default function ComputerScienceDepartment() {
           
           .cs-dept-profile-content {
             display: grid;
-            grid-template-columns: 3fr 1fr;
+            grid-template-columns: 3fr 2fr;
             gap: 30px;
             align-items: center;
           }
