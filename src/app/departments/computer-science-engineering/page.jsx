@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 
 
+
 export default function ComputerScienceDepartment() {
     return (
       <div className="cs-dept-container">
