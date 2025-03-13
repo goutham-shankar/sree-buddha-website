@@ -7,7 +7,7 @@
   margin-bottom: 40px;
   overflow-x: hidden;
 }
-.person-head{
+.person-head {
   display: flex;
   flex-direction: column;
   text-align: justify;
@@ -44,7 +44,9 @@
 }
 .pic {
   /* max-height: 30dvh; */
-  max-height: 300px;
+  /* max-height: 300px; */
+  min-height: 250px;
+  min-width: 250px;
   margin-right: 10px;
   border: 3px solid #73501c;
   border-radius: 20px;
@@ -127,12 +129,11 @@
     margin-right: 20px;
   }
 
-  .person-head{
+  .person-head {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
 
   .name {
@@ -146,7 +147,7 @@
     padding-left: 15px;
     text-align: center;
   }
-  .position{
+  .position {
     width: 200px;
     font-size: 20px;
     text-align: center;
