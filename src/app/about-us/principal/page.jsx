@@ -18,7 +18,7 @@
 //           pic={"/images/principal.png"}
 //         />
 //     </div>
-//   );
+//   ); 
 // }
 
 // export default Principal;
