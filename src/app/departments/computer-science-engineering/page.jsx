@@ -9,6 +9,16 @@ import Image from 'next/image';
 
 
 export default function ComputerScienceDepartment() {
+    // Department building images
+    const buildingImages = [
+      "/images/cs-dept-building/cs-dept-building.png",
+      "/images/cs-dept-building/cs-dept-building2.png",
+      
+      
+      
+      
+    ];
+    
     return (
       <div className="cs-dept-container">
         <header className="cs-dept-header">
@@ -265,9 +275,24 @@ export default function ComputerScienceDepartment() {
               grid-template-columns: 1fr;
             }
             
+<<<<<<< HEAD
             .cs-dept-gallery-grid {
               grid-template-columns: 1fr 1fr;
             }
+=======
+            .cs-dept-highlights-content {
+              grid-template-columns: 1fr;
+            }
+            
+            .cs-dept-gallery-grid {
+              grid-template-columns: 1fr 1fr;
+            }
+            
+            .cs-dept-profile-images {
+              position: static;
+              margin-top: 20px;
+            }
+>>>>>>> 278c1f3978773ff6902289cc03333f476e6545db
           }
           
           @media (max-width: 480px) {
