@@ -7,7 +7,11 @@
   margin-bottom: 40px;
   overflow-x: hidden;
 }
+<<<<<<< HEAD
+.person-head{
+=======
 .person-head {
+>>>>>>> 278c1f3978773ff6902289cc03333f476e6545db
   display: flex;
   flex-direction: column;
   text-align: justify;
@@ -129,11 +133,19 @@
     margin-right: 20px;
   }
 
+<<<<<<< HEAD
+  .person-head{
+=======
   .person-head {
+>>>>>>> 278c1f3978773ff6902289cc03333f476e6545db
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 278c1f3978773ff6902289cc03333f476e6545db
   }
 
   .name {
@@ -147,7 +159,11 @@
     padding-left: 15px;
     text-align: center;
   }
+<<<<<<< HEAD
+  .position{
+=======
   .position {
+>>>>>>> 278c1f3978773ff6902289cc03333f476e6545db
     width: 200px;
     font-size: 20px;
     text-align: center;

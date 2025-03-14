@@ -1,7 +1,12 @@
 "use client"
 
 import React from 'react'
+// import DepartmentNavbar from '@/components/departments/department_navbar'
+
+import "../department_style.css"
 import Image from 'next/image';
+
+
 
 export default function ComputerScienceDepartment() {
     // Department building images
@@ -23,11 +28,13 @@ export default function ComputerScienceDepartment() {
         
         <div className="cs-dept-hero">
           <div className="cs-dept-hero-image">
+            {/* Replace with your actual image path */}
             <Image 
               src="/images/cs-dept-hero.jpg" 
               alt="Computer Science Students Working Together"
               width={1200}
               height={400}
+              layout="responsive"
               priority
             />
           </div>
@@ -47,17 +54,15 @@ export default function ComputerScienceDepartment() {
               <br />
               <p>With state-of-the-art laboratories, experienced faculty members, and strong industry connections, we offer an environment that fosters innovation, critical thinking, and practical problem-solving skills. Our graduates are highly sought after by leading tech companies and research institutions.</p>
             </div>
-            <div className="cs-dept-profile-images">
-              {buildingImages.map((img, index) => (
-                <div key={index} className="cs-dept-building-image">
-                  <Image 
-                    src={img} 
-                    alt={`Computer Science Department Building ${index + 1}`}
-                    width={400}
-                    height={300}
-                  />
-                </div>
-              ))}
+            <div className="cs-dept-profile-image">
+              {/* Replace with your actual image path */}
+              <Image 
+                src="/images/cs-dept-building.jpg" 
+                alt="Computer Science Department Building"
+                width={600}
+                height={400}
+                layout="responsive"
+              />
             </div>
           </div>
         </section>
@@ -65,51 +70,53 @@ export default function ComputerScienceDepartment() {
         <section className="cs-dept-section">
           <h2 className="cs-dept-section-title">Department Highlights</h2>
           <div className="cs-dept-highlights-content">
-            <div className="highlights-card">
-              <h3 className="highlight-category">Academic Excellence & Research</h3>
-              <ul>
-                <li>Strong faculty expertise in core computing areas</li>
-                <li>Cutting-edge research in emerging technologies; like Artificial Intelligence, Internet of Things, Machine Learning and Deep Learning</li>
-              </ul>
-            </div>
+            <ul>
+              <li className="main-point">Academic Excellence & Research</li>
+              <li className="sub-point">Strong faculty expertise in core computing areas </li>
+              <li className="sub-point">Cutting-edge research in emerging technologies; like Artificial Intelligence, Internet of Things, Machine Learning and Deep Learning
+              </li>
               
-            <div className="highlights-card">
-              <h3 className="highlight-category">Industry Collaboration & Innovation</h3>
-              <ul>
-                <li>Strong partnerships with tech companies for internships, projects, and placements</li>
-                <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
-              </ul>
-            </div>
+              <li className="main-point">Industry Collaboration & Innovation</li>
+              <li className="sub-point">Strong partnerships with tech companies for internships, projects, and placements</li>
+              <li className="sub-point">Presence of technology incubators and startup ecosystems for entrepreneurship</li>
               
-            <div className="highlights-card">
-              <h3 className="highlight-category">State-of-the-Art Infrastructure</h3>
-              <ul>
-                <li>Well-equipped labs for AI & ML, Deep Learning and IoT</li>
-                <li>High-performance computing clusters for research</li>
-                <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
-              </ul>
-            </div>
+              <li className="main-point">State-of-the-Art Infrastructure</li>
+              <li className="sub-point">Well-equipped labs for AI & ML, Deep Learning and IoT</li>
+              <li className="sub-point">High-performance computing clusters for research</li>
+              <li className="sub-point">Access to industry-grade software, cloud platforms, and simulation tools</li>
               
-            <div className="highlights-card">
-              <h3 className="highlight-category">Skill Development & Student Success</h3>
-              <ul>
-                <li>Focus on hands-on learning, hackathons, and coding competitions</li>
-                <li>Specialization tracks in Data Science, Artificial Intelligence, Machine Learning and IoT</li>
-                <li>Strong placement records with top global recruiters</li>
-              </ul>
-            </div>
+              <li className="main-point">Skill Development & Student Success</li>
+              <li className="sub-point">Focus on hands-on learning, hackathons, and coding competitions</li>
+              <li className="sub-point">Specialization tracks in Data Science, Artificial Intelligence, Machine Learning and IoT</li>
+              <li className="sub-point">Strong placement records with top global recruiters</li>
+              
+             
+             
+             
+             
+            </ul>
           </div>
         </section>
         
         <section className="cs-dept-gallery">
           <h2 className="cs-dept-section-title">Department Gallery</h2>
           <div className="cs-dept-gallery-grid">
+            
+            
+            
+            
+            
+            
+            
+            
+            
             <div className="cs-dept-gallery-item">
               <Image 
                 src="/images/csimg1.jpg" 
                 alt="Robotics Competition"
                 width={400}
                 height={300}
+                layout="responsive"
               />
             </div>
             <div className="cs-dept-gallery-item">
@@ -118,6 +125,7 @@ export default function ComputerScienceDepartment() {
                 alt="Hackathon Event"
                 width={400}
                 height={300}
+                layout="responsive"
               />
             </div>
             <div className="cs-dept-gallery-item">
@@ -126,6 +134,7 @@ export default function ComputerScienceDepartment() {
                 alt="Graduation Ceremony"
                 width={400}
                 height={300}
+                layout="responsive"
               />
             </div>
           </div>
@@ -172,12 +181,6 @@ export default function ComputerScienceDepartment() {
             height: 100%;
           }
           
-          .cs-dept-hero-image img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-          }
-          
           .cs-dept-hero-text {
             position: absolute;
             bottom: 0;
@@ -207,86 +210,44 @@ export default function ComputerScienceDepartment() {
           
           .cs-dept-profile-content {
             display: grid;
-            grid-template-columns: 3fr 2fr;
+            grid-template-columns: 3fr 1fr;
             gap: 30px;
-            align-items: start;
+            align-items: center;
           }
           
           .cs-dept-profile-text {
             font-size: 1.1rem;
           }
           
-          /* Vertical building images */
-          .cs-dept-profile-images {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            // position: sticky;
-            top: 20px;
-          }
-          
-          .cs-dept-building-image {
+          .cs-dept-profile-image {
             border-radius: 10px;
             overflow: hidden;
-            // box-shadow: 0 3px 8px rgba(0,0,0,0.1);
           }
           
-          .cs-dept-building-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 10px;
-          }
-          
-          /* Highlights Cards */
-          .cs-dept-highlights-content {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-          }
-          
-          .highlights-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-          }
-          
-          .highlights-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-          }
-          
-          .highlight-category {
-            color: #845714;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #e0e0e0;
-          }
-          
-          .highlights-card ul {
+          .cs-dept-highlights-content ul {
             list-style: none;
-            padding-left: 0;
           }
           
-          .highlights-card li {
-            padding: 8px 0;
-            position: relative;
-            padding-left: 20px;
+          .cs-dept-highlights-content .main-point {
+            font-weight: 600;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
           }
           
-          .highlights-card li:before {
+          .cs-dept-highlights-content .main-point::before {
             content: '';
-            position: absolute;
-            left: 0;
-            top: 16px;
-            width: 8px;
-            height: 8px;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
             background-color: #845714;
-            border-radius: 50%;
+            margin-right: 10px;
+          }
+          
+          .cs-dept-highlights-content .sub-point {
+            margin-left: 25px;
+            font-size: 1rem;
           }
           
           .cs-dept-gallery {
@@ -303,34 +264,22 @@ export default function ComputerScienceDepartment() {
             border-radius: 10px;
             overflow: hidden;
             height: 200px;
-            transition: transform 0.3s ease;
           }
-          
-          .cs-dept-gallery-item:hover {
-            transform: scale(1.03);
-          }
-          
-          .cs-dept-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-          
           @media (max-width: 1024px) {
-            .cs-dept-profile-content {
-              grid-template-columns: 1.5fr 1fr;
+                .cs-dept-profile-content {
+                 grid-template-columns: 1.5fr 1fr; /* Slightly reduce text width on smaller desktops */
+             }
             }
-            
-            .cs-dept-highlights-content {
-              grid-template-columns: 1fr 1fr;
-            }
-          }
-          
           @media (max-width: 768px) {
             .cs-dept-profile-content {
               grid-template-columns: 1fr;
             }
             
+<<<<<<< HEAD
+            .cs-dept-gallery-grid {
+              grid-template-columns: 1fr 1fr;
+            }
+=======
             .cs-dept-highlights-content {
               grid-template-columns: 1fr;
             }
@@ -343,6 +292,7 @@ export default function ComputerScienceDepartment() {
               position: static;
               margin-top: 20px;
             }
+>>>>>>> 278c1f3978773ff6902289cc03333f476e6545db
           }
           
           @media (max-width: 480px) {
@@ -354,3 +304,21 @@ export default function ComputerScienceDepartment() {
       </div>
     );
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
