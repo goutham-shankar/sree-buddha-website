@@ -1,37 +1,356 @@
-import React from 'react'
-// import DepartmentNavbar from '@/components/departments/department_navbar'
+"use client"
 
-import "../department_style.css"
+import React from 'react'
+import Image from 'next/image';
 
 export default function ComputerScienceDepartment() {
+    // Department building images
+    const buildingImages = [
+      "/images/cs-dept-building/cs-dept-building.png",
+      "/images/cs-dept-building/cs-dept-building2.png",
+      
+      
+      
+      
+    ];
+    
     return (
-        // <div className="department">
-        <>
-
-
-            <div className="top_img_section">
-                <img src={"/assets/images/departments/dept_civil_img1.jpg"} alt="image" />
+      <div className="cs-dept-container">
+        <header className="cs-dept-header">
+          <h1>Computer Science Department</h1>
+          <p>Innovation • Excellence • Future</p>
+        </header>
+        
+        <div className="cs-dept-hero">
+          <div className="cs-dept-hero-image">
+            <Image 
+              src="/images/cs-dept-hero.jpg" 
+              alt="Computer Science Students Working Together"
+              width={1200}
+              height={400}
+              priority
+            />
+          </div>
+          <div className="cs-dept-hero-text">
+            <h2>Shaping Tomorrow's Tech Leaders</h2>
+            <p>Join our vibrant community of innovators and problem-solvers</p>
+          </div>
+        </div>
+        
+        <section className="cs-dept-section">
+          <h2 className="cs-dept-section-title">Department Profile</h2>
+          <div className="cs-dept-profile-content">
+            <div className="cs-dept-profile-text">
+              <p>The Computer Science Department at our college is dedicated to providing students with a comprehensive education in computer science theory and practice. Our curriculum is designed to keep pace with rapidly evolving technology, preparing students for successful careers in the tech industry.</p>
+              <br />
+              <p>The department of Computer Science and Engineering was started in Sree Buddha College of Engineering in the year 2002. The department currently offers the programmes B.Tech. in computer science and Engineering with sanctioned intake of 180, B.Tech Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning, sanctioned intake 60, M.Tech. in Computer Science and Engineering, and Ph.D. programmes. The department plays a crucial role in equipping students with current and relevant knowledge in computer Science and Engineering through various opportunities, including internships, hands-on training, bridge courses, add-on courses, and workshops to prepare them to meet the demands of the industry. In addition to promoting academic excellence, the department frequently organizes a variety of activities, including hackathons, faculty development programs, industry interactions, and social events which provides a platform for students and faculty to engage with distinguished researchers and explore emerging trends in computer science. The department is accredited by NBA since November 2019. In alignment with outcome-based learning and the National Educational Policy, the department establishes high standards for its curriculum and industry engagement.</p>
+              <br />
+              <p>With state-of-the-art laboratories, experienced faculty members, and strong industry connections, we offer an environment that fosters innovation, critical thinking, and practical problem-solving skills. Our graduates are highly sought after by leading tech companies and research institutions.</p>
             </div>
-
-            <h3 class="heading1">Programmes Offered</h3>
-            <h3 className="black_bold">B Tech in Civil Engineering</h3>
-            <h3 className="black_bold">M Tech in Structural Engineering</h3>
-
-            <h3 class="heading2">The department of Civil Engineering</h3>
-            <p>The department of Civil Engineering was started in Sree Buddha College of Engineering in the year 2008 with a sanctioned student intake of 60. The department also offers a PG programme in Structural Engineering with a sanctioned student intake of 24 in the year 2013. The department provides quality instruction and teaching to both UG and PG levels and technical advisory support for research and development activities covering the areas of Building Materials and Construction, Surveying, Hydraulics Engineering, Concrete Technology, Civil Engineering Drawing, Structural Engineering, Transportation Engineering, Water Resources Engineering, Geotechnical Engineering and Environmental Engineering. This department is accredited by NBA since November 2019.</p>
-            <p>Faculty at Civil Engineering believes in open interaction with students who are encouraged to participate in academic, research and extra-curricular activities. The student association of the Department “CASTELLOS” has proved to be a platform for the students to interact with eminent personalities in the field and to take leadership in conducting various programmes. The department laboratory is equipped with latest facilities for extensive hands-on training to both the undergraduate and postgraduate students.</p>
-
-            <h3 class="heading2">Industrial Consultancy Cell</h3>
-            <p>The department undertakes consultancy works of which the major clients are KSEB, PWD, Kerala Housing Board, LSGD, Southern Railway, Manhar Constructions, EJ constructions, RAMCO cements, ULTRATECH cements, WAPCOS Pvt. Ltd. The department has a life time membership of The Institution of Engineers, India (Students’ chapter, Civil division).</p>
-
-            <h3 class="heading2">Industry Institute Interaction Initiative</h3>
-            <p>For fostering advanced research in recent advances in Civil Engineering, the department has entered into an MOU with FRBL, a leading manufacturer of prefabricated housing system, which has a technical tie up with IIT Madras. Our PG and UG students are doing their project work in association with FRBL.</p>
-
-            <h3 class="heading2">Institute Social Responsibility</h3>
-            <p>As a part of our commitment to society, we have initiated a social support facility to the residents in and around Pattoor to solve their drinking water related issues. Under this initiative an activity, JALASHUDDHI, water quality analysis is conducted on a continued basis to the needy households of residents around the Institution.</p>
-
-
-
-        </>
-    )
-}
+            <div className="cs-dept-profile-images">
+              {buildingImages.map((img, index) => (
+                <div key={index} className="cs-dept-building-image">
+                  <Image 
+                    src={img} 
+                    alt={`Computer Science Department Building ${index + 1}`}
+                    width={400}
+                    height={300}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        <section className="cs-dept-section">
+          <h2 className="cs-dept-section-title">Department Highlights</h2>
+          <div className="cs-dept-highlights-content">
+            <div className="highlights-card">
+              <h3 className="highlight-category">Academic Excellence & Research</h3>
+              <ul>
+                <li>Strong faculty expertise in core computing areas</li>
+                <li>Cutting-edge research in emerging technologies; like Artificial Intelligence, Internet of Things, Machine Learning and Deep Learning</li>
+              </ul>
+            </div>
+              
+            <div className="highlights-card">
+              <h3 className="highlight-category">Industry Collaboration & Innovation</h3>
+              <ul>
+                <li>Strong partnerships with tech companies for internships, projects, and placements</li>
+                <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
+              </ul>
+            </div>
+              
+            <div className="highlights-card">
+              <h3 className="highlight-category">State-of-the-Art Infrastructure</h3>
+              <ul>
+                <li>Well-equipped labs for AI & ML, Deep Learning and IoT</li>
+                <li>High-performance computing clusters for research</li>
+                <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
+              </ul>
+            </div>
+              
+            <div className="highlights-card">
+              <h3 className="highlight-category">Skill Development & Student Success</h3>
+              <ul>
+                <li>Focus on hands-on learning, hackathons, and coding competitions</li>
+                <li>Specialization tracks in Data Science, Artificial Intelligence, Machine Learning and IoT</li>
+                <li>Strong placement records with top global recruiters</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+        <section className="cs-dept-gallery">
+          <h2 className="cs-dept-section-title">Department Gallery</h2>
+          <div className="cs-dept-gallery-grid">
+            <div className="cs-dept-gallery-item">
+              <Image 
+                src="/images/csimg1.jpg" 
+                alt="Robotics Competition"
+                width={400}
+                height={300}
+              />
+            </div>
+            <div className="cs-dept-gallery-item">
+              <Image 
+                src="/images/csimg2.jpg" 
+                alt="Hackathon Event"
+                width={400}
+                height={300}
+              />
+            </div>
+            <div className="cs-dept-gallery-item">
+              <Image 
+                src="/images/csimg3.jpg" 
+                alt="Graduation Ceremony"
+                width={400}
+                height={300}
+              />
+            </div>
+          </div>
+        </section>
+        
+        <style jsx>{`
+          .cs-dept-container {
+            background-color: #E6E6E6;
+            color: #333;
+            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            padding: 20px;
+            max-width: 100%;
+          }
+          
+          .cs-dept-header {
+            padding: 20px 0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #845714;
+          }
+          
+          .cs-dept-header h1 {
+            color: #845714;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+          }
+          
+          .cs-dept-header p {
+            font-size: 1.2rem;
+          }
+          
+          .cs-dept-hero {
+            height: 400px;
+            background-color: #333;
+            position: relative;
+            overflow: hidden;
+            margin: 30px 0;
+            border-radius: 10px;
+          }
+          
+          .cs-dept-hero-image {
+            width: 100%;
+            height: 100%;
+          }
+          
+          .cs-dept-hero-image img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+          
+          .cs-dept-hero-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            width: 100%;
+          }
+          
+          .cs-dept-hero-text h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+          }
+          
+          .cs-dept-section {
+            padding: 30px 0;
+          }
+          
+          .cs-dept-section-title {
+            color: #845714;
+            font-size: 2rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #845714;
+            margin-bottom: 20px;
+          }
+          
+          .cs-dept-profile-content {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 30px;
+            align-items: start;
+          }
+          
+          .cs-dept-profile-text {
+            font-size: 1.1rem;
+          }
+          
+          /* Vertical building images */
+          .cs-dept-profile-images {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            // position: sticky;
+            top: 20px;
+          }
+          
+          .cs-dept-building-image {
+            border-radius: 10px;
+            overflow: hidden;
+            // box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+          }
+          
+          .cs-dept-building-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+          }
+          
+          /* Highlights Cards */
+          .cs-dept-highlights-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+          }
+          
+          .highlights-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+          
+          .highlights-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+          }
+          
+          .highlight-category {
+            color: #845714;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+          }
+          
+          .highlights-card ul {
+            list-style: none;
+            padding-left: 0;
+          }
+          
+          .highlights-card li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 20px;
+          }
+          
+          .highlights-card li:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 8px;
+            height: 8px;
+            background-color: #845714;
+            border-radius: 50%;
+          }
+          
+          .cs-dept-gallery {
+            padding: 30px 0;
+          }
+          
+          .cs-dept-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+          }
+          
+          .cs-dept-gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 200px;
+            transition: transform 0.3s ease;
+          }
+          
+          .cs-dept-gallery-item:hover {
+            transform: scale(1.03);
+          }
+          
+          .cs-dept-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          
+          @media (max-width: 1024px) {
+            .cs-dept-profile-content {
+              grid-template-columns: 1.5fr 1fr;
+            }
+            
+            .cs-dept-highlights-content {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+          
+          @media (max-width: 768px) {
+            .cs-dept-profile-content {
+              grid-template-columns: 1fr;
+            }
+            
+            .cs-dept-highlights-content {
+              grid-template-columns: 1fr;
+            }
+            
+            .cs-dept-gallery-grid {
+              grid-template-columns: 1fr 1fr;
+            }
+            
+            .cs-dept-profile-images {
+              position: static;
+              margin-top: 20px;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .cs-dept-gallery-grid {
+              grid-template-columns: 1fr;
+            }
+          }
+        `}</style>
+      </div>
+    );
+  }

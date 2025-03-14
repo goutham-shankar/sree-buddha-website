@@ -17,7 +17,7 @@ export default function ComputerScienceDepartment() {
     return (
       <div className="cs-dept-container">
         <header className="cs-dept-header">
-          <h1>Computer Science Department</h1>
+          <h1>Department of Computer Science Engineering</h1>
           <p>Innovation • Excellence • Future</p>
         </header>
         
