@@ -17,8 +17,8 @@ export default function ComputerScienceDepartment() {
     return (
       <div className="cs-dept-container">
         <header className="cs-dept-header">
-          <h1>Computer Science Department</h1>
-          <p>Innovation • Excellence • Future</p>
+          <h1>Department of Electronics Engineering</h1>
+          <p>Innovation • Precision • Advancement</p>
         </header>
         
         <div className="cs-dept-hero">
@@ -41,9 +41,25 @@ export default function ComputerScienceDepartment() {
           <h2 className="cs-dept-section-title">Department Profile</h2>
           <div className="cs-dept-profile-content">
             <div className="cs-dept-profile-text">
-              <p>The Computer Science Department at our college is dedicated to providing students with a comprehensive education in computer science theory and practice. Our curriculum is designed to keep pace with rapidly evolving technology, preparing students for successful careers in the tech industry.</p>
-              <br />
-              <p>The department of Computer Science and Engineering was started in Sree Buddha College of Engineering in the year 2002. The department currently offers the programmes B.Tech. in computer science and Engineering with sanctioned intake of 180, B.Tech Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning, sanctioned intake 60, M.Tech. in Computer Science and Engineering, and Ph.D. programmes. The department plays a crucial role in equipping students with current and relevant knowledge in computer Science and Engineering through various opportunities, including internships, hands-on training, bridge courses, add-on courses, and workshops to prepare them to meet the demands of the industry. In addition to promoting academic excellence, the department frequently organizes a variety of activities, including hackathons, faculty development programs, industry interactions, and social events which provides a platform for students and faculty to engage with distinguished researchers and explore emerging trends in computer science. The department is accredited by NBA since November 2019. In alignment with outcome-based learning and the National Educational Policy, the department establishes high standards for its curriculum and industry engagement.</p>
+                <p>Sree Buddha College of Engineering is one of the pioneers in introducing the Bachelor Program 
+for Electronics and Communication Engineering in Kerala. The department of Electronics & 
+Communication Engineering (ECE), started in the year 2002, has carved a niche for itself by 
+offering the most competent instructional programme to the students. At present the sanctioned 
+intake is 60 with a provision of admitting six diploma holders in the third semester under lateral 
+entry scheme. The department also offers M Tech programme in Embedded Systems from the year 
+2010 onwards. The sanctioned intake is 6. </p>
+
+
+        <p>The Department of Electronics and Communication Engineering (ECE) at Sree Buddha College of 
+Engineering is dedicated to academic excellence, innovation, and technological advancement. With 
+a team of expert faculty, fully equipped laboratories and Industry collaboration we equip students 
+with the skills and knowledge needed to bridge the gap between the Institute and Industry. The 
+strong partnership with industries and regular hands-on workshops, imparts a strong culture of 
+innovation in design and development of socially relevant and sustainable hardware projects. The 
+research and innovation ecosystem in the department exposes our students into the ever-evolving 
+world of telecommunications, semiconductor technology, IoT, AI-driven automation, robotics, and 
+embedded systems. </p>
+              
               <br />
               <p>With state-of-the-art laboratories, experienced faculty members, and strong industry connections, we offer an environment that fosters innovation, critical thinking, and practical problem-solving skills. Our graduates are highly sought after by leading tech companies and research institutions.</p>
             </div>
