@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image';
 
-export default function ComputerScienceDepartment() {
+export default function MechanicalDepartment() {
     // Department building images
     const buildingImages = [
         "/images/cs-dept-building/cs-dept-building.png",
@@ -17,8 +17,8 @@ export default function ComputerScienceDepartment() {
     return (
         <div className="cs-dept-container">
             <header className="cs-dept-header">
-                <h1>Computer Science Department</h1>
-                <p>Innovation • Excellence • Future</p>
+                <h1>Mechanical Department</h1>
+                <p>Precision • Power • Progress</p>
             </header>
 
             <div className="cs-dept-hero">
@@ -41,11 +41,27 @@ export default function ComputerScienceDepartment() {
                 <h2 className="cs-dept-section-title">Department Profile</h2>
                 <div className="cs-dept-profile-content">
                     <div className="cs-dept-profile-text">
-                        <p>The Computer Science Department at our college is dedicated to providing students with a comprehensive education in computer science theory and practice. Our curriculum is designed to keep pace with rapidly evolving technology, preparing students for successful careers in the tech industry.</p>
-                        <br />
-                        <p>The department of Computer Science and Engineering was started in Sree Buddha College of Engineering in the year 2002. The department currently offers the programmes B.Tech. in computer science and Engineering with sanctioned intake of 180, B.Tech Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning, sanctioned intake 60, M.Tech. in Computer Science and Engineering, and Ph.D. programmes. The department plays a crucial role in equipping students with current and relevant knowledge in computer Science and Engineering through various opportunities, including internships, hands-on training, bridge courses, add-on courses, and workshops to prepare them to meet the demands of the industry. In addition to promoting academic excellence, the department frequently organizes a variety of activities, including hackathons, faculty development programs, industry interactions, and social events which provides a platform for students and faculty to engage with distinguished researchers and explore emerging trends in computer science. The department is accredited by NBA since November 2019. In alignment with outcome-based learning and the National Educational Policy, the department establishes high standards for its curriculum and industry engagement.</p>
-                        <br />
-                        <p>With state-of-the-art laboratories, experienced faculty members, and strong industry connections, we offer an environment that fosters innovation, critical thinking, and practical problem-solving skills. Our graduates are highly sought after by leading tech companies and research institutions.</p>
+                       <p>The Department of Mechanical Engineering (ME) was started in the year 2004 with undergraduate program and started postgraduate program in Computer 
+                        Integrated Manufacturing (CIM) in the academic year 2011-12. The department has attracted highly qualified and experienced personnel from various streams 
+                        of Mechanical Engineering as its faculty. The department is an approved research centre of APJ Abdul Kalam Technological University (KTU) for the Ph.D. program. 
+                        The department is accredited by NBA since November 2019. </p>
+
+                        <p>
+                        The department houses state-of the-art instructional laboratories, project laboratories and research laboratories. The department provides supportive learning 
+                        environment to both UG and PG levels to prepare students to take up leading positions in academia and industry globally. The robust and engaging curriculum, along 
+                        with hands-on learning, will empower students to elevate their careers to the next level. To perceive latest technologies and opportunities relating to Mechanical 
+                        Engineering, the department has entered into MOUs with major industries and research institutions in the country to enhance students’ exposure to industry and research. 
+                        </p>
+
+                        <p>The faculty members of the department are actively involved in research activities which has led to more than 50 lakhs of research funding from various central and state agencies.
+                           In the recent years, the department has also organized many sponsored faculty development programs in association with AICTE and KTU.  
+                       </p>
+
+                       <p>
+                       Studying Mechanical Engineering at SBCE is not just a decision; it's a gateway to a future filled with excellence and innovation.
+                       </p>
+
+
                     </div>
                     <div className="cs-dept-profile-images">
                         {buildingImages.map((img, index) => (
@@ -66,38 +82,58 @@ export default function ComputerScienceDepartment() {
                 <h2 className="cs-dept-section-title">Department Highlights</h2>
                 <div className="cs-dept-highlights-content">
                     <div className="highlights-card">
-                        <h3 className="highlight-category">Academic Excellence & Research</h3>
+                        <h3 className="highlight-category">Expert Faculty & Research</h3>
                         <ul>
-                            <li>Strong faculty expertise in core computing areas</li>
-                            <li>Cutting-edge research in emerging technologies; like Artificial Intelligence, Internet of Things, Machine Learning and Deep Learning</li>
+                            <li>HOD with 40 years of teaching experience.</li>
+                            <li>Team of 15 dedicated faculty members, including 5 Ph.D. holders and 3 research scholars.</li>
+                            <li>Faculty members serve as coordinators of IQAC, Examination Cell, Research Council, and IPR Cell.</li>
+                            <li>Regularly organize sponsored FDPs and Conferences.</li>
+                            <li>Received over ₹50 lakhs in research funding from AICTE, ANERT, KTU, KSCSTE, etc.</li>
+                            <li>Published numerous research articles and granted patents.</li>
+                            <li>Research collaborations with national and international universities.</li>
+                            <li>Conduct International/National Conferences annually.</li>
+                         </ul>
+                    </div>
+
+                    <div className="highlights-card">
+                        <h3 className="highlight-category"> Student Engagement & Skill Development  </h3>
+                        <ul>
+                        <li>Encouragement for research and innovative projects.</li>
+                        <li>Students regularly present papers at conferences and publish in high-impact journals.</li>
+                        <li>Experiential learning through projects and national-level competitions (GoKart, Quad Bike, etc.).</li>
+                        <li>Annual student-led mechanical fest (Mechfest).</li>
+                        <li>Workshops, invited lectures, and seminars to enhance technical skills and placement opportunities.</li>
+                        <li>Membership in professional bodies like ISTE, IEI, SAE.</li>
                         </ul>
                     </div>
 
                     <div className="highlights-card">
                         <h3 className="highlight-category">Industry Collaboration & Innovation</h3>
                         <ul>
-                            <li>Strong partnerships with tech companies for internships, projects, and placements</li>
-                            <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
+                        <li>MOUs with industries and research institutions for internships, industrial visits, and collaborative projects.</li>
+                        <li>Strong partnerships with industries for real-world exposure and placements.</li>
+                       <li>Innovation and entrepreneurship culture with regular activities promoting startups.</li>
                         </ul>
                     </div>
 
                     <div className="highlights-card">
                         <h3 className="highlight-category">State-of-the-Art Infrastructure</h3>
                         <ul>
-                            <li>Well-equipped labs for AI & ML, Deep Learning and IoT</li>
-                            <li>High-performance computing clusters for research</li>
-                            <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
+                         <li>Department is equipped with modern laboratories, project labs, and research labs.</li>
+                         <li>Advanced facilities for automation, robotics, and thermal engineering.</li>
+                         <li>Access to industry-grade simulation tools and software.</li>
                         </ul>
                     </div>
 
                     <div className="highlights-card">
-                        <h3 className="highlight-category">Skill Development & Student Success</h3>
+                        <h3 className="highlight-category">Curriculum & Academic Excellence</h3>
                         <ul>
-                            <li>Focus on hands-on learning, hackathons, and coding competitions</li>
-                            <li>Specialization tracks in Data Science, Artificial Intelligence, Machine Learning and IoT</li>
-                            <li>Strong placement records with top global recruiters</li>
+                        <li>Autonomous status enables a flexible and industry-aligned curriculum.</li>
+                        <li>Continuous updates to incorporate emerging trends in mechanical engineering.</li>
                         </ul>
                     </div>
+
+                    
                 </div>
             </section>
 
