@@ -17,8 +17,8 @@ export default function ComputerScienceDepartment() {
     return (
       <div className="cs-dept-container">
         <header className="cs-dept-header">
-          <h1>Computer Science Department</h1>
-          <p>Innovation • Excellence • Future</p>
+          <h1>Department of Civil Engineering</h1>
+          <p>Building Dreams • Engineering Excellence • Shaping the Future</p>
         </header>
         
         <div className="cs-dept-hero">
@@ -41,11 +41,17 @@ export default function ComputerScienceDepartment() {
           <h2 className="cs-dept-section-title">Department Profile</h2>
           <div className="cs-dept-profile-content">
             <div className="cs-dept-profile-text">
-              <p>The Computer Science Department at our college is dedicated to providing students with a comprehensive education in computer science theory and practice. Our curriculum is designed to keep pace with rapidly evolving technology, preparing students for successful careers in the tech industry.</p>
-              <br />
-              <p>The department of Computer Science and Engineering was started in Sree Buddha College of Engineering in the year 2002. The department currently offers the programmes B.Tech. in computer science and Engineering with sanctioned intake of 180, B.Tech Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning, sanctioned intake 60, M.Tech. in Computer Science and Engineering, and Ph.D. programmes. The department plays a crucial role in equipping students with current and relevant knowledge in computer Science and Engineering through various opportunities, including internships, hands-on training, bridge courses, add-on courses, and workshops to prepare them to meet the demands of the industry. In addition to promoting academic excellence, the department frequently organizes a variety of activities, including hackathons, faculty development programs, industry interactions, and social events which provides a platform for students and faculty to engage with distinguished researchers and explore emerging trends in computer science. The department is accredited by NBA since November 2019. In alignment with outcome-based learning and the National Educational Policy, the department establishes high standards for its curriculum and industry engagement.</p>
-              <br />
-              <p>With state-of-the-art laboratories, experienced faculty members, and strong industry connections, we offer an environment that fosters innovation, critical thinking, and practical problem-solving skills. Our graduates are highly sought after by leading tech companies and research institutions.</p>
+                        <p>The department of Civil Engineering was started in Sree Buddha College of Engineering in the
+                            year 2008 with a sanctioned student intake of 60. The department also offers a PG programme in
+                            Structural Engineering with a sanctioned student intake of 24 in the year 2013. The department
+                            provides quality instruction and teaching to both UG and PG levels and technical advisory
+                            support for research and development activities covering the areas of Building Materials and
+                            Construction, Surveying, Hydraulics Engineering, Concrete Technology, Structural Engineering,
+                            Transportation Engineering, Water Resources Engineering, Geotechnical Engineering and
+                            Environmental Engineering. This department is accredited by NBA since November 2019.
+                            Following an outcome based learning and National Educational Policy, the department sets a
+                            standard in curriculum and industrial interactions. </p>
+                        
             </div>
             <div className="cs-dept-profile-images">
               {buildingImages.map((img, index) => (
@@ -66,36 +72,31 @@ export default function ComputerScienceDepartment() {
           <h2 className="cs-dept-section-title">Department Highlights</h2>
           <div className="cs-dept-highlights-content">
             <div className="highlights-card">
-              <h3 className="highlight-category">Academic Excellence & Research</h3>
+              <h3 className="highlight-category">Advanced Laboratory & Training Facilities</h3>
               <ul>
-                <li>Strong faculty expertise in core computing areas</li>
-                <li>Cutting-edge research in emerging technologies; like Artificial Intelligence, Internet of Things, Machine Learning and Deep Learning</li>
+                <li>The department laboratory is equipped with state-of-the-art facilities, providing extensive hands-on training opportunities for both undergraduate and postgraduate students to enhance their practical knowledge and technical skills.</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">Industry Collaboration & Innovation</h3>
+              <h3 className="highlight-category">Industry Collaborations & Consultancy Services</h3>
               <ul>
-                <li>Strong partnerships with tech companies for internships, projects, and placements</li>
-                <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
+                            <li>The department undertakes consultancy works of which the major clients are KSEB, PWD, Kerala Housing Board, LSGD, Southern Railway, RAMCO cements, ULTRATECH cements, Kerala Water Authority, Kairali Cooperative Society, Harbour Engineering Society, Govt. Contractors work, Kerala Electrical & Allied Engineering CO. Ltd., Private Organization Work.</li>
+                            <li>For fostering advanced research in recent advances in Civil Engineering, the department has entered into an MOU with Indian Institute of Infrastructure & Construction (IIIC), Habelete Learning Solutions, National Highway Authority of India (NHAI) & Geostructurals Pvt. Ltd.</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">State-of-the-Art Infrastructure</h3>
+              <h3 className="highlight-category">Student Association & Leadership Initiatives</h3>
               <ul>
-                <li>Well-equipped labs for AI & ML, Deep Learning and IoT</li>
-                <li>High-performance computing clusters for research</li>
-                <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
+                <li>The student association of the Department “CASTELLOS” has proved to be a platform for the students to interact with eminent personalities in the field and to take leadership in conducting various programmes.</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">Skill Development & Student Success</h3>
+              <h3 className="highlight-category">Professional Memberships & Student Chapters</h3>
               <ul>
-                <li>Focus on hands-on learning, hackathons, and coding competitions</li>
-                <li>Specialization tracks in Data Science, Artificial Intelligence, Machine Learning and IoT</li>
-                <li>Strong placement records with top global recruiters</li>
+                <li>The department has a lifetime membership of The Institution of Engineers, India (Students’ chapter, Civil division) and active student chapters of American Society of Civil Engineers (ASCE Student chapter, SBCE) & Indian Concrete Institute (ICI student Chapter).</li>
               </ul>
             </div>
           </div>

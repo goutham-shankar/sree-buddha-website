@@ -17,8 +17,8 @@ export default function ComputerScienceDepartment() {
     return (
       <div className="cs-dept-container">
         <header className="cs-dept-header">
-          <h1>Computer Science Department</h1>
-          <p>Innovation • Excellence • Future</p>
+          <h1>Department of Electrical and Electronics Engineering</h1>
+          <p>Powering Progress • Igniting Innovation • Electrifying the Future</p>
         </header>
         
         <div className="cs-dept-hero">
@@ -41,11 +41,18 @@ export default function ComputerScienceDepartment() {
           <h2 className="cs-dept-section-title">Department Profile</h2>
           <div className="cs-dept-profile-content">
             <div className="cs-dept-profile-text">
-              <p>The Computer Science Department at our college is dedicated to providing students with a comprehensive education in computer science theory and practice. Our curriculum is designed to keep pace with rapidly evolving technology, preparing students for successful careers in the tech industry.</p>
-              <br />
-              <p>The department of Computer Science and Engineering was started in Sree Buddha College of Engineering in the year 2002. The department currently offers the programmes B.Tech. in computer science and Engineering with sanctioned intake of 180, B.Tech Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning, sanctioned intake 60, M.Tech. in Computer Science and Engineering, and Ph.D. programmes. The department plays a crucial role in equipping students with current and relevant knowledge in computer Science and Engineering through various opportunities, including internships, hands-on training, bridge courses, add-on courses, and workshops to prepare them to meet the demands of the industry. In addition to promoting academic excellence, the department frequently organizes a variety of activities, including hackathons, faculty development programs, industry interactions, and social events which provides a platform for students and faculty to engage with distinguished researchers and explore emerging trends in computer science. The department is accredited by NBA since November 2019. In alignment with outcome-based learning and the National Educational Policy, the department establishes high standards for its curriculum and industry engagement.</p>
-              <br />
-              <p>With state-of-the-art laboratories, experienced faculty members, and strong industry connections, we offer an environment that fosters innovation, critical thinking, and practical problem-solving skills. Our graduates are highly sought after by leading tech companies and research institutions.</p>
+                        <p>The Department of Electrical and Electronics Engineering at Sree Buddha College of
+                            Engineering was established in 2004 with an initial intake of 60 students. The department
+                            expanded its academic offerings in 2014 with the introduction of a postgraduate program in
+                            Electrical Machines, accommodating 24 students.</p>
+              
+                        <p>Committed to academic excellence, the department provides high-quality education at both
+                            undergraduate and postgraduate levels, fostering innovation and technical expertise. It plays a
+                            vital role in research and development, focusing on key areas such as Electrical Machines,
+                            Power Electronics, Power Quality, Electric Drives, and Electric & Hybrid Vehicles. The
+                            curriculum is structured in alignment with outcome-based learning principles and the National
+                            Education Policy (NEP), ensuring strong industry connections and real-world applicability. </p>
+              
             </div>
             <div className="cs-dept-profile-images">
               {buildingImages.map((img, index) => (
@@ -66,38 +73,30 @@ export default function ComputerScienceDepartment() {
           <h2 className="cs-dept-section-title">Department Highlights</h2>
           <div className="cs-dept-highlights-content">
             <div className="highlights-card">
-              <h3 className="highlight-category">Academic Excellence & Research</h3>
+              <h3 className="highlight-category">Advanced Laboratory & Training Facilities</h3>
               <ul>
-                <li>Strong faculty expertise in core computing areas</li>
-                <li>Cutting-edge research in emerging technologies; like Artificial Intelligence, Internet of Things, Machine Learning and Deep Learning</li>
+                <li>The department laboratory is equipped with the latest facilities for extensive hands-on training
+                     to both the undergraduate and postgraduate students make it littl longer</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">Industry Collaboration & Innovation</h3>
+              <h3 className="highlight-category">Consultancy & Industry Collaborations</h3>
               <ul>
-                <li>Strong partnerships with tech companies for internships, projects, and placements</li>
-                <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
+                <li>Active consultancy services, with significant contributions to projects for local self-governing bodies.</li>
+                <li>Strategic Memorandums of Understanding (MoUs) with leading industries to enhance student skill development and provide exposure to real-world applications.</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">State-of-the-Art Infrastructure</h3>
+              <h3 className="highlight-category">Student Association & Leadership Initiatives</h3>
               <ul>
-                <li>Well-equipped labs for AI & ML, Deep Learning and IoT</li>
-                <li>High-performance computing clusters for research</li>
-                <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
+                <li>The student association, "ETA", serves as a dynamic platform for student engagement, facilitating interactions
+                     with industry experts and fostering leadership through various technical and professional events.</li>
               </ul>
             </div>
               
-            <div className="highlights-card">
-              <h3 className="highlight-category">Skill Development & Student Success</h3>
-              <ul>
-                <li>Focus on hands-on learning, hackathons, and coding competitions</li>
-                <li>Specialization tracks in Data Science, Artificial Intelligence, Machine Learning and IoT</li>
-                <li>Strong placement records with top global recruiters</li>
-              </ul>
-            </div>
+           
           </div>
         </section>
         
