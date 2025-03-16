@@ -82,36 +82,44 @@ embedded systems. </p>
           <h2 className="cs-dept-section-title">Department Highlights</h2>
           <div className="cs-dept-highlights-content">
             <div className="highlights-card">
-              <h3 className="highlight-category">Academic Excellence & Research</h3>
+              <h3 className="highlight-category">Placement and Career Opportunities</h3>
               <ul>
-                <li>Strong faculty expertise in core computing areas</li>
-                <li>Cutting-edge research in emerging technologies; like Artificial Intelligence, Internet of Things, Machine Learning and Deep Learning</li>
+                <li>Strong placement record in core ECE and interdisciplinary fields like AI, ML, and Industry 4.0.</li>
+                <li>Graduates secure positions in top companies specializing in IoT, automation, telecom, embedded systems, and AI-driven technologies.</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">Industry Collaboration & Innovation</h3>
+              <h3 className="highlight-category">Innovation and Entrepreneurship</h3>
               <ul>
-                <li>Strong partnerships with tech companies for internships, projects, and placements</li>
-                <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
+                <li>The department fosters an ecosystem for innovation, product development, and startup incubation.</li>
+                <li>Several startups have emerged from the department, showcasing its strong support for entrepreneurship and technological advancement.</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">State-of-the-Art Infrastructure</h3>
+              <h3 className="highlight-category">Industry Collaborations and Internships</h3>
               <ul>
-                <li>Well-equipped labs for AI & ML, Deep Learning and IoT</li>
-                <li>High-performance computing clusters for research</li>
-                <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
+                <li>MoUs with leading industries provide students with internship opportunities, hands-on training programs, industry exposure, and skill development workshops.</li>
+                <li>These collaborations bridge the gap between academia and industry, offering practical experience, access to 
+                  the latest technologies, and mentorship from industry experts.</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">Skill Development & Student Success</h3>
+              <h3 className="highlight-category">Research and Development</h3>
               <ul>
-                <li>Focus on hands-on learning, hackathons, and coding competitions</li>
-                <li>Specialization tracks in Data Science, Artificial Intelligence, Machine Learning and IoT</li>
-                <li>Strong placement records with top global recruiters</li>
+                <li>The department actively supports funded student projects and research paper publications, fostering a strong culture of research and innovation.</li>
+                <li>Encourages students to explore cutting-edge technologies, develop problem-solving skills, and contribute to research advancements in their field.</li>
+              </ul>
+            </div>
+            <div className="highlights-card">
+              <h3 className="highlight-category">Clubs and Extracurricular Activities</h3>
+              <ul>
+                <li>Hosts clubs such as the Makers Club and the Electronics Technocrats Association (ETA), 
+                  providing students with a platform for both technical and non-technical skill development.</li>
+                  <li>Offers opportunities for hands-on learning, innovation, and talent showcasing.</li>
+                  <li>Students get the chance to interact with eminent personalities, industry experts, and researchers, expanding their knowledge and professional network.</li>
               </ul>
             </div>
           </div>
