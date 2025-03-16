@@ -220,7 +220,8 @@ export default function News() {
     }
 
     // Map through the actual news items
-    return newsData.map((newsItem) => {
+    return newsData.map(( newsItem, index) => {
+      console.log(index)
       // Get the large format image URL if available
       const imageUrl = newsItem.News_media?.formats?.large?.url
         ? `http://13.51.85.192:1337${newsItem.News_media.formats.large.url}`
@@ -275,7 +276,7 @@ export default function News() {
             // Use carousel for multiple items
             <Carousel
               showThumbs={false}
-              infiniteLoop={newsData.length > 1}
+              // infiniteLoop={newsData.length > 0}
               showIndicators={newsData.length > 1}
               showStatus={false}
               swipeable
