@@ -288,7 +288,7 @@ export default function News() {
                 showArrows && (
                   <button
                     type="button"
-                    onClick={onClickHandler}
+                    onClick={onClickHandler}  
                     className="custom-arrow prev"
                   >
                     <span>&#9664;</span>
