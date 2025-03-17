@@ -17,7 +17,7 @@ export default function Page() {
         <div className="all_news">
 
             {
-                news.map((index)=>{
+                news.map((index)=>{  
 
                     return(
                         <div className="singleNews" key={index}>
