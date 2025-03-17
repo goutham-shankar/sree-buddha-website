@@ -283,7 +283,7 @@ export default function News() {
               dynamicHeight={false}
               centerMode={centerMode}
               centerSlidePercentage={centerMode ? 100 / slidesToShow : 100}
-              renderArrowPrev={(onClickHandler, hasPrev) =>
+              renderArrowPrev={(onClickHandler, hasPrev) =>   
                 hasPrev &&
                 showArrows && (
                   <button
