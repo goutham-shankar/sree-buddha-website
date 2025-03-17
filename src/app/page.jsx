@@ -36,7 +36,7 @@ export default function Home() {
     {/* <Events2/> */}
     <Counts/>
     <Research/>
-    <Affiliations/>
+    <Affiliations/> 
     {/* <Footer/> */}
     </>
   )
