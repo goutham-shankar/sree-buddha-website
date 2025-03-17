@@ -215,20 +215,6 @@ const Management = () => {
           <h1 className="heading">The Management</h1>
           <hr />
         </div>
-<<<<<<< HEAD
-        <Person
-          name="Prof. K. Sasikumar"
-          position="The Chairman"
-          content="Prof. K. Sasikumar is the Founder Chairman of Sree Buddha Group of Educational Institutions. He is the former President of Kerala Self Financing Engineering Colleges Management Association. Prof. K Sasikumar was a member of the Board of Governors of APJ Abdul Kalam Technological University, Kerala. He is the former Principal of Sree Narayana College, Kollam and Chief organizer of a number of institutions like Sree Narayana Public School, Kollam, Sree Narayana Ayurveda College, Kollam, Sree Narayana College of Technology, Kollam and Sree Narayana Institute of Technology, Kollam"
-          pic={"/assets/images/chairperson.png"}
-        />
-        <img
-          className="line"
-          src={"/assets/Line_2.png"}
-          alt="Unable to load image"
-        />
-=======
->>>>>>> 278c1f3978773ff6902289cc03333f476e6545db
 
         {/* Chairman */}
         <Person
@@ -273,22 +259,12 @@ const Management = () => {
         <Person
           name={managementData.Joint_secretary_name}
           position="Joint Secretary"
-<<<<<<< HEAD
-          content="A successful businessman with social commitment. He is also a Director Board Member, Sree Narayana Trust, the Councillor, SNDP Union, Pandalam, and the Treasurer, Bodhi Educational Trust, Elavumthitta."
-          pic={"/assets/images/BUdhayan.png"}
-        />
-        <img
-          className="line"
-          src={"/assets/Line 2.png"}
-          alt="Unable to load image"
-=======
           content={managementData.Joint_secretary_info}
           pic={
             managementData.Joint_secretary_image?.url
               ? `http://13.51.85.192:1337${managementData.Joint_secretary_image.url}`
               : "/assets/images/BUdhayan.png"
           }
->>>>>>> 278c1f3978773ff6902289cc03333f476e6545db
         />
         <img className="line" src={"/assets/Line_2.png"} alt="Line separator" />
 
