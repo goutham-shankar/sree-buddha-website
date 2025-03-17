@@ -5,7 +5,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import "./style.css"
 
-export default function page() {
+export default function Page() {
 
     const [ news , setNews ] = useState([0,0,0]);
 
