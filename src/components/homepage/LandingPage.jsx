@@ -28,7 +28,7 @@ export default function LandingPage() {
       {/* <img className="college_background" src={"/assets/images/sree_buddha_college_image1.png"} alt="" /> */}
       <div className="college_background">
         <video className='video' loop autoPlay muted>
-          <source src="/assets/videos/sree_budha_final.mp4" type="video/mp4" />
+          <source src="/assets/videos/sree_buddha_final.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="black_overlay"></div>
