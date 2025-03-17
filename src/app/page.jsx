@@ -14,6 +14,8 @@ import NavbarMobile from "@/components/navbar_mobile";
 import Register2 from "@/components/homepage/register2";
 import News from "@/components/homepage/News";
 import Footer from "@/components/footer";
+import News2 from "@/components/homepage/News2";
+
 const announcements = [
   '2025 ADMISSION STARTED',
   '2025 ADMISSION STARTED',
@@ -30,8 +32,8 @@ export default function Home() {
     <VissionMission/>
     <Events2/>
     <Register2/>
-    {/* <News/> */}
-    <Events2/>
+    <News2/>
+    {/* <Events2/> */}
     <Counts/>
     <Research/>
     <Affiliations/>
