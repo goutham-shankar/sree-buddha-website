@@ -30,7 +30,8 @@ export default function Home() {
     <VissionMission/>
     <Events2/>
     <Register2/>
-    <News/>
+    {/* <News/> */}
+    <Events2/>
     <Counts/>
     <Research/>
     <Affiliations/>
