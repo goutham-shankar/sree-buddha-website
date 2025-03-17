@@ -32,7 +32,7 @@ export default function MechanicalDepartment() {
                     />
                 </div>
                 <div className="cs-dept-hero-text">
-                    <h2>Shaping Tomorrow's Tech Leaders</h2>
+                    <h2>Shaping Tomorrow&apos;s Tech Leaders</h2>
                     <p>Join our vibrant community of innovators and problem-solvers</p>
                 </div>
             </div>
@@ -58,7 +58,7 @@ export default function MechanicalDepartment() {
                        </p>
 
                        <p>
-                       Studying Mechanical Engineering at SBCE is not just a decision; it's a gateway to a future filled with excellence and innovation.
+                       Studying Mechanical Engineering at SBCE is not just a decision; it&apos;s a gateway to a future filled with excellence and innovation.
                        </p>
 
 

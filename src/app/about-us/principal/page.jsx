@@ -29,7 +29,7 @@ import Person from "@/components/management/Person";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-function page() {
+function Page() {
   const [principalData, setPrincipalData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

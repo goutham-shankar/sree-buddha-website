@@ -32,7 +32,7 @@ export default function ComputerScienceDepartment() {
             />
           </div>
           <div className="cs-dept-hero-text">
-            <h2>Shaping Tomorrow's Tech Leaders</h2>
+            <h2>Shaping Tomorrow&apos;s Tech Leaders</h2>
             <p>Join our vibrant community of innovators and problem-solvers</p>
           </div>
         </div>
