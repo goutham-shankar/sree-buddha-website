@@ -91,7 +91,7 @@ export default function ComputerScienceDepartment() {
             <div className="highlights-card">
               <h3 className="highlight-category">Student Association & Leadership Initiatives</h3>
               <ul>
-                <li>The student association, "ETA", serves as a dynamic platform for student engagement, facilitating interactions
+                <li>The student association, &quot;ETA&quot;, serves as a dynamic platform for student engagement, facilitating interactions
                      with industry experts and fostering leadership through various technical and professional events.</li>
               </ul>
             </div>

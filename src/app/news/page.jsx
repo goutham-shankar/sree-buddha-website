@@ -17,10 +17,10 @@ export default function page() {
         <div className="all_news">
 
             {
-                news.map(()=>{
+                news.map((index)=>{
 
                     return(
-                        <div className="singleNews">
+                        <div className="singleNews" key={index}>
 
                             <div className="news_image">
                                 <img src="/assets/sample_news.jpg" alt="news image" />
