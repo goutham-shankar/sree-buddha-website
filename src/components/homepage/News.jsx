@@ -205,11 +205,14 @@ export default function News() {
       return (
         <div className="event">
           <h3 className="event_title">No News Available</h3>
-          <img
-            src="/assets/images/home/events_sample.png"
-            alt=""
-            className="event_image"
-          />
+          <div className="event_image_div">
+            <img
+              src="/assets/images/home/events_sample.png"
+              alt=""
+              className="event_image"
+            />
+            
+          </div>
           <p className="event_description">Check back later for updates.</p>
           <div className="event_date">
             <img src="/assets/images/home/calendar.png" alt="" />
@@ -220,19 +223,22 @@ export default function News() {
     }
 
     // Map through the actual news items
-    return newsData.map(( newsItem, index) => {
+    return newsData.map((newsItem, index) => {
       console.log(index)
       // Get the large format image URL if available
       const imageUrl = newsItem.News_media?.formats?.large?.url
         ? `http://13.51.85.192:1337${newsItem.News_media.formats.large.url}`
         : newsItem.News_media?.url
-        ? `http://13.51.85.192:1337${newsItem.News_media.url}`
-        : "/assets/images/home/events_sample.png";
+          ? `http://13.51.85.192:1337${newsItem.News_media.url}`
+          : "/assets/images/home/events_sample.png";
 
       return (
         <div className="event" key={newsItem.id}>
           <h3 className="event_title">{newsItem.heading}</h3>
-          <img src={imageUrl} alt={newsItem.heading} className="event_image" />
+          <div className="event_image_div">
+            <img src={imageUrl} alt={newsItem.heading} className="event_image" />
+            {/* <div className="image_div_gradient"></div> */}
+          </div>
           <p className="event_description">{newsItem.description}</p>
           <div className="event_date">
             <img src="/assets/images/home/calendar.png" alt="calendar" />
@@ -275,7 +281,7 @@ export default function News() {
           ) : (
             // Use carousel for multiple items
             <Carousel
-              showThumbs={false}
+              // showThumbs={true}
               // infiniteLoop={newsData.length > 0}
               showIndicators={newsData.length > 1}
               showStatus={false}
@@ -283,12 +289,12 @@ export default function News() {
               dynamicHeight={false}
               centerMode={centerMode}
               centerSlidePercentage={centerMode ? 100 / slidesToShow : 100}
-              renderArrowPrev={(onClickHandler, hasPrev) =>   
+              renderArrowPrev={(onClickHandler, hasPrev) =>
                 hasPrev &&
                 showArrows && (
                   <button
                     type="button"
-                    onClick={onClickHandler}  
+                    onClick={onClickHandler}
                     className="custom-arrow prev"
                   >
                     <span>&#9664;</span>

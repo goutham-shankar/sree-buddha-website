@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Navbar from "@/components/navbar";
 import LandingPage from "@/components/homepage/LandingPage";
-import ScrollBar from "@/components/homepage/ScrollBar";
+// import ScrollBar from "@/components/homepage/ScrollBar";
 import VissionMission from "@/components/homepage/vision_mission";
 import Events from "@/components/homepage/Events";
 import Events2 from "@/components/homepage/Events2";
@@ -26,7 +26,7 @@ export default function Home() {
     <>
 
     <LandingPage/>
-    <ScrollBar announcements={announcements}></ScrollBar>
+    {/* <ScrollBar announcements={announcements}></ScrollBar> */}
     <VissionMission/>
     <Events2/>
     <Register2/>

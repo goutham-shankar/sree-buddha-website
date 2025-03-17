@@ -31,7 +31,7 @@ const ScrollBar = ({ announcements = [] }) => {
     animationRef.current = requestAnimationFrame(scroll);
 
     return () => cancelAnimationFrame(animationRef.current);
-  }, [announcements]);
+  }, []);
 
   // ✅ Improved handling for hover state
   const handleHover = (pause) => {
