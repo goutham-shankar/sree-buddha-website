@@ -5,7 +5,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import "./style.css"
 
-export default function page() {
+export default function Page() {
 
     const [ news , setNews ] = useState([0,0,0]);
 
@@ -17,10 +17,10 @@ export default function page() {
         <div className="all_news">
 
             {
-                news.map(()=>{
+                news.map((index)=>{  
 
                     return(
-                        <div className="singleNews">
+                        <div className="singleNews" key={index}>
 
                             <div className="news_image">
                                 <img src="/assets/sample_news.jpg" alt="news image" />

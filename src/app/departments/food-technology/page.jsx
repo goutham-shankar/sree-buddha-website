@@ -1,111 +1,356 @@
-import React from 'react'
-// import DepartmentNavbar from '@/components/departments/department_navbar'
+"use client"
 
-import "../department_style.css"
+import React from 'react'
+import Image from 'next/image';
 
 export default function ComputerScienceDepartment() {
+    // Department building images
+    const buildingImages = [
+      "/images/cs-dept-building/cs-dept-building.png",
+      "/images/cs-dept-building/cs-dept-building2.png",
+      
+      
+      
+      
+    ];
+    
     return (
-        // <div className="department">
-        <>
-
-
-            {/* <div className="top_img_section"> */}
-                {/* <img src={"/assets/images/departments/ece_dept_img1.png"} alt="image" /> */}
-            {/* </div> */}
-
-            <div class="col-md-9 right_portion">
-        <p class="has-text-align-center has-normal-font-size"><strong>About the Department</strong></p>
+      <div className="cs-dept-container">
+        <header className="cs-dept-header">
+          <h1>Computer Science Department</h1>
+          <p>Innovation • Excellence • Future</p>
+        </header>
         
-        <p class="has-normal-font-size">
-            Food processing has been identified as the sunrise industry due to its enormous impact and significance in the Indian development sector. The importance of food &amp; process engineering lies in the fact that it has the capability to provide food to our population through scientific conservations, eliminating available losses and making available more balanced and nutritious food. To work in a food processing industry, one has to learn and acquire detailed knowledge of the subject and earn a degree in the field. Recognizing the potential in this sector, the department was started in 2020. Our courses are designed to expand understanding of the biological, microbiological, chemical, physical, sensory, nutritional, and engineering properties of foods and beverages.
-            <br/><strong>TOP RECRUITERS</strong>
-        </p>
+        <div className="cs-dept-hero">
+          <div className="cs-dept-hero-image">
+            <Image 
+              src="/images/cs-dept-hero.jpg" 
+              alt="Computer Science Students Working Together"
+              width={1200}
+              height={400}
+              priority
+            />
+          </div>
+          <div className="cs-dept-hero-text">
+            <h2>Shaping Tomorrow&apos;s Tech Leaders</h2>
+            <p>Join our vibrant community of innovators and problem-solvers</p>
+          </div>
+        </div>
         
-        <p><strong>Government organizations</strong></p>
-        <p>
-            Ministry of Food Processing Industries (MOFPI)<br/>
-            Bhabha Atomic Research Centre (BARC)<br/>
-            Defence Food Research Laboratory (DFRL)<br/>
-            Food and Agricultural Organization (FAO-India)<br/>
-            Food Corporation of India (FCI)<br/>
-            Food Safety and Standards Authority of India (FSSAI)<br/>
-            Indian Council of Agricultural Research (ICAR-NRC)<br/>
-            Ministry of Food Processing Industries (MOFPI)
-        </p>
+        <section className="cs-dept-section">
+          <h2 className="cs-dept-section-title">Department Profile</h2>
+          <div className="cs-dept-profile-content">
+            <div className="cs-dept-profile-text">
+              <p>The Computer Science Department at our college is dedicated to providing students with a comprehensive education in computer science theory and practice. Our curriculum is designed to keep pace with rapidly evolving technology, preparing students for successful careers in the tech industry.</p>
+              <br />
+              <p>The department of Computer Science and Engineering was started in Sree Buddha College of Engineering in the year 2002. The department currently offers the programmes B.Tech. in computer science and Engineering with sanctioned intake of 180, B.Tech Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning, sanctioned intake 60, M.Tech. in Computer Science and Engineering, and Ph.D. programmes. The department plays a crucial role in equipping students with current and relevant knowledge in computer Science and Engineering through various opportunities, including internships, hands-on training, bridge courses, add-on courses, and workshops to prepare them to meet the demands of the industry. In addition to promoting academic excellence, the department frequently organizes a variety of activities, including hackathons, faculty development programs, industry interactions, and social events which provides a platform for students and faculty to engage with distinguished researchers and explore emerging trends in computer science. The department is accredited by NBA since November 2019. In alignment with outcome-based learning and the National Educational Policy, the department establishes high standards for its curriculum and industry engagement.</p>
+              <br />
+              <p>With state-of-the-art laboratories, experienced faculty members, and strong industry connections, we offer an environment that fosters innovation, critical thinking, and practical problem-solving skills. Our graduates are highly sought after by leading tech companies and research institutions.</p>
+            </div>
+            <div className="cs-dept-profile-images">
+              {buildingImages.map((img, index) => (
+                <div key={index} className="cs-dept-building-image">
+                  <Image 
+                    src={img} 
+                    alt={`Computer Science Department Building ${index + 1}`}
+                    width={400}
+                    height={300}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
         
-        <p><strong>Private organizations</strong></p>
-        <p>
-            Britannia Industries Limited<br/>
-            Parle Products Private Limited<br/>
-            ITC Limited<br/>
-            PepsiCo India Holdings<br/>
-            Dabur India Limited<br/>
-            Godrej Industrial Limited<br/>
-            Tasty Foods<br/>
-            Modern Food Corporation<br/>
-            MTR Foods Limited<br/>
-            Hindustan Lever Limited<br/>
-            Nestle India Private Limited<br/>
-            Coca-Cola India Limited<br/>
-            Agro Tech Foods<br/>
-            Perfetti India Limited<br/>
-            Cadbury India Limited<br/>
-            Amul<br/>
-            Quatex
-        </p>
+        <section className="cs-dept-section">
+          <h2 className="cs-dept-section-title">Department Highlights</h2>
+          <div className="cs-dept-highlights-content">
+            <div className="highlights-card">
+              <h3 className="highlight-category">Academic Excellence & Research</h3>
+              <ul>
+                <li>Strong faculty expertise in core computing areas</li>
+                <li>Cutting-edge research in emerging technologies; like Artificial Intelligence, Internet of Things, Machine Learning and Deep Learning</li>
+              </ul>
+            </div>
+              
+            <div className="highlights-card">
+              <h3 className="highlight-category">Industry Collaboration & Innovation</h3>
+              <ul>
+                <li>Strong partnerships with tech companies for internships, projects, and placements</li>
+                <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
+              </ul>
+            </div>
+              
+            <div className="highlights-card">
+              <h3 className="highlight-category">State-of-the-Art Infrastructure</h3>
+              <ul>
+                <li>Well-equipped labs for AI & ML, Deep Learning and IoT</li>
+                <li>High-performance computing clusters for research</li>
+                <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
+              </ul>
+            </div>
+              
+            <div className="highlights-card">
+              <h3 className="highlight-category">Skill Development & Student Success</h3>
+              <ul>
+                <li>Focus on hands-on learning, hackathons, and coding competitions</li>
+                <li>Specialization tracks in Data Science, Artificial Intelligence, Machine Learning and IoT</li>
+                <li>Strong placement records with top global recruiters</li>
+              </ul>
+            </div>
+          </div>
+        </section>
         
-        <p><strong>Achievements</strong></p>
-        <p>
-            Students from the Department of Food Technology participated in a rice bran-based innovative product development competition as part of World Food Day celebrations 2022, held at Musaliar College of Engineering, Chirankeezh on 17th Oct 2022. They bagged 2nd prize in the competition.
-        </p>
+        <section className="cs-dept-gallery">
+          <h2 className="cs-dept-section-title">Department Gallery</h2>
+          <div className="cs-dept-gallery-grid">
+            <div className="cs-dept-gallery-item">
+              <Image 
+                src="/images/csimg1.jpg" 
+                alt="Robotics Competition"
+                width={400}
+                height={300}
+              />
+            </div>
+            <div className="cs-dept-gallery-item">
+              <Image 
+                src="/images/csimg2.jpg" 
+                alt="Hackathon Event"
+                width={400}
+                height={300}
+              />
+            </div>
+            <div className="cs-dept-gallery-item">
+              <Image 
+                src="/images/csimg3.jpg" 
+                alt="Graduation Ceremony"
+                width={400}
+                height={300}
+              />
+            </div>
+          </div>
+        </section>
         
-        <figure class="wp-block-image size-large">
-            <img alt="" class="wp-image-6845" loading="lazy" src="/assets/images/departments/about_us/mech_dept_img_1.jpg"/>
-            <figcaption>Arathy, Gowri Murali, Devika from S5 FT receiving the prize</figcaption>
-        </figure>
-        
-        <figure class="wp-block-image size-large">
-            <img alt="" class="wp-image-6847" loading="lazy" src="/assets/images/departments/about_us/mech_dept_img_2.jpg"/>
-            <figcaption>Nandana Shaji, Arathi Ashok, and Basila Basheer from S3 FT receiving the prize</figcaption>
-        </figure>
-        
-        <p><strong><em>Activities</em></strong></p>
-        
-        <p>
-            <strong>BLOOM Association Inauguration</strong><br/>
-            BLOOM department association was inaugurated on 31st December 2020 by the Head of Department, Dr. Anoop Raj. During the COVID-19 pandemic, students were feeling overwhelmed with online classes. To help them relax, the association inauguration provided an opportunity for all BT &amp; FT students to showcase their talents through Google Meet. Over 100 participants performed in dance, singing, essay writing, photography, recitation, and more.
-        </p>
-        
-        <figure class="wp-block-image size-large">
-            <img alt="" class="wp-image-5998" loading="lazy" src="/assets/images/departments/about_us/mech_dept_img_3.jpg"/>
-        </figure>
-        
-        <figure class="wp-block-image size-large">
-            <img alt="" class="wp-image-6000" loading="lazy" src="/assets/images/departments/about_us/mech_dept_img_4.jpg"/>
-            <figcaption><strong>Webinar on Food Safety and HACCP</strong></figcaption>
-        </figure>
-        
-        <p class="has-text-align-center has-small-font-size"><strong>Program Report</strong><br/>
-        &quot;Safe Food Today for a Healthy Tomorrow&quot; stresses that the production and consumption of safe food have immediate and long-term benefits for people, the planet, and the economy. Ms. Jisha emphasized the complex nature of food safety and the importance of an effective national food control system. Food safety is a joint responsibility of government, industry, and consumers. She provided a detailed explanation of Hazard Analysis and Critical Control Point (HACCP) principles and an additional decision tree for identifying critical control points (CCPs).
-        </p>
-        
-        <p><strong>SRAAVANOLSAVAM - E Onam, Nammude Onam</strong></p>
-        
-        <p class="has-small-font-size">
-            The Department of Food Technology, Sree Buddha College of Engineering, Pattoor, organized SRAAVANOLSAVAM - E-Onam, Nammude Onam, an online Onam celebration, on 24th August 2021 at 5:00 PM. Dr. Manoj Narayanan (Associate Professor, Dept. of BT &amp; BCE) welcomed the gathering, and the program was inaugurated by Prof. Meera Bai S (HoD, Dept. of BT &amp; BCE). The online Onam program was attended by students and faculty members. Active student participation in games and cultural programs such as group songs, dances, and more brought vibrancy to the celebration. Highlights included the Malayali Manka Kerala Sreeman contest and athapookalam competition. The event concluded with a vote of thanks by Ms. Prarthana Prabudhan, the program coordinator.
-        </p>
-        
-        <figure class="wp-block-image size-large">
-            <img alt="" class="wp-image-6008" loading="lazy" src="/assets/images/departments/about_us/mech_dept_img_5.jpg"/>
-        </figure>
-        
-        <figure class="wp-block-image size-large">
-            <img alt="" class="wp-image-6009" loading="lazy" src="/assets/images/departments/about_us/mech_dept_img_6.jpg"/>
-        </figure>
-    </div>
-
-
-
-        </>
-    )
-}
+        <style jsx>{`
+          .cs-dept-container {
+            background-color: #E6E6E6;
+            color: #333;
+            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            padding: 20px;
+            max-width: 100%;
+          }
+          
+          .cs-dept-header {
+            padding: 20px 0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #845714;
+          }
+          
+          .cs-dept-header h1 {
+            color: #845714;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+          }
+          
+          .cs-dept-header p {
+            font-size: 1.2rem;
+          }
+          
+          .cs-dept-hero {
+            height: 400px;
+            background-color: #333;
+            position: relative;
+            overflow: hidden;
+            margin: 30px 0;
+            border-radius: 10px;
+          }
+          
+          .cs-dept-hero-image {
+            width: 100%;
+            height: 100%;
+          }
+          
+          .cs-dept-hero-image img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+          
+          .cs-dept-hero-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            width: 100%;
+          }
+          
+          .cs-dept-hero-text h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+          }
+          
+          .cs-dept-section {
+            padding: 30px 0;
+          }
+          
+          .cs-dept-section-title {
+            color: #845714;
+            font-size: 2rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #845714;
+            margin-bottom: 20px;
+          }
+          
+          .cs-dept-profile-content {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 30px;
+            align-items: start;
+          }
+          
+          .cs-dept-profile-text {
+            font-size: 1.1rem;
+          }
+          
+          /* Vertical building images */
+          .cs-dept-profile-images {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            // position: sticky;
+            top: 20px;
+          }
+          
+          .cs-dept-building-image {
+            border-radius: 10px;
+            overflow: hidden;
+            // box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+          }
+          
+          .cs-dept-building-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+          }
+          
+          /* Highlights Cards */
+          .cs-dept-highlights-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+          }
+          
+          .highlights-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+          
+          .highlights-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+          }
+          
+          .highlight-category {
+            color: #845714;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+          }
+          
+          .highlights-card ul {
+            list-style: none;
+            padding-left: 0;
+          }
+          
+          .highlights-card li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 20px;
+          }
+          
+          .highlights-card li:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 8px;
+            height: 8px;
+            background-color: #845714;
+            border-radius: 50%;
+          }
+          
+          .cs-dept-gallery {
+            padding: 30px 0;
+          }
+          
+          .cs-dept-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+          }
+          
+          .cs-dept-gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 200px;
+            transition: transform 0.3s ease;
+          }
+          
+          .cs-dept-gallery-item:hover {
+            transform: scale(1.03);
+          }
+          
+          .cs-dept-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          
+          @media (max-width: 1024px) {
+            .cs-dept-profile-content {
+              grid-template-columns: 1.5fr 1fr;
+            }
+            
+            .cs-dept-highlights-content {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+          
+          @media (max-width: 768px) {
+            .cs-dept-profile-content {
+              grid-template-columns: 1fr;
+            }
+            
+            .cs-dept-highlights-content {
+              grid-template-columns: 1fr;
+            }
+            
+            .cs-dept-gallery-grid {
+              grid-template-columns: 1fr 1fr;
+            }
+            
+            .cs-dept-profile-images {
+              position: static;
+              margin-top: 20px;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .cs-dept-gallery-grid {
+              grid-template-columns: 1fr;
+            }
+          }
+        `}</style>
+      </div>
+    );
+  }

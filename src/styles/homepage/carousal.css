@@ -48,10 +48,9 @@
   color: white;
   border-radius: 20px;
 }
-.event_image {
-  /* height: 100%; */
-  max-height: 70%;
-  max-width: 70%;
+.event img {
+  height: 100%;
+  min-height: ;
 }
 
 /* Custom arrow styling */
