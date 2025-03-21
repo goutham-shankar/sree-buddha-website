@@ -1,18 +1,52 @@
-"use client"
-
+"use client"  
 import React from 'react'
 import Image from 'next/image';
+import { useEffect, useState } from "react";
+import './style.css'
 
 export default function MechanicalDepartment() {
     // Department building images
     const buildingImages = [
         "/images/cs-dept-building/cs-dept-building.png",
         "/images/cs-dept-building/cs-dept-building2.png",
-
-
-
-
     ];
+
+    const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    async function fetchImages() {
+      try {
+        const response = await fetch("http://13.51.85.192:1337/api/galleries?populate=*");
+        const data = await response.json();
+
+        console.log("API Response:", data); // Debugging output
+
+        // ✅ Ensure Department data exists and filter correctly
+        let filteredImages = data.data.filter(item => 
+          item.Department?.toLowerCase() === "mea" 
+        );
+
+        // ✅ Sort images by date (newest first)
+        filteredImages.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // ✅ Extract small image URLs
+        let imageUrls = filteredImages.flatMap(item =>
+          item.images.map(img => {
+            let smallImageUrl = img.formats?.small?.url
+              ? `http://13.51.85.192:1337${img.formats.small.url}`
+              : `http://13.51.85.192:1337${img.url}`; // Fallback if small version doesn't exist
+            return smallImageUrl;
+          })
+        );
+
+        setImages(imageUrls); // Update state
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    }
+
+    fetchImages();
+  }, []);
 
     return (
         <div className="cs-dept-container">
@@ -139,32 +173,14 @@ export default function MechanicalDepartment() {
 
             <section className="cs-dept-gallery">
                 <h2 className="cs-dept-section-title">Department Gallery</h2>
-                <div className="cs-dept-gallery-grid">
-                    <div className="cs-dept-gallery-item">
-                        <Image
-                            src="/images/csimg1.jpg"
-                            alt="Robotics Competition"
-                            width={400}
-                            height={300}
-                        />
-                    </div>
-                    <div className="cs-dept-gallery-item">
-                        <Image
-                            src="/images/csimg2.jpg"
-                            alt="Hackathon Event"
-                            width={400}
-                            height={300}
-                        />
-                    </div>
-                    <div className="cs-dept-gallery-item">
-                        <Image
-                            src="/images/csimg3.jpg"
-                            alt="Graduation Ceremony"
-                            width={400}
-                            height={300}
-                        />
-                    </div>
+                <div className="rowContainer">
+                    {images.map((src, index) => (
+                      <div key={index} className='card'>
+                        <img src={src} alt="Gallery" className='image' />
+                      </div>
+                    ))}
                 </div>
+
             </section>
 
             <style jsx>{`
@@ -173,9 +189,11 @@ export default function MechanicalDepartment() {
             color: #333;
             line-height: 1.6;
             font-family: 'Poppins', sans-serif;
-            padding: 20px;
+            padding: 20px ;
             max-width: 100%;
           }
+
+          
           
           .cs-dept-header {
             padding: 20px 0;
@@ -230,7 +248,7 @@ export default function MechanicalDepartment() {
           }
           
           .cs-dept-section {
-            padding: 30px 0;
+            padding:  0;
           }
           
           .cs-dept-section-title {
@@ -250,6 +268,7 @@ export default function MechanicalDepartment() {
           
           .cs-dept-profile-text {
             font-size: 1.1rem;
+             
           }
           
           /* Vertical building images */
@@ -352,14 +371,22 @@ export default function MechanicalDepartment() {
             object-fit: cover;
           }
           
-          @media (max-width: 1024px) {
+          @media (max-width: 1200px) {
+          .department{
+           padding-left:5%;
+          }
             .cs-dept-profile-content {
               grid-template-columns: 1.5fr 1fr;
+             
             }
             
             .cs-dept-highlights-content {
               grid-template-columns: 1fr 1fr;
             }
+              .cs-dept-section{
+                 padding-left:10%;
+            padding-right:10%;
+               }
           }
           
           @media (max-width: 768px) {
@@ -369,6 +396,8 @@ export default function MechanicalDepartment() {
             
             .cs-dept-highlights-content {
               grid-template-columns: 1fr;
+             
+              
             }
             
             .cs-dept-gallery-grid {
@@ -382,9 +411,15 @@ export default function MechanicalDepartment() {
           }
           
           @media (max-width: 480px) {
+          .cs-dept-section{
+          padding:0px;
+          }
             .cs-dept-gallery-grid {
               grid-template-columns: 1fr;
             }
+           .c-dept-section{
+           padding:0px;
+           }
           }
         `}</style>
         </div>
