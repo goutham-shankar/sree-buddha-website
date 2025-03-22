@@ -38,7 +38,7 @@
     width: 70%;
     /* background-color: red; */
     /* margin: auto; */
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 .mid_section {
@@ -226,5 +226,11 @@ img {
     .para1 {
         width: 100%;
         /* background-color: blue; */
+    }
+}
+@media(max-width:1200px)
+{
+    .department{
+        padding: 5%;
     }
 }
