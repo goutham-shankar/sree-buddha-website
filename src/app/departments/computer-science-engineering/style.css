@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap; /* ✅ Ensures wrapping to new row */
     gap: 10px;
-    justify-content: left; /* ✅ Centers images in a row */
+    justify-content: left; /* ✅ left images in a row */
     padding-left: 0%;
     padding-right: 0%;
   }
