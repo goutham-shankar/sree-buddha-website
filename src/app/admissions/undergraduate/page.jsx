@@ -1,3 +1,4 @@
+
 import React from 'react'
 import './style.css'
  import course from '@/assets/images/admissions/ug_course.png'
@@ -44,7 +45,10 @@ export default function page() {
         </div>
       
         <div className="links">
-          <a  className="no-underline" href="#"><div className="link">Online Application Form</div></a>
+        <a className="no-underline" href="/admissions/application-form">
+  <div className="link">Online Application Form</div>
+</a>
+
           <a  className="no-underline" href="https://docs.google.com/forms/d/e/1FAIpQLSdZkVC3f7rIeBlkVnW-One8uC1NnsHxQZtK013KVjP7ZKxzxg/viewform"><div className="link">Quick Registration</div></a>
         </div>
 
