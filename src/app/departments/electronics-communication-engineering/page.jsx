@@ -16,65 +16,26 @@ export default function ComputerScienceDepartment() {
       
     ];
     
-
-    const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    async function fetchImages() {
-      try {
-        const response = await fetch("http://13.51.85.192:1337/api/galleries?populate=*");
-        const data = await response.json();
-
-        console.log("API Response:", data); // Debugging output
-
-        // ✅ Ensure Department data exists and filter correctly
-        let filteredImages = data.data.filter(item => 
-          item.Department?.toLowerCase() === "mea" 
-        );
-
-        // ✅ Sort images by date (newest first)
-        filteredImages.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-        // ✅ Extract small image URLs
-        let imageUrls = filteredImages.flatMap(item =>
-          item.images.map(img => {
-            let smallImageUrl = img.formats?.small?.url
-              ? `http://13.51.85.192:1337${img.formats.small.url}`
-              : `http://13.51.85.192:1337${img.url}`; // Fallback if small version doesn't exist
-            return smallImageUrl;
-          })
-        );
-
-        setImages(imageUrls); // Update state
-      } catch (error) {
-        console.error("Error fetching images:", error);
-      }
-    }
-
-    fetchImages();
-  }, []);
-
-
     return (
       <div className="cs-dept-container">
         <header className="cs-dept-header">
-          <h1>Department of Electronics Engineering</h1>
-          <p>Innovation • Precision • Advancement</p>
+          <h1>Department of Electronics and Communication Engineering</h1>
+          <p>Innovation • Connectivity • Technology</p>
         </header>
         
         <div className="cs-dept-hero">
           <div className="cs-dept-hero-image">
             <Image 
-              src="/images/cs-dept-hero.jpg" 
-              alt="Computer Science Students Working Together"
+              src="/images/ece-dept-hero.jpg" 
+              alt="Electronics and Communication Students Working Together"
               width={1200}
               height={400}
               priority
             />
           </div>
           <div className="cs-dept-hero-text">
-            <h2>Shaping Tomorrow&apos;s Tech Leaders</h2>
-            <p>Join our vibrant community of innovators and problem-solvers</p>
+            <h2>Pioneering Communication Technologies</h2>
+            <p>Join our innovative community of electronics engineers and innovators</p>
           </div>
         </div>
         
@@ -82,39 +43,13 @@ export default function ComputerScienceDepartment() {
           <h2 className="cs-dept-section-title">Department Profile</h2>
           <div className="cs-dept-profile-content">
             <div className="cs-dept-profile-text">
-                <p>Sree Buddha College of Engineering is one of the pioneers in introducing the Bachelor Program 
-for Electronics and Communication Engineering in Kerala. The department of Electronics & 
-Communication Engineering (ECE), started in the year 2002, has carved a niche for itself by 
-offering the most competent instructional programme to the students. At present the sanctioned 
-intake is 60 with a provision of admitting six diploma holders in the third semester under lateral 
-entry scheme. The department also offers M Tech programme in Embedded Systems from the year 
-2010 onwards. The sanctioned intake is 6. </p>
-
-
-        <p>The Department of Electronics and Communication Engineering (ECE) at Sree Buddha College of 
-Engineering is dedicated to academic excellence, innovation, and technological advancement. With 
-a team of expert faculty, fully equipped laboratories and Industry collaboration we equip students 
-with the skills and knowledge needed to bridge the gap between the Institute and Industry. The 
-strong partnership with industries and regular hands-on workshops, imparts a strong culture of 
-innovation in design and development of socially relevant and sustainable hardware projects. The 
-research and innovation ecosystem in the department exposes our students into the ever-evolving 
-world of telecommunications, semiconductor technology, IoT, AI-driven automation, robotics, and 
-embedded systems. </p>
-              
-              <br />
-              <p>With state-of-the-art laboratories, experienced faculty members, and strong industry connections, we offer an environment that fosters innovation, critical thinking, and practical problem-solving skills. Our graduates are highly sought after by leading tech companies and research institutions.</p>
-            </div>
-            <div className="cs-dept-profile-images">
-              {buildingImages.map((img, index) => (
-                <div key={index} className="cs-dept-building-image">
-                  <Image 
-                    src={img} 
-                    alt={`Computer Science Department Building ${index + 1}`}
-                    width={400}
-                    height={300}
-                  />
-                </div>
-              ))}
+              <p>
+                The Department of Electronics and Communication Engineering (ECE) at Sree Buddha College of Engineering was established in 2002. The department currently offers B.Tech in Electronics and Communication Engineering with a sanctioned intake of 120 students, B.Tech ECE with specialization in IoT and Embedded Systems with a sanctioned intake of 60, M.Tech in Communication Systems, and Ph.D. programmes.
+              </p>
+                
+              <p>
+                The department is committed to providing cutting-edge education in electronics and communication technologies. Through a comprehensive curriculum, internships, hands-on training, bridge courses, and workshops, students are prepared to meet the evolving demands of the telecommunications, semiconductor, and electronics industries. The department frequently organizes hackathons, faculty development programs, and industry interactions, providing a platform for students and faculty to engage with distinguished researchers and explore emerging trends in communication technologies. Accredited by NBA since November 2019, the department aligns with outcome-based learning and the National Educational Policy to maintain high standards of academic and industry engagement.
+              </p>
             </div>
           </div>
         </section>
@@ -123,60 +58,70 @@ embedded systems. </p>
           <h2 className="cs-dept-section-title">Department Highlights</h2>
           <div className="cs-dept-highlights-content">
             <div className="highlights-card">
-              <h3 className="highlight-category">Placement and Career Opportunities</h3>
+              <h3 className="highlight-category">Academic Excellence & Research</h3>
               <ul>
-                <li>Strong placement record in core ECE and interdisciplinary fields like AI, ML, and Industry 4.0.</li>
-                <li>Graduates secure positions in top companies specializing in IoT, automation, telecom, embedded systems, and AI-driven technologies.</li>
+                <li>Strong faculty expertise in core electronics and communication domains</li>
+                <li>Cutting-edge research in emerging technologies like 5G, IoT, Embedded Systems, and Wireless Communications</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">Innovation and Entrepreneurship</h3>
+              <h3 className="highlight-category">Industry Exposure and Research Collaborations</h3>
               <ul>
-                <li>The department fosters an ecosystem for innovation, product development, and startup incubation.</li>
-                <li>Several startups have emerged from the department, showcasing its strong support for entrepreneurship and technological advancement.</li>
+                <li>Students gain industry insights through seminars, workshops, and internships at leading telecommunications companies, semiconductor firms, and research institutions like ISRO, CDAC, and DRDO</li>
+                <li>Strategic partnerships with industries like Qualcomm, Cisco, Nokia, and local tech startups to enhance research and innovation opportunities</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">Industry Collaborations and Internships</h3>
+              <h3 className="highlight-category">State-of-the-Art Infrastructure</h3>
               <ul>
-                <li>MoUs with leading industries provide students with internship opportunities, hands-on training programs, industry exposure, and skill development workshops.</li>
-                <li>These collaborations bridge the gap between academia and industry, offering practical experience, access to 
-                  the latest technologies, and mentorship from industry experts.</li>
+                <li>Advanced laboratories for RF Design, Wireless Communications, and Embedded Systems</li>
+                <li>High-end communication and signal processing equipment</li>
+                <li>Access to industry-standard simulation and design tools like MATLAB, Simulink, and Cadence</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">Research and Development</h3>
+              <h3 className="highlight-category">Skill Development & Student Success</h3>
               <ul>
-                <li>The department actively supports funded student projects and research paper publications, fostering a strong culture of research and innovation.</li>
-                <li>Encourages students to explore cutting-edge technologies, develop problem-solving skills, and contribute to research advancements in their field.</li>
-              </ul>
-            </div>
-            <div className="highlights-card">
-              <h3 className="highlight-category">Clubs and Extracurricular Activities</h3>
-              <ul>
-                <li>Hosts clubs such as the Makers Club and the Electronics Technocrats Association (ETA), 
-                  providing students with a platform for both technical and non-technical skill development.</li>
-                  <li>Offers opportunities for hands-on learning, innovation, and talent showcasing.</li>
-                  <li>Students get the chance to interact with eminent personalities, industry experts, and researchers, expanding their knowledge and professional network.</li>
+                <li>Focus on hands-on learning, circuit design competitions, and robotics challenges</li>
+                <li>Specialization tracks in IoT, Embedded Systems, Signal Processing, and Communication Technologies</li>
+                <li>Strong placement records with top telecommunications, electronics, and semiconductor companies</li>
               </ul>
             </div>
           </div>
         </section>
         
         <section className="cs-dept-gallery">
-                <h2 className="cs-dept-section-title">Department Gallery</h2>
-                <div className="rowContainer">
-                    {images.map((src, index) => (
-                      <div key={index} className='card'>
-                        <img src={src} alt="Gallery" className='image' />
-                      </div>
-                    ))}
-                </div>
-
-            </section>
+          <h2 className="cs-dept-section-title">Department Gallery</h2>
+          <div className="cs-dept-gallery-grid">
+            <div className="cs-dept-gallery-item">
+              <Image 
+                src="/images/csimg1.jpg" 
+                alt="Robotics Competition"
+                width={400}
+                height={300}
+              />
+            </div>
+            <div className="cs-dept-gallery-item">
+              <Image 
+                src="/images/csimg2.jpg" 
+                alt="Hackathon Event"
+                width={400}
+                height={300}
+              />
+            </div>
+            <div className="cs-dept-gallery-item">
+              <Image 
+                src="/images/csimg3.jpg" 
+                alt="Graduation Ceremony"
+                width={400}
+                height={300}
+              />
+            </div>
+          </div>
+        </section>
         
         <style jsx>{`
           .cs-dept-container {
@@ -253,39 +198,14 @@ embedded systems. </p>
           }
           
           .cs-dept-profile-content {
-            display: grid;
-            grid-template-columns: 3fr 2fr;
-            gap: 30px;
-            align-items: start;
+            display: block;
+            width: 100%;
           }
           
           .cs-dept-profile-text {
             font-size: 1.1rem;
           }
           
-          /* Vertical building images */
-          .cs-dept-profile-images {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            // position: sticky;
-            top: 20px;
-          }
-          
-          .cs-dept-building-image {
-            border-radius: 10px;
-            overflow: hidden;
-            // box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-          }
-          
-          .cs-dept-building-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 10px;
-          }
-          
-          /* Highlights Cards */
           .cs-dept-highlights-content {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -364,31 +284,18 @@ embedded systems. </p>
           }
           
           @media (max-width: 1024px) {
-            .cs-dept-profile-content {
-              grid-template-columns: 1.5fr 1fr;
-            }
-            
             .cs-dept-highlights-content {
               grid-template-columns: 1fr 1fr;
             }
           }
           
           @media (max-width: 768px) {
-            .cs-dept-profile-content {
-              grid-template-columns: 1fr;
-            }
-            
             .cs-dept-highlights-content {
               grid-template-columns: 1fr;
             }
             
             .cs-dept-gallery-grid {
               grid-template-columns: 1fr 1fr;
-            }
-            
-            .cs-dept-profile-images {
-              position: static;
-              margin-top: 20px;
             }
           }
           

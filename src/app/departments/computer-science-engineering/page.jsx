@@ -91,8 +91,6 @@ export default function ComputerScienceDepartment() {
               </p>
                 
               <p>
-
-
                 The department plays a crucial role in equipping students
                 with current and relevant knowledge in computer Science and Engineering through
                 various opportunities, including internships, hands-on training, bridge
@@ -105,21 +103,7 @@ export default function ComputerScienceDepartment() {
                 November 2019. In alignment with outcome-based learning and
                 the National Educational Policy, the department establishes high standards for
                 its curriculum and industry engagement.
-
-
               </p>
-            </div>
-            <div className="cs-dept-profile-images">
-              {buildingImages.map((img, index) => (
-                <div key={index} className="cs-dept-building-image">
-                  <Image 
-                    src={img} 
-                    alt={`Computer Science Department Building ${index + 1}`}
-                    width={400}
-                    height={300}
-                  />
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -254,39 +238,14 @@ export default function ComputerScienceDepartment() {
           }
           
           .cs-dept-profile-content {
-            display: grid;
-            grid-template-columns: 3fr 2fr;
-            gap: 30px;
-            align-items: start;
+            display: block;
+            width: 100%;
           }
           
           .cs-dept-profile-text {
             font-size: 1.1rem;
           }
           
-          /* Vertical building images */
-          .cs-dept-profile-images {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            // position: sticky;
-            top: 20px;
-          }
-          
-          .cs-dept-building-image {
-            border-radius: 10px;
-            overflow: hidden;
-            // box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-          }
-          
-          .cs-dept-building-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 10px;
-          }
-          
-          /* Highlights Cards */
           .cs-dept-highlights-content {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -365,31 +324,18 @@ export default function ComputerScienceDepartment() {
           }
           
           @media (max-width: 1024px) {
-            .cs-dept-profile-content {
-              grid-template-columns: 1.5fr 1fr;
-            }
-            
             .cs-dept-highlights-content {
               grid-template-columns: 1fr 1fr;
             }
           }
           
           @media (max-width: 768px) {
-            .cs-dept-profile-content {
-              grid-template-columns: 1fr;
-            }
-            
             .cs-dept-highlights-content {
               grid-template-columns: 1fr;
             }
             
             .cs-dept-gallery-grid {
               grid-template-columns: 1fr 1fr;
-            }
-            
-            .cs-dept-profile-images {
-              position: static;
-              margin-top: 20px;
             }
           }
           
