@@ -18,7 +18,7 @@
 //           pic={"/images/principal.png"}
 //         />
 //     </div>
-//   ); 
+//   );
 // }
 
 // export default Principal;
@@ -71,6 +71,7 @@ function page() {
       <div className="m-title">
         <h1 className="heading">The Principal</h1>
         <hr />
+        <div className="line"></div>
       </div>
       <Person
         name={principalData.Principal_Name}
