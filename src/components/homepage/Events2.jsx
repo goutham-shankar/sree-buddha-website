@@ -11,6 +11,8 @@ import { useEffect, useState } from 'react';
 
 export default function Events2() {
 
+    
+
     const [slidesToShow, setSlidesToShow] = useState(3); // Default 3 slides for desktop
     useEffect(() => {
         const handleResize = () => {
