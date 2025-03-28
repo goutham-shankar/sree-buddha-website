@@ -5,7 +5,51 @@ import Image from 'next/image';
 import { useEffect, useState } from "react";
 import './style.css'
 
+
+
+
+
 export default function ComputerScienceDepartment() {
+
+  
+const [images, setImages] = useState([]);
+
+useEffect(() => {
+  async function fetchImages() {
+    try {
+      const response = await fetch("http://13.51.85.192:1337/api/galleries?populate=*");
+      const data = await response.json();
+
+      console.log("API Response:", data); // Debugging output
+
+      // ✅ Ensure Department data exists and filter correctly
+      let filteredImages = data.data.filter(item => 
+        item.Department?.toLowerCase() === "mea" 
+      );
+
+      // ✅ Sort images by date (newest first)
+      filteredImages.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      // ✅ Extract small image URLs
+      let imageUrls = filteredImages.flatMap(item =>
+        item.images.map(img => {
+          let smallImageUrl = img.formats?.small?.url
+            ? `http://13.51.85.192:1337${img.formats.small.url}`
+            : `http://13.51.85.192:1337${img.url}`; // Fallback if small version doesn't exist
+          return smallImageUrl;
+        })
+      );
+
+      setImages(imageUrls); // Update state
+    } catch (error) {
+      console.error("Error fetching images:", error);
+    }
+  }
+
+  fetchImages();
+}, []);
+
+
     return (
       <div className="cs-dept-container">
         <header className="cs-dept-header">

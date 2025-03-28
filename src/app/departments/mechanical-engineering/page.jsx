@@ -97,7 +97,7 @@ export default function MechanicalDepartment() {
 
 
                     </div>
-                    <div className="cs-dept-profile-images">
+                    {/* <div className="cs-dept-profile-images">
                         {buildingImages.map((img, index) => (
                             <div key={index} className="cs-dept-building-image">
                                 <Image
@@ -108,7 +108,7 @@ export default function MechanicalDepartment() {
                                 />
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
@@ -260,10 +260,10 @@ export default function MechanicalDepartment() {
           }
           
           .cs-dept-profile-content {
-            display: grid;
-            grid-template-columns: 3fr 2fr;
-            gap: 30px;
-            align-items: start;
+            // display: grid;
+            // grid-template-columns: 3fr 2fr;
+            // gap: 30px;
+             align-items: start;
           }
           
           .cs-dept-profile-text {
