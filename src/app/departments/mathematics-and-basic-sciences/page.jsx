@@ -150,7 +150,6 @@ export default function ComputerScienceDepartment() {
                       </div>
                     ))}
                 </div>
-
             </section>
         
         <style jsx>{`

@@ -1,0 +1,56 @@
+
+/* ✅ Row-based layout for images */   
+.rowContainer {
+  display: flex;
+  flex-wrap: wrap; /* ✅ Ensures wrapping to new row */
+  gap: 10px;
+  justify-content: left; /* ✅ Centers images in a row */
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+/* ✅ Image card styling */
+.card {
+  padding: 0px;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(33.33% - 10px); /* ✅ Exactly 3 images per row */
+  max-width: 450px;
+  min-width: 250px;
+}
+
+/* ✅ Image Styling */
+.image {
+  width: 100%; /* ✅ Makes image fit within the card */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .card {
+    width: calc(50% - 10px); /* ✅ 2 images per row on tablets */
+  }
+  .image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%; /* ✅ 1 image per row on mobile */
+  }
+  .image {
+    height: 200px;
+  }
+  .rowContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
