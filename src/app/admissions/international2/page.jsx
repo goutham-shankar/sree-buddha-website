@@ -43,38 +43,45 @@ function Page() {
         <div className="features-grid">
           <div className="feature-item">
             <i className="fas fa-award"></i>
-            <h3>Academic Excellence</h3>
-            <p>Consistently ranked among top engineering colleges in India with NAAC &apos;A++&apos; grade accreditation</p>
+            <h3>Globally Recognized Curriculum</h3>
+            <p> As an autonomous institution, affiliated to APJ 
+Abul Kalam Technological University, our programs are designed to meet 
+international educational and industry standards.</p>
             </div>
 
           <div className="feature-item">
             <i className="fas fa-globe-asia"></i>
-            <h3>Global Recognition</h3>
-            <p>International collaborations with leading universities worldwide for research and student exchange</p>
+            <h3>State-of-the-Art Facilities</h3>
+            <p>: Well-equipped laboratories, research centers, and smart 
+            classrooms provide an excellent learning environment.</p>
           </div>
 
           <div className="feature-item">
             <i className="fas fa-flask"></i>
-            <h3>Research Focus</h3>
-            <p>State-of-the-art research facilities and laboratories with industry collaboration opportunities</p>
+            <h3>Experienced Faculty</h3>
+            <p> Learn from highly qualified professors with industry and 
+            research expertise. </p>
           </div>
 
           <div className="feature-item">
             <i className="fas fa-users"></i>
-            <h3>Expert Faculty</h3>
-            <p>Distinguished faculty members with international exposure and industry experience</p>
+            <h3>Industry Exposure</h3>
+            <p> Internships, industrial collaborations, and global exchange 
+            programs enrich the student experience.</p>
           </div>
 
           <div className="feature-item">
             <i className="fas fa-briefcase"></i>
-            <h3>Placement Success</h3>
-            <p>Excellent placement record with leading global companies and competitive packages</p>
+            <h3>Diverse Campus Culture:</h3>
+            <p> A multicultural student community fosters global 
+            perspectives and networking opportunities.</p>
           </div>
 
           <div className="feature-item">
             <i className="fas fa-university"></i>
-            <h3>Modern Campus</h3>
-            <p>World-class infrastructure with modern amenities and vibrant campus life</p>
+            <h3>Affordable Education</h3>
+            <p> High-quality education at competitive tuition fees compared 
+            to many Western countries. </p>
           </div>
         </div>
       </section>
@@ -109,7 +116,7 @@ function Page() {
         <div className="programs-container">
           <div className="program-category">
             <div className="category-header">
-              <i className="fas fa-graduation-cap"></i>
+              {/* <i className="fas fa-graduation-cap"></i> */}
               <h3>Undergraduate Programs</h3>
               <p className="category-description">Four-year B.E. / B.Tech programs designed to create industry-ready engineers</p>
             </div>
@@ -161,7 +168,7 @@ function Page() {
 
           <div className="program-category">
             <div className="category-header">
-              <i className="fas fa-award"></i>
+              {/* <i className="fas fa-award"></i> */}
               <h3>Postgraduate Programs</h3>
               <p className="category-description">Advanced M.E. / M.Tech programs and MBA with industry specializations</p>
             </div>

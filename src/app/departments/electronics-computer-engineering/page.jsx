@@ -2,6 +2,8 @@
 
 import React from 'react'
 import Image from 'next/image';
+import { useEffect, useState } from "react";
+import './style.css'
 
 export default function ComputerScienceDepartment() {
     // Department building images
@@ -13,11 +15,48 @@ export default function ComputerScienceDepartment() {
       
       
     ];
+    const [images, setImages] = useState([]);
+
+    useEffect(() => {
+      async function fetchImages() {
+        try {
+          const response = await fetch("http://13.51.85.192:1337/api/galleries?populate=*");
+          const data = await response.json();
+  
+          console.log("API Response:", data); // Debugging output
+  
+          // ✅ Ensure Department data exists and filter correctly
+          let filteredImages = data.data.filter(item => 
+            item.Department?.toLowerCase() === "mea" 
+          );
+  
+          // ✅ Sort images by date (newest first)
+          filteredImages.sort((a, b) => new Date(b.date) - new Date(a.date));
+  
+          // ✅ Extract small image URLs
+          let imageUrls = filteredImages.flatMap(item =>
+            item.images.map(img => {
+              let smallImageUrl = img.formats?.small?.url
+                ? `http://13.51.85.192:1337${img.formats.small.url}`
+                : `http://13.51.85.192:1337${img.url}`; // Fallback if small version doesn't exist
+              return smallImageUrl;
+            })
+          );
+  
+          setImages(imageUrls); // Update state
+        } catch (error) {
+          console.error("Error fetching images:", error);
+        }
+      }
+  
+      fetchImages();
+    }, []);
+  
     
     return (
       <div className="cs-dept-container">
         <header className="cs-dept-header">
-          <h1>Computer Science Department</h1>
+          <h1> Electronics  and Computer Engineering</h1>
           <p>Innovation • Excellence • Future</p>
         </header>
         
@@ -41,13 +80,12 @@ export default function ComputerScienceDepartment() {
           <h2 className="cs-dept-section-title">Department Profile</h2>
           <div className="cs-dept-profile-content">
             <div className="cs-dept-profile-text">
-              <p>The Computer Science Department at our college is dedicated to providing students with a comprehensive education in computer science theory and practice. Our curriculum is designed to keep pace with rapidly evolving technology, preparing students for successful careers in the tech industry.</p>
-              <br />
-              <p>The department of Computer Science and Engineering was started in Sree Buddha College of Engineering in the year 2002. The department currently offers the programmes B.Tech. in computer science and Engineering with sanctioned intake of 180, B.Tech Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning, sanctioned intake 60, M.Tech. in Computer Science and Engineering, and Ph.D. programmes. The department plays a crucial role in equipping students with current and relevant knowledge in computer Science and Engineering through various opportunities, including internships, hands-on training, bridge courses, add-on courses, and workshops to prepare them to meet the demands of the industry. In addition to promoting academic excellence, the department frequently organizes a variety of activities, including hackathons, faculty development programs, industry interactions, and social events which provides a platform for students and faculty to engage with distinguished researchers and explore emerging trends in computer science. The department is accredited by NBA since November 2019. In alignment with outcome-based learning and the National Educational Policy, the department establishes high standards for its curriculum and industry engagement.</p>
-              <br />
-              <p>With state-of-the-art laboratories, experienced faculty members, and strong industry connections, we offer an environment that fosters innovation, critical thinking, and practical problem-solving skills. Our graduates are highly sought after by leading tech companies and research institutions.</p>
+              <p>Sree Buddha College of Engineering stands at the forefront as one of the first institutions in Kerala to introduce a Bachelor's program in Electronics and Computer Engineering. Established in 2023, the Department of Electronics & Computer Engineering has quickly distinguished itself by offering a cutting-edge instructional program, With a sanctioned intake of 30 students.</p>
+
+              <p>The <b>Department of Electronics and Computer Engineering (ER)</b> at Sree Buddha College of Engineering is a centre for blending the core principles of electronics and computer engineering. A team of highly skilled faculty members from both the domains provides students with holistic and interdisciplinary education, integrating hardware and software expertise to prepare them for the rapidly advancing tech industry. This multidisciplinary program, strengthened by robust industry collaborations, equips students with cutting-edge expertise in fields such as AI, IoT, embedded systems, robotics, and cybersecurity. By combining theoretical foundations with hands-on industry exposure, the department is shaping future-ready engineers who can excel in Industry 4.0 and beyond.</p>
             </div>
-            <div className="cs-dept-profile-images">
+
+            {/* <div className="cs-dept-profile-images">
               {buildingImages.map((img, index) => (
                 <div key={index} className="cs-dept-building-image">
                   <Image 
@@ -58,78 +96,71 @@ export default function ComputerScienceDepartment() {
                   />
                 </div>
               ))}
-            </div>
+            </div> */}
+
           </div>
         </section>
         
         <section className="cs-dept-section">
-          <h2 className="cs-dept-section-title">Department Highlights</h2>
-          <div className="cs-dept-highlights-content">
-            <div className="highlights-card">
-              <h3 className="highlight-category">Academic Excellence & Research</h3>
-              <ul>
-                <li>Strong faculty expertise in core computing areas</li>
-                <li>Cutting-edge research in emerging technologies; like Artificial Intelligence, Internet of Things, Machine Learning and Deep Learning</li>
-              </ul>
-            </div>
-              
-            <div className="highlights-card">
-              <h3 className="highlight-category">Industry Collaboration & Innovation</h3>
-              <ul>
-                <li>Strong partnerships with tech companies for internships, projects, and placements</li>
-                <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
-              </ul>
-            </div>
-              
-            <div className="highlights-card">
-              <h3 className="highlight-category">State-of-the-Art Infrastructure</h3>
-              <ul>
-                <li>Well-equipped labs for AI & ML, Deep Learning and IoT</li>
-                <li>High-performance computing clusters for research</li>
-                <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
-              </ul>
-            </div>
-              
-            <div className="highlights-card">
-              <h3 className="highlight-category">Skill Development & Student Success</h3>
-              <ul>
-                <li>Focus on hands-on learning, hackathons, and coding competitions</li>
-                <li>Specialization tracks in Data Science, Artificial Intelligence, Machine Learning and IoT</li>
-                <li>Strong placement records with top global recruiters</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+  <h2 className="cs-dept-section-title">Department Highlights</h2>
+  <div className="cs-dept-highlights-content">
+    
+    <div className="highlights-card">
+      <h3 className="highlight-category">Advanced Facilities & Expertise</h3>
+      <ul>
+        <li>State-of-the-art infrastructure for AI, ML, IoT, Cyber Security, Data Science, and Networking Systems.</li>
+        <li>Well-equipped labs to design and develop cutting-edge expertise in emerging technologies.</li>
+      </ul>
+    </div>
+    
+    <div className="highlights-card">
+      <h3 className="highlight-category">Innovation & Entrepreneurship</h3>
+      <ul>
+        <li>Thriving ecosystem for innovation, product development, and startup incubation.</li>
+        <li>Several successful startups have emerged from the department, fostering entrepreneurship.</li>
+      </ul>
+    </div>
+    
+    <div className="highlights-card">
+      <h3 className="highlight-category">Industry Collaboration & Training</h3>
+      <ul>
+        <li>MoUs with leading industries for internships, hands-on training, and industry exposure.</li>
+        <li>Skill development workshops and mentorship from industry experts for career enhancement.</li>
+      </ul>
+    </div>
+    
+    <div className="highlights-card">
+      <h3 className="highlight-category">Research & Development</h3>
+      <ul>
+        <li>Support for funded student projects and research paper publications.</li>
+        <li>Encouragement for students to explore cutting-edge technologies and contribute to research advancements.</li>
+      </ul>
+    </div>
+    
+    <div className="highlights-card">
+      <h3 className="highlight-category">Student Clubs & Professional Growth</h3>
+      <ul>
+        <li>Active clubs like the Makers Club and Electronics Technocrats Association (ETA) for technical and non-technical skill development.</li>
+        <li>Opportunities to interact with eminent personalities, industry experts, and researchers.</li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
+
         
-        <section className="cs-dept-gallery">
-          <h2 className="cs-dept-section-title">Department Gallery</h2>
-          <div className="cs-dept-gallery-grid">
-            <div className="cs-dept-gallery-item">
-              <Image 
-                src="/images/csimg1.jpg" 
-                alt="Robotics Competition"
-                width={400}
-                height={300}
-              />
-            </div>
-            <div className="cs-dept-gallery-item">
-              <Image 
-                src="/images/csimg2.jpg" 
-                alt="Hackathon Event"
-                width={400}
-                height={300}
-              />
-            </div>
-            <div className="cs-dept-gallery-item">
-              <Image 
-                src="/images/csimg3.jpg" 
-                alt="Graduation Ceremony"
-                width={400}
-                height={300}
-              />
-            </div>
-          </div>
-        </section>
+        
+<section className="cs-dept-gallery">
+                <h2 className="cs-dept-section-title">Department Gallery</h2>
+                <div className="rowContainer">
+                    {images.map((src, index) => (
+                      <div key={index} className='card'>
+                        <img src={src} alt="Gallery" className='image' />
+                      </div>
+                    ))}
+                </div>
+
+            </section>
         
         <style jsx>{`
           .cs-dept-container {
@@ -206,9 +237,9 @@ export default function ComputerScienceDepartment() {
           }
           
           .cs-dept-profile-content {
-            display: grid;
-            grid-template-columns: 3fr 2fr;
-            gap: 30px;
+            // display: grid;
+            // grid-template-columns: 3fr 2fr;
+            // gap: 30px;
             align-items: start;
           }
           

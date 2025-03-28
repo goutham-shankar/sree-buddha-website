@@ -2,6 +2,8 @@
 
 import React from 'react'
 import Image from 'next/image';
+import { useEffect, useState } from "react";
+import './style.css'
 
 export default function ComputerScienceDepartment() {
     // Department building images
@@ -13,11 +15,48 @@ export default function ComputerScienceDepartment() {
       
       
     ];
+
+    const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    async function fetchImages() {
+      try {
+        const response = await fetch("http://13.51.85.192:1337/api/galleries?populate=*");
+        const data = await response.json();
+
+        console.log("API Response:", data); // Debugging output
+
+        // ✅ Ensure Department data exists and filter correctly
+        let filteredImages = data.data.filter(item => 
+          item.Department?.toLowerCase() === "mea" 
+        );
+
+        // ✅ Sort images by date (newest first)
+        filteredImages.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // ✅ Extract small image URLs
+        let imageUrls = filteredImages.flatMap(item =>
+          item.images.map(img => {
+            let smallImageUrl = img.formats?.small?.url
+              ? `http://13.51.85.192:1337${img.formats.small.url}`
+              : `http://13.51.85.192:1337${img.url}`; // Fallback if small version doesn't exist
+            return smallImageUrl;
+          })
+        );
+
+        setImages(imageUrls); // Update state
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    }
+
+    fetchImages();
+  }, []);
     
     return (
       <div className="cs-dept-container">
         <header className="cs-dept-header">
-          <h1>Computer Science Department</h1>
+          <h1>Department of Food Technology</h1>
           <p>Innovation • Excellence • Future</p>
         </header>
         
@@ -41,13 +80,17 @@ export default function ComputerScienceDepartment() {
           <h2 className="cs-dept-section-title">Department Profile</h2>
           <div className="cs-dept-profile-content">
             <div className="cs-dept-profile-text">
-              <p>The Computer Science Department at our college is dedicated to providing students with a comprehensive education in computer science theory and practice. Our curriculum is designed to keep pace with rapidly evolving technology, preparing students for successful careers in the tech industry.</p>
-              <br />
-              <p>The department of Computer Science and Engineering was started in Sree Buddha College of Engineering in the year 2002. The department currently offers the programmes B.Tech. in computer science and Engineering with sanctioned intake of 180, B.Tech Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning, sanctioned intake 60, M.Tech. in Computer Science and Engineering, and Ph.D. programmes. The department plays a crucial role in equipping students with current and relevant knowledge in computer Science and Engineering through various opportunities, including internships, hands-on training, bridge courses, add-on courses, and workshops to prepare them to meet the demands of the industry. In addition to promoting academic excellence, the department frequently organizes a variety of activities, including hackathons, faculty development programs, industry interactions, and social events which provides a platform for students and faculty to engage with distinguished researchers and explore emerging trends in computer science. The department is accredited by NBA since November 2019. In alignment with outcome-based learning and the National Educational Policy, the department establishes high standards for its curriculum and industry engagement.</p>
-              <br />
-              <p>With state-of-the-art laboratories, experienced faculty members, and strong industry connections, we offer an environment that fosters innovation, critical thinking, and practical problem-solving skills. Our graduates are highly sought after by leading tech companies and research institutions.</p>
+             
+             <p>Established in 2020 with an initial intake of 30 students, the Department of Food Technology is dedicated to providing cutting-edge education in food science, processing, and safety. Guided by the principles of the National Education Policy, the department emphasizes a multidisciplinary, flexible, and skill-based curriculum, equipping students for careers in both industry and research.</p>
+             
+             <p>With a strong focus on Outcome-Based Education (OBE), the curriculum ensures graduates develop industry-relevant competencies, critical thinking abilities, and problem-solving skills. As an autonomous institution, the department continuously updates its programs to align with global food industry trends and regulatory standards.</p>
+
+             <p>A student-centric approach is at the heart of the department’s pedagogy, integrating experiential learning, industry collaborations, and research-driven projects. Faculty members, specializing in areas such as food safety, processing, biotechnology, and sustainable packaging, actively engage in research and consultancy, providing students with real-world exposure.</p>
+
+             <p>With a commitment to innovation and societal impact, the department nurtures professionals who contribute to food security, safety, and sustainability, shaping graduates into leaders in the food technology sector.</p>
+             
             </div>
-            <div className="cs-dept-profile-images">
+            {/* <div className="cs-dept-profile-images">
               {buildingImages.map((img, index) => (
                 <div key={index} className="cs-dept-building-image">
                   <Image 
@@ -58,79 +101,75 @@ export default function ComputerScienceDepartment() {
                   />
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </section>
         
         <section className="cs-dept-section">
-          <h2 className="cs-dept-section-title">Department Highlights</h2>
-          <div className="cs-dept-highlights-content">
-            <div className="highlights-card">
-              <h3 className="highlight-category">Academic Excellence & Research</h3>
-              <ul>
-                <li>Strong faculty expertise in core computing areas</li>
-                <li>Cutting-edge research in emerging technologies; like Artificial Intelligence, Internet of Things, Machine Learning and Deep Learning</li>
-              </ul>
-            </div>
-              
-            <div className="highlights-card">
-              <h3 className="highlight-category">Industry Collaboration & Innovation</h3>
-              <ul>
-                <li>Strong partnerships with tech companies for internships, projects, and placements</li>
-                <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
-              </ul>
-            </div>
-              
-            <div className="highlights-card">
-              <h3 className="highlight-category">State-of-the-Art Infrastructure</h3>
-              <ul>
-                <li>Well-equipped labs for AI & ML, Deep Learning and IoT</li>
-                <li>High-performance computing clusters for research</li>
-                <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
-              </ul>
-            </div>
-              
-            <div className="highlights-card">
-              <h3 className="highlight-category">Skill Development & Student Success</h3>
-              <ul>
-                <li>Focus on hands-on learning, hackathons, and coding competitions</li>
-                <li>Specialization tracks in Data Science, Artificial Intelligence, Machine Learning and IoT</li>
-                <li>Strong placement records with top global recruiters</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        
-        <section className="cs-dept-gallery">
-          <h2 className="cs-dept-section-title">Department Gallery</h2>
-          <div className="cs-dept-gallery-grid">
-            <div className="cs-dept-gallery-item">
-              <Image 
-                src="/images/csimg1.jpg" 
-                alt="Robotics Competition"
-                width={400}
-                height={300}
-              />
-            </div>
-            <div className="cs-dept-gallery-item">
-              <Image 
-                src="/images/csimg2.jpg" 
-                alt="Hackathon Event"
-                width={400}
-                height={300}
-              />
-            </div>
-            <div className="cs-dept-gallery-item">
-              <Image 
-                src="/images/csimg3.jpg" 
-                alt="Graduation Ceremony"
-                width={400}
-                height={300}
-              />
-            </div>
-          </div>
-        </section>
-        
+  <h2 className="cs-dept-section-title">Highlights of the Department</h2>
+  <div className="cs-dept-highlights-content">
+    
+    <div className="highlights-card">
+      <h3 className="highlight-category">Comprehensive Undergraduate Program</h3>
+      <ul>
+        <li>Focuses on developing innovative, sustainable, and high-quality food products.</li>
+        <li>Addresses societal benefits through advanced food technology education.</li>
+      </ul>
+    </div>
+    
+    <div className="highlights-card">
+      <h3 className="highlight-category">Industry-Oriented Curriculum</h3>
+      <ul>
+        <li>Covers emerging food technologies, food safety regulations, and sustainability.</li>
+        <li>Prepares students for dynamic careers in the food sector.</li>
+      </ul>
+    </div>
+    
+    <div className="highlights-card">
+      <h3 className="highlight-category">State-of-the-Art Research & Innovation</h3>
+      <ul>
+        <li>Equipped with modern laboratories and a research center fostering food product development and entrepreneurship.</li>
+      </ul>
+    </div>
+    
+    <div className="highlights-card">
+      <h3 className="highlight-category">Industry Collaborations</h3>
+      <ul>
+        <li>Provides hands-on exposure through internships, placements, and real-world projects.</li>
+        <li>An MOU with the Food Tech Research and Innovation Centre (FTRIC) promotes advanced research in food technology.</li>
+      </ul>
+    </div>
+    
+    <div className="highlights-card">
+      <h3 className="highlight-category">Specialized Focus on Food Safety & Sustainability</h3>
+      <ul>
+        <li>Offers training in HACCP, FSSAI, ISO standards, and smart food solutions.</li>
+        <li>Encourages practical learning through add-on courses and incubation programs.</li>
+      </ul>
+    </div>
+    
+    <div className="highlights-card">
+      <h3 className="highlight-category">Student Association – FROSA</h3>
+      <ul>
+        <li>Serves as a platform for students to interact with industry experts.</li>
+        <li>Encourages leadership through the organization of academic and professional programs.</li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
+
+<section className="cs-dept-gallery">
+                <h2 className="cs-dept-section-title">Department Gallery</h2>
+                <div className="rowContainer">
+                    {images.map((src, index) => (
+                      <div key={index} className='card'>
+                        <img src={src} alt="Gallery" className='image' />
+                      </div>
+                    ))}
+                </div>
+
+            </section>
         <style jsx>{`
           .cs-dept-container {
             background-color: #E6E6E6;
@@ -206,9 +245,9 @@ export default function ComputerScienceDepartment() {
           }
           
           .cs-dept-profile-content {
-            display: grid;
-            grid-template-columns: 3fr 2fr;
-            gap: 30px;
+            // display: grid;
+            // grid-template-columns: 3fr 2fr;
+            // gap: 30px;
             align-items: start;
           }
           

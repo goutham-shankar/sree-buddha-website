@@ -1,0 +1,98 @@
+.tickerContainer {
+  width: 97%;
+  background: #f5f2e9;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 5px;
+  overflow: hidden;
+  margin: 5px 7px;
+}
+
+/* News Label */
+.newsLabel {
+  background: #7b5c30;
+  color: white;
+  padding: 8px 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  font-size: 20px;
+  text-align: center;
+  width: 120px; /* Adjust width for better visibility */
+}
+
+/* Scrolling Wrapper */
+.tickerWrapper {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+}
+
+/* Scrolling Content */
+.tickerContent {
+  display: flex;
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+/* Individual News Items */
+.tickerItem {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  color: #7b5c30;
+  margin: 0 15px;
+}
+
+/* Separator Dot */
+.separator {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* 📌 Responsive Styles */
+@media (max-width: 1024px) { /* Tablets */
+  .newsLabel {
+    font-size: 18px;
+    width: 100px;
+  }
+
+  .tickerItem {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+
+  .separator {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 768px) { /* Mobile */
+  .tickerContainer {
+    width: 90%;
+    padding: 3px;
+    border-radius: 20px;
+  }
+
+  .newsLabel {
+    font-size: 16px;
+    padding: 6px 12px;
+    width: 90px;
+  }
+
+  .tickerItem {
+    font-size: 14px;
+    margin: 0 8px;
+  }
+
+  .separator {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+}
