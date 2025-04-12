@@ -1,6 +1,6 @@
 "use client"
-import React, { useState } from 'react';
-import './style.css'; // Import the CSS file
+import React, { useState, useEffect } from 'react';
+import './style.css';
 
 const ApplicationForm = () => {
   const [formData, setFormData] = useState({
@@ -44,11 +44,57 @@ const ApplicationForm = () => {
     branchPreference: '',
     admissionType: '',
     photo: null,
+    photoPreview: null,
     parentSignature: null,
-    applicantSignature: null
+    parentSignaturePreview: null,
+    applicantSignature: null,
+    applicantSignaturePreview: null
   });
 
   const [errors, setErrors] = useState({});
+  const [activeSection, setActiveSection] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  // Form sections for navigation
+  const formSections = [
+    "Personal Information",
+    "Guardian Information",
+    "Contact Information",
+    "Educational Details",
+    "Entrance & Preferences",
+    "Document Uploads"
+  ];
+
+  // Auto calculate percentages
+  useEffect(() => {
+    if (formData.tenthMarks && formData.tenthMaxMarks) {
+      const percentage = ((parseFloat(formData.tenthMarks) / parseFloat(formData.tenthMaxMarks)) * 100).toFixed(2);
+      setFormData(prev => ({ ...prev, tenthPercentage: percentage }));
+    }
+    
+    if (formData.twelfthMarks && formData.twelfthMaxMarks) {
+      const percentage = ((parseFloat(formData.twelfthMarks) / parseFloat(formData.twelfthMaxMarks)) * 100).toFixed(2);
+      setFormData(prev => ({ ...prev, twelfthPercentage: percentage }));
+    }
+    
+    if (formData.diplomaMarks && formData.diplomaMaxMarks) {
+      const percentage = ((parseFloat(formData.diplomaMarks) / parseFloat(formData.diplomaMaxMarks)) * 100).toFixed(2);
+      setFormData(prev => ({ ...prev, diplomaPercentage: percentage }));
+    }
+    
+    // Clean up any created object URLs when component unmounts
+    return () => {
+      if (formData.photoPreview) URL.revokeObjectURL(formData.photoPreview);
+      if (formData.parentSignaturePreview) URL.revokeObjectURL(formData.parentSignaturePreview);
+      if (formData.applicantSignaturePreview) URL.revokeObjectURL(formData.applicantSignaturePreview);
+    };
+  }, [
+    formData.tenthMarks, formData.tenthMaxMarks,
+    formData.twelfthMarks, formData.twelfthMaxMarks,
+    formData.diplomaMarks, formData.diplomaMaxMarks,
+    formData.photoPreview, formData.parentSignaturePreview, formData.applicantSignaturePreview
+  ]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,14 +102,54 @@ const ApplicationForm = () => {
       ...formData,
       [name]: value
     });
+    
+    // Clear error for this field when user makes changes
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: ''
+      });
+    }
   };
 
   const handleFileChange = (e) => {
     const { name, files } = e.target;
-    setFormData({
-      ...formData,
-      [name]: files[0]
-    });
+    if (files && files[0]) {
+      // Validate file type
+      const fileType = files[0].type;
+      if (!fileType.startsWith('image/')) {
+        setErrors({
+          ...errors,
+          [name]: 'Please upload an image file (JPEG, PNG, etc.)'
+        });
+        return;
+      }
+      
+      // Validate file size (max 2MB)
+      if (files[0].size > 2 * 1024 * 1024) {
+        setErrors({
+          ...errors,
+          [name]: 'File size must be less than 2MB'
+        });
+        return;
+      }
+
+      // Create URL for preview
+      const fileUrl = URL.createObjectURL(files[0]);
+      
+      setFormData(prev => ({
+        ...prev,
+        [name]: files[0],
+        [`${name}Preview`]: fileUrl
+      }));
+      
+      if (errors[name]) {
+        setErrors({
+          ...errors,
+          [name]: ''
+        });
+      }
+    }
   };
 
   const validateForm = () => {
@@ -107,708 +193,1208 @@ const ApplicationForm = () => {
     return isValid;
   };
 
-  const handleSubmit = (e) => {
+  // Function to validate a specific section
+  const validateSection = (sectionIndex) => {
+    let tempErrors = {};
+    let isValid = true;
+    
+    // Fields to validate for each section
+    const sectionFields = {
+      0: ['name', 'dob', 'gender', 'nationality', 'religion', 'community', 'motherTongue'],
+      1: ['parentName', 'relationship'],
+      2: ['address', 'pinCode', 'mobile', 'email'],
+      3: ['mpcMarks', 'mpcMaxMarks'],
+      4: ['branchPreference', 'admissionType'],
+      5: ['photo', 'parentSignature', 'applicantSignature']
+    };
+    
+    // Check required fields for this section
+    sectionFields[sectionIndex].forEach(field => {
+      if (['name', 'dob', 'gender', 'nationality', 'religion', 'community', 'motherTongue', 
+           'parentName', 'relationship', 'address', 'pinCode', 'mobile', 'email',
+           'mpcMarks', 'mpcMaxMarks', 'branchPreference', 'admissionType', 'photo',
+           'parentSignature', 'applicantSignature'].includes(field) && !formData[field]) {
+        tempErrors[field] = 'This field is required';
+        isValid = false;
+      }
+    });
+    
+    // Section-specific validations
+    if (sectionIndex === 2) {
+      // Email validation
+      if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) {
+        tempErrors.email = 'Please enter a valid email address';
+        isValid = false;
+      }
+      
+      // Mobile validation
+      if (formData.mobile && !/^\d{10}$/.test(formData.mobile)) {
+        tempErrors.mobile = 'Please enter a valid 10-digit mobile number';
+        isValid = false;
+      }
+      
+      // Pin code validation
+      if (formData.pinCode && !/^\d{6}$/.test(formData.pinCode)) {
+        tempErrors.pinCode = 'Please enter a valid 6-digit PIN code';
+        isValid = false;
+      }
+    }
+    
+    // Update errors state with the new errors
+    setErrors(prev => ({
+      ...prev,
+      ...tempErrors
+    }));
+    
+    return isValid;
+  };
+  
+  // Handle section navigation with validation
+  const handleNavigateSection = (nextIndex) => {
+    // If moving forward, validate current section first
+    if (nextIndex > activeSection) {
+      if (!validateSection(activeSection)) {
+        // Scroll to the first error in the section
+        const firstErrorField = document.querySelector('.form-error');
+        if (firstErrorField) {
+          firstErrorField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return; // Don't proceed if validation fails
+      }
+    }
+    
+    // If validation passes or moving backward, navigate to the next section
+    navigateSection(nextIndex);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log('Form submitted:', formData);
-      // Here you would typically send the data to a server
-      alert('Form submitted successfully!');
+      setIsSubmitting(true);
+      
+      try {
+        // Create JSON object for API submission
+        const jsonData = {
+          data: {
+            name: formData.name,
+            dob: formData.dob,
+            gender: formData.gender,
+            nationality: formData.nationality,
+            religion: formData.religion,
+            community: formData.community,
+            motherTongue: formData.motherTongue,
+            parent: formData.parentName,
+            relationship: formData.relationship,
+            address: formData.address,
+            pincode: formData.pinCode,
+            telephone: formData.telephone || '',
+            mobile: formData.mobile,
+            email: formData.email,
+            
+            // Educational Information
+            board10: formData.tenthBoard || '',
+            institution10: formData.tenthInstitution || '',
+            marks10: formData.tenthMarks || '',
+            maximumMarks10: formData.tenthMaxMarks || '',
+            percentage10: formData.tenthPercentage || '',
+            date10: formData.tenthPassingDate || '',
+            
+            board12: formData.twelfthBoard || '',
+            institution12: formData.twelfthInstitution || '',
+            marks12: formData.twelfthMarks || '',
+            maximumMarks12: formData.twelfthMaxMarks || '',
+            percentage12: formData.twelfthPercentage || '',
+            date12: formData.twelfthPassingDate || '',
+            
+            boardDiploma: formData.diplomaBoard || '',
+            institutionDiploma: formData.diplomaInstitution || '',
+            markDiploma: formData.diplomaMarks || '',
+            maximumMarksDiploma: formData.diplomaMaxMarks || '',
+            dateDiploma: formData.diplomaPassingDate || '',
+            
+            pcm: formData.mpcMarks,
+            maximumMarksPCM: formData.mpcMaxMarks,
+            
+            // Entrance & Preferences
+            entrance: formData.entranceExam || '',
+            regNo: formData.entranceRegNo || '',
+            rank: formData.entranceRank || '',
+            branchPrefered: formData.branchPreference,
+            admissionType: formData.admissionType
+          }
+        };
+        
+        console.log('Submitting JSON data:', jsonData);
+        
+        // Submit to API
+        try {
+          const response = await fetch('http://13.51.85.192:1337/api/btech-admissions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(jsonData)
+          });
+          
+          // Log the response status for debugging
+          console.log('Response status:', response.status);
+          
+          // Get response text first (safer than trying to parse JSON directly)
+          const responseText = await response.text();
+          console.log('Response text:', responseText);
+          
+          // Try to parse the response text as JSON if it's valid
+          let responseData;
+          try {
+            if (responseText) {
+              responseData = JSON.parse(responseText);
+              console.log('Response data:', responseData);
+            }
+          } catch (parseError) {
+            console.error('Error parsing response as JSON:', parseError);
+          }
+          
+          if (!response.ok) {
+            let errorMessage = 'Submission failed';
+            
+            // Use parsed JSON data if available, otherwise use text
+            if (responseData) {
+              errorMessage = responseData.error?.message || 
+                            responseData.message || 
+                            'API returned an error';
+            } else if (responseText) {
+              errorMessage = responseText;
+            }
+            
+            throw new Error(errorMessage);
+          }
+          
+          console.log('Form submitted successfully');
+          
+          // If we need to handle file uploads separately
+          if (formData.photo || formData.parentSignature || formData.applicantSignature) {
+            console.log('Files would need to be uploaded separately');
+            
+            // Uncomment and implement if you need to handle files separately
+            /*
+            // Get the ID of the created entry
+            const entryId = responseData.data.id;
+            await uploadFiles(entryId);
+            */
+          }
+          
+          setSubmitSuccess(true);
+        } catch (apiError) {
+          console.error('API error:', apiError);
+          throw apiError; // Re-throw to be caught by the outer catch block
+        }
+        
+      } catch (error) {
+        console.error('Submission error:', error);
+        
+        // Safely extract error message
+        let errorMessage = 'Failed to submit the form';
+        if (error instanceof Error) {
+          errorMessage = `${errorMessage}: ${error.message}`;
+        } else if (typeof error === 'object') {
+          try {
+            errorMessage = `${errorMessage}: ${JSON.stringify(error)}`;
+          } catch (e) {
+            errorMessage = `${errorMessage}: Unknown error object`;
+          }
+        }
+        
+        setErrors({
+          submit: errorMessage
+        });
+      } finally {
+        setIsSubmitting(false);
+      }
     } else {
-      console.log('Form has errors');
+      // Scroll to the first error
+      const firstErrorField = document.querySelector('.form-error');
+      if (firstErrorField) {
+        firstErrorField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
     }
   };
 
-  return (
-    <div className="form-container">
-      <h1 className="form-title">Application Form</h1>
+  const navigateSection = (index) => {
+    setActiveSection(index);
+    // Scroll to section
+    const sectionElement = document.getElementById(`section-${index}`);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
-      <form onSubmit={handleSubmit} className="form">
-        {/* Personal Information */}
-        <div className="form-section">
-          <h2 className="section-title">Personal Information</h2>
-         
-          <div className="form-grid">
-            <div className="form-group">
-              <label className="form-label">
-                Name of Applicant*
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="form-input"
-              />
-              {errors.name && <p className="error-message">{errors.name}</p>}
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Date of Birth*
-              </label>
-              <input
-                type="date"
-                name="dob"
-                value={formData.dob}
-                onChange={handleChange}
-                className="form-input"
-              />
-              {errors.dob && <p className="error-message">{errors.dob}</p>}
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Gender*
-              </label>
-              <div className="radio-group">
-                <label className="radio-label">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="male"
-                    checked={formData.gender === 'male'}
-                    onChange={handleChange}
-                    className="radio-input"
-                  />
-                  <span>Male</span>
-                </label>
-                <label className="radio-label">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="female"
-                    checked={formData.gender === 'female'}
-                    onChange={handleChange}
-                    className="radio-input"
-                  />
-                  <span>Female</span>
-                </label>
-              </div>
-              {errors.gender && <p className="error-message">{errors.gender}</p>}
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Nationality*
-              </label>
-              <input
-                type="text"
-                name="nationality"
-                value={formData.nationality}
-                onChange={handleChange}
-                className="form-input"
-              />
-              {errors.nationality && <p className="error-message">{errors.nationality}</p>}
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Religion*
-              </label>
-              <input
-                type="text"
-                name="religion"
-                value={formData.religion}
-                onChange={handleChange}
-                className="form-input"
-              />
-              {errors.religion && <p className="error-message">{errors.religion}</p>}
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Community*
-              </label>
-              <input
-                type="text"
-                name="community"
-                value={formData.community}
-                onChange={handleChange}
-                className="form-input"
-              />
-              {errors.community && <p className="error-message">{errors.community}</p>}
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Mother Tongue*
-              </label>
-              <input
-                type="text"
-                name="motherTongue"
-                value={formData.motherTongue}
-                onChange={handleChange}
-                className="form-input"
-              />
-              {errors.motherTongue && <p className="error-message">{errors.motherTongue}</p>}
-            </div>
+  // Helper function to determine if a section has errors
+  const sectionHasErrors = (sectionIndex) => {
+    const sectionFields = {
+      0: ['name', 'dob', 'gender', 'nationality', 'religion', 'community', 'motherTongue'],
+      1: ['parentName', 'relationship'],
+      2: ['address', 'pinCode', 'telephone', 'mobile', 'email'],
+      3: ['tenthBoard', 'tenthMarks', 'tenthMaxMarks', 'twelfthBoard', 'twelfthMarks', 'twelfthMaxMarks', 'diplomaBoard', 'diplomaMarks', 'diplomaMaxMarks', 'mpcMarks', 'mpcMaxMarks'],
+      4: ['entranceExam', 'entranceRegNo', 'entranceRank', 'branchPreference', 'admissionType'],
+      5: ['photo', 'parentSignature', 'applicantSignature']
+    };
+
+    return sectionFields[sectionIndex]?.some(field => errors[field]);
+  };
+
+  if (submitSuccess) {
+    return (
+      <div className="success-container">
+        <div className="success-card">
+          <div className="success-icon-container">
+            <svg className="success-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+            </svg>
           </div>
-        </div>
-       
-        {/* Guardian Information */}
-        <div className="form-section">
-          <h2 className="section-title">Guardian Information</h2>
-         
-          <div className="form-grid">
-            <div className="form-group">
-              <label className="form-label">
-                Name of Parent/Guardian*
-              </label>
-              <input
-                type="text"
-                name="parentName"
-                value={formData.parentName}
-                onChange={handleChange}
-                className="form-input"
-              />
-              {errors.parentName && <p className="error-message">{errors.parentName}</p>}
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Relationship with Guardian*
-              </label>
-              <input
-                type="text"
-                name="relationship"
-                value={formData.relationship}
-                onChange={handleChange}
-                className="form-input"
-              />
-              {errors.relationship && <p className="error-message">{errors.relationship}</p>}
-            </div>
-          </div>
-        </div>
-       
-        {/* Contact Information */}
-        <div className="form-section">
-          <h2 className="section-title">Contact Information</h2>
-         
-          <div className="form-grid">
-            <div className="form-group full-width">
-              <label className="form-label">
-                Address for Communication*
-              </label>
-              <textarea
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-                rows="3"
-                className="form-textarea"
-              ></textarea>
-              {errors.address && <p className="error-message">{errors.address}</p>}
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                PIN Code*
-              </label>
-              <input
-                type="text"
-                name="pinCode"
-                value={formData.pinCode}
-                onChange={handleChange}
-                className="form-input"
-              />
-              {errors.pinCode && <p className="error-message">{errors.pinCode}</p>}
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Telephone
-              </label>
-              <input
-                type="text"
-                name="telephone"
-                value={formData.telephone}
-                onChange={handleChange}
-                className="form-input"
-              />
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Mobile*
-              </label>
-              <input
-                type="text"
-                name="mobile"
-                value={formData.mobile}
-                onChange={handleChange}
-                className="form-input"
-              />
-              {errors.mobile && <p className="error-message">{errors.mobile}</p>}
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Email*
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="form-input"
-              />
-              {errors.email && <p className="error-message">{errors.email}</p>}
-            </div>
-          </div>
-        </div>
-       
-        {/* Educational Information */}
-        <div className="form-section">
-          <h2 className="section-title">Details of Mark/Grade Obtained in the Qualifying Exam</h2>
-         
-          <div className="education-section">
-            {/* 10th Grade */}
-            <div className="education-subsection">
-              <h3 className="subsection-title">10th Standard</h3>
-              <div className="education-grid">
-                <div className="form-group">
-                  <label className="form-label">
-                    Board of Examination
-                  </label>
-                  <input
-                    type="text"
-                    name="tenthBoard"
-                    value={formData.tenthBoard}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Name of Institution
-                  </label>
-                  <input
-                    type="text"
-                    name="tenthInstitution"
-                    value={formData.tenthInstitution}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Year and Month of Passing
-                  </label>
-                  <input
-                    type="month"
-                    name="tenthPassingDate"
-                    value={formData.tenthPassingDate}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Marks Obtained
-                  </label>
-                  <input
-                    type="number"
-                    name="tenthMarks"
-                    value={formData.tenthMarks}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Maximum Marks
-                  </label>
-                  <input
-                    type="number"
-                    name="tenthMaxMarks"
-                    value={formData.tenthMaxMarks}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Percentage of Marks
-                  </label>
-                  <input
-                    type="number"
-                    name="tenthPercentage"
-                    value={formData.tenthPercentage}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-              </div>
-            </div>
-           
-            {/* 12th Grade */}
-            <div className="education-subsection">
-              <h3 className="subsection-title">12th Standard</h3>
-              <div className="education-grid">
-                <div className="form-group">
-                  <label className="form-label">
-                    Board of Examination
-                  </label>
-                  <input
-                    type="text"
-                    name="twelfthBoard"
-                    value={formData.twelfthBoard}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Name of Institution
-                  </label>
-                  <input
-                    type="text"
-                    name="twelfthInstitution"
-                    value={formData.twelfthInstitution}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Year and Month of Passing
-                  </label>
-                  <input
-                    type="month"
-                    name="twelfthPassingDate"
-                    value={formData.twelfthPassingDate}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Marks Obtained
-                  </label>
-                  <input
-                    type="number"
-                    name="twelfthMarks"
-                    value={formData.twelfthMarks}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Maximum Marks
-                  </label>
-                  <input
-                    type="number"
-                    name="twelfthMaxMarks"
-                    value={formData.twelfthMaxMarks}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Percentage of Marks
-                  </label>
-                  <input
-                    type="number"
-                    name="twelfthPercentage"
-                    value={formData.twelfthPercentage}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-              </div>
-            </div>
-           
-            {/* Diploma */}
-            <div className="education-subsection">
-              <h3 className="subsection-title">Diploma</h3>
-              <div className="education-grid">
-                <div className="form-group">
-                  <label className="form-label">
-                    Board of Examination
-                  </label>
-                  <input
-                    type="text"
-                    name="diplomaBoard"
-                    value={formData.diplomaBoard}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Name of Institution
-                  </label>
-                  <input
-                    type="text"
-                    name="diplomaInstitution"
-                    value={formData.diplomaInstitution}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Year and Month of Passing
-                  </label>
-                  <input
-                    type="month"
-                    name="diplomaPassingDate"
-                    value={formData.diplomaPassingDate}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Marks Obtained
-                  </label>
-                  <input
-                    type="number"
-                    name="diplomaMarks"
-                    value={formData.diplomaMarks}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Maximum Marks
-                  </label>
-                  <input
-                    type="number"
-                    name="diplomaMaxMarks"
-                    value={formData.diplomaMaxMarks}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-               
-                <div className="form-group">
-                  <label className="form-label">
-                    Percentage of Marks
-                  </label>
-                  <input
-                    type="number"
-                    name="diplomaPercentage"
-                    value={formData.diplomaPercentage}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-       
-        {/* MPC Marks */}
-        <div className="form-section">
-          <h2 className="section-title">Marks Secured for Mathematics, Physics & Chemistry (put together)</h2>
-         
-          <div className="form-grid">
-            <div className="form-group">
-              <label className="form-label">
-                Total Mark Secured*
-              </label>
-              <input
-                type="number"
-                name="mpcMarks"
-                value={formData.mpcMarks}
-                onChange={handleChange}
-                className="form-input"
-              />
-              {errors.mpcMarks && <p className="error-message">{errors.mpcMarks}</p>}
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Out of*
-              </label>
-              <input
-                type="number"
-                name="mpcMaxMarks"
-                value={formData.mpcMaxMarks}
-                onChange={handleChange}
-                className="form-input"
-              />
-              {errors.mpcMaxMarks && <p className="error-message">{errors.mpcMaxMarks}</p>}
-            </div>
-          </div>
-        </div>
-       
-        {/* Entrance Examination */}
-        <div className="form-section">
-          <h2 className="section-title">Entrance Examination (Not applicable for NRI/OCI applicants)</h2>
-         
-          <div className="form-grid">
-            <div className="form-group">
-              <label className="form-label">
-                Name of Examination
-              </label>
-              <input
-                type="text"
-                name="entranceExam"
-                value={formData.entranceExam}
-                onChange={handleChange}
-                className="form-input"
-              />
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Register No
-              </label>
-              <input
-                type="text"
-                name="entranceRegNo"
-                value={formData.entranceRegNo}
-                onChange={handleChange}
-                className="form-input"
-              />
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Rank
-              </label>
-              <input
-                type="text"
-                name="entranceRank"
-                value={formData.entranceRank}
-                onChange={handleChange}
-                className="form-input"
-              />
-            </div>
-          </div>
-        </div>
-       
-        {/* Branch Preference */}
-        <div className="form-section">
-          <h2 className="section-title">Branch Preferred*</h2>
-         
-          <div className="branch-options">
-            {['Computer Science', 'Information Technology', 'Electronics', 'Electrical', 'Mechanical', 'Civil', 'Chemical', 'Biomedical', 'Aerospace'].map((branch) => (
-              <label key={branch} className="branch-option">
-                <input
-                  type="radio"
-                  name="branchPreference"
-                  value={branch}
-                  checked={formData.branchPreference === branch}
-                  onChange={handleChange}
-                  className="radio-input"
-                />
-                <span>{branch}</span>
-              </label>
-            ))}
-          </div>
-          {errors.branchPreference && <p className="error-message">{errors.branchPreference}</p>}
-        </div>
-       
-        {/* Admission Type */}
-        <div className="form-section">
-          <h2 className="section-title">Admission Sought Under*</h2>
-         
-          <div className="admission-options">
-            <label className="admission-option">
-              <input
-                type="radio"
-                name="admissionType"
-                value="Management"
-                checked={formData.admissionType === 'Management'}
-                onChange={handleChange}
-                className="radio-input"
-              />
-              <span>Management</span>
-            </label>
-           
-            <label className="admission-option">
-              <input
-                type="radio"
-                name="admissionType"
-                value="NRI/OCI"
-                checked={formData.admissionType === 'NRI/OCI'}
-                onChange={handleChange}
-                className="radio-input"
-              />
-              <span>NRI/OCI</span>
-            </label>
-          </div>
-          {errors.admissionType && <p className="error-message">{errors.admissionType}</p>}
-        </div>
-       
-        {/* Document Uploads */}
-        <div className="form-section">
-          <h2 className="section-title">Document Uploads</h2>
-         
-          <div className="form-grid">
-            <div className="form-group">
-              <label className="form-label">
-                Passport Size Photo*
-              </label>
-              <input
-                type="file"
-                name="photo"
-                accept="image/*"
-                onChange={handleFileChange}
-                className="file-input"
-              />
-              {errors.photo && <p className="error-message">{errors.photo}</p>}
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Signature of the Parent / Guardian*
-              </label>
-              <input
-                type="file"
-                name="parentSignature"
-                accept="image/*"
-                onChange={handleFileChange}
-                className="file-input"
-              />
-              {errors.parentSignature && <p className="error-message">{errors.parentSignature}</p>}
-            </div>
-           
-            <div className="form-group">
-              <label className="form-label">
-                Signature of Applicant*
-              </label>
-              <input
-                type="file"
-                name="applicantSignature"
-                accept="image/*"
-                onChange={handleFileChange}
-                className="file-input"
-              />
-              {errors.applicantSignature && <p className="error-message">{errors.applicantSignature}</p>}
-            </div>
-          </div>
-        </div>
-       
-        {/* Submit Button */}
-        <div className="submit-container">
-          <button
-            type="submit"
-            className="submit-button"
+          <h2 className="success-title">Application Submitted!</h2>
+          <p className="success-message">Your application has been successfully submitted. You will receive a confirmation email shortly.</p>
+          <button 
+            onClick={() => setSubmitSuccess(false)}
+            className="btn btn-primary"
           >
-            Submit Application
+            Submit Another Application
           </button>
         </div>
-      </form>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50 pb-12">
+      {/* Header */}
+      <div className="header">
+        <div className="container">
+          <h1>Application Form</h1>
+        </div>
+      </div>
+
+      {/* Form Progress */}
+      <div className="form-container py-8">
+        <div className="hidden sm:block mb-8">
+          <div className="form-progress">
+            {formSections.map((section, index) => (
+              <button
+                key={index}
+                onClick={() => navigateSection(index)}
+                className={`form-progress-step ${activeSection === index ? 'active' : ''} ${sectionHasErrors(index) ? 'has-error' : ''}`}
+              >
+                <div className="hidden md:block">{section}</div>
+                <div className="block md:hidden">
+                  {index + 1}
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <form onSubmit={handleSubmit} className="form">
+          {/* Personal Information */}
+          <div id="section-0" className={`form-section ${activeSection === 0 ? 'block' : 'hidden'}`}>
+            <div className="form-section-header">
+              <h2>Personal Information</h2>
+            </div>
+            
+            <div className="form-section-content">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="form-group">
+                  <label className="form-label" htmlFor="name">
+                    Name of Applicant*
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className={`form-input ${errors.name ? 'error' : ''}`}
+                    placeholder="Enter your full name"
+                  />
+                  {errors.name && <p className="form-error">{errors.name}</p>}
+                </div>
+                
+                <div className="form-group">
+                  <label className="form-label" htmlFor="dob">
+                    Date of Birth*
+                  </label>
+                  <input
+                    id="dob"
+                    type="date"
+                    name="dob"
+                    value={formData.dob}
+                    onChange={handleChange}
+                    className={`form-input ${errors.dob ? 'error' : ''}`}
+                  />
+                  {errors.dob && <p className="form-error">{errors.dob}</p>}
+                </div>
+                
+                <div className="form-group">
+                  <label className="form-label">
+                    Gender*
+                  </label>
+                  <div className="form-radio-group">
+                    <label className="form-radio-label">
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="male"
+                        checked={formData.gender === 'male'}
+                        onChange={handleChange}
+                        className="form-radio"
+                      />
+                      <span className="ml-2">Male</span>
+                    </label>
+                    <label className="form-radio-label">
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="female"
+                        checked={formData.gender === 'female'}
+                        onChange={handleChange}
+                        className="form-radio"
+                      />
+                      <span className="ml-2">Female</span>
+                    </label>
+                  </div>
+                  {errors.gender && <p className="form-error">{errors.gender}</p>}
+                </div>
+                
+                <div className="form-group">
+                  <label className="form-label" htmlFor="nationality">
+                    Nationality*
+                  </label>
+                  <input
+                    id="nationality"
+                    type="text"
+                    name="nationality"
+                    value={formData.nationality}
+                    onChange={handleChange}
+                    className={`form-input ${errors.nationality ? 'error' : ''}`}
+                    placeholder="Enter nationality"
+                  />
+                  {errors.nationality && <p className="form-error">{errors.nationality}</p>}
+                </div>
+                
+                <div className="form-group">
+                  <label className="form-label" htmlFor="religion">
+                    Religion*
+                  </label>
+                  <input
+                    id="religion"
+                    type="text"
+                    name="religion"
+                    value={formData.religion}
+                    onChange={handleChange}
+                    className={`form-input ${errors.religion ? 'error' : ''}`}
+                    placeholder="Enter religion"
+                  />
+                  {errors.religion && <p className="form-error">{errors.religion}</p>}
+                </div>
+                
+                <div className="form-group">
+                  <label className="form-label" htmlFor="community">
+                    Community*
+                  </label>
+                  <input
+                    id="community"
+                    type="text"
+                    name="community"
+                    value={formData.community}
+                    onChange={handleChange}
+                    className={`form-input ${errors.community ? 'error' : ''}`}
+                    placeholder="Enter community"
+                  />
+                  {errors.community && <p className="form-error">{errors.community}</p>}
+                </div>
+                
+                <div className="form-group">
+                  <label className="form-label" htmlFor="motherTongue">
+                    Mother Tongue*
+                  </label>
+                  <input
+                    id="motherTongue"
+                    type="text"
+                    name="motherTongue"
+                    value={formData.motherTongue}
+                    onChange={handleChange}
+                    className={`form-input ${errors.motherTongue ? 'error' : ''}`}
+                    placeholder="Enter mother tongue"
+                  />
+                  {errors.motherTongue && <p className="form-error">{errors.motherTongue}</p>}
+                </div>
+              </div>
+              
+              <div className="mt-8 flex justify-end">
+                <button
+                  type="button"
+                  onClick={() => handleNavigateSection(1)}
+                  className="btn btn-primary btn-icon-right"
+                >
+                  Next
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          {/* Guardian Information */}
+          <div id="section-1" className={`form-section ${activeSection === 1 ? 'block' : 'hidden'}`}>
+            <div className="form-section-header">
+              <h2>Guardian Information</h2>
+            </div>
+            
+            <div className="form-section-content">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="form-group">
+                  <label className="form-label" htmlFor="parentName">
+                    Name of Parent/Guardian*
+                  </label>
+                  <input
+                    id="parentName"
+                    type="text"
+                    name="parentName"
+                    value={formData.parentName}
+                    onChange={handleChange}
+                    className={`form-input ${errors.parentName ? 'error' : ''}`}
+                    placeholder="Enter parent/guardian name"
+                  />
+                  {errors.parentName && <p className="form-error">{errors.parentName}</p>}
+                </div>
+                
+                <div className="form-group">
+                  <label className="form-label" htmlFor="relationship">
+                    Relationship with Guardian*
+                  </label>
+                  <input
+                    id="relationship"
+                    type="text"
+                    name="relationship"
+                    value={formData.relationship}
+                    onChange={handleChange}
+                    className={`form-input ${errors.relationship ? 'error' : ''}`}
+                    placeholder="e.g. Father, Mother, Uncle"
+                  />
+                  {errors.relationship && <p className="form-error">{errors.relationship}</p>}
+                </div>
+              </div>
+              
+              <div className="mt-8 flex justify-between">
+                <button
+                  type="button"
+                  onClick={() => navigateSection(0)}
+                  className="btn btn-outline btn-icon-left"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+                  </svg>
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleNavigateSection(2)}
+                  className="btn btn-primary btn-icon-right"
+                >
+                  Next
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          {/* Contact Information */}
+          <div id="section-2" className={`form-section ${activeSection === 2 ? 'block' : 'hidden'}`}>
+            <div className="form-section-header">
+              <h2>Contact Information</h2>
+            </div>
+            
+            <div className="form-section-content">
+              <div className="form-group mb-6">
+                <label className="form-label" htmlFor="address">
+                  Address for Communication*
+                </label>
+                <textarea
+                  id="address"
+                  name="address"
+                  value={formData.address}
+                  onChange={handleChange}
+                  rows="3"
+                  className={`form-input ${errors.address ? 'error' : ''}`}
+                  placeholder="Enter your complete address"
+                ></textarea>
+                {errors.address && <p className="form-error">{errors.address}</p>}
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="form-group">
+                  <label className="form-label" htmlFor="pinCode">
+                    PIN Code*
+                  </label>
+                  <input
+                    id="pinCode"
+                    type="text"
+                    name="pinCode"
+                    value={formData.pinCode}
+                    onChange={handleChange}
+                    maxLength="6"
+                    className={`form-input ${errors.pinCode ? 'error' : ''}`}
+                    placeholder="Enter 6-digit PIN code"
+                  />
+                  {errors.pinCode && <p className="form-error">{errors.pinCode}</p>}
+                </div>
+                
+                <div className="form-group">
+                  <label className="form-label" htmlFor="telephone">
+                    Telephone
+                  </label>
+                  <input
+                    id="telephone"
+                    type="text"
+                    name="telephone"
+                    value={formData.telephone}
+                    onChange={handleChange}
+                    className="form-input"
+                    placeholder="Enter landline number (optional)"
+                  />
+                </div>
+                
+                <div className="form-group">
+                  <label className="form-label" htmlFor="mobile">
+                    Mobile*
+                  </label>
+                  <input
+                    id="mobile"
+                    type="text"
+                    name="mobile"
+                    value={formData.mobile}
+                    onChange={handleChange}
+                    maxLength="10"
+                    className={`form-input ${errors.mobile ? 'error' : ''}`}
+                    placeholder="Enter 10-digit mobile number"
+                  />
+                  {errors.mobile && <p className="form-error">{errors.mobile}</p>}
+                </div>
+                
+                <div className="form-group">
+                  <label className="form-label" htmlFor="email">
+                    Email*
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={`form-input ${errors.email ? 'error' : ''}`}
+                    placeholder="Enter email address"
+                  />
+                  {errors.email && <p className="form-error">{errors.email}</p>}
+                </div>
+              </div>
+              
+              <div className="mt-8 flex justify-between">
+                <button
+                  type="button"
+                  onClick={() => navigateSection(1)}
+                  className="btn btn-outline btn-icon-left"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+                  </svg>
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleNavigateSection(3)}
+                  className="btn btn-primary btn-icon-right"
+                >
+                  Next
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          {/* Educational Information */}
+          <div id="section-3" className={`form-section ${activeSection === 3 ? 'block' : 'hidden'}`}>
+            <div className="form-section-header">
+              <h2>Educational Information</h2>
+            </div>
+            
+            <div className="form-section-content">
+              {/* 10th Standard */}
+              <div className="mb-8">
+                <h3 className="form-section-title">10th Standard</h3>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="tenthBoard">
+                      Board of Examination
+                    </label>
+                    <input
+                      id="tenthBoard"
+                      type="text"
+                      name="tenthBoard"
+                      value={formData.tenthBoard}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="e.g. CBSE, State Board"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="tenthInstitution">
+                      Name of Institution
+                    </label>
+                    <input
+                      id="tenthInstitution"
+                      type="text"
+                      name="tenthInstitution"
+                      value={formData.tenthInstitution}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="Enter school name"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="tenthPassingDate">
+                      Year and Month of Passing
+                    </label>
+                    <input
+                      id="tenthPassingDate"
+                      type="month"
+                      name="tenthPassingDate"
+                      value={formData.tenthPassingDate}
+                      onChange={handleChange}
+                      className="form-input"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="tenthMarks">
+                      Marks Obtained
+                    </label>
+                    <input
+                      id="tenthMarks"
+                      type="number"
+                      name="tenthMarks"
+                      value={formData.tenthMarks}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="Enter marks obtained"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="tenthMaxMarks">
+                      Maximum Marks
+                    </label>
+                    <input
+                      id="tenthMaxMarks"
+                      type="number"
+                      name="tenthMaxMarks"
+                      value={formData.tenthMaxMarks}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="Enter maximum marks"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="tenthPercentage">
+                      Percentage of Marks
+                    </label>
+                    <input
+                      id="tenthPercentage"
+                      type="number"
+                      name="tenthPercentage"
+                      value={formData.tenthPercentage}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="Auto-calculated"
+                      disabled
+                    />
+                  </div>
+                </div>
+              </div>
+              
+              {/* 12th Standard */}
+              <div className="mb-8">
+                <h3 className="form-section-title">12th Standard</h3>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="twelfthBoard">
+                      Board of Examination
+                    </label>
+                    <input
+                      id="twelfthBoard"
+                      type="text"
+                      name="twelfthBoard"
+                      value={formData.twelfthBoard}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="e.g. CBSE, State Board"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="twelfthInstitution">
+                      Name of Institution
+                    </label>
+                    <input
+                      id="twelfthInstitution"
+                      type="text"
+                      name="twelfthInstitution"
+                      value={formData.twelfthInstitution}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="Enter school name"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="twelfthPassingDate">
+                      Year and Month of Passing
+                    </label>
+                    <input
+                      id="twelfthPassingDate"
+                      type="month"
+                      name="twelfthPassingDate"
+                      value={formData.twelfthPassingDate}
+                      onChange={handleChange}
+                      className="form-input"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="twelfthMarks">
+                      Marks Obtained
+                    </label>
+                    <input
+                      id="twelfthMarks"
+                      type="number"
+                      name="twelfthMarks"
+                      value={formData.twelfthMarks}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="Enter marks obtained"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="twelfthMaxMarks">
+                      Maximum Marks
+                    </label>
+                    <input
+                      id="twelfthMaxMarks"
+                      type="number"
+                      name="twelfthMaxMarks"
+                      value={formData.twelfthMaxMarks}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="Enter maximum marks"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="twelfthPercentage">
+                      Percentage of Marks
+                    </label>
+                    <input
+                      id="twelfthPercentage"
+                      type="number"
+                      name="twelfthPercentage"
+                      value={formData.twelfthPercentage}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="Auto-calculated"
+                      disabled
+                    />
+                  </div>
+                </div>
+              </div>
+              
+              {/* MPC Marks */}
+              <div className="mb-8">
+                <h3 className="form-section-title">Marks Secured for Mathematics, Physics & Chemistry</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="mpcMarks">
+                      Total Mark Secured*
+                    </label>
+                    <input
+                      id="mpcMarks"
+                      type="number"
+                      name="mpcMarks"
+                      value={formData.mpcMarks}
+                      onChange={handleChange}
+                      className={`form-input ${errors.mpcMarks ? 'error' : ''}`}
+                      placeholder="Enter total marks in PCM"
+                    />
+                    {errors.mpcMarks && <p className="form-error">{errors.mpcMarks}</p>}
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="mpcMaxMarks">
+                      Out of*
+                    </label>
+                    <input
+                      id="mpcMaxMarks"
+                      type="number"
+                      name="mpcMaxMarks"
+                      value={formData.mpcMaxMarks}
+                      onChange={handleChange}
+                      className={`form-input ${errors.mpcMaxMarks ? 'error' : ''}`}
+                      placeholder="Enter maximum possible marks"
+                    />
+                    {errors.mpcMaxMarks && <p className="form-error">{errors.mpcMaxMarks}</p>}
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 flex justify-between">
+                <button
+                  type="button"
+                  onClick={() => navigateSection(2)}
+                  className="btn btn-outline btn-icon-left"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+                  </svg>
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleNavigateSection(4)}
+                  className="btn btn-primary btn-icon-right"
+                >
+                  Next
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          {/* Entrance & Preferences */}
+          <div id="section-4" className={`form-section ${activeSection === 4 ? 'block' : 'hidden'}`}>
+            <div className="form-section-header">
+              <h2>Entrance Examination & Preferences</h2>
+            </div>
+            
+            <div className="form-section-content">
+              {/* Entrance Examination */}
+              <div className="mb-8">
+                <h3 className="form-section-title">Entrance Examination (Not applicable for NRI/OCI applicants)</h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="entranceExam">
+                      Name of Examination
+                    </label>
+                    <input
+                      id="entranceExam"
+                      type="text"
+                      name="entranceExam"
+                      value={formData.entranceExam}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="e.g. JEE Main, NEET"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="entranceRegNo">
+                      Register No
+                    </label>
+                    <input
+                      id="entranceRegNo"
+                      type="text"
+                      name="entranceRegNo"
+                      value={formData.entranceRegNo}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="Enter registration number"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="entranceRank">
+                      Rank
+                    </label>
+                    <input
+                      id="entranceRank"
+                      type="text"
+                      name="entranceRank"
+                      value={formData.entranceRank}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="Enter your rank"
+                    />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Branch Preferences */}
+              <div className="mb-8">
+                <h3 className="form-section-title">Branch Preferred*</h3>
+                <div className="form-check-group sm:grid-cols-2 md:grid-cols-3">
+                  {['Computer Science', 'Information Technology', 'Electronics', 'Electrical', 'Mechanical', 'Civil', 'Chemical', 'Biomedical', 'Aerospace'].map((branch) => (
+                    <label key={branch} className="form-check-label">
+                      <input
+                        type="radio"
+                        name="branchPreference"
+                        value={branch}
+                        checked={formData.branchPreference === branch}
+                        onChange={handleChange}
+                        className="form-radio"
+                      />
+                      <span className="ml-2">{branch}</span>
+                    </label>
+                  ))}
+                </div>
+                {errors.branchPreference && <p className="form-error mt-2">{errors.branchPreference}</p>}
+              </div>
+              
+              {/* Admission Type */}
+              <div className="mb-6">
+                <h3 className="form-section-title">Admission Sought Under*</h3>
+                <div className="flex flex-wrap gap-4">
+                  <label className="form-check-label">
+                    <input
+                      type="radio"
+                      name="admissionType"
+                      value="Management"
+                      checked={formData.admissionType === 'Management'}
+                      onChange={handleChange}
+                      className="form-radio"
+                    />
+                    <span className="ml-2">Management</span>
+                  </label>
+                  
+                  <label className="form-check-label">
+                    <input
+                      type="radio"
+                      name="admissionType"
+                      value="NRI/OCI"
+                      checked={formData.admissionType === 'NRI/OCI'}
+                      onChange={handleChange}
+                      className="form-radio"
+                    />
+                    <span className="ml-2">NRI/OCI</span>
+                  </label>
+                </div>
+                {errors.admissionType && <p className="form-error mt-2">{errors.admissionType}</p>}
+              </div>
+              
+              <div className="mt-8 flex justify-between">
+                <button
+                  type="button"
+                  onClick={() => navigateSection(3)}
+                  className="btn btn-outline btn-icon-left"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+                  </svg>
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleNavigateSection(5)}
+                  className="btn btn-primary btn-icon-right"
+                >
+                  Next
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          {/* Document Uploads */}
+          <div id="section-5" className={`form-section ${activeSection === 5 ? 'block' : 'hidden'}`}>
+            <div className="form-section-header">
+              <h2>Document Uploads</h2>
+            </div>
+            
+            <div className="form-section-content">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="form-group">
+                  <label className="form-label" htmlFor="photo">
+                    Passport Size Photo*
+                  </label>
+                  <div className={`file-upload ${errors.photo ? 'error' : ''}`}>
+                    <input
+                      id="photo"
+                      type="file"
+                      name="photo"
+                      accept="image/*"
+                      onChange={handleFileChange}
+                      className="file-upload-input"
+                    />
+                    <label htmlFor="photo" className="file-upload-label">
+                      <div className="flex flex-col items-center justify-center py-3">
+                        <svg className="file-upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <p className="text-sm text-gray-500 mb-1">Click to upload passport photo</p>
+                        <p className="text-xs text-gray-400">(Max size: 2MB)</p>
+                      </div>
+                    </label>
+                    {formData.photo && (
+                      <div className="file-preview">
+                        <p className="text-sm text-gray-700 mb-2">File selected: {formData.photo.name}</p>
+                        {formData.photoPreview && (
+                          <div className="photo-preview">
+                            <img 
+                              src={formData.photoPreview} 
+                              alt="Passport photo preview" 
+                              className="img-cover"
+                            />
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                  {errors.photo && <p className="form-error">{errors.photo}</p>}
+                </div>
+                
+                <div className="form-group">
+                  <label className="form-label" htmlFor="parentSignature">
+                    Signature of the Parent / Guardian*
+                  </label>
+                  <div className={`file-upload ${errors.parentSignature ? 'error' : ''}`}>
+                    <input
+                      id="parentSignature"
+                      type="file"
+                      name="parentSignature"
+                      accept="image/*"
+                      onChange={handleFileChange}
+                      className="file-upload-input"
+                    />
+                    <label htmlFor="parentSignature" className="file-upload-label">
+                      <div className="flex flex-col items-center justify-center py-3">
+                        <svg className="file-upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                        </svg>
+                        <p className="text-sm text-gray-500 mb-1">Click to upload parents signature</p>
+                        <p className="text-xs text-gray-400">(Max size: 2MB)</p>
+                      </div>
+                    </label>
+                    {formData.parentSignature && (
+                      <div className="file-preview">
+                        <p className="text-sm text-gray-700 mb-2">File selected: {formData.parentSignature.name}</p>
+                        {formData.parentSignaturePreview && (
+                          <div className="signature-preview">
+                            <img 
+                              src={formData.parentSignaturePreview} 
+                              alt="Parent signature preview" 
+                              className="img-contain"
+                            />
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                  {errors.parentSignature && <p className="form-error">{errors.parentSignature}</p>}
+                </div>
+                
+                <div className="form-group">
+                  <label className="form-label" htmlFor="applicantSignature">
+                    Signature of Applicant*
+                  </label>
+                  <div className={`file-upload ${errors.applicantSignature ? 'error' : ''}`}>
+                    <input
+                      id="applicantSignature"
+                      type="file"
+                      name="applicantSignature"
+                      accept="image/*"
+                      onChange={handleFileChange}
+                      className="file-upload-input"
+                    />
+                    <label htmlFor="applicantSignature" className="file-upload-label">
+                      <div className="flex flex-col items-center justify-center py-3">
+                        <svg className="file-upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                        </svg>
+                        <p className="text-sm text-gray-500 mb-1">Click to upload your signature</p>
+                        <p className="text-xs text-gray-400">(Max size: 2MB)</p>
+                      </div>
+                    </label>
+                    {formData.applicantSignature && (
+                      <div className="file-preview">
+                        <p className="text-sm text-gray-700 mb-2">File selected: {formData.applicantSignature.name}</p>
+                        {formData.applicantSignaturePreview && (
+                          <div className="signature-preview">
+                            <img 
+                              src={formData.applicantSignaturePreview} 
+                              alt="Applicant signature preview" 
+                              className="img-contain"
+                            />
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                  {errors.applicantSignature && <p className="form-error">{errors.applicantSignature}</p>}
+                </div>
+              </div>
+              
+              <div className="mt-8 flex justify-between">
+                <button
+                  type="button"
+                  onClick={() => navigateSection(4)}
+                  className="btn btn-outline btn-icon-left"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+                  </svg>
+                  Previous
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`btn btn-lg ${isSubmitting ? 'btn-disabled' : 'btn-primary'}`}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <svg className="spinner" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Processing...
+                    </>
+                  ) : (
+                    <>
+                      Submit Application
+                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </>
+                  )}
+                </button>
+              </div>
+              
+              {errors.submit && (
+                <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                  <p className="text-red-500">{errors.submit}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

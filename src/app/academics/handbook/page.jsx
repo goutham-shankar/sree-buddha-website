@@ -61,7 +61,10 @@ function HandbookPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </li>
-            <li className="text-amber-800 font-medium">Handbooks</li>
+            {/* <li className="">Handbooks</li>
+             */}
+             <li className="font-medium" style={{ color: "#845714" }}>Handbooks</li>
+
           </ol>
         </nav>
       </div>
@@ -73,7 +76,7 @@ function HandbookPage() {
 
           {/* Content section */}
           <div className="p-6 md:p-10">
-            <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mb-4">HANDBOOKS</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mb-4"  style={{ color: "#845714" }}>HANDBOOKS</h1>
             <div className="w-16 h-1 bg-amber-800 mb-6"></div>
             
             <p className="text-gray-600 mb-8">
