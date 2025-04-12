@@ -353,21 +353,7 @@ const AlumniReportsPage = () => {
         </div>
       </main>
       
-      {/* Call to Action Section */}
-      <div className="bg-amber-800 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Join Our Alumni Network</h2>
-            <p className="text-amber-100 mb-6">Stay connected with your alma mater and fellow alumni</p>
-            <a 
-              href="#" 
-              className="inline-block bg-white text-amber-800 px-6 py-3 rounded-lg font-medium hover:bg-amber-100 transition-colors"
-            >
-              Register Now
-            </a>
-          </div>
-        </div>
-      </div>
+     
       
       {/* Footer would go here */}
     </div>

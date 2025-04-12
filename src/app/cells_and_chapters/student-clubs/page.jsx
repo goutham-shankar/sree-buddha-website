@@ -1,51 +1,62 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-import { Users, Award, BookOpen, Calendar, FileText } from 'lucide-react';
+import { FileText, Download } from 'lucide-react';
 
 export default function StudentClubs() {
-  // Committee data with more structured information
+  // Committee data with PDF links
   const committees = [
     {
       id: 1,
-      icon: <BookOpen className="w-10 h-10 text-yellow-800" />,
-      title: "Academic Excellence Committee",
-      description: "Promoting academic standards and educational innovation across departments with focus on interdisciplinary collaboration and research opportunities."
+      title: "Committee Page 1",
+      pdf: "/pdfs/Committees-pages-1.pdf"
     },
     {
       id: 2,
-      icon: <Users className="w-10 h-10 text-yellow-800" />,
-      title: "Student Development Council",
-      description: "Fostering leadership skills and personal growth through diverse activities, workshops, and mentorship programs designed to enhance student success."
+      title: "Committee Page 2",
+      pdf: "/pdfs/Committees-pages-2.pdf"
     },
     {
       id: 3,
-      icon: <Calendar className="w-10 h-10 text-yellow-800" />,
-      title: "Cultural & Events Committee",
-      description: "Organizing campus events and celebrating cultural diversity through festivals, performances, and inclusive community gatherings throughout the academic year."
+      title: "Committee Page 3",
+      pdf: "/pdfs/Committees-pages-3.pdf"
     },
     {
       id: 4,
-      icon: <Award className="w-10 h-10 text-yellow-800" />,
-      title: "Research & Innovation Cell",
-      description: "Supporting student research initiatives and innovative projects with guidance from faculty mentors and access to specialized resources and funding."
+      title: "Committee Page 4",
+      pdf: "/pdfs/Committees-pages-4.pdf"
+    },
+    {
+      id: 5,
+      title: "Committee Page 5",
+      pdf: "/pdfs/Committees-pages-5.pdf"
+    },
+    {
+      id: 6,
+      title: "Committee Page 6",
+      pdf: "/pdfs/Committees-pages-6.pdf"
+    },
+    {
+      id: 7,
+      title: "Committee Page 7",
+      pdf: "/pdfs/Committees-pages-7.pdf"
+    },
+    {
+      id: 8,
+      title: "Committee Page 8",
+      pdf: "/pdfs/Committees-pages-8.pdf"
     }
   ];
-
-  // Function to handle PDF redirection
-  const handlePdfClick = (url) => {
-    window.open(url, '_blank');
-  };
 
   return (
     <div className="mx-auto px-4 md:px-8 py-8 max-w-6xl">
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
         {/* Header section with title */}
         <div className="bg-gradient-to-r from-yellow-700 to-amber-500 p-6 md:p-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">Various Cells & Committees</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">Various Committees</h1>
           <div className="h-1 w-20 bg-white opacity-70 mb-4"></div>
           <p className="text-white text-lg opacity-90">
-            Student-led initiatives driving campus excellence and community engagement
+            Download committee information and guidelines
           </p>
         </div>
         
@@ -53,76 +64,42 @@ export default function StudentClubs() {
           {/* Main description */}
           <div className="mb-8 text-gray-700 text-lg leading-relaxed">
             <p>
-              Our institution prides itself on diverse student-led committees that foster leadership, innovation, and community engagement. 
-              These committees provide valuable opportunities for students to develop professional skills while contributing to our campus culture and academic excellence.
+              Access detailed information about various committees through the downloadable PDF documents below.
+              Each document contains comprehensive information about the respective committee's structure, guidelines, and activities.
             </p>
           </div>
           
           {/* Committees grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             {committees.map((committee) => (
               <div 
                 key={committee.id} 
-                className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow duration-300 cursor-pointer"
-                onClick={() => handlePdfClick(`/assets/documents/various%20committee/ORIGINAL-DOC${committee.id <= 2 ? committee.id : (committee.id % 2) + 1}.pdf`)}
+                className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow duration-300"
               >
-                <div className="flex items-start">
-                  <div className="mr-4 mt-1">{committee.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">{committee.title}</h3>
-                    <p className="text-gray-600">{committee.description}</p>
-                  </div>
+                <div className="flex flex-col items-center text-center">
+                  <FileText className="w-12 h-12 text-yellow-800 mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">{committee.title}</h3>
+                  <Link 
+                    href={committee.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-yellow-800 hover:bg-yellow-900 text-white font-medium py-2 px-4 rounded flex items-center justify-center transition-colors duration-300"
+                  >
+                    <Download className="mr-2 h-5 w-5" />
+                    Download PDF
+                  </Link>
                 </div>
               </div>
             ))}
           </div>
           
-          {/* Meeting Information */}
-          <div className="bg-amber-50 rounded-lg p-6 mb-8 border-l-4 border-yellow-800">
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">Committee Information</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h4 className="font-medium text-gray-700 mb-2">Meeting Schedule</h4>
-                <ul className="space-y-1 text-gray-600">
-                  <li>Academic Excellence: Every Monday, 4:00 PM</li>
-                  <li>Student Development: Every Tuesday, 3:30 PM</li>
-                  <li>Cultural & Events: Every Wednesday, 5:00 PM</li>
-                  <li>Research & Innovation: Bi-weekly Fridays, 2:00 PM</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-700 mb-2">Locations</h4>
-                <ul className="space-y-1 text-gray-600">
-                  <li>Student Center, Room 203</li>
-                  <li>Administration Building, Conference Room B</li>
-                  <li>Liberal Arts Building, Room 105</li>
-                  <li>Science Block, Innovation Lab</li>
-                </ul>
-              </div>
-            </div>
-          </div>
           
-          {/* Download section */}
-          <div className="bg-gray-50 rounded-lg p-6 flex flex-col md:flex-row justify-between items-center">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Committee Guidelines & Applications</h3>
-              <p className="text-gray-600">Download our comprehensive guide to committees and information on how to join.</p>
-            </div>
-            <Link 
-              href="/assets/documents/various%20committee/guidelines.pdf" 
-              target="_blank"
-              className="mt-4 md:mt-0 bg-yellow-800 hover:bg-yellow-900 text-white font-medium py-3 px-6 rounded-md flex items-center transition-colors duration-300"
-            >
-              <FileText className="mr-2 h-5 w-5" />
-              Download Guide
-            </Link>
-          </div>
           
-          {/* Join section */}
+          {/* Contact section */}
           <div className="mt-10 text-center">
-            <h3 className="text-lg font-medium text-gray-700 mb-2">Interested in Joining?</h3>
+            <h3 className="text-lg font-medium text-gray-700 mb-2">Need Help?</h3>
             <p className="text-gray-600">
-              Contact the Student Activities Office at <a href="mailto:student.activities@college.edu" className="text-yellow-800 hover:underline">student.activities@college.edu</a> or visit Room 101 in the Student Center.
+              For any queries regarding the committees or documents, please contact the administration office.
             </p>
           </div>
         </div>

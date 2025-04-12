@@ -53,29 +53,28 @@ export default function IEEEPage() {
   // Committee Members
   const committeeMembers = [
     {
-      position: "Faculty Advisor",
-      name: "Dr. Sarah Johnson",
-      department: "Electronics & Communication Engineering"
+      position: "Branch Counselor",
+      name: "Prof. Ananthu Vijayakumar",
+      department: "Electronics & Communication Engineering",
+      contact: "+91 94953 14374"
     },
     {
       position: "Chairperson",
-      name: "Ananya Patel",
-      department: "Computer Science, Final Year"
-    },
-    {
-      position: "Vice Chairperson",
-      name: "Rahul Sharma",
-      department: "Electrical Engineering, Final Year"
+      name: "Adithya P Nair",
+      department: "Computer Science",
+      contact: "+91 7306404050"
     },
     {
       position: "Secretary",
-      name: "Michael Chen",
-      department: "Information Technology, Third Year"
+      name: "Febin",
+      department: "Electronics & Communication Engineering",
+      contact: "+91 7736609677"
     },
     {
       position: "Treasurer",
-      name: "Priya Desai",
-      department: "Computer Science, Third Year"
+      name: "Anshuman Biju",
+      department: "Computer Science",
+      contact: "+91 9895268544"
     }
   ];
 
@@ -156,6 +155,7 @@ export default function IEEEPage() {
                     <th className="py-3 px-6 text-left text-sm font-semibold text-gray-700">Position</th>
                     <th className="py-3 px-6 text-left text-sm font-semibold text-gray-700">Name</th>
                     <th className="py-3 px-6 text-left text-sm font-semibold text-gray-700">Department</th>
+                    <th className="py-3 px-6 text-left text-sm font-semibold text-gray-700">Contact</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
@@ -164,6 +164,11 @@ export default function IEEEPage() {
                       <td className="py-3 px-6 text-sm text-gray-700">{member.position}</td>
                       <td className="py-3 px-6 text-sm font-medium text-gray-900">{member.name}</td>
                       <td className="py-3 px-6 text-sm text-gray-700">{member.department}</td>
+                      <td className="py-3 px-6 text-sm text-gray-700">
+                        <a href={`tel:${member.contact}`} className="text-yellow-800 hover:text-yellow-900">
+                          {member.contact}
+                        </a>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -171,61 +176,7 @@ export default function IEEEPage() {
             </div>
           </div>
           
-          {/* Upcoming Events */}
-          <div className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Upcoming Events</h2>
-            <div className="space-y-4">
-              {upcomingEvents.map((event, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-sm transition-shadow duration-300">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between">
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">{event.title}</h3>
-                      <div className="flex items-center text-gray-600 mb-1">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        <span>{event.date} | {event.time}</span>
-                      </div>
-                      <div className="flex items-center text-gray-600">
-                        <Globe className="w-4 h-4 mr-2" />
-                        <span>{event.location}</span>
-                      </div>
-                    </div>
-                    <Link 
-                      href="#"
-                      className="mt-4 md:mt-0 bg-yellow-800 hover:bg-yellow-900 text-white font-medium py-2 px-4 rounded flex items-center justify-center transition-colors duration-300 text-sm"
-                    >
-                      Register Now
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
           
-          {/* Download & Resources section */}
-          <div className="bg-gray-50 rounded-lg p-6 flex flex-col md:flex-row justify-between items-center mb-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">IEEE Resources</h3>
-              <p className="text-gray-600">Download our IEEE Student Branch handbook and membership guide.</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3 mt-4 md:mt-0">
-              <Link 
-                href="/assets/documents/ieee/handbook.pdf" 
-                target="_blank"
-                className="bg-yellow-800 hover:bg-yellow-900 text-white font-medium py-2 px-4 rounded flex items-center justify-center transition-colors duration-300"
-              >
-                <FileText className="mr-2 h-4 w-4" />
-                Branch Handbook
-              </Link>
-              <Link 
-                href="/assets/documents/ieee/membership.pdf" 
-                target="_blank"
-                className="bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded flex items-center justify-center transition-colors duration-300"
-              >
-                <Book className="mr-2 h-4 w-4" />
-                Membership Guide
-              </Link>
-            </div>
-          </div>
           
           {/* Join section */}
           <div className="text-center bg-amber-50 rounded-lg p-8 mb-6">
@@ -235,7 +186,9 @@ export default function IEEEPage() {
               networking opportunities, and professional development that will enhance your academic journey.
             </p>
             <Link 
-              href="/membership-form"
+              href="https://www.ieee.org/membership/join/index.html?WT.mc_id=hc_join"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-yellow-800 hover:bg-yellow-900 text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 inline-flex items-center"
             >
               <Users className="mr-2 h-5 w-5" />

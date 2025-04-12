@@ -245,7 +245,7 @@ export default function NSS() {
             </div>
           </div>
           
-          {/* Upcoming Events */}
+          {/* Upcoming Events
           <div className="mb-10">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">Upcoming Events</h2>
             <div className="space-y-4">
@@ -277,7 +277,7 @@ export default function NSS() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
           
           {/* Photo Gallery */}
           <div className="mb-10">
@@ -304,7 +304,7 @@ export default function NSS() {
             </div>
           </div>
           
-          {/* Join section */}
+          {/* Join section
           <div className="text-center bg-amber-50 rounded-lg p-8 mb-6">
             <h3 className="text-2xl font-bold text-gray-800 mb-3">Join NSS Unit</h3>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
@@ -318,7 +318,7 @@ export default function NSS() {
               <Users className="mr-2 h-5 w-5" />
               Register as NSS Volunteer
             </Link>
-          </div>
+          </div> */}
           
           {/* Contact section */}
           <div className="mt-10 text-center">

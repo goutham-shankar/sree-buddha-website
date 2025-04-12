@@ -288,28 +288,158 @@ export default function SAE() {
             <div>
               <h2 className="text-2xl font-bold text-gray-800 mb-6">Lecture Meetings</h2>
               
-              {lectures.map((lecture, index) => (
-                <div key={index} className="mb-8 bg-gray-50 rounded-lg p-6 hover:shadow-sm transition-shadow duration-300">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">{lecture.title}</h3>
-                  <div className="flex items-center text-gray-600 mb-4">
-                    <Users className="w-4 h-4 mr-2" />
-                    <span className="font-medium">{lecture.speaker}</span>
-                    <span className="mx-2">•</span>
-                    <span>{lecture.position}</span>
+              {/* Lecture Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Bharat Stage VI Emission Norms */}
+                <div className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    <span>March 15, 2023</span>
                   </div>
-                  <p className="text-gray-700 mb-4 font-medium">{lecture.description}</p>
-                  <p className="text-gray-700">{lecture.content}</p>
-                  {index === 1 && (
-                    <div className="mt-6 rounded-lg overflow-hidden shadow-sm">
-                      <img 
-                        src="/assets/images/cells-chapters/sae-img3.png" 
-                        alt={`${lecture.title} Lecture`}
-                        className="w-full h-auto" 
-                      />
-                    </div>
-                  )}
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Bharat Stage VI Emission Norms</h3>
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Users className="w-4 h-4 mr-2" />
+                    <span className="font-medium">Shri B Sreenivasan</span>
+                    <span className="mx-2">•</span>
+                    <span>General Manager, R&D, UCAL fuel systems</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    The most important problem we are facing nowadays is the pollution from vehicles due to emission of various gases such as CO, HC and NOx. So in order to reduce the emissions automotive sector must focus on making engines with less pollutant. For that research and experimentation are now going live to reach the task of making BS VI in 2020 as per the governments initiative.
+                  </p>
+                  <div className="mt-4">
+                    <img 
+                      src="/assets/images/cells-chapters/sae-img1.png" 
+                      alt="BS VI Emission Norms Lecture" 
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
                 </div>
-              ))}
+
+                {/* Green Fuels */}
+                <div className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    <span>April 5, 2023</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Green Fuels</h3>
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Users className="w-4 h-4 mr-2" />
+                    <span className="font-medium">Dr. E. Rajasekar</span>
+                    <span className="mx-2">•</span>
+                    <span>Secretary, SAEINDIA</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Comparing each fuel and its efficiency only hydrogen (67.7% efficient) can give a best solution to replace petroleum fuels (83.3%). Hydrogen gas is non polluting, renewable and cheaper in near future but its storage and low power production is a big challenge to achieve.
+                  </p>
+                  <div className="mt-4">
+                    <img 
+                      src="/assets/images/cells-chapters/sae-img3.png" 
+                      alt="Green Fuels Lecture" 
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                </div>
+
+                {/* Electric Vehicle Technology */}
+                <div className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    <span>May 20, 2023</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Electric Vehicle Technology</h3>
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Users className="w-4 h-4 mr-2" />
+                    <span className="font-medium">Dr. Ramesh Kumar</span>
+                    <span className="mx-2">•</span>
+                    <span>Senior Research Scientist, EV Division</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Comprehensive overview of electric vehicle technology, including battery systems, power electronics, and charging infrastructure. Discussion on the future of electric mobility in India and global trends in EV development.
+                  </p>
+                  <div className="mt-4">
+                    <img 
+                      src="/assets/images/cells-chapters/sae-img2.png" 
+                      alt="EV Technology Lecture" 
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                </div>
+
+                {/* Automotive Safety Systems */}
+                <div className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    <span>June 10, 2023</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Automotive Safety Systems</h3>
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Users className="w-4 h-4 mr-2" />
+                    <span className="font-medium">Ms. Priya Sharma</span>
+                    <span className="mx-2">•</span>
+                    <span>Safety Engineer, Automotive Research</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Detailed discussion on modern automotive safety systems including ADAS, crash avoidance technologies, and passive safety features. Case studies on real-world applications and future developments in vehicle safety.
+                  </p>
+                  <div className="mt-4">
+                    <img 
+                      src="/assets/images/cells-chapters/sae-img4.png" 
+                      alt="Safety Systems Lecture" 
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                </div>
+
+                {/* Sustainable Manufacturing */}
+                <div className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    <span>July 5, 2023</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Sustainable Manufacturing</h3>
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Users className="w-4 h-4 mr-2" />
+                    <span className="font-medium">Prof. Arun Kumar</span>
+                    <span className="mx-2">•</span>
+                    <span>Head of Manufacturing Department</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Exploration of sustainable manufacturing practices in the automotive industry, including green materials, energy-efficient processes, and waste reduction strategies. Focus on implementing sustainable practices in Indian manufacturing units.
+                  </p>
+                  <div className="mt-4">
+                    <img 
+                      src="/assets/images/cells-chapters/sae-img5.png" 
+                      alt="Sustainable Manufacturing Lecture" 
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                </div>
+
+                {/* Future of Mobility */}
+                <div className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    <span>August 15, 2023</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Future of Mobility</h3>
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Users className="w-4 h-4 mr-2" />
+                    <span className="font-medium">Dr. Sanjay Patel</span>
+                    <span className="mx-2">•</span>
+                    <span>Director, Mobility Research Center</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Visionary discussion on the future of transportation, including autonomous vehicles, connected mobility, and smart transportation systems. Analysis of emerging technologies and their potential impact on urban mobility.
+                  </p>
+                  <div className="mt-4">
+                    <img 
+                      src="/assets/images/cells-chapters/sae-img1.png" 
+                      alt="Future of Mobility Lecture" 
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           )}
           
@@ -318,53 +448,144 @@ export default function SAE() {
             <div>
               <h2 className="text-2xl font-bold text-gray-800 mb-6">Events & Competitions</h2>
               
+              {/* Student Convention 2018 */}
               <div className="mb-8">
                 <div className="flex items-center mb-4">
                   <h3 className="text-xl font-semibold text-gray-800">Student Convention 2018</h3>
                   <div className="h-1 w-full ml-4 bg-gray-200"></div>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-6">
-                  <p className="text-gray-700 mb-6">
-                    Every year SAEINDIA Southern Section Conducts Student Convention. As a part of Student Convention 2018 
-                    Tier-1 Competition were conducted by SAEINIDA Sree Buddha collegiate club in Association with Department 
-                    of Mechanical Engineering. Out of 35 competitions proposed by SAEISS, 10 of them were conducted at Sree Buddha. 
-                    The students who got first and second positions participated in Tier-2 events, which was held at Saintgits 
-                    College of Engineering, Kottayam. The tier-3 events were conducted at MLR Institute of Technology, Hyderabad. 
-                    Six of our students got various prizes in the national level.
-                  </p>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div className="rounded-lg overflow-hidden shadow-md">
-                      <img 
-                        src="/assets/images/cells-chapters/sae-img4.png" 
-                        alt="Student Convention 2018" 
-                        className="w-full h-auto"
-                      />
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="md:w-2/3">
+                      <p className="text-gray-700 mb-6">
+                        Every year SAEINDIA Southern Section Conducts Student Convention. As a part of Student Convention 2018 
+                        Tier-1 Competition were conducted by SAEINIDA Sree Buddha collegiate club in Association with Department 
+                        of Mechanical Engineering. Out of 35 competitions proposed by SAEISS, 10 of them were conducted at Sree Buddha. 
+                        The students who got first and second positions participated in Tier-2 events, which was held at Saintgits 
+                        College of Engineering, Kottayam. The tier-3 events were conducted at MLR Institute of Technology, Hyderabad. 
+                        Six of our students got various prizes in the national level.
+                      </p>
                     </div>
-                    <div className="rounded-lg overflow-hidden shadow-md">
-                      <img 
-                        src="/assets/images/cells-chapters/sae-img5.png" 
-                        alt="Student Convention 2018 Winners" 
-                        className="w-full h-auto"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="mt-8">
-                    <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
-                      <Video className="w-5 h-5 mr-2 text-yellow-800" />
-                      Video Highlights
-                    </h4>
-                    <div className="rounded-lg overflow-hidden shadow-lg">
-                      <video controls width="100%" className="w-full">
-                        <source src="/assets/images/cells-chapters/sae.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
+                    <div className="md:w-1/3">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="rounded-lg overflow-hidden shadow-md">
+                          <img 
+                            src="/assets/images/cells-chapters/sae-img4.png" 
+                            alt="Student Convention 2018" 
+                            className="w-full h-auto"
+                          />
+                        </div>
+                        <div className="rounded-lg overflow-hidden shadow-md">
+                          <img 
+                            src="/assets/images/cells-chapters/sae-img5.png" 
+                            alt="Student Convention 2018 Winners" 
+                            className="w-full h-auto"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
+              {/* Electric Vehicle Prototyping Workshop */}
+              <div className="mb-8">
+                <div className="flex items-center mb-4">
+                  <h3 className="text-xl font-semibold text-gray-800">Electric Vehicle Prototyping Workshop</h3>
+                  <div className="h-1 w-full ml-4 bg-gray-200"></div>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-6">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="md:w-2/3">
+                      <div className="flex items-center text-gray-600 mb-3">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        <span>March 30, 2023</span>
+                      </div>
+                      <p className="text-gray-700 mb-4">
+                        Department of Mechanical Engineering and SAEINDIA conducted a workshop on Electric Vehicle Prototyping. 
+                        Mr A Armstrong, Principal Member R&D TAFE Tractors and Farm Equipment Limited, Chennai delivered the expert session. 
+                        The workshop covered practical aspects of EV design and development, including battery management systems, 
+                        motor control, and vehicle dynamics.
+                      </p>
+                    </div>
+                    <div className="md:w-1/3">
+                      <div className="rounded-lg overflow-hidden shadow-md">
+                        <img 
+                          src="/assets/images/cells-chapters/sae-img1.png" 
+                          alt="Electric Vehicle Workshop" 
+                          className="w-full h-auto"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Go-Kart Design Competition */}
+              <div className="mb-8">
+                <div className="flex items-center mb-4">
+                  <h3 className="text-xl font-semibold text-gray-800">Go-Kart Design Competition</h3>
+                  <div className="h-1 w-full ml-4 bg-gray-200"></div>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-6">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="md:w-2/3">
+                      <div className="flex items-center text-gray-600 mb-3">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        <span>April 15, 2023</span>
+                      </div>
+                      <p className="text-gray-700 mb-4">
+                        The Go-Kart Design Competition was organized to encourage students to design and build their own go-karts. 
+                        Teams were evaluated based on design innovation, safety features, and performance. The competition provided 
+                        hands-on experience in vehicle design and manufacturing processes.
+                      </p>
+                    </div>
+                    <div className="md:w-1/3">
+                      <div className="rounded-lg overflow-hidden shadow-md">
+                        <img 
+                          src="/assets/images/cells-chapters/sae-img2.png" 
+                          alt="Go-Kart Competition" 
+                          className="w-full h-auto"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Technical Paper Presentation */}
+              <div className="mb-8">
+                <div className="flex items-center mb-4">
+                  <h3 className="text-xl font-semibold text-gray-800">Technical Paper Presentation</h3>
+                  <div className="h-1 w-full ml-4 bg-gray-200"></div>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-6">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="md:w-2/3">
+                      <div className="flex items-center text-gray-600 mb-3">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        <span>May 10, 2023</span>
+                      </div>
+                      <p className="text-gray-700 mb-4">
+                        The Technical Paper Presentation competition provided a platform for students to present their research 
+                        and innovative ideas in automotive engineering. Topics covered included alternative fuels, vehicle safety, 
+                        and sustainable transportation solutions. The event helped students develop their presentation skills and 
+                        technical knowledge.
+                      </p>
+                    </div>
+                    <div className="md:w-1/3">
+                      <div className="rounded-lg overflow-hidden shadow-md">
+                        <img 
+                          src="/assets/images/cells-chapters/sae-img3.png" 
+                          alt="Technical Paper Presentation" 
+                          className="w-full h-auto"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* Competition Tiers */}
               <div className="mb-10">
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">Competition Structure</h3>

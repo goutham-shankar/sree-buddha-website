@@ -29,10 +29,12 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* Campus Recruitment */}
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md transition-transform hover:shadow-lg">
-              <div className="relative h-64 overflow-hidden bg-gray-200">
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                  Campus Recruitment Image
-                </div>
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src="/images/college-main.jpg"
+                  alt="Sree Buddha College Main Building"
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute top-0 left-0 bg-amber-800 text-white px-4 py-2 rounded-br-lg">
                   Campus Recruitment
                 </div>
@@ -53,17 +55,27 @@ export default function Page() {
                     <span>State-of-the-art interview facilities</span>
                   </li>
                 </ul>
-                <button className="mt-4 bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md transition-colors">
-                  View Schedule
-                </button>
               </div>
             </div>
 
             {/* Recruiting Companies */}
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md transition-transform hover:shadow-lg">
-              <div className="relative h-64 overflow-hidden bg-gray-200">
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                  Recruiting Companies Image
+              <div className="relative h-64 overflow-hidden bg-white p-4">
+                <div className="grid grid-cols-4 gap-4 h-full">
+                  <img src="/images/logos/tcs.jpg" alt="TCS" className="w-full h-12 object-contain" />
+                  <img src="/images/logos/info.jpg" alt="Infosys" className="w-full h-12 object-contain" />
+                  <img src="/images/logos/UST.jpg" alt="UST" className="w-full h-12 object-contain" />
+                  <img src="/images/logos/Accenture.jpg" alt="Accenture" className="w-full h-12 object-contain" />
+                  
+                  <img src="/images/logos/ibs.jpg" alt="IBS" className="w-full h-12 object-contain" />
+                  <img src="/images/logos/Infosis.jpg" alt="Infosys" className="w-full h-12 object-contain" />
+                  <img src="/images/logos/MRF.jpg" alt="MRF" className="w-full h-12 object-contain" />
+                  <img src="/images/logos/Omnex.jpg" alt="Omnex" className="w-full h-12 object-contain" />
+                  
+                  <img src="/images/logos/sap.jpg" alt="SAP" className="w-full h-12 object-contain" />
+                  <img src="/images/logos/SLK.jpg" alt="SLK" className="w-full h-12 object-contain" />
+                  <img src="/images/logos/Speridian.jpg" alt="Speridian" className="w-full h-12 object-contain" />
+                  <img src="/images/logos/sutherland.jpg" alt="Sutherland" className="w-full h-12 object-contain" />
                 </div>
                 <div className="absolute top-0 left-0 bg-amber-600 text-white px-4 py-2 rounded-br-lg">
                   Our Recruiters
@@ -85,15 +97,12 @@ export default function Page() {
                     <span>Diverse sectors from IT to consulting</span>
                   </li>
                 </ul>
-                <button className="mt-4 bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md transition-colors">
-                  View Companies
-                </button>
               </div>
             </div>
           </div>
 
-          {/* Placement highlights section */}
-          <div className="mb-12">
+      
+          {/* <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">Placement Highlights</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="flex items-start p-4 bg-gray-50 rounded-lg">
@@ -106,7 +115,7 @@ export default function Page() {
                 </div>
               </div>
               {/* Highlight 2 */}
-              <div className="flex items-start p-4 bg-gray-50 rounded-lg">
+              {/* <div className="flex items-start p-4 bg-gray-50 rounded-lg">
                 <div className="mr-4 bg-amber-50 p-3 rounded-full">
                   <div className="w-6 h-6 text-amber-700">👥</div>
                 </div>
@@ -115,7 +124,7 @@ export default function Page() {
                   <p className="text-gray-600 text-sm">95% placement rate for eligible students</p>
                 </div>
               </div>
-              {/* Highlight 3 */}
+            
               <div className="flex items-start p-4 bg-gray-50 rounded-lg">
                 <div className="mr-4 bg-amber-50 p-3 rounded-full">
                   <div className="w-6 h-6 text-amber-700">🏆</div>
@@ -125,7 +134,7 @@ export default function Page() {
                   <p className="text-gray-600 text-sm">7.2 LPA average package across all disciplines</p>
                 </div>
               </div>
-              {/* Highlight 4 */}
+             
               <div className="flex items-start p-4 bg-gray-50 rounded-lg">
                 <div className="mr-4 bg-amber-50 p-3 rounded-full">
                   <div className="w-6 h-6 text-amber-700">📈</div>
@@ -135,7 +144,7 @@ export default function Page() {
                   <p className="text-gray-600 text-sm">28 LPA highest package offered in 2024</p>
                 </div>
               </div>
-              {/* Highlight 5 */}
+             
               <div className="flex items-start p-4 bg-gray-50 rounded-lg">
                 <div className="mr-4 bg-amber-50 p-3 rounded-full">
                   <div className="w-6 h-6 text-amber-700">📅</div>
@@ -145,7 +154,7 @@ export default function Page() {
                   <p className="text-gray-600 text-sm">Mandatory internships with industry partners</p>
                 </div>
               </div>
-              {/* Highlight 6 */}
+             
               <div className="flex items-start p-4 bg-gray-50 rounded-lg">
                 <div className="mr-4 bg-amber-50 p-3 rounded-full">
                   <div className="w-6 h-6 text-amber-700">💼</div>
@@ -229,9 +238,9 @@ export default function Page() {
             <div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Placement Office</h3>
               <p className="text-gray-600">
-                Director: Prof. Michael Johnson<br />
-                Phone: (123) 456-7800<br />
-                Email: placement.cell@college.edu
+                Head: Prof. Rajesh Kumar<br />
+                Phone: (123) 456-7890<br />
+                Email: corporate.relations@college.edu
               </p>
             </div>
             <div>
