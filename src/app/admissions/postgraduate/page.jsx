@@ -39,7 +39,7 @@ export default function page() {
     </div>
       <div className="links">
         <a className='no-underline' href="https://docs.google.com/forms/d/e/1FAIpQLSe3RvBGmTslrxDMHBYn0vGufABqCvqUZnumUazbylQZ3J5lgQ/viewform"><div className="link">Quick Registration</div></a>
-        <a className='no-underline' href="https://sbce.ac.in/m-tech-application-form/"><div className="link">Online Application form</div></a>
+        <a className='no-underline' href="/admissions/application-form-mtech"><div className="link">Online Application form</div></a>
       
 
       </div>

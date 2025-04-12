@@ -40,7 +40,7 @@ export default function News2() {
                 <div className="events_title_area">
                     <span className="event_left_border"></span>
                     <h3>NEWS</h3>
-                    <a href="" className="events_know_more">KNOW MORE</a>
+                    <a href="/news" className="events_know_more">KNOW MORE</a>
                 </div>
 
                 <div className="carousal_container">

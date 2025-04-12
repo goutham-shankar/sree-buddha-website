@@ -102,7 +102,7 @@ const CanteenPage = () => {
                 </div>
                 
                 <div className="bg-amber-800 text-white p-4 rounded-lg">
-                  <h3 className="text-lg font-medium mb-3">Today's Special</h3>
+                  <h3 className="text-lg font-medium mb-3">Today s Special</h3>
                   <p className="text-amber-100 mb-2">Check out our daily specials for fresh, seasonal offerings at special prices.</p>
                   <button className="mt-2 bg-white text-amber-800 px-4 py-2 rounded font-medium hover:bg-amber-100 transition-colors">
                     View Menu

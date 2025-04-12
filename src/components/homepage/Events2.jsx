@@ -40,7 +40,7 @@ export default function Events2() {
                 <div className="events_title_area">
                     <span className="event_left_border"></span>
                     <h3>EVENTS</h3>
-                    <a href="" className="events_know_more">KNOW MORE</a>
+                    <a href="/events" className="events_know_more">KNOW MORE</a>
                 </div>
 
                 <div className="carousal_container">
