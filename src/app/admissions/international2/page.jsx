@@ -52,7 +52,7 @@ international educational and industry standards.</p>
           <div className="feature-item">
             <i className="fas fa-globe-asia"></i>
             <h3>State-of-the-Art Facilities</h3>
-            <p>: Well-equipped laboratories, research centers, and smart 
+            <p>Well-equipped laboratories, research centers, and smart 
             classrooms provide an excellent learning environment.</p>
           </div>
 
@@ -99,14 +99,14 @@ international educational and industry standards.</p>
             </ul>
           </div>
 
-          <div className="criteria-item">
+          {/* <div className="criteria-item">
             <h3>For Postgraduate Programs (M.E. / M.Tech / MBA)</h3>
             <ul>
               <li>A pass in relevant undergraduate degree from a recognized university</li>
               <li>Minimum 60% aggregate marks or CGPA 6.5 on a 10-point scale</li>
               <li>Valid GRE/GMAT scores for respective programs</li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -152,72 +152,21 @@ international educational and industry standards.</p>
 
               <div className="program-card">
                 <div className="program-details">
-                  <h4>Information Technology</h4>
+                  <h4>Civil Engineering</h4>
                   <span className="program-duration">4 Years • B.Tech</span>
                 </div>
               </div>
 
               <div className="program-card">
                 <div className="program-details">
-                  <h4>Chemical Engineering</h4>
+                  <h4>Bio Technology And Bio Chemical Engineering</h4>
                   <span className="program-duration">4 Years • B.Tech</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="program-category">
-            <div className="category-header">
-              {/* <i className="fas fa-award"></i> */}
-              <h3>Postgraduate Programs</h3>
-              <p className="category-description">Advanced M.E. / M.Tech programs and MBA with industry specializations</p>
-            </div>
-
-            <div className="programs-grid">
-              <div className="program-card">
-                <div className="program-details">
-                  <h4>Data Science</h4>
-                  <span className="program-duration">2 Years • M.Tech</span>
-                </div>
-              </div>
-
-              <div className="program-card">
-                <div className="program-details">
-                  <h4>Business Administration</h4>
-                  <span className="program-duration">2 Years • MBA</span>
-                </div>
-              </div>
-
-              <div className="program-card">
-                <div className="program-details">
-                  <h4>Communication Systems</h4>
-                  <span className="program-duration">2 Years • M.E.</span>
-                </div>
-              </div>
-
-              <div className="program-card">
-                <div className="program-details">
-                  <h4>VLSI Design</h4>
-                  <span className="program-duration">2 Years • M.E.</span>
-                </div>
-              </div>
-
-              <div className="program-card">
-                <div className="program-details">
-                  <h4>Manufacturing Engineering</h4>
-                  <span className="program-duration">2 Years • M.E.</span>
-                </div>
-              </div>
-
-              <div className="program-card">
-                <div className="program-details">
-                  <h4>Software Engineering</h4>
-                  <span className="program-duration">2 Years • M.E.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+           </div>
       </section>
 
       <section className="documents-section">
@@ -257,14 +206,14 @@ international educational and industry standards.</p>
             <i className="fas fa-envelope"></i>
             <div>
               <h3>Email</h3>
-              <p>international.admissions@sbce.edu.in</p>
+              <p>principal@sbce.ac.in</p>
             </div>
           </div>
           <div className="contact-item">
             <i className="fas fa-phone"></i>
             <div>
               <h3>Phone</h3>
-              <p>+91-44-XXXX-XXXX</p>
+              <p>+91 85903 32548</p>
             </div>
           </div>
         </div>
