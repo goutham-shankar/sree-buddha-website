@@ -6,7 +6,8 @@ import "../../styles/homepage/research2.css"
 
 import "@/styles/homepage/carousal.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
+import Carousel from '../carousal';
 
 import { useEffect, useState } from 'react';
 
@@ -34,18 +35,45 @@ export default function Research() {
         };
     }, []);
 
+
+    const [events, setEvents] = useState([])
+
+    useEffect(() => {
+
+        fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/events?populate=Event_media`).then((response) => {
+            return response.json()
+        }).then(data => {
+
+            let response_items = data.data
+
+            for (let i = 0; i < 5; i++) {
+                response_items.push(response_items[0])
+            }
+
+            setEvents(response_items);
+            console.log(data.data)
+
+
+
+        })
+    }, [])
+
     return (
         <div className='carousal_section research' >
 
             <div className="events_container">
                 <div className="events_title_area">
                     <span className="event_left_border"></span>
-                    <h3>RESEARCH</h3>
+                    <h3 className='research_heading'>RESEARCH</h3>
                     <a href="" className="events_know_more">KNOW MORE</a>
                 </div>
 
                 <div className="carousal_container">
-                    <Carousel
+
+                    <Carousel items={events} />
+
+
+                    {/* <Carousel
                         showThumbs={false}
                         infiniteLoop
                         showIndicators={true}
@@ -93,7 +121,7 @@ export default function Research() {
                         
 
 
-                    </Carousel>
+                    </Carousel> */}
                 </div>
             </div>
 

@@ -5,13 +5,38 @@ import "../../styles/homepage/events2.css"
 
 import "@/styles/homepage/carousal.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
+import Carousel from '../carousal';
 
 import { useEffect, useState } from 'react';
+// import { resolveMotionValue } from 'framer-motion';
 
 export default function Events2() {
 
     const [slidesToShow, setSlidesToShow] = useState(3); // Default 3 slides for desktop
+
+    const [events , setEvents ] = useState([])
+
+    useEffect(()=>{
+
+        fetch( `${process.env.NEXT_PUBLIC_STRAPI}/api/events?populate=Event_media`).then((response)=>{
+            return response.json()
+        }).then(data=>{
+
+            let response_items = data.data 
+
+            for ( let i = 0 ; i < 5 ; i ++){
+                response_items.push(response_items[0])
+            }
+
+            setEvents(response_items);
+            console.log(data.data)
+
+
+
+        })
+    }, [])
+
     useEffect(() => {
         const handleResize = () => {
             const screenWidth = window.innerWidth;
@@ -34,7 +59,7 @@ export default function Events2() {
     }, []);
 
     return (
-        <div className='carousal_section events' >
+        <div className='carousal_section events events_bg' >
 
             <div className="events_container">
                 <div className="events_title_area">
@@ -44,7 +69,10 @@ export default function Events2() {
                 </div>
 
                 <div className="carousal_container">
-                    <Carousel
+
+                    <Carousel  items = {events} background={"white"} />
+
+                    {/* <Carousel
                         showThumbs={false}
                         infiniteLoop
                         showIndicators={true}
@@ -101,7 +129,7 @@ export default function Events2() {
                         
 
 
-                    </Carousel>
+                    </Carousel> */}
                 </div>
             </div>
 

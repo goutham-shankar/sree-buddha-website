@@ -15,8 +15,14 @@
    
 }
 
+.events_bg{
+
+     background-image: url("/assets/images/home/events_bg.png");
+
+}
+
 .events{
-    background-image: url("/assets/images/home/events_bg.png");
+    /* background-image: url("/assets/images/home/events_bg.png"); */
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 100px;
