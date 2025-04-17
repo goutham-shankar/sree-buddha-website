@@ -140,6 +140,8 @@ export default function Navbar() {
         { name: "Virtual Lab", link: "/cells_and_chapters/virtual_lab" },
         { name: "IEDC", link: "/cells_and_chapters/iedc" },
         { name: "NPTEL", link: "/cells_and_chapters/nptel" },
+        { name: "IPR Cell", link: "/research/ipr" },
+        { name: "Research Council", link: "/research/council" },
         {
           name: "IIT Remote Center",
           link: "/cells_and_chapters/remote_center",
@@ -150,8 +152,6 @@ export default function Navbar() {
       name: "Facilities",
       links: [
         { name: "Cells and Centers", link: "/facilities/cells" },
-        { name: "IPR Cell", link: "/research/ipr" },
-        { name: "Research Council", link: "/research/council" },
         { name: "Central Library", link: "/facilities/library" },
         { name: "Conference Hall", link: "/facilities/hall" },
         { name: "Conveyance and Bus Routes", link: "/facilities/bus" },

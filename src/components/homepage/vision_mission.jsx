@@ -34,7 +34,9 @@ export default function VissionMission() {
           
         <div className="mission" data-aos="fade-up" data-aos-duration="600">
               <h3>OUR MISSION</h3>
-              <p>Offer well balanced curriculum with student-centric approach.</p>
+              <p>Offer well balanced curriculum with student-centric approach.</p><br />
+              <p>Encourage students to participate in innovation, lifelong learning and research.</p><br />
+              <p>Impart ethical and human values focusing on rural needs and sustainability.</p>
         </div>
       
       </div>
