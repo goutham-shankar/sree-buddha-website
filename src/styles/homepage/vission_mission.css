@@ -7,9 +7,10 @@
     font-family: 'poppins';
     background-color:rgba(255, 233, 200, 1);
     border-radius: 15px;
-    padding: 0px 100px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    /* padding: 0px 100px; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 100px;
     margin: 20px;
 }
 .vision_and_mission div{
@@ -21,19 +22,22 @@
     /* width: 50%; */
 
 }
-.v-m{
+.v-m {
     /* background-color: red; */
     align-items: center;
     width: 100%;
 }
+.v-m p{
+    line-height: 30px;
+}
 .vision_and_mission div h3{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 800;
     /* width: 200px; */
 }
 .vision_and_mission div p{
     font-size: 18px;
-    width:90%;
+    width:95%;
 }
 .about_us{
     background-color: black;
@@ -46,7 +50,10 @@
     border: 0px;
 
 }
-
+.mission{
+    margin-top: 20px;
+    /* color: red; */
+}
 .about_us:hover{
     background-color: rgb(57, 57, 57);
     transition: 0.2s;
@@ -71,12 +78,30 @@
     /* background-color: red; */
     font-style: italic;
 }
+@media (max-width:1200px)
+{
+    .vision_and_mission {
+        
+        flex-direction: column;
+        height: max-content;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .mission{
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+    .vision{
+        margin-top: 20px;
+    }
+}
 
 @media ( max-width : 100vh){
     .vision_and_mission {
         
         flex-direction: column;
         height: max-content;
+        padding-left: 10px;
     }
     .vision_and_mission div{
         width: 80vw;
@@ -93,13 +118,25 @@
     .about{
         /* background-color: red; */
         align-items: center;
+        padding-bottom: 0px;
     }
     .v-m div{
         justify-content: center;
+        padding-top: 0px;
+        padding-left: 40px;
+        padding-right: 40px;
         /* background-color: green; */
     }
     .v-m h3{
         /* background-color: blue; */
         text-align: center;
+    }
+    .mission{
+        margin-top: 0px;
+        /* color: red; */
+    }
+    .vision{
+        margin-top: 0px;
+        padding-top: 0px;
     }
 }
