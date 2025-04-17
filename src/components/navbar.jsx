@@ -75,14 +75,14 @@ export default function Navbar() {
           link: "/departments/computer-science-engineering",
         },
         {
-          name: "EEE",
+          name: "Electrical and Electronics Engineering",
           link: "/departments/electrical-electronics-engineering",
         },
         {
-          name: "ECE",
+          name: "Electronics and Communication Engineering",
           link: "/departments/electronics-communication-engineering",
         },
-        { name: "Mechanical", link: "/departments/mechanical-engineering" },
+        { name: "Mechanical Engineering", link: "/departments/mechanical-engineering" },
         // {
         //   name: "Computer Science with AI",
         //   link: "/departments/artificial-intelligence-machine-learning",
