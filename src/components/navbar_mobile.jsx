@@ -64,6 +64,8 @@ export default function NavbarMobile() {
             name: "Autonomous",
             visible: false,
             links: [
+                { name: "About Autonomy", link: "/autonomous/about_autonomy",visible:false },
+
                 { name: "Conferments", link: "/autonomous/conferments", visible: false },
                 { name: "Governing Body", link: "/autonomous/governing_body", visible: false },
                 { name: "Academic Council", link: "/autonomous/academic_council", visible: false },
