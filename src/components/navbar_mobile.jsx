@@ -47,7 +47,7 @@ export default function NavbarMobile() {
                 { name: "Vision and Mission", link: "/about-us/vision_and_mission", visible: false },
                 { name: "Management", link: "/about-us/management", visible: false },
                 { name: "Principal", link: "/about-us/principal", visible: false },
-                { name: "Oranogram", link: "/about-us/oronogram", visible: false },
+                { name: "Organogram", link: "/about-us/oronogram", visible: false },
                 { name: "Mandatory Disclosure", link: "/about-us/mandatory_disclosure", visible: false },
                 { name: "AICTE EOA", link: "/about-us/EoA", visible: false },
                 { name: "Student Code of Conduct and Ethics", link: "/about-us/student_code_of_conduct", visible: false },
