@@ -64,7 +64,7 @@ export default function Events2() {
             <div className="events_container">
                 <div className="events_title_area">
                     <span className="event_left_border"></span>
-                    <h3>EVENTS</h3>
+                    <h3>NEWS</h3>
                     <a href="/events" className="events_know_more">KNOW MORE</a>
                 </div>
 

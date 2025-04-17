@@ -42,6 +42,7 @@ export default function Navbar() {
     {
       name: "Autonomous",
       links: [
+        { name: "About Autonomy", link: "/autonomous/about_autonomy" },
         { name: "Conferments", link: "/autonomous/conferments" },
         { name: "Governing Body", link: "/autonomous/governing_body" },
         { name: "Academic Council", link: "/autonomous/academic_council" },
@@ -82,10 +83,10 @@ export default function Navbar() {
           link: "/departments/electronics-communication-engineering",
         },
         { name: "Mechanical", link: "/departments/mechanical-engineering" },
-        {
-          name: "Computer Science with AI",
-          link: "/departments/artificial-intelligence-machine-learning",
-        },
+        // {
+        //   name: "Computer Science with AI",
+        //   link: "/departments/artificial-intelligence-machine-learning",
+        // },
         {
           name: "Electronics and Computer Engineering",
           link: "/departments/electronics-computer-engineering",
@@ -95,7 +96,7 @@ export default function Navbar() {
           name: "Basic Science and Humanities",
           link: "/departments/mathematics-and-basic-sciences",
         },
-        { name: "Food Sciences", link: "/departments/food-technology" },
+        { name: "Food Technology", link: "/departments/food-technology" },
         {
           name: "Biotechnology and Biochemical Engineering",
           link: "/departments/biotechnology-biochemical-engineering",
