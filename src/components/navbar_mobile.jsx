@@ -1,42 +1,23 @@
 "use client";
 
 import React, { useState } from "react";
-import "@/styles/navbar_mobile.css";
 import Link from "next/link";
-import { checkIsOnDemandRevalidate } from "next/dist/server/api-utils";
-
+import "../styles/navbar_mobile.css"
 
 export default function NavbarMobile() {
     const [sidebarVisible, setSidebarVisible] = useState(false);
-    const [visibleSubMenus, setVisibleSubMenus] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
 
     function toggleSubmenu(menu_link_index) {
-        // let temp = [...visibleSubMenus];
-        // console.log(link_map[menu_link_index].visible)
-        let temp = [...link_map]
-        if (temp[menu_link_index].visible) {
-            // console.log("visible")
-            temp[menu_link_index].visible = false
-        } else {
-            temp[menu_link_index].visible = true
-        }
+        let temp = [...link_map];
+        temp[menu_link_index].visible = !temp[menu_link_index].visible;
         setLinkMap(temp);
     }
 
     function toggleSubmenu2(index1, index2) {
-
-        let temp = [...link_map]
-        // console.log(temp[index1].links[index2])
-        if (temp[index1].links[index2].visible) {
-            temp[index1].links[index2].visible = false
-        } else {
-            temp[index1].links[index2].visible = true
-        }
-        setLinkMap(temp)
-
+        let temp = [...link_map];
+        temp[index1].links[index2].visible = !temp[index1].links[index2].visible;
+        setLinkMap(temp);
     }
-
-    const maxHeight = "700px";
 
     const [link_map, setLinkMap] = useState([
         {
@@ -197,225 +178,136 @@ export default function NavbarMobile() {
                 { name: "Conferences Organized", link: "/research/conference", visible: false },
             ],
         },
-    ])
+    ]);
 
     return (
-        <div className="navbar_mobile">
-            <div className="logo_section">
-                <img src={"/assets/images/sree_buddha_logo.png"} alt="Logo" />
+
+        <>
+
+        <div className="relative w-full bg-white shadow-md navbar_mobile">
+            <div className="flex items-center justify-between p-4 --bg-green-200 w-full">
+                <div className="flex items-center">
+                    <img src="/assets/images/sree_buddha_logo.png" alt="Logo" className="h-12 w-auto" />
+                </div>
+
+                <button 
+                    className="flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
+                    onClick={() => setSidebarVisible(!sidebarVisible)}
+                >
+                    <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${sidebarVisible ? 'transform rotate-45 translate-y-1.5' : 'mb-1.5'}`}></span>
+                    <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${sidebarVisible ? 'opacity-0' : 'mb-1.5'}`}></span>
+                    <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${sidebarVisible ? 'transform -rotate-45 -translate-y-1.5' : ''}`}></span>
+                </button>
             </div>
 
-            <div className="menu_icon" onClick={() => setSidebarVisible(!sidebarVisible)}>
-                <span className={`bar1 ${sidebarVisible ? "bar1_close" : ""}`}></span>
-                <span className={`bar2 ${sidebarVisible ? "bar2_close" : ""}`}></span>
-                <span className={`bar3 ${sidebarVisible ? "bar3_close" : ""}`}></span>
-            </div>
+            <div 
+                className={`fixed top-0 right-0 w-4/5 h-full bg-white overflow-y-auto shadow-lg transition-all duration-300 ease-in-out z-50 ${sidebarVisible ? 'translate-x-0' : 'translate-x-full'}`} 
+                style={{ maxWidth: '320px' }}
+            >
+                <div className="p-4 bg-[#845714] flex items-center justify-between">
+                    <div className="text-white text-lg font-semibold">Menu</div>
+                    <button 
+                        className="text-white focus:outline-none" 
+                        onClick={() => setSidebarVisible(false)}
+                    >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
 
-            <div className="sidebar" style={{ right: sidebarVisible ? "0%" : "-100%" }}>
-
-                {
-                    link_map.map((menu_link, menu_link_index) => {
-                        return (
-
-                            <div className="sidebar_menu" key = {menu_link_index}>
-                                <span className="submenu_head" onClick={() => toggleSubmenu(menu_link_index)}>{menu_link.name}</span>
-                                <div className="sidebar_submenu" style={{ maxHeight: menu_link.visible ? maxHeight : "0px" }}>
-                                    <ul>
-                                        {
-                                            menu_link.links.map((menu_linkl2, index2) => {
-                                                // console.log(menu_linkl2.links)
-                                                if (menu_linkl2.links == undefined) {
-                                                    return (
-                                                        <Link key = {index2} className="sidebar_submenu_link" href={menu_linkl2.link}>{menu_linkl2.name}</Link>
-                                                    )
-                                                } else {
-
-                                                    return (
-                                                        < div key = {index2}>
-                                                            <span className="sidebar_submenu_2_link" onClick={() => { toggleSubmenu2(menu_link_index, index2) }}
-
-                                                            >{menu_linkl2.name}</span>
-                                                            <div className="sidebar_submenu_2" style={{ maxHeight: menu_linkl2.visible ? maxHeight : "0px" }}>
-
-
-                                                                <ul>
-                                                                    {
-
-                                                                        menu_linkl2.links.map((menu_linkl3, index3) => {
-
-                                                                            return (
-                                                                                <>
-                                                                                    <span key = {index3} className="sidebar_submenu_link" >{menu_linkl3.name}</span>
-                                                                                </>
-                                                                            )
-
-
-                                                                        })
-                                                                    }
-                                                                </ul>
-                                                            </div>
+                <div className="divide-y divide-gray-200">
+                    {link_map.map((menu_link, menu_link_index) => (
+                        <div className="py-1" key={menu_link_index}>
+                            <button 
+                                className="flex justify-between items-center w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100 focus:outline-none"
+                                onClick={() => toggleSubmenu(menu_link_index)}
+                            >
+                                <span className="font-medium">{menu_link.name}</span>
+                                <svg 
+                                    className={`w-4 h-4 transition-transform duration-200 ${menu_link.visible ? 'transform rotate-180' : ''}`} 
+                                    fill="none" 
+                                    stroke="currentColor" 
+                                    viewBox="0 0 24 24" 
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            
+                            <div 
+                                className={`overflow-hidden transition-all duration-300 ${menu_link.visible ? 'max-h-96' : 'max-h-0'}`}
+                            >
+                                <div className="bg-gray-50 pl-4">
+                                    {menu_link.links.map((menu_linkl2, index2) => {
+                                        if (!menu_linkl2.links) {
+                                            return (
+                                                <Link 
+                                                    key={index2} 
+                                                    href={menu_linkl2.link}
+                                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                                >
+                                                    {menu_linkl2.name}
+                                                </Link>
+                                            );
+                                        } else {
+                                            return (
+                                                <div key={index2}>
+                                                    <button
+                                                        className="flex justify-between items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:outline-none"
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            toggleSubmenu2(menu_link_index, index2);
+                                                        }}
+                                                    >
+                                                        <span>{menu_linkl2.name}</span>
+                                                        <svg 
+                                                            className={`w-3 h-3 transition-transform duration-200 ${menu_linkl2.visible ? 'transform rotate-180' : ''}`} 
+                                                            fill="none" 
+                                                            stroke="currentColor" 
+                                                            viewBox="0 0 24 24" 
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                                        </svg>
+                                                    </button>
+                                                    
+                                                    <div 
+                                                        className={`overflow-hidden transition-all duration-300 ${menu_linkl2.visible ? 'max-h-64' : 'max-h-0'}`}
+                                                    >
+                                                        <div className="bg-gray-100 pl-4">
+                                                            {menu_linkl2.links.map((menu_linkl3, index3) => (
+                                                                <Link 
+                                                                    key={index3} 
+                                                                    href={menu_linkl3.link}
+                                                                    className="block px-4 py-2 text-xs text-gray-600 hover:bg-gray-200"
+                                                                >
+                                                                    {menu_linkl3.name}
+                                                                </Link>
+                                                            ))}
                                                         </div>
-                                                    )
-
-                                                }
-
-                                            })
+                                                    </div>
+                                                </div>
+                                            );
                                         }
-
-
-                                    </ul>
+                                    })}
                                 </div>
-
-
                             </div>
-                        )
-                    })
-                }
-
-                {/*   <div className="sidebar_menu">
-                    <span onClick={() => toggleSubmenu(0)}>About Us</span>
-                    <div className="sidebar_submenu" style={{ maxHeight: visibleSubMenus[0] ? maxHeight : "0px" }}>
-                        <ul>
-                            <Link className="sidebar_submenu_link" href="/about-us/profile">Profile</Link>
-                            <Link className="sidebar_submenu_link" href="">Vision and Mission</Link>
-                            <Link className="sidebar_submenu_link" href="/about-us/management">Management</Link>
-                            <Link className="sidebar_submenu_link" href="">Principal</Link>
-                            <Link className="sidebar_submenu_link" href="/about-us/oronogram">Oranogram</Link>
-                            <Link className="sidebar_submenu_link" href="">Mandatory Disclosure</Link>
-                            <Link className="sidebar_submenu_link" href="">AICTCE EOA</Link>
-                            <Link className="sidebar_submenu_link" href="">Student code of conduct and ethics</Link>
-                            <Link className="sidebar_submenu_link" href="">Internal quality assurance cell</Link>
-                            <Link className="sidebar_submenu_link" href="">Gallery</Link>
-                            <Link className="sidebar_submenu_link" href="">Admission and Accounts</Link>
-                            <Link className="sidebar_submenu_link" href="">PTA</Link>
-                            <Link className="sidebar_submenu_link" href="">Sister Institutions</Link>
-                            <Link className="sidebar_submenu_link" href="">Contact Us</Link>
-                            <Link className="sidebar_submenu_link" href="">Feedback</Link>
-                        </ul>
-                    </div>
+                        </div>
+                    ))}
                 </div>
-                <hr width="100%" size="2" />
-
-                <div className="sidebar_menu">
-                    <span onClick={() => toggleSubmenu(1)}>Research</span>
-                    <div className="sidebar_submenu" style={{ maxHeight: visibleSubMenus[1] ? maxHeight : "0px" }}>
-                        <ul>
-                            <Link className="sidebar_submenu_link" href="">Research Council</Link>
-                            <Link className="sidebar_submenu_link" href="">Projects</Link>
-                            <Link className="sidebar_submenu_link" href="">IPR</Link>
-                            <Link className="sidebar_submenu_link" href="">Consultancy</Link>
-                            <Link className="sidebar_submenu_link" href="">Oranogram</Link>
-                            <Link className="sidebar_submenu_link" href="">Conferences Organized</Link>
-                        </ul>
-                    </div>
-                </div>
-                <hr width="100%" size="2" />
-
-                <div className="sidebar_menu">
-                    <span onClick={() => toggleSubmenu(2)}>Facilities</span>
-                    <div className="sidebar_submenu" style={{ maxHeight: visibleSubMenus[2] ? maxHeight : "0px" }}>
-                        <ul>
-                            <Link className="sidebar_submenu_link" href="">Cells and Centers</Link>
-                            <Link className="sidebar_submenu_link" href="">Central Library</Link>
-                            <Link className="sidebar_submenu_link" href="">Conference Hall</Link>
-                            <Link className="sidebar_submenu_link" href="">Conveyance and Bus Routes</Link>
-                            <Link className="sidebar_submenu_link" href="">Reprographics Facilities</Link>
-                            <Link className="sidebar_submenu_link" href="">Internal Lab</Link>
-                            <Link className="sidebar_submenu_link" href="">Hostel</Link>
-                            <Link className="sidebar_submenu_link" href="">Canteen</Link>
-                            <Link className="sidebar_submenu_link" href="">Other Facilities</Link>
-                        </ul>
-                    </div>
-                </div>
-                <hr width="100%" size="2" />
-
-                <div className="sidebar_menu">
-                    <span onClick={() => toggleSubmenu(3)}>Cells and Chapters</span>
-                    <div className="sidebar_submenu" style={{ maxHeight: visibleSubMenus[3] ? maxHeight : "0px" }}>
-                        <ul>
-                            <Link className="sidebar_submenu_link" href="">Various Cells and Committees</Link>
-                            <Link className="sidebar_submenu_link" href="">IEEE</Link>
-                            <Link className="sidebar_submenu_link" href="">IE(I)</Link>
-                            <Link className="sidebar_submenu_link" href="">SAE India</Link>
-                            <Link className="sidebar_submenu_link" href="">NSS</Link>
-                            <Link className="sidebar_submenu_link" href="">SAC</Link>
-                            <Link className="sidebar_submenu_link" href="">Virtual Lab</Link>
-                            <Link className="sidebar_submenu_link" href="">IEDC</Link>
-                            <Link className="sidebar_submenu_link" href="">NPTEL</Link>
-                            <Link className="sidebar_submenu_link" href="">IIT-Remote Center</Link>
-                        </ul>
-                    </div>
-                </div>
-                <hr width="100%" size="2" />
-
-                <div className="sidebar_menu">
-                    <span onClick={() => toggleSubmenu(4)}>Accreditation</span>
-                    <div className="sidebar_submenu" style={{ maxHeight: visibleSubMenus[4] ? maxHeight : "0px" }}>
-                        <ul>
-                            <Link className="sidebar_submenu_link" href="">Various Cells and Committees</Link>
-                            <Link className="sidebar_submenu_link" href="">IEEE</Link>
-                            <Link className="sidebar_submenu_link" href="">IE(I)</Link>
-                            <Link className="sidebar_submenu_link" href="">SAE India</Link>
-                            <Link className="sidebar_submenu_link" href="">NSS</Link>
-                            <Link className="sidebar_submenu_link" href="">SAC</Link>
-                            <Link className="sidebar_submenu_link" href="">Virtual Lab</Link>
-                            <Link className="sidebar_submenu_link" href="">IEDC</Link>
-                            <Link className="sidebar_submenu_link" href="">NPTEL</Link>
-                            <Link className="sidebar_submenu_link" href="">IIT-Remote Center</Link>
-                        </ul>
-                    </div>
-                </div>
-                <hr width="100%" size="2" />
-
-                <div className="sidebar_menu">
-                    <span onClick={() => toggleSubmenu(5)}>Academics</span>
-                    <div className="sidebar_submenu" style={{ maxHeight: visibleSubMenus[5] ? maxHeight : "0px" }}>
-                        <ul>
-                            <Link className="sidebar_submenu_link" href="">Advisory System</Link>
-                            <Link className="sidebar_submenu_link" href="">Academic Calendar</Link>
-                            <Link className="sidebar_submenu_link" href="">Professional Bodies</Link>
-                            <Link className="sidebar_submenu_link" href="">Handbook</Link>
-                            <Link className="sidebar_submenu_link" href="">NSS</Link>
-                            <Link className="sidebar_submenu_link" href="">Syllabus</Link>
-                            <Link className="sidebar_submenu_link" href="">Campus Newsletter</Link>
-                        </ul>
-                    </div>
-                </div>
-                <hr width="100%" size="2" />
-
-                <div className="sidebar_menu">
-                    <span onClick={() => toggleSubmenu(6)}>Autonomous</span>
-                    <div className="sidebar_submenu" style={{ maxHeight: visibleSubMenus[6] ? maxHeight : "0px" }}>
-                        <ul>
-                            <Link className="sidebar_submenu_link" href="">Conferments</Link>
-                            <Link className="sidebar_submenu_link" href="">Governing Body</Link>
-                            <Link className="sidebar_submenu_link" href="">Academic Council</Link>
-                            <Link className="sidebar_submenu_link" href="">Finance Committee</Link>
-                            <Link className="sidebar_submenu_link" href="">Board of Studies</Link>
-                            <Link className="sidebar_submenu_link" href="">Faculty Norms</Link>
-                            <Link className="sidebar_submenu_link" href="">Various Committees</Link>
-                        </ul>
-                    </div>
-                </div>
-                <hr width="100%" size="2" />
-
-                <div className="sidebar_menu">
-                    <span onClick={() => toggleSubmenu(7)}>Examination</span>
-                    <div className="sidebar_submenu" style={{ maxHeight: visibleSubMenus[7] ? maxHeight : "0px" }}>
-                        <ul>
-                            <Link className="sidebar_submenu_link" href="">General Examination Rules</Link>
-                            <Link className="sidebar_submenu_link" href="">Application for Certificates</Link>
-                            <Link className="sidebar_submenu_link" href="">Circulars</Link>
-                        </ul>
-                    </div>
-                </div>
-                <hr width="100%" size="2" /> */}
             </div>
 
-            {/* Watermark with conditional class */}
-            {/* <div className={`watermark ${sidebarVisible ? "watermark-active" : ""}`}>
-                <img src="assets/images/sree_buddha_logo.png" alt="Watermark" className="watermark-image" />
-            </div> */}
+            {/* Overlay to close sidebar when clicking outside */}
+            {sidebarVisible && (
+                <div 
+                    className="fixed inset-0 bg-black bg-opacity-50 z-40"
+                    onClick={() => setSidebarVisible(false)}
+                ></div>
+            )}
+
+
         </div>
+        </>
     );
 }

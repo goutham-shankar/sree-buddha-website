@@ -23,9 +23,9 @@ export default function ComputerScienceLayout({ children }) {
         ["Facilities", "facilities"],
         ["Activities", "activities"],
         ["Associations and Clubs", "associations-and-clubs"],
-        ["consultancy", "consultancy"],
-        ["fundings", "fundings"],
-        ["Research Centre", "research-centre"],
+        // ["consultancy", "consultancy"],
+        // ["fundings", "fundings"],
+        // ["Research Centre", "research-centre"],
         ["Paper Publications", "paper-publications"],
     ]
 

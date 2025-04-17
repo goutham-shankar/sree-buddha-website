@@ -4,10 +4,10 @@ export default function ComputerScienceDepartmentHOD() {
     return (
         <>
 
-            <h3 className="heading1">HOD - Department Of Electronics and Electrical Engineering</h3>
+            <h3 className="heading1">HOD - Department of Food Technology</h3>
 
             <div className="hod-image">
-                <img src={"/assets/images/departments/hod_food_technology.jpg"} alt="" />
+                <img src={"/assets/images/departments/hod_food_technology.jpeg"} alt="hod food tech" />
                 <span>Professor. (Mrs.) Meera Bai S</span>
                 
             </div>
