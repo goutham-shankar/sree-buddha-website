@@ -14,7 +14,7 @@ export default function ComputerScienceDepartment() {
   return (
     <div className={`max-w-4xl mx-auto px-4 py-8 md:py-12 ${poppins.className}`}>
       
-      <h2 className='text-2xl md:text-3xl font-bold text-center text-gray-800 mb-2'>VISION AND MISSION</h2>
+      <h2 className='text-2xl md:text-3xl font-bold text-center text-gray-800 mb-2 page_heading2'>VISION AND MISSION</h2>
       
       <div className="w-24 h-1 bg-yellow-600 mx-auto mb-8 rounded"></div>
       

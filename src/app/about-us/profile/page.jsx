@@ -7,7 +7,7 @@ import NavbarMobile from "@/components/navbar_mobile";
 const Profile = () => {
   return (
     <>
-      <NavbarMobile />
+      {/* <NavbarMobile /> */}
       <div className="container">
         <h1 className="heading">PROFILE</h1>
 
