@@ -47,7 +47,7 @@ export default function NavbarMobile() {
                 { name: "Vision and Mission", link: "/about-us/vision_and_mission", visible: false },
                 { name: "Management", link: "/about-us/management", visible: false },
                 { name: "Principal", link: "/about-us/principal", visible: false },
-                { name: "Oranogram", link: "/about-us/oronogram", visible: false },
+                { name: "Organogram", link: "/about-us/oronogram", visible: false },
                 { name: "Mandatory Disclosure", link: "/about-us/mandatory_disclosure", visible: false },
                 { name: "AICTE EOA", link: "/about-us/EoA", visible: false },
                 { name: "Student Code of Conduct and Ethics", link: "/about-us/student_code_of_conduct", visible: false },
@@ -102,7 +102,7 @@ export default function NavbarMobile() {
                 { name: "Electronics and Computer Engineering", link: "/departments/electronics-computer-engineering", visible: false },
                 { name: "Civil Engineering", link: "/departments/civil-engineering", visible: false },
                 { name: "Basic Science and Humanities", link: "/departments/mathematics-and-basic-sciences", visible: false },
-                { name: "Food Sciences", link: "/departments/food-technology", visible: false },
+                { name: "Food Technology", link: "/departments/food-technology", visible: false },
                 { name: "Biotechnology and Biochemical Engineering", link: "/departments/biotechnology-biochemical-engineering", visible: false },
             ],
         },
@@ -128,7 +128,7 @@ export default function NavbarMobile() {
             ],
         },
         {
-            name: "Cells and Chapters",
+            name: "Cells and Chapter",
             visible: false,
             links: [
                 { name: "Various Cells and Committees", link: "/cells_and_chapters/various_cells", visible: false },

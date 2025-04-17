@@ -75,14 +75,14 @@ export default function Navbar() {
           link: "/departments/computer-science-engineering",
         },
         {
-          name: "EEE",
+          name: "Electrical and Electronics Engineering",
           link: "/departments/electrical-electronics-engineering",
         },
         {
-          name: "ECE",
+          name: "Electronics and Communication Engineering",
           link: "/departments/electronics-communication-engineering",
         },
-        { name: "Mechanical", link: "/departments/mechanical-engineering" },
+        { name: "Mechanical Engineering", link: "/departments/mechanical-engineering" },
         // {
         //   name: "Computer Science with AI",
         //   link: "/departments/artificial-intelligence-machine-learning",
@@ -126,7 +126,7 @@ export default function Navbar() {
       ],
     },
     {
-      name: "Cells and Chapters",
+      name: "Cells and Chapter",
       links: [
         {
           name: "Various Cells and Committees",
@@ -140,6 +140,8 @@ export default function Navbar() {
         { name: "Virtual Lab", link: "/cells_and_chapters/virtual_lab" },
         { name: "IEDC", link: "/cells_and_chapters/iedc" },
         { name: "NPTEL", link: "/cells_and_chapters/nptel" },
+        { name: "IPR Cell", link: "/research/ipr" },
+        { name: "Research Council", link: "/research/council" },
         {
           name: "IIT Remote Center",
           link: "/cells_and_chapters/remote_center",
@@ -188,9 +190,7 @@ export default function Navbar() {
     {
       name: "Research",
       links: [
-        { name: "Research Council", link: "/research/council" },
         { name: "Projects", link: "/research/projects" },
-        { name: "IPR", link: "/research/ipr" },
         { name: "Consultancy", link: "/research/consultancy" },
         { name: "Conferences Organized", link: "/research/conference" },
       ],
