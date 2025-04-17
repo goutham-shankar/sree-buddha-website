@@ -80,7 +80,7 @@ useEffect(() => {
               <p>The Department of Electrical and Electronics Engineering at Sree Buddha College of
                 Engineering was established in 2004 with an initial intake of 60 students. The department
                 expanded its academic offerings in 2014 with the introduction of a postgraduate program in
-                Electrical Machines, accommodating 24 students.</p>
+                Electrical Machines, accommodating 6 students.</p>
               
               <p>Committed to academic excellence, the department provides high-quality education at both
                 undergraduate and postgraduate levels, fostering innovation and technical expertise. It plays a
