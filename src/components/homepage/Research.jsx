@@ -4,7 +4,7 @@ import React from 'react'
 import "../../styles/homepage/events2.css"
 import "../../styles/homepage/research2.css"
 
-import "@/styles/homepage/carousal.css";
+// import "@/styles/homepage/carousal.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 // import { Carousel } from "react-responsive-carousel";
 import Carousel from '../carousal';

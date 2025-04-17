@@ -3,12 +3,14 @@
 }
 
 .events {
-    width: 100vw;
+    /* width: 100%; */
     margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-sizing: border-box;
+    background-color: red;
 }
 
 .events_container {
@@ -24,6 +26,7 @@
 .carousal_container {
     width: 100%;
     margin: 20px 0;
+    box-sizing: border-box;
 }
 
 .event {
@@ -37,7 +40,7 @@
     font-size: 2rem;
     color: white;
     /* border-radius: 20px; */
-    background-color: red;
+    /* background-color: red; */
 }
 
 /* Custom arrow styling */
