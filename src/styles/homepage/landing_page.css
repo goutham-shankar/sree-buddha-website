@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 .social_media_links{
@@ -52,12 +51,14 @@
     width: 100%;
     text-align: center;
     background-color: #ffffff;
+    /* background-color: red; */
     overflow-x: hidden;
     box-sizing: border-box;
 
 }
 .college_background {
-    width: 98.5%; /* Full container width */
+    /* width: 98.5%; Full container width */
+    /* width: 100%; */
     height: 80vh; /* Full viewport height */
     object-fit: cover; /* Crop video while maintaining aspect ratio */
     margin: 0px 10px;
@@ -74,7 +75,9 @@
 
 .video{
     opacity: 0.7;
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This is crucial to maintain proper scaling */
 }
 
 .landing_page_content{
@@ -125,7 +128,13 @@
 
     .college_background {
         height: 80vh; /* Reduce height for smaller screens */
-        width: 98.5%;
+        /* width: 98.5%; */
+    }
+
+    .video{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 
     .landing_page_content {
@@ -161,8 +170,15 @@
     }
     .college_background {
         height: 90vh; /* Further reduce height */
-        width: 94%;
+        width: calc(100% - 10px); /* Account for the margins */
         margin: 0px 5px;
+        /* background-color: red; */
+    }
+
+    .video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures video fills the container */
     }
 
     .landing_page_content {

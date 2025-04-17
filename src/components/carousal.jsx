@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function Carousel({ items, background }) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const currentIndexRef = useRef(0);
     const [visibleCards, setVisibleCards] = useState(3);
     const [isHovering, setIsHovering] = useState(false);
     const carouselRef = useRef(null);
@@ -26,25 +27,39 @@ export default function Carousel({ items, background }) {
     }, []);
 
     useEffect(() => {
-        // Only auto-rotate when not hovering
+        currentIndexRef.current = currentIndex;
+    }, [currentIndex]);
+
+    useEffect(() => {
         if (isHovering) return;
-        
+
         const interval = setInterval(() => {
-            nextSlide();
+            const next = (currentIndexRef.current + 1) % items.length;
+            setCurrentIndex(next);
         }, 5000);
+
         return () => clearInterval(interval);
-    }, [currentIndex, isHovering]);
+    }, [isHovering, items.length]);
 
     const prevSlide = () => {
-        setCurrentIndex((prev) => (prev === 0 ? items.length - 1 : prev - 1));
+        setCurrentIndex((prev) => {
+            const newIndex = prev === 0 ? items.length - 1 : prev - 1;
+            currentIndexRef.current = newIndex;
+            return newIndex;
+        });
     };
 
     const nextSlide = () => {
-        setCurrentIndex((prev) => (prev + 1) % items.length);
+        setCurrentIndex((prev) => {
+            const newIndex = (prev + 1) % items.length;
+            currentIndexRef.current = newIndex;
+            return newIndex;
+        });
     };
 
     const goToSlide = (index) => {
         setCurrentIndex(index);
+        currentIndexRef.current = index;
     };
 
     return (
@@ -54,19 +69,17 @@ export default function Carousel({ items, background }) {
             onMouseLeave={() => setIsHovering(false)}
             ref={carouselRef}
         >
-            {/* Navigation buttons in original position (top-right) */}
+            {/* Navigation buttons */}
             <div className="w-full pb-4 flex justify-end items-center gap-4">
                 <button
-                    className={`z-10 p-2 rounded-full ${  background == "white" ?"bg-white/10": "bg-white"} text-black hover:bg-black hover:text-white transition-all shadow-md`}
+                    className={`z-10 p-2 rounded-full ${background === "white" ? "bg-white/10" : "bg-white"} text-black hover:bg-black hover:text-white transition-all shadow-md`}
                     onClick={prevSlide}
                     aria-label="Previous slide"
                 >
                     <HiOutlineArrowLeft size={32} />
                 </button>
                 <button
-                    // className="z-10 p-2 rounded-full bg-white/10 text-black hover:bg-black hover:text-white transition-all shadow-md"
-                    className={`z-10 p-2 rounded-full ${  background == "white" ?"bg-white/10": "bg-white"} text-black hover:bg-black hover:text-white transition-all shadow-md`}
-
+                    className={`z-10 p-2 rounded-full ${background === "white" ? "bg-white/10" : "bg-white"} text-black hover:bg-black hover:text-white transition-all shadow-md`}
                     onClick={nextSlide}
                     aria-label="Next slide"
                 >
@@ -110,13 +123,11 @@ export default function Carousel({ items, background }) {
 
                             {/* Title and description */}
                             <div className="p-5">
-                                <Link
-                                    href={`/events/${item.id}`}
-                                    className="block"
-                                >
-                                    <h3 className="text-lg md:text-xl font-semibold mb-2 truncate hover:text-gray-700 transition-colors">{item.Heading}</h3>
-                                    
-                                    {/* Add date/location if available */}
+                                <Link href={`/events/${item.id}`} className="block">
+                                    <h3 className="text-lg md:text-xl font-semibold mb-2 truncate hover:text-gray-700 transition-colors">
+                                        {item.Heading}
+                                    </h3>
+
                                     {item.date && (
                                         <p className="text-sm text-gray-600 mb-2">
                                             {new Date(item.date).toLocaleDateString('en-US', {
@@ -126,8 +137,7 @@ export default function Carousel({ items, background }) {
                                             })}
                                         </p>
                                     )}
-                                    
-                                    {/* Brief description - using excerpt or truncated description */}
+
                                     {item.description && (
                                         <p className="text-gray-500 text-sm line-clamp-2">{item.description}</p>
                                     )}
