@@ -42,6 +42,7 @@ export default function Navbar() {
     {
       name: "Autonomous",
       links: [
+        { name: "About Autonomy", link: "/autonomous/about_autonomy" },
         { name: "Conferments", link: "/autonomous/conferments" },
         { name: "Governing Body", link: "/autonomous/governing_body" },
         { name: "Academic Council", link: "/autonomous/academic_council" },
@@ -74,18 +75,18 @@ export default function Navbar() {
           link: "/departments/computer-science-engineering",
         },
         {
-          name: "EEE",
+          name: "Electrical and Electronics Engineering",
           link: "/departments/electrical-electronics-engineering",
         },
         {
-          name: "ECE",
+          name: "Electronics and Communication Engineering",
           link: "/departments/electronics-communication-engineering",
         },
-        { name: "Mechanical", link: "/departments/mechanical-engineering" },
-        {
-          name: "Computer Science with AI",
-          link: "/departments/artificial-intelligence-machine-learning",
-        },
+        { name: "Mechanical Engineering", link: "/departments/mechanical-engineering" },
+        // {
+        //   name: "Computer Science with AI",
+        //   link: "/departments/artificial-intelligence-machine-learning",
+        // },
         {
           name: "Electronics and Computer Engineering",
           link: "/departments/electronics-computer-engineering",
@@ -95,7 +96,7 @@ export default function Navbar() {
           name: "Basic Science and Humanities",
           link: "/departments/mathematics-and-basic-sciences",
         },
-        { name: "Food Sciences", link: "/departments/food-technology" },
+        { name: "Food Technology", link: "/departments/food-technology" },
         {
           name: "Biotechnology and Biochemical Engineering",
           link: "/departments/biotechnology-biochemical-engineering",
@@ -125,7 +126,7 @@ export default function Navbar() {
       ],
     },
     {
-      name: "Cells and Chapters",
+      name: "Cells and Chapter",
       links: [
         {
           name: "Various Cells and Committees",
@@ -139,6 +140,8 @@ export default function Navbar() {
         { name: "Virtual Lab", link: "/cells_and_chapters/virtual_lab" },
         { name: "IEDC", link: "/cells_and_chapters/iedc" },
         { name: "NPTEL", link: "/cells_and_chapters/nptel" },
+        { name: "IPR Cell", link: "/research/ipr" },
+        { name: "Research Council", link: "/research/council" },
         {
           name: "IIT Remote Center",
           link: "/cells_and_chapters/remote_center",
@@ -187,9 +190,7 @@ export default function Navbar() {
     {
       name: "Research",
       links: [
-        { name: "Research Council", link: "/research/council" },
         { name: "Projects", link: "/research/projects" },
-        { name: "IPR", link: "/research/ipr" },
         { name: "Consultancy", link: "/research/consultancy" },
         { name: "Conferences Organized", link: "/research/conference" },
       ],

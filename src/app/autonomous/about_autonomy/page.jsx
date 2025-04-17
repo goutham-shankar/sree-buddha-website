@@ -84,15 +84,25 @@ export default function AboutAutonomy() {
         
         {/* Hero Section */}
         <section className={styles.heroSection}>
-          <div className={styles.container}>
-            <h1>Sree Buddha College of Engineering Attains Autonomy</h1>
-            <h2>A New Era of Excellence</h2>
-            <div className={styles.heroButtons}>
-              <a href="/admissions" className={`${styles.btn} ${styles.primaryBtn}`}>Apply Now</a>
-              <a href="/autonomy-details" className={`${styles.btn} ${styles.secondaryBtn}`}>Learn More</a>
-            </div>
-          </div>
-        </section>
+  <div className={styles.heroBackground}>
+    <img src="/college-campus.jpg" alt="College Campus" />
+  </div>
+  <div className={styles.container}>
+    <div className={styles.heroContent}>
+      <div className={styles.heroText}>
+        <h1>Sree Buddha College of Engineering Attains Autonomy</h1>
+        <h2>A New Era of Excellence</h2>
+        <div className={styles.heroButtons}>
+          <a href="..\admissions\undergraduate" className={`${styles.btn} ${styles.primaryBtn}`}>Apply Now</a>
+          <a href="..\about-us\profile" className={`${styles.btn} ${styles.secondaryBtn}`}>Learn More</a>
+        </div>
+      </div>
+      <div className={styles.heroImage}>
+        <img  src="/assets/images/profile_pic.png"  alt="Sree Buddha College of Engineering Main Building" />
+      </div>
+    </div>
+  </div>
+</section>
         
         {/* Introduction Section */}
         <section className={styles.introSection}>
