@@ -126,7 +126,7 @@ export default function Navbar() {
       ],
     },
     {
-      name: "Cells and Chapters",
+      name: "Cells and Chapter",
       links: [
         {
           name: "Various Cells and Committees",
@@ -150,6 +150,8 @@ export default function Navbar() {
       name: "Facilities",
       links: [
         { name: "Cells and Centers", link: "/facilities/cells" },
+        { name: "IPR Cell", link: "/research/ipr" },
+        { name: "Research Council", link: "/research/council" },
         { name: "Central Library", link: "/facilities/library" },
         { name: "Conference Hall", link: "/facilities/hall" },
         { name: "Conveyance and Bus Routes", link: "/facilities/bus" },
@@ -188,9 +190,7 @@ export default function Navbar() {
     {
       name: "Research",
       links: [
-        { name: "Research Council", link: "/research/council" },
         { name: "Projects", link: "/research/projects" },
-        { name: "IPR", link: "/research/ipr" },
         { name: "Consultancy", link: "/research/consultancy" },
         { name: "Conferences Organized", link: "/research/conference" },
       ],

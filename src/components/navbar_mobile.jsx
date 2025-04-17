@@ -126,7 +126,7 @@ export default function NavbarMobile() {
             ],
         },
         {
-            name: "Cells and Chapters",
+            name: "Cells and Chapter",
             visible: false,
             links: [
                 { name: "Various Cells and Committees", link: "/cells_and_chapters/various_cells", visible: false },
