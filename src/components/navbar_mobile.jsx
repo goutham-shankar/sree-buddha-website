@@ -186,9 +186,9 @@ export default function NavbarMobile() {
 
         <div className="relative w-full bg-white shadow-md navbar_mobile">
             <div className="flex items-center justify-between p-4 --bg-green-200 w-full">
-                <div className="flex items-center">
+               <Link href = "/"><div className="flex items-center">
                     <img src="/assets/images/sree_buddha_logo.png" alt="Logo" className="h-12 w-auto" />
-                </div>
+                </div></Link> 
 
                 <button 
                     className="flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
