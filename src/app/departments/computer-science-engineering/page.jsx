@@ -84,7 +84,7 @@ export default function ComputerScienceDepartment() {
               <p>
                 The department of Computer Science and Engineering was started in Sree
                 Buddha College of Engineering in the year 2002. The department currently offers the programmes B.Tech. in computer
-                science and Engineering with sanctioned intake of 180, B.Tech Computer Science
+                science and Engineering with sanctioned intake of 240, B.Tech Computer Science
                 and Engineering with specialization in Artificial Intelligence and Machine
                 Learning, sanctioned intake 60, M.Tech. in Computer Science and Engineering,
                 and Ph.D. programmes.
@@ -123,8 +123,11 @@ export default function ComputerScienceDepartment() {
             <div className="highlights-card">
               <h3 className="highlight-category">Industry Exposure and Research Collaborations</h3>
               <ul>
-                <li>Students gain industry insights through seminars, workshops, and internships at NIT, IIT etc and reputed industries like,  ZETA Biosystem Bangalore, Biocon Bangalore, CFTRI Mysore , Synthite chemicals Kochi etc. Partnerships with NIIST, IIPM, NIFTEM, CTCRI Trivandrum, CFRD Cochin etc to enhance research opportunities</li>
-                <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
+                {/* <li>Students gain industry insights through seminars, workshops, and internships at NIT, IIT etc and reputed industries like,  ZETA Biosystem Bangalore, Biocon Bangalore, CFTRI Mysore , Synthite chemicals Kochi etc. Partnerships with NIIST, IIPM, NIFTEM, CTCRI Trivandrum, CFRD Cochin etc to enhance research opportunities</li> */}
+                {/* <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li> */}
+                <li>Strong partnerships with tech companies for internships, projects, and placements</li>
+                <li> Presence of technology incubators and startup ecosystems for entrepreneurship</li>
+                
               </ul>
             </div>
               
