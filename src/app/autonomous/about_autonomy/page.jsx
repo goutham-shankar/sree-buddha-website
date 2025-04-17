@@ -93,8 +93,8 @@ export default function AboutAutonomy() {
         <h1>Sree Buddha College of Engineering Attains Autonomy</h1>
         <h2>A New Era of Excellence</h2>
         <div className={styles.heroButtons}>
-          <a href="/admissions" className={`${styles.btn} ${styles.primaryBtn}`}>Apply Now</a>
-          <a href="/autonomy-details" className={`${styles.btn} ${styles.secondaryBtn}`}>Learn More</a>
+          <a href="..\admissions\undergraduate" className={`${styles.btn} ${styles.primaryBtn}`}>Apply Now</a>
+          <a href="..\about-us\profile" className={`${styles.btn} ${styles.secondaryBtn}`}>Learn More</a>
         </div>
       </div>
       <div className={styles.heroImage}>

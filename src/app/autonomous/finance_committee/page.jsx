@@ -7,7 +7,7 @@
 
        const pdfDocuments =  [
         {
-          title: "First Academic Council Agenda",
+          title: "Finance Committee constitution",
           link: "/assets/documents/autonomous/finance_commitee/Constitution-of-Academic-Council-and-finance-committee.pdf"
         },
 
