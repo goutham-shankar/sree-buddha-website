@@ -62,6 +62,7 @@ export default function NavbarMobile() {
             name: "Academics",
             visible: false,
             links: [
+                { name: "Courses Offered", link: "/academics/courses" },
                 { name: "Advisory System", link: "/academics/advisory_system", visible: false },
                 { name: "Academic Calendar", link: "/academics/academic_calendar", visible: false },
                 { name: "Professional Bodies", link: "/academics/professional_bodies", visible: false },
