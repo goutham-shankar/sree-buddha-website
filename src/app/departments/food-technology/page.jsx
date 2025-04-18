@@ -28,7 +28,7 @@ export default function ComputerScienceDepartment() {
 
         // ✅ Ensure Department data exists and filter correctly
         let filteredImages = data.data.filter(item => 
-          item.Department?.toLowerCase() === "mea" 
+          item.Department?.toLowerCase() === "foodtech" 
         );
 
         // ✅ Sort images by date (newest first)
