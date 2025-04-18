@@ -55,7 +55,7 @@ useEffect(() => {
         <div className="cs-dept-hero">
           <div className="cs-dept-hero-image">
             <Image 
-              src="/images/cs-dept-hero.jpg"
+              src="/images/ece-hero2.png"
               alt="Electronics and Communication Students Working Together"
               width={1200}
               height={400}

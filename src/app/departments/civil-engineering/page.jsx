@@ -64,7 +64,7 @@ export default function ComputerScienceDepartment() {
         <div className="cs-dept-hero">
           <div className="cs-dept-hero-image">
             <Image 
-              src="/images/cs-dept-hero.jpg" 
+              src="/images/ce-hero.png" 
               alt="Computer Science Students Working Together"
               width={1200}
               height={400}
@@ -193,6 +193,8 @@ export default function ComputerScienceDepartment() {
           .cs-dept-hero-image {
             width: 100%;
             height: 100%;
+            margin-top:0px;
+            padding-top:0px;
           }
           
           .cs-dept-hero-image img {
@@ -205,7 +207,7 @@ export default function ComputerScienceDepartment() {
             position: absolute;
             bottom: 0;
             left: 0;
-            padding: 30px;
+            padding: 20px;
             background: rgba(0, 0, 0, 0.7);
             color: white;
             width: 100%;

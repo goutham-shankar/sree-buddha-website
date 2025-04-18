@@ -58,7 +58,7 @@ export default function MechanicalDepartment() {
             <div className="cs-dept-hero">
                 <div className="cs-dept-hero-image">
                     <Image
-                        src="/images/cs-dept-hero.jpg"
+                        src="/images/me-hero.jpg"
                         alt="Computer Science Students Working Together"
                         width={1200}
                         height={400}
@@ -236,10 +236,11 @@ export default function MechanicalDepartment() {
             position: absolute;
             bottom: 0;
             left: 0;
-            padding: 30px;
+            padding: 20px;
             background: rgba(0, 0, 0, 0.7);
             color: white;
             width: 100%;
+          
           }
           
           .cs-dept-hero-text h2 {

@@ -56,14 +56,14 @@ export default function ComputerScienceDepartment() {
     return (
       <div className="cs-dept-container">
         <header className="cs-dept-header">
-          <h1> Electronics  and Computer Engineering</h1>
+          <h1> Electronics and Computer Engineering</h1>
           <p>Innovation • Excellence • Future</p>
         </header>
         
         <div className="cs-dept-hero">
           <div className="cs-dept-hero-image">
             <Image 
-              src="/images/cs-dept-hero.jpg" 
+              src="/images/er-hero.jpg" 
               alt="Computer Science Students Working Together"
               width={1200}
               height={400}
