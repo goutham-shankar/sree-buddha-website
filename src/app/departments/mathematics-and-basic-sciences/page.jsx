@@ -28,7 +28,7 @@ export default function ComputerScienceDepartment() {
 
         // ✅ Ensure Department data exists and filter correctly
         let filteredImages = data.data.filter(item => 
-          item.Department?.toLowerCase() === "mea" 
+          item.Department?.toLowerCase() === "bsh" 
         );
 
         // ✅ Sort images by date (newest first)
@@ -57,7 +57,7 @@ export default function ComputerScienceDepartment() {
     return (
       <div className="cs-dept-container">
         <header className="cs-dept-header">
-          <h1>Mathematics and basic Sciences Department</h1>
+          <h1> Basic Sciences and Humanities Department</h1>
           <p>Innovation • Excellence • Future</p>
         </header>
         

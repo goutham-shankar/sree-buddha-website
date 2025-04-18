@@ -24,7 +24,7 @@ useEffect(() => {
 
       // ✅ Ensure Department data exists and filter correctly
       let filteredImages = data.data.filter(item => 
-        item.Department?.toLowerCase() === "mea" 
+        item.Department?.toLowerCase() === "eee" 
       );
 
       // ✅ Sort images by date (newest first)
