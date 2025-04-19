@@ -76,10 +76,10 @@ export default function NavbarMobile() {
             visible: false,
             links: [
                 { name: "Computer Science and Engineering", link: "/departments/computer-science-engineering", visible: false },
-                { name: "EEE", link: "/departments/electrical-electronics-engineering", visible: false },
-                { name: "ECE", link: "/departments/electronics-communication-engineering", visible: false },
+                { name: "Electrical and Electronics Engineering", link: "/departments/electrical-electronics-engineering", visible: false },
+                { name: "Electronics and Communication Engineering", link: "/departments/electronics-communication-engineering", visible: false },
                 { name: "Mechanical", link: "/departments/mechanical-engineering", visible: false },
-                { name: "Computer Science with AI", link: "/departments/artificial-intelligence-machine-learning", visible: false },
+                { name: "Computer Science and Engineering (Artificial Intelligence & Machine learning)", link: "/departments/artificial-intelligence-machine-learning", visible: false },
                 { name: "Electronics and Computer Engineering", link: "/departments/electronics-computer-engineering", visible: false },
                 { name: "Civil Engineering", link: "/departments/civil-engineering", visible: false },
                 { name: "Basic Science and Humanities", link: "/departments/mathematics-and-basic-sciences", visible: false },
@@ -128,7 +128,7 @@ export default function NavbarMobile() {
             name: "Facilities",
             visible: false,
             links: [
-                { name: "Cells and Centers", link: "/facilities/cells", visible: false },
+                // { name: "Cells and Centers", link: "/facilities/cells", visible: false },
                 { name: "Central Library", link: "/facilities/library", visible: false },
                 { name: "Conference Hall", link: "/facilities/hall", visible: false },
                 { name: "Conveyance and Bus Routes", link: "/facilities/bus", visible: false },

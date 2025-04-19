@@ -83,10 +83,10 @@ export default function Navbar() {
           link: "/departments/electronics-communication-engineering",
         },
         { name: "Mechanical Engineering", link: "/departments/mechanical-engineering" },
-        // {
-        //   name: "Computer Science with AI",
-        //   link: "/departments/artificial-intelligence-machine-learning",
-        // },
+        {
+          name: "Computer Science and Engineering (Artificial Intelligence & Machine learning)",
+          link: "/departments/artificial-intelligence-machine-learning",
+        },
         {
           name: "Electronics and Computer Engineering",
           link: "/departments/electronics-computer-engineering",
@@ -151,7 +151,7 @@ export default function Navbar() {
     {
       name: "Facilities",
       links: [
-        { name: "Cells and Centers", link: "/facilities/cells" },
+        // { name: "Cells and Centers", link: "/facilities/cells" },
         { name: "Central Library", link: "/facilities/library" },
         { name: "Conference Hall", link: "/facilities/hall" },
         { name: "Conveyance and Bus Routes", link: "/facilities/bus" },

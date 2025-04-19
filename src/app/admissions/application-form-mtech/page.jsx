@@ -51,9 +51,6 @@ const ApplicationForm = () => {
     place: '',
     date: '',
     
-    // Documents
-    sign: null,
-    pic: null
   });
 
   const [errors, setErrors] = useState({});
@@ -83,7 +80,7 @@ const ApplicationForm = () => {
       'name', 'dob', 'gender', 'Nationality', 'religioin', 'community', 
       'Mothertounge', 'guardian', 'relationship', 'address', 'pincode', 
       'mobile', 'email', 'degree', 'discipline', 'university', 'institue',
-      'dataofpass', 'cgpa', 'pg_course', 'place', 'date', 'sign', 'pic'
+      'dataofpass', 'cgpa', 'pg_course', 'place', 'date', 'signature', 
     ];
 
     mandatoryFields.forEach(field => {
@@ -130,34 +127,159 @@ const ApplicationForm = () => {
     return isValid;
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if (validateForm() || true) {
+
+  //     const photo = document.getElementById("photo").files[0];
+  //     const signature = document.getElementById("signature").files[0];
+
+  //     const file_form_data = new FormData()
+  //     file_form_data.append("photo", photo);
+  //     file_form_data.append("signature", signature);
+
+  //     fetch(`${process.env.NEXT_PUBLIC_FILE_UPLOAD_BACKEND}/upload_mtech`, {
+  //       method: "POST", 
+  //       body : file_form_data
+  //     }).then((response)=>{
+  //       return response.json()
+  //     }).then( async (data)=>{
+
+  //       console.log(data)
+
+  //       formData["photo_link"] = data.photo_link ;
+  //       formData["signature_link" ] = data.signature_link;
+
+  //       try {
+  //         // Create a JSON object instead of FormData
+  //         const jsonData = {...formData};
+          
+  //         // Handle file data differently since we can't send files directly in JSON
+  //         // You'll need to implement file uploads separately or use Base64 encoding
+
+  //         console.log(JSON.stringify(jsonData))
+         
+    
+  //         const response = await fetch('http://13.51.85.192:1337/api/mtech-admissions', {
+  //           method: 'POST',
+  //           headers: {
+  //             'Content-Type': 'application/json' , 
+  //             'Accept': 'application/json'
+  //           },
+  //           body: JSON.stringify(jsonData)
+  //         })
+    
+  //         if (response.ok) {
+  //           alert('Form submitted successfully!');
+  //         } else {
+  //           throw new Error('Failed to submit form');
+  //         }
+  //       } catch (error) {
+  //         console.error('Error submitting form:', error);
+  //         alert('Failed to submit form. Please try again.');
+  //       }
+
+  //     })
+
+     
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
       try {
-        const formDataToSend = new FormData();
-        Object.keys(formData).forEach(key => {
-          if (key === 'sign' || key === 'pic') {
-            if (formData[key]) {
-              formDataToSend.append(key, formData[key]);
-            }
-          } else {
-            formDataToSend.append(key, formData[key]);
-          }
+        const photo = document.getElementById("photo").files[0];
+        const signature = document.getElementById("signature").files[0];
+  
+        if (!photo || !signature) {
+          alert('Please upload both photo and signature');
+          return;
+        }
+  
+        const file_form_data = new FormData();
+        file_form_data.append("photo", photo);
+        file_form_data.append("signature", signature);
+  
+        // Upload files first
+        const fileResponse = await fetch(`${process.env.NEXT_PUBLIC_FILE_UPLOAD_BACKEND}/upload_mtech`, {
+          method: "POST", 
+          body: file_form_data
         });
-
+  
+        if (!fileResponse.ok) {
+          throw new Error('File upload failed');
+        }
+  
+        const fileData = await fileResponse.json();
+        console.log("File upload response:", fileData);
+  
+        // Create data object that matches Strapi's column names exactly
+        const strapiData = {
+          name: formData.name,
+          gender: formData.gender,
+          Nationality: formData.Nationality,
+          religioin: formData.religioin,
+          community: formData.community,
+          Mothertounge: formData.Mothertounge,
+          guardian: formData.guardian,
+          relationship: formData.relationship,
+          address: formData.address,
+          pincode: formData.pincode,
+          dob: formData.dob,
+          telephone: formData.telephone,
+          mobile: formData.mobile,
+          email: formData.email,
+          degree: formData.degree,
+          discipline: formData.discipline,
+          university: formData.university,
+          institue: formData.institue,
+          dataofpass: formData.dataofpass,
+          s1: formData.s1 ? parseFloat(formData.s1) : null,
+          s2: formData.s2 ? parseFloat(formData.s2) : null,
+          s3: formData.s3 ? parseFloat(formData.s3) : null,
+          s4: formData.s4 ? parseFloat(formData.s4) : null,
+          s5: formData.s5 ? parseFloat(formData.s5) : null,
+          s6: formData.s6 ? parseFloat(formData.s6) : null,
+          s7: formData.s7 ? parseFloat(formData.s7) : null,
+          s8: formData.s8 ? parseFloat(formData.s8) : null,
+          cgpa: formData.cgpa ? parseFloat(formData.cgpa) : null,
+          pg_course: formData.pg_course,
+          gyear: formData.gyear,
+          g_score: formData.g_score ? parseFloat(formData.g_score) : null,
+          DTE_reg_no: formData.DTE_reg_no,
+          DTE_rank: formData.DTE_rank ? parseFloat(formData.DTE_rank) : null,
+          merit: formData.merit,
+          gate_valid: formData.gate_valid,
+          place: formData.place,
+          date: formData.date,
+          photo_link: fileData.photo_link,
+          signature_link: fileData.signature_link
+        };
+  
+        console.log("Sending to Strapi:", JSON.stringify(strapiData));
+      
+        // Send to Strapi with properly formatted data
         const response = await fetch('http://13.51.85.192:1337/api/mtech-admissions', {
           method: 'POST',
-          body: formDataToSend
+          headers: {
+            'Content-Type': 'application/json', 
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({ data: strapiData }) // Strapi expects data in { data: yourObject } format
         });
-
-        if (response.ok) {
-          alert('Form submitted successfully!');
-        } else {
-          throw new Error('Failed to submit form');
+  
+        const responseData = await response.json();
+        console.log("Strapi response:", responseData);
+  
+        if (!response.ok) {
+          throw new Error(`Failed to submit form: ${response.status} ${response.statusText}`);
         }
+  
+        alert('Form submitted successfully!');
       } catch (error) {
         console.error('Error submitting form:', error);
-        alert('Failed to submit form. Please try again.');
+        alert(`Failed to submit form: ${error.message}`);
       }
     }
   };
@@ -619,7 +741,8 @@ const ApplicationForm = () => {
                 type="file"
                 name="sign"
                 accept="image/*"
-                onChange={handleFileChange}
+                // onChange={handleFileChange}
+                id = "signature"
                 className="file-input"
               />
               {errors.sign && <p className="error-message">{errors.sign}</p>}
@@ -629,9 +752,10 @@ const ApplicationForm = () => {
               <label className="form-label">Passport Size Photo*</label>
               <input
                 type="file"
-                name="pic"
+                name="photo"
                 accept="image/*"
-                onChange={handleFileChange}
+                // onChange={handleFileChange}
+                id = "photo"
                 className="file-input"
               />
               {errors.pic && <p className="error-message">{errors.pic}</p>}

@@ -1,8 +1,16 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import './style.css';
+// import React, { useEffect, useState } from 'react';
+
 
 const ApplicationForm = () => {
+
+
+  const [isSignedIn, setIsSignedIn] = useState(false);
+  
+  //  initializing google drive 
+  
   const [formData, setFormData] = useState({
     name: '',
     dob: '',
@@ -274,59 +282,95 @@ const ApplicationForm = () => {
       
       try {
         // Create JSON object for API submission
-        const jsonData = {
-          data: {
-            name: formData.name,
-            dob: formData.dob,
-            gender: formData.gender,
-            nationality: formData.nationality,
-            religion: formData.religion,
-            community: formData.community,
-            motherTongue: formData.motherTongue,
-            parent: formData.parentName,
-            relationship: formData.relationship,
-            address: formData.address,
-            pincode: formData.pinCode,
-            telephone: formData.telephone || '',
-            mobile: formData.mobile,
-            email: formData.email,
-            
-            // Educational Information
-            board10: formData.tenthBoard || '',
-            institution10: formData.tenthInstitution || '',
-            marks10: formData.tenthMarks || '',
-            maximumMarks10: formData.tenthMaxMarks || '',
-            percentage10: formData.tenthPercentage || '',
-            date10: formData.tenthPassingDate || '',
-            
-            board12: formData.twelfthBoard || '',
-            institution12: formData.twelfthInstitution || '',
-            marks12: formData.twelfthMarks || '',
-            maximumMarks12: formData.twelfthMaxMarks || '',
-            percentage12: formData.twelfthPercentage || '',
-            date12: formData.twelfthPassingDate || '',
-            
-            boardDiploma: formData.diplomaBoard || '',
-            institutionDiploma: formData.diplomaInstitution || '',
-            markDiploma: formData.diplomaMarks || '',
-            maximumMarksDiploma: formData.diplomaMaxMarks || '',
-            dateDiploma: formData.diplomaPassingDate || '',
-            
-            pcm: formData.mpcMarks,
-            maximumMarksPCM: formData.mpcMaxMarks,
-            
-            // Entrance & Preferences
-            entrance: formData.entranceExam || '',
-            regNo: formData.entranceRegNo || '',
-            rank: formData.entranceRank || '',
-            branchPrefered: formData.branchPreference,
-            admissionType: formData.admissionType
-          }
-        };
-        
-        console.log('Submitting JSON data:', jsonData);
-        
-        // Submit to API
+
+        const file1 = document.getElementById("photo").files[0];
+        const parentSignature =  document.getElementById("parentSignature").files[0];
+        const applicantSignature = document.getElementById("applicantSignature").files[0];
+
+
+        var file_upload_form_data = new FormData();
+        file_upload_form_data.append("photo", file1)
+        file_upload_form_data.append("parentSignature" , parentSignature)
+        file_upload_form_data.append("applicantSignature" , applicantSignature);
+
+        console.log(  file1 , parentSignature , applicantSignature);
+
+
+
+        fetch(`${process.env.NEXT_PUBLIC_FILE_UPLOAD_BACKEND}/upload`, {
+          method : "POST",
+          body: file_upload_form_data
+        }).then((response)=>{
+          return response.json()
+        }).then(async (data)=>{
+          console.log(data)
+
+          let photo_link = data.photo_link ;
+          let parentSignature_link = data.parent_signature_link;
+          let applicant_signature_link = data.applicant_signature_link ;
+
+          console.log( photo_link , parentSignature_link , applicant_signature_link)
+
+          const jsonData = {
+            data: {
+              name: formData.name,
+              dob: formData.dob,
+              gender: formData.gender,
+              nationality: formData.nationality,
+              religion: formData.religion,
+              community: formData.community,
+              motherTongue: formData.motherTongue,
+              parent: formData.parentName,
+              relationship: formData.relationship,
+              address: formData.address,
+              pincode: formData.pinCode,
+              telephone: formData.telephone || '',
+              mobile: formData.mobile,
+              email: formData.email,
+              
+              // Educational Information
+              board10: formData.tenthBoard || '',
+              institution10: formData.tenthInstitution || '',
+              marks10: formData.tenthMarks || '',
+              maximumMarks10: formData.tenthMaxMarks || '',
+              percentage10: formData.tenthPercentage || '',
+              date10: formData.tenthPassingDate || '',
+              
+              board12: formData.twelfthBoard || '',
+              institution12: formData.twelfthInstitution || '',
+              marks12: formData.twelfthMarks || '',
+              maximumMarks12: formData.twelfthMaxMarks || '',
+              percentage12: formData.twelfthPercentage || '',
+              date12: formData.twelfthPassingDate || '',
+              
+              boardDiploma: formData.diplomaBoard || '',
+              institutionDiploma: formData.diplomaInstitution || '',
+              markDiploma: formData.diplomaMarks || '',
+              maximumMarksDiploma: formData.diplomaMaxMarks || '',
+              dateDiploma: formData.diplomaPassingDate || '',
+              
+              pcm: formData.mpcMarks,
+              maximumMarksPCM: formData.mpcMaxMarks,
+              
+              // Entrance & Preferences
+              entrance: formData.entranceExam || '',
+              regNo: formData.entranceRegNo || '',
+              rank: formData.entranceRank || '',
+              branchPrefered: formData.branchPreference,
+              admissionType: formData.admissionType, 
+
+
+
+              photo_link :photo_link, 
+              parent_signature_link : parentSignature_link ,
+              applicant_signature_link : applicant_signature_link
+              
+            }
+          };
+          
+          console.log('Submitting JSON data:', jsonData);
+
+                  // Submit to API
         try {
           const response = await fetch('http://13.51.85.192:1337/api/btech-admissions', {
             method: 'POST',
@@ -372,23 +416,24 @@ const ApplicationForm = () => {
           
           console.log('Form submitted successfully');
           
-          // If we need to handle file uploads separately
-          if (formData.photo || formData.parentSignature || formData.applicantSignature) {
-            console.log('Files would need to be uploaded separately');
-            
-            // Uncomment and implement if you need to handle files separately
-            /*
-            // Get the ID of the created entry
-            const entryId = responseData.data.id;
-            await uploadFiles(entryId);
-            */
-          }
+         
           
           setSubmitSuccess(true);
         } catch (apiError) {
           console.error('API error:', apiError);
           throw apiError; // Re-throw to be caught by the outer catch block
         }
+
+          
+
+        })
+
+        
+
+       
+
+        
+
         
       } catch (error) {
         console.error('Submission error:', error);
