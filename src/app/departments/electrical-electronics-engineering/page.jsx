@@ -24,7 +24,7 @@ useEffect(() => {
 
       // ✅ Ensure Department data exists and filter correctly
       let filteredImages = data.data.filter(item => 
-        item.Department?.toLowerCase() === "mea" 
+        item.Department?.toLowerCase() === "eee" 
       );
 
       // ✅ Sort images by date (newest first)
@@ -60,7 +60,7 @@ useEffect(() => {
         <div className="cs-dept-hero">
           <div className="cs-dept-hero-image">
             <Image 
-              src="/images/cs-dept-hero.jpg" 
+              src="/images/electrical-hero.jpg" 
               alt="Computer Science Students Working Together"
               width={1200}
               height={400}

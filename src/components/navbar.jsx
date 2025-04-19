@@ -59,6 +59,7 @@ export default function Navbar() {
     {
       name: "Academics",
       links: [
+        { name: "Courses Offered", link: "/academics/courses" },
         { name: "Advisory System", link: "/academics/advisory_systems" },
         { name: "Academic Calendar", link: "/academics/academic_calendar" },
         { name: "Professional Bodies", link: "/academics/professional_bodies" },
@@ -106,6 +107,7 @@ export default function Navbar() {
     {
       name: "Admissions",
       links: [
+        
         { name: "Undergraduate", link: "/admissions/undergraduate" },
         { name: "Postgraduate", link: "/admissions/postgraduate" },
         { name: "PhD Research", link: "/admissions/phd_research" },
