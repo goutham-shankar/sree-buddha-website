@@ -114,7 +114,7 @@ export default function Carousel({ items, background }) {
 
                                 {/* Outward Arrow */}
                                 <Link
-                                    href={`/events/${item.id}`}
+                                    href={`/events/${item.documentId}`}
                                     className="absolute top-4 right-4 p-2 bg-white/90 hover:bg-white text-black rounded-full transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
                                 >
                                     <MdOutlineArrowOutward className="w-6 h-6" />
