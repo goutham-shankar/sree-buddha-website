@@ -217,9 +217,9 @@ export default function Navbar() {
             />{" "}
             International Admissions
           </a>
-          <a href="#" className="important_link">
+          <a href="/academics/courses" className="important_link">
             {" "}
-            <img src="/assets/images/home/careers.png" alt="" /> CareersSBCE
+            <img src="/assets/images/home/careers.png" alt="" /> Courses
           </a>
           <a href="/fee-payment" className="important_link">
             {" "}
