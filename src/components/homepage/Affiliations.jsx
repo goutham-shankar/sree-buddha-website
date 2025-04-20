@@ -21,8 +21,8 @@ export default function Affiliations() {
           </div>
 
           <div className="affiliation-item" data-aos="fade-up">
-            <li><img src={"/assets/images/home images/ku logo.png"} alt="KU Logo" /></li>
-            <span>Affiliated to Kerala University</span>
+            <li><img src={"/assets/images/home images/ugc-logo.png"} alt="KU Logo" /></li>
+            <span>University Grants Commision of India</span>
           </div>
 
           <div className="affiliation-item" data-aos="fade-up">
@@ -30,10 +30,10 @@ export default function Affiliations() {
             <span>Kerala Technological University</span>
           </div>
 
-          <div className="affiliation-item" data-aos="fade-up">
+          {/* <div className="affiliation-item" data-aos="fade-up">
             <li><img src={"/assets/images/home images/iso logo.png"} alt="ISO Logo" /></li>
             <span>ISO 9001-2008 Certified Institution</span>
-          </div>
+          </div> */}
         </ul>
       </div>
 

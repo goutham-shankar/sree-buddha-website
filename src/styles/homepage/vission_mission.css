@@ -101,7 +101,9 @@
         
         flex-direction: column;
         height: max-content;
-        padding-left: 10px;
+        padding-left: 40px;
+        padding-bottom: 30px;
+
     }
     .vision_and_mission div{
         width: 80vw;
@@ -133,6 +135,7 @@
     }
     .mission{
         margin-top: 0px;
+        padding-top: 0px;
         /* color: red; */
     }
     .vision{
