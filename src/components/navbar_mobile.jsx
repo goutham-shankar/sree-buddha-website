@@ -95,7 +95,7 @@ export default function NavbarMobile() {
                 { name: "Undergraduate", link: "/admissions/undergraduate", visible: false },
                 { name: "Postgraduate", link: "/admissions/postgraduate", visible: false },
                 { name: "PhD Research", link: "/admissions/phd_research", visible: false },
-                { name: "International Students Admission", link: "/admissions/international_students", visible: false },
+                { name: "International Students Admission", link: "/admissions/international2", visible: false },
             ],
         },
         {

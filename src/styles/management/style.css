@@ -68,6 +68,7 @@ body {
 
 .others {
   margin: 20px;
+  font-size: 24px;
   margin-left: 0px;
   font-weight: 800;
 }
@@ -161,7 +162,7 @@ body {
 
   .others {
     margin-left: 20px;
-    font-size: 16px;
+    font-size: 20px;
   }
   .extracontents {
     /* background-color: #73501c; */

@@ -113,7 +113,7 @@ export default function Navbar() {
         { name: "PhD Research", link: "/admissions/phd_research" },
         {
           name: "International Students Admission",
-          link: "/admissions/international",
+          link: "/admissions/international2",
         },
       ],
     },
