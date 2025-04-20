@@ -127,7 +127,7 @@ export default function Carousel({ items, background, mediaField , type }) {
 
                             {/* Title and description */}
                             <div className="p-5">
-                                <Link href={`/${type}/${item.id}`} className="block">
+                                {/* <Link href={`/`} className="block"> */}
                                     <h3 className="text-lg md:text-xl font-semibold mb-2 truncate hover:text-gray-700 transition-colors">
                                         {item.Heading}
                                     </h3>
@@ -145,7 +145,7 @@ export default function Carousel({ items, background, mediaField , type }) {
                                     {item.description && (
                                         <p className="text-gray-500 text-sm line-clamp-2">{item.description}</p>
                                     )}
-                                </Link>
+                                {/* </Link> */}
                             </div>
                         </div>
                     </div>

@@ -20,7 +20,7 @@ export default function Register202425() {
     <div className='register_24_25'>
 
         <h3   data-aos="fade-up">REGISTER NOW  FOR 2024-2025</h3>
-        <a    data-aos="fade-up" href="" className="register_now">Register</a>
+        <a    data-aos="fade-up" href="/academics/courses" className="register_now">Register</a>
       
     </div>
   )
