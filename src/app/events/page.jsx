@@ -6,7 +6,7 @@ export default function EventsPage() {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const API_URL = 'http://13.51.85.192:1337/api/events';
+  const API_URL = 'http://13.51.85.192:1337/api/events?populate=Event_media';
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -61,7 +61,7 @@ export default function EventsPage() {
           {/* Hero section */}
           <div className="relative h-48 md:h-64 overflow-hidden">
             <img 
-              src="/assets/sample_news.jpg"
+             src="/assets/images/profile_pic.png"
               alt="College Events" 
               className="w-full h-full object-cover"
             />
@@ -101,17 +101,20 @@ export default function EventsPage() {
             {!loading && !error && events.length > 0 && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {events.map((event) => (
+                  
                   <div 
                     key={event.id} 
                     className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
                     onClick={() => window.location.href = `/events/${event.documentId}`}
                   >
                     <div className="relative h-48">
-                      <img 
-                        src="/assets/sample_news.jpg" 
-                        alt={event.Heading} 
-                        className="w-full h-full object-cover"
-                      />
+                    <img 
+  src={`http://13.51.85.192:1337${event.Event_media.formats.medium.url}`}
+
+  
+  alt={event.Heading} 
+  className="w-full h-full object-cover"
+/>
                       <div className="absolute top-0 right-0 bg-amber-800 text-white py-1 px-3 rounded-bl-lg">
                         {formatDate(event.publishedAt)}
                       </div>
