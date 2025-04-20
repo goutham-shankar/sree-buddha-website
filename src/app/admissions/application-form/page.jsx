@@ -38,12 +38,12 @@ const ApplicationForm = () => {
     twelfthMarks: '',
     twelfthMaxMarks: '',
     twelfthPercentage: '',
-    diplomaBoard: '',
-    diplomaInstitution: '',
-    diplomaPassingDate: '',
+    boardDiploma: '',
+    institutionDiploma: '',
+    dateDiploma: '',
     diplomaMarks: '',
-    diplomaMaxMarks: '',
-    diplomaPercentage: '',
+    diplomaMaxMarks : '',
+    // diplomaPercentage: '',
     mpcMarks: '',
     mpcMaxMarks: '',
     entranceExam: '',
@@ -343,11 +343,11 @@ const ApplicationForm = () => {
               percentage12: formData.twelfthPercentage || '',
               date12: formData.twelfthPassingDate || '',
               
-              boardDiploma: formData.diplomaBoard || '',
-              institutionDiploma: formData.diplomaInstitution || '',
+              boardDiploma: formData.boardDiploma || '',
+              institutionDiploma: formData.institutionDiploma || '',
               markDiploma: formData.diplomaMarks || '',
               maximumMarksDiploma: formData.diplomaMaxMarks || '',
-              dateDiploma: formData.diplomaPassingDate || '',
+              dateDiploma: formData.dateDiploma || '',
               
               pcm: formData.mpcMarks,
               maximumMarksPCM: formData.mpcMaxMarks,
@@ -1066,6 +1066,87 @@ const ApplicationForm = () => {
                       disabled
                     />
                   </div>
+                </div>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="form-section-title">Diploma</h3>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="boardDiploma">
+                      Board Diploma
+                    </label>
+                    <input
+                      id="boardDiploma"
+                      type="text"
+                      name="boardDiploma"
+                      value={formData.boardDiploma}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="e.g. CBSE, State Board"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="diplomaInstitution">
+                      Name of Institution
+                    </label>
+                    <input
+                      id="diplomaInstitution"
+                      type="text"
+                      name="diplomaInstitution"
+                      value={formData.diplomaInstitution}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="Enter Institution name"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="dateDiploma">
+                      Year and Month of Passing
+                    </label>
+                    <input
+                      id="dateDiploma"
+                      type="month"
+                      name="dateDiploma"
+                      value={formData.dateDiploma}
+                      onChange={handleChange}
+                      className="form-input"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="diplomaMarks">
+                      Marks Obtained
+                    </label>
+                    <input
+                      id="diplomaMarks"
+                      type="number"
+                      name="diplomaMarks"
+                      value={formData.diplomaMarks}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="Enter marks obtained"
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="diplomaMaxMarks">
+                      Maximum Marks
+                    </label>
+                    <input
+                      id="diplomaMaxMarks"
+                      type="number"
+                      name="diplomaMaxMarks"
+                      value={formData.diplomaMaxMarks}
+                      onChange={handleChange}
+                      className="form-input"
+                      placeholder="Enter maximum marks"
+                    />
+                  </div>
+                  
+                  
                 </div>
               </div>
               
