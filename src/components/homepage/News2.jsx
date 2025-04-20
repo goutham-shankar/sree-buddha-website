@@ -19,7 +19,7 @@ export default function Events2() {
 
     useEffect(()=>{
 
-        fetch( `${process.env.NEXT_PUBLIC_STRAPI}/api/events?populate=Event_media`).then((response)=>{
+        fetch( `${process.env.NEXT_PUBLIC_STRAPI}/api/newss?populate=News_media`).then((response)=>{
             return response.json()
         }).then(data=>{
 
@@ -59,18 +59,18 @@ export default function Events2() {
     }, []);
 
     return (
-        <div className='carousal_section events' >
+        <div className='carousal_section events events_bg' >
 
             <div className="events_container">
                 <div className="events_title_area">
                     <span className="event_left_border"></span>
                     <h3>NEWS</h3>
-                    <a href="/events" className="events_know_more">KNOW MORE</a>
+                    <a href="/news" className="events_know_more">KNOW MORE</a>
                 </div>
 
                 <div className="carousal_container">
 
-                    <Carousel  items = {events} background={"white"}   />
+                <Carousel items={events} background="white" mediaField="News_media" />
 
                     {/* <Carousel
                         showThumbs={false}

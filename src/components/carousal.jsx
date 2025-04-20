@@ -3,7 +3,8 @@ import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Link from "next/link";
 
-export default function Carousel({ items, background }) {
+export default function Carousel({ items, background, mediaField = "Event_media" }) {
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const currentIndexRef = useRef(0);
     const [visibleCards, setVisibleCards] = useState(3);
@@ -101,13 +102,18 @@ export default function Carousel({ items, background }) {
                     >
                         <div className="bg-gray-50 w-full rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
                             <div className="relative w-full h-64 md:h-72 lg:h-80">
-                                <img
-                                    src={`${process.env.NEXT_PUBLIC_STRAPI}${item.Event_media.url}`}
-                                    alt={item.Heading || 'Event image'}
-                                    width={800}
-                                    height={1000}
-                                    className="absolute object-cover w-full h-full object-center transition duration-500 filter grayscale group-hover:grayscale-0 group-hover:scale-105"
-                                />
+                            <img
+
+src={`${process.env.NEXT_PUBLIC_STRAPI}${
+  item.attributes?.[mediaField]?.data?.attributes?.url || ""
+}`}
+alt={item.attributes?.Heading || "Event image"}
+width={800}
+height={1000}
+className="absolute object-cover w-full h-full object-center transition duration-500 filter grayscale group-hover:grayscale-0 group-hover:scale-105"
+/>
+
+
                                 
                                 {/* Gradient overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

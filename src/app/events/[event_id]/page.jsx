@@ -10,19 +10,25 @@ export default function EventDetailPage() {
     const [error, setError] = useState(null);
     const params = useParams();
     const eventId = params.event_id;
-
+    
     useEffect(() => {
         const fetchEvent = async () => {
             try {
                 setLoading(true);
-                const response = await fetch(`http://13.51.85.192:1337/api/events/${eventId}`);
+                const response = await fetch(`http://13.51.85.192:1337/api/events?filters[documentId][$eq]=${eventId}&populate=Event_media`);
                 
                 if (!response.ok) {
                     throw new Error('Failed to fetch event');
                 }
                 
                 const data = await response.json();
-                setEvent(data.data);
+                
+                // Check if we have data and at least one event
+                if (data.data && data.data.length > 0) {
+                    setEvent(data.data[0]); // Take the first event from the array
+                } else {
+                    throw new Error('Event not found');
+                }
                 setError(null);
             } catch (error) {
                 console.error('Error fetching event:', error);
@@ -31,18 +37,18 @@ export default function EventDetailPage() {
                 setLoading(false);
             }
         };
-
+        
         if (eventId) {
             fetchEvent();
         }
     }, [eventId]);
-
+    
     // Format date to a more readable format
     const formatDate = (dateString) => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         return new Date(dateString).toLocaleDateString('en-US', options);
     };
-
+    
     if (loading) {
         return (
             <div className="page">
@@ -50,7 +56,7 @@ export default function EventDetailPage() {
             </div>
         );
     }
-
+    
     if (error) {
         return (
             <div className="page">
@@ -58,7 +64,7 @@ export default function EventDetailPage() {
             </div>
         );
     }
-
+    
     if (!event) {
         return (
             <div className="page">
@@ -66,29 +72,36 @@ export default function EventDetailPage() {
             </div>
         );
     }
-
+    
+    // Construct the full image URL
+    const imageUrl = event.Event_media?.formats?.thumbnail?.url 
+        ? `http://13.51.85.192:1337${event.Event_media.formats.medium.url}`
+        : null;
+    
     return (
         <div className='page'>
             <div className="event">
-                <div className="image">
-                    <img src="/assets/sample_news.jpg" alt={event.Heading} />
-                </div>
-
+                {imageUrl && (
+                    <div className="image">
+                        <img src={imageUrl} alt={event.Heading} />
+                    </div>
+                )}
+                
                 <div className="details">
                     <div className="date mb-4 text-amber-700">
                         {formatDate(event.publishedAt)}
                     </div>
                     <h3 className="headline">{event.Heading}</h3>
-
+                    
                     <p className="event_content">
                         {event.description}
                     </p>
-
+                    
                     {event.event_link && (
                         <div className="mt-6">
                             <a 
-                                href={event.event_link} 
-                                target="_blank" 
+                                href={event.event_link}
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center text-amber-700 hover:text-amber-800 font-medium"
                             >

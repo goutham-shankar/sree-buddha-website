@@ -113,7 +113,7 @@ export default function Navbar() {
         { name: "PhD Research", link: "/admissions/phd_research" },
         {
           name: "International Students Admission",
-          link: "/admissions/international",
+          link: "/admissions/international2",
         },
       ],
     },
@@ -225,11 +225,16 @@ export default function Navbar() {
             {" "}
             <img src="/assets/images/home/fees.png" alt="" /> Fees Payment
           </a>
-          <a href="" className="important_link last_link">
-            {" "}
+          <a
+            href="https://ktu.edu.in/"
+            className="important_link last_link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="/assets/images/home/university.png" alt="" /> University
           </a>
-          <a href="#" className="important_links_button">
+
+          <a href="/academics/courses" className="important_links_button">
             admissions
           </a>
           {/* <a href="">Result Analysis</a> */}
