@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import "./style.css";
 
 export default function EventDetailPage() {
@@ -9,7 +9,26 @@ export default function EventDetailPage() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const params = useParams();
+    const router = useRouter();
     const eventId = params.event_id;
+    
+    // Hardcore reloading approach - uses URL modification
+    useEffect(() => {
+        // Check if URL already has our reload parameter
+        const currentUrl = window.location.href;
+        const hasReloadParam = currentUrl.includes('?reload=true');
+        
+        if (!hasReloadParam) {
+            // If we're on the initial load (no reload parameter)
+            // Add the parameter and force a hard navigation
+            const reloadUrl = `${window.location.pathname}?reload=true`;
+            
+            // Short delay to allow component to render first
+            setTimeout(() => {
+                window.location.href = reloadUrl;
+            }, 100);
+        }
+    }, []);
     
     useEffect(() => {
         const fetchEvent = async () => {
@@ -74,16 +93,44 @@ export default function EventDetailPage() {
     }
     
     // Construct the full image URL
-    const imageUrl = event.Event_media?.formats?.thumbnail?.url 
-        ? `http://13.51.85.192:1337${event.Event_media.formats.medium.url}`
-        : null;
+    const getImageUrl = () => {
+        if (!event.Event_media) return null;
+        
+        // Try to get medium format first
+        if (event.Event_media.formats?.medium?.url) {
+            return `http://13.51.85.192:1337${event.Event_media.formats.medium.url}`;
+        }
+        // Fallback to small format
+        else if (event.Event_media.formats?.small?.url) {
+            return `http://13.51.85.192:1337${event.Event_media.formats.small.url}`;
+        }
+        // Fallback to thumbnail
+        else if (event.Event_media.formats?.thumbnail?.url) {
+            return `http://13.51.85.192:1337${event.Event_media.formats.thumbnail.url}`;
+        }
+        // Last resort: use the original URL if available
+        else if (event.Event_media.url) {
+            return `http://13.51.85.192:1337${event.Event_media.url}`;
+        }
+        
+        return null;
+    };
+    
+    const imageUrl = getImageUrl();
     
     return (
-        <div className='page'>
+        <div className="page">
             <div className="event">
                 {imageUrl && (
                     <div className="image">
-                        <img src={imageUrl} alt={event.Heading} />
+                        <img 
+                            src={imageUrl} 
+                            alt={event.Heading || 'Event image'} 
+                            onError={(e) => {
+                                console.error('Image failed to load');
+                                e.target.style.display = 'none';
+                            }}
+                        />
                     </div>
                 )}
                 

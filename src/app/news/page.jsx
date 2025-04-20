@@ -74,7 +74,7 @@ export default function EventsPage() {
 
           {/* Content section */}
           <div className="p-6 md:p-10">
-            <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mb-4">CAMPUS EVENTS</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-amber-800 mb-4">CAMPUS NEWS</h1>
             <div className="w-16 h-1 bg-amber-800 mb-6"></div>
             
             {/* Loading state */}
