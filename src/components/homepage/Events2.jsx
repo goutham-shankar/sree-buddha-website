@@ -70,7 +70,7 @@ export default function Events2() {
 
                 <div className="carousal_container">
 
-                    <Carousel  items = {events} background={"white"} />
+                    <Carousel  items = {events} background={"white"} mediaField={"Event_media"} type = "events"/>
 
                     {/* <Carousel
                         showThumbs={false}

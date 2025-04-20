@@ -9,19 +9,26 @@ export default function EventDetailPage() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const params = useParams();
-    const eventId = params.event_id;
+    const eventId = params.news_id;
     
     useEffect(() => {
+        console.log(eventId)
         const fetchEvent = async () => {
             try {
                 setLoading(true);
+                console.log("fetching")
                 const response = await fetch(`http://13.51.85.192:1337/api/newss?filters[documentId][$eq]=${eventId}&populate=News_media`);
                 
+                console.log(response)
+
                 if (!response.ok) {
                     throw new Error('Failed to fetch event');
                 }
                 
+
                 const data = await response.json();
+
+                console.log(data)
                 
                 // Check if we have data and at least one event
                 if (data.data && data.data.length > 0) {
@@ -38,10 +45,10 @@ export default function EventDetailPage() {
             }
         };
         
-        if (eventId) {
+        // if (eventId) {
             fetchEvent();
-        }
-    }, [eventId]);
+        // }
+    }, []);
     
     // Format date to a more readable format
     const formatDate = (dateString) => {
@@ -74,16 +81,14 @@ export default function EventDetailPage() {
     }
     
     // Construct the full image URL
-    const imageUrl = event.Event_media?.formats?.thumbnail?.url 
-        ? `http://13.51.85.192:1337${event.Event_media.formats.medium.url}`
-        : null;
+   
     
     return (
         <div className='page'>
             <div className="event">
-                {imageUrl && (
+                {  (
                     <div className="image">
-                        <img src={imageUrl} alt={event.Heading} />
+                        <img src={`${process.env.NEXT_PUBLIC_STRAPI}${event.News_media.url}`} alt={event.Heading} />
                     </div>
                 )}
                 

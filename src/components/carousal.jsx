@@ -3,7 +3,7 @@ import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Link from "next/link";
 
-export default function Carousel({ items, background, mediaField = "Event_media" }) {
+export default function Carousel({ items, background, mediaField , type }) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const currentIndexRef = useRef(0);
@@ -64,7 +64,7 @@ export default function Carousel({ items, background, mediaField = "Event_media"
     };
 
     return (
-        <div 
+        <div
             className="relative w-full overflow-hidden rounded-xl"
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
@@ -102,25 +102,23 @@ export default function Carousel({ items, background, mediaField = "Event_media"
                     >
                         <div className="bg-gray-50 w-full rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
                             <div className="relative w-full h-64 md:h-72 lg:h-80">
-                            <img
+                                <img
 
-src={`${process.env.NEXT_PUBLIC_STRAPI}${
-  item.attributes?.[mediaField]?.data?.attributes?.url || ""
-}`}
-alt={item.attributes?.Heading || "Event image"}
-width={800}
-height={1000}
-className="absolute object-cover w-full h-full object-center transition duration-500 filter grayscale group-hover:grayscale-0 group-hover:scale-105"
-/>
+                                    src={`${  process.env.NEXT_PUBLIC_STRAPI}${   item[mediaField].url || "" }`}
+                                    alt={item.attributes?.Heading || "Event image"}
+                                    width={800}
+                                    height={1000}
+                                    className="absolute object-cover w-full h-full object-center transition duration-500 filter grayscale group-hover:grayscale-0 group-hover:scale-105"
+                                />
 
 
-                                
+
                                 {/* Gradient overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                                 {/* Outward Arrow */}
                                 <Link
-                                    href={`/events/${item.documentId}`}
+                                    href={`/${type}/${item.documentId}`}
                                     className="absolute top-4 right-4 p-2 bg-white/90 hover:bg-white text-black rounded-full transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
                                 >
                                     <MdOutlineArrowOutward className="w-6 h-6" />
@@ -129,7 +127,7 @@ className="absolute object-cover w-full h-full object-center transition duration
 
                             {/* Title and description */}
                             <div className="p-5">
-                                <Link href={`/events/${item.id}`} className="block">
+                                <Link href={`/${type}/${item.id}`} className="block">
                                     <h3 className="text-lg md:text-xl font-semibold mb-2 truncate hover:text-gray-700 transition-colors">
                                         {item.Heading}
                                     </h3>
@@ -153,18 +151,17 @@ className="absolute object-cover w-full h-full object-center transition duration
                     </div>
                 ))}
             </div>
-            
+
             {/* Dots indicator */}
             <div className="flex justify-center mt-4 gap-2">
                 {Array.from({ length: Math.ceil(items.length / visibleCards) }).map((_, index) => (
                     <button
                         key={index}
                         onClick={() => goToSlide(index * visibleCards)}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                            index === Math.floor(currentIndex / visibleCards) 
-                                ? "bg-black w-6" 
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${index === Math.floor(currentIndex / visibleCards)
+                                ? "bg-black w-6"
                                 : "bg-gray-300 hover:bg-gray-400"
-                        }`}
+                            }`}
                         aria-label={`Go to slide ${index + 1}`}
                     />
                 ))}

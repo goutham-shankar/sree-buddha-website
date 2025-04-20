@@ -35,7 +35,7 @@ export default function Home() {
     <News2/>
     {/* <Events2/> */}
     <Counts/>
-    <Research/>
+    {/* <Research/> */}
     <Affiliations/> 
     {/* <Footer/> */}
     </>

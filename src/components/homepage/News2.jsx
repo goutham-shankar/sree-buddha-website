@@ -11,7 +11,7 @@ import Carousel from '../carousal';
 import { useEffect, useState } from 'react';
 // import { resolveMotionValue } from 'framer-motion';
 
-export default function Events2() {
+export default function Events2( ) {
 
     const [slidesToShow, setSlidesToShow] = useState(3); // Default 3 slides for desktop
 
@@ -59,7 +59,7 @@ export default function Events2() {
     }, []);
 
     return (
-        <div className='carousal_section events events_bg' >
+        <div className='carousal_section events ' >
 
             <div className="events_container">
                 <div className="events_title_area">
@@ -70,7 +70,7 @@ export default function Events2() {
 
                 <div className="carousal_container">
 
-                <Carousel items={events} background="white" mediaField="News_media" />
+                <Carousel items={events} background="white" mediaField="News_media" type = 'news' />
 
                     {/* <Carousel
                         showThumbs={false}
