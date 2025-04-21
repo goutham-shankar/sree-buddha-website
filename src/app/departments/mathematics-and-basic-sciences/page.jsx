@@ -38,8 +38,8 @@ export default function ComputerScienceDepartment() {
         let imageUrls = filteredImages.flatMap(item =>
           item.images.map(img => {
             let smallImageUrl = img.formats?.small?.url
-              ? `http://${process.env.NEXT_PUBLIC_STRAPI}:1337${img.formats.small.url}`
-              : `http://${process.env.NEXT_PUBLIC_STRAPI}:1337${img.url}`; // Fallback if small version doesn't exist
+              ? `${process.env.NEXT_PUBLIC_STRAPI}${img.formats.small.url}`
+              : `${process.env.NEXT_PUBLIC_STRAPI}${img.url}`; // Fallback if small version doesn't exist
             return smallImageUrl;
           })
         );

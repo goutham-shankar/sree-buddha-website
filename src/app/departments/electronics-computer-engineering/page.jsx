@@ -20,7 +20,7 @@ export default function ComputerScienceDepartment() {
     useEffect(() => {
       async function fetchImages() {
         try {
-          const response = await fetch("http://${process.env.NEXT_PUBLIC_STRAPI}:1337/api/galleries?populate=*");
+          const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/galleries?populate=*`);
           const data = await response.json();
   
           console.log("API Response:", data); // Debugging output
