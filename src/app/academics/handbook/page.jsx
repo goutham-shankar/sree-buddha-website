@@ -6,7 +6,7 @@ function HandbookPage() {
   const [pdfFiles, setPdfFiles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const API_URL = 'http://13.51.85.192:1337/api/handbooks?populate=*';
+  const API_URL = `${process.env.NEXT_PUBLIC_STRAPI}/api/handbooks?populate=*`;
 
   useEffect(() => {
     const fetchPdfFiles = async () => {
@@ -23,7 +23,7 @@ function HandbookPage() {
         // Map the response to extract handbook names and PDF URLs
         const files = data.data.map((item) => ({
           name: item.attributes?.handbook_name || item.handbook_name,
-          path: `http://13.51.85.192:1337${item.attributes?.pdf_name[0]?.url || item.pdf_name[0].url}`,
+          path: `${process.env.NEXT_PUBLIC_STRAPI}${item.attributes?.pdf_name[0]?.url || item.pdf_name[0].url}`,
         }));
 
         setPdfFiles(files);

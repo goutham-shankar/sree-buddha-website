@@ -10,7 +10,7 @@ function Page() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://13.51.85.192:1337/api/academic-calenders?populate=*');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/academic-calenders?populate=*`);
         const data = await response.json();
         setCalendarData(data.data); // Extract data from the response
       } catch (error) {

@@ -34,7 +34,7 @@ export default function EventDetailPage() {
         const fetchEvent = async () => {
             try {
                 setLoading(true);
-                const response = await fetch(`http://13.51.85.192:1337/api/events?filters[documentId][$eq]=${eventId}&populate=Event_media`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/events?filters[documentId][$eq]=${eventId}&populate=Event_media`);
                 
                 if (!response.ok) {
                     throw new Error('Failed to fetch event');

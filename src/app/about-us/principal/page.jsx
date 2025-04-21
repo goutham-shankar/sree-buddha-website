@@ -38,7 +38,7 @@ function page() {
     const fetchPrincipalData = async () => {
       try {
         const response = await fetch(
-          "http://13.51.85.192:1337/api/principal?populate=*"
+          `${process.env.NEXT_PUBLIC_STRAPI}/api/principal?populate=*`
         );
         if (!response.ok) {
           throw new Error(`API request failed with status ${response.status}`);
@@ -79,7 +79,7 @@ function page() {
         content={principalData.Principal_Info}
         pic={
           principalData.Principal_image?.url
-            ? `http://13.51.85.192:1337${principalData.Principal_image.url}`
+            ? `${process.env.NEXT_PUBLIC_STRAPI}${principalData.Principal_image.url}`
             : "/images/principal.png"
         }
       />

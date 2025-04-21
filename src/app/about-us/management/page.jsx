@@ -15,7 +15,7 @@ const Management = () => {
     const fetchManagementData = async () => {
       try {
         const response = await fetch(
-          "http://13.51.85.192:1337/api/management?populate=*"
+          `${process.env.NEXT_PUBLIC_STRAPI}/api/management?populate=*`
         );
         if (!response.ok) {
           throw new Error(`API request failed with status ${response.status}`);
@@ -60,7 +60,7 @@ const Management = () => {
           content={managementData.Chairman_info}
           pic={
             managementData.Chairman_image?.url
-              ? `http://13.51.85.192:1337${managementData.Chairman_image.url}`
+              ? `${process.env.NEXT_PUBLIC_STRAPI}${managementData.Chairman_image.url}`
               : "/assets/images/chairperson.png"
           }
         />
@@ -73,7 +73,7 @@ const Management = () => {
           content={managementData.Vice_chairman_info}
           pic={
             managementData.Vice_chairman_image?.url
-              ? `http://13.51.85.192:1337${managementData.Vice_chairman_image.url}`
+              ? `${process.env.NEXT_PUBLIC_STRAPI}${managementData.Vice_chairman_image.url}`
               : "/assets/images/DharmaRajan.png"
           }
         />
@@ -86,7 +86,7 @@ const Management = () => {
           content={managementData.Secretary_info}
           pic={
             managementData.Secretary_image?.url
-              ? `http://13.51.85.192:1337${managementData.Secretary_image.url}`
+              ? `${process.env.NEXT_PUBLIC_STRAPI}${managementData.Secretary_image.url}`
               : "/assets/images/VPrasad.png"
           }
         />
@@ -99,7 +99,7 @@ const Management = () => {
           content={managementData.Joint_secretary_info}
           pic={
             managementData.Joint_secretary_image?.url
-              ? `http://13.51.85.192:1337${managementData.Joint_secretary_image.url}`
+              ? `${process.env.NEXT_PUBLIC_STRAPI}${managementData.Joint_secretary_image.url}`
               : "/assets/images/BUdhayan.png"
           }
         />
@@ -112,7 +112,7 @@ const Management = () => {
           content={managementData.Treasurer_info}
           pic={
             managementData.Treasurer_image?.url
-              ? `http://13.51.85.192:1337${managementData.Treasurer_image.url}`
+              ? `${process.env.NEXT_PUBLIC_STRAPI}${managementData.Treasurer_image.url}`
               : "/assets/images/ASunilKumar.png"
           }
         />

@@ -20,7 +20,7 @@ export default function GalleryPage() {
   useEffect(() => {
     const fetchGalleryData = async () => {
       try {
-        const response = await fetch('http://13.51.85.192:1337/api/galleries?populate=*');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/galleries?populate=*`);
         const data = await response.json();
         setGalleryData(data.data);
         setIsLoading(false);
@@ -37,7 +37,7 @@ export default function GalleryPage() {
   const transformedImages = galleryData.flatMap(item => 
     item.images.map(img => ({
       id: img.id,
-      src: `http://13.51.85.192:1337${img.url}`,
+      src: `${process.env.NEXT_PUBLIC_STRAPI}${img.url}`,
       alt: img.name || 'Gallery image',
       category: item.Department,
       date: new Date(item.date).toLocaleDateString('en-US', {

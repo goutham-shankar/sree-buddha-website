@@ -33,7 +33,7 @@ export default function NewsDetailPage() {
         const fetchNews = async () => {
             try {
                 setLoading(true);
-                const response = await fetch(`http://13.51.85.192:1337/api/newss?filters[documentId][$eq]=${newsId}&populate=News_media`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/newss?filters[documentId][$eq]=${newsId}&populate=News_media`);
                 
                 if (!response.ok) {
                     throw new Error('Failed to fetch news');
@@ -101,7 +101,7 @@ export default function NewsDetailPage() {
         }
         
         // Fallback to direct URL 
-        return `http://13.51.85.192:1337${news.News_media.url}`;
+        return `${process.env.NEXT_PUBLIC_STRAPI}${news.News_media.url}`;
     };
     
     const imageUrl = getImageUrl();
