@@ -4,7 +4,11 @@ export default function ComputerScienceDepartmentFacilities() {
     return (
         <div>
 
+
             <h1 class="heading1">Department of Electrical & Electronics Engineering</h1>
+
+            {
+            /* 
 
             <h2 class="heading2">Facilities</h2>
             <p>
@@ -180,7 +184,7 @@ export default function ComputerScienceDepartmentFacilities() {
             </p>
             <p>
                 <strong>Technical Staff:</strong> Mr. Sudheesh M S
-            </p>
+            </p> */}
 
 
         </div>
