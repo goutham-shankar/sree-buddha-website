@@ -12,7 +12,7 @@ const [images, setImages] = useState([]);
 useEffect(() => {
   async function fetchImages() {
     try {
-      const response = await fetch("http://13.51.85.192:1337/api/galleries?populate=*");
+      const response = await fetch("http://${process.env.NEXT_PUBLIC_STRAPI}:1337/api/galleries?populate=*");
       const data = await response.json();
 
       console.log("API Response:", data); // Debugging output
@@ -29,8 +29,8 @@ useEffect(() => {
       let imageUrls = filteredImages.flatMap(item =>
         item.images.map(img => {
           let smallImageUrl = img.formats?.small?.url
-            ? `http://13.51.85.192:1337${img.formats.small.url}`
-            : `http://13.51.85.192:1337${img.url}`; // Fallback if small version doesn't exist
+            ? `http://${process.env.NEXT_PUBLIC_STRAPI}:1337${img.formats.small.url}`
+            : `http://${process.env.NEXT_PUBLIC_STRAPI}:1337${img.url}`; // Fallback if small version doesn't exist
           return smallImageUrl;
         })
       );

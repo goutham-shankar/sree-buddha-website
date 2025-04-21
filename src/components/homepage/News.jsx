@@ -128,7 +128,7 @@ export default function News() {
     const fetchNewsData = async () => {
       try {
         const response = await fetch(
-          "http://13.51.85.192:1337/api/newss?populate=News_media"
+          "http://${process.env.NEXT_PUBLIC_STRAPI}:1337/api/newss?populate=News_media"
         );
         if (!response.ok) {
           throw new Error(`API request failed with status ${response.status}`);
@@ -227,9 +227,9 @@ export default function News() {
       console.log(index)
       // Get the large format image URL if available
       const imageUrl = newsItem.News_media?.formats?.large?.url
-        ? `http://13.51.85.192:1337${newsItem.News_media.formats.large.url}`
+        ? `${process.env.NEXT_PUBLIC_STRAPI}${newsItem.News_media.formats.large.url}`
         : newsItem.News_media?.url
-          ? `http://13.51.85.192:1337${newsItem.News_media.url}`
+          ? `${process.env.NEXT_PUBLIC_STRAPI}${newsItem.News_media.url}`
           : "/assets/images/home/events_sample.png";
 
       return (

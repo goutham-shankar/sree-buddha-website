@@ -19,7 +19,7 @@ export default function ComputerScienceLayout({ children }) {
         ["Achievements", "achievements"],
         ["placements", "placements"],
         ["Faculty", "faculty"],
-        ["hod", "hod"],
+        ["HOD", "hod"],
         ["Facilities", "facilities"],
         ["Activities", "activities"],
         ["Associations and Clubs", "associations-and-clubs"],

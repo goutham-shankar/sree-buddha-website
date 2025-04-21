@@ -98,19 +98,19 @@ export default function EventDetailPage() {
         
         // Try to get medium format first
         if (event.Event_media.formats?.medium?.url) {
-            return `http://13.51.85.192:1337${event.Event_media.formats.medium.url}`;
+            return `${process.env.NEXT_PUBLIC_STRAPI}${event.Event_media.formats.medium.url}`;
         }
         // Fallback to small format
         else if (event.Event_media.formats?.small?.url) {
-            return `http://13.51.85.192:1337${event.Event_media.formats.small.url}`;
+            return `${process.env.NEXT_PUBLIC_STRAPI}${event.Event_media.formats.small.url}`;
         }
         // Fallback to thumbnail
         else if (event.Event_media.formats?.thumbnail?.url) {
-            return `http://13.51.85.192:1337${event.Event_media.formats.thumbnail.url}`;
+            return `${process.env.NEXT_PUBLIC_STRAPI}${event.Event_media.formats.thumbnail.url}`;
         }
         // Last resort: use the original URL if available
         else if (event.Event_media.url) {
-            return `http://13.51.85.192:1337${event.Event_media.url}`;
+            return `${process.env.NEXT_PUBLIC_STRAPI}${event.Event_media.url}`;
         }
         
         return null;

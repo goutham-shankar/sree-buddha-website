@@ -372,7 +372,7 @@ const ApplicationForm = () => {
 
                   // Submit to API
         try {
-          const response = await fetch('http://13.51.85.192:1337/api/btech-admissions', {
+          const response = await fetch('http://${process.env.NEXT_PUBLIC_STRAPI}:1337/api/btech-admissions', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

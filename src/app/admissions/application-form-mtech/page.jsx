@@ -160,7 +160,7 @@ const ApplicationForm = () => {
   //         console.log(JSON.stringify(jsonData))
          
     
-  //         const response = await fetch('http://13.51.85.192:1337/api/mtech-admissions', {
+  //         const response = await fetch('http://${process.env.NEXT_PUBLIC_STRAPI}:1337/api/mtech-admissions', {
   //           method: 'POST',
   //           headers: {
   //             'Content-Type': 'application/json' , 
@@ -189,6 +189,8 @@ const ApplicationForm = () => {
     e.preventDefault();
     if (validateForm() || true) {
       try {
+
+        cos
         const photo = document.getElementById("photo").files[0];
         const signature = document.getElementById("signature").files[0];
   
@@ -260,7 +262,7 @@ const ApplicationForm = () => {
         console.log("Sending to Strapi:", JSON.stringify(strapiData));
       
         // Send to Strapi with properly formatted data
-        const response = await fetch('http://13.51.85.192:1337/api/mtech-admissions', {
+        const response = await fetch('http://${process.env.NEXT_PUBLIC_STRAPI}:1337/api/mtech-admissions', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json', 
