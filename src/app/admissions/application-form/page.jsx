@@ -281,35 +281,29 @@ const ApplicationForm = () => {
       setIsSubmitting(true);
       
       try {
-        // Create JSON object for API submission
 
-        const file1 = document.getElementById("photo").files[0];
-        const parentSignature =  document.getElementById("parentSignature").files[0];
-        const applicantSignature = document.getElementById("applicantSignature").files[0];
+      const file1 = formData.photo;
+      const parentSignature = formData.parentSignature;
+      const applicantSignature = formData.applicantSignature;
+      // Create a new FormData and append files with correct field names
+      const file_upload_form_data = new FormData();
+      if (file1) file_upload_form_data.append('files', file1);
+      if (parentSignature) file_upload_form_data.append('files', parentSignature);
+      if (applicantSignature) file_upload_form_data.append('files', applicantSignature);
 
-
-        var file_upload_form_data = new FormData();
-        file_upload_form_data.append("photo", file1)
-        file_upload_form_data.append("parentSignature" , parentSignature)
-        file_upload_form_data.append("applicantSignature" , applicantSignature);
-
-        console.log(  file1 , parentSignature , applicantSignature);
-
-
-
-        fetch(`${process.env.NEXT_PUBLIC_FILE_UPLOAD_BACKEND}/upload`, {
+        await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/upload`, {
           method : "POST",
           body: file_upload_form_data
         }).then((response)=>{
           return response.json()
         }).then(async (data)=>{
-          console.log(data)
+          console.log(data) 
 
-          let photo_link = data.photo_link ;
-          let parentSignature_link = data.parent_signature_link;
-          let applicant_signature_link = data.applicant_signature_link ;
+          let photo_link = process.env.NEXT_PUBLIC_STRAPI + data[0]['url'] ;
+          let parentSignature_link = process.env.NEXT_PUBLIC_STRAPI + data[1]['url'];
+          let applicant_signature_link = process.env.NEXT_PUBLIC_STRAPI + data[2]['url'] ;
 
-          console.log( photo_link , parentSignature_link , applicant_signature_link)
+          console.log(photo_link , parentSignature_link , applicant_signature_link)
 
           const jsonData = {
             data: {
@@ -359,8 +353,6 @@ const ApplicationForm = () => {
               branchPrefered: formData.branchPreference,
               admissionType: formData.admissionType, 
 
-
-
               photo_link :photo_link, 
               parent_signature_link : parentSignature_link ,
               applicant_signature_link : applicant_signature_link
@@ -372,7 +364,7 @@ const ApplicationForm = () => {
 
                   // Submit to API
         try {
-          const response = await fetch('http://${process.env.NEXT_PUBLIC_STRAPI}:1337/api/btech-admissions', {
+          const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/btech-admissions`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
