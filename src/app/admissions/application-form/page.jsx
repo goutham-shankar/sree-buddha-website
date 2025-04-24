@@ -299,12 +299,6 @@ const ApplicationForm = () => {
         }).then(async (data)=>{
           console.log(data) 
 
-          let photo_link = process.env.NEXT_PUBLIC_STRAPI + data[0]['url'] ;
-          let parentSignature_link = process.env.NEXT_PUBLIC_STRAPI + data[1]['url'];
-          let applicant_signature_link = process.env.NEXT_PUBLIC_STRAPI + data[2]['url'] ;
-
-          console.log(photo_link , parentSignature_link , applicant_signature_link)
-
           const jsonData = {
             data: {
               name: formData.name,
@@ -353,10 +347,9 @@ const ApplicationForm = () => {
               branchPrefered: formData.branchPreference,
               admissionType: formData.admissionType, 
 
-              photo_link :photo_link, 
-              parent_signature_link : parentSignature_link ,
-              applicant_signature_link : applicant_signature_link
-              
+              photo: data[0]['id'],
+              parentSignature: data[1]['id'],
+              applicantSignature: data[2]['id'],   
             }
           };
           
@@ -415,18 +408,7 @@ const ApplicationForm = () => {
           console.error('API error:', apiError);
           throw apiError; // Re-throw to be caught by the outer catch block
         }
-
-          
-
         })
-
-        
-
-       
-
-        
-
-        
       } catch (error) {
         console.error('Submission error:', error);
         
