@@ -107,7 +107,7 @@ export default function Navbar() {
     {
       name: "Admissions",
       links: [
-        
+
         { name: "Undergraduate", link: "/admissions/undergraduate" },
         { name: "Postgraduate", link: "/admissions/postgraduate" },
         { name: "PhD Research", link: "/admissions/phd_research" },
@@ -203,28 +203,35 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="logo_section">
-        <Link href="/">
+        <Link
+          href={{
+            pathname: '/'
+
+          }}>
+
           <img src={"/assets/images/sree_buddha_logo.png"} alt="" />
         </Link>
       </div>
       <div className="navbar_right">
         <div className="important_links">
-          <a href="/admissions/international2" className="important_link">
+          <Link href="/admissions/international2" className="important_link">
             {" "}
             <img
               src="/assets/images/home/international_admissions.png"
               alt=""
             />{" "}
             International Admissions
-          </a>
-          <a href="/academics/courses" className="important_link">
+
+          </Link>
+
+          <Link href="/academics/courses" className="important_link">
             {" "}
             <img src="/assets/images/home/careers.png" alt="" /> Courses
-          </a>
-          <a href="/fee-payment" className="important_link">
+          </Link>
+          <Link href="/fee-payment" className="important_link">
             {" "}
             <img src="/assets/images/home/fees.png" alt="" /> Fees Payment
-          </a>
+          </Link>
           <a
             href="https://ktu.edu.in/"
             className="important_link last_link"
@@ -234,9 +241,9 @@ export default function Navbar() {
             <img src="/assets/images/home/university.png" alt="" /> University
           </a>
 
-          <a href="/academics/courses" className="important_links_button">
-            admissions
-          </a>
+          <Link href="/academics/courses" className="important_links_button">
+            Admissions
+          </Link>
           {/* <a href="">Result Analysis</a> */}
         </div>
 
@@ -247,21 +254,20 @@ export default function Navbar() {
               <div className={`navbar_menu `} key={index}>
                 <span>{menu.name}</span>
                 <div
-                  className={`submenu ${
-                    menu.side == "left" ? "towards_left" : ""
-                  }`}
+                  className={`submenu ${menu.side == "left" ? "towards_left" : ""
+                    }`}
                 >
                   <ul>
                     {menu.links.map((menul2, index2) => {
                       if (menul2.link != undefined) {
                         return (
-                          <a
+                          <Link
                             className="submenu_link"
                             href={menul2.link}
                             key={index2}
                           >
                             {menul2.name}
-                          </a>
+                          </Link>
                         );
                       } else {
                         return (

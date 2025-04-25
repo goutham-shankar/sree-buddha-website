@@ -47,10 +47,11 @@ export default function LandingPage() {
       </div>
 
       <div className="landing_page_content">
-        <h3 className="landing_page_title1" data-aos="fade-right" data-aos-duration="600">SREE BUDDHA</h3>
-        <h3 className="landing_page_title2" data-aos="fade-right" data-aos-duration="600">College Of Engineering , Pattoor</h3>
+        <h3 className="landing_page_title1 text-white" data-aos="fade-right" data-aos-duration="600">SREE BUDDHA</h3>
+        <h3 className="landing_page_title2 text-white" data-aos="fade-right" data-aos-duration="600">College Of Engineering , Pattoor</h3>
         <h3 className="landing_page_title3" data-aos="fade-right" data-aos-duration="600" >AUTONOMOUS</h3>
       </div>
+      
     </div>
   )
 }
