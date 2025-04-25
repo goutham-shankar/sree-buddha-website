@@ -172,3 +172,63 @@ margin-right: 2%;
   }
   
 }
+
+/* Add these to your existing style.css file */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Smooth scroll behavior for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Transition effects for facility cards */
+.facility-item {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animations for facility expansion */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply animation to expanded content */
+[id^="facility-"] > div:last-child {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Add focus styles for accessibility */
+button:focus {
+  outline: 2px solid rgba(146, 64, 14, 0.5);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .bg-yellow-900 {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  button {
+    display: none !important;
+  }
+  
+  .shadow-md, .shadow-lg, .shadow-sm {
+    box-shadow: none !important;
+  }
+  
+  .sticky {
+    position: static !important;
+  }
+}
