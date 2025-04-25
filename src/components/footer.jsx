@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black text-white pt-12 pb-6">
+    <footer className="bg-black  list-none text-white pt-12 pb-6">
       <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-12 gap-y-10">
           {/* Logo and Address Section */}
@@ -59,7 +59,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-5 text-center md:text-left after:content-[''] after:block after:w-12 after:h-1 after:bg-yellow-600 after:mt-1 after:mx-auto md:after:mx-0">
               Links
             </h3>
-            <ul className="space-y-3 text-center md:text-left">
+            <ul className="list-none space-y-3 text-center md:text-left">
               <li><a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors text-sm">Students</a></li>
               <li><a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors text-sm">Staff</a></li>
               <li><a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors text-sm">SBCE Moodle</a></li>
