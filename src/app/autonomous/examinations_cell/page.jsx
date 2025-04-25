@@ -11,7 +11,7 @@ export default function Page() {
       title: "First Series Examination – Oct 2024 Notification",
       date: "2024-10-01",
       type: "Series Exam",
-      icon: "📝",
+      icon: "",
       important: true
     },
     {
@@ -20,7 +20,7 @@ export default function Page() {
       title: "Retest – Nov 2024 Notification",
       date: "2024-11-15",
       type: "Retest",
-      icon: "🔄"
+      icon: ""
     },
     {
       id: 3,
@@ -28,16 +28,16 @@ export default function Page() {
       title: "End Semester Registration Notification – Jan 2025",
       date: "2025-01-05",
       type: "Registration",
-      icon: "📋",
+      icon: "",
       important: true
     },
     {
       id: 4,
       path: "/assets/documents/autonomous/examination_cell/S1-PG-END-SEMESTER-EXAMINATION-NOTIFICATION.pdf",
       title: "S1 PG End Semester Examination Notification – Jan 2025",
-      date: "2025-01-10",
+      date: "2025-10-1",
       type: "End Semester",
-      icon: "📚"
+      icon: ""
     }
   ];
 
@@ -47,21 +47,21 @@ export default function Page() {
       path: "/assets/documents/autonomous/examination_cell/APPLICATION-FORM-OF-ATTENDANCE.pdf",
       title: "Application Form of Attendance",
       description: "Form for attendance related matters",
-      icon: "📊"
+      icon: ""
     },
     {
       id: 2,
       path: "/assets/documents/autonomous/examination_cell/APPLICATION-FORM-TO-AVAIL-THE-SERVICE-OF-SCRIBE.pdf",
       title: "Application Form to Avail the Service of Scribe",
       description: "Special arrangements for examinations",
-      icon: "✍️"
+      icon: ""
     },
     {
       id: 3,
       path: "/assets/documents/autonomous/examination_cell/RETEST-FORM-2024.pdf",
       title: "Retest Form – 2024",
       description: "Application for retest examination",
-      icon: "📑"
+      icon: ""
     }
   ];
 
@@ -100,7 +100,7 @@ export default function Page() {
       <div className="container mx-auto px-4 py-16">
         {/* Notifications Section */}
         <section className="mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="text-3xl font-bold text-gray-900 mb-8"
@@ -126,11 +126,7 @@ export default function Page() {
                         <h3 className="text-lg font-semibold text-gray-900">{notification.title}</h3>
                       </div>
                     </div>
-                    {notification.important && (
-                      <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
-                        Important
-                      </span>
-                    )}
+
                   </div>
                   <div className="flex items-center justify-between">
                     <p className="text-sm text-gray-500">
@@ -150,7 +146,7 @@ export default function Page() {
 
         {/* Forms Section */}
         <section>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="text-3xl font-bold text-gray-900 mb-8"
@@ -184,32 +180,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Contact Information */}
-        <section className="mt-16">
-          <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Contact Examination Cell</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
-                  <span className="text-yellow-900">📧</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Email</h4>
-                  <p className="text-gray-600">examcell@sbce.ac.in</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
-                  <span className="text-yellow-900">📞</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Phone</h4>
-                  <p className="text-gray-600">+91 XXX XXX XXXX</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
       </div>
     </div>
   );

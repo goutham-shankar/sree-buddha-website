@@ -101,13 +101,7 @@ export default function Page() {
             </a>
           </div>
 
-          {/* Current time display */}
-          <div className="mt-8 text-yellow-100 animate-fade-in-up-delay-3">
-            <p className="text-sm">Current Time (UTC):</p>
-            <div className="font-mono text-lg">
-              {new Date().toISOString().slice(0, 19).replace('T', ' ')}
-            </div>
-          </div>
+         
         </div>
 
         {/* Right side - Interactive element */}

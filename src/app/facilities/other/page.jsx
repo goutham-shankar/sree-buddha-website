@@ -351,59 +351,7 @@ export default function OtherFacilitiesPage() {
           ))}
         </div>
         
-        {/* Contact Section */}
-        <div className="mt-16 bg-yellow-50 rounded-xl p-8 border border-yellow-100 shadow-sm">
-          <h2 className="text-2xl font-bold text-yellow-900 mb-6">Contact Facilities Management</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
-              <div className="flex items-start">
-                <div className="bg-amber-100 p-3 rounded-lg text-yellow-900 mr-4">
-                  <Icon.Mail />
-                </div>
-                <div>
-                  <h3 className="font-medium text-gray-900 mb-1">Email</h3>
-                  <a href="mailto:facilities@college.edu" className="text-yellow-900 hover:text-yellow-700">
-                    facilities@college.edu
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
-              <div className="flex items-start">
-                <div className="bg-amber-100 p-3 rounded-lg text-yellow-900 mr-4">
-                  <Icon.Phone />
-                </div>
-                <div>
-                  <h3 className="font-medium text-gray-900 mb-1">Phone</h3>
-                  <a href="tel:+914812285678" className="text-yellow-900 hover:text-yellow-700">
-                    +91 481 228 5678
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
-              <div className="flex items-start">
-                <div className="bg-amber-100 p-3 rounded-lg text-yellow-900 mr-4">
-                  <Icon.MapPin />
-                </div>
-                <div>
-                  <h3 className="font-medium text-gray-900 mb-1">Location</h3>
-                  <p className="text-gray-700">Administrative Block, Ground Floor</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-6 text-center">
-            <p className="text-gray-700">
-              For facility reservations, maintenance requests, or any other inquiries, please contact the Facilities Management Office.
-            </p>
-          </div>
         </div>
-      </div>
       
       
     </div>

@@ -37,7 +37,7 @@ export default function Footer() {
               <li><a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors text-sm">NBA</a></li>
               <li><a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors text-sm">NAAC</a></li>
               <li><a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors text-sm">AICTE EoA</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors text-sm">Audit Report</a></li>
+              
             </ul>
           </div>
 
