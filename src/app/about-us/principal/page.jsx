@@ -196,8 +196,8 @@ function Principal() {
             
             {/* Contact Links that Appear on Hover */}
             <div className="flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pt-2">
-              <a href="mailto:principal@college.edu" className="text-white hover:text-yellow-200 flex items-center gap-2 text-sm">
-                <FiMail /> principal@college.edu
+              <a href="mailto: principal@sbce.ac.in" className="text-white hover:text-yellow-200 flex items-center gap-2 text-sm">
+                <FiMail /> principal@sbce.ac.in
               </a>
               <a href="tel:+91-1234567890" className="text-white hover:text-yellow-200 flex items-center gap-2 text-sm">
                 <FiPhone /> +91-1234-567890
@@ -488,7 +488,7 @@ function Principal() {
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">Email</div>
-                  <a href="mailto:principal@college.edu" className="text-yellow-900 hover:underline">principal@college.edu</a>
+                  <a href="mailto: principal@sbce.ac.in" className="text-yellow-900 hover:underline"> principal@sbce.ac.in</a>
                 </div>
               </div>
               
@@ -498,7 +498,7 @@ function Principal() {
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">Phone</div>
-                  <a href="tel:+911234567890" className="text-yellow-900 hover:underline">+91 1234-567890</a>
+                  <a href="tel:+918590332584" className="text-yellow-900 hover:underline">+91 8590332548</a>
                 </div>
               </div>
               
@@ -514,17 +514,7 @@ function Principal() {
             </div>
           </div>
           
-          <div className="bg-yellow-100 p-8 flex items-center justify-center">
-            <div className="text-center">
-              <h4 className="text-xl font-medium text-yellow-900 mb-4">Schedule an Appointment</h4>
-              <button className="bg-yellow-900 text-white px-6 py-3 rounded-lg hover:bg-yellow-800 transition-colors duration-300 flex items-center gap-2 mx-auto">
-                <FiExternalLink /> Request Appointment
-              </button>
-              <p className="mt-4 text-sm text-yellow-700">
-                Please schedule at least 2 days in advance
-              </p>
-            </div>
-          </div>
+          
         </div>
       </motion.div>
     </motion.div>

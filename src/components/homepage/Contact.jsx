@@ -23,8 +23,7 @@ function Contact() {
                         </div>
                         <h3 className="text-white text-lg font-medium mb-2">Call Us</h3>
                         <p className="text-gray-400 mb-3 text-sm">Available Monday-Friday, 9am-5pm</p>
-                        <a href="tel:+914792817941" className="text-yellow-500 hover:underline block">+91 479 2817941</a>
-                        <a href="tel:+914792815700" className="text-yellow-500 hover:underline block mt-1">+91 479 2815700</a>
+                        <a href="tel:+919446014317" class="text-yellow-500 hover:underline text-sm">PH: 9446014317</a>
                     </div>
 
                     {/* Email Contact */}

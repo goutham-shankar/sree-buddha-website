@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="flex justify-center md:justify-start">
               <img
-                src="/assets/images/sree_buddha_logo.png"
+                src="/assets/images/logo-removebg-preview.png"
                 alt="Sree Buddha College of Engineering"
                 className="h-20 w-auto"
               />
