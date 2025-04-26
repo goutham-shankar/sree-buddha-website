@@ -40,7 +40,7 @@ export default function CoursesPage() {
       description: "Study of computers and computational systems including software design and development.",
       icon: "💻",
       details: "Our Computer Science & Engineering program emphasizes both theoretical foundations and practical applications. Students work on real-world projects in areas like software development, data analytics, cybersecurity, and more.",
-      intake: 120,
+      intake: 180,
       duration: "4 Years",
       eligibility: "10+2 with Physics, Chemistry and Mathematics"
     },
@@ -50,7 +50,7 @@ export default function CoursesPage() {
       description: "Design and development of electronic devices, circuits, communication equipment and systems.",
       icon: "📡",
       details: "ECE program offers specialization in communication systems, VLSI design, signal processing, and embedded systems. Our well-equipped laboratories provide practical exposure to various domains of electronics.",
-      intake: 120,
+      intake: 30,
       duration: "4 Years",
       eligibility: "10+2 with Physics, Chemistry and Mathematics"
     },
@@ -60,7 +60,7 @@ export default function CoursesPage() {
       description: "Study of electrical systems, electronics, and power engineering principles.",
       icon: "⚡",
       details: "Our EEE program covers power systems, control engineering, electric drives, and renewable energy. The curriculum is designed with industry needs in focus, emphasizing practical skills and problem-solving.",
-      intake: 60,
+      intake: 30,
       duration: "4 Years",
       eligibility: "10+2 with Physics, Chemistry and Mathematics"
     },
@@ -70,7 +70,7 @@ export default function CoursesPage() {
       description: "Design, analysis, and manufacturing of mechanical systems.",
       icon: "⚙️",
       details: "Mechanical Engineering at Sree Buddha covers thermodynamics, manufacturing processes, CAD/CAM, robotics, and material science. Our workshops and labs offer practical training on industry-standard equipment.",
-      intake: 120,
+      intake: 60,
       duration: "4 Years",
       eligibility: "10+2 with Physics, Chemistry and Mathematics"
     },
@@ -80,7 +80,7 @@ export default function CoursesPage() {
       description: "Application of engineering principles to biological and chemical processes.",
       icon: "🧬",
       details: "Our Biotechnology program integrates engineering with biological sciences, covering bioprocess engineering, genetic engineering, and pharmaceutical technology with state-of-the-art laboratory facilities.",
-      intake: 60,
+      intake: 30,
       duration: "4 Years",
       eligibility: "10+2 with Physics, Chemistry and Biology/Mathematics"
     },
@@ -90,7 +90,7 @@ export default function CoursesPage() {
       description: "Study of food science, processing, preservation, and packaging technologies.",
       icon: "🍲",
       details: "Food Technology program focuses on food processing, preservation, quality control, and product development with hands-on experience in our modern food processing and analysis laboratories.",
-      intake: 60,
+      intake: 30,
       duration: "4 Years",
       eligibility: "10+2 with Physics, Chemistry and Mathematics/Biology"
     },
@@ -111,7 +111,7 @@ export default function CoursesPage() {
       description: "Integration of electronics engineering with computer systems.",
       icon: "🔌",
       details: "This interdisciplinary program bridges electronic hardware and computer software, covering embedded systems, IoT, computer architecture, and digital design with practical projects.",
-      intake: 60,
+      intake: 30,
       duration: "4 Years",
       eligibility: "10+2 with Physics, Chemistry and Mathematics",
       isNew: true
