@@ -7,14 +7,15 @@ import "./style.css"
 
 // Initialize Poppins font
 const poppins = Poppins({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
+    weight: ['400', '500', '600', '700'],
+    subsets: ['latin'],
+    display: 'swap',
 })
 
 export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
+        ["sb.jpg", "Dr.S Sureshbabu", "Ph.D", "Professor and Dean", "IT enabled services"],
         ["cs_f1.jpg", "Dr.Sujith Kumar P.S", "M.E.,Ph.D", "Professor and Dean", "Mobile adhoc networks"],
         ["cs_f2.jpg", "Dr. S.V. Annlin Jeba", "M.E, Ph.D", "Professor and HoD", "Wireless Sensor Network"],
         ["cs_f3.jpg", "Dr. Anil A.R", "M.E, Ph.D", "Associate Professor", "Image Processing /Machine Learning"],
@@ -23,18 +24,24 @@ export default function ComputerScienceDepartmentFaculty() {
         ["cs_f6.jpg", "Ms. Lakshmi S (On Leave)", "M.Tech", "Assistant Professor", "Technology Management / Machine Learning"],
         ["cs_f7.jpg", "Ms.Reshmi S", "M.E", "Assistant professor", "Computer Science and Engineering"],
         ["cs_f8.jpg", "Ms. Arya Raj S", "M.Tech", "Assistant professor", "Computer and Information Science"],
-        ["cs_f8.jpg", "Ms.Supriya L P", "M.E", "Assistant Professor", "Computer Science & Engg./ AI & Neural Networks"],
-        ["cs_f10.jpg", "ATHIRA SANKAR", "M.Tech", "Assistant Professor", "DATA MINING"],
+        ["cs_f9.jpg", "Ms.Supriya L P", "M.E", "Assistant Professor", "Computer Science & Engg./ AI & Neural Networks"],
+
         ["cs_f11.jpg", "Arun Kumar", "M.E", "Assistant Professor", "Software Engineering, Programming Methodologies"],
         ["cs_f12.jpg", "Dr. ANJU J PRAKASH", "M.Tech, Ph.D", "Assistant Professor", "Data Mining, Machine Learning"],
         ["cs_f13.jpg", "Parvathy S. Kurup", "M.Tech", "Assistant Professor", "Machine Learning, Data Mining"],
         ["cs_f14.jpg", "DHANUNATH R", "M.Tech, Ph.D (doing)", "Assistant Professor", "Natural Language Processing"],
-        ["cs_f15.jpg", "Anju Viswam", "M.Tech", "Assistant Professor", "Web Development"]
+        ["cs_f15.jpg", "Anju Viswam", "M.Tech", "Assistant Professor", "Web Development"],
+
+        ["chinchu-1.jpg", "CHINCHU M S", "M.Tech, Ph.D (doing)", "Assistant Professor", "Deep learning"],
+        ["ashji.jpg", "ASHJI S RAJ", "M.Tech", "Assistant Professor", "Cyber security"],
+        ["geethu.jpg", "GEETHUMOL P.V", "M.Tech", "Assistant Professor", "Computer Communication"],
+        ["jyothi.jpg", "JYOTHI B", "M.Tech", "Assistant Professor", "Computer Science and Engineering"],
+        ["ancy.jpg", "ANCY Y DAS", "M.Tech", "Assistant Professor", "Computer Science and Engineering"]
     ]
 
     return (
         <div className={`cs_department_faculty ${poppins.className}`}>
-            
+
             <h2 className="page_heading">Computer Science Department Faculty</h2>
 
             <table className="faculty_table_desktop">
@@ -49,8 +56,8 @@ export default function ComputerScienceDepartmentFaculty() {
 
                     {faculty.map((singleFaculty, index) => (
                         <tr key={index}>
-                            <td> 
-                                <img src={`/assets/images/departments/faculty/cs/${singleFaculty[0]}`} alt={singleFaculty[1]} /> 
+                            <td>
+                                <img src={`/assets/images/departments/faculty/cs/${singleFaculty[0]}`} alt={singleFaculty[1]} />
                             </td>
                             <td>{singleFaculty[1]}</td>
                             <td>{singleFaculty[2]}</td>

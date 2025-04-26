@@ -12,7 +12,6 @@ export default function ComputerScienceDepartment() {
       "/images/cs-dept-building/cs-dept-building2.png",
     ];
     
-
     const [images, setImages] = useState([]);
 
     useEffect(() => {
@@ -50,10 +49,6 @@ export default function ComputerScienceDepartment() {
       fetchImages();
     }, []);
 
-
-
-
-
     return (
       <div className="cs-dept-container">
         <header className="cs-dept-header">
@@ -82,27 +77,23 @@ export default function ComputerScienceDepartment() {
           <div className="cs-dept-profile-content">
             <div className="cs-dept-profile-text">
               <p>
-                The department of Computer Science and Engineering was started in Sree
-                Buddha College of Engineering in the year 2002. The department currently offers the programmes B.Tech. in computer
-                science and Engineering with sanctioned intake of 240, B.Tech Computer Science
-                and Engineering with specialization in Artificial Intelligence and Machine
-                Learning, sanctioned intake 60, M.Tech. in Computer Science and Engineering,
-                and Ph.D. programmes.
+                Sree Buddha College of Engineering provides world-class infrastructure, state-of-the-art facilities, and an academic 
+                ambience that suit the requirements of the dynamic and highly competitive global environment. In this era of 
+                Information Technology, this institution offers courses in Computer Science and Engineering with the objective of imparting 
+                quality education to equip students with a solid and thorough understanding of the fundamentals and core subjects of Computer Engineering.
               </p>
                 
               <p>
-                The department plays a crucial role in equipping students
-                with current and relevant knowledge in computer Science and Engineering through
-                various opportunities, including internships, hands-on training, bridge
-                courses, add-on courses, and workshops to prepare them to meet the demands of
-                the industry. In addition to promoting academic excellence, the department frequently
-                organizes a variety of activities, including hackathons, faculty development
-                programs, industry interactions, and social events which provides a platform
-                for students and faculty to engage with distinguished researchers and explore
-                emerging trends in computer science. The department is accredited by NBA since
-                November 2019. In alignment with outcome-based learning and
-                the National Educational Policy, the department establishes high standards for
-                its curriculum and industry engagement.
+                The Department of Computer Science and Engineering was established in the year 2002. At present the sanctioned intake is 60 
+                with a provision of admitting six diploma holders in the third semester under lateral entry scheme. The department also offers 
+                M.Tech programme specialized in Computer Science and Engineering from the year 2011. The sanctioned intake at present is 18. 
+                This department is accredited by NBA since November 2019.
+              </p>
+
+              <p>
+                The department has well-experienced faculty with postgraduate and doctoral qualifications from prestigious institutions with 
+                many publications to their credit. The faculty members regularly update their skills by attending and organizing refresher 
+                courses in their areas of specialization.
               </p>
             </div>
           </div>
@@ -114,57 +105,51 @@ export default function ComputerScienceDepartment() {
             <div className="highlights-card">
               <h3 className="highlight-category">Academic Excellence & Research</h3>
               <ul>
-                <li> Strong faculty expertise in core computing areas </li>
-                <li>Cutting-edge research in emerging technologies; like Artificial 
-                Intelligence, Internet of Things, Machine Learning and Deep Learning </li>
+                <li>Accredited by NBA since November 2019</li>
+                <li>Faculty with postgraduate and doctoral qualifications from prestigious institutions</li>
+                <li>Regular publications in reputed journals and conferences</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">Industry Exposure and Research Collaborations</h3>
+              <h3 className="highlight-category">Student Organizations</h3>
               <ul>
-                {/* <li>Students gain industry insights through seminars, workshops, and internships at NIT, IIT etc and reputed industries like,  ZETA Biosystem Bangalore, Biocon Bangalore, CFTRI Mysore , Synthite chemicals Kochi etc. Partnerships with NIIST, IIPM, NIFTEM, CTCRI Trivandrum, CFRD Cochin etc to enhance research opportunities</li> */}
-                {/* <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li> */}
-                <li>Strong partnerships with tech companies for internships, projects, and placements</li>
-                <li> Presence of technology incubators and startup ecosystems for entrepreneurship</li>
-                
+                <li>Computer Society of India (CSI) student branch</li>
+                <li>Association for Computing Machinery (ACM) student branch</li>
+                <li>Department association named CYBORG with active student participation</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">State-of-the-Art Infrastructure </h3>
-         
+              <h3 className="highlight-category">Industry Connections</h3>
               <ul>
-                <li>Well-equipped labs for AI & ML, Deep Learning and IoT </li>
-                <li>High-performance computing clusters for research</li>
-                <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
-                
+                <li>Management of Remote Centre for IIT Bombay</li>
+                <li>College membership of NASSCOM</li>
+                <li>Regular invited lectures by experts from Industries and Academia</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category"> Skill Development & Student Success</h3>
+              <h3 className="highlight-category">Infrastructure & Resources</h3>
               <ul>
-                <li>Focus on hands-on learning, hackathons, and coding competitions </li>
-                <li>Specialization tracks in Data Science, Artificial Intelligence, Machine 
-                Learning and IoT </li>
-                <li>Strong placement records with top global recruiters</li>
+                <li>Well-equipped laboratories and computing facilities</li>
+                <li>Departmental library in addition to Central library</li>
+                <li>Good collection of project reports, seminar reports, journals, and technical magazines</li>
               </ul>
             </div>
           </div>
         </section>
         
         <section className="cs-dept-gallery">
-                <h2 className="cs-dept-section-title">Department Gallery</h2>
-                <div className="rowContainer">
-                    {images.map((src, index) => (
-                      <div key={index} className='card'>
-                        <img src={src} alt="Gallery" className='image' />
-                      </div>
-                    ))}
-                </div>
-
-            </section>
+          <h2 className="cs-dept-section-title">Department Gallery</h2>
+          <div className="rowContainer">
+            {images.map((src, index) => (
+              <div key={index} className='card'>
+                <img src={src} alt="Gallery" className='image' />
+              </div>
+            ))}
+          </div>
+        </section>
         
         <style jsx>{`
           .cs-dept-container {
@@ -350,4 +335,4 @@ export default function ComputerScienceDepartment() {
         `}</style>
       </div>
     );
-  }
+}
