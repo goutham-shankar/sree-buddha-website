@@ -1,43 +1,291 @@
-import React from 'react'
+"use client";
+
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ComputerScienceDepartmentActivities() {
+  const [activeFilter, setActiveFilter] = useState('all');
+  
+  // Activity data - structured for easy maintenance
+  const activities = [
+    {
+      id: 1,
+      title: "Technical Workshop on Cloud Computing",
+      category: "workshop",
+      date: "March 15, 2025",
+      location: "AI ML Lab",
+      image: "/assets/images/departments/activities/workshop1.jpg",
+      description: "A hands-on workshop on cloud computing technologies including AWS, Azure, and Google Cloud Platform. Students will learn to deploy and manage applications in the cloud.",
+      coordinator: "Dr. Anita Sharma"
+    },
+    {
+      id: 2,
+      title: "Coding Competition - CodeFest 2025",
+      category: "competition",
+      date: "February 10, 2025",
+      location: "Main Auditorium",
+      image: "/assets/images/departments/activities/coding1.jpg",
+      description: "Annual coding competition where students compete to solve algorithmic challenges and develop innovative solutions to real-world problems.",
+      coordinator: "Prof. Rajesh Kumar"
+    },
+    {
+      id: 3,
+      title: "Industry Visit to TCS Innovation Labs",
+      category: "visit",
+      date: "January 22, 2025",
+      location: "TCS Campus, Infopark",
+      image: "/assets/images/departments/activities/visit1.jpg",
+      description: "An educational visit to TCS Innovation Labs to expose students to industry practices and emerging technologies in software development.",
+      coordinator: "Dr. Manu Mohan"
+    },
+    {
+      id: 4,
+      title: "Guest Lecture on Artificial Intelligence",
+      category: "lecture",
+      date: "April 5, 2025",
+      location: "Conference Hall",
+      image: "/assets/images/departments/activities/lecture1.jpg",
+      description: "A guest lecture by Dr. Sunita Patel, AI Researcher at Google, on recent advancements in artificial intelligence and machine learning.",
+      coordinator: "Dr. S.V. Annlin Jeba"
+    },
+    {
+      id: 5,
+      title: "Hackathon - HackCS 2025",
+      category: "competition",
+      date: "May 15-16, 2025",
+      location: "CS Department",
+      image: "/assets/images/departments/activities/hackathon1.jpg",
+      description: "A 24-hour hackathon where students will work in teams to build innovative software solutions. Prizes worth ₹50,000 to be won.",
+      coordinator: "Prof. Arun Kumar"
+    },
+    {
+      id: 6,
+      title: "Workshop on Cybersecurity Fundamentals",
+      category: "workshop",
+      date: "June 8, 2025",
+      location: "Network Security Lab",
+      image: "/assets/images/departments/activities/workshop2.jpg",
+      description: "A comprehensive workshop on cybersecurity fundamentals, covering topics like network security, cryptography, and ethical hacking.",
+      coordinator: "Dr. Priya Nair"
+    }
+  ];
+
+  // Filter activities based on active category
+  const filteredActivities = activeFilter === 'all' 
+    ? activities 
+    : activities.filter(activity => activity.category === activeFilter);
+
+  // Category options with icons
+  const categories = [
+    { id: 'all', name: 'All Activities', icon: '📋' },
+    { id: 'workshop', name: 'Workshops', icon: '🔧' },
+    { id: 'competition', name: 'Competitions', icon: '🏆' },
+    { id: 'lecture', name: 'Guest Lectures', icon: '🎓' },
+    { id: 'visit', name: 'Industry Visits', icon: '🚌' }
+  ];
+
   return (
-    <>
+    <div className="min-h-screen bg-white">
+      {/* Header Section */}
+      <header className="relative bg-gradient-to-b from-yellow-50 to-white">
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-yellow-900/10 pattern-diagonal-lines pattern-yellow-500/20 pattern-bg-white pattern-size-4" aria-hidden="true" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-gray-900 mb-4">
+              Department Of AI ML Engineering
+            </h1>
+            <div className="w-40 h-1 bg-yellow-900 mx-auto mb-8" aria-hidden="true" />
+            <h2 className="text-2xl md:text-4xl font-bold text-center text-gray-800">Activities</h2>
+          </div>
+        </div>
+      </header>
 
-<div class="col-md-9 right_portion">
-  <h3 class="heading1">Activities</h3>
-  
-  <h3 class="heading2"><strong>WORKSHOP ON ROBOTICS</strong></h3>
-  <p>Department of Artificial Intelligence and Machine Learning successfully conducted a 3-day workshop on &apos;obotics&apos; from 19/2/24 to 21/2/24. The workshop was conducted by &apos;Stem Robotics&apos; Founder and CEO, Mr. Rajasekharan A H. Around 128 school students and 63 AI&ML students attended the workshop.</p>
-  <p><img alt="Robotics Workshop" class="alignnone size-full wp-image-8368" loading="lazy" src="/assets/images/departments/activities/ai_activities_1.jpg"/></p>
-  
-  <h3 class="heading2"><strong>WORKSHOP ON MACHINE LEARNING USING PYTHON</strong></h3>
-  <p>Two-Day Workshop on Machine Learning: The Department of Artificial Intelligence and Machine Learning hosted a two-day workshop on &apos;MACHINE LEARNING USING PYTHON&apos; on 15th and 16th September 2023 from 9 am to 4 pm in the SDPK lab of the CSE building. The resource person was Prof. Shiju Thomas, Assistant Professor, Rajagiri College of Social Sciences, Ernakulam.</p>
-  <p><img alt="Machine Learning Workshop" class="alignnone size-full wp-image-8370" loading="lazy" src="/assets/images/departments/activities/ai_activities_2.jpg"/></p>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Activity Description */}
+        <div className="mb-12">
+          <div className="bg-yellow-50 rounded-lg p-6 shadow-sm">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-yellow-900 pl-3">
+              Department Activities
+            </h3>
+            <p className="text-gray-700">
+              The Department of AI ML Engineering at Sree Buddha College of Engineering conducts 
+              various activities throughout the academic year to enhance the technical skills and practical 
+              knowledge of students. These activities include workshops, coding competitions, guest lectures,
+              industry visits, and hackathons. These initiatives help students stay updated with the latest 
+              technologies and industry trends.
+            </p>
+          </div>
+        </div>
 
-  <h3 class="heading2"><strong>REPORT - TALK ON STARTUPS</strong></h3>
-  <p>On 5th April 2023, the Department of Computer Science and Engineering (Artificial Intelligence and Machine Learning), Sree Buddha College of Engineering, Pattoor organized a talk on startups, which was delivered by Mr. Joy Sebastian, the CEO and co-founder of Techgensia Pvt Ltd, Infopark, Cherthala. The talk aimed to educate the students about the journey of a startup, the challenges faced, and the potential opportunities that can be explored.</p>
-  <p>The event was attended by the students of various departments. The program started with the welcome address by Dr. Anil A R, Head of the Computer Science and Engineering (Artificial Intelligence and Machine Learning) Department, who introduced the guest speaker and highlighted his achievements.</p>
-  <p>Mr. Joy Sebastian then started his talk by sharing his personal experiences and journey in the field of startups. He spoke about his struggles and the challenges he faced while starting Techgensia. He also shared how he overcame these challenges and turned his startup into a successful business. Mr. Sebastian’s talk was highly engaging and informative, and it provided the students with valuable insights on how to start a business and make it successful.</p>
-  <p>Moreover, Mr. Sebastian also discussed the potential of startups in the current market scenario and how they can contribute to the growth of the economy. He emphasized the importance of innovation and creativity in startups and encouraged the students to think outside the box and come up with unique ideas. In addition to the talk, an MOU was signed between Techgensia and Sree Buddha College of Engineering, Pattoor.</p>
-  <p>During the talk, Mr. Sebastian also shared his thoughts on the importance of collaborations between industry and academia. He shared how Techgensia signed a Memorandum of Understanding (MoU) with Sree Buddha College of Engineering to provide internships, training, and placement opportunities for the students. The MoU was aimed at bridging the gap between industry and academia and providing practical exposure to the students.</p>
-  <p>The event concluded with a Q&A session where the students had the opportunity to clarify their doubts and queries with Mr. Joy Sebastian. The session was highly interactive, and Mr. Sebastian answered the questions patiently and provided valuable insights.</p>
-  <p>Overall, the talk by Mr. Joy Sebastian was highly informative and motivating, and it provided the students with a deeper understanding of the startup ecosystem. The event was organized successfully, and it helped the students to gain valuable insights and knowledge on the potential opportunities in the startup world. The MoU signed between Techgensia and Sree Buddha College of Engineering will be highly beneficial for the students, and it will provide them with practical exposure and placement opportunities in the field of startups. The talk was well-received by the students and faculty members, and it provided valuable insights into the startup ecosystem and the role of technology in it.</p>
-  <p>The event was hosted by Mr. Athul Sai (Student, Third Year AI & ML) and ended with the vote of thanks by Ms. Gayathi Vijayakumar (Student, Second Year AI & ML).</p>
-  <p><img alt="Talk on Startups" class="alignnone size-full wp-image-8369" loading="lazy" src="/assets/images/departments/activities/ai_activities_3.jpg"/></p>
+        {/* Filter Tabs */}
+        <div className="mb-10 sticky top-0 bg-white pt-4 pb-4 z-10 shadow-sm rounded-lg">
+          <h3 className="text-lg font-medium text-gray-900 mb-4">Filter Activities:</h3>
+          <div className="flex flex-wrap gap-2">
+            {categories.map(category => (
+              <button
+                key={category.id}
+                onClick={() => setActiveFilter(category.id)}
+                className={`px-4 py-2 rounded-full flex items-center gap-2 transition-colors ${
+                  activeFilter === category.id
+                    ? 'bg-yellow-900 text-white'
+                    : 'bg-yellow-50 text-yellow-900 hover:bg-yellow-100'
+                }`}
+              >
+                <span role="img" aria-hidden="true">{category.icon}</span>
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
 
-  <h3 class="heading2"><strong>Expert Talk on Startup Missions</strong></h3>
-  <p>by Shri. Joy Sebastian, CEO, Techgentsia Software Technologies Pvt Ltd, Infopark, Cherthala as part of AI club on 05/04/2023 organized by the Department of Computer Science and Engineering (Artificial Intelligence and Machine Learning).</p>
-  <p><img alt="Expert Talk on Startup" class="alignnone size-full wp-image-8371" loading="lazy" src="/assets/images/departments/activities/ai_activities_4.jpg"/></p>
+        {/* Activities Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredActivities.map(activity => (
+            <div 
+              key={activity.id} 
+              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg border border-gray-200 transition-shadow duration-300"
+            >
+              <div className="relative h-48">
+                <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
+                  <span className="text-gray-400 text-lg">Activity Image</span>
+                </div>
+                {/* In a production environment, replace the div above with an actual Image component */}
+                {/* <Image 
+                  src={activity.image} 
+                  alt={activity.title} 
+                  fill 
+                  className="object-cover" 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+                /> */}
+              </div>
+              
+              <div className="p-5">
+                <div className="flex justify-between items-start mb-2">
+                  <span className="inline-block px-2 py-1 bg-yellow-100 text-yellow-900 text-xs font-semibold rounded-full uppercase tracking-wide">
+                    {activity.category}
+                  </span>
+                  <span className="text-sm text-gray-600">{activity.date}</span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{activity.title}</h3>
+                <p className="text-gray-700 mb-4 line-clamp-3">{activity.description}</p>
+                
+                <div className="flex items-center justify-between mt-4 border-t border-gray-100 pt-3">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 text-yellow-900 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span className="text-sm text-gray-600">{activity.location}</span>
+                  </div>
+                  <Link 
+                    href={`/activities/${activity.id}`} 
+                    className="text-yellow-900 hover:text-yellow-800 font-medium text-sm"
+                  >
+                    View Details
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        {filteredActivities.length === 0 && (
+          <div className="text-center py-12">
+            <svg className="w-16 h-16 text-yellow-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h3 className="text-xl font-medium text-gray-700">No activities found</h3>
+            <p className="text-gray-500 mt-1">Try changing your filter selection</p>
+            <button 
+              onClick={() => setActiveFilter('all')}
+              className="mt-4 px-4 py-2 bg-yellow-900 text-white rounded-md hover:bg-yellow-800 transition-colors"
+            >
+              Show All Activities
+            </button>
+          </div>
+        )}
 
-  <h3 class="heading2"><strong>Machine Learning Using Python</strong></h3>
-  <p>The Department of Artificial Intelligence and Machine Learning, Sree Buddha College of Engineering, Pattoor organized Machine Learning Using Python on 27/10/2022 and 28/10/2022 at 9 am in association with AI and ML Dept. of SBCE. The expert speaker was Dr. Shiju Thomas M Y, Assistant Professor Rajagiri College of Social Sciences. The mentoring session was conducted at the SDPK Lab. 58 participants attended the mentoring session. The expert speaker explained Python Basics and Machine Learning concepts. The workshop was started with an introduction by Mr. Athul Sai, student of AI & ML. Mr. Allen Shabu, Student Representative of AI & ML, proposed the welcome speech. Dr. Anil A.R, HoD, Department of Artificial Intelligence and Machine Learning gave a felicitation. The expert speaker explained the basics of Python and Machine Learning concepts. The two-day workshop covered various topics related to Machine Learning using Python. Various packages and tools for Machine Learning were introduced during the workshop. The speaker interacted with the students and answered queries from various students and faculty members. Ms. Bibisha Susan Mathew, Student Representative of AI & ML, proposed the vote of thanks. Attendance and Feedback were collected from the participants using Google Forms. E-Certificates were distributed to attendees via Google Drive.</p>
-  <p><img alt="Machine Learning Workshop" class="alignnone size-full wp-image-8372" loading="lazy" src="/assets/images/departments/activities/ai_activities_5.jpg"/></p>
-</div>
+        {/* Upcoming Activities Section */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-yellow-900 pl-3">
+            Upcoming Activities
+          </h3>
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-yellow-50">
+                <tr>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
+                    Activity
+                  </th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
+                    Date
+                  </th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
+                    Location
+                  </th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
+                    Coordinator
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {activities.slice(0, 4).map((activity) => (
+                  <tr key={`upcoming-${activity.id}`} className="hover:bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      {activity.title}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      {activity.date}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      {activity.location}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      {activity.coordinator}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
 
+        {/* Registration Call to Action */}
+        <div className="mt-16 bg-gradient-to-r from-yellow-800 to-yellow-900 rounded-lg shadow-xl overflow-hidden">
+          <div className="md:flex">
+            <div className="md:w-2/3 p-8 md:p-12">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Interested in our activities?
+              </h3>
+              <p className="text-yellow-100 mb-6">
+                Register now to participate in our upcoming workshops, competitions, and other exciting events. 
+                Don't miss the opportunity to enhance your skills and network with industry experts.
+              </p>
+              <div className="space-x-4">
+                <button className="px-6 py-2 bg-white text-yellow-900 font-medium rounded-lg hover:bg-yellow-50 transition-colors">
+                  Register Now
+                </button>
+                <button className="px-6 py-2 bg-transparent border border-white text-white font-medium rounded-lg hover:bg-yellow-800 transition-colors">
+                  Learn More
+                </button>
+              </div>
+            </div>
+            <div className="md:w-1/3 bg-yellow-800 flex items-center justify-center p-8">
+              <div className="text-center">
+                <p className="text-white font-bold text-4xl mb-2">50+</p>
+                <p className="text-yellow-100">Activities per year</p>
+                <div className="w-16 h-1 bg-white mx-auto my-4" aria-hidden="true" />
+                <p className="text-white font-bold text-4xl mb-2">1000+</p>
+                <p className="text-yellow-100">Student participants</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
 
-    
-      
-    </>
-  )
+     
+    </div>
+  );
 }

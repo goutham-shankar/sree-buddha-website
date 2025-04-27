@@ -27,6 +27,8 @@ export default function ComputerScienceDepartmentFaculty() {
         ["civil_faculty_11.jpg", "Namitha Chandran", "M.Tech", "Assistant Professor", "CIVIL ENGINEERING"],
         ["civil_faculty_12.jpg", "Anusree Lal", "M.Tech", "Assistant Professor", "Structural Engineering"],
         ["civil_faculty_13.jpg", "Mr. Sooraj S", "M.Tech", "Assistant Professor", "Structural Engineering"],
+        ["aswathi.jpg", "Ms.Aswathy S Kumar", "M.Tech", "Assistant Professor", "Structural Engineering"],
+
        
     ];
     
