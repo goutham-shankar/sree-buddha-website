@@ -5,11 +5,11 @@ import Image from 'next/image';
 import { useEffect, useState } from "react";
 import './style.css'
 
-export default function ComputerScienceDepartment() {
+export default function ArtificialIntelligenceDepartment() {
     // Department building images
     const buildingImages = [
-        "/images/cs-dept-building/cs-dept-building.png",
-        "/images/cs-dept-building/cs-dept-building2.png",
+        "/images/ai-dept-building/ai-dept-building.png",
+        "/images/ai-dept-building/ai-dept-building2.png",
     ];
 
     const [images, setImages] = useState([]);
@@ -52,15 +52,15 @@ export default function ComputerScienceDepartment() {
     return (
         <div className="cs-dept-container">
             <header className="cs-dept-header">
-                <h1>Computer Science & AI Department</h1>
+                <h1>Artificial Intelligence & Machine Learning Department</h1>
                 <p>Innovation • Excellence • Future</p>
             </header>
 
             <div className="cs-dept-hero">
                 <div className="cs-dept-hero-image">
                     <Image
-                        src="/images/cs-dept-hero.jpg"
-                        alt="Computer Science Students Working Together"
+                        src="/images/ai-dept-hero.jpg"
+                        alt="Artificial Intelligence Students Working Together"
                         width={1200}
                         height={400}
                         priority
@@ -76,24 +76,12 @@ export default function ComputerScienceDepartment() {
                 <h2 className="cs-dept-section-title">Department Profile</h2>
                 <div className="cs-dept-profile-content">
                     <div className="cs-dept-profile-text">
-                        <p>The Computer Science Department at our college is dedicated to providing students with a comprehensive education in computer science theory and practice. Our curriculum is designed to keep pace with rapidly evolving technology, preparing students for successful careers in the tech industry.</p>
+                        <p>The Department of Artificial Intelligence and Machine Learning was founded in 2020 and offers an undergraduate program B.Tech Computer Science and Engineering (Artificial Intelligence and Machine Learning) through APJ Abdul Kalam Technological University in Kerala.</p>
                         <br />
-                        <p>The department of Computer Science and Engineering was started in Sree Buddha College of Engineering in the year 2002. The department currently offers the programmes B.Tech. in computer science and Engineering with sanctioned intake of 180, B.Tech Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning, sanctioned intake 60, M.Tech. in Computer Science and Engineering, and Ph.D. programmes. The department plays a crucial role in equipping students with current and relevant knowledge in computer Science and Engineering through various opportunities, including internships, hands-on training, bridge courses, add-on courses, and workshops to prepare them to meet the demands of the industry. In addition to promoting academic excellence, the department frequently organizes a variety of activities, including hackathons, faculty development programs, industry interactions, and social events which provides a platform for students and faculty to engage with distinguished researchers and explore emerging trends in computer science. The department is accredited by NBA since November 2019. In alignment with outcome-based learning and the National Educational Policy, the department establishes high standards for its curriculum and industry engagement.</p>
+                        <p>SBCE thrives to impart an effective technical education by means of experiential learning and develop concrete infrastructure with efficient faculty and dynamic student community for achieving higher target level in Higher education in India. It insists on implementing Outcome Based Education (OBE) throughout the tenure of under graduation by means of getting university ranks, higher placement records, and improved Higher order thinking. We are concerned with constructing top-to-bottom and bottom-to-top models of human-level intelligence; building systems that can provide intelligent tutoring; creating adaptive and intelligent entertainment systems; making systems that understand their own behavior; growing our understanding of how to build autonomous agents that can adapt in dynamic environments involving multitudes of other intelligent agents; modeling and predicting human behavior; automating creativity; and addressing a variety of other problems. To emphasize on lifelong learning and applying knowledge on solving real world problems, we conduct various technical events like hackathons, coding competitions, training programs, workshops and seminars. We strive to teach our best in terms of knowledge dissemination and bring out our students with a enriched experience.</p>
                         <br />
-                        <p>With state-of-the-art laboratories, experienced faculty members, and strong industry connections, we offer an environment that fosters innovation, critical thinking, and practical problem-solving skills. Our graduates are highly sought after by leading tech companies and research institutions.</p>
+                        <p>Our initiatives will undoubtedly shape students so that they can face the outside world with prompt technical, interpersonal, and problem-solving skills. We collaborate with various firms and regularly organize various activities such as industry visits, technical talks, and real-time projects to hone the students' technical and soft skills in order to prepare industry ready students with holistic personalities.</p>
                     </div>
-                    {/* <div className="cs-dept-profile-images">
-                        {buildingImages.map((img, index) => (
-                            <div key={index} className="cs-dept-building-image">
-                                <Image
-                                    src={img}
-                                    alt={`Computer Science Department Building ${index + 1}`}
-                                    width={400}
-                                    height={300}
-                                />
-                            </div>
-                        ))}
-                    </div> */}
                 </div>
             </section>
 
@@ -103,8 +91,8 @@ export default function ComputerScienceDepartment() {
                     <div className="highlights-card">
                         <h3 className="highlight-category">Academic Excellence & Research</h3>
                         <ul>
-                            <li>Strong faculty expertise in core computing areas</li>
-                            <li>Cutting-edge research in emerging technologies; like Artificial Intelligence, Internet of Things, Machine Learning and Deep Learning</li>
+                            <li>Strong faculty expertise in AI, ML and Deep Learning</li>
+                            <li>Cutting-edge research in emerging technologies like Artificial Intelligence, Internet of Things, Machine Learning and Deep Learning</li>
                         </ul>
                     </div>
 
@@ -126,11 +114,12 @@ export default function ComputerScienceDepartment() {
                     </div>
 
                     <div className="highlights-card">
-                        <h3 className="highlight-category">Skill Development & Student Success</h3>
+                        <h3 className="highlight-category">Career Opportunities</h3>
                         <ul>
-                            <li>Focus on hands-on learning, hackathons, and coding competitions</li>
-                            <li>Specialization tracks in Data Science, Artificial Intelligence, Machine Learning and IoT</li>
-                            <li>Strong placement records with top global recruiters</li>
+                            <li>Big Data Engineer, Business Intelligence Developer, Data Scientist, Machine Learning Engineer</li>
+                            <li>Research Scientist, AI Data Analyst, AI Engineer, Robotics Scientist</li>
+                            <li>Recruitment by reputed industries like Microsoft, Amazon, Goldman Sachs, Oracle GBU, Cisco, Dell Technologies, Accenture, and more</li>
+                            <li>Opportunities for higher education and research at premier national or international universities</li>
                         </ul>
                     </div>
                 </div>

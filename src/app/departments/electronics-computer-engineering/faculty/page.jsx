@@ -14,14 +14,17 @@ import "./style.css"
 export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
-        ["eee_faculty1.jpg", "Sindhu V.M.E", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty2.jpg", "Abhilasha Parthan", "M.Tech", "Assistant Professor", "Industrial Drives and Control"],
-        ["eee_faculty3.jpg", "Juna John Daniel", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty4.jpg", "Gayathri V", "M.Tech", "Assistant Professor", "Power Electronics & Power Systems"],
-        ["eee_faculty5.jpg", "Ananthu Vijayakumar", "M.Tech", "Assistant Professor", "Power Electronics & Power Systems"],
-        ["eee_faculty6.jpg", "Chama R Chandran", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty7.jpg", "Atheena A", "M.Tech", "Assistant Professor", "Power and Energy"],
-        ["eee_faculty8.jpg", "Athira B", "M.Tech", "Assistant Professor", "Power Systems"]
+        
+            ["pavitha.jpg", "PAVITHA P P", "B.Tech, M.Tech", "HOD", "Electronics and Communication Engineering"],
+            ["ambika.jpg", "AMBIKA SEKHAR", "M.Tech", "Assistant Professor", "Microwave and Television Engineering, IoT and Embedded Systems"],
+            ["saritha.jpg", "SARITHA N R", "M.Tech", "Assistant Professor", "Applied Electronics, Nano Electronics"],
+            ["sabi.jpg", "SABI S", "M.Tech", "Assistant Professor", "Microwave and Television Engineering, Image Processing"],
+            ["jasmin.jpg", "JASMIN BASHEER", "M.Tech", "Assistant Professor", "Industrial Instrumentation and Control, Industrial Automation and Control"],
+            ["pooja.jpg", "POOJA S MOHAN", "M.Tech", "Assistant Professor", "Optoelectronics and Communication Systems, Signals and Systems"],
+            ["sangeetha.jpg", "T R SANGEETA", "M.Tech", "Assistant Professor", "Communication Engineering"],
+            ["chinchu.jpg", "CHINCHU S", "M.Tech", "Assistant Professor", "Communication Engineering"],
+            ["hari.jpg", "HARI S", "M.Tech", "Assistant Professor", "Wireless Networks and Applications"]
+          
       ];
       
 
@@ -57,7 +60,7 @@ export default function ComputerScienceDepartmentFaculty() {
 
                                 <tr key = {index}>
 
-                                    <td> <img src={`/assets/images/departments/faculty/eee/${singleFaculty[0]}`} alt="image" /> </td>
+                                    <td> <img src={`/assets/images/departments/faculty/ecomp/${singleFaculty[0]}`} alt="image" /> </td>
                                     {/* <td> <img src= {image.src} alt="image" /> </td> */}
                                     {/* <td> <img src= {"/assets/images/departments/faculty/cs/cs_f1.jpg"} alt="image" /> </td> */}
                                     <td>{singleFaculty[1]}</td>

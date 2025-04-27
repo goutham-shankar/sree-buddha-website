@@ -66,9 +66,9 @@ export default function MechanicalEngineeringDepartmentHOD() {
   const [activeTab, setActiveTab] = useState('education');
 
   const profileData = {
-    name: 'Dr. Saji Varghese',
+    name: 'Prof. Anilkumar A.V.',
     title: 'HOD - Mechanical Engineering Department',
-    imagePath: '/assets/images/departments/hod_mech.jpg',
+    imagePath: '/assets/images/departments/anilkumar.jpg',
     email: 'hod.me@sbce.ac.in',
     phone: '+91 XXXXXXXXXX'
   };
@@ -77,27 +77,27 @@ export default function MechanicalEngineeringDepartmentHOD() {
     education: {
       icon: <svg className="w-6 h-6 text-yellow-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>,
       content: [
-        'B.Tech in Mechanical Engineering - TKM College of Engineering, University of Kerala (1978) - Honours with Second Rank',
-        'M.Tech in Production Engineering - IIT, Bombay',
-        'Ph.D in Mechanical Engineering - IIT, Madras'
+        'B.Tech. in Mechanical Engineering - TKM College of Engineering, Kerala University',
+        'M.Tech. in Mechanical Engineering - TKM College of Engineering, Kerala University',
+        'Focus area: Industrial Refrigeration and Cryogenic Engineering'
       ]
     },
     experience: {
       icon: <svg className="w-6 h-6 text-yellow-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>,
       timeline: [
         { period: 'Present', role: 'HOD, Department of Mechanical Engineering, Sree Buddha College of Engineering' },
-        { period: 'Previous', role: 'Faculty, Yanbu Industrial College (YIC), Royal Commission, Yanbu, Kingdom of Saudi Arabia' },
-        { period: 'Previous', role: 'Department of Mechanical Engineering, TKM College of Engineering' }
+        { period: '37+ Years', role: 'Teaching Experience' },
+        { period: '20+ Years', role: 'Experience at Current Institution' }
       ]
     },
     research: {
       icon: <svg className="w-6 h-6 text-yellow-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>,
       achievements: [
-        'Patent in sensors for in-process monitoring applications',
-        'Published more than 20 papers in different journals and conferences',
-        'ABET accreditation team member and leader for multiple cycles',
-        'Life member of ISTE and Institution of Engineers',
-        'Areas of interest: Manufacturing, Quality Control, and Sensors'
+        'Life member of Indian Society of Technical Education (ISTE)',
+        'Associate member of the Institute of Engineers',
+        'Focus areas: Industrial Refrigeration and Cryogenic Engineering',
+        'Experienced in applying curriculum while developing students\' creative potential',
+        'Skilled in preparing students to face society'
       ]
     }
   };
@@ -149,7 +149,7 @@ export default function MechanicalEngineeringDepartmentHOD() {
                     <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
-                    <span>Life Member: ISTE & Institution of Engineers</span>
+                    <span>Life Member: ISTE & Associate Member: Institute of Engineers</span>
                   </div>
                 </div>
               </motion.div>
@@ -205,7 +205,7 @@ export default function MechanicalEngineeringDepartmentHOD() {
                       ))}
                     </div>
                     <div className="mt-6 text-gray-700">
-                      <p>Dr. Saji Varghese has over 35 years of teaching experience in India and abroad. During his time at Yanbu Industrial College, he was involved in the ABET accreditation process for two cycles and served in many committees including curriculum development, Quality Assurance and Planning.</p>
+                      <p>Prof. Anilkumar A.V. has 37 years of teaching experience, with 20 years at this institution. He is passionate about developing students' creative potential and preparing them to face society while effectively applying the curriculum.</p>
                     </div>
                   </InfoCard>
                 )}
@@ -231,16 +231,12 @@ export default function MechanicalEngineeringDepartmentHOD() {
               >
                 <h3 className="text-xl font-semibold mb-4">Biography</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Dr. Saji Varghese completed his Bachelor's degree in Mechanical Engineering from TKM College of Engineering, 
-                  University of Kerala with honours and second rank in 1978. He took his Master's degree in Production Engineering 
-                  from IIT, Bombay and Ph.D from IIT, Madras in Mechanical Engineering. He has a patent in sensors for in-process 
-                  monitoring applications and also published more than 20 papers in different journals and conferences. 
-                  He has over 35 years of teaching experience in India and abroad. After working in the Department of Mechanical 
-                  Engineering, TKM College of Engineering, he joined the Yanbu Industrial College (YIC), Royal Commission, Yanbu, 
-                  Kingdom of Saudi Arabia as a faculty. There, he was a team member and leader in ABET accreditation process for 
-                  two cycles for various programmes at different levels and served in many committees including curriculum development, 
-                  Quality Assurance and Planning. Dr. Saji is a life member of ISTE and Institution of Engineers. His areas of interest 
-                  are manufacturing, quality control and sensors.
+                  Prof. Anilkumar A.V. received his B.Tech. and M.Tech. degrees from TKM College of Engineering in Kollam, 
+                  Kerala University. His focus is industrial refrigeration and cryogenic engineering. He has 37 years of 
+                  teaching experience, 20 of which have been with this institution. He is a lifetime member of several 
+                  professional organizations, including the Indian Society of Technical Education (ISTE) and an associate 
+                  member of the Institute of Engineers. He is competent of applying the curriculum while also cultivating 
+                  students' creative potential and preparing them to face society.
                 </p>
               </motion.div>
             </AnimatedSection>

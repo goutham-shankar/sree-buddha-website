@@ -32,7 +32,7 @@ export default function ComputerScienceLayout({ children }) {
         <div className="department">
         { children }
         </div>
-        <DepartmentNavbar  department= {"electrical-electronics-engineering"} links = {links} />
+        <DepartmentNavbar  department= {"electronics-computer-engineering"} links = {links} />
 
         
         </div>

@@ -20,7 +20,8 @@ export default function ComputerScienceDepartmentFaculty() {
         ["ai_faculty_4.jpg", "Parvathy S Kurup", "B.Tech, M.Tech", "Assistant Professor", "Machine Learning"],
         ["ai_faculty_5.jpg", "Chinchu M.S", "B.Tech, M.Tech", "Assistant Professor", "Deep Learning"],
         ["ai_faculty_6.jpg", "Divya M.K", "B.E, M.Tech", "Assistant Professor", "Artificial Intelligence"],
-        ["ai_faculty_7.jpg", "Lekshmi V.S", "B.Tech, M.Tech", "Assistant Professor", "Internet of Things"]
+        ["ai_faculty_7.jpg", "Lekshmi V.S", "B.Tech, M.Tech", "Assistant Professor", "Internet of Things"],
+        ["esther.jpg", "Esther Sara Thomson", " M.Tech", "Assistant Professor", "Computer Science and Engineering"]
       ];
       
 
