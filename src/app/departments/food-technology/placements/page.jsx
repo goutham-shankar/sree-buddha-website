@@ -7,9 +7,9 @@ export default function ComputerScienceDepartmentPlacements() {
 
         <h3 className="heading1">Placements</h3>
 
-        <img src={"/assets/images/departments/placements/cs_placement1.jpg"} alt="" />
+        {/* <img src={"/assets/images/departments/placements/cs_placement1.jpg"} alt="" />
         <img src={"/assets/images/departments/placements/cs_placement2.jpg"} alt="" />
-        <img src={"/assets/images/departments/placements/cs_placement3.jpg"} alt="" />
+        <img src={"/assets/images/departments/placements/cs_placement3.jpg"} alt="" /> */}
       
     </div>
   )

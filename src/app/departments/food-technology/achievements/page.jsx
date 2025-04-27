@@ -10,6 +10,15 @@ export default function ComputerScienceDepartmentAchievements() {
     
     <div class="achievement-images">
         <p>
+            <img alt="Achievement 6" loading="lazy" src="/assets/images/departments/achievements/bio_a6.jpg"/>
+        </p>
+        <p>
+            <img alt="Achievement 7" loading="lazy" src="/assets/images/departments/achievements/bio_a7.jpg"/>
+        </p>
+        <p>
+            <img alt="Achievement 8" loading="lazy" src="/assets/images/departments/achievements/bio_a8.jpg"/>
+        </p>
+        <p>
             <img alt="Achievement 1" loading="lazy" src="/assets/images/departments/achievements/food_technology_achievements_1.jpg"/>
             <img alt="Achievement 2" loading="lazy" src="/assets/images/departments/achievements/food_technology_achievements_2.jpg"/>
         </p>
