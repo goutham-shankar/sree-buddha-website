@@ -66,7 +66,7 @@ export default function FoodTechnologyDepartmentHOD() {
   const [activeTab, setActiveTab] = useState('message');
 
   const profileData = {
-    name: 'Professor. (Mrs.) Meera Bai S',
+    name: 'Dr.Malu Ravi',
     title: 'HOD - Food Technology Department',
     imagePath: '/assets/images/departments/hod_food_technology.jpeg',
     email: 'hod.food@sbce.ac.in',

@@ -5,316 +5,329 @@ import Image from 'next/image';
 import { useEffect, useState } from "react";
 import './style.css'
 
+export default function ElectricalDepartment() {
+  const [images, setImages] = useState([]);
 
+  useEffect(() => {
+    async function fetchImages() {
+      try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/galleries?populate=*`);
+        const data = await response.json();
 
+        console.log("API Response:", data); // Debugging output
 
+        // ✅ Ensure Department data exists and filter correctly
+        let filteredImages = data.data.filter(item => 
+          item.Department?.toLowerCase() === "eee" 
+        );
 
-export default function ComputerScienceDepartment() {
+        // ✅ Sort images by date (newest first)
+        filteredImages.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  
-const [images, setImages] = useState([]);
+        // ✅ Extract small image URLs
+        let imageUrls = filteredImages.flatMap(item =>
+          item.images.map(img => {
+            let smallImageUrl = img.formats?.small?.url
+              ? `${process.env.NEXT_PUBLIC_STRAPI}${img.formats.small.url}`
+              : `${process.env.NEXT_PUBLIC_STRAPI}${img.url}`; // Fallback if small version doesn't exist
+            return smallImageUrl;
+          })
+        );
 
-useEffect(() => {
-  async function fetchImages() {
-    try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/galleries?populate=*`);
-      const data = await response.json();
-
-      console.log("API Response:", data); // Debugging output
-
-      // ✅ Ensure Department data exists and filter correctly
-      let filteredImages = data.data.filter(item => 
-        item.Department?.toLowerCase() === "eee" 
-      );
-
-      // ✅ Sort images by date (newest first)
-      filteredImages.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-      // ✅ Extract small image URLs
-      let imageUrls = filteredImages.flatMap(item =>
-        item.images.map(img => {
-          let smallImageUrl = img.formats?.small?.url
-            ? `${process.env.NEXT_PUBLIC_STRAPI}${img.formats.small.url}`
-            : `${process.env.NEXT_PUBLIC_STRAPI}${img.url}`; // Fallback if small version doesn't exist
-          return smallImageUrl;
-        })
-      );
-
-      setImages(imageUrls); // Update state
-    } catch (error) {
-      console.error("Error fetching images:", error);
+        setImages(imageUrls); // Update state
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
     }
-  }
 
-  fetchImages();
-}, []);
+    fetchImages();
+  }, []);
 
+  return (
+    <div className="cs-dept-container">
+      <header className="cs-dept-header">
+        <h1>Department of Electrical and Electronics Engineering</h1>
+        <p>Powering Progress • Igniting Innovation • Electrifying the Future</p>
+      </header>
+      
+      <div className="cs-dept-hero">
+        <div className="cs-dept-hero-image">
+          <Image 
+            src="/images/electrical-hero.jpg" 
+            alt="Electrical and Electronics Engineering Students"
+            width={1200}
+            height={400}
+            priority
+          />
+        </div>
+        <div className="cs-dept-hero-text">
+          <h2>Powering Innovations for a Brighter Tomorrow</h2>
+          <p>Join our vibrant community of electrical engineers and innovators</p>
+        </div>
+      </div>
+      
+      <section className="cs-dept-section">
+        <h2 className="cs-dept-section-title">Department Profile</h2>
+        <div className="cs-dept-profile-content">
+          <div className="cs-dept-profile-text">
+            <p>
+              The department of Electrical and Electronics Engineering was established in 2004, as the sixth department 
+              of this college with an annual intake of 60 students. The Degree offered was B.Tech in Electrical and 
+              Electronics Engineering. An M.Tech programme in Electrical Machines was started in 2014 with an annual 
+              intake of 24 students.
+            </p>
+            
+            <p>
+              The department is dedicated to the promotion of excellence in Engineering education imparting knowledge 
+              to the students in the field of Electrical and Electronics Engineering so that they can successfully 
+              complete their graduation and get proper placement. Our students stands in a better position in Kerala 
+              Technological University and a good number of them occupy prestigious positions within the country and abroad.
+            </p>
 
-    return (
-      <div className="cs-dept-container">
-        <header className="cs-dept-header">
-          <h1>Department of Electrical and Electronics Engineering</h1>
-          <p>Powering Progress • Igniting Innovation • Electrifying the Future</p>
-        </header>
-        
-        <div className="cs-dept-hero">
-          <div className="cs-dept-hero-image">
-            <Image 
-              src="/images/electrical-hero.jpg" 
-              alt="Computer Science Students Working Together"
-              width={1200}
-              height={400}
-              priority
-            />
-          </div>
-          <div className="cs-dept-hero-text">
-            <h2>Shaping Tomorrow&apos;s Tech Leaders</h2>
-            <p>Join our vibrant community of innovators and problem-solvers</p>
+            <p>
+              The laboratories are well equipped for the conduct of the existing courses. The facilities available in 
+              the department are sufficient to meet the requirements of B.Tech and M.Tech project works. The department 
+              has a well equipped computer center with internet access. In addition to the central library, there is a 
+              department library and most of the books prescribed in the syllabus are also available there.
+            </p>
           </div>
         </div>
-        
-        <section className="cs-dept-section">
-          <h2 className="cs-dept-section-title">Department Profile</h2>
-          <div className="cs-dept-profile-content">
-            <div className="cs-dept-profile-text">
-              <p>The Department of Electrical and Electronics Engineering at Sree Buddha College of
-                Engineering was established in 2004 with an initial intake of 60 students. The department
-                expanded its academic offerings in 2014 with the introduction of a postgraduate program in
-                Electrical Machines, accommodating 6 students.</p>
-              
-              <p>Committed to academic excellence, the department provides high-quality education at both
-                undergraduate and postgraduate levels, fostering innovation and technical expertise. It plays a
-                vital role in research and development, focusing on key areas such as Electrical Machines,
-                Power Electronics, Power Quality, Electric Drives, and Electric & Hybrid Vehicles. The
-                curriculum is structured in alignment with outcome-based learning principles and the National
-                Education Policy (NEP), ensuring strong industry connections and real-world applicability.</p>
-            </div>
+      </section>
+      
+      <section className="cs-dept-section">
+        <h2 className="cs-dept-section-title">Department Highlights</h2>
+        <div className="cs-dept-highlights-content">
+          <div className="highlights-card">
+            <h3 className="highlight-category">Faculty Excellence</h3>
+            <ul>
+              <li>Highly qualified, experienced and dedicated faculty and supporting staff</li>
+              <li>All teachers hold M.Tech/M.E degrees with some pursuing Ph.D</li>
+              <li>Effective advisory system for regular evaluation of students and communication with parents</li>
+            </ul>
           </div>
-        </section>
-        
-        <section className="cs-dept-section">
-          <h2 className="cs-dept-section-title">Department Highlights</h2>
-          <div className="cs-dept-highlights-content">
-            <div className="highlights-card">
-              <h3 className="highlight-category">Advanced Laboratory & Training Facilities</h3>
-              <ul>
-                <li>The department laboratory is equipped with the latest facilities for extensive hands-on training
-                     to both the undergraduate and postgraduate students make it littl longer</li>
-              </ul>
-            </div>
-              
-            <div className="highlights-card">
-              <h3 className="highlight-category">Consultancy & Industry Collaborations</h3>
-              <ul>
-                <li>Active consultancy services, with significant contributions to projects for local self-governing bodies.</li>
-                <li>Strategic Memorandums of Understanding (MoUs) with leading industries to enhance student skill development and provide exposure to real-world applications.</li>
-              </ul>
-            </div>
-              
-            <div className="highlights-card">
-              <h3 className="highlight-category">Student Association & Leadership Initiatives</h3>
-              <ul>
-                <li>The student association, &quot;ETA&quot;, serves as a dynamic platform for student engagement, facilitating interactions
-                     with industry experts and fostering leadership through various technical and professional events.</li>
-              </ul>
-            </div>
+            
+          <div className="highlights-card">
+            <h3 className="highlight-category">Strong Industry Connections</h3>
+            <ul>
+              <li>Excellent contact with neighboring industries like KSEB and NTPC</li>
+              <li>High placement rate for department graduates</li>
+              <li>Many students have achieved GATE qualification</li>
+            </ul>
           </div>
-        </section>
-        
-        <section className="cs-dept-gallery">
-                <h2 className="cs-dept-section-title">Department Gallery</h2>
-                <div className="rowContainer">
-                    {images.map((src, index) => (
-                      <div key={index} className='card'>
-                        <img src={src} alt="Gallery" className='image' />
-                      </div>
-                    ))}
-                </div>
+            
+          <div className="highlights-card">
+            <h3 className="highlight-category">Infrastructure & Resources</h3>
+            <ul>
+              <li>Well-equipped laboratories for existing courses and project work</li>
+              <li>Dedicated computer center with internet access</li>
+              <li>Department library with comprehensive collection of prescribed textbooks</li>
+            </ul>
+          </div>
 
-            </section>
+          <div className="highlights-card">
+            <h3 className="highlight-category">Student Engagement</h3>
+            <ul>
+              <li>Department newsletter named "Impulse" published monthly</li>
+              <li>Strong academic performance in Kerala Technological University</li>
+              <li>Alumni working in prestigious positions nationally and internationally</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <section className="cs-dept-gallery">
+        <h2 className="cs-dept-section-title">Department Gallery</h2>
+        <div className="rowContainer">
+          {images.map((src, index) => (
+            <div key={index} className='card'>
+              <img src={src} alt="Gallery" className='image' />
+            </div>
+          ))}
+        </div>
+      </section>
+      
+      <style jsx>{`
+        .cs-dept-container {
+          background-color: #E6E6E6;
+          color: #333;
+          line-height: 1.6;
+          font-family: 'Poppins', sans-serif;
+          padding: 20px;
+          max-width: 100%;
+        }
         
-        <style jsx>{`
-          .cs-dept-container {
-            background-color: #E6E6E6;
-            color: #333;
-            line-height: 1.6;
-            font-family: 'Poppins', sans-serif;
-            padding: 20px;
-            max-width: 100%;
-          }
-          
-          .cs-dept-header {
-            padding: 20px 0;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #845714;
-          }
-          
-          .cs-dept-header h1 {
-            color: #845714;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-          }
-          
-          .cs-dept-header p {
-            font-size: 1.2rem;
-          }
-          
-          .cs-dept-hero {
-            height: 400px;
-            background-color: #333;
-            position: relative;
-            overflow: hidden;
-            margin: 30px 0;
-            border-radius: 10px;
-          }
-          
-          .cs-dept-hero-image {
-            width: 100%;
-            height: 100%;
-          }
-          
-          .cs-dept-hero-image img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-          }
-          
-          .cs-dept-hero-text {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            padding: 30px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            width: 100%;
-          }
-          
-          .cs-dept-hero-text h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-          }
-          
-          .cs-dept-section {
-            padding: 30px 0;
-          }
-          
-          .cs-dept-section-title {
-            color: #845714;
-            font-size: 2rem;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #845714;
-            margin-bottom: 20px;
-          }
-          
-          .cs-dept-profile-content {
-            display: block;
-            width: 100%;
-          }
-          
-          .cs-dept-profile-text {
-            font-size: 1.1rem;
-          }
-          
+        .cs-dept-header {
+          padding: 20px 0;
+          margin-bottom: 20px;
+          border-bottom: 3px solid #845714;
+        }
+        
+        .cs-dept-header h1 {
+          color: #845714;
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin-bottom: 5px;
+        }
+        
+        .cs-dept-header p {
+          font-size: 1.2rem;
+        }
+        
+        .cs-dept-hero {
+          height: 400px;
+          background-color: #333;
+          position: relative;
+          overflow: hidden;
+          margin: 30px 0;
+          border-radius: 10px;
+        }
+        
+        .cs-dept-hero-image {
+          width: 100%;
+          height: 100%;
+        }
+        
+        .cs-dept-hero-image img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+        
+        .cs-dept-hero-text {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: 30px;
+          background: rgba(0, 0, 0, 0.7);
+          color: white;
+          width: 100%;
+        }
+        
+        .cs-dept-hero-text h2 {
+          font-size: 2rem;
+          margin-bottom: 10px;
+        }
+        
+        .cs-dept-section {
+          padding: 30px 0;
+        }
+        
+        .cs-dept-section-title {
+          color: #845714;
+          font-size: 2rem;
+          padding-bottom: 10px;
+          border-bottom: 2px solid #845714;
+          margin-bottom: 20px;
+        }
+        
+        .cs-dept-profile-content {
+          display: block;
+          width: 100%;
+        }
+        
+        .cs-dept-profile-text {
+          font-size: 1.1rem;
+        }
+        
+        .cs-dept-highlights-content {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        
+        .highlights-card {
+          background-color: white;
+          border-radius: 10px;
+          padding: 20px;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .highlights-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .highlight-category {
+          color: #845714;
+          font-size: 1.3rem;
+          font-weight: 600;
+          margin-bottom: 15px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .highlights-card ul {
+          list-style: none;
+          padding-left: 0;
+        }
+        
+        .highlights-card li {
+          padding: 8px 0;
+          position: relative;
+          padding-left: 20px;
+        }
+        
+        .highlights-card li:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 16px;
+          width: 8px;
+          height: 8px;
+          background-color: #845714;
+          border-radius: 50%;
+        }
+        
+        .cs-dept-gallery {
+          padding: 30px 0;
+        }
+        
+        .cs-dept-gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+        
+        .cs-dept-gallery-item {
+          border-radius: 10px;
+          overflow: hidden;
+          height: 200px;
+          transition: transform 0.3s ease;
+        }
+        
+        .cs-dept-gallery-item:hover {
+          transform: scale(1.03);
+        }
+        
+        .cs-dept-gallery-item img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        
+        @media (max-width: 1024px) {
           .cs-dept-highlights-content {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            grid-template-columns: 1fr 1fr;
           }
-          
-          .highlights-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-          }
-          
-          .highlights-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-          }
-          
-          .highlight-category {
-            color: #845714;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #e0e0e0;
-          }
-          
-          .highlights-card ul {
-            list-style: none;
-            padding-left: 0;
-          }
-          
-          .highlights-card li {
-            padding: 8px 0;
-            position: relative;
-            padding-left: 20px;
-          }
-          
-          .highlights-card li:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 16px;
-            width: 8px;
-            height: 8px;
-            background-color: #845714;
-            border-radius: 50%;
-          }
-          
-          .cs-dept-gallery {
-            padding: 30px 0;
+        }
+        
+        @media (max-width: 768px) {
+          .cs-dept-highlights-content {
+            grid-template-columns: 1fr;
           }
           
           .cs-dept-gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            grid-template-columns: 1fr 1fr;
           }
-          
-          .cs-dept-gallery-item {
-            border-radius: 10px;
-            overflow: hidden;
-            height: 200px;
-            transition: transform 0.3s ease;
+        }
+        
+        @media (max-width: 480px) {
+          .cs-dept-gallery-grid {
+            grid-template-columns: 1fr;
           }
-          
-          .cs-dept-gallery-item:hover {
-            transform: scale(1.03);
-          }
-          
-          .cs-dept-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-          
-          @media (max-width: 1024px) {
-            .cs-dept-highlights-content {
-              grid-template-columns: 1fr 1fr;
-            }
-          }
-          
-          @media (max-width: 768px) {
-            .cs-dept-highlights-content {
-              grid-template-columns: 1fr;
-            }
-            
-            .cs-dept-gallery-grid {
-              grid-template-columns: 1fr 1fr;
-            }
-          }
-          
-          @media (max-width: 480px) {
-            .cs-dept-gallery-grid {
-              grid-template-columns: 1fr;
-            }
-          }
-        `}</style>
-      </div>
-    );
-  }
+        }
+      `}</style>
+    </div>
+  );
+}
