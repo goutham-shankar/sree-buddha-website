@@ -97,7 +97,7 @@ export default function Footer() {
             </div>
             <div className="text-center md:text-right">
               <p className="text-xs text-gray-500">
-                Designed and Developed by <a href="https://www.sreebuddha.ac.in/" className="text-yellow-500 hover:underline">Sree Buddha College of Engineering</a>
+                Designed and Developed by <a href="https://www.obsidyne.com" className="text-yellow-500 hover:underline">OBSIDYNE</a>
               </p></div>
           </div>
         </div>

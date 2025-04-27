@@ -23,7 +23,7 @@ function Contact() {
                         </div>
                         <h3 className="text-white text-lg font-medium mb-2">Call Us</h3>
                         <p className="text-gray-400 mb-3 text-sm">Available Monday-Friday, 9am-5pm</p>
-                        <a href="tel:+919446014317" class="text-yellow-500 hover:underline text-sm">PH: 9446014317</a>
+                        <a href="tel:+919446014317" class="text-yellow-500 hover:underline text-sm">PH: 8590332548</a>
                     </div>
 
                     {/* Email Contact */}
@@ -38,7 +38,7 @@ function Contact() {
                         <h3 className="text-white text-lg font-medium mb-2">Email Us</h3>
                         <p className="text-gray-400 mb-3 text-sm">We'll respond within 24 hours</p>
                         <a href="mailto:principal@sbce.ac.in" className="text-yellow-500 hover:underline block">principal@sbce.ac.in</a>
-                        <a href="mailto:info@sbce.ac.in" className="text-yellow-500 hover:underline block mt-1">info@sbce.ac.in</a>
+                        {/* <a href="mailto:info@sbce.ac.in" className="text-yellow-500 hover:underline block mt-1">info@sbce.ac.in</a> */}
                     </div>
 
                     {/* Location */}
