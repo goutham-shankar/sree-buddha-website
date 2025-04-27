@@ -117,6 +117,7 @@ export default function CoursesPage() {
       isNew: true
     }
   ];
+  
 
   // M.Tech Programs Data
   const mtechPrograms = [
