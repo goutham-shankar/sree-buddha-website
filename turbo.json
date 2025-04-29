@@ -1,9 +1,12 @@
 {
-    "tasks": {
-      "dev": {
-        "cache": false,
-        "persistent": true
-      }
+  "pipeline": {
+    "dev": {
+      "cache": true,
+      "persistent": true,
+      "inputs": ["src/**", "pages/**", "components/**", "public/**"]
+    },
+    "build": {
+      "outputs": [".next/**"]
     }
   }
-  
+}
