@@ -5,10 +5,10 @@ export default function ComputerScienceDepartmentAchievements() {
     return (
         <div className='computer_science_and_engineering_achievements'>
 
-<div class="col-md-9 right_portion">
-    <h1 class="right_heading">Achievements</h1>
+<div className="col-md-9 right_portion">
+    <h1 className="right_heading">Achievements</h1>
     
-    <div class="achievement-images">
+    <div className="achievement-images">
         <p>
             <img alt="Achievement 6" loading="lazy" src="/assets/images/departments/achievements/bio_a6.jpg"/>
         </p>

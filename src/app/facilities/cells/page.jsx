@@ -35,7 +35,7 @@ export default function page() {
                <b> Members</b><br />
             </div>
 
-            <table class="faculty-table">
+            <table className="faculty-table">
                 <tbody>
                 <tr>
                     <td>Ms.Lakshmi S,</td>
@@ -101,7 +101,7 @@ export default function page() {
                                 <b>Members </b>
                   </div>
 
-                  <table class="faculty-table">
+                  <table className="faculty-table">
                     <tbody>
                 <tr>
                     <td>Dr.K.Gopakumar</td>
@@ -141,7 +141,7 @@ export default function page() {
                     <b>Chairman</b><br />
                     Ms.Ms.Abhilasha Parthan, Assistant Professor (EEE) <br />
                     <b>Members</b><br />
-                    <table class="faculty-table">
+                    <table className="faculty-table">
                     <tbody>
                         <tr>
                             <td>Ms.Abhilasha Parthan</td>

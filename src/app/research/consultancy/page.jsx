@@ -25,7 +25,7 @@ export default function page() {
 
         
         
-           <div class="table-container">
+           <div className="table-container">
                                 <table>
                                     <thead>
                                         <tr>
@@ -34,7 +34,7 @@ export default function page() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="division">
+                                        <tr className="division">
                                             <td colspan="2">Microbiology Division</td>
                                         </tr>
                                         <tr>
@@ -53,7 +53,7 @@ export default function page() {
                                             <td>4.</td>
                                             <td>Total Yeast/Mold Count</td>
                                         </tr>
-                                        <tr class="division">
+                                        <tr className="division">
                                             <td colspan="2">Spectroscopy</td>
                                         </tr>
                                         <tr>
