@@ -197,7 +197,7 @@ export default function ComputerScienceDepartment() {
   }, [fetchImages]);
 
   return (
-      <div className="cs-dept-container bg-[#E6E6E6] text-gray-800 font-['Poppins',sans-serif] p-5 md:p-8">
+      <div className="cs-dept-header bg-[#E6E6E6] text-gray-800 font-['Poppins',sans-serif] p-5 md:p-8">
         <header className="cs-dept-header py-6 mb-6 border-b-3 border-[#845714]">
           <h1 className="text-[#845714] text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
             Department of Computer Science Engineering

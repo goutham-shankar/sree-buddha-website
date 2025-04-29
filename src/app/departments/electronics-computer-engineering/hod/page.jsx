@@ -70,7 +70,7 @@ export default function ComputerScienceDepartmentHod() {
     title: 'HOD - Electronics and Computer Engineering Department',
     imagePath: '/assets/images/departments/hod_ece.jpg',
     email: 'hod.ece@sbce.ac.in',
-    phone: '+91 XXXXXXXXXX'
+    phone: '+91 85903 32548'
   };
 
   const tabData = {

@@ -70,7 +70,7 @@ export default function MechanicalEngineeringDepartmentHOD() {
     title: 'HOD - Mechanical Engineering Department',
     imagePath: '/assets/images/departments/anilkumar.jpg',
     email: 'hod.me@sbce.ac.in',
-    phone: '+91 XXXXXXXXXX'
+    phone: '+91 85903 32548'
   };
 
   const tabData = {

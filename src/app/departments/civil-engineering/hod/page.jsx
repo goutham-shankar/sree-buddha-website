@@ -70,7 +70,7 @@ export default function CivilEngineeringDepartmentHOD() {
     title: 'HOD - Civil Engineering Department',
     imagePath: '/assets/images/departments/hod_civil.jpg',
     email: 'hod.civil@sbce.ac.in',
-    phone: '+91 XXXXXXXXXX'
+    phone: '+91 85903 32548'
   };
 
   const tabData = {
