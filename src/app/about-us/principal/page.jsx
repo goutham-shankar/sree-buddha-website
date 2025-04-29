@@ -200,7 +200,7 @@ function Principal() {
                 <FiMail /> principal@sbce.ac.in
               </a>
               <a href="tel:+91-1234567890" className="text-white hover:text-yellow-200 flex items-center gap-2 text-sm">
-                <FiPhone /> +91-1234-567890
+                <FiPhone /> +91-85903 32548
               </a>
               <div className="flex gap-3 pt-2">
                 <a href="#" className="bg-white/20 hover:bg-white/30 p-2 rounded-full transition-colors">
