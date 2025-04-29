@@ -48,16 +48,16 @@ export default function PlacementCell() {
           Building Careers • Connecting Talent • Shaping Futures
         </p>
       </header>
-      
-      <motion.div 
+
+      <motion.div
         className="h-[400px] bg-gray-800 relative overflow-hidden my-8 rounded-lg shadow-lg"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
         <div className="w-full h-full">
-          <Image 
-            src="/images/placement-header.jpg" 
+          <Image
+            src="/images/placement-header.jpg"
             alt="Students in a placement interview"
             fill
             priority
@@ -65,7 +65,7 @@ export default function PlacementCell() {
             className="object-cover"
           />
         </div>
-        <motion.div 
+        <motion.div
           className="absolute bottom-0 left-0 p-6 md:p-8 bg-black/70 text-white w-full"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -79,10 +79,10 @@ export default function PlacementCell() {
           </p>
         </motion.div>
       </motion.div>
-      
+
       <section className="py-8" aria-labelledby="placement-about">
         <SectionTitle>About The Placement Cell</SectionTitle>
-        <motion.div 
+        <motion.div
           className="mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,22 +91,22 @@ export default function PlacementCell() {
         >
           <div className="text-lg space-y-4">
             <p>
-              The Placement Cell at Sree Buddha College of Engineering serves as the bridge between our talented students and 
-              the professional world. We are dedicated to preparing our students for successful careers through comprehensive 
+              The Placement Cell at Sree Buddha College of Engineering serves as the bridge between our talented students and
+              the professional world. We are dedicated to preparing our students for successful careers through comprehensive
               training, workshops, and industry connections.
             </p>
             <p>
-              Our placement programs focus on enhancing technical skills, soft skills, and interview preparation to ensure 
-              our students are industry-ready. We maintain strong relationships with leading companies across sectors to 
+              Our placement programs focus on enhancing technical skills, soft skills, and interview preparation to ensure
+              our students are industry-ready. We maintain strong relationships with leading companies across sectors to
               facilitate recruitment drives, internships, and industry interactions.
             </p>
           </div>
         </motion.div>
       </section>
-      
+
       <section className="py-8" aria-labelledby="placement-officer">
         <SectionTitle>Placement Officer</SectionTitle>
-        <motion.div 
+        <motion.div
           className="bg-white rounded-lg p-6 shadow-md mb-10 flex flex-col md:flex-row items-center gap-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -114,10 +114,10 @@ export default function PlacementCell() {
           transition={{ duration: 0.5 }}
         >
           <div className="min-w-[150px] w-[150px] h-[150px] relative rounded-full overflow-hidden border-4 border-[#845714]">
-            <Image 
-              src="/images/placement-officer.jpg" 
-              alt="R. Pradeep Kumar - Placement Officer" 
-              fill 
+            <Image
+              src="/images/placement-officer.jpg"
+              alt="R. Pradeep Kumar - Placement Officer"
+              fill
               className="object-cover"
             />
           </div>
@@ -161,29 +161,29 @@ export default function PlacementCell() {
           </div>
         </motion.div>
       </section>
-      
+
       <section className="py-8" aria-labelledby="contact-options">
         <SectionTitle>Get In Touch</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ContactCard 
+          <ContactCard
             icon={
               <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
-            } 
+            }
             title="Call Us"
           >
             <p className="mb-2">09446472562</p>
             <p>09656164464</p>
           </ContactCard>
-          
-          <ContactCard 
+
+          <ContactCard
             icon={
               <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg>
-            } 
+            }
             title="Email Us"
           >
             <p className="mb-2">
@@ -197,13 +197,13 @@ export default function PlacementCell() {
               </a>
             </p>
           </ContactCard>
-          
-          <ContactCard 
+
+          <ContactCard
             icon={
               <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
               </svg>
-            } 
+            }
             title="Visit Us"
           >
             <p>Sree Buddha College of Engineering</p>
@@ -212,7 +212,7 @@ export default function PlacementCell() {
           </ContactCard>
         </div>
       </section>
-      
+
       <section className="py-8" aria-labelledby="placement-stats">
         <SectionTitle>Placement Highlights</SectionTitle>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -236,24 +236,24 @@ export default function PlacementCell() {
           ))}
         </div>
       </section>
-      
+
       <section className="py-8" aria-labelledby="map-location">
         <SectionTitle>Location</SectionTitle>
         <div className="rounded-lg overflow-hidden shadow-lg h-[400px]">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.8884495900773!2d76.62113231478592!3d9.178316093404512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0613a5dfc8c1d7%3A0xd109cb15b4313e49!2sSree%20Buddha%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1649052889905!5m2!1sen!2sin" 
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen="" 
-            loading="lazy" 
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.4370289554703!2d76.63980737489798!3d9.212530691475758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06175636a5fcf9%3A0x8c3c160158a8b47f!2sPattoor%2C%20P.O%2C%20Nooranad%2C%20Padanilam%2C%20Kerala%20690529!5e0!3m2!1sen!2sin!4v1682782892424!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="SBCE Location Map"
           ></iframe>
         </div>
       </section>
-      
-      
+
+
     </div>
   );
 }
