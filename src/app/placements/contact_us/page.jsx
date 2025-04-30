@@ -57,7 +57,7 @@ export default function PlacementCell() {
       >
         <div className="w-full h-full">
           <Image
-            src="/images/placement-header.jpg"
+            src="/assets/images/profile_pic.png"
             alt="Students in a placement interview"
             fill
             priority

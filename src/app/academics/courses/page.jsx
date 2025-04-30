@@ -19,8 +19,6 @@ const undergraduatePrograms = [
 export default function CoursesPage() {
   const [activeTab, setActiveTab] = useState('btech');
   const [expandedCard, setExpandedCard] = useState(null);
-  
-  
 
   // B.Tech Programs Data
   const btechPrograms = [
@@ -117,7 +115,7 @@ export default function CoursesPage() {
       isNew: true
     }
   ];
-  
+
 
   // M.Tech Programs Data
   const mtechPrograms = [
@@ -188,12 +186,11 @@ export default function CoursesPage() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
-  
+
 
   return (
-    
     <div className="bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen">
-      
+
       {/* Hero Section */}
       <section className="relative bg-yellow-900 overflow-hidden">
         <div className="absolute inset-0">
@@ -234,8 +231,8 @@ export default function CoursesPage() {
               <button
                 onClick={() => setActiveTab('btech')}
                 className={`px-5 py-3 text-sm font-medium rounded-l-lg ${activeTab === 'btech'
-                    ? 'bg-yellow-900 text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-50'
+                  ? 'bg-yellow-900 text-white'
+                  : 'bg-white text-gray-700 hover:bg-gray-50'
                   } focus:z-10 focus:outline-none transition-colors`}
               >
                 B.Tech Programs
@@ -243,8 +240,8 @@ export default function CoursesPage() {
               <button
                 onClick={() => setActiveTab('mtech')}
                 className={`px-5 py-3 text-sm font-medium rounded-r-lg ${activeTab === 'mtech'
-                    ? 'bg-yellow-900 text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-50'
+                  ? 'bg-yellow-900 text-white'
+                  : 'bg-white text-gray-700 hover:bg-gray-50'
                   } focus:z-10 focus:outline-none transition-colors`}
               >
                 M.Tech Programs
@@ -308,11 +305,21 @@ export default function CoursesPage() {
                               <h4 className="text-sm font-semibold text-gray-500">ELIGIBILITY</h4>
                               <p className="text-gray-900">{program.eligibility}</p>
                             </div>
+                            <button
+                            className="bg-yellow-900 text-white px-3 py-2 text-sm rounded-md hover:bg-yellow-800 transition-colors"
+                            onClick={() => {
+                              window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdZkVC3f7rIeBlkVnW-One8uC1NnsHxQZtK013KVjP7ZKxzxg/viewform";
+                            }}
+                          >
+                            Apply Now
+                          </button>
                           </div>
+                         
+
                         </motion.div>
                       )}
 
-                      <div className="flex justify-center mt-4">
+                      <div className="flex justify-center mt-4 space-x-4">
                         <button className="text-yellow-900 font-medium text-sm hover:text-yellow-700 focus:outline-none flex items-center space-x-1">
                           <span>{expandedCard === program.id ? "Show Less" : "Learn More"}</span>
                           <svg
@@ -323,7 +330,9 @@ export default function CoursesPage() {
                             <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                           </svg>
                         </button>
+
                       </div>
+
                     </div>
                   </motion.div>
                 ))}
@@ -398,11 +407,21 @@ export default function CoursesPage() {
                               <h4 className="text-sm font-semibold text-gray-500">ELIGIBILITY</h4>
                               <p className="text-gray-900">{program.eligibility}</p>
                             </div>
+                            <button
+  className="bg-yellow-900 text-white px-3 py-2 text-sm rounded-md hover:bg-yellow-800 transition-colors"
+  onClick={() => {
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe3RvBGmTslrxDMHBYn0vGufABqCvqUZnumUazbylQZ3J5lgQ/viewform";
+  }}
+>
+  Apply Now
+</button>
+
                           </div>
+                          
                         </motion.div>
                       )}
 
-                      <div className="flex justify-center mt-4">
+                      <div className="flex justify-center mt-4 space-x-4">
                         <button className="text-yellow-900 font-medium text-sm hover:text-yellow-700 focus:outline-none flex items-center space-x-1">
                           <span>{expandedCard === program.id ? "Show Less" : "Learn More"}</span>
                           <svg
@@ -413,6 +432,7 @@ export default function CoursesPage() {
                             <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                           </svg>
                         </button>
+                        
                       </div>
                     </div>
                   </motion.div>
@@ -438,9 +458,7 @@ export default function CoursesPage() {
         </div>
       </section>
 
-     
-      <ContactForm/>
-   
+      <ContactForm />
     </div>
   );
 }
