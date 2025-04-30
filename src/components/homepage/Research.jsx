@@ -140,11 +140,14 @@ export default function ResearchPage() {
         <div className={`${poppins.className} min-h-screen bg-white`}>
             <div className="max-w-7xl mx-auto px-4 py-12">
                 <header className="mb-12 text-center">
-                    <h1 className="text-3xl md:text-4xl font-bold text-yellow-900 mb-2">
-                        Research Projects
-                    </h1>
-                    <div className="w-24 h-1 bg-yellow-900 mx-auto mb-4"></div>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                <div className="events_title_area">
+                    <span className="event_left_border"></span>
+                    <h3>Research Projects</h3>
+                    <a href="/research/projects" className="events_know_more">KNOW MORE</a>
+                    
+                </div>
+                  
+                    <p className="text-lg text-left text-gray-600 max-w-3xl">
                         Exploring innovative solutions and advancing knowledge through research excellence at Sree Buddha College of Engineering.
                     </p>
                 </header>
@@ -231,11 +234,14 @@ export default function ResearchPage() {
                                             >
                                                 <div className="h-48 overflow-hidden">
                                                     {imageUrl ? (
-                                                        <img
-                                                            src={imageUrl}
-                                                            alt={research.heading || 'Research image'}
-                                                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                                                        />
+                                                        <div className="w-full h-64 sm:h-80 md:h-96 overflow-hidden rounded-lg bg-gray-100">
+  <img
+    src={imageUrl}
+    alt={research.heading || 'Research image'}
+    className="w-full h-full object-fill -translate-y-7"
+  />
+</div>
+
                                                     ) : (
                                                         <div className="h-full bg-gradient-to-r from-yellow-50 to-yellow-100 flex items-center justify-center">
                                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-yellow-700/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
