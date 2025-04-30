@@ -15,7 +15,7 @@ export default function VisionMission() {
 
   return (
     <section
-      className="bg-[#fbe3bc] mt text-[#775A2D] py-12 px-4 md:px-16 rounded-3xl font-[italic]"
+      className="bg-[#fbe3bc] m-5  text-[#775A2D] py-9 px-4 md:px-16 rounded-3xl font-[italic]"
       data-aos="fade-up"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
