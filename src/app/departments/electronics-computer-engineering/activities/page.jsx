@@ -11,65 +11,36 @@ export default function ComputerScienceDepartmentActivities() {
   const activities = [
     {
       id: 1,
-      title: "Technical Workshop on Cloud Computing",
-      category: "workshop",
-      date: "March 15, 2025",
-      location: "Electronics & Computer Lab",
-      image: "/assets/images/departments/activities/workshop1.jpg",
-      description: "A hands-on workshop on cloud computing technologies including AWS, Azure, and Google Cloud Platform. Students will learn to deploy and manage applications in the cloud.",
-      coordinator: "Dr. Anita Sharma"
+      title: "ELECTRIFYING SUCCESS: CRAFTING A BRIGHT FUTURE FOR ELECTRICAL ENGINEERS",
+      category: "lecture",
+      date: "November 8, 2023",
+      location: "Library Conference Hall",
+      image: "/assets/images/departments/activities/lecture1.jpg",
+      description: "As part of the association activity, Department of Electrical and Electronics Engineering, SBCE conducted a motivation and career guidance on ELECTRIFYING SUCCESS: CRAFTING A BRIGHT FUTURE FOR ELECTRICAL ENGINEERS. The session was handled by Mr. Sanju P Cheriyan, a Certified Trainer. The trainer was able to maintain the energy level of the audience all through the session through the activities arranged in between. It was indeed a brainstorming experience, which mainly included guidance and motivation for students to fulfill their goals.",
+      coordinator: "Dr. Vinod V P"
     },
     {
       id: 2,
-      title: "Coding Competition - CodeFest 2025",
-      category: "competition",
-      date: "February 10, 2025",
-      location: "Main Auditorium",
-      image: "/assets/images/departments/activities/coding1.jpg",
-      description: "Annual coding competition where students compete to solve algorithmic challenges and develop innovative solutions to real-world problems.",
-      coordinator: "Prof. Rajesh Kumar"
+      title: "AWARENESS ON ELECTRICAL LICENSING AND SAFETY MEASURES",
+      category: "workshop",
+      date: "November 9, 2023",
+      location: "Library Seminar Hall",
+      image: "/assets/images/departments/activities/workshop1.jpg",
+      description: "Workshop On 'AWARENESS ON ELECTRICAL LICENSING AND SAFETY MEASURES' was organized by Department of Electrical and Electronics Engineering, Sree Buddha College of Engineering, Pattoor at library seminar hall. Welcome address was delivered by Dr.Vinod V P, HOD EEE Dept. The session was handled by Ms. Deepa K C, Electrical inspector, Ms Anu Kuncheria, Deputy Electrical inspector and Mr.Sarath Mohan, Assistant Electrical Inspector Alappuzha. The speaker explained about different types of electrical licensing given to wireman, supervisor and contractor and their application procedures and requirements. They also discussed on safety measures to be followed while wiring. Vote of thanks was given by Mr.Aditya P Nair, Student Representative.",
+      coordinator: "Dr. Vinod V P"
     },
     {
       id: 3,
-      title: "Industry Visit to TCS Innovation Labs",
-      category: "visit",
-      date: "January 22, 2025",
-      location: "TCS Campus, Infopark",
-      image: "/assets/images/departments/activities/visit1.jpg",
-      description: "An educational visit to TCS Innovation Labs to expose students to industry practices and emerging technologies in software development.",
-      coordinator: "Dr. Manu Mohan"
-    },
-    {
-      id: 4,
-      title: "Guest Lecture on Artificial Intelligence",
-      category: "lecture",
-      date: "April 5, 2025",
-      location: "Conference Hall",
-      image: "/assets/images/departments/activities/lecture1.jpg",
-      description: "A guest lecture by Dr. Sunita Patel, AI Researcher at Google, on recent advancements in artificial intelligence and machine learning.",
-      coordinator: "Dr. S.V. Annlin Jeba"
-    },
-    {
-      id: 5,
-      title: "Hackathon - HackCS 2025",
-      category: "competition",
-      date: "May 15-16, 2025",
-      location: "CS Department",
-      image: "/assets/images/departments/activities/hackathon1.jpg",
-      description: "A 24-hour hackathon where students will work in teams to build innovative software solutions. Prizes worth ₹50,000 to be won.",
-      coordinator: "Prof. Arun Kumar"
-    },
-    {
-      id: 6,
-      title: "Workshop on Cybersecurity Fundamentals",
-      category: "workshop",
-      date: "June 8, 2025",
-      location: "Network Security Lab",
-      image: "/assets/images/departments/activities/workshop2.jpg",
-      description: "A comprehensive workshop on cybersecurity fundamentals, covering topics like network security, cryptography, and ethical hacking.",
-      coordinator: "Dr. Priya Nair"
+      title: "Industrial Safety & Awareness",
+      category: "seminar",
+      date: "November 25, 2022",
+      location: "EEE Seminar Hall",
+      image: "/assets/images/departments/activities/seminar1.jpg",
+      description: "A seminar on 'Industrial Safety & Awareness' was organized by the department association EEIS, for VII semester EEE students at EEE seminar hall. The session was handled by Arcite School of Technical Education, Kottayam. Analysis of Electrical layout of the college was conducted and various safety features were discussed.",
+      coordinator: "EEIS Association"
     }
   ];
+
 
   // Filter activities based on active category
   const filteredActivities = activeFilter === 'all' 

@@ -113,12 +113,12 @@ export default function PlacementCell() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="min-w-[150px] w-[150px] h-[150px] relative rounded-full overflow-hidden border-4 border-[#845714]">
+          <div className="min-w-[150px] w-[150px] object-cover h-[150px] relative rounded-full overflow-hidden border-4 border-[#845714]">
             <Image
-              src="/images/placement-officer.jpg"
+              src="/assets/images/departments/hod_basic_maths_and_science.jpg"
               alt="R. Pradeep Kumar - Placement Officer"
               fill
-              className="object-cover"
+              className="object-fill"
             />
           </div>
           <div>

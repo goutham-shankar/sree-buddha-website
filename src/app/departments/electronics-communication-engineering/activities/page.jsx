@@ -4,70 +4,90 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function ComputerScienceDepartmentActivities() {
+export default function ElectronicsCommunicationDepartmentActivities() {
   const [activeFilter, setActiveFilter] = useState('all');
   
-  // Activity data - structured for easy maintenance
+  // Activity data - updated with new ECE department activities
   const activities = [
     {
       id: 1,
-      title: "Technical Workshop on Cloud Computing",
-      category: "workshop",
-      date: "March 15, 2025",
-      location: "Electronics & Communication Lab",
-      image: "/assets/images/departments/activities/workshop1.jpg",
-      description: "A hands-on workshop on cloud computing technologies including AWS, Azure, and Google Cloud Platform. Students will learn to deploy and manage applications in the cloud.",
-      coordinator: "Dr. Anita Sharma"
+      title: "ICST 2025 - International Conference on Synergetic Technologies",
+      category: "conference",
+      date: "March 24-25, 2025",
+      location: "SBCE Campus",
+      image: "/assets/images/departments/activities/conference1.jpg",
+      description: "Department of Computer Science, Electrical and Electronics and Electronics and Communication, Sree Buddha College of Engineering, Pattoor, Alappuzha, Kerala jointly organized an International Conference on Synergetic Technologies: \"Sustainable Approaches in Electrical, Electronics & Computer Engineering by Integrating AI for Future Innovations\" in association with Institute of Engineers(India), Kollam Local Centre. The keynote speaker was Dr. Dhanup S. Pillai, Scientist, Qatar Environment & Energy Research Institute – QEERI.",
+      coordinator: "Dr. S. Suresh Babu"
     },
     {
       id: 2,
-      title: "Coding Competition - CodeFest 2025",
-      category: "competition",
-      date: "February 10, 2025",
-      location: "Main Auditorium",
-      image: "/assets/images/departments/activities/coding1.jpg",
-      description: "Annual coding competition where students compete to solve algorithmic challenges and develop innovative solutions to real-world problems.",
-      coordinator: "Prof. Rajesh Kumar"
+      title: "National Science Day Celebrations 2025",
+      category: "lecture",
+      date: "March 18, 2025",
+      location: "BT Seminar Hall",
+      image: "/assets/images/departments/activities/lecture1.jpg",
+      description: "Department of Electronics and communication engineering celebrates NATIONAL SCIENCE DAY. Dr. Pradeep C, Professor, Department of Electronics, Saintgits College of Engineering inaugurated National Science Day 2025 followed by an enlightening talk on \"MILLION CHIPS, BILLION DREAMS\".",
+      coordinator: "Prof. Hari S"
     },
     {
       id: 3,
-      title: "Industry Visit to TCS Innovation Labs",
+      title: "Industrial Visit to ITI LIMITED Palakkad",
       category: "visit",
-      date: "January 22, 2025",
-      location: "TCS Campus, Infopark",
+      date: "February 20, 2025",
+      location: "ITI LIMITED, Palakkad",
       image: "/assets/images/departments/activities/visit1.jpg",
-      description: "An educational visit to TCS Innovation Labs to expose students to industry practices and emerging technologies in software development.",
-      coordinator: "Dr. Manu Mohan"
+      description: "2024-28 batch students gained insights into current market trends and technologies through hands-on experience with industry standard equipment and processes like PCB fabrication, SIM manufacturing, ATM card processing sessions etc.",
+      coordinator: "Dr. K. Krishnakumar"
     },
     {
       id: 4,
-      title: "Guest Lecture on Artificial Intelligence",
-      category: "lecture",
-      date: "April 5, 2025",
-      location: "Conference Hall",
-      image: "/assets/images/departments/activities/lecture1.jpg",
-      description: "A guest lecture by Dr. Sunita Patel, AI Researcher at Google, on recent advancements in artificial intelligence and machine learning.",
-      coordinator: "Dr. S.V. Annlin Jeba"
+      title: "Drone Workshop",
+      category: "workshop",
+      date: "February 24, 2025",
+      location: "ECE Department",
+      image: "/assets/images/departments/activities/workshop1.jpg",
+      description: "Department of ECE and ER in association with Nuke Labs organized a Drone workshop where students learned about drone technology, assembly, programming and flight control.",
+      coordinator: "Nuke Labs Team"
     },
     {
       id: 5,
-      title: "Hackathon - HackCS 2025",
+      title: "ELECTRA'24 Technical Fest",
       category: "competition",
-      date: "May 15-16, 2025",
-      location: "CS Department",
-      image: "/assets/images/departments/activities/hackathon1.jpg",
-      description: "A 24-hour hackathon where students will work in teams to build innovative software solutions. Prizes worth ₹50,000 to be won.",
-      coordinator: "Prof. Arun Kumar"
+      date: "April 8, 2024",
+      location: "SBCE Campus",
+      image: "/assets/images/departments/activities/ecacte.jpg",
+      description: "Department of ECE organized Technical Fest ELECTRA'24. Prof. K Sasikumar, Chairman of Sree Buddha College of Engineering inaugurated the fest. ROBO SOCCER, RC RACE, FUN ZONE, E-SPORTS & BASS BLAST Programmes were conducted during fest.",
+      coordinator: "ECE Department"
     },
     {
       id: 6,
-      title: "Workshop on Cybersecurity Fundamentals",
+      title: "IoT Hands-on Workshop",
       category: "workshop",
-      date: "June 8, 2025",
-      location: "Network Security Lab",
+      date: "December 16-18, 2024",
+      location: "ECE Lab",
       image: "/assets/images/departments/activities/workshop2.jpg",
-      description: "A comprehensive workshop on cybersecurity fundamentals, covering topics like network security, cryptography, and ethical hacking.",
-      coordinator: "Dr. Priya Nair"
+      description: "A 3-day Hands-on training on \"Internet of Things\" for the students of Department of ECE by OPEN LEAVES covering IoT fundamentals, sensor integration, and cloud connectivity.",
+      coordinator: "OPEN LEAVES"
+    },
+    {
+      id: 7,
+      title: "IDEATHON Competition Winners",
+      category: "competition",
+      date: "January 15, 2025",
+      location: "SBCE Campus",
+      image: "/assets/images/departments/activities/competition1.jpg", 
+      description: "Congratulations to S. Adithya, Adithyan A., Bhavya A. S. and Aliya Hakkim, winners of college level IDEATHON competition conducted by KTU start-up cell.",
+      coordinator: "KTU Start-up Cell"
+    },
+    {
+      id: 8,
+      title: "Industrial Visit to KINFRA Industrial Park",
+      category: "visit",
+      date: "February 14, 2025",
+      location: "KINFRA, Thiruvalla",
+      image: "/assets/images/departments/activities/visit2.jpg",
+      description: "Department of ECE and ER in association with BIS club conducted an industrial visit at KINFRA INDUSTRIAL PARK, Thiruvalla where students got exposure to industrial operations and manufacturing processes.",
+      coordinator: "BIS Club"
     }
   ];
 
@@ -82,7 +102,8 @@ export default function ComputerScienceDepartmentActivities() {
     { id: 'workshop', name: 'Workshops', icon: '🔧' },
     { id: 'competition', name: 'Competitions', icon: '🏆' },
     { id: 'lecture', name: 'Guest Lectures', icon: '🎓' },
-    { id: 'visit', name: 'Industry Visits', icon: '🚌' }
+    { id: 'visit', name: 'Industry Visits', icon: '🚌' },
+    { id: 'conference', name: 'Conferences', icon: '🌐' }
   ];
 
   return (
@@ -111,9 +132,9 @@ export default function ComputerScienceDepartmentActivities() {
             <p className="text-gray-700">
               The Department of Electronics & Communication Engineering at Sree Buddha College of Engineering conducts 
               various activities throughout the academic year to enhance the technical skills and practical 
-              knowledge of students. These activities include workshops, coding competitions, guest lectures,
-              industry visits, and hackathons. These initiatives help students stay updated with the latest 
-              technologies and industry trends.
+              knowledge of students. These activities include international conferences, technical fests, workshops, 
+              industrial visits, and competitions. Our focus on practical learning and industry exposure helps students 
+              develop technical expertise and stay updated with the latest advancements in the field of electronics and communication.
             </p>
           </div>
         </div>
@@ -207,10 +228,40 @@ export default function ComputerScienceDepartmentActivities() {
           </div>
         )}
 
-        {/* Upcoming Activities Section */}
+        {/* Student Achievements Section */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-yellow-900 pl-3">
-            Upcoming Activities
+            Student Achievements
+          </h3>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="space-y-4">
+              <div className="bg-yellow-50 p-4 rounded-lg">
+                <h4 className="font-bold text-gray-900">IDEATHON Competition Winners</h4>
+                <p className="text-gray-700">Congratulations to S. Adithya, Adithyan A., Bhavya A. S. and Aliya Hakkim, winners of college level IDEATHON competition conducted by KTU start-up cell.</p>
+              </div>
+              
+              <div className="bg-yellow-50 p-4 rounded-lg">
+                <h4 className="font-bold text-gray-900">NUKE LABS</h4>
+                <p className="text-gray-700">A start-up by the students of ECE & ER. The team has been developing innovative drone solutions and conducting workshops.</p>
+              </div>
+              
+              <div className="bg-yellow-50 p-4 rounded-lg">
+                <h4 className="font-bold text-gray-900">DECKATHON 2025</h4>
+                <p className="text-gray-700">Students of ECE & ER participated in DECKATHON 2025, showcasing their technical skills and innovative thinking.</p>
+              </div>
+              
+              <div className="bg-yellow-50 p-4 rounded-lg">
+                <h4 className="font-bold text-gray-900">Reverse Engineering Hackathon</h4>
+                <p className="text-gray-700">Students from Department of ECE and ER participated in the Reverse Engineering Hackathon organized by IEEE, SBCE.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Recent Activities Table */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-yellow-900 pl-3">
+            Recent Activities
           </h3>
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <table className="min-w-full divide-y divide-gray-200">
@@ -231,22 +282,62 @@ export default function ComputerScienceDepartmentActivities() {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {activities.slice(0, 4).map((activity) => (
-                  <tr key={`upcoming-${activity.id}`} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      {activity.title}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {activity.date}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {activity.location}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {activity.coordinator}
-                    </td>
-                  </tr>
-                ))}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    FAREWELL 2025 (2021-25 BATCH ECE)
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    April 30, 2025
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Main Auditorium
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    ECE Department
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    BIS STANDARD CLUB Formation
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    March 12, 2024
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    ECE Department
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Department of ECE
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    Talk on "NEP 2020"
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    October 8, 2024
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    BT Seminar Hall
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Prof. Hari S
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    Career Guidance by GuidEd Overseas
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    February 26, 2024
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    BT Seminar Hall
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    GuidEd Overseas
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -260,7 +351,7 @@ export default function ComputerScienceDepartmentActivities() {
                 Interested in our activities?
               </h3>
               <p className="text-yellow-100 mb-6">
-                Register now to participate in our upcoming workshops, competitions, and other exciting events. 
+                Register now to participate in our upcoming workshops, conferences, and other exciting events. 
                 Don't miss the opportunity to enhance your skills and network with industry experts.
               </p>
               <div className="space-x-4">
@@ -274,18 +365,16 @@ export default function ComputerScienceDepartmentActivities() {
             </div>
             <div className="md:w-1/3 bg-yellow-800 flex items-center justify-center p-8">
               <div className="text-center">
-                <p className="text-white font-bold text-4xl mb-2">50+</p>
+                <p className="text-white font-bold text-4xl mb-2">40+</p>
                 <p className="text-yellow-100">Activities per year</p>
                 <div className="w-16 h-1 bg-white mx-auto my-4" aria-hidden="true" />
-                <p className="text-white font-bold text-4xl mb-2">1000+</p>
+                <p className="text-white font-bold text-4xl mb-2">800+</p>
                 <p className="text-yellow-100">Student participants</p>
               </div>
             </div>
           </div>
         </div>
       </main>
-
-     
     </div>
   );
 }

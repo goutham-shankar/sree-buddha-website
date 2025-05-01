@@ -14,6 +14,7 @@ import "./style.css"
 export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
+        ["maths_science_faculty_0.jpg", "R. Pradeep Kumar", "M.com, MBA", "HOD", "Marketing management"],
         ["maths_science_faculty_1.jpg", "Mr. Somanadhan A", "RMPEd", "PED", "Physical Education"],
         ["maths_science_faculty_2.jpg", "Ms. Priya R", "MSc", "Asst. Professor", "Mathematics"],
         ["maths_science_faculty_3.jpg", "Ms. Rakhi Rajeev", "MSc, BEd", "Asst. Professor", "Mathematics"],

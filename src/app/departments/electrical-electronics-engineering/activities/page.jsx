@@ -8,6 +8,39 @@ export default function ComputerScienceDepartmentActivities() {
   const [activeFilter, setActiveFilter] = useState('all');
   
   // Activity data - structured for easy maintenance
+  const activities1s = [
+    {
+      id: 1,
+      title: "ELECTRIFYING SUCCESS: CRAFTING A BRIGHT FUTURE FOR ELECTRICAL ENGINEERS",
+      category: "lecture",
+      date: "November 8, 2023",
+      location: "Library Conference Hall",
+      image: "/assets/images/departments/activities/lecture1.jpg",
+      description: "A motivational session by Mr. Sanju P Cheriyan focused on guiding and inspiring EEE students to achieve their goals.",
+      coordinator: "Dr. Vinod V P"
+    },
+    {
+      id: 2,
+      title: "AWARENESS ON ELECTRICAL LICENSING AND SAFETY MEASURES",
+      category: "workshop",
+      date: "November 9, 2023",
+      location: "Library Seminar Hall",
+      image: "/assets/images/departments/activities/workshop1.jpg",
+      description: "A workshop discussing electrical licenses and safety practices, led by officials from the Electrical Inspectorate.",
+      coordinator: "Dr. Vinod V P"
+    },
+    {
+      id: 3,
+      title: "Industrial Safety & Awareness",
+      category: "seminar",
+      date: "November 25, 2022",
+      location: "EEE Seminar Hall",
+      image: "/assets/images/departments/activities/seminar1.jpg",
+      description: "A seminar on industrial electrical safety conducted by Arcite School of Technical Education for final-year students.",
+      coordinator: "EEIS Association"
+    }
+  ];
+  
   const activities = [
     {
       id: 1,
