@@ -38,7 +38,7 @@ export default function CoursesPage() {
       description: "Study of computers and computational systems including software design and development.",
       icon: "💻",
       details: "Our Computer Science & Engineering program emphasizes both theoretical foundations and practical applications. Students work on real-world projects in areas like software development, data analytics, cybersecurity, and more.",
-      intake: 180,
+      intake: 240,
       duration: "4 Years",
       eligibility: "10+2 with Physics, Chemistry and Mathematics"
     },
@@ -48,7 +48,7 @@ export default function CoursesPage() {
       description: "Design and development of electronic devices, circuits, communication equipment and systems.",
       icon: "📡",
       details: "ECE program offers specialization in communication systems, VLSI design, signal processing, and embedded systems. Our well-equipped laboratories provide practical exposure to various domains of electronics.",
-      intake: 30,
+      intake: 60,
       duration: "4 Years",
       eligibility: "10+2 with Physics, Chemistry and Mathematics"
     },
