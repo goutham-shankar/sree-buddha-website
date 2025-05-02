@@ -15,7 +15,7 @@ export default function ComputerScienceLayout({ children }) {
     const links =  [
         ["about" , "/"] , 
         ["Vision & Mission", "vision-mission"],
-        ["hod", "hod"],
+        ["HOD", "hod"],
         ["Faculty", "faculty"],
         // ["PEO'S,POs and PSos", "peos-pos-psos"],
         // ["Facilities", "facilities"],

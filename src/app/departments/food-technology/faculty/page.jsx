@@ -14,16 +14,15 @@ import "./style.css"
 export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
-        ["eee_faculty1.jpg", "Sindhu V.M.E", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty2.jpg", "Abhilasha Parthan", "M.Tech", "Assistant Professor", "Industrial Drives and Control"],
-        ["eee_faculty3.jpg", "Juna John Daniel", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty4.jpg", "Gayathri V", "M.Tech", "Assistant Professor", "Power Electronics & Power Systems"],
-        ["eee_faculty5.jpg", "Ananthu Vijayakumar", "M.Tech", "Assistant Professor", "Power Electronics & Power Systems"],
-        ["eee_faculty6.jpg", "Chama R Chandran", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty7.jpg", "Atheena A", "M.Tech", "Assistant Professor", "Power and Energy"],
-        ["eee_faculty8.jpg", "Athira B", "M.Tech", "Assistant Professor", "Power Systems"]
-      ];
-      
+
+        ["malu_ravi.jpg", "Dr. Malu Ravi", "Ph.D", "HOD", "Food processing"],
+        ["rincy.jpg", "Ms. Rincy Susan Raju", "M.Tech", "Asst. Professor", "Food technology"],
+        ["athulaya.jpg", "Ms. Athulya Krishnan", "MSc", "Asst. Professor", "Food technology"],
+        ["Bindhya.jpg", "Dr. Bindhya K P", "Ph.D", "Asst. Professor", "Chemical Engineering"],
+        ["priy.jpg", "Ms. Priyadharshini S", "M.tech", "Asst. Professor", "Food technology"]
+
+    ];
+
 
     return (
 
@@ -55,9 +54,9 @@ export default function ComputerScienceDepartmentFaculty() {
                         faculty.map((singleFaculty, index) => {
                             return (
 
-                                <tr key = {index}>
+                                <tr key={index}>
 
-                                    <td> <img src={`/assets/images/departments/faculty/eee/${singleFaculty[0]}`} alt="image" /> </td>
+                                    <td> <img src={`/assets/images/departments/faculty/ft/${singleFaculty[0]}`} alt="image" /> </td>
                                     {/* <td> <img src= {image.src} alt="image" /> </td> */}
                                     {/* <td> <img src= {"/assets/images/departments/faculty/cs/cs_f1.jpg"} alt="image" /> </td> */}
                                     <td>{singleFaculty[1]}</td>
@@ -78,18 +77,18 @@ export default function ComputerScienceDepartmentFaculty() {
 
             <div className="faculty_table_mobile">
 
-                
+
 
                 {
-                    faculty.map((singleFaculty ,index ) => {
+                    faculty.map((singleFaculty, index) => {
 
                         return (
-                           
-                           
 
-                            <div className="single_faculty" key = {index}>
 
-                            
+
+                            <div className="single_faculty" key={index}>
+
+
 
                                 <div className="img_section">
                                     <img src={`/assets/images/departments/faculty/eee/${singleFaculty[0]}`} alt="" />

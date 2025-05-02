@@ -1,49 +1,519 @@
-import React from 'react'
+"use client";
 
-import "./style.css"
+import React, { useState, useEffect, useMemo } from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
-export default function ComputerScienceDepartmentPaperPublications() {
+
+// Publication data structure
+const publicationsData = [
+  {
+    id: 1,
+    authors: ["Athira Sankar", "Soumya Murali"],
+    title: "A Survey On An Efficient Privacy-preserving Ranked Keyword Search Method",
+    publication: "International Research Journal Of Engineering And Technology (IRJET)",
+    details: "Volume-4, Issue 11, November 2017, ISSN:2395-0072",
+    year: 2017,
+    type: "journal",
+    featured: true
+  },
+  {
+    id: 2,
+    authors: ["Soumya Murali"],
+    title: "A Privacy Preserving Approach For Multikeyword Search Method Over Encrypted Cloud",
+    publication: "KETCON 2018",
+    details: "January 23, 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 3,
+    authors: ["Soumya Murali"],
+    title: "A Privacy Preserving Hierarchical Clustering Keyword Rank Search Method Over An Encrypted Cloud",
+    publication: "National Conference On Advanced Computing And Communication E2F2",
+    details: "SBCE PATTOOR",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 4,
+    authors: ["Soumya Murali"],
+    title: "An Efficient Privacy Preserving Hierarchical Ranked Keyword Search Method",
+    publication: "International Conference On Electrical, Electronics, Computer Communication, Mechanical And Computing (EECCMC 2018)",
+    details: "IEEE CONFERENCE, 28 January 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 5,
+    authors: ["Deepthi S", "Arun P S"],
+    title: "A survey on IP traceback techniques",
+    publication: "International Research Journal of Engineering and Technology (IRJET)",
+    details: "Volume 4, Issue No.10, pp 1643-1644, October 2017",
+    year: 2017,
+    type: "journal"
+  },
+  {
+    id: 6,
+    authors: ["Arun P S"],
+    title: "Token Based Authentication Mechanism for IP traceback",
+    publication: "National conference on recent trends in computing technologies",
+    details: "Feb 26, 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 7,
+    authors: ["Arun P S"],
+    title: "An Efficient Token Based Authentication Mechanism for IP traceback",
+    publication: "National Conference on Advanced Computing and Communication E2F2",
+    details: "April 16, 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 8,
+    authors: ["Arun P S"],
+    title: "AN EFFICIENT TOKEN BASED AUTHENTICATION MECHANISM FOR IP TRACEBACK",
+    publication: "International Conference on Soft Computing Systems 2018 (ICSCS 2018)",
+    details: "Springer, 19 April 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 9,
+    authors: ["Gopu Darsan"],
+    title: "Exploring Topic Experts in Twitter via Different Relations",
+    publication: "IJESC (International Journal of Engineering Science and Computing)",
+    details: "Volume 7, Issue No.4, April 2017",
+    year: 2017,
+    type: "journal",
+    featured: true
+  },
+  {
+    id: 10,
+    authors: ["Gopu Darsan"],
+    title: "Enhanced Expert Finding using Behavioural aspects",
+    publication: "KETCON 2018",
+    details: "February 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 11,
+    authors: ["Gopu Darsan"],
+    title: "An Efficient NLP based Topic Expert Identification in Social Networks",
+    publication: "Engineering Education for Facing the Future 2018 (E2F2 2018) National Conference on Eco-friendly Technological Innovations for Sustainable Development (NCETISD)",
+    details: "April 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 12,
+    authors: ["Gopu Darsan", "Akhila Krishnan A", "Reeba R"],
+    title: "Finding of Experts using Behavioural aspects + Vehicle Tracking With Car Following Models &Vs-Imm",
+    publication: "Springer International Conference on Soft Computing Systems (ICSCS-2018) + International Journal of Engineering and Technology(IRJET) Publication",
+    details: "April 2018 + vol. 4 Issue No.10, October 2017",
+    year: 2018,
+    type: "multiple"
+  },
+  {
+    id: 13,
+    authors: ["Akhila Krishnan A", "Reeba R"],
+    title: "Trustworthy Parking Community System",
+    publication: "International Journal of Engineering and Technology(IRJET) Publication",
+    details: "vol. 4 Issue No.10, October 2017",
+    year: 2017,
+    type: "journal"
+  },
+  {
+    id: 14,
+    authors: ["Akhila Krishnan A", "Reeba R"],
+    title: "Efficient trustworthy parking community system with QR code",
+    publication: "KETCON 2018",
+    details: "February 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 15,
+    authors: ["Akhila Krishnan A", "Reeba R"],
+    title: "Hybrid Factor Route Recommendation",
+    publication: "Engineering Education for Facing the Future 2018 (E2F22018) National Conference on Eco-friendly Technological Innovations for Sustainable Development (NCETISD)",
+    details: "April 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 16,
+    authors: ["Anaswara R", "Dhanya Sreedharan"],
+    title: "An Investigation on Myocardial Infract Localization in Medical Images",
+    publication: "International Research Journal of Engineering and Technology (IRJET) Publication",
+    details: "Vol 4 Issue 11, November 2017",
+    year: 2017,
+    type: "journal"
+  },
+  {
+    id: 17,
+    authors: ["Anaswara R", "Dhanya Sreedharan"],
+    title: "An Investigation on Human Organ Localization in Medical Images",
+    publication: "International Research Journal of Engineering and Technology (IRJET) Publication",
+    details: "Vol 4 Issue 11, Jan 2018",
+    year: 2018,
+    type: "journal"
+  },
+  {
+    id: 18,
+    authors: ["Anaswara R", "Dhanya Sreedharan"],
+    title: "Accurate Anatomical Landmark Localization In Cardiac Mr Images Using Stratified Decision Forests",
+    publication: "KETCON 2018",
+    details: "January 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 19,
+    authors: ["Anaswara R", "Dhanya Sreedharan"],
+    title: "Cardiac Land Marking: An Application Of Decision Forests",
+    publication: "E2F2 2018, National Conference on Advanced Computing and Communication(NCACC'18)",
+    details: "April 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 20,
+    authors: ["Parvathy R", "Anil A R"],
+    title: "A Survey on Ultrasound Beamforming Strategies",
+    publication: "International Research Journal of Engineering and Technology (IRJET)",
+    details: "Volume: 04 Issue: 10, Dec 2017",
+    year: 2017,
+    type: "journal"
+  },
+  {
+    id: 21,
+    authors: ["Parvathy R", "Anil A R"],
+    title: "A Survey on Needle Tip Estimation in Ultrasound",
+    publication: "International Research Journal of Engineering and Technology (IRJET)",
+    details: "Volume: 04 Issue: 10, Jan 2018",
+    year: 2018,
+    type: "journal"
+  },
+  {
+    id: 22,
+    authors: ["Parvathy R", "Anil A R"],
+    title: "Real Time Needle Tracking In Ultrasound Images By Statistical Filtering",
+    publication: "KETCON 2018",
+    details: "January 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 23,
+    authors: ["Parvathy R", "Anil A R"],
+    title: "Robust Real-Time Needle Tip Estimation and Tracking in 2-D Ultrasound Images Using Statistical Filtering",
+    publication: "Engineering Education for Facing the Future 2018 (E2F2 2018) National Conference on Advanced Computing and Communication (NCACC'18)",
+    details: "April 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 24,
+    authors: ["Anusree Radhakrishnan", "Minu Lalitha Madhav"],
+    title: "Survey on A Secure Anti Collusion Data sharing Scheme for Dynamic groups in the cloud",
+    publication: "International Research Journal of Engineering and Technology Science (IRJET)",
+    details: "Volume-4, Issue-11, November 2017, ISSN: 2395-0072",
+    year: 2017,
+    type: "journal"
+  },
+  {
+    id: 25,
+    authors: ["Minu Lalitha Madhav"],
+    title: "Effective data sharing scheme for dynamic groups in the cloud with revocation mechanism",
+    publication: "KETCON 2018",
+    details: "January 23, 2018",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 26,
+    authors: ["Minu Lalitha Madhav"],
+    title: "Cloud data sharing scheme for dynamic groups with revocation mechanism",
+    publication: "National Conference on Advanced Computing and Communication E2F2",
+    details: "SBCE PATTOOR",
+    year: 2018,
+    type: "conference"
+  },
+  {
+    id: 27,
+    authors: ["Minu Lalitha Madhav"],
+    title: "A secure cloud data sharing scheme for dynamic groups with revocation mechanism",
+    publication: "International Conference on Soft Computing Systems 2018 (ICSCS 2018)",
+    details: "Springer, 19 April 2018",
+    year: 2018,
+    type: "conference",
+    featured: true
+  }
+];
+
+// Faculty members for filtering
+const facultyMembers = [
+  "Soumya Murali", 
+  "Arun P S", 
+  "Gopu Darsan", 
+  "Reeba R", 
+  "Dhanya Sreedharan", 
+  "Anil A R", 
+  "Minu Lalitha Madhav"
+];
+
+// Reusable components
+const SectionTitle = ({ children }) => (
+  <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-2">
+    {children}
+  </h2>
+);
+
+const SectionSubtitle = ({ children }) => (
+  <div className="flex justify-center items-center mb-12">
+    <div className="w-16 h-1 bg-yellow-900 mr-4"></div>
+    <h3 className="text-xl md:text-2xl font-semibold text-gray-700">
+      {children}
+    </h3>
+    <div className="w-16 h-1 bg-yellow-900 ml-4"></div>
+  </div>
+);
+
+const FilterButton = ({ active, onClick, children }) => (
+  <button
+    onClick={onClick}
+    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+      active
+        ? 'bg-yellow-900 text-white'
+        : 'bg-yellow-50 text-yellow-900 hover:bg-yellow-100'
+    }`}
+  >
+    {children}
+  </button>
+);
+
+const PublicationCard = ({ publication, highlight = false }) => {
+  const cardClasses = highlight 
+    ? "bg-gradient-to-tr from-yellow-50 to-white border-l-4 border-yellow-900" 
+    : "bg-white hover:bg-yellow-50";
+
   return (
-    <>
+    <motion.div
+      className={`p-6 rounded-lg shadow-md mb-6 ${cardClasses} transition-all duration-300`}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="flex flex-col md:flex-row justify-between">
+        <div className="md:w-5/6">
+          <h4 className="font-bold text-lg mb-2 text-gray-900">
+            {publication.title}
+          </h4>
+          <p className="text-yellow-900 mb-3">
+            {publication.authors.join(", ")}
+          </p>
+          <p className="text-gray-700 mb-1">
+            <span className="font-medium">Publication:</span> {publication.publication}
+          </p>
+          <p className="text-gray-600 text-sm">
+            {publication.details}
+          </p>
+        </div>
+        <div className="md:w-1/6 flex flex-col items-end justify-center mt-4 md:mt-0">
+          <div className="bg-yellow-100 text-yellow-900 px-3 py-1 rounded-full text-center text-sm font-medium mb-2">
+            {publication.type === 'journal' ? 'Journal' : 'Conference'}
+          </div>
+          <p className="text-gray-500 font-bold">{publication.year}</p>
+          {publication.featured && (
+            <div className="mt-2 text-xs bg-yellow-900 text-white px-2 py-1 rounded">
+              Featured
+            </div>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
-    <h3 className="heading1">Paper Publications</h3>
+const PublicationStats = ({ publications }) => {
+  // Calculate statistics
+  const stats = useMemo(() => {
+    const totalPubs = publications.length;
+    const journalPubs = publications.filter(p => p.type === 'journal').length;
+    const conferencePubs = publications.filter(p => p.type === 'conference').length;
+    const yearCounts = publications.reduce((acc, pub) => {
+      acc[pub.year] = (acc[pub.year] || 0) + 1;
+      return acc;
+    }, {});
 
-    <h3 className="heading2">PUBLICATIONS/CONFERENCE DETAILS</h3>
+    return {
+      totalPubs,
+      journalPubs,
+      conferencePubs,
+      yearCounts
+    };
+  }, [publications]);
 
-    <ul className='publication_list'>
-      <li>Athira Sankar, <strong>Soumya Murali</strong> (2017),” A Survey On An Efficient Privacy-preserving Ranked Keyword Search Method ”,International Research Journal Of Engineering And Technology(IRJET)Volume-4,Issue 11,november 2017,ISSN:2395-0072</li>
-      <li>KETCON 2018: “A Privacy Preserving Approach For Multikeyword Search Method Over Encrypted Cloud “- January 23 2018</li>
-      <li>National Conference On Advanced Computing And Communication E2F2 “A Privacy Preserving Hierarchical Clustering Keyword Rank Search Method Over An Encrypted Cloud”
-      SBCE PATTOOR</li>
-      <li>International Conference On Electrical ,Electronics, Computer Communication, Mechanical And Computing (EECCMC 2018) “ An Efficient Privacy Preserving Hierarchical Ranked Keyword Search Method ”    IEEE CONFERENCE     28 january 2018</li>
-      <li>Deepthi S and <strong>Arun P S</strong>  “A survey on IP traceback techniques”, International Research Journal of Engineering and Technology (IRJET), Volume 4 Issue No.10, pp 1643-1644 ,October 2017</li>
-      <li>National conference on recent trends in computing technologies: “Token Based Authentication Mechanism for IP traceback “on Feb 26, 2018</li>
-      <li>National Conference on Advanced Computing and Communication  E2F2: “An Efficient Token Based Authentication Mechanism for IP traceback”  on April 16, 2018</li>
-      <li>International Conference on Soft Computing  Systems 2018 “AN EFFICIENT TOKEN BASED AUTHENTICATION MECHANISM FOR IP TRACEBACK” ICSCS 2018  Springer        (19 April 2018 )</li>
-      <li>Gopu Darsan,“Exploring Topic Experts in Twitter via Different Relations”,IJESC (International Journal of Engineering Science and Computing),Volume 7 Issue No.4,April 2017</li>
-      <li> <strong>Gopu Darsan</strong>,“Enhanced Expert Finding using Behavioural aspects”, KETCON , February, KETCON 2018.</li>
-      <li> <strong>Gopu Darsan</strong> , “An Efficient NLP based Topic Expert Identification in Social Networks”, Engineering Education for Facing the Future 2018 (E2F2 2018) National Conference on Eco-friendly Technological Innovations for Sustainable Development (NCETISD), April 2018.</li>
-      <li> <strong>Gopu Darsan</strong> ,“Finding of Experts using Behavioural aspects”, Springer International Conference on Soft Computing Systems”, ICSCS-2018 , April 2018.Akhila Krishnan A, ReebaR ,”Vehicle Tracking With Car Following Models &Vs-Imm,” International Journal of Engineering and Technology(IRJET) Publication, vol. 4 Issue No.10, October 2017.</li>
-      <li>Akhila Krishnan A,<strong>Reeba R</strong>  ,”Trustworthy Parking Community System,” International Journal of Engineering and Technology(IRJET) Publication, vol. 4 Issue No.10, October 2017.</li>
-      <li>Akhila krishnan A,<strong>Reeba R</strong>  , “Efficient trustworthy parking community system with QR code ”, KETCON , february, KETCON 2018.</li>
-      <li>Akhila krishnan A,<strong>Reeba R</strong>  , “Hybrid Factor Route Recommendation”, Engineering Education for Facing the Future 2018 (E2F22018) National Conference on Eco-friendly Technological Innovations for Sustainable Development (NCETISD), April 2018.</li>
-      <li>Anaswara R,<strong> Dhanya Sreedharan</strong>, “ An Investigation on Myocardial Infract Localization in Medical Images”, International Research Journal of Engineering and Technology (IRJET) Publication, Vol 4 Issue 11, November 2017.</li>
-      <li>Anaswara R,<strong>Dhanya Sreedharan</strong> , “ An Investigation on Human Organ Localization in Medical Images”, International Research Journal of Engineering and Technology (IRJET)  Publication, Vol 4  Issue 11, Jan 2018.</li>
-      <li>Anaswara R,<strong>Dhanya Sreedharan</strong> , “Accurate Anatomical Landmark Localization In Cardiac Mr Images Using Stratified Decision Forests” , Ketcon 2018</li>
-      <li>Anaswara R,<strong> Dhanya Sreedharan</strong>, “Cardiac Land Marking: An Application Of Decision Forests”, E2F2 2018, National Conference on Advanced Computing and Communication(NCACC’18)</li>
-      <li>Parvathy R,<strong> Anil A R</strong> , “A Survey on Ultrasound Beamforming Strategies”, International Research Journal of Engineering and Technology (IRJET),          Volume: 04 Issue: 10 | Dec -2017.</li>
-      <li>Parvathy R,<strong> Anil A R </strong>, “A Survey on Needle Tip Estimation in Ultrasound ” International Research Journal of Engineering and Technology      (IRJET), Volume: 04 Issue: 10 | Jan -2018.</li>
-      <li>Parvathy R,<strong>Anil A R</strong> , “Real Time Needle Tracking In Ultrasound Images By Statistical Filtering”, KETCON , January, KETCON 2018.
-      </li>
-      <li>Parvathy R,<strong>Anil A R</strong> , “Robust Real-Time Needle Tip Estimation and Tracking in 2-D Ultrasound Images Using Statistical Filtering ”, Engineering Education for Facing the Future 2018 (E2F2 2018) National Conference on Advanced Computing and Communication (NCACC’18), April 2018.</li>
-      <li>Anusree Radhakrishnan,<strong>Minu Lalitha Madhav </strong> (2017), ” Survey on A Secure Anti Collusion Data sharing Scheme for Dynamic groups in the cloud” ,  International Research Journal of Engineering and  Technology Science (IRJET) –  Volume-4, Issue-11,November 2017, ISSN: 2395-0072</li>
-      <li>KETCON 2018 : “Effective data sharing scheme for dynamic groups in the cloud with revocation mechanism“- January 23 2018</li>
-      <li>National Conference on Advanced Computing and Communication  E2F2  “Cloud data sharing scheme for dynamic groups with revocation mechanism “ SBCE PATTOOR</li>
-      <li>International Conference on Soft Computing  Systems 2018   ,”A secure cloud data sharing scheme for dynamic  groups with revocation mechanism “,ICSCS 2018  Springer         (19 April 2018 )</li>
-    </ul>
+  const yearStats = Object.entries(stats.yearCounts).sort((a, b) => b[0] - a[0]);
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+        <div className="text-4xl font-bold text-yellow-900 mb-2">{stats.totalPubs}</div>
+        <div className="text-gray-700">Total Publications</div>
+      </div>
+      <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+        <div className="flex justify-between items-center">
+          <div>
+            <div className="text-4xl font-bold text-yellow-900 mb-2">{stats.journalPubs}</div>
+            <div className="text-gray-700">Journals</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold text-yellow-900 mb-2">{stats.conferencePubs}</div>
+            <div className="text-gray-700">Conferences</div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+        <div className="mb-2">Publications by Year</div>
+        <div className="flex flex-wrap gap-2">
+          {yearStats.map(([year, count]) => (
+            <div key={year} className="bg-yellow-50 px-3 py-1 rounded-full">
+              <span className="font-medium">{year}: </span>
+              <span>{count}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Main component
+export default function ComputerScienceDepartmentPaperPublications() {
+  const [filter, setFilter] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [yearFilter, setYearFilter] = useState('all');
+  const [authorFilter, setAuthorFilter] = useState('all');
+  const [publications, setPublications] = useState(publicationsData);
+
+  // Get unique years for filter
+  const years = useMemo(() => {
+    const uniqueYears = [...new Set(publicationsData.map(pub => pub.year))];
+    return uniqueYears.sort((a, b) => b - a); // Sort in descending order
+  }, []);
+
+  // Filter publications
+  useEffect(() => {
+    let filteredData = [...publicationsData];
+    
+    // Filter by publication type
+    if (filter !== 'all') {
+      filteredData = filteredData.filter(pub => pub.type === filter);
+    }
+    
+    // Filter by year
+    if (yearFilter !== 'all') {
+      filteredData = filteredData.filter(pub => pub.year === parseInt(yearFilter));
+    }
+    
+    // Filter by author
+    if (authorFilter !== 'all') {
+      filteredData = filteredData.filter(pub => 
+        pub.authors.some(author => author === authorFilter)
+      );
+    }
+    
+    // Filter by search term
+    if (searchTerm.trim()) {
+      const term = searchTerm.toLowerCase();
+      filteredData = filteredData.filter(pub => 
+        pub.title.toLowerCase().includes(term) || 
+        pub.publication.toLowerCase().includes(term) ||
+        pub.authors.some(author => author.toLowerCase().includes(term))
+      );
+    }
+    
+    setPublications(filteredData);
+  }, [filter, searchTerm, yearFilter, authorFilter]);
+
+  return (
+   
+      <div className="bg-white min-h-screen">
+        {/* Header Section */}
+        <header className="relative bg-gradient-to-b from-yellow-50 to-white">
+          <div className="relative overflow-hidden">
+            <div className="absolute inset-0 bg-yellow-900/10 pattern-diagonal-lines pattern-yellow-500/20 pattern-bg-white pattern-size-4" aria-hidden="true" />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-gray-900 mb-4">
+                Department Of Computer Science And Engineering
+              </h1>
+              <div className="w-40 h-1 bg-yellow-900 mx-auto mb-8" aria-hidden="true" />
+              
+              <SectionSubtitle>PUBLICATIONS/CONFERENCE DETAILS</SectionSubtitle>
+            </div>
+          </div>
+        </header>
+        
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          
+          
+         
 
 
-      
-    </>
-  )
+
+          {/* Publications List */}
+          <section>
+           
+            
+            {publications.length > 0 ? (
+              <div className="space-y-6">
+                {publications.map(pub => (
+                  <PublicationCard key={pub.id} publication={pub} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16">
+                <div className="text-9xl mb-4">🔍</div>
+                <h3 className="text-2xl font-semibold text-gray-700 mb-2">No publications found</h3>
+                <p className="text-gray-600">Try adjusting your filters or search terms</p>
+                <button
+                  onClick={() => {
+                    setFilter('all');
+                    setYearFilter('all');
+                    setAuthorFilter('all');
+                    setSearchTerm('');
+                  }}
+                  className="mt-6 px-6 py-2 bg-yellow-900 text-white rounded-lg hover:bg-yellow-800 transition-colors"
+                >
+                  Reset All Filters
+                </button>
+              </div>
+            )}
+          </section>
+          
+          {publications.length > 0 && (
+            <div className="mt-8 text-center text-sm text-gray-500">
+              Showing {publications.length} of {publicationsData.length} publications
+            </div>
+          )}
+        </main>
+
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-8 right-8 p-2 rounded-full bg-yellow-900 text-white shadow-lg hover:bg-yellow-800 transition-colors"
+          aria-label="Scroll to top"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
+      </div>
+   
+  );
 }

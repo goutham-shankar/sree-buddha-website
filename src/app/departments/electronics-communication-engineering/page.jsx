@@ -6,15 +6,44 @@ import { useEffect, useState } from "react";
 import './style.css'
 
 export default function ComputerScienceDepartment() {
-    // Department building images
-    const buildingImages = [
-      "/images/cs-dept-building/cs-dept-building.png",
-      "/images/cs-dept-building/cs-dept-building2.png",
-      
-      
-      
-      
-    ];
+   
+const [images, setImages] = useState([]);
+
+useEffect(() => {
+  async function fetchImages() {
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/galleries?populate=*`);
+      const data = await response.json();
+
+      console.log("API Response:", data); // Debugging output
+
+      // ✅ Ensure Department data exists and filter correctly
+      let filteredImages = data.data.filter(item => 
+        item.Department?.toLowerCase() === "ece" 
+      );
+
+      // ✅ Sort images by date (newest first)
+      filteredImages.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      // ✅ Extract small image URLs
+      let imageUrls = filteredImages.flatMap(item =>
+        item.images.map(img => {
+          let smallImageUrl = img.formats?.small?.url
+            ? `${process.env.NEXT_PUBLIC_STRAPI}${img.formats.small.url}`
+            : `${process.env.NEXT_PUBLIC_STRAPI}${img.url}`; // Fallback if small version doesn't exist
+          return smallImageUrl;
+        })
+      );
+
+      setImages(imageUrls); // Update state
+    } catch (error) {
+      console.error("Error fetching images:", error);
+    }
+  }
+
+  fetchImages();
+}, []);
+
     
     return (
       <div className="cs-dept-container">
@@ -26,7 +55,7 @@ export default function ComputerScienceDepartment() {
         <div className="cs-dept-hero">
           <div className="cs-dept-hero-image">
             <Image 
-              src="/images/ece-dept-hero.jpg" 
+              src="/images/ece-hero2.png"
               alt="Electronics and Communication Students Working Together"
               width={1200}
               height={400}
@@ -44,11 +73,11 @@ export default function ComputerScienceDepartment() {
           <div className="cs-dept-profile-content">
             <div className="cs-dept-profile-text">
               <p>
-                The Department of Electronics and Communication Engineering (ECE) at Sree Buddha College of Engineering was established in 2002. The department currently offers B.Tech in Electronics and Communication Engineering with a sanctioned intake of 120 students, B.Tech ECE with specialization in IoT and Embedded Systems with a sanctioned intake of 60, M.Tech in Communication Systems, and Ph.D. programmes.
+              Sree Buddha College of Engineering is one of the pioneers in introducing the Bachelor Program for Electronics and Communication Engineering in Kerala. The department of Electronics & Communication Engineering (ECE), started in the year 2002, has carved a niche for itself by offering the most competent instructional programme to the students. At present the sanctioned intake is 60 with a provision of admitting six diploma holders in the third semester under lateral entry scheme. The department also offers M Tech programme in Embedded Systems from the year 2010 onwards. The sanctioned intake is 6.
               </p>
                 
               <p>
-                The department is committed to providing cutting-edge education in electronics and communication technologies. Through a comprehensive curriculum, internships, hands-on training, bridge courses, and workshops, students are prepared to meet the evolving demands of the telecommunications, semiconductor, and electronics industries. The department frequently organizes hackathons, faculty development programs, and industry interactions, providing a platform for students and faculty to engage with distinguished researchers and explore emerging trends in communication technologies. Accredited by NBA since November 2019, the department aligns with outcome-based learning and the National Educational Policy to maintain high standards of academic and industry engagement.
+              The Department of Electronics and Communication Engineering (ECE) at Sree Buddha College of Engineering is dedicated to academic excellence, innovation, and technological advancement. With a team of expert faculty, fully equipped laboratories and Industry collaboration we equip students with the skills and knowledge needed to bridge the gap between the Institute and Industry. The strong partnership with industries and regular hands-on workshops, imparts a strong culture of innovation in design and development of socially relevant and sustainable hardware projects. The research and innovation ecosystem in the department exposes our students into the ever-evolving world of telecommunications, semiconductor technology, IoT, AI-driven automation, robotics, and embedded systems
               </p>
             </div>
           </div>
@@ -93,36 +122,18 @@ export default function ComputerScienceDepartment() {
           </div>
         </section>
         
+         
         <section className="cs-dept-gallery">
-          <h2 className="cs-dept-section-title">Department Gallery</h2>
-          <div className="cs-dept-gallery-grid">
-            <div className="cs-dept-gallery-item">
-              <Image 
-                src="/images/csimg1.jpg" 
-                alt="Robotics Competition"
-                width={400}
-                height={300}
-              />
-            </div>
-            <div className="cs-dept-gallery-item">
-              <Image 
-                src="/images/csimg2.jpg" 
-                alt="Hackathon Event"
-                width={400}
-                height={300}
-              />
-            </div>
-            <div className="cs-dept-gallery-item">
-              <Image 
-                src="/images/csimg3.jpg" 
-                alt="Graduation Ceremony"
-                width={400}
-                height={300}
-              />
-            </div>
-          </div>
-        </section>
-        
+                <h2 className="cs-dept-section-title">Department Gallery</h2>
+                <div className="rowContainer">
+                    {images.map((src, index) => (
+                      <div key={index} className='card'>
+                        <img src={src} alt="Gallery" className='image' />
+                      </div>
+                    ))}
+                </div>
+
+            </section>
         <style jsx>{`
           .cs-dept-container {
             background-color: #E6E6E6;
@@ -306,5 +317,8 @@ export default function ComputerScienceDepartment() {
           }
         `}</style>
       </div>
+
+      
+
     );
   }

@@ -25,7 +25,8 @@ export default function ComputerScienceDepartmentFaculty() {
         ["maths_science_faculty_9.jpg", "Ms. Shalini C G", "MSc., B.Ed", "Asst. Professor", "Mathematics"],
         ["maths_science_faculty_10.jpg", "Ms. Prabhiya P S", "M.Sc., B.Ed, SET", "Asst. Professor", "Mathematics"],
         ["maths_science_faculty_11.jpg", "Ms. Smitha N K", "MA, B.Ed, SET", "Asst. Professor", "English"],
-        ["maths_science_faculty_12.jpg", "Ms. Suryamol O", "MSc", "Asst. Professor", "Physics"]
+        ["maths_science_faculty_12.jpg", "Ms. Suryamol O", "MSc", "Asst. Professor", "Physics"],
+        ["Veena-1.jpg", "Dr Veenapriya", "PhD", "Asst. Professor", "P.hD in Management"]
       ];
       
       

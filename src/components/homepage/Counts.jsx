@@ -45,7 +45,7 @@ export default function Counts() {
         <li>
           <div
             className="count-item"
-            data-count="18500"
+            data-count="7355"
             ref={(el) => countsRef.current[0] = el}
           >
             <img src="/assets/images/home/counts_admissions.png" alt="" />
@@ -59,7 +59,7 @@ export default function Counts() {
         <li>
           <div
             className="count-item"
-            data-count="1500"
+            data-count="5144"
             ref={(el) => countsRef.current[1] = el}
           >
              <img src="/assets/images/home/counts_admissions.png" alt="" />
@@ -73,7 +73,7 @@ export default function Counts() {
         <li>
           <div
             className="count-item"
-            data-count="50"
+            data-count="572"
             ref={(el) => countsRef.current[2] = el}
           >
              <img src="/assets/images/home/counts_admissions.png" alt="" />
@@ -84,7 +84,7 @@ export default function Counts() {
 
           </div>
         </li>
-        <li>
+        {/* <li>
           <div
             className="count-item"
             data-count="2004"
@@ -98,7 +98,7 @@ export default function Counts() {
             </div>
 
           </div>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

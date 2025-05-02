@@ -42,6 +42,7 @@ export default function Navbar() {
     {
       name: "Autonomous",
       links: [
+        { name: "About Autonomy", link: "/autonomous/about_autonomy" },
         { name: "Conferments", link: "/autonomous/conferments" },
         { name: "Governing Body", link: "/autonomous/governing_body" },
         { name: "Academic Council", link: "/autonomous/academic_council" },
@@ -58,6 +59,7 @@ export default function Navbar() {
     {
       name: "Academics",
       links: [
+        { name: "Courses Offered", link: "/academics/courses" },
         { name: "Advisory System", link: "/academics/advisory_systems" },
         { name: "Academic Calendar", link: "/academics/academic_calendar" },
         { name: "Professional Bodies", link: "/academics/professional_bodies" },
@@ -74,16 +76,16 @@ export default function Navbar() {
           link: "/departments/computer-science-engineering",
         },
         {
-          name: "EEE",
+          name: "Electrical and Electronics Engineering",
           link: "/departments/electrical-electronics-engineering",
         },
         {
-          name: "ECE",
+          name: "Electronics and Communication Engineering",
           link: "/departments/electronics-communication-engineering",
         },
-        { name: "Mechanical", link: "/departments/mechanical-engineering" },
+        { name: "Mechanical Engineering", link: "/departments/mechanical-engineering" },
         {
-          name: "Computer Science with AI",
+          name: "Computer Science and Engineering (Artificial Intelligence & Machine learning)",
           link: "/departments/artificial-intelligence-machine-learning",
         },
         {
@@ -95,7 +97,7 @@ export default function Navbar() {
           name: "Basic Science and Humanities",
           link: "/departments/mathematics-and-basic-sciences",
         },
-        { name: "Food Sciences", link: "/departments/food-technology" },
+        { name: "Food Technology", link: "/departments/food-technology" },
         {
           name: "Biotechnology and Biochemical Engineering",
           link: "/departments/biotechnology-biochemical-engineering",
@@ -105,12 +107,13 @@ export default function Navbar() {
     {
       name: "Admissions",
       links: [
+
         { name: "Undergraduate", link: "/admissions/undergraduate" },
         { name: "Postgraduate", link: "/admissions/postgraduate" },
         { name: "PhD Research", link: "/admissions/phd_research" },
         {
           name: "International Students Admission",
-          link: "/admissions/international",
+          link: "/admissions/international2",
         },
       ],
     },
@@ -125,7 +128,7 @@ export default function Navbar() {
       ],
     },
     {
-      name: "Cells and Chapters",
+      name: "Cells and Chapter",
       links: [
         {
           name: "Various Cells and Committees",
@@ -139,6 +142,8 @@ export default function Navbar() {
         { name: "Virtual Lab", link: "/cells_and_chapters/virtual_lab" },
         { name: "IEDC", link: "/cells_and_chapters/iedc" },
         { name: "NPTEL", link: "/cells_and_chapters/nptel" },
+        { name: "IPR Cell", link: "/research/ipr" },
+        { name: "Research Council", link: "/research/council" },
         {
           name: "IIT Remote Center",
           link: "/cells_and_chapters/remote_center",
@@ -148,7 +153,7 @@ export default function Navbar() {
     {
       name: "Facilities",
       links: [
-        { name: "Cells and Centers", link: "/facilities/cells" },
+        // { name: "Cells and Centers", link: "/facilities/cells" },
         { name: "Central Library", link: "/facilities/library" },
         { name: "Conference Hall", link: "/facilities/hall" },
         { name: "Conveyance and Bus Routes", link: "/facilities/bus" },
@@ -187,9 +192,7 @@ export default function Navbar() {
     {
       name: "Research",
       links: [
-        { name: "Research Council", link: "/research/council" },
         { name: "Projects", link: "/research/projects" },
-        { name: "IPR", link: "/research/ipr" },
         { name: "Consultancy", link: "/research/consultancy" },
         { name: "Conferences Organized", link: "/research/conference" },
       ],
@@ -200,35 +203,47 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="logo_section">
-        <Link href="/">
+        <Link
+          href={{
+            pathname: '/'
+
+          }}>
+
           <img src={"/assets/images/sree_buddha_logo.png"} alt="" />
         </Link>
       </div>
       <div className="navbar_right">
         <div className="important_links">
-          <a href="/admissions/international2" className="important_link">
+          <Link href="/admissions/international2" className="important_link">
             {" "}
             <img
               src="/assets/images/home/international_admissions.png"
               alt=""
             />{" "}
             International Admissions
-          </a>
-          <a href="#" className="important_link">
+
+          </Link>
+
+          <Link href="/academics/courses" className="important_link">
             {" "}
-            <img src="/assets/images/home/careers.png" alt="" /> CareersSBCE
-          </a>
-          <a href="/fee-payment" className="important_link">
+            <img src="/assets/images/home/careers.png" alt="" /> Courses
+          </Link>
+          <Link href="/fee-payment" className="important_link">
             {" "}
             <img src="/assets/images/home/fees.png" alt="" /> Fees Payment
-          </a>
-          <a href="" className="important_link last_link">
-            {" "}
+          </Link>
+          <a
+            href="https://ktu.edu.in/"
+            className="important_link last_link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="/assets/images/home/university.png" alt="" /> University
           </a>
-          <a href="#" className="important_links_button">
-            admissions
-          </a>
+
+          <Link href="/academics/courses" className="important_links_button">
+            Admissions
+          </Link>
           {/* <a href="">Result Analysis</a> */}
         </div>
 
@@ -239,21 +254,20 @@ export default function Navbar() {
               <div className={`navbar_menu `} key={index}>
                 <span>{menu.name}</span>
                 <div
-                  className={`submenu ${
-                    menu.side == "left" ? "towards_left" : ""
-                  }`}
+                  className={`submenu ${menu.side == "left" ? "towards_left" : ""
+                    }`}
                 >
                   <ul>
                     {menu.links.map((menul2, index2) => {
                       if (menul2.link != undefined) {
                         return (
-                          <a
+                          <Link
                             className="submenu_link"
                             href={menul2.link}
                             key={index2}
                           >
                             {menul2.name}
-                          </a>
+                          </Link>
                         );
                       } else {
                         return (

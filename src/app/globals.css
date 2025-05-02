@@ -7,11 +7,27 @@
   margin: 0px;
   font-family: 'poppins';
 }
+/* styles/globals.css */
+
+/* Remove bullet points from all <ul> elements */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Remove the default margin for list items */
+li {
+  margin: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
 
 html, body{
   width: 100%;
   /* min-width: 100vh; */
   background-color: #E6E6E6;
+  /* background-color: red; */
+  overflow-x: hidden;
   /* background-color: red; */
   /* overflow-x: hidden; */
 }
@@ -19,6 +35,7 @@ html, body{
 body{
   min-height: 100vh;
   /* height: max-content; */
+
 }
 
 .page_container{
@@ -28,9 +45,6 @@ body{
   flex-direction: column;
   justify-content: space-between;
 }
-
-
-
 
 :root{
 

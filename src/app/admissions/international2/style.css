@@ -31,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 3rem;
   position: relative;
   padding-bottom: 1rem;
+  color:#845714;
 }
 
 .page-title::after {
@@ -41,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background-color: #f78a24;
+  background-color: #cc721d;
 }
 
 section {
@@ -62,7 +63,7 @@ section h2::after {
   left: 0;
   width: 40px;
   height: 2px;
-  background-color: #f78a24;
+  background-color:#cc721d;
 }
 
 /* Introduction section */
@@ -93,13 +94,13 @@ section h2::after {
 .criteria-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  border-color: #f78a24;
+  border-color: #cc721d;
 }
 
 .criteria-item h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #4f46e5;
+  color:#845714;
 }
 
 .criteria-item ul {
@@ -115,7 +116,7 @@ section h2::after {
 
 .criteria-item ul li:before {
   content: "•";
-  color: #4f46e5;
+  color: #845714;
   position: absolute;
   left: 0;
   font-size: 1.2rem;
@@ -143,7 +144,7 @@ section h2::after {
 }
 
 .step-number {
-  background: #4f46e5;
+  background: #845714;
   color: #fff;
   width: 2rem;
   height: 2rem;
@@ -153,7 +154,7 @@ section h2::after {
   justify-content: center;
   font-weight: 600;
   flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 4px 10px #845714;
 }
 
 .step-content h3 {
@@ -187,13 +188,13 @@ section h2::after {
 }
 
 .document-item:hover {
-  border-color: #f78a24;
+  border-color: #cc721d;
   transform: translateY(-2px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
 }
 
 .document-item i {
-  color: #4f46e5;
+  color:#845714;
   font-size: 1.2rem;
 }
 
@@ -218,12 +219,12 @@ section h2::after {
 .contact-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  border-color: #6366f1;
+  border-color: #845714;
 }
 
 .contact-item i {
   font-size: 1.5rem;
-  color: #4f46e5;
+  color:#845714;
 }
 
 .contact-item h3 {
@@ -292,12 +293,12 @@ section h2::after {
 .feature-item:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-  border-color: #f78a24;
+  border-color:#cc721d;
 }
 
 .feature-item i {
   font-size: 2.5rem;
-  color: #4f46e5;
+  color:#845714;
   margin-bottom: 1.5rem;
   transition: all 0.3s ease;
   position: relative;
@@ -306,7 +307,7 @@ section h2::after {
 
 .feature-item:hover i {
   transform: scale(1.1);
-  color: #f78a24;
+  color:#cc721d;
 }
 
 .feature-item h3 {
@@ -326,7 +327,7 @@ section h2::after {
   transform: translateX(-50%);
   width: 30px;
   height: 2px;
-  background-color: #f78a24;
+  background-color:#cc721d;
   transition: width 0.3s ease;
 }
 
@@ -377,7 +378,7 @@ section h2::after {
 
 .program-category:hover .category-header i {
   transform: rotateY(180deg);
-  color: #f78a24;
+  color: #cc721d;
 }
 
 .category-header h3 {
@@ -396,7 +397,7 @@ section h2::after {
   transform: translateX(-50%);
   width: 50px;
   height: 2px;
-  background-color: #f78a24;
+  background-color:#cc721d;
 }
 
 .category-description {
@@ -435,7 +436,7 @@ section h2::after {
   left: 0;
   width: 4px;
   height: 100%;
-  background: #4f46e5;
+  background: #845714;
   opacity: 0;
   transition: all 0.3s ease;
 }
@@ -463,7 +464,7 @@ section h2::after {
 }
 
 .program-card:hover .program-details h4 {
-  color: #4f46e5;
+  color: #845714;
 }
 
 .program-duration {
@@ -471,7 +472,7 @@ section h2::after {
   color: #666;
   display: block;
   padding-left: 0.5rem;
-  border-left: 2px solid #f78a24;
+  border-left: 2px solid #cc721d;
   transition: all 0.3s ease;
 }
 

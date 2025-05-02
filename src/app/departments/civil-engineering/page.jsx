@@ -22,14 +22,14 @@ export default function ComputerScienceDepartment() {
     useEffect(() => {
       async function fetchImages() {
         try {
-          const response = await fetch("http://13.51.85.192:1337/api/galleries?populate=*");
+          const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/galleries?populate=*`);
           const data = await response.json();
   
           console.log("API Response:", data); // Debugging output
   
           // ✅ Ensure Department data exists and filter correctly
           let filteredImages = data.data.filter(item => 
-            item.Department?.toLowerCase() === "mea" 
+            item.Department?.toLowerCase() === "ce" 
           );
   
           // ✅ Sort images by date (newest first)
@@ -39,8 +39,8 @@ export default function ComputerScienceDepartment() {
           let imageUrls = filteredImages.flatMap(item =>
             item.images.map(img => {
               let smallImageUrl = img.formats?.small?.url
-                ? `http://13.51.85.192:1337${img.formats.small.url}`
-                : `http://13.51.85.192:1337${img.url}`; // Fallback if small version doesn't exist
+                ? `${process.env.NEXT_PUBLIC_STRAPI}${img.formats.small.url}`
+                : `${process.env.NEXT_PUBLIC_STRAPI}${img.url}`; // Fallback if small version doesn't exist
               return smallImageUrl;
             })
           );
@@ -64,7 +64,7 @@ export default function ComputerScienceDepartment() {
         <div className="cs-dept-hero">
           <div className="cs-dept-hero-image">
             <Image 
-              src="/images/cs-dept-hero.jpg" 
+              src="/images/ce-hero.png" 
               alt="Computer Science Students Working Together"
               width={1200}
               height={400}
@@ -193,6 +193,8 @@ export default function ComputerScienceDepartment() {
           .cs-dept-hero-image {
             width: 100%;
             height: 100%;
+            margin-top:0px;
+            padding-top:0px;
           }
           
           .cs-dept-hero-image img {
@@ -205,7 +207,7 @@ export default function ComputerScienceDepartment() {
             position: absolute;
             bottom: 0;
             left: 0;
-            padding: 30px;
+            padding: 20px;
             background: rgba(0, 0, 0, 0.7);
             color: white;
             width: 100%;

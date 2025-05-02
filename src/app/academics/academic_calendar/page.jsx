@@ -10,7 +10,7 @@ function Page() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://13.51.85.192:1337/api/academic-calenders?populate=*');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/academic-calenders?populate=*`);
         const data = await response.json();
         setCalendarData(data.data); // Extract data from the response
       } catch (error) {
@@ -35,7 +35,7 @@ function Page() {
 
   return (
     <div className="calendar-container">
-      <h1 className="calendar-title" style={{color:'#73501c'}}>Academic Calendars</h1>
+      <h1 className="page_heading2" style={{color:'#73501c'}}>Academic Calendars</h1>
 
       <div className="search-container">
         <i className="fas fa-search search-icon"></i>

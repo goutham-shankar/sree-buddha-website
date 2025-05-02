@@ -16,7 +16,7 @@ export default function ComputerScienceLayout({ children }) {
         ["about" , "/"] , 
         ["Vision & Mission", "vision-mission"],
         ["Faculty", "faculty"],
-        ["hod", "hod"],
+        ["HOD", "hod"],
         ["PEO'S,POs and PSos", "peos-pos-psos"],
         ["Facilities", "facilities"],
         ["Achievements", "achievements"],

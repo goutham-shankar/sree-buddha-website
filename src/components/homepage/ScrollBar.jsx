@@ -5,10 +5,11 @@ import styles from "@/styles/homepage/NewsTicker.module.css";
 
 const newsItems = [
   "ADMISSION STARTED 2025",
+  "COLLEGE CODE - SBC",
   "ADMISSION STARTED 2025",
+  "COLLEGE CODE - SBC" , 
   "ADMISSION STARTED 2025",
-  "ADMISSION STARTED 2025",
-  "ADMISSION STARTED 2025",
+   "COLLEGE CODE - SBC",
   "ADMISSION STARTED 2025",
 ];
 

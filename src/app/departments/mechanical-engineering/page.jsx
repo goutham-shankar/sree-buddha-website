@@ -16,7 +16,7 @@ export default function MechanicalDepartment() {
   useEffect(() => {
     async function fetchImages() {
       try {
-        const response = await fetch("http://13.51.85.192:1337/api/galleries?populate=*");
+        const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/galleries?populate=*`);
         const data = await response.json();
 
         console.log("API Response:", data); // Debugging output
@@ -33,8 +33,8 @@ export default function MechanicalDepartment() {
         let imageUrls = filteredImages.flatMap(item =>
           item.images.map(img => {
             let smallImageUrl = img.formats?.small?.url
-              ? `http://13.51.85.192:1337${img.formats.small.url}`
-              : `http://13.51.85.192:1337${img.url}`; // Fallback if small version doesn't exist
+              ? `${process.env.NEXT_PUBLIC_STRAPI}${img.formats.small.url}`
+              : `${process.env.NEXT_PUBLIC_STRAPI}${img.url}`; // Fallback if small version doesn't exist
             return smallImageUrl;
           })
         );
@@ -58,7 +58,7 @@ export default function MechanicalDepartment() {
             <div className="cs-dept-hero">
                 <div className="cs-dept-hero-image">
                     <Image
-                        src="/images/cs-dept-hero.jpg"
+                        src="/images/me-hero.jpg"
                         alt="Computer Science Students Working Together"
                         width={1200}
                         height={400}
@@ -236,10 +236,11 @@ export default function MechanicalDepartment() {
             position: absolute;
             bottom: 0;
             left: 0;
-            padding: 30px;
+            padding: 20px;
             background: rgba(0, 0, 0, 0.7);
             color: white;
             width: 100%;
+          
           }
           
           .cs-dept-hero-text h2 {

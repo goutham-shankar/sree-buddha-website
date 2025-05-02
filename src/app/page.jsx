@@ -15,6 +15,7 @@ import Register2 from "@/components/homepage/register2";
 import News from "@/components/homepage/News";
 import Footer from "@/components/footer";
 import News2 from "@/components/homepage/News2";
+import Contact from "@/components/homepage/Contact";
 
 const announcements = [
   '2025 ADMISSION STARTED',
@@ -35,8 +36,9 @@ export default function Home() {
     <News2/>
     {/* <Events2/> */}
     <Counts/>
-    <Research/>
+     <Research/> 
     <Affiliations/> 
+    <Contact/>
     {/* <Footer/> */}
     </>
   )

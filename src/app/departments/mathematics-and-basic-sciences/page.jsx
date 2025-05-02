@@ -21,14 +21,14 @@ export default function ComputerScienceDepartment() {
   useEffect(() => {
     async function fetchImages() {
       try {
-        const response = await fetch("http://13.51.85.192:1337/api/galleries?populate=*");
+        const response = await fetch("http://${process.env.NEXT_PUBLIC_STRAPI}:1337/api/galleries?populate=*");
         const data = await response.json();
 
         console.log("API Response:", data); // Debugging output
 
         // ✅ Ensure Department data exists and filter correctly
         let filteredImages = data.data.filter(item => 
-          item.Department?.toLowerCase() === "mea" 
+          item.Department?.toLowerCase() === "bsh" 
         );
 
         // ✅ Sort images by date (newest first)
@@ -38,8 +38,8 @@ export default function ComputerScienceDepartment() {
         let imageUrls = filteredImages.flatMap(item =>
           item.images.map(img => {
             let smallImageUrl = img.formats?.small?.url
-              ? `http://13.51.85.192:1337${img.formats.small.url}`
-              : `http://13.51.85.192:1337${img.url}`; // Fallback if small version doesn't exist
+              ? `${process.env.NEXT_PUBLIC_STRAPI}${img.formats.small.url}`
+              : `${process.env.NEXT_PUBLIC_STRAPI}${img.url}`; // Fallback if small version doesn't exist
             return smallImageUrl;
           })
         );
@@ -57,14 +57,14 @@ export default function ComputerScienceDepartment() {
     return (
       <div className="cs-dept-container">
         <header className="cs-dept-header">
-          <h1>Mathematics and basic Sciences Department</h1>
+          <h1> Basic Sciences and Humanities Department</h1>
           <p>Innovation • Excellence • Future</p>
         </header>
         
         <div className="cs-dept-hero">
           <div className="cs-dept-hero-image">
             <Image 
-              src="/images/cs-dept-hero.jpg" 
+              src="/images/bsh-hero.jpg" 
               alt="Computer Science Students Working Together"
               width={1200}
               height={400}

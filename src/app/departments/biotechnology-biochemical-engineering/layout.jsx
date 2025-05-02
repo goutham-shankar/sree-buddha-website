@@ -16,7 +16,7 @@ export default function ComputerScienceLayout({ children }) {
         ["about" , "/"] , 
         ["Vision & Mission", "vision-mission"],
         ["Faculty", "faculty"],
-        ["hod", "hod"],
+        ["HOD", "hod"],
         ["PEO'S,POs and PSos", "peos-pos-psos"],
         ["Facilities", "facilities"],
         ["Achievements", "achievements"],
@@ -32,7 +32,7 @@ export default function ComputerScienceLayout({ children }) {
         <div className="department">
         { children }
         </div>
-        <DepartmentNavbar  department= {"electrical-electronics-engineering"} links = {links} />
+        <DepartmentNavbar  department= {"biotechnology-biochemical-engineering"} links = {links} />
 
         
         </div>
