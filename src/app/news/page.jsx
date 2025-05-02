@@ -6,7 +6,7 @@ export default function EventsPage() {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const API_URL = 'http://${process.env.NEXT_PUBLIC_STRAPI}:1337/api/newss?populate=News_media';
+  const API_URL = `${process.env.NEXT_PUBLIC_STRAPI}/api/newss?populate=News_media`;
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -109,7 +109,7 @@ export default function EventsPage() {
                   >
                     <div className="relative h-48">
                     <img 
-  src={`http://${process.env.NEXT_PUBLIC_STRAPI}:1337${event.News_media.formats.medium.url}`}
+  src={`${process.env.NEXT_PUBLIC_STRAPI}/${event.News_media.formats.medium.url}`}
 
   
   alt={event.Heading} 
