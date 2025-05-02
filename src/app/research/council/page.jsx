@@ -99,7 +99,7 @@ export default function page() {
             <tr>
             <td>Dr. Archana Rajendran</td>
             <td>Associate Professor, BT & BC</td>
-            <td class="bold-text">Secretary</td>
+            <td className="bold-text">Secretary</td>
             </tr>
             <tr>
             <td>Dr. M S Senthil Saravanan</td>

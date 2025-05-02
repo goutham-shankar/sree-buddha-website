@@ -63,8 +63,8 @@ export default function UndergraduatePage() {
               <tbody className="text-gray-700">
                 {[
                   ["Civil Engineering", "60 Seats"],
-                  ["Computer Science & Engineering", "180 Seats"],
-                  ["Electronics & Communication Engineering", "30 Seats"],
+                  ["Computer Science & Engineering", "240 Seats"],
+                  ["Electronics & Communication Engineering", "60 Seats"],
                   ["Electrical & Electronics Engineering", "30 Seats"],
                   ["Mechanical Engineering", "60 Seats"],
                   ["Biotechnology & Biochemical Engineering", "30 Seats"],

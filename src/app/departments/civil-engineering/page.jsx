@@ -142,17 +142,36 @@ export default function ComputerScienceDepartment() {
           </div>
         </section>
         
-        <section className="cs-dept-gallery">
-                <h2 className="cs-dept-section-title">Department Gallery</h2>
-                <div className="rowContainer">
-                    {images.map((src, index) => (
-                      <div key={index} className='card'>
-                        <img src={src} alt="Gallery" className='image' />
-                      </div>
-                    ))}
+        <section className="container mx-auto px-4 py-10">
+                <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 text-yellow-900 mb-6">
+                  Department Gallery
+                </h2>
+        
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {/* Static images instead of API-fetched images */}
+                  <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                    <Image
+                      src="/images/csimg2.jpg"
+                      alt="CS Department Building Front View"
+                      width={400}
+                      height={300}
+                      className="w-full h-48 object-cover"
+                    />
+                  </div>
+        
+                  <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                    <Image
+                      src="/images/csimg1.jpg"
+                      alt="CS Department Seminar Hall"
+                      width={400}
+                      height={300}
+                      className="w-full h-48 object-cover"
+                    />
+                  </div>
+        
+        
                 </div>
-
-            </section>
+              </section>
         
         <style jsx>{`
           .cs-dept-container {

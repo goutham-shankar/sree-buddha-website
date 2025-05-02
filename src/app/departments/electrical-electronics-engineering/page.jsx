@@ -187,7 +187,7 @@ export default function ElectricalDepartment() {
 
   return (
       <div className="cs-dept-container bg-[#E6E6E6] text-gray-800 font-['Poppins',sans-serif] p-5 md:p-8">
-        <header className="cs-dept-header py-6 mb-6 border-b-3 border-[#845714]">
+        <header className="cs-dept-header py-6 mb-6 border-b-2 border-[#845714]">
           <h1 className="text-[#845714] text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
             Department of Electrical and Electronics Engineering
           </h1>
@@ -271,25 +271,36 @@ export default function ElectricalDepartment() {
           </div>
         </section>
         
-        <section className="cs-dept-gallery py-8" aria-labelledby="department-gallery">
-          <SectionTitle>Department Gallery</SectionTitle>
-          
-          {loading ? (
-            <LoadingGallery />
-          ) : error ? (
-            <ErrorDisplay message={error} retryFn={fetchImages} />
-          ) : images.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {images.map((src, index) => (
-                <GalleryImage key={index} src={src} alt={`Gallery image ${index + 1}`} index={index} />
-              ))}
-            </div>
-          ) : (
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 text-center">
-              <p className="text-yellow-800">No gallery images found for the Electrical Department.</p>
-            </div>
-          )}
-        </section>
+        <section className="container mx-auto px-4 py-10">
+                <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 text-yellow-900 mb-6">
+                  Department Gallery
+                </h2>
+        
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {/* Static images instead of API-fetched images */}
+                  <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                    <Image
+                      src="/images/csimg2.jpg"
+                      alt="CS Department Building Front View"
+                      width={400}
+                      height={300}
+                      className="w-full h-48 object-cover"
+                    />
+                  </div>
+        
+                  <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                    <Image
+                      src="/images/csimg1.jpg"
+                      alt="CS Department Seminar Hall"
+                      width={400}
+                      height={300}
+                      className="w-full h-48 object-cover"
+                    />
+                  </div>
+        
+        
+                </div>
+              </section>
       </div>
    
   );

@@ -1,63 +1,60 @@
-"use client"
+"use client";
 
-import React, { useState, useEffect } from 'react'
-import "@/styles/homepage/vission_mission.css"
+import React, { useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css"
+import "aos/dist/aos.css";
 
-export default function VissionMission() {
-  const [isAboutExpanded, setIsAboutExpanded] = useState(false);
-
+export default function VisionMission() {
   useEffect(() => {
     AOS.init({
-      once: true,
-      duration: 700,
+      duration: 600,
       easing: "ease-out-cubic",
+      once: true,
     });
   }, []);
 
-  const toggleAbout = () => {
-    setIsAboutExpanded(!isAboutExpanded);
-  };
-
   return (
-    <div className="vision_and_mission">
-      <div className="about" data-aos="fade-up" data-aos-duration="600">
-        <p className={`about-text ${isAboutExpanded ? 'expanded' : ''}`}>
-          Sree Buddha College of Engineering, affiliated with APJ Abdul Kalam Technological University, excels in technical education, guided by the teachings of Lord Buddha. The institution nurtures aspiring technocrats and strives to be a model for the world.
-        </p>
-        <button 
-          className='about_us'
-          onClick={toggleAbout}
-          aria-expanded={isAboutExpanded}
-        >
-          {isAboutExpanded ? 'Read Less' : 'About Us'}
-        </button>
-      </div>
-      
-      <div className="v-m">
-        <div 
-          className="vision" 
-          data-aos="fade-up" 
-          data-aos-duration="600"
-        >
-          <h3>OUR VISION</h3>
-          <p>To create professionally competent engineers with human values and social commitment.</p>
+    <section
+      className="bg-[#fbe3bc] m-5  text-[#775A2D] py-9 px-4 md:px-16 rounded-3xl font-[italic]"
+      data-aos="fade-up"
+    >
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="space-y-6" data-aos="fade-up">
+          <p className="text-lg md:text-xl leading-relaxed">
+            Sree Buddha College of Engineering, affiliated with APJ Abdul Kalam
+            Technological University, excels in technical education, guided by
+            the teachings of Lord Buddha. The institution nurtures aspiring
+            technocrats and strives to be a model for the world.
+          </p>
+          <button className="bg-black text-white font-semibold px-6 py-3 rounded-2xl shadow-md hover:bg-gray-900 transition">
+            About Us
+          </button>
         </div>
-          
-        <div 
-          className="mission" 
-          data-aos="fade-up" 
-          data-aos-duration="600"
-        >
-          <h3>OUR MISSION</h3>
-          <ul>
-            <li>Offer well balanced curriculum with student-centric approach.</li>
-            <li>Encourage students to participate in innovation, lifelong learning and research.</li>
-            <li>Impart ethical and human values focusing on rural needs and sustainability.</li>
-          </ul>
+
+        <div className="space-y-10" data-aos="fade-up">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-extrabold uppercase !text-black">
+              Our Vision
+            </h2>
+            <p className="italic text-lg mt-2">
+              To create professionally competent engineers with human values and
+              social commitment.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-3xl font-extrabold uppercase !text-black">
+              Our Mission
+            </h2>
+            <p className="italic text-lg mt-2">
+              Offer well balanced curriculum with student-centric approach.
+              Encourage students to participate in innovation, lifelong learning
+              and research. Impart ethical and human values focusing on rural
+              needs and sustainability.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  )
+    </section>
+  );
 }

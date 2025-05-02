@@ -70,7 +70,7 @@ export default function AIAndMachineLearningDepartmentHOD() {
     title: 'HOD - CSE (AI & ML) Department',
     imagePath: '/assets/images/departments/hod_ai.jpg',
     email: 'hod.ai@sbce.ac.in',
-    phone: '+91 XXXXXXXXXX'
+    phone: '+91 85903 32548'
   };
 
   const tabData = {

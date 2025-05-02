@@ -61,7 +61,7 @@ export default function Page() {
         setStatus({ type: 'success', message: 'Form submitted successfully!' });
         toast.success("Message sent successfully! We'll get back to you soon.");
         console.log('API Response:', result);
-        
+
         // Reset form after successful submission
         setForm({
           name: "",
@@ -88,16 +88,16 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gray-50">
       <ToastContainer position="top-right" />
-      
+
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-yellow-900 via-yellow-800 to-yellow-900">
         {/* Animated background pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" 
-               style={{
-                 backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-                 animation: "slide 20s linear infinite"
-               }}
+          <div className="absolute inset-0"
+            style={{
+              backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+              animation: "slide 20s linear infinite"
+            }}
           ></div>
         </div>
 
@@ -119,15 +119,15 @@ export default function Page() {
 
                 {/* Quick contact options */}
                 <div className="flex flex-wrap gap-4 mt-8 animate-fade-in-up-delay-2">
-                  <a href="tel:+914792375440" 
-                     className="inline-flex items-center px-6 py-3 bg-white text-yellow-900 rounded-full hover:bg-yellow-100 transition-all transform hover:scale-105">
+                  <a href="tel:+914792375440"
+                    className="inline-flex items-center px-6 py-3 bg-white text-yellow-900 rounded-full hover:bg-yellow-100 transition-all transform hover:scale-105">
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
                     Call Now
                   </a>
-                  <a href="mailto:principal@sbce.ac.in" 
-                     className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-yellow-900 transition-all transform hover:scale-105">
+                  <a href="mailto:principal@sbce.ac.in"
+                    className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-yellow-900 transition-all transform hover:scale-105">
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                       <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
@@ -191,7 +191,7 @@ export default function Page() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            
+
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
@@ -206,8 +206,8 @@ export default function Page() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Email</h3>
-                      <a href="mailto:principal@sbce.ac.in" 
-                         className="text-yellow-900 hover:text-yellow-700 transition-colors">
+                      <a href="mailto:principal@sbce.ac.in"
+                        className="text-yellow-900 hover:text-yellow-700 transition-colors">
                         principal@sbce.ac.in
                       </a>
                     </div>
@@ -221,8 +221,8 @@ export default function Page() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                      <a href="tel:+919446014317" 
-                         className="text-yellow-900 hover:text-yellow-700 transition-colors">
+                      <a href="tel:+919446014317"
+                        className="text-yellow-900 hover:text-yellow-700 transition-colors">
                         +91 9446014317
                       </a>
                     </div>
@@ -251,11 +251,14 @@ export default function Page() {
               {/* Map Section */}
               <div className="bg-gray-100 p-4 rounded-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3935.7457785780184!2d76.50973731478558!3d9.283754593350376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0622984cfaf3af%3A0xd0320f890e19ed2f!2sSree%20Buddha%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1650932755959!5m2!1sen!2sin"
-                  className="w-full h-64 rounded-lg"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.4370289554703!2d76.63980737489798!3d9.212530691475758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06175636a5fcf9%3A0x8c3c160158a8b47f!2sPattoor%2C%20P.O%2C%20Nooranad%2C%20Padanilam%2C%20Kerala%20690529!5e0!3m2!1sen!2sin!4v1682782892424!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
                   style={{ border: 0 }}
-                  allowFullScreen
+                  allowFullScreen=""
                   loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="SBCE Location Map"
                 ></iframe>
               </div>
             </div>
@@ -263,15 +266,14 @@ export default function Page() {
             {/* Contact Form */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h2 className="text-2xl font-bold mb-6 text-yellow-900">Send us a Message</h2>
-              
+
               {/* Status Message Display */}
               {status && (
                 <div
-                  className={`p-4 mb-4 rounded ${
-                    status.type === 'success' 
-                      ? 'bg-green-100 text-green-700' 
+                  className={`p-4 mb-4 rounded ${status.type === 'success'
+                      ? 'bg-green-100 text-green-700'
                       : 'bg-red-100 text-red-700'
-                  }`}
+                    }`}
                 >
                   {status.message}
                 </div>
@@ -378,9 +380,8 @@ export default function Page() {
 
                 <button
                   type="submit"
-                  className={`w-full px-6 py-3 bg-yellow-900 text-white font-bold rounded-lg hover:bg-yellow-800 transition-colors ${
-                    loading ? 'opacity-50 cursor-not-allowed' : ''
-                  }`}
+                  className={`w-full px-6 py-3 bg-yellow-900 text-white font-bold rounded-lg hover:bg-yellow-800 transition-colors ${loading ? 'opacity-50 cursor-not-allowed' : ''
+                    }`}
                   disabled={loading}
                 >
                   {loading ? 'Submitting...' : 'Submit Inquiry'}

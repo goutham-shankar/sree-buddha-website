@@ -222,7 +222,7 @@ export default function ComputerScienceDepartmentAssociations() {
               Department Of Computer Science And Engineering
             </h1>
             <div className="w-40 h-1 bg-yellow-900 mx-auto mb-8" aria-hidden="true" />
-            <h2 className="text-2xl md:text-4xl font-bold text-center text-gray-800">Associations & Activities</h2>
+            <h2 className="text-2xl md:text-4xl font-bold text-center text-gray-800">Associations & Clubs</h2>
           </div>
         </div>
       </header>

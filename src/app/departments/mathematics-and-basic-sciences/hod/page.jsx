@@ -70,7 +70,7 @@ export default function BasicScienceAndHumanitiesHOD() {
     title: 'HOD - Mathematics and Basic Sciences, Placement Officer',
     imagePath: '/assets/images/departments/hod_basic_maths_and_science.jpg',
     email: 'hod.bs@sbce.ac.in',
-    phone: '+91 XXXXXXXXXX'
+    phone: '+91 85903 32548'
   };
 
   const tabData = {
