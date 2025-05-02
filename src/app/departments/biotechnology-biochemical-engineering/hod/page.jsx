@@ -114,7 +114,7 @@ export default function ComputerScienceDepartmentHod() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <AnimatedSection>
             <h1 className="text-5xl md:text-6xl font-bold text-center text-gray-900 mb-4">
-              Department Of Biotechnology and Biochemical Engineering/Food Technology
+              Department Of Biotechnology and Biochemical Engineering
             </h1>
             <div className="w-40 h-1 bg-yellow-900 mx-auto mb-8" />
           </AnimatedSection>
