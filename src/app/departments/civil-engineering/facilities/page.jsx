@@ -4,8 +4,6 @@ import React, { useState } from 'react';
 import { Poppins } from 'next/font/google';
 import Image from 'next/image';
 
-
-
 // Initialize Poppins font
 const poppins = Poppins({
     weight: ['400', '500', '600', '700'],
@@ -13,109 +11,97 @@ const poppins = Poppins({
     display: 'swap',
 });
 
-export default function EEEDepartmentFacilities() {
+export default function CivilDepartmentFacilities() {
     const [activeTab, setActiveTab] = useState('overview');
     
     // Labs data for easier management and display
     const labs = [
         {
-            id: "electrical-workshop",
-            name: "Basic Electrical Engineering Workshop",
-            description: "Basic Electrical engineering workshop is intended to make the students aware of the basics of electrical engineering which includes different types of wiring, measurement of energy, etc.",
-            image: "/assets/images/departments/facilities/eee/eee_facility1.jpg",
-            inCharge: "Ms. Chama R Chandran",
-            staff: "Mr. Sudheesh M S"
+            id: "survey-laboratory",
+            name: "Survey Laboratory",
+            description: "Survey laboratory houses both conventional and modern equipment for practical surveying. The equipment available are LYNX Measuring Chain – 20m, LYNX Measuring Chain – 30m, LYNX Cross staff, LYNX Ranging rod, LYNX Offset rod, Measuring Tape – 30 m, Arrows, LYNX Prismatic Compass with aluminium stand, LYNX Plane Table with all accessories, LYNX Dumpy Level with aluminium tripod and all standard accessories, LYNX Auto Level with aluminium tripod and all standard accessories, LYNX Levelling Staff (4m), LYNX Standard Vernier Theodolite with aluminium tripod and all standard accessories, LYNX Planimeter with box, Total Station (Sokkia CX105), wooden mallet, wooden peg, distance meter and hand held G P S.",
+            image: "",
+            inCharge: "Mr Pradeep P",
+            staff: "Ms. Manjula Devi S"
         },
         {
-            id: "electrical-machines",
-            name: "Electrical Machines Lab",
-            description: "This lab facilitates different AC and DC machines. This lab gives students an idea of starting, speed controlling, loading, and different other experiments in electrical machines.",
-            image: "/assets/images/departments/facilities/eee/eee_facility2.jpg",
-            inCharge: "Mr. Sheleel F",
-            staff: "Ms. Chitra P"
+            id: "concrete-laboratory",
+            name: "Concrete Laboratory",
+            description: "This lab provides facilities for various tests for cement and concrete which includes test for compressive strength, flexural strength, fineness, and mix design of concrete etc. The main equipment include AIMIL AIL-317E-AN-2 Compression Testing machine (2000 KN), Electrically operated single phase with three load guage of 500 KN, 1000KN, 2000KN, LYNX Sieve Shaker (Gyratory motorized), Test Sieves 20 cm Diameter- 90 microns, LYNX Vicat Needle Apparatus, Le-Chatlier's Mould with 2 glass plate & 1 Lead wt., Le-Chatlier's Flask, Longitudinal Compresometer with dial gauge, Compaction Apparatus, Vee-Bee Consistometer, LYNX Tile Flexure Strength Testing Machine, LYNX Cylindrical Metal Measures (15 lit), Density Basket, Vibrating Table (500×500 mm), Slump Testing Apparatus, Needle Vibrator, Cylindrical Mould (150 x 300mm), Beam Mould ( 100 x 100 x 500 mm), LYNX Cube Mould (150 x 150 mm) and LYNX Steel Cube mould (70mm).",
+            image: "",
+            inCharge: "Mr Ashok Mathew",
+            staff: "Mr Renjith C R"
         },
         {
-            id: "power-system",
-            name: "Power System & High Voltage Engg Lab",
-            description: "This lab facilitates different hardware and software experiments in power systems, including major experiments like impulse waveform generation, different types of relays, earth resistance measurement, cable, and transformer oil testing.",
-            image: "/assets/images/departments/facilities/eee/eee_facility3.jpg",
-            inCharge: "Ms. Gayathri V",
-            staff: "Ms. Chitra P"
+            id: "geo-tech-laboratory",
+            name: "Geo-Technical Engineering Laboratory",
+            description: "The laboratory has facilities for conducting practical classes for undergraduate programmes. The undergraduate students are being encouraged to take up topics in the field of Geotechnical Engineering for their project work by making use of facilities available in the laboratory. Various equipment available in the lab are LYNX Direct Shear Apparatus (motorised), Dial Guage (0.01 X 25mm), Proving Ring (2 KN), Unconfined Compression Test Apparatus, Dial Guage 0.01 X 25mm, Extractor Frame for 38mm diameter sample with mould, Soil Permeability Apparatus, Overhead Tank for soil Permeability, Rammer – 4.89 kg X 450 mm free fall, Rammer – 2.6 kg X 310 mm free fall, LYNX Consolidation Apparatus with Dial Guage, Proctor mould (Gun metal) 1000cc, Rammer – 2.6 kg X 310 mm free fall, Test Sieves 20cm diameter in Brass frame 4.75,2.36,1.18,2,1,600 microns,425 microns,300 microns,150 microns and 75 microns, LYNX Liquid Limit Test Apparatus with counter, LYNX Shrinkage Limit Apparatus, Soil Hydrometer and High speed stirrer, Core Cutter, Pycnometer, LYNX Sand Pouring Cylinder (Large) and measuring Cylinder – 1000 ml, 500 ml, 250 ml, 100 ml.",
+            image: "",
+            inCharge: "Ms Regi P Mohan",
+            staff: "Mr Syam Raj S"
         },
         {
-            id: "measurement",
-            name: "Measurements and Instrumentation Lab",
-            description: "This lab facilitates different types of transducers used for measurement in the field of electrical engineering.",
-            image: "/assets/images/departments/facilities/eee/eee_facility4.jpg",
-            inCharge: "Ms. Juna John Daniel",
-            staff: "Ms. Chithra P B"
+            id: "strength-of-materials",
+            name: "Strength of Materials Lab",
+            description: "The objective of the strength of materials lab is to demonstrate the basic principles in the area of strength and mechanics of materials and structural analysis to the undergraduate students through a series of experiments. In this lab, the experiments are performed to measure the properties of the materials such as impact strength, tensile strength, compressive strength, hardness, ductility etc. The equipment available are Impact Testing machine Krystal Elmec-Model KI300, Rockwell Hardness Testing Machine- Krystal Elmec, Brinell Hardness Testing Machine, Fly wheel, Compound Pendulum, Torsion of wires, Universal Testing Machine, -Model-UTK 100 – Make Krystal Elmec, Torsion Testing Machine – Model – 77K 50 – Make Krystal Elmec, Stop Watch and dial Gauge with Magnetic Stand.",
+            image: "",
+            inCharge: "Ms Indhu V S",
+            staff: "Mr Syam Raj S"
         },
         {
-            id: "electronics",
-            name: "Electronics Circuits Lab",
-            description: "This lab facilitates different electronic circuits using semiconductor switches like op-amp, diodes, MOSFET, JFET, ICs, etc.",
-            image: "/assets/images/departments/facilities/eee/eee_facility5.jpg",
-            inCharge: "Mr. Ananthu V",
-            staff: "Mr. Sudheesh M S"
+            id: "transportation-lab",
+            name: "Transportation Engineering Laboratory",
+            description: "The Transportation Engineering Laboratory is equipped with facilities for testing of Aggregates, Bitumen and Soil. The laboratory is fully equipped for conduct of regular experiments at UG level and consultancy works. Various equipment available in the lab are Abrasion Testing Machine, Ring and Ball Apparatus (motorised), Standard Penetrometer, Ductility Testing Machine, Crushing Value Test Apparatus, Test Sieves 30cm Dia, Thickness Gauge, Length Gauge, Density Basket, CBR Test Apparatus, Impact Value With Counter and Compression Testing Machine.",
+            image: "",
+            inCharge: "Ms. Aswathy Lal",
+            staff: "Mr Syam Raj S"
         },
         {
-            id: "power-electronics",
-            name: "Power Electronics Lab",
-            description: "This lab facilitates different types of firing circuits of SCR, DIAC, TRIAC, MOSFET, and drives for DC motors. It also includes software simulation of variable speed control of different motors.",
-            image: "/assets/images/departments/facilities/eee/eee_facility6.jpg",
-            inCharge: "Ms. Vijina K",
-            staff: "Ms. Chithra P B"
+            id: "environmental-lab",
+            name: "Environmental Engineering Lab",
+            description: "The environmental lab serves to acquaint students with the details of water and wastewater analysis for water and wastewater treatment. The lab is well equipped with Flame Photometer, UV- Visible Spectrophotometer (Double beam), BOD Incubator, Laminar Air flow cabinet (Vertical), Auto Clave (Vertical) and COD Digestion Apparatus.",
+            image: "",
+            inCharge: "Ms Jency James",
+            staff: "Ms Manjula Devi S"
         },
         {
-            id: "systems-control",
-            name: "Systems and Control Lab",
-            description: "This lab facilitates different types of servomotors, time response circuits, controllers, and control circuits.",
-            image: "/assets/images/departments/facilities/eee/eee_facility7.jpg",
-            inCharge: "Mr. Vishnu J",
-            staff: "Mr. Ratheesh"
+            id: "advanced-computational",
+            name: "Advanced Computational Lab",
+            description: "This lab deals with the study of various distinctive features and tools used in AutoCAD in civil engineering drafting. Advanced Design and analysis softwares used are STAAD-PRO V8i, STAAD-PRO FOUNDATION, RESIST, AUTO CADD 2014, TOTAL STATION and MS PROJECT 2013.",
+            image: "",
+            inCharge: "Ms Namitha Chandran",
+            staff: "Ms Sindhu O"
         },
         {
-            id: "digital-embedded",
-            name: "Digital Circuits and Embedded Systems Lab",
-            description: "This lab facilitates microprocessors 8085 and 8086, microcontroller 8051, and experiments in IC trainer kits.",
-            image: "/assets/images/departments/facilities/eee/eee_facility7.jpg",
-            inCharge: "Mr. Sreekanth P K",
-            staff: "Mr. Ratheesh R"
+            id: "civil-workshop",
+            name: "Civil Engineering Workshop",
+            description: "This lab is intended to conduct the practical sessions of the first year B-tech students. Training sessions like setting out of building, area and volume calculation of building and building components, making of brick bonds and basics surveying using levelling instruments are conducted by using this lab facility. The items present in this lab are Micrometer(0.25mm), Aluminium Spirit Level, Hacksaw Frame, TAPARIA Pipe Wrench 14″, TAPARIA Screw Spanner 12″, Plumb Bob, Plier 8″, Vernier Calipers (0-25mm), Pipe vice 2″, Tape 15 m, Tape 5m, Try Square 10″, Screw Driver, Scale 1m(Steel), M.S.I Beam 4″, M.S. Angle 50 x 6, M.S. Channel 3″, aluminium rectangular box channel, wash basin, Europian water closet and flush tank.",
+            image: "",
+            inCharge: "Mr Unnikrishnan S",
+            staff: "Ms Manjula Devi S"
         },
         {
-            id: "pg-systems",
-            name: "PG Systems Lab",
-            description: "This lab facilitates different simulation software like MATLAB, Maxwell, and PSIM.",
-            image: "/assets/images/departments/facilities/eee/eee_facility8.jpg",
-            inCharge: "Ms. Abhilasha Parthan",
-            staff: "Mr. Ratheesh R"
+            id: "structural-dynamics",
+            name: "Structural Dynamics Laboratory (PG)",
+            description: "Structural dynamics lab has testing facility for vibration testing and data analysis. Various lab equipment include Horizontal Shake Table with Electronic Cam (Harmonic Base Motor), Vertical Shake Table, Experimental Models Shake Table Instrumentation (Accelero Meters, Data Acquistion System and Vibration Analyser Software).",
+            image: "",
+            inCharge: "Ms Ritzy R",
+            staff: "Mr Renjith C R"
         },
         {
-            id: "pg-research",
-            name: "PG Research Lab",
-            description: "This lab facilitates different special electrical machines with their driver circuit and software supporting them.",
-            image: "/assets/images/departments/facilities/eee/eee_facility9.jpg",
-            inCharge: "Ms. Abhilasha Parthan",
-            staff: "Mr. Ratheesh R"
+            id: "structural-engineering",
+            name: "Structural Engineering Laboratory (PG)",
+            description: "The lab mainly facilitates the post graduate students and the research scholars to conduct the experiments related to structural engineering. Some of the facilities available in the lab are Loading Frame (100 T) 5m X 3.1m, Ultrasonic Pulse Velocitymeter, Data Acquisition System. DT-800, DATA TAKER, AIM 388 Concrete Test Hammer, Rebar Locator, Accelerated Curing Tank, Vicat Apparatus, AIM-400. Le-Chatlier Mould, AIM-414 Mould Steel for 70.6mm Cube size, AIM -344 Mould Cast iron for 150mm Cube Size, AIM-349 Cylindrical Cast iron Mould (150 x 300), AIM-346 Beam Mould (100 x 100 x 500mm), AIM-334 Slump Test Apparatus, AIM-05325 Sieves (20cm dia Brass frame X 90 micron), HITTACHI Marble Cutting Machine, HITTACHI Chap Screw Cutter, Hydraulic Jack 1000 KN Capacity with guage and hand Pump at 5m long pressure flexible hose, LVDT 25mm Load Cell 1000KN (Flat Top) with Digital Indicator, Digital Guage 25mm travel (0.01mm Least Count), LYNX Cube Mould (150mm), LYNX Cylindrical Mould (150 x 300mm), LYNX Beam Mould (100x100x500mm), LYNX Cube Mould (100mm), Manual Operated Hydraulic Floor Crane (1Ton) and 1/2 Bag mixer Machine Heavy Duty with 3HP Electric Motor.",
+            image: "",
+            inCharge: "Ms Indhu V S",
+            staff: "Mr Syam Raj S"
         },
-        {
-            id: "seminar-hall",
-            name: "Seminar Hall",
-            description: "A well-equipped seminar hall with more than 100 seating capacity.",
-            image: null,
-            inCharge: "Ms. Sindhu V",
-            staff: "Mr. Sudheesh M S"
-        }
+      
     ];
 
     // Research topics data
     const researchTopics = [
-        "Design of new kinds of electrical machines, e.g. design of rotary linear switched reluctance motor for applications involving hybrid motion.",
-        "Position, speed & torque control of various electrical machines through different methods, e.g. Sensor-less control of BLDC motors.",
-        "Development of environment-friendly electric drives, e.g. Implementation of low-cost converter for an autonomous photovoltaic water pumping system.",
-        "Development of energy-saving schemes, e.g. Energy regeneration during the braking of electric vehicles.",
-        "Fault detection in various machines, e.g. Novel bearing fault detection and analysis of induction machines.",
-        "Development of sensors for condition monitoring of electrical machines, e.g. Development of cost-effective sensor for estimation of dissolved moisture in transformer oil."
+       
     ];
 
     return (
@@ -166,7 +152,7 @@ export default function EEEDepartmentFacilities() {
                         <div className="bg-white rounded-lg shadow-md p-6">
                             <h3 className="text-xl font-semibold mb-4 text-gray-800">Department Overview</h3>
                             <p className="mb-6 text-gray-700 leading-relaxed">
-                                The Department of Electrical & Electronics Engineering is dedicated to the current needs of industry with the flexibility to tune its programmes according to the different requirements. Application of the state-of-the-art technology in various fields is one of the main focuses in the activities of the department. The department is well-equipped for training the students with a streamlined curriculum that provides an ambient atmosphere for learning and acquiring new skills. The department focuses on providing sound theoretical background as well as good practical exposure to the students for their future endeavors.
+                                The Department of Civil Engineering is dedicated to the current needs of industry with the flexibility to tune its programmes according to the different requirements. Application of the state-of-the-art technology in various fields is one of the main focuses in the activities of the department. The department is well-equipped for training the students with a streamlined curriculum that provides an ambient atmosphere for learning and acquiring new skills. The department focuses on providing sound theoretical background as well as good practical exposure to the students for their future endeavors.
                             </p>
                             
                             <h3 className="text-lg font-semibold mb-3 text-gray-800">Laboratory Facilities</h3>
@@ -186,7 +172,7 @@ export default function EEEDepartmentFacilities() {
                                         </svg>
                                     </div>
                                     <h4 className="text-lg font-semibold mb-2 text-gray-800">Research Focus</h4>
-                                    <p className="text-gray-600">Specialized research in electrical machines and innovative technology development.</p>
+                                    <p className="text-gray-600">Specialized research in civil engineering and innovative technology development.</p>
                                 </div>
                                 
                                 <div className="bg-gradient-to-br from-green-50 to-white p-5 rounded-lg shadow-sm">
@@ -217,7 +203,7 @@ export default function EEEDepartmentFacilities() {
                         <div className="bg-white rounded-lg shadow-md p-6">
                             <h3 className="text-xl font-semibold mb-4 text-gray-800">Research and Consultancy</h3>
                             <p className="mb-6 text-gray-700 leading-relaxed">
-                                In order to fit into the modern era of technology advancement, the Dept. of EEE lays considerable importance to in-house research. Due to the presence of a PG programme in the dept. in the area of Electrical Machines, much of the researches take place in this domain. These researches are carried out by the PG students, under the guidance of various faculties of the department.
+                                In order to fit into the modern era of technology advancement, the Dept. of Civil Engineering lays considerable importance to in-house research. Due to the presence of a PG programme in the dept. in the area of Structural Engineering, much of the researches take place in this domain. These researches are carried out by the PG students, under the guidance of various faculties of the department.
                             </p>
                             
                             <h4 className="text-lg font-semibold mb-3 text-gray-800">Key Research Areas</h4>
@@ -237,7 +223,7 @@ export default function EEEDepartmentFacilities() {
                             <div className="bg-gradient-to-r from-yellow-50 to-white p-5 rounded-lg border-l-4 border-yellow-600 mt-6">
                                 <h4 className="font-semibold text-gray-800 mb-2">Research Infrastructure</h4>
                                 <p className="text-gray-700">
-                                    To support these researches, in addition to the regular electrical machines lab, there is a full-fledged research lab in the department with custom-designed Induction Motor, BLDC motor and SRM motor drives and their controllers for analysis and advanced machine design & control software such as Maxwell, Simplorer, and MATLAB. Apart from the research carried out in the PG stream, many developments are also done by the UG students under the guidance of various faculties in the department.
+                                    To support these researches, in addition to the regular civil engineering labs, there are full-fledged research labs in the department with advanced equipment and software such as STAAD-Pro, AutoCAD, and other analysis tools. Apart from the research carried out in the PG stream, many developments are also done by the UG students under the guidance of various faculties in the department.
                                 </p>
                             </div>
                         </div>
@@ -250,7 +236,7 @@ export default function EEEDepartmentFacilities() {
                             <div className="grid md:grid-cols-2 gap-6 mb-6">
                                 <div>
                                     <p className="text-gray-700 mb-4">
-                                        Apart from a highly equipped Central Library, the Electrical and Electronics Engineering Department separately owns a standard library. This Department Library has several foreign and well-known publishers' books and study materials related to Electrical Engineering along with the textbooks and reference books prescribed by the University of Kerala as part of the Electrical Engineering curriculum.
+                                        Apart from a highly equipped Central Library, the Civil Engineering Department separately owns a standard library. This Department Library has several foreign and well-known publishers' books and study materials related to Civil Engineering along with the textbooks and reference books prescribed by the University of Kerala as part of the Civil Engineering curriculum.
                                     </p>
                                     <p className="text-gray-700">
                                         The Department is proud as the Faculty Members and students rely on the library faithfully for their reference, development, and research activities.
@@ -275,13 +261,13 @@ export default function EEEDepartmentFacilities() {
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                             </svg>
-                                            <span className="text-gray-700">Study Materials for Electrical Engineering</span>
+                                            <span className="text-gray-700">Study Materials for Civil Engineering</span>
                                         </li>
                                         <li className="flex items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                             </svg>
-                                            <span className="text-gray-700">IEEE Publications</span>
+                                            <span className="text-gray-700">Civil Engineering Standards and Codes</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -289,7 +275,7 @@ export default function EEEDepartmentFacilities() {
                             
                             <div className="mt-6">
                                 <p className="text-gray-700 mb-4">
-                                    Apart from the above-mentioned texts and references, the Department also takes the initiative in subscribing to various Technical Journals and Magazines. The Faculty Members and students having IEEE Membership help in updating the Department.
+                                    Apart from the above-mentioned texts and references, the Department also takes the initiative in subscribing to various Technical Journals and Magazines. The Faculty Members and students having professional memberships help in updating the Department.
                                 </p>
                             </div>
                         </div>
