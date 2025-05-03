@@ -14,7 +14,7 @@ export default function CivilDepartmentActivities() {
       category: "workshop",
       date: "January 6-11, 2025",
       location: "Sree Buddha College of Engineering",
-      image: "/assets/images/departments/activities/fdp.jpg",
+      image: "/assets/images/departments/activities/fdpciv.jpg",
       description: "AICTE sponsored 6 days ATAL FDP 2025 on the topic 'Artificial Intelligence Applications in Civil Engineering Enhancing Efficiency, Sustainability and Safety' under the auspices of Department of Civil Engineering from 6th January to 11th January 2025",
       coordinator: "Department of Civil Engineering"
     },
@@ -24,7 +24,7 @@ export default function CivilDepartmentActivities() {
       category: "event",
       date: "November 24, 2023",
       location: "Pattoor panchayat ward 4",
-      image: "/assets/images/departments/activities/jalasudhi.jpg",
+      image: "/assets/images/departments/activities/jal.jpg",
       description: "A Questionnaire survey and water quality testing was conducted by the final year students of Department of Civil Engineering in Pattoor panchayat ward 4 on 24/11/23 as part of the Jala shudhi mission in association with the ASCE Students Chapter",
       coordinator: "ASCE Students Chapter"
     },
@@ -34,7 +34,7 @@ export default function CivilDepartmentActivities() {
       category: "seminar",
       date: "February 16, 2023",
       location: "SDPK Hall",
-      image: "/assets/images/departments/activities/seminar.jpg",
+      image: "/assets/images/departments/activities/jhs.jpg",
       description: "A seminar session was organized by Department of Civil Engineering in association with ASCE on the topic 'Scope of Engineering Graduates in the Techno-Management Sector'. Dr. R Sathish Kumar, Professor and Dean, School of Construction and Technology, NICMAR, Hyderabad and Mr. Vishnu Namboodiri. V, Assistant Professor, NICMAR were the speakers.",
       coordinator: "Department of Civil Engineering"
     },
@@ -44,20 +44,11 @@ export default function CivilDepartmentActivities() {
       category: "workshop",
       date: "February 14, 2023",
       location: "SDPK Hall",
-      image: "/assets/images/departments/activities/workshop.jpg",
+      image: "/assets/images/departments/activities/mix.jpg",
       description: "Department Civil Engineering in association with ASCE organized a one-day workshop on Mix Design. Dr. Ramaswamy K P, Assistant Professor in Civil department, TKM College of Engineering, Kollam was the guest speaker. The workshop focused on designing the mix of normal and self-compacting concrete using the latest IS codes.",
       coordinator: "Dr. Ramaswamy K P"
     },
-    {
-      id: 5,
-      title: "FDP Resource Persons Sessions",
-      category: "lecture",
-      date: "January 6-11, 2025",
-      location: "Sree Buddha College of Engineering",
-      image: "/assets/images/departments/activities/resource.jpg",
-      description: "Resource persons who led the sessions during ATAL FDP included Dr. Lelitha Devi Vanajakshi (IIT Madras), Dr. Arun Kumar R (NIT Calicut), Dr. Rajeev Rajan (GEC Idukki), Dr. Leon Raj (CSIR-NEIST), Dr. T Sunder Rajan (VSSC), Dr. Shailesh S (CUSAT), Dr. Adarsh S (TKM College), Dr. Althaf M (TKM College), Dr. Senthil Saravanan (SBCE), and Ms. Ritzy R (SBCE)",
-      coordinator: "Department of Civil Engineering"
-    }
+    
   ];
   
   const filteredActivities = activeFilter === 'all' 
