@@ -5,31 +5,179 @@ import React from 'react';
 export default function FoodTechnologyPEOSPSO() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 text-gray-800">
-     
       
-      {/* Main Program Section */}
+      {/* UG Program Section */}
       <section className="mb-10">
         <h2 className="text-2xl md:text-3xl font-bold text-yellow-900 mb-6 pb-2 border-b-2 ">
-          Food Technology
+          1. UG IN FOOD TECHNOLOGY (B.TECH)
         </h2>
+        
+        {/* PEO Section */}
+        <div className="mb-8">
+          <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-3">
+            Programme Educational Objectives (PEOs)
+          </h3>
+          <p className="mb-2">The programme will:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Prepare graduates with strong foundation in food processing, preservation and quality management.</li>
+            <li>Promote research and innovation in food technology to address industry challenges.</li>
+            <li>Develop professionals with ethical practices and sustainability focus in food production.</li>
+          </ul>
+        </div>
+        
+        {/* PSO Section */}
+        <div className="mb-8">
+          <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-3">
+            Programme Specific Outcomes (PSOs)
+          </h3>
+          <p className="mb-3">The graduate will be able to:</p>
+          <ul className="space-y-3">
+            <li>
+              <span className="font-semibold">PSO1: </span>
+              Develop and deliver novel designs/processes/products that could cater to the food technology industrial demands to improve the social ecosystems.
+            </li>
+            <li>
+              <span className="font-semibold">PSO2: </span>
+              Carryout research of appreciable significance and produce quality publication.
+            </li>
+          </ul>
+        </div>
+        
+        {/* PO Section */}
+        <div className="mb-8">
+          <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-3">
+            Program Outcomes (POs)
+          </h3>
+          <ul className="space-y-3">
+            <li>
+              <span className="font-semibold">PO-1: </span>
+              Apply knowledge of food science, engineering and technology to solve industry problems.
+            </li>
+            <li>
+              <span className="font-semibold">PO-2: </span>
+              Design and conduct experiments related to food processing and preservation techniques.
+            </li>
+            <li>
+              <span className="font-semibold">PO-3: </span>
+              Develop food products and processes that meet consumer needs and industry standards.
+            </li>
+            <li>
+              <span className="font-semibold">PO-4: </span>
+              Identify food safety challenges and formulate solutions through research and literature review.
+            </li>
+            <li>
+              <span className="font-semibold">PO-5: </span>
+              Engage in continuous learning to stay updated with emerging technologies in food science.
+            </li>
+            <li>
+              <span className="font-semibold">PO-6: </span>
+              Design sustainable food production systems with minimal environmental impact.
+            </li>
+            <li>
+              <span className="font-semibold">PO-7: </span>
+              Apply project management principles in food processing and product development.
+            </li>
+            <li>
+              <span className="font-semibold">PO-8: </span>
+              Follow ethical practices in food production and quality assurance.
+            </li>
+            <li>
+              <span className="font-semibold">PO-9: </span>
+              Work effectively in multidisciplinary teams across the food supply chain.
+            </li>
+            <li>
+              <span className="font-semibold">PO-10: </span>
+              Communicate technical information clearly to various stakeholders.
+            </li>
+            <li>
+              <span className="font-semibold">PO-11: </span>
+              Address contemporary challenges in food security and nutrition.
+            </li>
+            <li>
+              <span className="font-semibold">PO-12: </span>
+              Apply appropriate techniques and tools for food analysis and quality control.
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      {/* PG Program Section */}
+      <section>
+        <h2 className="text-2xl md:text-3xl font-bold text-yellow-900 mb-6 pb-2 border-b-2 ">
+          2. PG IN FOOD TECHNOLOGY (M.TECH)
+        </h2>
+        
+        {/* PEO Section */}
+        <div className="mb-8">
+          <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-3">
+            Program Educational Objectives (PEOs)
+          </h3>
+          <p className="mb-2">The Program Educational Objectives (PEOs) of the Post Graduate degree (M.Tech) in Food Technology program are presented below.</p>
+          <p className="font-medium mb-2">The graduates will:</p>
+          <ul className="space-y-3">
+            <li>
+              <span className="font-semibold">PEO I: </span>
+              Analyze complex problems in food processing and develop innovative solutions for the industry.
+            </li>
+            <li>
+              <span className="font-semibold">PEO II: </span>
+              Implement advanced technologies in food preservation, packaging, and quality control systems.
+            </li>
+            <li>
+              <span className="font-semibold">PEO III: </span>
+              Pursue research and leadership roles in food technology sectors and academic institutions.
+            </li>
+          </ul>
+        </div>
+        
+        {/* PO Section */}
+        <div className="mb-8">
+          <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-3">
+            Program Outcomes (POs)
+          </h3>
+          <p className="mb-2">The graduates will be able to:</p>
+          <ul className="space-y-3">
+            <li>
+              <span className="font-semibold">PO1: </span>
+              Conduct independent research in food technology to address industry challenges.
+            </li>
+            <li>
+              <span className="font-semibold">PO2: </span>
+              Document and present technical findings in professional formats.
+            </li>
+            <li>
+              <span className="font-semibold">PO3: </span>
+              Demonstrate expertise in specialized areas of food technology.
+            </li>
+            <li>
+              <span className="font-semibold">PO4: </span>
+              Design and test advanced food processing systems and novel products.
+            </li>
+            <li>
+              <span className="font-semibold">PO5: </span>
+              Collaborate effectively in multidisciplinary teams on food technology projects.
+            </li>
+            <li>
+              <span className="font-semibold">PO6: </span>
+              Commit to lifelong learning and ethical practices in food science and technology.
+            </li>
+          </ul>
+        </div>
         
         {/* PSO Section */}
         <div>
           <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-3">
             Program Specific Outcomes (PSOs)
           </h3>
-          <ul className="space-y-5">
+          <p className="mb-2">Food Technology graduates will be able to:</p>
+          <ul className="space-y-3">
             <li>
-              <h4 className="font-semibold text-lg">PSO1</h4>
-              <p>
-                Develop and deliver novel designs/ processes / products that could cater to the food technology industrial demands to improve the social ecosystems.
-              </p>
+              <span className="font-semibold">PSO1: </span>
+              Develop and deliver novel designs/processes/products that could cater to the food technology industrial demands to improve the social ecosystems.
             </li>
             <li>
-              <h4 className="font-semibold text-lg">PSO2</h4>
-              <p>
-                Carryout research of appreciable significance and produce quality publication.
-              </p>
+              <span className="font-semibold">PSO2: </span>
+              Carryout research of appreciable significance and produce quality publication.
             </li>
           </ul>
         </div>
