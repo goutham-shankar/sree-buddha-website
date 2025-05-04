@@ -111,7 +111,7 @@ export default function FTDepartmentAssociations() {
       description: (
         <div>
           <p className="text-gray-700 mb-4">
-            The student association of the Department of Food Technology, 'FROSA', aims at nurturing student leadership and overall personality development. As its name suggests, the motto of FROSA is to encourage and promote activities beneficial to both the students of SBCE and the people of the neighborhood. Since its inception, the association has been keen on organizing several state-level and national seminars, conferences, workshops, and faculty development programs, bringing in eminent personalities from research organizations and industries all over.
+            The student association of the Department of Food Technology, &apos;FROSA&apos;, aims at nurturing student leadership and overall personality development. As its name suggests, the motto of FROSA is to encourage and promote activities beneficial to both the students of SBCE and the people of the neighborhood. Since its inception, the association has been keen on organizing several state-level and national seminars, conferences, workshops, and faculty development programs, bringing in eminent personalities from research organizations and industries all over.
           </p>
           <h4 className="font-bold text-gray-800 mt-6 mb-2">Objectives</h4>
           <ul className="list-disc pl-5 text-gray-700 space-y-1">

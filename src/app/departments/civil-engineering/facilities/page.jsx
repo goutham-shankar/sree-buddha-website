@@ -236,7 +236,7 @@ export default function CivilDepartmentFacilities() {
                             <div className="grid md:grid-cols-2 gap-6 mb-6">
                                 <div>
                                     <p className="text-gray-700 mb-4">
-                                        Apart from a highly equipped Central Library, the Civil Engineering Department separately owns a standard library. This Department Library has several foreign and well-known publishers' books and study materials related to Civil Engineering along with the textbooks and reference books prescribed by the University of Kerala as part of the Civil Engineering curriculum.
+                                        Apart from a highly equipped Central Library, the Civil Engineering Department separately owns a standard library. This Department Library has several foreign and well-known publishers&apos; books and study materials related to Civil Engineering along with the textbooks and reference books prescribed by the University of Kerala as part of the Civil Engineering curriculum.
                                     </p>
                                     <p className="text-gray-700">
                                         The Department is proud as the Faculty Members and students rely on the library faithfully for their reference, development, and research activities.
