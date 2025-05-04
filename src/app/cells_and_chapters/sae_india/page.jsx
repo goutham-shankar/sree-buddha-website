@@ -131,7 +131,7 @@ export default function SAE() {
                   <div className="md:w-1/2">
                     <h2 className="text-2xl font-bold text-gray-800 mb-4">About SAEINDIA</h2>
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      Society of Automotive Engineers India (SAEINDIA) is India's leading resource for mobility technology. 
+                      Society of Automotive Engineers India (SAEINDIA) is India&apos;s leading resource for mobility technology. 
                       As an individual, member-driven society of mobility practitioners, the ownership of SAEINDIA rests with 
                       its members who are individuals from the mobility community, which includes Engineers, Executives from 
                       Industry, Government Officials, Academicians and Students.
@@ -180,8 +180,8 @@ export default function SAE() {
                       </div>
                       <p className="text-gray-700 mb-4">
                         Department of Mechanical Engineering and SAEINDIA conducted a lecture on 30th March 2023. The topic was on 
-                        'Electric Vehicle Prototyping'. Mr A Armstrong, Principal Member R&D TAFE Tractors and Farm Equipment Limited, 
-                        Chennai gave the expert lecture. The official inauguration of 'Go-Kart Club' was also done by Mr. A Armstrong, 
+                        &apos;Electric Vehicle Prototyping&apos;. Mr A Armstrong, Principal Member R&D TAFE Tractors and Farm Equipment Limited, 
+                        Chennai gave the expert lecture. The official inauguration of &apos;Go-Kart Club&apos; was also done by Mr. A Armstrong, 
                         on the same day itself.
                       </p>
                     </div>

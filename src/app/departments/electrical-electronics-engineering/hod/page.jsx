@@ -2,6 +2,7 @@
 
 import React, { memo, useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 // Animated Section Component
 const AnimatedSection = memo(({ children, delay = 0 }) => (
@@ -13,6 +14,8 @@ const AnimatedSection = memo(({ children, delay = 0 }) => (
     {children}
   </motion.div>
 ));
+// Add display name
+AnimatedSection.displayName = 'AnimatedSection';
 
 // Profile Image Component with hover effect
 const ProfileImage = memo(({ name, title, imagePath }) => (
@@ -21,11 +24,13 @@ const ProfileImage = memo(({ name, title, imagePath }) => (
     whileHover={{ scale: 1.02 }}
     transition={{ duration: 0.2 }}
   >
-    <div className="overflow-hidden rounded-2xl shadow-2xl">
-      <img
+    <div className="overflow-hidden rounded-2xl shadow-2xl relative h-[400px]">
+      <Image
         src={imagePath}
         alt={name}
-        className="w-full h-[400px] object-cover transform transition-transform duration-500 group-hover:scale-110"
+        fill
+        className="object-cover transform transition-transform duration-500 group-hover:scale-110"
+        sizes="(max-width: 1024px) 100vw, 40vw"
         loading="lazy"
       />
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
@@ -35,6 +40,8 @@ const ProfileImage = memo(({ name, title, imagePath }) => (
     </div>
   </motion.div>
 ));
+// Add display name
+ProfileImage.displayName = 'ProfileImage';
 
 // Info Card Component
 const InfoCard = memo(({ title, children, icon }) => (
@@ -49,6 +56,8 @@ const InfoCard = memo(({ title, children, icon }) => (
     {children}
   </motion.div>
 ));
+// Add display name
+InfoCard.displayName = 'InfoCard';
 
 // Timeline Item Component
 const TimelineItem = memo(({ period, role }) => (
@@ -61,6 +70,8 @@ const TimelineItem = memo(({ period, role }) => (
     <p className="text-gray-700 mt-1">{role}</p>
   </motion.div>
 ));
+// Add display name
+TimelineItem.displayName = 'TimelineItem';
 
 export default function ElectricalElectronicsDepartmentHOD() {
   const [activeTab, setActiveTab] = useState('education');

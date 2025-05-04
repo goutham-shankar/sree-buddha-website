@@ -13,6 +13,8 @@ const AnimatedSection = memo(({ children, delay = 0 }) => (
     {children}
   </motion.div>
 ));
+// Add display name
+AnimatedSection.displayName = 'AnimatedSection';
 
 // Profile Image Component with hover effect
 const ProfileImage = memo(({ name, title, imagePath }) => (
@@ -35,6 +37,8 @@ const ProfileImage = memo(({ name, title, imagePath }) => (
     </div>
   </motion.div>
 ));
+// Add display name
+ProfileImage.displayName = 'ProfileImage';
 
 // Info Card Component
 const InfoCard = memo(({ title, children, icon }) => (
@@ -49,6 +53,8 @@ const InfoCard = memo(({ title, children, icon }) => (
     {children}
   </motion.div>
 ));
+// Add display name
+InfoCard.displayName = 'InfoCard';
 
 // Timeline Item Component
 const TimelineItem = memo(({ period, role }) => (
@@ -61,6 +67,8 @@ const TimelineItem = memo(({ period, role }) => (
     <p className="text-gray-700 mt-1">{role}</p>
   </motion.div>
 ));
+// Add display name
+TimelineItem.displayName = 'TimelineItem';
 
 export default function ElectronicsAndCommunicationDepartmentHOD() {
   const [activeTab, setActiveTab] = useState('education');
