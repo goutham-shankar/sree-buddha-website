@@ -6,7 +6,6 @@ function Page() {
   const [pdfFiles, setPdfFiles] = useState([]);
   const API_URL = `${process.env.NEXT_PUBLIC_STRAPI}/api/eoas?populate=*`;
   
-
   useEffect(() => {
     const fetchPdfFiles = async () => {
       try {
@@ -26,12 +25,11 @@ function Page() {
     };
 
     fetchPdfFiles();
-  }, []);
+  }, [API_URL]); // Added API_URL to the dependency array
 
   const handleClick = (pdfPath) => {
     window.open(pdfPath, '_blank');
   };
-
 
   return (
     <div className="app-container">

@@ -1,135 +1,431 @@
-import React from 'react';
-import './style.css';
+"use client";
 
-export default function ComputerScienceDepartmentAchievements() {
+import React, { useState, useCallback, memo } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+// Memoized components for better performance
+const AchievementCard = memo(({ image, description, id }) => (
+  <div
+    className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+    data-testid={`achievement-card-${id}`}
+  >
+    <div className="aspect-w-16 aspect-h-9">
+      <div className="relative w-full h-48 sm:h-56">
+        <Image
+          src={image}
+          alt={`Achievement ${id}`}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className="object-cover"
+          priority={id === 1}
+        />
+      </div>
+    </div>
+    <div className="p-5">
+      <p className="text-gray-700">{description}</p>
+    </div>
+  </div>
+));
+
+AchievementCard.displayName = 'AchievementCard';
+
+const GalleryImage = memo(({ num }) => (
+  <div 
+    className="group relative aspect-square rounded-lg overflow-hidden shadow-md border border-gray-200"
+    data-testid={`gallery-image-${num}`}
+  >
+    <div className="relative w-full h-full">
+      <Image
+        src={`/assets/images/departments/achievements/ece_achievements_${num}.jpg`}
+        alt={`Achievement ${num}`}
+        fill
+        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+        className="object-cover group-hover:scale-110 transition-transform duration-500"
+      />
+    </div>
+    <div className="absolute inset-0 bg-gradient-to-t from-yellow-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+      <span className="text-white p-4 text-sm font-medium">Achievement {num}</span>
+    </div>
+  </div>
+));
+
+GalleryImage.displayName = 'GalleryImage';
+
+const TabButton = memo(({ active, onClick, children }) => (
+  <button
+    onClick={onClick}
+    className={`px-6 rounded-xl py-3 font-medium text-sm whitespace-nowrap transition-colors ${
+      active 
+        ? 'bg-yellow-900 text-white shadow-lg'
+        : 'bg-white text-gray-600 hover:bg-gray-50'
+    }`}
+    aria-selected={active}
+    role="tab"
+  >
+    {children}
+  </button>
+));
+
+TabButton.displayName = 'TabButton';
+
+const AchievementListItem = memo(({ achievement, index }) => (
+  <div
+    className="p-3 md:p-4 border-l-4 border-yellow-900 bg-yellow-50 hover:bg-yellow-100 transition-colors rounded-r-md"
+    data-testid={`achievement-item-${index}`}
+  >
+    <div className="flex items-start">
+      <div className="flex-shrink-0 h-7 w-7 md:h-8 md:w-8 flex items-center justify-center rounded-full bg-yellow-900 text-white text-sm font-medium">
+        {index + 1}
+      </div>
+      <div className="ml-3 md:ml-4">
+        <p className="text-gray-800">{achievement}</p>
+      </div>
+    </div>
+  </div>
+));
+
+AchievementListItem.displayName = 'AchievementListItem';
+
+export default function ECEDepartmentAchievements() {
+    const [activeTab, setActiveTab] = useState('featured');
+    const [showAllAchievements, setShowAllAchievements] = useState(false);
+
+    const handleTabChange = useCallback((tab) => {
+        setActiveTab(tab);
+    }, []);
+
+    const toggleShowAllAchievements = useCallback(() => {
+        setShowAllAchievements(prev => !prev);
+    }, []);
+
+    const handleSelectChange = useCallback((e) => {
+        setActiveTab(e.target.value);
+    }, []);
+
+    // List of achievements for the bulleted list section
+    const otherAchievements = [
+        "IRFANA R & ADHITHYA G NAIR got selected to the state level RBI quiz competition.",
+        "Students of ECE & ES got selected to be in top 10 of NASA SPACE Apps challenge.",
+        "ECE students won the Robo war and Robo race competition organized by the LBS institute of Technology.",
+        "YIP District level winners K Kannan Pillai, J Devanarayanan, Amritha M Nair, Sreeparvathy C of Department of ECE, SBCE.",
+        "GOKUL G KUMAR and AISWARYA MANMADHAN of Department of ECE, SBCE participated in National entrepreneurship conclave 2024: Bootacamp for Aspiring Entrepreneurs at Lead College of Management Studies, Palakkad, Kerala.",
+        "YIP District level winner ATHUL U of Department of ECE, SBCE.",
+        "Gokul G Kumar (S3,ECE) is the only student from Kerala to present his idea at International Centre for Entrepreneurship and Technology, Ahmedabad.",
+        "Athul U. of third-semester Electronics & Communication Engineering received the Top performer in district-level IPL awards.",
+        "Shiva Prasad, Midhula and Arun Raj, Department of Electronics and Communication Engineering of SBCE, won 1st prize in the technical project competition held at IHRD, Adoor.",
+        "Department of Electronics and Communication Engineering SBCE participated in Kerala Reboot Hackathon.",
+        "Rintu Ann Cherian of 2016-20 Batch secured 10/10 SGPA in semester 8.",
+        "Prof. SABI S got approval from Kerala state council for science, technology and environment (KSCSTE) for an amount of Rs.40,000/- as Financial Assistance towards the conduct of Awareness Workshops and Seminars on Intellectual Property Rights.",
+        "Justy John, 3rd year Electronics and Communication Engineering student, designed and developed a Low Cost 3D Printer named Jekyll.",
+        "P ANISHA (Seventh semester ECE) got NSS technical cell best volunteer award and state level best volunteer award 2017-2018.",
+        "Sruthi S of 7th Semester ECE (2015-2019 batch) was selected as Campus Ambassador for Prayaana- women empowerment programme.",
+        "Vandana M. Vijay of 4th semester ECE got Second runner-up in DISHA 18."
+    ];
+
+    // Featured achievements data
+    const featuredAchievements = [
+        {
+            id: 1,
+            image: "/assets/images/departments/achievements/ece_achievements_0.jpg",
+            description: "IRFANA R & ADHITHYA G NAIR got selected to the state level RBI quiz competition."
+        },
+        {
+            id: 2,
+            image: "/assets/images/departments/achievements/ece_achievements_1.jpg",
+            description: "Students of ECE & ES got selected to be in top 10 of NASA SPACE Apps challenge."
+        },
+        {
+            id: 3,
+            image: "/assets/images/departments/achievements/ece_achievements_2.jpg",
+            description: "ECE students won the Robo war and Robo race competition organized by the LBS institute of Technology."
+        }
+    ];
+
+    // Display limited or all achievements based on state
+    const displayedAchievements = showAllAchievements ? otherAchievements : otherAchievements.slice(0, 5);
+
+    const tabIds = {
+        featured: 'featured-tab',
+        spotlight: 'spotlight-tab',
+        gallery: 'gallery-tab',
+        list: 'list-tab'
+    };
+
+    const tabPanelIds = {
+        featured: 'featured-panel',
+        spotlight: 'spotlight-panel',
+        gallery: 'gallery-panel',
+        list: 'list-panel'
+    };
+
     return (
-        <div className='computer_science_and_engineering_achievements'>
+      
+            <div className="bg-white">
+                {/* Header Section */}
+                <header className="relative bg-gradient-to-b from-yellow-50 to-white">
+                    <div className="relative overflow-hidden">
+                        <div className="absolute inset-0 bg-yellow-900/10 pattern-diagonal-lines pattern-yellow-500/20 pattern-bg-white pattern-size-4" aria-hidden="true" />
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-gray-900 mb-4">
+                                Department Of Electronics And Communication Engineering
+                            </h1>
+                            <div className="w-40 h-1 bg-yellow-900 mx-auto mb-8" aria-hidden="true" />
+                            <h2 className="text-2xl md:text-4xl font-bold text-center text-gray-800">Achievements</h2>
+                        </div>
+                    </div>
+                </header>
 
-             
-<h1 className="right_heading">Achievements</h1>
-			<p><strong><em>Congratulations to Ms. IRFANA R &amp; Ms. ADHITHYA G NAIR for getting selected to the state level RBI quiz competition.</em></strong></p>
-<p><img alt="" className="alignnone size-full wp-image-10337" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_0.jpg"/></p>
-<p><strong><span lang="EN-US">Congratulations the students of ECE&amp; ES for getting selected to be in top 10 of NASA SPACE Apps challenge.</span></strong></p>
-<p><img alt="" className="alignnone size-full wp-image-10336" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_1.jpg"/></p>
-<p><strong>Congratulations to the winners of the Robo war and Robo race competition organized by the LBS institute of Technology</strong></p>
-<p><img alt="" className="alignnone size-full wp-image-10335" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_2.jpg"/></p>
-<p><strong>Congratulations YIP District level winners K Kannan Pillai, J Devanarayanan, Amritha M Nair, Sreeparvathy C of Department of ECE, SBCE</strong></p>
-<p><img alt="" className="alignnone size-full wp-image-10323" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_3.jpg"/></p>
-<p><strong>TOPPERS O F SECOND SEMESTER KTU B-TECH DEGREE EXAMINATION (2023-2027 BATCH)</strong></p>
-<p><img alt="" className="alignnone size-full wp-image-9770" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_4.jpg"/></p>
-<p><strong>TOPPERS</strong></p>
-<p><img alt="" className="alignnone size-full wp-image-8262" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_5.jpg"/></p>
-<p><img alt="" className="alignnone size-full wp-image-8005" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_6.jpg"/></p>
-<p><strong><em>Mr. GOKUL G KUMAR</em></strong><strong> and <em>Ms. AISWARYA MANMADHAN</em></strong> of Department of ECE, SBCE participated in <strong><em>National entrepreneurship conclave 2024 :Bootacamp for Aspiring Entrepreneurs </em></strong>at Lead College of Management Studies, Palakkad, Kerala.</p>
-<p><img alt="" className="alignnone size-full wp-image-7666" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_7.jpg"/></p>
-<p>Congratulations YIP District level winner <strong><em>Mr. ATHUL U</em></strong> of Department of ECE, SBCE</p>
-<p><img alt="" className="alignnone size-full wp-image-7665" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_8.jpg"/></p>
-<p><strong>SEMESTER 6 RESULT 2020-2024 BATCH ECE STUDENTS</strong></p>
-<p><img alt="" className="alignnone size-full wp-image-7664" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_9.jpg"/></p>
-<p><em><strong>SEMESTER 2 RESULT 2022-2026 BATCH ECE STUDENTS</strong></em></p>
-<p><img alt="" className="alignnone size-full wp-image-7663" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_10.jpg"/></p>
-<p><em><strong>SEMESTER 4 RESULT 2021-2025 BATCH ECE STUDENTS</strong></em></p>
-<p><img alt="" className="alignnone size-full wp-image-7662" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_11.jpg"/></p>
-<h4><strong><em>CONGRATULATIONS 2019-2023 BATCH ELECTRONICS AND COMMUNICATION ENGINEERING SEMESTER 8 STUDENTS</em></strong></h4>
-<p><img alt="" className="alignnone size-full wp-image-7410" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_12.jpg"/></p>
-<h4><strong><em>CONGRATULATIONS 2022-2026 BATCH ELECTRONICS AND COMMUNICATION ENGINEERING STUDENTS</em></strong></h4>
-<p><img alt="" className="alignnone size-full wp-image-7409" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_13.jpg"/></p>
-<h4>CONGRATULATIONS 2020-2024 BATCH ELECTRONICS AND COMMUNICATION ENGINEERING STUDENTS</h4>
-<p><img alt="" className="alignnone size-full wp-image-7408" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_14.jpg"/></p>
-<h4>STUDENT ACHIEVEMENT</h4>
-<p>Congratulations Mr.Gokul G Kumar and Ms. Aiswarya Manmadhan of department of ECE, SBCE for winning the best entry title among 24 others( from 600 teams) in the Sustainable Hackathon challenge organized by Entrepreneurship Development Institute of India, Ahmedabad.</p>
-<p><img alt="" className="alignnone size-full wp-image-7407" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_15.jpg"/></p>
-<h3 className = "heading" ><img alt="" className="alignnone size-full wp-image-7406" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_16.jpg"/></h3>
-<h3 className = "heading" ></h3>
-<h3 className = "heading" >FACULTY ACHIEVMENTS</h3>
-<p><img alt="" className="alignnone wp-image-7335" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_17.jpg"/></p>
-<p></p>
-<p><img alt="" className="alignnone size-full wp-image-6763" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_18.jpg"/></p>
-<p><img alt="" className="alignnone size-full wp-image-6764" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_19.jpg"/></p>
-<p><img alt="" className="alignnone size-full wp-image-6765" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_20.jpg"/></p>
-<p><strong>Start-up Incubated in SBCE- Open leaves</strong></p>
-<p><img alt="" className="alignnone size-full wp-image-6492" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_21.jpg"/></p>
-<p><strong>TOPPERS</strong></p>
-<p><img alt="" className="alignnone size-full wp-image-6491" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_22.jpg"/></p>
-<p><strong>TOPPERS</strong></p>
-<p><img alt="" className="alignnone size-full wp-image-6490" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_23.jpg"/></p>
-<p><strong>TOPPERS</strong></p>
-<p><img alt="" className="alignnone size-full wp-image-6489" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_24.jpg"/></p>
-<p><strong>Results 2021- M-Tech</strong></p>
-<p><img alt="" className="alignnone size-full wp-image-6488" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_25.jpg"/></p>
-<p><strong>Placements 2022</strong></p>
-<p><img alt="" className="alignnone size-full wp-image-6487" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_26.jpg"/></p>
-<p>Solar Powered Electric Car!! SPEC<br/>
-Congratulations<br/>
-to prof. Alex V , inventor of SPEC, designed and developed in the labs of SBCE .</p>
-<p><img alt="" className="alignnone size-full wp-image-6486" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_27.jpg"/></p>
-<p>Gokul G Kumar (S3,ECE)<br/>
-Only student from Kerala to present his idea at International Centre for Entrepreneurship and Technology, Ahmedabad</p>
-<p><img alt="" className="alignnone size-full wp-image-6485" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_28.jpg"/></p>
-<p></p>
-<p>Athul U. of third-semester Electronics &amp; Communication Engineering receiving the Top performer in district-level IPL awards. Congratulations!!!</p>
-<p><img alt="" className="size-full wp-image-6483 aligncenter" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_29.jpg"/><img alt="" className="alignnone size-full wp-image-4861" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_30.jpg"/><br/>
-<u>Technical Achievement</u><br/>
-Congratulating Mr.Shiva Prasad, Ms.Midhula and Mr.Arun Raj, Department of Electronics and Communication Engineering of SBCE, for winning 1<sup>st</sup> prize in the technical project competition held at IHRD, Adoor.<br/>
-<img alt="" className="aligncenter size-full wp-image-4890" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_31.jpg"/><br/>
-<strong><u>ACHIEVEMENTS 2019-2020</u></strong><br/>
-First Rank in M Tech in Embedded Systems 2019-20<br/>
-<img alt="" className="aligncenter size-full wp-image-5822" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_32.jpg"/><br/>
-Department of Electronics and Communication Engineering SBCE @ Kerala Reboot Hackathon.<br/>
-<img alt="" className="aligncenter size-full wp-image-5817" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_33.jpg"/><br/>
-Students from the department of Electronics and Communication are representing SBCE in Kerala Reboot Hackathon held on 27/2/20 and 28/2/20 at Palakkad. Reboot Kerala Hackathon is an initiative of the Department of Higher Education  Government of Kerala and the Additional Skill Acquisition Program (ASAP).<br/>
-Grand Finale of ICTAK TECHATHLON Students from the Department of Electronics and Communication of SBCE, represented the college in National Level Technical Fest TECHATHLON organized by ICT Academy of Kerala held on 05/3/20 and 06/3/20 at Thrissur. 3Phase solar water pump with INC-MPPT algorithm<br/>
-<img alt="" className="aligncenter size-full wp-image-5818" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_34.jpg"/><br/>
-Mr.Siva Prasad, Ms.Midhula, Mr.Arun Raj, (1st prize Winning team) &amp; Mr.Mithun M, Ms.Anuja S Kumar, Mr.Arun Thampy, (3rd prize Winning team) of technical project competition held at IHRD, Adoor<br/>
-<img alt="" className="aligncenter size-full wp-image-5819" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_35.jpg"/><br/>
-Rintu Ann Cherian of 2016-20 Batch secured 10/10 SGPA in semester 8.<br/>
-<img alt="" className="aligncenter size-full wp-image-5821" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_36.jpg"/><br/>
-Top graduate in 2016-20 batch with CGPA 9.03<br/>
-<img alt="" className="aligncenter size-full wp-image-5820" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_37.jpg"/></p>
-<p><strong><u>ACHIEVEMENTS 2017-2018</u></strong><br/>
-<strong>KSCSTE Financial assitance</strong><br/>
-<img alt="" className="alignnone size-full wp-image-3008" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_38.jpg"/><br/>
-<strong>Prof. SABI S</strong> got approval from Kerala state council for science, technology and environment (KSCSTE) for an amount of Rs.40,000/- as Financial Assistance towards the conduct of Awareness Workshops and Seminars on Intellectual Property Rights</p>
-<p><strong>A Low Cost 3D Printer   </strong><strong><em>Jekyll</em></strong><br/>
-Designed and Developed by Mr. Justy John, 3rd year Electronics and Communication Engineering student<br/>
-<img alt="" className="alignnone size-full wp-image-3004" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_39.jpg"/></p>
-<p><strong>IInd Prize Winners For idea pitching competition-Azure2K18<br/>
-@ Amal Jyothi College of Engineering,Kanjirapally 09/11/2018</strong><br/>
-<img alt="" className="alignnone size-full wp-image-3007" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_40.jpg"/><br/>
-<strong>2nd prize at IBeTo (Innovations for a Better Tomorrow) Excel 2018</strong><br/>
-<img alt="" className="alignnone size-full wp-image-3006" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_41.jpg"/><br/>
-Siva Prasad S,Mithun M,Arun Thampy,Midhula M and Jayalekshmi V K of Third semester ECE<br/>
-Secured 2nd prize at IBeTo (Innovations for a Better Tomorrow) Excel 2018, held on 1st November 2018, organized by Govt. Model Engineering college Cochin, Kerala.<br/>
-For the project <strong>Mr.Saver</strong><br/>
-An innovative solution to<br/>
-i. Reduce fuel wastage.<br/>
-ii. Prevent accidents at railway gates.<br/>
-iii. Reduce air pollution.<br/>
-<em>(IBeTo is a state level innovative project competition for bringing forward some of the most spectacular innovations that benefit society. The event was organized in phases viz. idea submission,1st phase report ,design report ,Presentation of project and final implementation.)</em></p>
-<p><strong>state level NSS best volunteer award 2017- 2018</strong><br/>
-<img alt="" className="alignnone size-full wp-image-3005" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_42.jpg"/><br/>
-P ANISHA<br/>
-(Seventh semester ECE)<br/>
-Got NSS technical cell best volunteer award and state level best volunteer award 2017- 2018</p>
-<p>Anisha (Sixth Semester, Dept of ECE) receiving NSS Technical Cell Best volunteer award from Shri.Roji M John (Hon. MLA , Angamaly)</p>
-<p><img alt="" className="aligncenter size-full wp-image-2732" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_43.jpg"/></p>
-<p></p>
-<p>Mr. Vishnu V S (Asst. Prof, Dept of ECE, NSS Programme Officer) receiving NSS Technical Cell special appreciation award from Shri. K Mohammed Y Safirulla IAS, District collector, Ernakulam</p>
-<p><img  alt="" className="aligncenter size-full wp-image-2733" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_44.jpg"/></p>
-<p><strong>Prayaana- women empowerment programme</strong><br/>
-<img alt="" className="alignnone size-full wp-image-3009" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_45.jpg"/><br/>
-Sruthi S of 7th Semester ECE (2015-2019 batch) Selected as Campus Ambassador for Prayaana- women empowerment programme<br/>
-<img  alt="" className="img_small alignnone size-full wp-image-3010" loading="lazy" src="/assets/images/departments/achievements/ece_achievements_46.jpg"/><br/>
-Vandana M. Vijay of 4th semester ECE got Second runner-up in DISHA 18</p>
-<p><strong>Financial Assistance for Student Project Scheme of KSCSTE</strong></p>
-<p>Ms. Monisha M, M.Tech Embedded Systems has received a financial assistance of Rs.9000 from Kerala State Council for Science, Technology and Environment for the project proposal Ultra Low Power Gesture Based Self Security System for Women. She is being guided by Ms.Pooja S Mohan, Assistant Professor, Department of ECE.<br/>
-<img  className='img_small' alt="" src="/assets/images/departments/achievements/ece_achievements_47.jpg"/></p>
-<p>Ms. Surumi, M.Tech Embedded Systems has received a financial assistance of Rs.8000 from Kerala State Council for Science, Technology and Environment for the project proposal. She is being guided by Dr. S. Suresh Babu, Principal, SBCE, Pattoor.<br/>
-<img className='img_small' alt="" src="/assets/images/departments/achievements/ece_achievements_48.jpg"/></p>
-            
+                {/* Mobile Navigation Dropdown */}
+                <div className="md:hidden bg-yellow-800 sticky top-0 z-10">
+                    <label htmlFor="mobile-tab-select" className="sr-only">Select achievement category</label>
+                    <select
+                        id="mobile-tab-select"
+                        value={activeTab}
+                        onChange={handleSelectChange}
+                        className="w-full p-4 bg-yellow-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-600 font-medium"
+                        aria-label="Select achievement category"
+                    >
+                        <option value="featured">Featured Achievements</option>
+                        <option value="spotlight">Student Spotlight</option>
+                        <option value="gallery">Achievement Gallery</option>
+                        <option value="list">All Achievements</option>
+                    </select>
+                </div>
 
+                {/* Desktop Navigation Tabs */}
+                <nav 
+                    className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 hidden md:block sticky top-0 z-10 bg-white shadow-sm"
+                    aria-label="Achievement categories"
+                    role="tablist"
+                >
+                    <div className="flex overflow-x-auto gap-2">
+                        <TabButton 
+                            active={activeTab === 'featured'} 
+                            onClick={() => handleTabChange('featured')}
+                            aria-controls={tabPanelIds.featured}
+                            id={tabIds.featured}
+                        >
+                            Featured Achievements
+                        </TabButton>
+                        <TabButton 
+                            active={activeTab === 'spotlight'}  
+                            onClick={() => handleTabChange('spotlight')}
+                            aria-controls={tabPanelIds.spotlight}
+                            id={tabIds.spotlight}
+                        >
+                            Student Spotlight
+                        </TabButton>
+                        <TabButton 
+                            active={activeTab === 'gallery'} 
+                            onClick={() => handleTabChange('gallery')}
+                            aria-controls={tabPanelIds.gallery}
+                            id={tabIds.gallery}
+                        >
+                            Achievement Gallery
+                        </TabButton>
+                        <TabButton 
+                            active={activeTab === 'list'} 
+                            onClick={() => handleTabChange('list')}
+                            aria-controls={tabPanelIds.list}
+                            id={tabIds.list}
+                        >
+                            All Achievements
+                        </TabButton>
+                    </div>
+                </nav>
 
-        </div>
+                {/* Content Sections */}
+                <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+                    {/* Featured Achievements Tab */}
+                    <div 
+                        role="tabpanel" 
+                        id={tabPanelIds.featured}
+                        aria-labelledby={tabIds.featured}
+                        className={activeTab === 'featured' ? 'block' : 'hidden'}
+                    >
+                        <div className="space-y-8 md:space-y-12">
+                            <h3 className="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-yellow-900 pl-4">
+                                Outstanding Recent Achievements
+                            </h3>
+
+                            {/* Hero achievement */}
+                            <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
+                                <div className="flex flex-col lg:flex-row">
+                                    <div className="lg:w-1/2">
+                                        <div className="relative h-64 md:h-80 lg:h-full w-full">
+                                            <Image
+                                                src="/assets/images/departments/achievements/ece_achievements_7.jpg"
+                                                alt="GOKUL G KUMAR and AISWARYA MANMADHAN at National Entrepreneurship Conclave"
+                                                fill
+                                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                                className="object-cover"
+                                                priority
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="p-6 md:p-8 lg:w-1/2 flex flex-col justify-center">
+                                        <div className="inline-block px-3 py-1 bg-yellow-100 text-yellow-900 rounded-full text-sm font-medium mb-4">
+                                            Entrepreneurship Excellence
+                                        </div>
+                                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">National Entrepreneurship Conclave 2024</h3>
+                                        <p className="text-base md:text-lg text-gray-700">
+                                            Mr. GOKUL G KUMAR and Ms. AISWARYA MANMADHAN of Department of ECE, SBCE participated in National entrepreneurship conclave 2024: Bootacamp for Aspiring Entrepreneurs at Lead College of Management Studies, Palakkad, Kerala.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Other featured achievements */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                                {featuredAchievements.map((achievement) => (
+                                    <AchievementCard 
+                                        key={achievement.id} 
+                                        {...achievement} 
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Student Spotlight Tab */}
+                    <div 
+                        role="tabpanel" 
+                        id={tabPanelIds.spotlight}
+                        aria-labelledby={tabIds.spotlight}
+                        className={activeTab === 'spotlight' ? 'block' : 'hidden'}
+                    >
+                        <div className="space-y-8">
+                            <h3 className="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-yellow-900 pl-4">
+                                Student Spotlight
+                            </h3>
+
+                            <div className="bg-white rounded-xl shadow-lg overflow-hidden p-6 md:p-8 border border-gray-200">
+                                <div className="flex flex-col md:flex-row items-center">
+                                    <div className="md:w-1/3 flex justify-center mb-6 md:mb-0">
+                                        <div className="relative">
+                                            <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-yellow-500">
+                                                <Image
+                                                    src="/assets/images/departments/achievements/ece_achievements_28.jpg"
+                                                    alt="Gokul G Kumar"
+                                                    fill
+                                                    sizes="(max-width: 768px) 192px, 224px"
+                                                    className="object-cover"
+                                                    priority
+                                                />
+                                            </div>
+                                            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-yellow-900 text-white px-4 py-1 rounded-full text-sm font-bold">
+                                                Innovator
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="md:w-2/3 md:pl-12 text-center md:text-left">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">GOKUL G KUMAR</h3>
+                                        <div className="mb-4 flex flex-wrap justify-center md:justify-start gap-2">
+                                            <span className="bg-yellow-100 text-yellow-900 text-sm font-medium px-3 py-1 rounded-full">Student Entrepreneur</span>
+                                            <span className="bg-yellow-100 text-yellow-900 text-sm font-medium px-3 py-1 rounded-full">B.Tech ECE</span>
+                                        </div>
+                                        <p className="text-gray-700 text-base md:text-lg">
+                                            The only student from Kerala to present his idea at International Centre for Entrepreneurship and Technology, Ahmedabad. He also won the best entry title among 24 others (from 600 teams) in the Sustainable Hackathon challenge organized by Entrepreneurship Development Institute of India, Ahmedabad.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Achievement Gallery Tab */}
+                    <div 
+                        role="tabpanel" 
+                        id={tabPanelIds.gallery}
+                        aria-labelledby={tabIds.gallery}
+                        className={activeTab === 'gallery' ? 'block' : 'hidden'}
+                    >
+                        <div className="space-y-8">
+                            <h3 className="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-yellow-900 pl-4">
+                                Achievement Gallery
+                            </h3>
+
+                            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+                                    <GalleryImage key={num} num={num} />
+                                ))}
+                            </div>
+
+                            <div className="text-center mt-8">
+                                <Link 
+                                    href="#view-full-gallery" 
+                                    className="inline-block bg-yellow-900 hover:bg-yellow-800 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-700 focus:ring-offset-2"
+                                    aria-label="View the full gallery of achievements"
+                                >
+                                    View Full Gallery
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* All Achievements List Tab */}
+                    <div 
+                        role="tabpanel" 
+                        id={tabPanelIds.list}
+                        aria-labelledby={tabIds.list}
+                        className={activeTab === 'list' ? 'block' : 'hidden'}
+                    >
+                        <div className="space-y-8">
+                            <h3 className="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-yellow-900 pl-4">
+                                All Department Achievements
+                            </h3>
+
+                            <div className="bg-white rounded-lg shadow-md p-4 md:p-6 border border-gray-200">
+                                <div className="flex flex-col md:flex-row justify-between items-center mb-6">
+                                    <div className="mb-4 md:mb-0">
+                                        <h4 className="text-lg font-medium text-gray-800">
+                                            {showAllAchievements ?
+                                                `Showing all ${otherAchievements.length} achievements` :
+                                                `Showing 5 of ${otherAchievements.length} achievements`}
+                                        </h4>
+                                    </div>
+                                    <div>
+                                        <label htmlFor="sort-select" className="sr-only">Sort achievements</label>
+                                        <select 
+                                            id="sort-select"
+                                            className="border border-yellow-300 rounded-md py-2 px-3 bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                                            aria-label="Sort achievements"
+                                        >
+                                            <option>Sort by Date</option>
+                                            <option>Sort by Category</option>
+                                            <option>Sort by Student Name</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div className="space-y-3 md:space-y-4">
+                                    {displayedAchievements.map((achievement, index) => (
+                                        <AchievementListItem 
+                                            key={index} 
+                                            achievement={achievement} 
+                                            index={index}
+                                        />
+                                    ))}
+                                </div>
+
+                                {!showAllAchievements && (
+                                    <div className="mt-6 text-center">
+                                        <button
+                                            onClick={toggleShowAllAchievements}
+                                            className="px-5 py-2 bg-yellow-900 text-white rounded-md hover:bg-yellow-800 transition-colors duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-700 focus:ring-offset-2"
+                                            aria-expanded={showAllAchievements}
+                                            aria-controls="achievement-list"
+                                        >
+                                            Show All Achievements
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        
     );
 }
-

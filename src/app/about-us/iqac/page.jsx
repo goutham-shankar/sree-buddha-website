@@ -2,17 +2,18 @@
 import React from "react";
 import DownloadButton from "@/components/common/DownloadButton";
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
 export default function Page() {
   const meetings = [
-    { 
-      id: 1, 
+    {
+      id: 1,
       title: "Minutes-of-7-th-IQAC-meeting-held-on-13-03-2017",
       date: "2017-03-13",
       key_points: ["Quality enhancement measures", "Academic excellence initiatives", "Infrastructure development plans"]
     },
-    { 
-      id: 2, 
+    {
+      id: 2,
       title: "Minutes-of-8-th-IQAC-meeting-held-on-21-06-2017",
       date: "2017-06-21",
       key_points: ["Academic performance review", "Research collaboration proposals", "Student feedback analysis"]
@@ -58,9 +59,11 @@ export default function Page() {
       <section className="relative bg-yellow-900 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30 z-10"></div>
-          <img
+          <Image
             src="https://sbce.ac.in/assets/images/profile_pic.png"
             alt="College Campus"
+            width={1920} // Set appropriate width
+            height={1080} // Set appropriate height
             className="w-full h-full object-cover"
           />
         </div>
@@ -93,11 +96,11 @@ export default function Page() {
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-6">About IQAC</h2>
               <p className="text-gray-700 leading-relaxed mb-8">
-                In pursuance of action plan for performance evaluation, assessment, accreditation, 
-                and quality up-gradation of institutions of higher education, NAAC proposes that 
-                every accredited institution should establish an Internal Quality Assurance Cell (IQAC) 
-                as a post-accreditation quality sustenance measure. Since quality enhancement is a 
-                continuous process, the IQAC will become a part of the institution's system & work 
+                In pursuance of action plan for performance evaluation, assessment, accreditation,
+                and quality up-gradation of institutions of higher education, NAAC proposes that
+                every accredited institution should establish an Internal Quality Assurance Cell (IQAC)
+                as a post-accreditation quality sustenance measure. Since quality enhancement is a
+                continuous process, the IQAC will become a part of the institution&apos;s system & work
                 towards realization of the goals of quality enhancement & sustenance.
               </p>
             </motion.div>

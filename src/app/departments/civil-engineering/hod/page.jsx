@@ -2,6 +2,7 @@
 
 import React, { memo, useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 // Animated Section Component
 const AnimatedSection = memo(({ children, delay = 0 }) => (
@@ -13,6 +14,7 @@ const AnimatedSection = memo(({ children, delay = 0 }) => (
     {children}
   </motion.div>
 ));
+AnimatedSection.displayName = 'AnimatedSection';
 
 // Profile Image Component with hover effect
 const ProfileImage = memo(({ name, title, imagePath }) => (
@@ -22,12 +24,16 @@ const ProfileImage = memo(({ name, title, imagePath }) => (
     transition={{ duration: 0.2 }}
   >
     <div className="overflow-hidden rounded-2xl shadow-2xl">
-      <img
-        src={imagePath}
-        alt={name}
-        className="w-full h-[400px] object-cover transform transition-transform duration-500 group-hover:scale-110"
-        loading="lazy"
-      />
+      <div className="w-full h-[400px] relative">
+        <Image
+          src={imagePath}
+          alt={name}
+          className="object-cover transform transition-transform duration-500 group-hover:scale-110"
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          priority
+        />
+      </div>
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
         <h2 className="text-3xl font-bold">{name}</h2>
         <p className="text-xl mt-2 text-gray-200">{title}</p>
@@ -35,6 +41,7 @@ const ProfileImage = memo(({ name, title, imagePath }) => (
     </div>
   </motion.div>
 ));
+ProfileImage.displayName = 'ProfileImage';
 
 // Info Card Component
 const InfoCard = memo(({ title, children, icon }) => (
@@ -49,6 +56,7 @@ const InfoCard = memo(({ title, children, icon }) => (
     {children}
   </motion.div>
 ));
+InfoCard.displayName = 'InfoCard';
 
 // Timeline Item Component
 const TimelineItem = memo(({ period, role }) => (
@@ -61,6 +69,7 @@ const TimelineItem = memo(({ period, role }) => (
     <p className="text-gray-700 mt-1">{role}</p>
   </motion.div>
 ));
+TimelineItem.displayName = 'TimelineItem';
 
 export default function CivilEngineeringDepartmentHOD() {
   const [activeTab, setActiveTab] = useState('education');
@@ -148,7 +157,7 @@ export default function CivilEngineeringDepartmentHOD() {
                     <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
-                    <span>Life Member: ISTE & Institution of Engineers</span>
+                    <span>Life Member: ISTE &amp; Institution of Engineers</span>
                   </div>
                 </div>
               </motion.div>
@@ -210,7 +219,7 @@ export default function CivilEngineeringDepartmentHOD() {
                 )}
 
                 {activeTab === 'research' && (
-                  <InfoCard title="Research & Achievements" icon={tabData.research.icon}>
+                  <InfoCard title="Research &amp; Achievements" icon={tabData.research.icon}>
                     <ul className="space-y-4">
                       {tabData.research.achievements.map((achievement, index) => (
                         <li key={index} className="flex items-start">
@@ -231,7 +240,7 @@ export default function CivilEngineeringDepartmentHOD() {
                 <h3 className="text-xl font-semibold mb-4">Biography</h3>
                 <p className="text-gray-700 leading-relaxed">
                   Dr. Gouri Antherjanam graduated in Civil Engineering from University of Kerala in 1982, 
-                  pursued her Master's degree at IIT Madras in Geotechnical Engineering in 1989 and obtained 
+                  pursued her Master&apos;s degree at IIT Madras in Geotechnical Engineering in 1989 and obtained 
                   her PhD from the University of Kerala in 2016. She has served as the member of Board of Studies, 
                   Kerala University for two terms and was a coordinator for B Tech syllabus revision committee 
                   (2008 and 2013 scheme). She has a teaching experience of 35 years and served as Professor and 

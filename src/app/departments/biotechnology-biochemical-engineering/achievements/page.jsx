@@ -267,7 +267,7 @@ export default function ComputerScienceDepartmentAchievements() {
                                         </div>
                                         <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">HALO WATERFILTERS Project</h3>
                                         <p className="text-base md:text-lg text-gray-700">
-                                            Sony K Cherian, Malavika Aji, Abhay J Mohan and Baliyapaadath Isaac Nixon secured Kerala start-up mission's fund for prototype design of HALO WATERFILTERS project combined with college IEDC unit.
+                                            Sony K Cherian, Malavika Aji, Abhay J Mohan and Baliyapaadath Isaac Nixon secured Kerala start-up mission&apos;s fund for prototype design of HALO WATERFILTERS project combined with college IEDC unit.
                                         </p>
                                     </div>
                                 </div>

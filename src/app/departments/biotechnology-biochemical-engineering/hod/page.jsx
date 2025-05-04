@@ -2,6 +2,7 @@
 
 import React, { memo, useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 // Animated Section Component
 const AnimatedSection = memo(({ children, delay = 0 }) => (
@@ -13,6 +14,7 @@ const AnimatedSection = memo(({ children, delay = 0 }) => (
     {children}
   </motion.div>
 ));
+AnimatedSection.displayName = 'AnimatedSection';
 
 // Profile Image Component with hover effect
 const ProfileImage = memo(({ name, title, imagePath }) => (
@@ -22,12 +24,16 @@ const ProfileImage = memo(({ name, title, imagePath }) => (
     transition={{ duration: 0.2 }}
   >
     <div className="overflow-hidden rounded-2xl shadow-2xl">
-      <img
-        src={imagePath}
-        alt={name}
-        className="w-full h-[400px] object-cover transform transition-transform duration-500 group-hover:scale-110"
-        loading="lazy"
-      />
+      <div className="w-full h-[400px] relative">
+        <Image
+          src={imagePath}
+          alt={name}
+          className="object-cover transform transition-transform duration-500 group-hover:scale-110"
+          fill
+          sizes="(max-width: 768px) 100vw, 40vw"
+          priority
+        />
+      </div>
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
         <h2 className="text-3xl font-bold">{name}</h2>
         <p className="text-xl mt-2 text-gray-200">{title}</p>
@@ -35,6 +41,7 @@ const ProfileImage = memo(({ name, title, imagePath }) => (
     </div>
   </motion.div>
 ));
+ProfileImage.displayName = 'ProfileImage';
 
 // Info Card Component
 const InfoCard = memo(({ title, children, icon }) => (
@@ -49,6 +56,7 @@ const InfoCard = memo(({ title, children, icon }) => (
     {children}
   </motion.div>
 ));
+InfoCard.displayName = 'InfoCard';
 
 // Timeline Item Component
 const TimelineItem = memo(({ period, role }) => (
@@ -61,6 +69,7 @@ const TimelineItem = memo(({ period, role }) => (
     <p className="text-gray-700 mt-1">{role}</p>
   </motion.div>
 ));
+TimelineItem.displayName = 'TimelineItem';
 
 export default function ComputerScienceDepartmentHod() {
   const [activeTab, setActiveTab] = useState('education');
@@ -215,7 +224,7 @@ export default function ComputerScienceDepartmentHod() {
                 )}
 
                 {activeTab === 'research' && (
-                  <InfoCard title="Research & Achievements" icon={tabData.research.icon}>
+                  <InfoCard title="Research &amp; Achievements" icon={tabData.research.icon}>
                     <ul className="space-y-4">
                       {tabData.research.achievements.map((achievement, index) => (
                         <li key={index} className="flex items-start">

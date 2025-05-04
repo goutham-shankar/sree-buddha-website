@@ -285,7 +285,7 @@ export default function ElectronicsCommunicationDepartmentActivities() {
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="px-4 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Talk on "NEP 2020"
+                    Talk on &quot;NEP 2020&quot;
                   </td>
                   <td className="px-4 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-sm text-gray-500">
                     October 8, 2024
@@ -336,7 +336,7 @@ export default function ElectronicsCommunicationDepartmentActivities() {
             </div>
             
             <div className="bg-white rounded-lg shadow p-3 border border-gray-200">
-              <div className="font-medium text-gray-900 text-sm mb-1">Talk on "NEP 2020"</div>
+              <div className="font-medium text-gray-900 text-sm mb-1">Talk on &quot;NEP 2020&quot;</div>
               <div className="grid grid-cols-2 gap-x-1 gap-y-0.5 text-xs text-gray-600">
                 <div><span className="font-medium">Date:</span> October 8, 2024</div>
                 <div><span className="font-medium">Location:</span> BT Seminar Hall</div>

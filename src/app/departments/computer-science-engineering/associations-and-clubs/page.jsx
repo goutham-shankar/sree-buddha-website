@@ -124,12 +124,12 @@ export default function ComputerScienceDepartmentAssociations() {
             Team ULTRA with team members Christo Johnson, Jeo varghese, kalias nath, criz Stephen, akshu madhu of S2 EEE won the first prize. Team Bespoke IT with team members P.S.Krishnendhu, Hitha R, Gowri Menon, Sandra J of S4 CSE won the second prize.
           </p>
           <div className="mt-4">
-            <h4 className="font-semibold text-yellow-900">SECURITY DAY CELEBRATION - 'LEND AN EAR'</h4>
+            <h4 className="font-semibold text-yellow-900">SECURITY DAY CELEBRATION - &apos;LEND AN EAR&apos;</h4>
             <p className="text-gray-700 italic">An idea Presentation Competition</p>
             <p className="text-gray-700">Date: 22.03.21</p>
             <p className="text-gray-700">Time: 10:00 am to 1:00 pm</p>
             <p className="text-gray-700 mt-2">
-              The Institution of Engineers (India) Students Chapter of Department of Computer Science and Engineering, Sree Buddha College of Engineering and The Institution of Engineers (India) Kollam Local Centre jointly conducted "LEND AN EAR" 'An idea Presentation Competition from 10.00 am to 1:00pm on 22.03.2021 through Google Meet. 5 teams of four members each have attended the Competition. They have presented their innovative ideas in this competition. The faculty advisor Ms. Dhanya Sreedharan welcomed the judging panel and participants. The judging panel included Prof Anil A R, Associate Professor, Dept of CSE, Mr. Gopudarsan and Mr Arun P S, Assistant Professors of Department of Computer Science and Engineering. E-certificates were distributed for the participants who have actively participated the Webinar.
+              The Institution of Engineers (India) Students Chapter of Department of Computer Science and Engineering, Sree Buddha College of Engineering and The Institution of Engineers (India) Kollam Local Centre jointly conducted &quot;LEND AN EAR&quot; &apos;An idea Presentation Competition from 10.00 am to 1:00pm on 22.03.2021 through Google Meet. 5 teams of four members each have attended the Competition. They have presented their innovative ideas in this competition. The faculty advisor Ms. Dhanya Sreedharan welcomed the judging panel and participants. The judging panel included Prof Anil A R, Associate Professor, Dept of CSE, Mr. Gopudarsan and Mr Arun P S, Assistant Professors of Department of Computer Science and Engineering. E-certificates were distributed for the participants who have actively participated the Webinar.
             </p>
           </div>
         </div>

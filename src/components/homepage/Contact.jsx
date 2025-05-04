@@ -36,7 +36,7 @@ function Contact() {
                             </div>
                         </div>
                         <h3 className="text-white text-lg font-medium mb-2">Email Us</h3>
-                        <p className="text-gray-400 mb-3 text-sm">We'll respond within 24 hours</p>
+                        <p className="text-gray-400 mb-3 text-sm">We&apos;ll respond within 24 hours</p>
                         <a href="mailto:principal@sbce.ac.in" className="text-yellow-500 hover:underline block">principal@sbce.ac.in</a>
                         {/* <a href="mailto:info@sbce.ac.in" className="text-yellow-500 hover:underline block mt-1">info@sbce.ac.in</a> */}
                     </div>

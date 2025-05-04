@@ -117,7 +117,7 @@ export default function SAC() {
                 <p className="mt-4">
                   The SAC committee reviews event proposals and issues sanctions after suitable amendments if required, 
                   in consultation with appropriate authorities, ensuring that all campus activities align with the 
-                  college's values and educational mission.
+                  college&apos;s values and educational mission.
                 </p>
               </div>
               
@@ -396,7 +396,7 @@ export default function SAC() {
                   <div className="mb-4">
                     <p className="text-gray-700 mb-4">
                       Our students have excelled in various sports competitions at university, state, and national levels.
-                      These achievements highlight the college's commitment to promoting sports alongside academic excellence.
+                      These achievements highlight the college&apos;s commitment to promoting sports alongside academic excellence.
                     </p>
                   </div>
                   <div className="rounded-lg overflow-hidden">
@@ -418,9 +418,9 @@ export default function SAC() {
                 <div className="bg-gray-50 rounded-lg p-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                   <div>
                     <p className="text-gray-700 mb-3">
-                      National Service Scheme (NSS) was launched in 1969, Mahatma Gandhi's birth centenary year. The NSS aims 
+                      National Service Scheme (NSS) was launched in 1969, Mahatma Gandhi&apos;s birth centenary year. The NSS aims 
                       at inculcating volunteerism, qualities of citizenship and dedication to community service with the motto, 
-                      "Not me but you".
+                      &quot;Not me but you&quot;.
                     </p>
                     <p className="text-gray-700 mb-3">
                       The zest and determination shown by NSS volunteers in the rural areas is unparalleled. NSS events and activities include:
@@ -432,7 +432,7 @@ export default function SAC() {
                       </li>
                       <li className="flex items-start text-gray-700">
                         <span className="w-2 h-2 bg-yellow-800 rounded-full mr-2 mt-2"></span>
-                        <span>Legal literacy class on "Anti Ragging" in collaboration with Mavelikara Taluk Legal Services Authority</span>
+                        <span>Legal literacy class on &quot;Anti Ragging&quot; in collaboration with Mavelikara Taluk Legal Services Authority</span>
                       </li>
                       <li className="flex items-start text-gray-700">
                         <span className="w-2 h-2 bg-yellow-800 rounded-full mr-2 mt-2"></span>

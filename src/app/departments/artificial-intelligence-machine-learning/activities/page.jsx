@@ -219,9 +219,9 @@ export default function ComputerScienceDepartmentActivities() {
             <div className="flex flex-col md:flex-row">
               <div className="w-full md:w-1/2 p-4 sm:p-5 md:p-6 lg:p-8">
                 <div className="text-xs sm:text-sm text-yellow-900 font-semibold mb-1 sm:mb-2">January 19, 2025</div>
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2 sm:mb-4 leading-tight">Alumni Talk Series: "Campus to Career" by Merissa Ann Thomas</h2>
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2 sm:mb-4 leading-tight">Alumni Talk Series: &quot;Campus to Career&quot; by Merissa Ann Thomas</h2>
                 <div className="prose prose-yellow prose-sm max-w-none text-xs sm:text-sm text-gray-600">
-                  <p className="mb-2 sm:mb-3 leading-relaxed">On January 19, 2025, the Department of Computer Science and Engineering (AI & ML) hosted the first session of its Alumni Talk Series, titled "Campus to Career." The event was designed to bridge the gap between academia and industry, offering students a valuable opportunity to gain insights from accomplished alumni who have successfully transitioned into their careers. This session was attended by 40 students and aimed to provide guidance on navigating interviews, tests, and the early stages of a professional career.</p>
+                  <p className="mb-2 sm:mb-3 leading-relaxed">On January 19, 2025, the Department of Computer Science and Engineering (AI & ML) hosted the first session of its Alumni Talk Series, titled &quot;Campus to Career.&quot; The event was designed to bridge the gap between academia and industry, offering students a valuable opportunity to gain insights from accomplished alumni who have successfully transitioned into their careers. This session was attended by 40 students and aimed to provide guidance on navigating interviews, tests, and the early stages of a professional career.</p>
                   <p className="mb-2 sm:mb-3 leading-relaxed">The meeting was hosted by Ms. Minu Lalitha Madhavu, AP in CSE (AI&ML) and the event commenced with a warm welcome by Dr. Anil A.R., Head of the Department (CSE – AI & ML). Dr. Anil emphasized the importance of connecting students with alumni, who can offer first-hand insights into real-world challenges and opportunities in the rapidly evolving tech industry.</p>
                   <p className="hidden sm:block leading-relaxed">Following the welcome address, the highlight of the event was the Alumni Talk delivered by Ms. Merissa Ann Thomas, an alumna from the 2020-2024 batch. Ms. Merissa, currently an Associate-I in Cloud Infrastructure at UST, shared her enriching journey from being a student in the Department of CSE (AI & ML) to excelling in the dynamic field of cloud infrastructure.</p>
                 </div>
@@ -329,7 +329,7 @@ export default function ComputerScienceDepartmentActivities() {
                 <div className="text-xs sm:text-sm text-yellow-900 font-semibold mb-1 sm:mb-2">February 19-21, 2024</div>
                 <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2 sm:mb-4 leading-tight">Workshop on Robotics</h2>
                 <div className="prose prose-yellow prose-sm max-w-none text-xs sm:text-sm text-gray-600">
-                  <p className="leading-relaxed">Department of Artificial Intelligence and Machine Learning successfully conducted a 3-day workshop on "Robotics" from 19/2/24-21/2/24. Workshop was conducted by "Stem Robotics" Founder and CEO, Mr. Rajasekharan A H. Around 128 school students and 63 AI&ML students attended the workshop.</p>
+                  <p className="leading-relaxed">Department of Artificial Intelligence and Machine Learning successfully conducted a 3-day workshop on &quot;Robotics&quot; from 19/2/24-21/2/24. Workshop was conducted by &quot;Stem Robotics&quot; Founder and CEO, Mr. Rajasekharan A H. Around 128 school students and 63 AI&ML students attended the workshop.</p>
                 </div>
 
               </div>

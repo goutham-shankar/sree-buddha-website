@@ -164,7 +164,7 @@ export default function ConveyanceAndBusRoutes() {
               <p className="text-gray-700 text-lg leading-relaxed">
                 Our college provides a reliable and well-organized bus service for day scholars. 
                 Buses are available for all major locations, offering convenience and flexibility 
-                based on students' needs. Whether you're traveling from nearby or distant areas, 
+                based on students&apos; needs. Whether you&apos;re traveling from nearby or distant areas, 
                 our bus service ensures timely arrivals and departures.
               </p>
 

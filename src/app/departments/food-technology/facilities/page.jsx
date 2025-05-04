@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Poppins } from 'next/font/google';
-
+import Image from 'next/image';
 
 // Initialize Poppins font
 const poppins = Poppins({
@@ -118,11 +118,14 @@ export default function FoodTechnologyDepartmentFacilities() {
                     className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
                     onClick={() => setActiveTab('labs')}
                   >
-                    <div className="h-40 overflow-hidden">
-                      <img 
+                    <div className="h-40 overflow-hidden relative">
+                      <Image 
                         src={lab.image} 
                         alt={lab.name} 
-                        className="w-full h-full object-cover"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                        className="object-cover"
+                        priority={index < 3}
                       />
                     </div>
                     <div className="p-4">
@@ -185,11 +188,14 @@ export default function FoodTechnologyDepartmentFacilities() {
                 {labFacilities.map((lab, index) => (
                   <div key={`lab-${index}`} className="bg-white rounded-lg shadow-md overflow-hidden">
                     <div className="md:flex">
-                      <div className="md:w-2/5 h-64 md:h-auto overflow-hidden">
-                        <img 
+                      <div className="md:w-2/5 h-64 md:h-auto relative">
+                        <Image 
                           src={lab.image} 
                           alt={lab.name} 
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                          fill
+                          sizes="(max-width: 768px) 100vw, 40vw"
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                          priority={index < 2}
                         />
                       </div>
                       <div className="p-6 md:w-3/5">

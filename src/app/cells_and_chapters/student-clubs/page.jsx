@@ -65,7 +65,7 @@ export default function StudentClubs() {
           <div className="mb-8 text-gray-700 text-lg leading-relaxed">
             <p>
               Access detailed information about various committees through the downloadable PDF documents below.
-              Each document contains comprehensive information about the respective committee's structure, guidelines, and activities.
+              Each document contains comprehensive information about the respective committee&apos;s structure, guidelines, and activities.
             </p>
           </div>
           

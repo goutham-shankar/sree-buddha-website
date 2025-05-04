@@ -103,8 +103,8 @@ export default function CentralLibraryPage() {
                 <div className="bg-white p-6 rounded-lg shadow-sm border border-yellow-100 mt-8">
                   <h3 className="text-xl font-semibold text-yellow-900 mb-4">Mission Statement</h3>
                   <p className="italic text-yellow-950/80">
-                    "To empower our academic community with comprehensive information resources and services 
-                    that foster intellectual growth, research excellence, and lifelong learning."
+                  &quot;To empower our academic community with comprehensive information resources and services 
+                    that foster intellectual growth, research excellence, and lifelong learning.&quot;
                   </p>
                 </div>
               </div>
