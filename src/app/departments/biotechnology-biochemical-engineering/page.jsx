@@ -6,13 +6,13 @@ import './style.css'
 
 
 export default function ComputerScienceDepartment() {
-    // Department building images
-    const buildingImages = [
-      "/images/cs-dept-building/cs-dept-building.png",
-      "/images/cs-dept-building/cs-dept-building2.png",
-    ];
+  // Department building images
+  const buildingImages = [
+    "/images/cs-dept-building/cs-dept-building.png",
+    "/images/cs-dept-building/cs-dept-building2.png",
+  ];
 
-    const [images, setImages] = useState([]);
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     async function fetchImages() {
@@ -23,8 +23,8 @@ export default function ComputerScienceDepartment() {
         console.log("API Response:", data); // Debugging output
 
         // ✅ Ensure Department data exists and filter correctly
-        let filteredImages = data.data.filter(item => 
-          item.Department?.toLowerCase() ==="bio" 
+        let filteredImages = data.data.filter(item =>
+          item.Department?.toLowerCase() === "bio"
         );
 
         // ✅ Sort images by date (newest first)
@@ -49,43 +49,43 @@ export default function ComputerScienceDepartment() {
     fetchImages();
   }, []);
 
-    
-    return (
-      <div className="cs-dept-container">
-        <header className="cs-dept-header">
-          <h1>Department of Biotechnology</h1>
-          <p>Advancing Science • Transforming Lives • Shaping the Future</p>
-        </header>
-        
-        <div className="cs-dept-hero">
-          <div className="cs-dept-hero-image">
-            <Image 
-              src="/images/bio-hero.jpg" 
-              alt="Computer Science Students Working Together"
-              width={1200}
-              height={400}
-              priority
-            />
-          </div>
-          <div className="cs-dept-hero-text">
-            <h2>Shaping Tomorrow&apos;s Tech Leaders</h2>
-            <p>Join our vibrant community of innovators and problem-solvers</p>
-          </div>
+
+  return (
+    <div className="cs-dept-container">
+      <header className="cs-dept-header">
+        <h1>Department of Biotechnology</h1>
+        <p>Advancing Science • Transforming Lives • Shaping the Future</p>
+      </header>
+
+      <div className="cs-dept-hero">
+        <div className="cs-dept-hero-image">
+          <Image
+            src="/images/bio-hero.jpg"
+            alt="Computer Science Students Working Together"
+            width={1200}
+            height={400}
+            priority
+          />
         </div>
-        
-        <section className="cs-dept-section">
-          <h2 className="cs-dept-section-title">Department Profile</h2>
-          <div className="cs-dept-profile-content">
-            <div className="cs-dept-profile-text">
-                <p>Established in 2002, the Department of Biotechnology & Biochemical Engineering at Sree Buddha College of Engineering is recognized for its excellence in teaching and research. Accredited NAAC (A) and the NBA since 2019. The department offers a multidisciplinary curriculum in molecular life sciences and engineering, with B.Tech, M.Tech, and Ph.D. programs focused on workforce development and research</p>
-              <br />
-              <p>The curriculum blends life sciences and engineering, covering microbiology, genetic engineering, bioinformatics, and bioprocess design. Supported by four PhD holders, the department emphasizes outcome-based education, innovation, and entrepreneurship</p>
-              <br />
-              <p>Collaborating with organizations like DBT, AYUSH, and Universiti Sains Malaysia, it focuses on molecular diagnostics, nanotechnology, bioprocessing, and biofuels. Student projects often result in publications in SCI and Scopus-indexed journals, including a pioneering human genome mapping project of Kerala’s ethnic populations</p>
-              <br />
-              <p>The department emphasizes academic rigor, research excellence, and industry collaboration, preparing students for professional success and lifelong learning.</p>
-            </div>
-            {/* <div className="cs-dept-profile-images">
+        <div className="cs-dept-hero-text">
+          <h2>Shaping Tomorrow&apos;s Tech Leaders</h2>
+          <p>Join our vibrant community of innovators and problem-solvers</p>
+        </div>
+      </div>
+
+      <section className="cs-dept-section">
+        <h2 className="cs-dept-section-title">Department Profile</h2>
+        <div className="cs-dept-profile-content">
+          <div className="cs-dept-profile-text">
+            <p>Established in 2002, the Department of Biotechnology & Biochemical Engineering at Sree Buddha College of Engineering is recognized for its excellence in teaching and research. Accredited NAAC (A) and the NBA since 2019. The department offers a multidisciplinary curriculum in molecular life sciences and engineering, with B.Tech, M.Tech, and Ph.D. programs focused on workforce development and research</p>
+            <br />
+            <p>The curriculum blends life sciences and engineering, covering microbiology, genetic engineering, bioinformatics, and bioprocess design. Supported by four PhD holders, the department emphasizes outcome-based education, innovation, and entrepreneurship</p>
+            <br />
+            <p>Collaborating with organizations like DBT, AYUSH, and Universiti Sains Malaysia, it focuses on molecular diagnostics, nanotechnology, bioprocessing, and biofuels. Student projects often result in publications in SCI and Scopus-indexed journals, including a pioneering human genome mapping project of Kerala’s ethnic populations</p>
+            <br />
+            <p>The department emphasizes academic rigor, research excellence, and industry collaboration, preparing students for professional success and lifelong learning.</p>
+          </div>
+          {/* <div className="cs-dept-profile-images">
               {buildingImages.map((img, index) => (
                 <div key={index} className="cs-dept-building-image">
                   <Image 
@@ -97,80 +97,94 @@ export default function ComputerScienceDepartment() {
                 </div>
               ))}
             </div> */}
+        </div>
+      </section>
+
+      <section className="cs-dept-section">
+        <h2 className="cs-dept-section-title">Department Highlights</h2>
+        <div className="cs-dept-highlights-content">
+          <div className="highlights-card">
+            <h3 className="highlight-category">Academic Excellence</h3>
+            <ul>
+              <li>The department focuses on academic rigor, research excellence, and industry collaboration, preparing students for professional success. The department has two advanced research labs with experienced staff, offering hands-on training and in-house projects. </li>
+            </ul>
           </div>
-        </section>
-        
-        <section className="cs-dept-section">
-          <h2 className="cs-dept-section-title">Department Highlights</h2>
-          <div className="cs-dept-highlights-content">
-            <div className="highlights-card">
-              <h3 className="highlight-category">Academic Excellence</h3>
-              <ul>
-                <li>The department focuses on academic rigor, research excellence, and industry collaboration, preparing students for professional success. The department has two advanced research labs with experienced staff, offering hands-on training and in-house projects. </li>
-              </ul>
-            </div>
-              
-            <div className="highlights-card">
-              <h3 className="highlight-category">Industry Exposure and Research Collaborations</h3>
-              <ul>
-                <li>Students gain industry insights through seminars, workshops, and internships at NIT, IIT etc and reputed industries like,  ZETA Biosystem Bangalore, Biocon Bangalore, CFTRI Mysore , Synthite chemicals Kochi etc. Partnerships with NIIST, IIPM, NIFTEM, CTCRI Trivandrum, CFRD Cochin etc to enhance research opportunities</li>
-                <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
-              </ul>
-            </div>
-              
-            <div className="highlights-card">
-              <h3 className="highlight-category">Professional Memberships</h3>
-              <ul>
-                <li>The department holds memberships with IEI, IIChE, and ISTE Student Chapter, promoting professional growth</li>
-                <li>High-performance computing clusters for research</li>
-                <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
-              </ul>
-            </div>
-              
-            <div className="highlights-card">
-              <h3 className="highlight-category">Innovation and Sustainability Initiatives</h3>
-              <ul>
-                <li>Biological Waste Composting Unit: Converts organic waste into compost for campus landscaping</li>
-                <li>Water Treatment Unit (Niranjal) : Provides safe drinking water across the campus.</li>
-                <li>Bio-Mushroom Cultivation Unit : Cultivates and sells mushrooms while training students in sustainable agriculture</li>
-                <li>Soap-Making Unit: Produces eco-friendly soaps, promoting self-sufficiency and bioproduct manufacturing</li>
-                <li>Consultancy Services - Water and Wastewater Quality Analysis Lab: State-approved lab ensuring compliance with environmental standards</li>
-              </ul>
-            </div>
+
+          <div className="highlights-card">
+            <h3 className="highlight-category">Industry Exposure and Research Collaborations</h3>
+            <ul>
+              <li>Students gain industry insights through seminars, workshops, and internships at NIT, IIT etc and reputed industries like,  ZETA Biosystem Bangalore, Biocon Bangalore, CFTRI Mysore , Synthite chemicals Kochi etc. Partnerships with NIIST, IIPM, NIFTEM, CTCRI Trivandrum, CFRD Cochin etc to enhance research opportunities</li>
+              <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
+            </ul>
           </div>
-        </section>
-        
-        <section className="container mx-auto px-4 py-10">
-                <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 text-yellow-900 mb-6">
-                  Department Gallery
-                </h2>
-        
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {/* Static images instead of API-fetched images */}
-                  <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                    <Image
-                      src="/images/csimg2.jpg"
-                      alt="CS Department Building Front View"
-                      width={400}
-                      height={300}
-                      className="w-full h-48 object-cover"
-                    />
-                  </div>
-        
-                  <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                    <Image
-                      src="/images/csimg1.jpg"
-                      alt="CS Department Seminar Hall"
-                      width={400}
-                      height={300}
-                      className="w-full h-48 object-cover"
-                    />
-                  </div>
-        
-        
-                </div>
-              </section>
-        <style jsx>{`
+
+          <div className="highlights-card">
+            <h3 className="highlight-category">Professional Memberships</h3>
+            <ul>
+              <li>The department holds memberships with IEI, IIChE, and ISTE Student Chapter, promoting professional growth</li>
+              <li>High-performance computing clusters for research</li>
+              <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
+            </ul>
+          </div>
+
+          <div className="highlights-card">
+            <h3 className="highlight-category">Innovation and Sustainability Initiatives</h3>
+            <ul>
+              <li>Biological Waste Composting Unit: Converts organic waste into compost for campus landscaping</li>
+              <li>Water Treatment Unit (Niranjal) : Provides safe drinking water across the campus.</li>
+              <li>Bio-Mushroom Cultivation Unit : Cultivates and sells mushrooms while training students in sustainable agriculture</li>
+              <li>Soap-Making Unit: Produces eco-friendly soaps, promoting self-sufficiency and bioproduct manufacturing</li>
+              <li>Consultancy Services - Water and Wastewater Quality Analysis Lab: State-approved lab ensuring compliance with environmental standards</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 py-10">
+        <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 text-yellow-900 mb-6">
+          Department Gallery
+        </h2>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {/* Conditionally render images */}
+          {images.length > 0 ? (
+            images.map((imgSrc, index) => (
+              <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                <Image
+                  src={imgSrc}
+                  alt={`CE Department Image ${index + 1}`}
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+            ))
+          ) : (
+            <>
+              <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                <Image
+                  src="/images/csimg2.jpg"
+                  alt="CS Department Building Front View"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                <Image
+                  src="/images/csimg1.jpg"
+                  alt="CS Department Seminar Hall"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+            </>
+          )}
+        </div>
+      </section>
+
+      <style jsx>{`
           .cs-dept-container {
             background-color: #E6E6E6;
             color: #333;
@@ -390,6 +404,6 @@ export default function ComputerScienceDepartment() {
             }
           }
         `}</style>
-      </div>
-    );
-  }
+    </div>
+  );
+}
