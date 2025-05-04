@@ -182,7 +182,7 @@ export default function AboutAutonomy() {
               <div className={styles.naacText}>
                 <h2>NAAC &apos;A&apos; Grade Reaccreditation</h2>
                 <p>
-                  Adding to its prestige, the college has recently been re-accredited with an 'A' grade by the National Assessment and Accreditation Council (NAAC), recognizing its commitment to high academic standards, strong infrastructure, experienced faculty, and remarkable achievements. The Management&apos;s visionary leadership and expertise in academics and administration have played a key role in establishing and upholding the college as a center of excellence with reputed accreditations.
+                  Adding to its prestige, the college has recently been re-accredited with an &apos;A&apos; grade by the National Assessment and Accreditation Council (NAAC), recognizing its commitment to high academic standards, strong infrastructure, experienced faculty, and remarkable achievements. The Management&apos;s visionary leadership and expertise in academics and administration have played a key role in establishing and upholding the college as a center of excellence with reputed accreditations.
                 </p>
               </div>
             </div>

@@ -91,7 +91,7 @@ function Principal() {
         className="bg-red-50 border-l-4 border-red-500 p-8 text-center rounded-lg my-8 max-w-2xl mx-auto shadow-lg"
       >
         <h2 className="text-2xl font-bold text-red-700">Oops!</h2>
-        <p className="my-4">We couldn't load the principal&apos;s information.</p>
+        <p className="my-4">We couldn&apos;t load the principal&apos;s information.</p>
         <p className="text-sm text-gray-600 mb-6">{error}</p>
         <button 
           onClick={() => window.location.reload()} 

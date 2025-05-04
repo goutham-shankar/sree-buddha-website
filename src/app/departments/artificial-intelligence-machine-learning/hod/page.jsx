@@ -2,6 +2,7 @@
 
 import React, { memo, useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image'; // Import Next.js Image component
 
 // Animated Section Component
 const AnimatedSection = memo(({ children, delay = 0 }) => (
@@ -13,6 +14,7 @@ const AnimatedSection = memo(({ children, delay = 0 }) => (
     {children}
   </motion.div>
 ));
+AnimatedSection.displayName = 'AnimatedSection'; // Add display name
 
 // Profile Image Component with hover effect
 const ProfileImage = memo(({ name, title, imagePath }) => (
@@ -22,9 +24,11 @@ const ProfileImage = memo(({ name, title, imagePath }) => (
     transition={{ duration: 0.2 }}
   >
     <div className="overflow-hidden rounded-2xl shadow-2xl">
-      <img
+      <Image
         src={imagePath}
         alt={name}
+        width={800}
+        height={400}
         className="w-full h-[400px] object-cover transform transition-transform duration-500 group-hover:scale-110"
         loading="lazy"
       />
@@ -35,6 +39,7 @@ const ProfileImage = memo(({ name, title, imagePath }) => (
     </div>
   </motion.div>
 ));
+ProfileImage.displayName = 'ProfileImage'; // Add display name
 
 // Info Card Component
 const InfoCard = memo(({ title, children, icon }) => (
@@ -49,6 +54,7 @@ const InfoCard = memo(({ title, children, icon }) => (
     {children}
   </motion.div>
 ));
+InfoCard.displayName = 'InfoCard'; // Add display name
 
 // Timeline Item Component
 const TimelineItem = memo(({ period, role }) => (
@@ -61,6 +67,7 @@ const TimelineItem = memo(({ period, role }) => (
     <p className="text-gray-700 mt-1">{role}</p>
   </motion.div>
 ));
+TimelineItem.displayName = 'TimelineItem'; // Add display name
 
 export default function AIAndMachineLearningDepartmentHOD() {
   const [activeTab, setActiveTab] = useState('education');
