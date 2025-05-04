@@ -55,44 +55,25 @@ const GalleryImage = ({ src, alt, index }) => (
   </motion.div>
 );
 
-const LoadingGallery = () => (
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 animate-pulse">
-    {[...Array(6)].map((_, index) => (
-      <div key={index} className="bg-gray-200 rounded-lg h-64"></div>
-    ))}
-  </div>
-);
-
-const ErrorDisplay = ({ message, retryFn }) => (
-  <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto text-red-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-    </svg>
-    <h3 className="text-lg font-medium text-red-800 mb-2">Unable to load gallery images</h3>
-    <p className="text-sm text-red-600 mb-4">{message}</p>
-    <button 
-      onClick={retryFn} 
-      className="px-4 py-2 bg-[#845714] text-white rounded-md hover:bg-[#6b450f] transition-colors"
-    >
-      Try Again
-    </button>
-  </div>
-);
-
 // Main Component
 export default function ComputerScienceDepartment() {
-  const [images, setImages] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  // Use a single state for gallery data to prevent multiple re-renders
+  const [galleryState, setGalleryState] = useState({
+    images: [],
+    loading: true,
+    error: null,
+    initialized: false
+  });
   
-  // Static gallery images
+  // Static gallery images - default images to show while loading or as fallback
   const staticImages = [
+    "/images/csimg1.jpg",
+    "/images/csimg2.jpg",
     "/images/cs-dept-building/cs-dept-building.png",
     "/images/cs-dept-building/cs-dept-building2.png",
-    // You can add more static images here if needed
   ];
   
-  // Highlights data structure - Updated with CS department content
+  // Highlights data structure
   const highlights = {
     academic: [
       "Accredited by NBA since November 2019",
@@ -117,8 +98,10 @@ export default function ComputerScienceDepartment() {
   };
 
   const fetchImages = useCallback(async () => {
-    setLoading(true);
-    setError(null);
+    // Don't update loading state if we already have images - prevents flickering
+    if (!galleryState.initialized) {
+      setGalleryState(prev => ({ ...prev, loading: true, error: null }));
+    }
     
     try {
       // Check if we have environment variable
@@ -179,22 +162,42 @@ export default function ComputerScienceDepartment() {
         }
       });
 
-      // Combine static images with dynamic images from the API
-      setImages([...staticImages, ...imageUrls]);
+      // Update state with fetched images or static images if none found
+      setGalleryState({
+        images: imageUrls.length > 0 ? imageUrls : staticImages,
+        loading: false,
+        error: null,
+        initialized: true
+      });
     } catch (error) {
       console.error("Error fetching images:", error);
-      setError(error.message || "Failed to load gallery images");
       
-      // Fall back to static images if API fails
-      setImages([...staticImages]);
-    } finally {
-      setLoading(false);
+      // Update state with error and fallback to static images
+      setGalleryState({
+        images: staticImages,
+        loading: false,
+        error: error.message || "Failed to load gallery images",
+        initialized: true
+      });
     }
-  }, [staticImages]);
+  }, [galleryState.initialized, staticImages]);
 
+  // Fetch images only once on component mount
   useEffect(() => {
     fetchImages();
-  }, [fetchImages]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Destructure gallery state for cleaner JSX
+  const { images, loading, error } = galleryState;
+
+  // Preload static images to prevent flickering - FIXED: use DOM API instead of constructor
+  useEffect(() => {
+    staticImages.forEach(src => {
+      const imgElement = document.createElement('img');
+      imgElement.src = src;
+    });
+  }, [staticImages]);
 
   return (
       <div className="cs-dept-container bg-[#E6E6E6] text-gray-800 font-['Poppins',sans-serif] p-5 md:p-8">
@@ -281,37 +284,61 @@ export default function ComputerScienceDepartment() {
           </div>
         </section>
         
-<section className="container mx-auto px-4 py-10">
-                    <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 text-yellow-900 mb-6">
-                      Department Gallery
-                    </h2>
-            
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                      {/* Static images instead of API-fetched images */}
-                      <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                        <Image
-                          src="/images/csimg2.jpg"
-                          alt="CS Department Building Front View"
-                          width={400}
-                          height={300}
-                          className="w-full h-48 object-cover"
-                        />
-                      </div>
-            
-                      <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                        <Image
-                          src="/images/csimg1.jpg"
-                          alt="CS Department Seminar Hall"
-                          width={400}
-                          height={300}
-                          className="w-full h-48 object-cover"
-                        />
-                      </div>
-            
-            
-                    </div>
-                  </section>
-
+        <section className="container mx-auto px-4 py-10">
+          <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 text-yellow-900 mb-6">
+            Department Gallery
+          </h2>
+      
+          {/* Display gallery with minimal conditional rendering to prevent flickering */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {loading ? (
+              // Show static images with loading effect instead of empty placeholders
+              staticImages.map((src, index) => (
+                <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all relative">
+                  <div className="absolute inset-0 bg-gray-200 animate-pulse opacity-70 z-10"></div>
+                  <div className="w-full h-48 bg-gray-100"></div>
+                </div>
+              ))
+            ) : (
+              // Show fetched images or static images when API call is complete
+              images.map((src, index) => (
+                <motion.div 
+                  key={index} 
+                  className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                >
+                  <Image
+                    src={src}
+                    alt={`CS Department Image ${index + 1}`}
+                    width={400}
+                    height={300}
+                    className="w-full h-48 object-cover"
+                    onError={(e) => {
+                      // Handle image loading errors
+                      console.error(`Failed to load image: ${src}`);
+                      e.currentTarget.src = staticImages[index % staticImages.length];
+                    }}
+                  />
+                </motion.div>
+              ))
+            )}
+          </div>
+          
+          {/* Show error message below the gallery if there's an error */}
+          {error && (
+            <div className="mt-6 bg-red-50 border border-red-200 rounded-lg p-4 text-center">
+              <p className="text-sm text-red-600 mb-2">{error}</p>
+              <button 
+                onClick={fetchImages} 
+                className="px-3 py-1 text-sm bg-amber-800 text-white rounded-md hover:bg-amber-900 transition-colors"
+              >
+                Try Again
+              </button>
+            </div>
+          )}
+        </section>
       </div>
   );
 }

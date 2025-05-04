@@ -1,17 +1,17 @@
-"use client"  
+"use client"
 import React from 'react'
 import Image from 'next/image';
 import { useEffect, useState } from "react";
 import './style.css'
 
 export default function MechanicalDepartment() {
-    // Department building images
-    const buildingImages = [
-        "/images/cs-dept-building/cs-dept-building.png",
-        "/images/cs-dept-building/cs-dept-building2.png",
-    ];
+  // Department building images
+  const buildingImages = [
+    "/images/cs-dept-building/cs-dept-building.png",
+    "/images/cs-dept-building/cs-dept-building2.png",
+  ];
 
-    const [images, setImages] = useState([]);
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     async function fetchImages() {
@@ -22,8 +22,8 @@ export default function MechanicalDepartment() {
         console.log("API Response:", data); // Debugging output
 
         // ✅ Ensure Department data exists and filter correctly
-        let filteredImages = data.data.filter(item => 
-          item.Department?.toLowerCase() === "mea" 
+        let filteredImages = data.data.filter(item =>
+          item.Department?.toLowerCase() === "mea"
         );
 
         // ✅ Sort images by date (newest first)
@@ -48,56 +48,56 @@ export default function MechanicalDepartment() {
     fetchImages();
   }, []);
 
-    return (
-        <div className="cs-dept-container">
-            <header className="cs-dept-header">
-                <h1>Mechanical Department</h1>
-                <p>Precision • Power • Progress</p>
-            </header>
+  return (
+    <div className="cs-dept-container">
+      <header className="cs-dept-header">
+        <h1>Mechanical Department</h1>
+        <p>Precision • Power • Progress</p>
+      </header>
 
-            <div className="cs-dept-hero">
-                <div className="cs-dept-hero-image">
-                    <Image
-                        src="/images/me-hero.jpg"
-                        alt="Computer Science Students Working Together"
-                        width={1200}
-                        height={400}
-                        priority
-                    />
-                </div>
-                <div className="cs-dept-hero-text">
-                    <h2>Shaping Tomorrow&apos;s Tech Leaders</h2>
-                    <p>Join our vibrant community of innovators and problem-solvers</p>
-                </div>
-            </div>
+      <div className="cs-dept-hero">
+        <div className="cs-dept-hero-image">
+          <Image
+            src="/images/me-hero.jpg"
+            alt="Computer Science Students Working Together"
+            width={1200}
+            height={400}
+            priority
+          />
+        </div>
+        <div className="cs-dept-hero-text">
+          <h2>Shaping Tomorrow&apos;s Tech Leaders</h2>
+          <p>Join our vibrant community of innovators and problem-solvers</p>
+        </div>
+      </div>
 
-            <section className="cs-dept-section">
-                <h2 className="cs-dept-section-title">Department Profile</h2>
-                <div className="cs-dept-profile-content">
-                    <div className="cs-dept-profile-text">
-                       <p>The Department of Mechanical Engineering (ME) was started in the year 2004 with undergraduate program and started postgraduate program in Computer 
-                        Integrated Manufacturing (CIM) in the academic year 2011-12. The department has attracted highly qualified and experienced personnel from various streams 
-                        of Mechanical Engineering as its faculty. The department is an approved research centre of APJ Abdul Kalam Technological University (KTU) for the Ph.D. program. 
-                        The department is accredited by NBA since November 2019. </p>
+      <section className="cs-dept-section">
+        <h2 className="cs-dept-section-title">Department Profile</h2>
+        <div className="cs-dept-profile-content">
+          <div className="cs-dept-profile-text">
+            <p>The Department of Mechanical Engineering (ME) was started in the year 2004 with undergraduate program and started postgraduate program in Computer
+              Integrated Manufacturing (CIM) in the academic year 2011-12. The department has attracted highly qualified and experienced personnel from various streams
+              of Mechanical Engineering as its faculty. The department is an approved research centre of APJ Abdul Kalam Technological University (KTU) for the Ph.D. program.
+              The department is accredited by NBA since November 2019. </p>
 
-                        <p>
-                        The department houses state-of the-art instructional laboratories, project laboratories and research laboratories. The department provides supportive learning 
-                        environment to both UG and PG levels to prepare students to take up leading positions in academia and industry globally. The robust and engaging curriculum, along 
-                        with hands-on learning, will empower students to elevate their careers to the next level. To perceive latest technologies and opportunities relating to Mechanical 
-                        Engineering, the department has entered into MOUs with major industries and research institutions in the country to enhance students’ exposure to industry and research. 
-                        </p>
+            <p>
+              The department houses state-of the-art instructional laboratories, project laboratories and research laboratories. The department provides supportive learning
+              environment to both UG and PG levels to prepare students to take up leading positions in academia and industry globally. The robust and engaging curriculum, along
+              with hands-on learning, will empower students to elevate their careers to the next level. To perceive latest technologies and opportunities relating to Mechanical
+              Engineering, the department has entered into MOUs with major industries and research institutions in the country to enhance students’ exposure to industry and research.
+            </p>
 
-                        <p>The faculty members of the department are actively involved in research activities which has led to more than 50 lakhs of research funding from various central and state agencies.
-                           In the recent years, the department has also organized many sponsored faculty development programs in association with AICTE and KTU.  
-                       </p>
+            <p>The faculty members of the department are actively involved in research activities which has led to more than 50 lakhs of research funding from various central and state agencies.
+              In the recent years, the department has also organized many sponsored faculty development programs in association with AICTE and KTU.
+            </p>
 
-                       <p>
-                       Studying Mechanical Engineering at SBCE is not just a decision; it&apos;s a gateway to a future filled with excellence and innovation.
-                       </p>
+            <p>
+              Studying Mechanical Engineering at SBCE is not just a decision; it&apos;s a gateway to a future filled with excellence and innovation.
+            </p>
 
 
-                    </div>
-                    {/* <div className="cs-dept-profile-images">
+          </div>
+          {/* <div className="cs-dept-profile-images">
                         {buildingImages.map((img, index) => (
                             <div key={index} className="cs-dept-building-image">
                                 <Image
@@ -109,100 +109,114 @@ export default function MechanicalDepartment() {
                             </div>
                         ))}
                     </div> */}
-                </div>
-            </section>
+        </div>
+      </section>
 
-            <section className="cs-dept-section">
-                <h2 className="cs-dept-section-title">Department Highlights</h2>
-                <div className="cs-dept-highlights-content">
-                    <div className="highlights-card">
-                        <h3 className="highlight-category">Expert Faculty & Research</h3>
-                        <ul>
-                            <li>HOD with 40 years of teaching experience.</li>
-                            <li>Team of 15 dedicated faculty members, including 5 Ph.D. holders and 3 research scholars.</li>
-                            <li>Faculty members serve as coordinators of IQAC, Examination Cell, Research Council, and IPR Cell.</li>
-                            <li>Regularly organize sponsored FDPs and Conferences.</li>
-                            <li>Received over ₹50 lakhs in research funding from AICTE, ANERT, KTU, KSCSTE, etc.</li>
-                            <li>Published numerous research articles and granted patents.</li>
-                            <li>Research collaborations with national and international universities.</li>
-                            <li>Conduct International/National Conferences annually.</li>
-                         </ul>
-                    </div>
+      <section className="cs-dept-section">
+        <h2 className="cs-dept-section-title">Department Highlights</h2>
+        <div className="cs-dept-highlights-content">
+          <div className="highlights-card">
+            <h3 className="highlight-category">Expert Faculty & Research</h3>
+            <ul>
+              <li>HOD with 40 years of teaching experience.</li>
+              <li>Team of 15 dedicated faculty members, including 5 Ph.D. holders and 3 research scholars.</li>
+              <li>Faculty members serve as coordinators of IQAC, Examination Cell, Research Council, and IPR Cell.</li>
+              <li>Regularly organize sponsored FDPs and Conferences.</li>
+              <li>Received over ₹50 lakhs in research funding from AICTE, ANERT, KTU, KSCSTE, etc.</li>
+              <li>Published numerous research articles and granted patents.</li>
+              <li>Research collaborations with national and international universities.</li>
+              <li>Conduct International/National Conferences annually.</li>
+            </ul>
+          </div>
 
-                    <div className="highlights-card">
-                        <h3 className="highlight-category"> Student Engagement & Skill Development  </h3>
-                        <ul>
-                        <li>Encouragement for research and innovative projects.</li>
-                        <li>Students regularly present papers at conferences and publish in high-impact journals.</li>
-                        <li>Experiential learning through projects and national-level competitions (GoKart, Quad Bike, etc.).</li>
-                        <li>Annual student-led mechanical fest (Mechfest).</li>
-                        <li>Workshops, invited lectures, and seminars to enhance technical skills and placement opportunities.</li>
-                        <li>Membership in professional bodies like ISTE, IEI, SAE.</li>
-                        </ul>
-                    </div>
+          <div className="highlights-card">
+            <h3 className="highlight-category"> Student Engagement & Skill Development  </h3>
+            <ul>
+              <li>Encouragement for research and innovative projects.</li>
+              <li>Students regularly present papers at conferences and publish in high-impact journals.</li>
+              <li>Experiential learning through projects and national-level competitions (GoKart, Quad Bike, etc.).</li>
+              <li>Annual student-led mechanical fest (Mechfest).</li>
+              <li>Workshops, invited lectures, and seminars to enhance technical skills and placement opportunities.</li>
+              <li>Membership in professional bodies like ISTE, IEI, SAE.</li>
+            </ul>
+          </div>
 
-                    <div className="highlights-card">
-                        <h3 className="highlight-category">Industry Collaboration & Innovation</h3>
-                        <ul>
-                        <li>MOUs with industries and research institutions for internships, industrial visits, and collaborative projects.</li>
-                        <li>Strong partnerships with industries for real-world exposure and placements.</li>
-                       <li>Innovation and entrepreneurship culture with regular activities promoting startups.</li>
-                        </ul>
-                    </div>
+          <div className="highlights-card">
+            <h3 className="highlight-category">Industry Collaboration & Innovation</h3>
+            <ul>
+              <li>MOUs with industries and research institutions for internships, industrial visits, and collaborative projects.</li>
+              <li>Strong partnerships with industries for real-world exposure and placements.</li>
+              <li>Innovation and entrepreneurship culture with regular activities promoting startups.</li>
+            </ul>
+          </div>
 
-                    <div className="highlights-card">
-                        <h3 className="highlight-category">State-of-the-Art Infrastructure</h3>
-                        <ul>
-                         <li>Department is equipped with modern laboratories, project labs, and research labs.</li>
-                         <li>Advanced facilities for automation, robotics, and thermal engineering.</li>
-                         <li>Access to industry-grade simulation tools and software.</li>
-                        </ul>
-                    </div>
+          <div className="highlights-card">
+            <h3 className="highlight-category">State-of-the-Art Infrastructure</h3>
+            <ul>
+              <li>Department is equipped with modern laboratories, project labs, and research labs.</li>
+              <li>Advanced facilities for automation, robotics, and thermal engineering.</li>
+              <li>Access to industry-grade simulation tools and software.</li>
+            </ul>
+          </div>
 
-                    <div className="highlights-card">
-                        <h3 className="highlight-category">Curriculum & Academic Excellence</h3>
-                        <ul>
-                        <li>Autonomous status enables a flexible and industry-aligned curriculum.</li>
-                        <li>Continuous updates to incorporate emerging trends in mechanical engineering.</li>
-                        </ul>
-                    </div>
+          <div className="highlights-card">
+            <h3 className="highlight-category">Curriculum & Academic Excellence</h3>
+            <ul>
+              <li>Autonomous status enables a flexible and industry-aligned curriculum.</li>
+              <li>Continuous updates to incorporate emerging trends in mechanical engineering.</li>
+            </ul>
+          </div>
 
-                    
-                </div>
-            </section>
 
-            <section className="container mx-auto px-4 py-10">
-                    <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 text-yellow-900 mb-6">
-                      Department Gallery
-                    </h2>
-            
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                      {/* Static images instead of API-fetched images */}
-                      <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                        <Image
-                          src="/images/csimg2.jpg"
-                          alt="CS Department Building Front View"
-                          width={400}
-                          height={300}
-                          className="w-full h-48 object-cover"
-                        />
-                      </div>
-            
-                      <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                        <Image
-                          src="/images/csimg1.jpg"
-                          alt="CS Department Seminar Hall"
-                          width={400}
-                          height={300}
-                          className="w-full h-48 object-cover"
-                        />
-                      </div>
-            
-            
-                    </div>
-                  </section>
+        </div>
+      </section>
 
-            <style jsx>{`
+      <section className="container mx-auto px-4 py-10">
+        <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 text-yellow-900 mb-6">
+          Department Gallery
+        </h2>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {/* Conditionally render images */}
+          {images.length > 0 ? (
+            images.map((imgSrc, index) => (
+              <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                <Image
+                  src={imgSrc}
+                  alt={`CE Department Image ${index + 1}`}
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+            ))
+          ) : (
+            <>
+              <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                <Image
+                  src="/images/csimg2.jpg"
+                  alt="CS Department Building Front View"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                <Image
+                  src="/images/csimg1.jpg"
+                  alt="CS Department Seminar Hall"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+            </>
+          )}
+        </div>
+      </section>
+
+
+      <style jsx>{`
           .cs-dept-container {
             background-color: #E6E6E6;
             color: #333;
@@ -442,6 +456,6 @@ export default function MechanicalDepartment() {
            }
           }
         `}</style>
-        </div>
-    );
+    </div>
+  );
 }

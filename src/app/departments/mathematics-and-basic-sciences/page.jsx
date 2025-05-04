@@ -19,39 +19,39 @@ export default function ComputerScienceDepartment() {
     const [images, setImages] = useState([]);
 
   useEffect(() => {
-    async function fetchImages() {
-      try {
-        const response = await fetch("http://${process.env.NEXT_PUBLIC_STRAPI}:1337/api/galleries?populate=*");
-        const data = await response.json();
-
-        console.log("API Response:", data); // Debugging output
-
-        // ✅ Ensure Department data exists and filter correctly
-        let filteredImages = data.data.filter(item => 
-          item.Department?.toLowerCase() === "bsh" 
-        );
-
-        // ✅ Sort images by date (newest first)
-        filteredImages.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-        // ✅ Extract small image URLs
-        let imageUrls = filteredImages.flatMap(item =>
-          item.images.map(img => {
-            let smallImageUrl = img.formats?.small?.url
-              ? `${process.env.NEXT_PUBLIC_STRAPI}${img.formats.small.url}`
-              : `${process.env.NEXT_PUBLIC_STRAPI}${img.url}`; // Fallback if small version doesn't exist
-            return smallImageUrl;
-          })
-        );
-
-        setImages(imageUrls); // Update state
-      } catch (error) {
-        console.error("Error fetching images:", error);
+      async function fetchImages() {
+        try {
+          const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/galleries?populate=*`);
+          const data = await response.json();
+  
+          console.log("API Response:", data); // Debugging output
+  
+          // ✅ Ensure Department data exists and filter correctly
+          let filteredImages = data.data.filter(item =>
+            item.Department?.toLowerCase() === "bsh"
+          );
+  
+          // ✅ Sort images by date (newest first)
+          filteredImages.sort((a, b) => new Date(b.date) - new Date(a.date));
+  
+          // ✅ Extract small image URLs
+          let imageUrls = filteredImages.flatMap(item =>
+            item.images.map(img => {
+              let smallImageUrl = img.formats?.small?.url
+                ? `${process.env.NEXT_PUBLIC_STRAPI}${img.formats.small.url}`
+                : `${process.env.NEXT_PUBLIC_STRAPI}${img.url}`; // Fallback if small version doesn't exist
+              return smallImageUrl;
+            })
+          );
+  
+          setImages(imageUrls); // Update state
+        } catch (error) {
+          console.error("Error fetching images:", error);
+        }
       }
-    }
-
-    fetchImages();
-  }, []);
+  
+      fetchImages();
+    }, []);
 
     
     return (
@@ -142,35 +142,49 @@ export default function ComputerScienceDepartment() {
         </section>
         
         <section className="container mx-auto px-4 py-10">
-                <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 text-yellow-900 mb-6">
-                  Department Gallery
-                </h2>
-        
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {/* Static images instead of API-fetched images */}
-                  <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                    <Image
-                      src="/images/csimg2.jpg"
-                      alt="CS Department Building Front View"
-                      width={400}
-                      height={300}
-                      className="w-full h-48 object-cover"
-                    />
-                  </div>
-        
-                  <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                    <Image
-                      src="/images/csimg1.jpg"
-                      alt="CS Department Seminar Hall"
-                      width={400}
-                      height={300}
-                      className="w-full h-48 object-cover"
-                    />
-                  </div>
-        
-        
-                </div>
-              </section>
+                        <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 text-yellow-900 mb-6">
+                          Department Gallery
+                        </h2>
+                
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                          {/* Conditionally render images */}
+                          {images.length > 0 ? (
+                            images.map((imgSrc, index) => (
+                              <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                                <Image
+                                  src={imgSrc}
+                                  alt={`CE Department Image ${index + 1}`}
+                                  width={400}
+                                  height={300}
+                                  className="w-full h-48 object-cover"
+                                />
+                              </div>
+                            ))
+                          ) : (
+                            <>
+                              <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                                <Image
+                                  src="/images/csimg2.jpg"
+                                  alt="CS Department Building Front View"
+                                  width={400}
+                                  height={300}
+                                  className="w-full h-48 object-cover"
+                                />
+                              </div>
+                              <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                                <Image
+                                  src="/images/csimg1.jpg"
+                                  alt="CS Department Seminar Hall"
+                                  width={400}
+                                  height={300}
+                                  className="w-full h-48 object-cover"
+                                />
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      </section>
+                
         <style jsx>{`
           .cs-dept-container {
             background-color: #E6E6E6;

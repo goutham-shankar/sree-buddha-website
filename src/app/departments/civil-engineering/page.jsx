@@ -11,17 +11,16 @@ export default function ComputerScienceDepartment() {
     const buildingImages = [
       "/images/cs-dept-building/cs-dept-building.png",
       "/images/cs-dept-building/cs-dept-building2.png",
-      
-      
-      
-      
     ];
 
     const [images, setImages] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
       async function fetchImages() {
         try {
+          setLoading(true);
           const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/galleries?populate=*`);
           const data = await response.json();
   
@@ -46,8 +45,11 @@ export default function ComputerScienceDepartment() {
           );
   
           setImages(imageUrls); // Update state
+          setLoading(false);
         } catch (error) {
           console.error("Error fetching images:", error);
+          setError("Failed to load images");
+          setLoading(false);
         }
       }
   
@@ -129,14 +131,14 @@ export default function ComputerScienceDepartment() {
             <div className="highlights-card">
               <h3 className="highlight-category">Student Association & Leadership Initiatives</h3>
               <ul>
-                <li>The student association of the Department “CASTELLOS” has proved to be a platform for the students to interact with eminent personalities in the field and to take leadership in conducting various programmes.</li>
+                <li>The student association of the Department &quot;CASTELLOS&quot; has proved to be a platform for the students to interact with eminent personalities in the field and to take leadership in conducting various programmes.</li>
               </ul>
             </div>
               
             <div className="highlights-card">
               <h3 className="highlight-category">Professional Memberships & Student Chapters</h3>
               <ul>
-                <li>The department has a lifetime membership of The Institution of Engineers, India (Students’ chapter, Civil division) and active student chapters of American Society of Civil Engineers (ASCE Student chapter, SBCE) & Indian Concrete Institute (ICI student Chapter).</li>
+                <li>The department has a lifetime membership of The Institution of Engineers, India (Students&apos; chapter, Civil division) and active student chapters of American Society of Civil Engineers (ASCE Student chapter, SBCE) & Indian Concrete Institute (ICI student Chapter).</li>
               </ul>
             </div>
           </div>
@@ -148,28 +150,41 @@ export default function ComputerScienceDepartment() {
                 </h2>
         
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {/* Static images instead of API-fetched images */}
-                  <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                    <Image
-                      src="/images/csimg2.jpg"
-                      alt="CS Department Building Front View"
-                      width={400}
-                      height={300}
-                      className="w-full h-48 object-cover"
-                    />
-                  </div>
-        
-                  <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                    <Image
-                      src="/images/csimg1.jpg"
-                      alt="CS Department Seminar Hall"
-                      width={400}
-                      height={300}
-                      className="w-full h-48 object-cover"
-                    />
-                  </div>
-        
-        
+                  {/* Conditionally render images */}
+                  {images.length > 0 ? (
+                    images.map((imgSrc, index) => (
+                      <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                        <Image
+                          src={imgSrc}
+                          alt={`CE Department Image ${index + 1}`}
+                          width={400}
+                          height={300}
+                          className="w-full h-48 object-cover"
+                        />
+                      </div>
+                    ))
+                  ) : (
+                    <>
+                      <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                        <Image
+                          src="/images/csimg2.jpg"
+                          alt="CS Department Building Front View"
+                          width={400}
+                          height={300}
+                          className="w-full h-48 object-cover"
+                        />
+                      </div>
+                      <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                        <Image
+                          src="/images/csimg1.jpg"
+                          alt="CS Department Seminar Hall"
+                          width={400}
+                          height={300}
+                          className="w-full h-48 object-cover"
+                        />
+                      </div>
+                    </>
+                  )}
                 </div>
               </section>
         
