@@ -2,6 +2,7 @@
 
 import React, { memo, useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image'; // Import Next.js Image component
 
 // Animated Section Component
 const AnimatedSection = memo(({ children, delay = 0 }) => (
@@ -13,6 +14,7 @@ const AnimatedSection = memo(({ children, delay = 0 }) => (
     {children}
   </motion.div>
 ));
+AnimatedSection.displayName = 'AnimatedSection'; // Add display name
 
 // Profile Image Component with hover effect
 const ProfileImage = memo(({ name, title, imagePath }) => (
@@ -22,9 +24,11 @@ const ProfileImage = memo(({ name, title, imagePath }) => (
     transition={{ duration: 0.2 }}
   >
     <div className="overflow-hidden rounded-2xl shadow-2xl">
-      <img
+      <Image
         src={imagePath}
         alt={name}
+        width={800}
+        height={400}
         className="w-full h-[400px] object-cover transform transition-transform duration-500 group-hover:scale-110"
         loading="lazy"
       />
@@ -35,6 +39,7 @@ const ProfileImage = memo(({ name, title, imagePath }) => (
     </div>
   </motion.div>
 ));
+ProfileImage.displayName = 'ProfileImage'; // Add display name
 
 // Info Card Component
 const InfoCard = memo(({ title, children, icon }) => (
@@ -49,6 +54,7 @@ const InfoCard = memo(({ title, children, icon }) => (
     {children}
   </motion.div>
 ));
+InfoCard.displayName = 'InfoCard'; // Add display name
 
 // Timeline Item Component
 const TimelineItem = memo(({ period, role }) => (
@@ -61,6 +67,7 @@ const TimelineItem = memo(({ period, role }) => (
     <p className="text-gray-700 mt-1">{role}</p>
   </motion.div>
 ));
+TimelineItem.displayName = 'TimelineItem'; // Add display name
 
 export default function FoodTechnologyDepartmentHOD() {
   const [activeTab, setActiveTab] = useState('message');
@@ -209,7 +216,7 @@ export default function FoodTechnologyDepartmentHOD() {
                     <div className="prose prose-yellow max-w-none text-gray-700">
                       <p>
                         Welcome to the Department of Food Technology at Sree Buddha College of Engineering, which was started in the year 2020 
-                        to commemorate the VISION 2020 of late Bharat Ratna Dr. APJ Abdul Kalam (Former Hon'ble President of India, Scientist 
+                        to commemorate the VISION 2020 of late Bharat Ratna Dr. APJ Abdul Kalam (Former Hon&apos;ble President of India, Scientist 
                         and Academician), committing to advancements in research and education in the field of Food Technology.
                       </p>
                       <p>

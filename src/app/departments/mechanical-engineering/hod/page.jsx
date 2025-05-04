@@ -2,6 +2,7 @@
 
 import React, { memo, useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image'; // Import Next.js Image component
 
 // Animated Section Component
 const AnimatedSection = memo(({ children, delay = 0 }) => (
@@ -13,6 +14,7 @@ const AnimatedSection = memo(({ children, delay = 0 }) => (
     {children}
   </motion.div>
 ));
+AnimatedSection.displayName = 'AnimatedSection'; // Add display name
 
 // Profile Image Component with hover effect
 const ProfileImage = memo(({ name, title, imagePath }) => (
@@ -22,9 +24,11 @@ const ProfileImage = memo(({ name, title, imagePath }) => (
     transition={{ duration: 0.2 }}
   >
     <div className="overflow-hidden rounded-2xl shadow-2xl">
-      <img
+      <Image
         src={imagePath}
         alt={name}
+        width={800}
+        height={400}
         className="w-full h-[400px] object-cover transform transition-transform duration-500 group-hover:scale-110"
         loading="lazy"
       />
@@ -35,6 +39,7 @@ const ProfileImage = memo(({ name, title, imagePath }) => (
     </div>
   </motion.div>
 ));
+ProfileImage.displayName = 'ProfileImage'; // Add display name
 
 // Info Card Component
 const InfoCard = memo(({ title, children, icon }) => (
@@ -49,6 +54,7 @@ const InfoCard = memo(({ title, children, icon }) => (
     {children}
   </motion.div>
 ));
+InfoCard.displayName = 'InfoCard'; // Add display name
 
 // Timeline Item Component
 const TimelineItem = memo(({ period, role }) => (
@@ -61,6 +67,7 @@ const TimelineItem = memo(({ period, role }) => (
     <p className="text-gray-700 mt-1">{role}</p>
   </motion.div>
 ));
+TimelineItem.displayName = 'TimelineItem'; // Add display name
 
 export default function MechanicalEngineeringDepartmentHOD() {
   const [activeTab, setActiveTab] = useState('education');
@@ -205,7 +212,7 @@ export default function MechanicalEngineeringDepartmentHOD() {
                       ))}
                     </div>
                     <div className="mt-6 text-gray-700">
-                      <p>Prof. Anilkumar A.V. has 37 years of teaching experience, with 20 years at this institution. He is passionate about developing students' creative potential and preparing them to face society while effectively applying the curriculum.</p>
+                      <p>Prof. Anilkumar A.V. has 37 years of teaching experience, with 20 years at this institution. He is passionate about developing students&apos; creative potential and preparing them to face society while effectively applying the curriculum.</p>
                     </div>
                   </InfoCard>
                 )}
@@ -236,7 +243,7 @@ export default function MechanicalEngineeringDepartmentHOD() {
                   teaching experience, 20 of which have been with this institution. He is a lifetime member of several 
                   professional organizations, including the Indian Society of Technical Education (ISTE) and an associate 
                   member of the Institute of Engineers. He is competent of applying the curriculum while also cultivating 
-                  students' creative potential and preparing them to face society.
+                  students&apos; creative potential and preparing them to face society.
                 </p>
               </motion.div>
             </AnimatedSection>

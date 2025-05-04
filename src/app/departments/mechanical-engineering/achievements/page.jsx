@@ -302,7 +302,7 @@ export default function MechanicalEngineeringDepartmentAchievements() {
                                     </div>
                                     <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">Best Innovative Project Award in TEKON 2018</h3>
                                     <p className="text-base md:text-lg text-gray-700">
-                                        The "Semi-automatic Jackfruit Dressing and Packing Machine" was selected as one of the best innovative projects at TEKON 2018, a technical fest organized by APJ Abdul Kalam Technological University (KTU) and Kerala State Council for Science, Technology and Environment (KSCSTE). The event was inaugurated by Hon. Governor of Kerala, Shri. Justice P. Sathasivam.
+                                        The &quot;Semi-automatic Jackfruit Dressing and Packing Machine&quot; was selected as one of the best innovative projects at TEKON 2018, a technical fest organized by APJ Abdul Kalam Technological University (KTU) and Kerala State Council for Science, Technology and Environment (KSCSTE). The event was inaugurated by Hon. Governor of Kerala, Shri. Justice P. Sathasivam.
                                     </p>
                                 </div>
                             </div>
