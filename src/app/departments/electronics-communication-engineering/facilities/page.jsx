@@ -13,7 +13,7 @@ const poppins = Poppins({
     display: 'swap',
 });
 
-export default function EEEDepartmentFacilities() {
+export default function EcDepartmentFacilities() {
     const [activeTab, setActiveTab] = useState('overview');
 
     const labs = [
@@ -111,7 +111,7 @@ export default function EEEDepartmentFacilities() {
         'Design of new kinds of electrical machines, e.g. design of rotary linear switched reluctance motor for applications involving hybrid motion.',
         'Position, speed & torque control of various electrical machines through different methods, e.g. Sensor-less control of BLDC motors.',
         'Development of environment-friendly electric drives, e.g. Implementation of low-cost converter for an autonomous photovoltaic water pumping system.',
-        'Development of energy-saving schemes, e.g. Energy regeneration during the braking of electric vehicles.',
+        'Energy regeneration during the braking of electric vehicles.',
         'Fault detection in various machines, e.g. Novel bearing fault detection and analysis of induction machines.',
         'Development of sensors for condition monitoring of electrical machines, e.g. Development of cost-effective sensor for estimation of dissolved moisture in transformer oil.'
     ];
@@ -165,7 +165,7 @@ export default function EEEDepartmentFacilities() {
                             <p className="mb-6 text-gray-700 leading-relaxed">
                                 The Department of Electronics& Communication Engineering is dedicated to the current needs of industry with the flexibility to tune its programmes according to the different requirements. Application of the state-of-the-art technology in various fields is one of the main focuses in the activities of the department. The department is well-equipped for training the students with a streamlined curriculum that provides an ambient atmosphere for learning and acquiring new skills. The department focuses on providing sound theoretical background as well as good practical exposure to the students for their future endeavors.
                             </p>
-                            
+
                             <h3 className="text-xl font-semibold mb-3 text-gray-800">Available Laboratories</h3>
                             <div className="grid md:grid-cols-2 gap-4">
                                 <ul className="list-disc pl-5 text-gray-700 space-y-1">
@@ -194,7 +194,7 @@ export default function EEEDepartmentFacilities() {
                             <p className="mb-6 text-gray-700 leading-relaxed">
                                 In order to fit into the modern era of technology advancement, the Dept. of EEE lays considerable importance to in-house research. Due to the presence of a PG programme in the dept. in the area of Electrical Machines, much of the researches take place in this domain. These researches are carried out by the PG students, under the guidance of various faculties of the department. Some of the research topics in this domain are as follows:
                             </p>
-                            
+
                             <div className="space-y-4">
                                 {researchTopics.map((topic, index) => (
                                     <div key={index} className="flex">
@@ -207,7 +207,7 @@ export default function EEEDepartmentFacilities() {
                                     </div>
                                 ))}
                             </div>
-                            
+
                             <div className="mt-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-900">
                                 <p className="text-gray-700">
                                     To support these researches, in addition to the regular electrical machines lab, there is a full-fledged research lab in the department with custom-designed Induction Motor, BLDC motor and SRM motor drives and their controllers for analysis and advanced machine design & control software such as Maxwell, Simplorer, and MATLAB. Apart from the research carried out in the PG stream, many developments are also done by the UG students under the guidance of various faculties in the department.
@@ -222,13 +222,13 @@ export default function EEEDepartmentFacilities() {
                             <h3 className="text-xl font-semibold mb-3 text-gray-800">Department Library</h3>
                             <div className="space-y-4 text-gray-700">
                                 <p>
-                                    Apart from a highly equipped Central Library, the Electrical and Electronics Engineering Department separately owns a standard library. This Department Library has several foreign and well-known publishers' books and study materials related to Electrical Engineering along with the textbooks and reference books prescribed by the University of Kerala as part of the Electrical Engineering curriculum. The Department is proud as the Faculty Members and students rely on the library faithfully for their reference, development, and research activities.
+                                    Apart from a highly equipped Central Library, the Electrical and Electronics Engineering Department separately owns a standard library. This Department Library has several foreign and well-known publishers&apos; books and study materials related to Electrical Engineering along with the textbooks and reference books prescribed by the University of Kerala as part of the Electrical Engineering curriculum. The Department is proud as the Faculty Members and students rely on the library faithfully for their reference, development, and research activities.
                                 </p>
                                 <p>
                                     Apart from the above-mentioned texts and references, the Department also takes the initiative in subscribing to various Technical Journals and Magazines. The Faculty Members and students having IEEE Membership help in updating the Department.
                                 </p>
                             </div>
-                            
+
                             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                                 <div className="bg-yellow-50 p-4 rounded-lg border-t-2 border-yellow-900 text-center">
                                     <div className="text-2xl font-bold text-yellow-900 mb-1">500+</div>
@@ -250,16 +250,18 @@ export default function EEEDepartmentFacilities() {
                     {activeTab === 'labs' && (
                         <div>
                             <h3 className="text-xl font-semibold mb-3 text-gray-800">Laboratories</h3>
-                            
+
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {labs.map((lab) => (
                                     <div key={lab.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                                         {lab.image && (
-                                            <div className="h-48 w-full overflow-hidden">
-                                                <img 
-                                                    src={lab.image} 
-                                                    alt={lab.name} 
-                                                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                                            <div className="h-48 w-full relative overflow-hidden">
+                                                <Image
+                                                    src={lab.image}
+                                                    alt={lab.name}
+                                                    fill
+                                                    className="object-cover transition-transform duration-300 hover:scale-105"
+                                                    sizes="(max-width: 768px) 100vw, 50vw"
                                                 />
                                             </div>
                                         )}
