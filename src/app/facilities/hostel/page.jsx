@@ -33,7 +33,7 @@ export default function HostelFacilities() {
             <p>
               Our college provides separate hostel facilities for boys and girls with all necessary amenities. 
               Both hostels feature spacious rooms and mess halls, with dedicated areas for studying. 
-              The men's and women's hostels can each accommodate up to 300 students, creating a vibrant 
+              The men&apos;s and women&apos;s hostels can each accommodate up to 300 students, creating a vibrant 
               residential community on campus.
             </p>
           </div>
@@ -53,7 +53,7 @@ export default function HostelFacilities() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Men's Residence</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Men&apos;s Residence</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-center">
                     <div className="w-2 h-2 rounded-full bg-yellow-600 mr-2"></div>
@@ -87,7 +87,7 @@ export default function HostelFacilities() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Women's Residence</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Women&apos;s Residence</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-center">
                     <div className="w-2 h-2 rounded-full bg-amber-600 mr-2"></div>
