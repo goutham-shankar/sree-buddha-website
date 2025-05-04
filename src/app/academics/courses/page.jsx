@@ -209,7 +209,7 @@ export default function CoursesPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Academic Programs</h1>
-            <p className="text-xl md:text-2xl text-yellow-100">Shaping Tomorrow's Leaders in Engineering and Technology</p>
+            <p className="text-xl md:text-2xl text-yellow-100">Shaping Tomorrow&apos;s Leaders in Engineering and Technology</p>
             <div className="mt-8 flex flex-wrap gap-4 justify-center">
               <button onClick={() => setActiveTab('btech')} className="px-6 py-3 bg-white text-yellow-900 rounded-md font-medium hover:bg-yellow-50 transition-colors">
                 B.Tech Programs

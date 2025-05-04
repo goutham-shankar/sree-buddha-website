@@ -91,7 +91,7 @@ function Principal() {
         className="bg-red-50 border-l-4 border-red-500 p-8 text-center rounded-lg my-8 max-w-2xl mx-auto shadow-lg"
       >
         <h2 className="text-2xl font-bold text-red-700">Oops!</h2>
-        <p className="my-4">We couldn't load the principal's information.</p>
+        <p className="my-4">We couldn't load the principal&apos;s information.</p>
         <p className="text-sm text-gray-600 mb-6">{error}</p>
         <button 
           onClick={() => window.location.reload()} 
@@ -302,7 +302,7 @@ function Principal() {
                 </div>
                 <div>
                   <p className="text-sm text-yellow-900">
-                    Contact the principal's office to schedule an appointment or for any inquiries.
+                    Contact the principal&apos;s office to schedule an appointment or for any inquiries.
                   </p>
                 </div>
               </div>
@@ -451,9 +451,9 @@ function Principal() {
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
           >
-            "Our institution is committed to providing quality education and fostering innovation. 
+            &quot;Our institution is committed to providing quality education and fostering innovation. 
             We strive to create an environment where students can excel academically and develop 
-            as responsible citizens who contribute meaningfully to society."
+            as responsible citizens who contribute meaningfully to society.&quot;
           </motion.p>
           
           <div className="flex justify-end">
@@ -478,7 +478,7 @@ function Principal() {
           <div className="p-8">
             <h3 className="text-2xl font-semibold text-yellow-900 mb-6">Contact the Principal</h3>
             <p className="text-gray-600 mb-6">
-              For appointments, queries, or feedback, please contact the principal's office.
+              For appointments, queries, or feedback, please contact the principal&apos;s office.
             </p>
             
             <div className="space-y-4">

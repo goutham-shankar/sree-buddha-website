@@ -546,7 +546,7 @@ export default function PostGraduatePage() {
                     </svg>
                     <h4 className="font-medium">Demand Draft</h4>
                   </div>
-                  <p className="text-sm text-gray-600">Submit a DD drawn in favor of "Sree Buddha College of Engineering" payable at Alappuzha.</p>
+                  <p className="text-sm text-gray-600">Submit a DD drawn in favor of &quot;Sree Buddha College of Engineering&quot; payable at Alappuzha.</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">

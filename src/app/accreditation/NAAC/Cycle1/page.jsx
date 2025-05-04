@@ -20,7 +20,7 @@ const NAACCycle1Page = () => {
           <div className="bg-white p-6 md:p-8 rounded-lg shadow-md border-l-4 border-yellow-700">
             <p className="mb-6 text-base md:text-lg leading-relaxed text-gray-700">
               The National Assessment & Accreditation Council (NAAC) has granted
-              Accreditation 'B' Grade status to Sree Buddha College of Engineering
+              Accreditation &apos;B&apos; Grade status to Sree Buddha College of Engineering
               Pattoor, Nooranad. It is worthy to note that the SBCE is the first
               College of Engineering under the University of Kerala to get
               accredited by the NAAC so far. In the state level, the College is the
@@ -39,7 +39,7 @@ const NAACCycle1Page = () => {
             
             <p className="text-base md:text-lg leading-relaxed text-gray-700">
               The standing committee meeting of the NAAC Council held on 11th December 2014
-              recommended for Accreditation with Grading 'B' to the Sree Buddha
+              recommended for Accreditation with Grading &apos;B&apos; to the Sree Buddha
               College of Engineering, Pattoor Nooranad which is a reputation to the
               Institution.
             </p>
@@ -78,7 +78,7 @@ const NAACCycle1Page = () => {
             <p className="mb-4 text-gray-700 leading-relaxed">
               The visit of the NAAC Team was to acquaint themselves with the strengths and
               weakness of the college with reference to quality assurance. During
-              the Team's visit, it held discussions with the representatives of
+              the Team&apos;s visit, it held discussions with the representatives of
               the college management, students, alumni and parents.
             </p>
             

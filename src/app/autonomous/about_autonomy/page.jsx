@@ -114,7 +114,7 @@ export default function AboutAutonomy() {
                 backgrounds, particularly those from rural areas. Over the years, the college has progressed to 
                 meet industry needs and maintain academic excellence. Its achievements have been 
                 recognized by various accreditation boards including NBA and NAAC. The institution has 
-                been accredited with an 'A' grade for outstanding infrastructure and operations. Now, we 
+                been accredited with an &apos;A&apos; grade for outstanding infrastructure and operations. Now, we 
                 have achieved yet another milestone: attaining autonomous status from the academic year 
                 2024-25.
               </p>
@@ -180,9 +180,9 @@ export default function AboutAutonomy() {
                 <img src={"/assets/images/accreditation/cycle1.png"} alt="NAAC Accreditation" />
               </div>
               <div className={styles.naacText}>
-                <h2>NAAC 'A' Grade Reaccreditation</h2>
+                <h2>NAAC &apos;A&apos; Grade Reaccreditation</h2>
                 <p>
-                  Adding to its prestige, the college has recently been re-accredited with an 'A' grade by the National Assessment and Accreditation Council (NAAC), recognizing its commitment to high academic standards, strong infrastructure, experienced faculty, and remarkable achievements. The Management's visionary leadership and expertise in academics and administration have played a key role in establishing and upholding the college as a center of excellence with reputed accreditations.
+                  Adding to its prestige, the college has recently been re-accredited with an 'A' grade by the National Assessment and Accreditation Council (NAAC), recognizing its commitment to high academic standards, strong infrastructure, experienced faculty, and remarkable achievements. The Management&apos;s visionary leadership and expertise in academics and administration have played a key role in establishing and upholding the college as a center of excellence with reputed accreditations.
                 </p>
               </div>
             </div>
@@ -193,7 +193,7 @@ export default function AboutAutonomy() {
         <section className={styles.quoteSection}>
           <div className={styles.container}>
             <blockquote>
-              <p>"An idea that is developed and put into action is more important than an idea that exists only as an idea."</p>
+              <p>&quot;An idea that is developed and put into action is more important than an idea that exists only as an idea.&quot;</p>
               <cite>- Buddha</cite>
             </blockquote>
             <p className={styles.conclusion}>
@@ -201,8 +201,7 @@ export default function AboutAutonomy() {
             </p>
           </div>
         </section>
-        
-        {/* Footer */}
+
        
       </div>
     </>
