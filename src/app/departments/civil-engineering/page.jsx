@@ -131,14 +131,14 @@ export default function ComputerScienceDepartment() {
             <div className="highlights-card">
               <h3 className="highlight-category">Student Association & Leadership Initiatives</h3>
               <ul>
-                <li>The student association of the Department "CASTELLOS" has proved to be a platform for the students to interact with eminent personalities in the field and to take leadership in conducting various programmes.</li>
+                <li>The student association of the Department &quot;CASTELLOS&quot; has proved to be a platform for the students to interact with eminent personalities in the field and to take leadership in conducting various programmes.</li>
               </ul>
             </div>
               
             <div className="highlights-card">
               <h3 className="highlight-category">Professional Memberships & Student Chapters</h3>
               <ul>
-                <li>The department has a lifetime membership of The Institution of Engineers, India (Students' chapter, Civil division) and active student chapters of American Society of Civil Engineers (ASCE Student chapter, SBCE) & Indian Concrete Institute (ICI student Chapter).</li>
+                <li>The department has a lifetime membership of The Institution of Engineers, India (Students&apos; chapter, Civil division) and active student chapters of American Society of Civil Engineers (ASCE Student chapter, SBCE) & Indian Concrete Institute (ICI student Chapter).</li>
               </ul>
             </div>
           </div>
