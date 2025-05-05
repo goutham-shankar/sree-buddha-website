@@ -363,7 +363,7 @@ export default function CivilDepartmentFacilities() {
               
               <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
                 <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">
-                  Apart from a highly equipped Central Library, the Civil Engineering Department separately owns a standard library. This Department Library has several foreign and well-known publishers' books and study materials related to Civil Engineering along with the textbooks and reference books prescribed by the University of Kerala as part of the Civil Engineering curriculum.
+                  Apart from a highly equipped Central Library, the Civil Engineering Department separately owns a standard library. This Department Library has several foreign and well-known publishers&apos; books and study materials related to Civil Engineering along with the textbooks and reference books prescribed by the University of Kerala as part of the Civil Engineering curriculum.
                 </p>
                 
                 <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6">
