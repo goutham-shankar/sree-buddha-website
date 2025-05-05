@@ -28,8 +28,6 @@ export default function AIDepartmentFaculty() {
     return (
         <div className={`cs_department_faculty ${poppins.className}`}>
 
-            
-
             <table className="faculty_table_desktop">
                 <tbody>
                     <tr className='headrow'>
@@ -43,7 +41,13 @@ export default function AIDepartmentFaculty() {
                     {faculty.map((singleFaculty, index) => (
                         <tr key={index}>
                             <td>
-                                <img src={`/assets/images/departments/faculty/ai/${singleFaculty[0]}`} alt={singleFaculty[1]} />
+                                <div className="faculty_img_container">
+                                    <img 
+                                        src={`/assets/images/departments/faculty/ai/${singleFaculty[0]}`} 
+                                        alt={singleFaculty[1]} 
+                                        className="faculty_img"
+                                    />
+                                </div>
                             </td>
                             <td>{singleFaculty[1]}</td>
                             <td>{singleFaculty[2]}</td>
@@ -58,20 +62,49 @@ export default function AIDepartmentFaculty() {
                 {faculty.map((singleFaculty, index) => (
                     <div className="single_faculty" key={index}>
                         <div className="img_section">
-                            <img src={`/assets/images/departments/faculty/ai/${singleFaculty[0]}`} alt={singleFaculty[1]} />
+                            <div className="faculty_img_container">
+                                <img 
+                                    src={`/assets/images/departments/faculty/ai/${singleFaculty[0]}`} 
+                                    alt={singleFaculty[1]} 
+                                    className="faculty_img"
+                                />
+                            </div>
                         </div>
 
                         <div className="details_section">
                             <h3 className="faculty_name">{singleFaculty[1]}</h3>
-                            <h4 className="faculty_qualification">{singleFaculty[2]}</h4>
-                            <h4 className="faculty_designation">{singleFaculty[3]}</h4>
-                            <p className="faculty_specialization">{singleFaculty[4]}</p>
+                            <h3 className="faculty_qualification">{singleFaculty[2]}</h3>
+                            <h3 className="faculty_designation">{singleFaculty[3]}</h3>
+                            <h3 className="faculty_specialization">{singleFaculty[4]}</h3>
                         </div>
                     </div>
                 ))}
             </div>
 
             {/* <a href="/ai/faculty/profiles" className="faculty_profile">View Detailed Profiles</a> */}
+
+            <style jsx>{`
+                .faculty_img_container {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin: 0 auto;
+                }
+                
+                .faculty_img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                
+                @media (max-width: 768px) {
+                    .faculty_img_container {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            `}</style>
         </div>
     )
 }

@@ -78,8 +78,8 @@ export default function ComputerScienceDepartmentHod() {
     name: 'Prof. Pavitha P P',
     title: 'HOD - Electronics and Computer Engineering Department',
     imagePath: '/assets/images/departments/hod_ece.jpg',
-    email: 'hod.ece@sbce.ac.in',
-    phone: '+91 85903 32548'
+    email: 'ecsbce@gmail.com',
+    phone: '8075376012'
   };
 
   const tabData = {
