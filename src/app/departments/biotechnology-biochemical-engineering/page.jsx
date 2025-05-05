@@ -53,7 +53,7 @@ export default function ComputerScienceDepartment() {
   return (
     <div className="cs-dept-container">
       <header className="cs-dept-header">
-        <h1>Department of Biotechnology</h1>
+        <h1>Department of Biotechnology and Biochemical Engineering</h1>
         <p>Advancing Science • Transforming Lives • Shaping the Future</p>
       </header>
 

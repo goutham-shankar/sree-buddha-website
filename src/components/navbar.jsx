@@ -72,8 +72,21 @@ export default function Navbar() {
       name: "Departments",
       links: [
         {
+          name: "Basic Science and Humanities",
+          link: "/departments/mathematics-and-basic-sciences",
+        },
+        {
+          name: "Biotechnology and Biochemical Engineering",
+          link: "/departments/biotechnology-biochemical-engineering",
+        },
+        { name: "Civil Engineering", link: "/departments/civil-engineering" },
+        {
           name: "Computer Science and Engineering",
           link: "/departments/computer-science-engineering",
+        },
+        {
+          name: "Computer Science and Engineering (Artificial Intelligence & Machine learning)",
+          link: "/departments/artificial-intelligence-machine-learning",
         },
         {
           name: "Electrical and Electronics Engineering",
@@ -83,25 +96,12 @@ export default function Navbar() {
           name: "Electronics and Communication Engineering",
           link: "/departments/electronics-communication-engineering",
         },
-        { name: "Mechanical Engineering", link: "/departments/mechanical-engineering" },
-        {
-          name: "Computer Science and Engineering (Artificial Intelligence & Machine learning)",
-          link: "/departments/artificial-intelligence-machine-learning",
-        },
         {
           name: "Electronics and Computer Engineering",
           link: "/departments/electronics-computer-engineering",
         },
-        { name: "Civil Engineering", link: "/departments/civil-engineering" },
-        {
-          name: "Basic Science and Humanities",
-          link: "/departments/mathematics-and-basic-sciences",
-        },
         { name: "Food Technology", link: "/departments/food-technology" },
-        {
-          name: "Biotechnology and Biochemical Engineering",
-          link: "/departments/biotechnology-biochemical-engineering",
-        },
+        { name: "Mechanical Engineering", link: "/departments/mechanical-engineering" },
       ],
     },
     {

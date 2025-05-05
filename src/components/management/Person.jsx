@@ -7,7 +7,7 @@ const Person = ({ name, position, content, pic }) => {
         <div className="person-head">
           <h2 className="name">{name}</h2>
           <h4 className="position">{position}</h4>
-          <p className="captionline">Sree Buddha Group of Institution </p>
+          <p className="captionline">Sree Buddha Group of Institutions </p>
           <p className="content">{content}</p>
           
         </div>
