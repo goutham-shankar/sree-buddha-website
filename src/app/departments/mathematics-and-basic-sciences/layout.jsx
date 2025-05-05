@@ -13,7 +13,7 @@ export const metadata = {
 export default function ComputerScienceLayout({ children }) {
 
     const links =  [
-        ["about" , "/"] , 
+        ["About" , "/"] , 
         ["Vision & Mission", "vision-mission"],
         ["HOD", "hod"],
         ["Faculty", "faculty"],

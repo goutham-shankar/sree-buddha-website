@@ -81,11 +81,10 @@ export default function ComputerScienceDepartment() {
           <h2 className="cs-dept-section-title">Department Profile</h2>
           <div className="cs-dept-profile-content">
             <div className="cs-dept-profile-text">
-              <p>The Computer Science Department at our college is dedicated to providing students with a comprehensive education in computer science theory and practice. Our curriculum is designed to keep pace with rapidly evolving technology, preparing students for successful careers in the tech industry.</p>
+              <p>About
+              The department with its vibrant and dynamic faculty under the strong leadership of R.Pradeep Kumar, HOD of Mathematics & Basic Sciences serves as one of the pioneering departments of the college. The department has well experienced faculties with appropriate qualifications from prestigious institutions. The faculty members regularly update their skills by attending refresher courses, seminars, workshops etc.The department offers subjects such as Mathematics, Physics and Chemistry strive to equip students with relevant skills required to excel in engineering.</p>
               <br />
-              <p>The department of Computer Science and Engineering was started in Sree Buddha College of Engineering in the year 2002. The department currently offers the programmes B.Tech. in computer science and Engineering with sanctioned intake of 180, B.Tech Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning, sanctioned intake 60, M.Tech. in Computer Science and Engineering, and Ph.D. programmes. The department plays a crucial role in equipping students with current and relevant knowledge in computer Science and Engineering through various opportunities, including internships, hands-on training, bridge courses, add-on courses, and workshops to prepare them to meet the demands of the industry. In addition to promoting academic excellence, the department frequently organizes a variety of activities, including hackathons, faculty development programs, industry interactions, and social events which provides a platform for students and faculty to engage with distinguished researchers and explore emerging trends in computer science. The department is accredited by NBA since November 2019. In alignment with outcome-based learning and the National Educational Policy, the department establishes high standards for its curriculum and industry engagement.</p>
-              <br />
-              <p>With state-of-the-art laboratories, experienced faculty members, and strong industry connections, we offer an environment that fosters innovation, critical thinking, and practical problem-solving skills. Our graduates are highly sought after by leading tech companies and research institutions.</p>
+              
             </div>
             {/* <div className="cs-dept-profile-images">
               {buildingImages.map((img, index) => (
@@ -106,36 +105,38 @@ export default function ComputerScienceDepartment() {
           <h2 className="cs-dept-section-title">Department Highlights</h2>
           <div className="cs-dept-highlights-content">
             <div className="highlights-card">
-              <h3 className="highlight-category">Academic Excellence & Research</h3>
+              <h3 className="highlight-category">Academic Excellence & Faculty</h3>
               <ul>
-                <li>Strong faculty expertise in core computing areas</li>
-                <li>Cutting-edge research in emerging technologies; like Artificial Intelligence, Internet of Things, Machine Learning and Deep Learning</li>
+                <li>Highly qualified faculty from prestigious institutions with diverse specializations</li>
+                <li>Regular faculty development programs and continuous professional upgrading</li>
+                <li>Strong emphasis on foundational concepts critical for engineering education</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">Industry Collaboration & Innovation</h3>
+              <h3 className="highlight-category">Teaching & Learning Methodologies</h3>
               <ul>
-                <li>Strong partnerships with tech companies for internships, projects, and placements</li>
-                <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
+                <li>Interactive teaching with modern pedagogical approaches and digital tools</li>
+                <li>Focus on applied learning that connects theory to engineering applications</li>
+                <li>Personalized mentoring and remedial coaching for struggling students</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">State-of-the-Art Infrastructure</h3>
+              <h3 className="highlight-category">Laboratory Infrastructure</h3>
               <ul>
-                <li>Well-equipped labs for AI & ML, Deep Learning and IoT</li>
-                <li>High-performance computing clusters for research</li>
-                <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
+                <li>Well-equipped Physics labs with modern experimental setups</li>
+                <li>State-of-the-art Chemistry labs with safety protocols and advanced instruments</li>
+                <li>Computing facilities for mathematical modeling and simulation</li>
               </ul>
             </div>
               
             <div className="highlights-card">
-              <h3 className="highlight-category">Skill Development & Student Success</h3>
+              <h3 className="highlight-category">Research & Beyond Curriculum</h3>
               <ul>
-                <li>Focus on hands-on learning, hackathons, and coding competitions</li>
-                <li>Specialization tracks in Data Science, Artificial Intelligence, Machine Learning and IoT</li>
-                <li>Strong placement records with top global recruiters</li>
+                <li>Research initiatives in applied mathematics, materials science, and technical communication</li>
+                <li>Interdisciplinary approach connecting basic sciences to engineering challenges</li>
+                <li>Special focus on developing soft skills, communication abilities, and professional ethics</li>
               </ul>
             </div>
           </div>

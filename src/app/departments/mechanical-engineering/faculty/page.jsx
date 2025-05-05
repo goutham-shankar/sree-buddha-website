@@ -67,7 +67,15 @@ export default function ComputerScienceDepartmentFaculty() {
 
                                 <tr key = {index}>
 
-                                    <td> <img src={`/assets/images/departments/faculty/mech/${singleFaculty[0]}`} alt="image" /> </td>
+                                    <td> 
+                                        <div className="faculty_img_container">
+                                            <img 
+                                                src={`/assets/images/departments/faculty/mech/${singleFaculty[0]}`} 
+                                                alt="image" 
+                                                className="faculty_img"
+                                            /> 
+                                        </div>
+                                    </td>
                                     {/* <td> <img src= {image.src} alt="image" /> </td> */}
                                     {/* <td> <img src= {"/assets/images/departments/faculty/cs/cs_f1.jpg"} alt="image" /> </td> */}
                                     <td>{singleFaculty[1]}</td>
@@ -102,7 +110,13 @@ export default function ComputerScienceDepartmentFaculty() {
                             
 
                                 <div className="img_section">
-                                    <img src={`/assets/images/departments/faculty/eee/${singleFaculty[0]}`} alt="" />
+                                    <div className="faculty_img_container">
+                                        <img 
+                                            src={`/assets/images/departments/faculty/mech/${singleFaculty[0]}`} 
+                                            alt="" 
+                                            className="faculty_img"
+                                        />
+                                    </div>
                                 </div>
 
                                 <div className="details_section">
@@ -127,6 +141,28 @@ export default function ComputerScienceDepartmentFaculty() {
 
             {/* <a href = "" className="faculty_profile">Faculty Profile</a> */}
 
+            <style jsx>{`
+                .faculty_img_container {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin: 0 auto;
+                }
+                
+                .faculty_img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                
+                @media (max-width: 768px) {
+                    .faculty_img_container {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            `}</style>
         </div>
     )
 }

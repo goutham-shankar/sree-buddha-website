@@ -83,30 +83,20 @@ export default function ComputerScienceDepartment() {
           <h2 className="cs-dept-section-title">Department Profile</h2>
           <div className="cs-dept-profile-content">
             <div className="cs-dept-profile-text">
-                        <p>The department of Civil Engineering was started in Sree Buddha College of Engineering in the
-                            year 2008 with a sanctioned student intake of 60. The department also offers a PG programme in
-                            Structural Engineering with a sanctioned student intake of 24 in the year 2013. The department
-                            provides quality instruction and teaching to both UG and PG levels and technical advisory
-                            support for research and development activities covering the areas of Building Materials and
-                            Construction, Surveying, Hydraulics Engineering, Concrete Technology, Structural Engineering,
-                            Transportation Engineering, Water Resources Engineering, Geotechnical Engineering and
-                            Environmental Engineering. This department is accredited by NBA since November 2019.
-                            Following an outcome based learning and National Educational Policy, the department sets a
-                            standard in curriculum and industrial interactions. </p>
-                        
+              <p>The department of Civil Engineering was started in Sree Buddha College of Engineering in the
+                year 2008 with a sanctioned student intake of 60. The department also offers a PG programme in
+                Structural Engineering with a sanctioned student intake of 24 in the year 2013.</p>
+                            
+              <p>The department provides quality instruction and teaching to both UG and PG levels and technical advisory
+                support for research and development activities covering the areas of Building Materials and
+                Construction, Surveying, Hydraulics Engineering, Concrete Technology, Structural Engineering,
+                Transportation Engineering, Water Resources Engineering, Geotechnical Engineering and
+                Environmental Engineering.</p>
+                            
+              <p>This department is accredited by NBA since November 2019.
+                Following an outcome based learning and National Educational Policy, the department sets a
+                standard in curriculum and industrial interactions.</p>
             </div>
-            {/* <div className="cs-dept-profile-images">
-              {buildingImages.map((img, index) => (
-                <div key={index} className="cs-dept-building-image">
-                  <Image 
-                    src={img} 
-                    alt={`Computer Science Department Building ${index + 1}`}
-                    width={400}
-                    height={300}
-                  />
-                </div>
-              ))}
-            </div> */}
           </div>
         </section>
         
@@ -123,8 +113,8 @@ export default function ComputerScienceDepartment() {
             <div className="highlights-card">
               <h3 className="highlight-category">Industry Collaborations & Consultancy Services</h3>
               <ul>
-                            <li>The department undertakes consultancy works of which the major clients are KSEB, PWD, Kerala Housing Board, LSGD, Southern Railway, RAMCO cements, ULTRATECH cements, Kerala Water Authority, Kairali Cooperative Society, Harbour Engineering Society, Govt. Contractors work, Kerala Electrical & Allied Engineering CO. Ltd., Private Organization Work.</li>
-                            <li>For fostering advanced research in recent advances in Civil Engineering, the department has entered into an MOU with Indian Institute of Infrastructure & Construction (IIIC), Habelete Learning Solutions, National Highway Authority of India (NHAI) & Geostructurals Pvt. Ltd.</li>
+                <li>The department undertakes consultancy works of which the major clients are KSEB, PWD, Kerala Housing Board, LSGD, Southern Railway, RAMCO cements, ULTRATECH cements, Kerala Water Authority, Kairali Cooperative Society, Harbour Engineering Society, Govt. Contractors work, Kerala Electrical & Allied Engineering CO. Ltd., Private Organization Work.</li>
+                <li>For fostering advanced research in recent advances in Civil Engineering, the department has entered into an MOU with Indian Institute of Infrastructure & Construction (IIIC), Habelete Learning Solutions, National Highway Authority of India (NHAI) & Geostructurals Pvt. Ltd.</li>
               </ul>
             </div>
               
@@ -145,48 +135,48 @@ export default function ComputerScienceDepartment() {
         </section>
         
         <section className="container mx-auto px-4 py-10">
-                <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 text-yellow-900 mb-6">
-                  Department Gallery
-                </h2>
+          <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 text-yellow-900 mb-6">
+            Department Gallery
+          </h2>
         
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {/* Conditionally render images */}
-                  {images.length > 0 ? (
-                    images.map((imgSrc, index) => (
-                      <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                        <Image
-                          src={imgSrc}
-                          alt={`CE Department Image ${index + 1}`}
-                          width={400}
-                          height={300}
-                          className="w-full h-48 object-cover"
-                        />
-                      </div>
-                    ))
-                  ) : (
-                    <>
-                      <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                        <Image
-                          src="/images/csimg2.jpg"
-                          alt="CS Department Building Front View"
-                          width={400}
-                          height={300}
-                          className="w-full h-48 object-cover"
-                        />
-                      </div>
-                      <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                        <Image
-                          src="/images/csimg1.jpg"
-                          alt="CS Department Seminar Hall"
-                          width={400}
-                          height={300}
-                          className="w-full h-48 object-cover"
-                        />
-                      </div>
-                    </>
-                  )}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {/* Conditionally render images */}
+            {images.length > 0 ? (
+              images.map((imgSrc, index) => (
+                <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                  <Image
+                    src={imgSrc}
+                    alt={`CE Department Image ${index + 1}`}
+                    width={400}
+                    height={300}
+                    className="w-full h-48 object-cover"
+                  />
                 </div>
-              </section>
+              ))
+            ) : (
+              <>
+                <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                  <Image
+                    src="/images/csimg2.jpg"
+                    alt="CS Department Building Front View"
+                    width={400}
+                    height={300}
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                  <Image
+                    src="/images/csimg1.jpg"
+                    alt="CS Department Seminar Hall"
+                    width={400}
+                    height={300}
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+              </>
+            )}
+          </div>
+        </section>
         
         <style jsx>{`
           .cs-dept-container {
@@ -273,6 +263,10 @@ export default function ComputerScienceDepartment() {
           
           .cs-dept-profile-text {
             font-size: 1.1rem;
+          }
+          
+          .cs-dept-profile-text p {
+            margin-bottom: 15px;
           }
           
           /* Vertical building images */

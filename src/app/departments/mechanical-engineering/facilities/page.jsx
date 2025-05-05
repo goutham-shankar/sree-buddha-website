@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { Poppins } from 'next/font/google';
 
-
 // Initialize Poppins font
 const poppins = Poppins({
     weight: ['400', '500', '600', '700'],
@@ -212,35 +211,35 @@ export default function MechanicalEngineeringDepartmentFacilities() {
 
   return (
     <div className={`me-department-facilities ${poppins.className}`}>
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <header className="mb-10 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-yellow-900 mb-2">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
+        <header className="mb-6 sm:mb-10 text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-900 mb-2">
             Department of Mechanical Engineering
           </h1>
-          <div className="w-24 h-1 bg-yellow-900 mx-auto mb-4"></div>
-          <h2 className="text-2xl font-semibold text-gray-700">Facilities</h2>
+          <div className="w-20 sm:w-24 h-1 bg-yellow-900 mx-auto mb-3 sm:mb-4"></div>
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-700">Facilities</h2>
         </header>
 
-        {/* Tab Navigation */}
-        <div className="mb-8 overflow-x-auto">
+        {/* Tab Navigation - Enhanced for better small screen display */}
+        <div className="mb-6 sm:mb-8 overflow-x-auto scrollbar-hide">
           <div className="flex border-b border-gray-200 min-w-max">
             <button
-              className={`py-2 px-4 font-medium text-sm ${activeTab === 'overview' ? 'text-yellow-900 border-b-2 border-yellow-900' : 'text-gray-500 hover:text-yellow-800'}`}
+              className={`py-2 px-3 sm:px-4 font-medium text-xs sm:text-sm ${activeTab === 'overview' ? 'text-yellow-900 border-b-2 border-yellow-900' : 'text-gray-500 hover:text-yellow-800'}`}
               onClick={() => setActiveTab('overview')}
             >
               Overview
             </button>
             <button
-              className={`py-2 px-4 font-medium text-sm ${activeTab === 'labs' ? 'text-yellow-900 border-b-2 border-yellow-900' : 'text-gray-500 hover:text-yellow-800'}`}
+              className={`py-2 px-3 sm:px-4 font-medium text-xs sm:text-sm ${activeTab === 'labs' ? 'text-yellow-900 border-b-2 border-yellow-900' : 'text-gray-500 hover:text-yellow-800'}`}
               onClick={() => setActiveTab('labs')}
             >
-              Laboratory Facilities
+              Labs
             </button>
             <button
-              className={`py-2 px-4 font-medium text-sm ${activeTab === 'equipment' ? 'text-yellow-900 border-b-2 border-yellow-900' : 'text-gray-500 hover:text-yellow-800'}`}
+              className={`py-2 px-3 sm:px-4 font-medium text-xs sm:text-sm ${activeTab === 'equipment' ? 'text-yellow-900 border-b-2 border-yellow-900' : 'text-gray-500 hover:text-yellow-800'}`}
               onClick={() => setActiveTab('equipment')}
             >
-              Equipment & Experiments
+              Equipment
             </button>
           </div>
         </div>
@@ -249,50 +248,48 @@ export default function MechanicalEngineeringDepartmentFacilities() {
         <div className="tab-content">
           {/* Overview Tab */}
           {activeTab === 'overview' && (
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold mb-4 text-gray-800">Department Overview</h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
+              <div className="mb-6 sm:mb-8">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-800">Department Overview</h3>
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">
                   The Department of Mechanical Engineering is equipped with state-of-the-art laboratories and facilities to provide students with hands-on experience in various aspects of mechanical engineering. Our labs are designed to support both the academic curriculum and research activities, giving students practical exposure to engineering principles and manufacturing processes.
                 </p>
                 
-                <div className="bg-gradient-to-r from-yellow-50 to-white p-5 rounded-lg border-l-4 border-yellow-900 mb-6">
-                  <h4 className="font-semibold text-gray-800 mb-2">World-Class Infrastructure</h4>
-                  <p className="text-gray-700">
+                <div className="bg-gradient-to-r from-yellow-50 to-white p-4 sm:p-5 rounded-lg border-l-4 border-yellow-900 mb-4 sm:mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-1 sm:mb-2 text-sm sm:text-base">World-Class Infrastructure</h4>
+                  <p className="text-xs sm:text-sm text-gray-700">
                     The department boasts modern labs for manufacturing technology, fluid mechanics, thermal engineering, CAD/CAM, and basic engineering workshops. These facilities are regularly updated with the latest equipment and software to ensure students gain relevant industry experience.
                   </p>
                 </div>
               </div>
 
-             
-
-              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-yellow-50 p-4 rounded-lg text-center">
+              <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+                <div className="bg-yellow-50 p-3 sm:p-4 rounded-lg text-center">
                   <div className="mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 mx-auto text-yellow-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 sm:w-8 sm:h-8 mx-auto text-yellow-500">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
                     </svg>
                   </div>
-                  <div className="text-lg font-semibold text-gray-800">8+</div>
-                  <div className="text-sm text-gray-600">Advanced Labs</div>
+                  <div className="text-base sm:text-lg font-semibold text-gray-800">8+</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Advanced Labs</div>
                 </div>
-                <div className="bg-green-50 p-4 rounded-lg text-center">
+                <div className="bg-green-50 p-3 sm:p-4 rounded-lg text-center">
                   <div className="mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 mx-auto text-green-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 sm:w-8 sm:h-8 mx-auto text-green-500">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
                     </svg>
                   </div>
-                  <div className="text-lg font-semibold text-gray-800">85+</div>
-                  <div className="text-sm text-gray-600">Computer Systems</div>
+                  <div className="text-base sm:text-lg font-semibold text-gray-800">85+</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Computer Systems</div>
                 </div>
-                <div className="bg-purple-50 p-4 rounded-lg text-center">
+                <div className="bg-purple-50 p-3 sm:p-4 rounded-lg text-center">
                   <div className="mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 mx-auto text-purple-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 sm:w-8 sm:h-8 mx-auto text-purple-500">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
                     </svg>
                   </div>
-                  <div className="text-lg font-semibold text-gray-800">10+</div>
-                  <div className="text-sm text-gray-600">Advanced Software Tools</div>
+                  <div className="text-base sm:text-lg font-semibold text-gray-800">10+</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Advanced Software Tools</div>
                 </div>
               </div>
             </div>
@@ -301,54 +298,54 @@ export default function MechanicalEngineeringDepartmentFacilities() {
           {/* Labs Tab */}
           {activeTab === 'labs' && (
             <div>
-              <h3 className="text-xl font-semibold mb-5 text-gray-800">Laboratory Facilities</h3>
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-5 text-gray-800">Laboratory Facilities</h3>
               
-              <div className="grid grid-cols-1 gap-8">
+              <div className="grid grid-cols-1 gap-5 sm:gap-8">
                 {labs.map((lab, index) => (
                   <div key={`lab-${index}`} className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div className="md:flex">
-                      <div className="md:w-2/5 h-64 md:h-auto overflow-hidden bg-gray-100 flex items-center justify-center">
+                    <div className="md:flex flex-col md:flex-row">
+                      <div className="md:w-2/5 h-36 sm:h-48 md:h-auto overflow-hidden bg-gray-100 flex items-center justify-center">
                         {/* Placeholder if no images */}
-                        <div className="text-5xl text-gray-300">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-16 h-16">
+                        <div className="text-4xl sm:text-5xl text-gray-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-12 h-12 sm:w-16 sm:h-16">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
                           </svg>
                         </div>
                       </div>
-                      <div className="p-6 md:w-3/5">
-                        <div className="flex flex-wrap items-center justify-between mb-3">
-                          <h4 className="text-xl font-semibold text-gray-800">{lab.name}</h4>
-                          <span className="text-xs font-medium bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
+                      <div className="p-4 sm:p-6 md:w-3/5">
+                        <div className="flex flex-wrap items-center justify-between mb-2 sm:mb-3">
+                          <h4 className="text-base sm:text-xl font-semibold text-gray-800 mr-2">{lab.name}</h4>
+                          <span className="text-xs font-medium bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded mt-1 sm:mt-0">
                             {lab.category}
                           </span>
                         </div>
-                        <p className="text-gray-700 mb-4">{lab.description}</p>
+                        <p className="text-xs sm:text-sm text-gray-700 mb-3 sm:mb-4 line-clamp-3">{lab.description}</p>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-4">
-                          <div className="bg-gray-50 p-3 rounded">
-                            <div className="font-semibold text-gray-700 mb-1">Lab in Charge</div>
-                            <div className="text-gray-600">{lab.inCharge}</div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm mb-3 sm:mb-4">
+                          <div className="bg-gray-50 p-2 sm:p-3 rounded">
+                            <div className="font-semibold text-gray-700 mb-0.5 sm:mb-1">Lab in Charge</div>
+                            <div className="text-gray-600 text-xs sm:text-sm">{lab.inCharge}</div>
                           </div>
-                          <div className="bg-gray-50 p-3 rounded">
-                            <div className="font-semibold text-gray-700 mb-1">Technical Staff</div>
-                            <div className="text-gray-600">{lab.staff}</div>
+                          <div className="bg-gray-50 p-2 sm:p-3 rounded">
+                            <div className="font-semibold text-gray-700 mb-0.5 sm:mb-1">Technical Staff</div>
+                            <div className="text-gray-600 text-xs sm:text-sm">{lab.staff}</div>
                           </div>
                         </div>
                         
                         <button 
                           onClick={() => toggleExperiments(lab.id)}
-                          className="flex items-center justify-between w-full text-sm font-medium text-yellow-800 bg-yellow-50 hover:bg-yellow-100 px-4 py-2 rounded transition-colors"
+                          className="flex items-center justify-between w-full text-xs sm:text-sm font-medium text-yellow-800 bg-yellow-50 hover:bg-yellow-100 px-3 sm:px-4 py-1.5 sm:py-2 rounded transition-colors"
                         >
-                          <span>View Experiments List ({lab.experiments.length})</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-4 h-4 transition-transform ${expandedLab === lab.id ? 'rotate-180' : ''}`}>
+                          <span>View Experiments ({lab.experiments.length})</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform ${expandedLab === lab.id ? 'rotate-180' : ''}`}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                           </svg>
                         </button>
                         
                         {expandedLab === lab.id && (
-                          <div className="mt-4 bg-gray-50 p-4 rounded-lg">
-                            <h5 className="font-semibold text-gray-700 mb-2">Experiments</h5>
-                            <ul className="list-disc pl-5 space-y-2 text-gray-600">
+                          <div className="mt-3 sm:mt-4 bg-gray-50 p-3 sm:p-4 rounded-lg">
+                            <h5 className="font-semibold text-gray-700 mb-1.5 sm:mb-2 text-xs sm:text-sm">Experiments</h5>
+                            <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-600">
                               {lab.experiments.map((experiment, idx) => (
                                 <li key={`exp-${idx}`}>{experiment}</li>
                               ))}
@@ -361,9 +358,9 @@ export default function MechanicalEngineeringDepartmentFacilities() {
                 ))}
               </div>
               
-              <div className="mt-8 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-900">
-                <p className="text-gray-700 font-medium mb-1">Note:</p>
-                <p className="text-gray-700">
+              <div className="mt-6 sm:mt-8 p-3 sm:p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-900">
+                <p className="text-xs sm:text-sm text-gray-700 font-medium mb-1">Note:</p>
+                <p className="text-xs sm:text-sm text-gray-700">
                   All laboratories are well maintained and regularly updated with new equipment to ensure the best learning experience. 
                   Students are encouraged to utilize these facilities for their academic projects and research work.
                 </p>
@@ -374,82 +371,82 @@ export default function MechanicalEngineeringDepartmentFacilities() {
           {/* Equipment & Experiments Tab */}
           {activeTab === 'equipment' && (
             <div>
-              <h3 className="text-xl font-semibold mb-5 text-gray-800">Laboratory Equipment & Experiments</h3>
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-5 text-gray-800">Laboratory Equipment & Experiments</h3>
               
-              <div className="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="mb-6 sm:mb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
                 {Object.entries(equipmentCounts).map(([category, count]) => (
-                  <div key={`equip-${category}`} className="bg-white rounded-lg shadow-md p-4 text-center">
+                  <div key={`equip-${category}`} className="bg-white rounded-lg shadow-md p-3 sm:p-4 text-center">
                     <div className="mb-2">
-                      <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-yellow-50 text-yellow-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                      <div className="inline-flex h-10 w-10 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-yellow-50 text-yellow-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 sm:w-8 sm:h-8">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
                         </svg>
                       </div>
                     </div>
-                    <h4 className="text-lg font-semibold text-gray-800 mb-1">{category}</h4>
-                    <div className="text-3xl font-bold text-yellow-900 mb-1">{count}+</div>
-                    <p className="text-sm text-gray-600">Equipment Units</p>
+                    <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1">{category}</h4>
+                    <div className="text-xl sm:text-3xl font-bold text-yellow-900 mb-1">{count}+</div>
+                    <p className="text-xs sm:text-sm text-gray-600">Equipment Units</p>
                   </div>
                 ))}
               </div>
               
-              <div className="mt-8">
-                <h4 className="text-lg font-semibold mb-4 text-gray-800">Featured Lab Equipment</h4>
+              <div className="mt-6 sm:mt-8">
+                <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-gray-800">Featured Lab Equipment</h4>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div className="p-5">
-                      <h5 className="font-semibold text-gray-800 mb-2">CNC Production & Training Units</h5>
-                      <p className="text-gray-600 mb-4">
+                    <div className="p-3 sm:p-5">
+                      <h5 className="font-semibold text-gray-800 mb-1.5 sm:mb-2 text-sm sm:text-base">CNC Production & Training Units</h5>
+                      <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
                         Our CIM lab is equipped with CNC production Lathe, CNC trainer Lathe, and CNC Milling machines that allow students to learn programming and operation of modern manufacturing systems.
                       </p>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="text-xs bg-yellow-50 text-blue-700 px-2 py-1 rounded">CNC Lathe</span>
-                        <span className="text-xs bg-yellow-50 text-blue-700 px-2 py-1 rounded">CNC Milling</span>
-                        <span className="text-xs bg-yellow-50 text-blue-700 px-2 py-1 rounded">CADEM Software</span>
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                        <span className="text-[10px] sm:text-xs bg-yellow-50 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">CNC Lathe</span>
+                        <span className="text-[10px] sm:text-xs bg-yellow-50 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">CNC Milling</span>
+                        <span className="text-[10px] sm:text-xs bg-yellow-50 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">CADEM Software</span>
                       </div>
                     </div>
                   </div>
                   
                   <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div className="p-5">
-                      <h5 className="font-semibold text-gray-800 mb-2">CAD/CAM Software Suite</h5>
-                      <p className="text-gray-600 mb-4">
+                    <div className="p-3 sm:p-5">
+                      <h5 className="font-semibold text-gray-800 mb-1.5 sm:mb-2 text-sm sm:text-base">CAD/CAM Software Suite</h5>
+                      <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
                         Our CAD lab features a comprehensive range of industry-standard software including AutoCAD, SolidWorks, Pro/Engineer, ANSYS, and CATIA for design, analysis and simulation.
                       </p>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="text-xs bg-yellow-50 text-blue-700 px-2 py-1 rounded">AutoCAD</span>
-                        <span className="text-xs bg-yellow-50 text-blue-700 px-2 py-1 rounded">SolidWorks</span>
-                        <span className="text-xs bg-yellow-50 text-blue-700 px-2 py-1 rounded">ANSYS</span>
-                        <span className="text-xs bg-yellow-50 text-blue-700 px-2 py-1 rounded">CATIA</span>
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                        <span className="text-[10px] sm:text-xs bg-yellow-50 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">AutoCAD</span>
+                        <span className="text-[10px] sm:text-xs bg-yellow-50 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">SolidWorks</span>
+                        <span className="text-[10px] sm:text-xs bg-yellow-50 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">ANSYS</span>
+                        <span className="text-[10px] sm:text-xs bg-yellow-50 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">CATIA</span>
                       </div>
                     </div>
                   </div>
                   
                   <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div className="p-5">
-                      <h5 className="font-semibold text-gray-800 mb-2">Fluid Mechanics & Turbines</h5>
-                      <p className="text-gray-600 mb-4">
+                    <div className="p-3 sm:p-5">
+                      <h5 className="font-semibold text-gray-800 mb-1.5 sm:mb-2 text-sm sm:text-base">Fluid Mechanics & Turbines</h5>
+                      <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
                         Our Fluid Mechanics lab includes Pelton Wheel, Francis Turbine, and various flow measurement apparatus with calibrated gauges for precise experimentation.
                       </p>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="text-xs bg-yellow-50 text-blue-700 px-2 py-1 rounded">Pelton Wheel</span>
-                        <span className="text-xs bg-yellow-50 text-blue-700 px-2 py-1 rounded">Francis Turbine</span>
-                        <span className="text-xs bg-yellow-50 text-blue-700 px-2 py-1 rounded">Venturimeter</span>
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                        <span className="text-[10px] sm:text-xs bg-yellow-50 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">Pelton Wheel</span>
+                        <span className="text-[10px] sm:text-xs bg-yellow-50 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">Francis Turbine</span>
+                        <span className="text-[10px] sm:text-xs bg-yellow-50 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">Venturimeter</span>
                       </div>
                     </div>
                   </div>
                   
                   <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div className="p-5">
-                      <h5 className="font-semibold text-gray-800 mb-2">IC Engine Test Facilities</h5>
-                      <p className="text-gray-600 mb-4">
+                    <div className="p-3 sm:p-5">
+                      <h5 className="font-semibold text-gray-800 mb-1.5 sm:mb-2 text-sm sm:text-base">IC Engine Test Facilities</h5>
+                      <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
                         The Thermal Engineering lab houses various engine models including 2-stroke and 4-stroke engines with variable compression ratios for performance testing.
                       </p>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="text-xs bg-yellow-50 text-blue-700 px-2 py-1 rounded">Diesel Engines</span>
-                        <span className="text-xs bg-yellow-50 text-blue-700 px-2 py-1 rounded">Petrol Engines</span>
-                        <span className="text-xs bg-yellow-50 text-blue-700 px-2 py-1 rounded">Calorimeters</span>
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                        <span className="text-[10px] sm:text-xs bg-yellow-50 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">Diesel Engines</span>
+                        <span className="text-[10px] sm:text-xs bg-yellow-50 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">Petrol Engines</span>
+                        <span className="text-[10px] sm:text-xs bg-yellow-50 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">Calorimeters</span>
                       </div>
                     </div>
                   </div>
