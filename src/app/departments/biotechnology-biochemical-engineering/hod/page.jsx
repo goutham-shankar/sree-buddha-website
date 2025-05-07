@@ -18,7 +18,7 @@ AnimatedSection.displayName = 'AnimatedSection';
 
 // Profile Image Component with hover effect
 const ProfileImage = memo(({ name, title, imagePath }) => (
-  <motion.div 
+  <motion.div
     className="relative group"
     whileHover={{ scale: 1.02 }}
     transition={{ duration: 0.2 }}
@@ -60,7 +60,7 @@ InfoCard.displayName = 'InfoCard';
 
 // Timeline Item Component
 const TimelineItem = memo(({ period, role }) => (
-  <motion.div 
+  <motion.div
     className="relative pl-8 pb-6 border-l-2 border-yellow-900 last:pb-0"
     whileHover={{ x: 5 }}
   >
@@ -76,10 +76,10 @@ export default function ComputerScienceDepartmentHod() {
 
   const profileData = {
     name: 'Ms. Meera Bai S',
-    title: 'HOD - Biotechnology and Biochemical Engineering/Food Technology Department',
+    title: 'HOD - Biotechnology and Biochemical Engineering Department',
     imagePath: '/assets/images/departments/KBZ-224-01.jpg',
-    email: 'hod.biotech@sbce.ac.in',
-    phone: '+91 85903 32548'
+    email: 'bt.meerabai@sbcemail.in',
+    phone: '9446589673'
   };
 
   const tabData = {
@@ -95,7 +95,7 @@ export default function ComputerScienceDepartmentHod() {
     experience: {
       icon: <svg className="w-6 h-6 text-yellow-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>,
       timeline: [
-        { period: 'Present', role: 'HOD, Department of Biotechnology and Biochemical Engineering/Food Technology, Sree Buddha College of Engineering' },
+        { period: 'Present', role: 'HOD, Department of Biotechnology and Biochemical Engineering, Sree Buddha College of Engineering' },
         { period: '2007 - Present', role: 'Faculty, Sree Buddha College of Engineering' },
         { period: 'Previous', role: 'District Coordinator, Science and Technology Entrepreneurship Development Project' },
         { period: 'Previous', role: 'Guest Lecturer, Department of Polymer Science and Rubber Technology, University College of Engineering, Thodupuzha' },
@@ -110,6 +110,7 @@ export default function ComputerScienceDepartmentHod() {
         '14 years of teaching experience',
         '6 years of industrial experience',
         '9 years of project consultancy experience',
+        'Lifetime member : Biotech Research Society of India  (BRSI)',
         'Lifetime member of IIChE (Indian Institute of Chemical Engineers)'
       ]
     }
@@ -136,9 +137,9 @@ export default function ComputerScienceDepartmentHod() {
           <div className="lg:col-span-5">
             <AnimatedSection delay={0.2}>
               <ProfileImage {...profileData} />
-              
+
               {/* Contact Card */}
-              <motion.div 
+              <motion.div
                 className="mt-6 bg-white rounded-2xl p-6 shadow-xl"
                 whileHover={{ scale: 1.02 }}
               >
@@ -158,13 +159,17 @@ export default function ComputerScienceDepartmentHod() {
                   </div>
 
                   {/* Professional Membership section */}
-                  <div className="flex items-center text-gray-700 mt-2">
-                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                    <span>Lifetime Member: IIChE (Indian Institute of Chemical Engineers)</span>
-                  </div>
-                </div>
+                  <div className="flex flex-col md:flex-col md:items-center text-gray-700 mt-2 space-y-3 md:space-y-0">
+  <div className="flex items-center">
+    
+    <span>Lifetime Member: IIChE (Indian Institute of Chemical Engineers)</span>
+  </div>
+  
+  <div className="flex items-center  mt-8">
+    
+    <span className='mt-4'>Lifetime member: Biotech Research Society of India (BRSI)</span>
+  </div>
+</div></div>
               </motion.div>
             </AnimatedSection>
           </div>
@@ -178,11 +183,10 @@ export default function ComputerScienceDepartmentHod() {
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
-                      activeTab === tab
-                        ? 'bg-yellow-900 text-white shadow-lg'
-                        : 'bg-white text-gray-600 hover:bg-gray-50'
-                    }`}
+                    className={`px-6 py-3 rounded-xl font-medium transition-all duration-200 ${activeTab === tab
+                      ? 'bg-yellow-900 text-white shadow-lg'
+                      : 'bg-white text-gray-600 hover:bg-gray-50'
+                      }`}
                   >
                     {tab.charAt(0).toUpperCase() + tab.slice(1)}
                   </button>
@@ -218,7 +222,7 @@ export default function ComputerScienceDepartmentHod() {
                       ))}
                     </div>
                     <div className="mt-6 text-gray-700">
-                      <p>Ms. Meera Bai S has 14 years of teaching experience, 6 years of industrial experience and 9 years of project consultancy experience. Her combined academic and industrial background provides students with a well-rounded perspective on biotechnology and food technology applications.</p>
+                      <p>Ms. Meera Bai S has 20 years of teaching experience.</p>
                     </div>
                   </InfoCard>
                 )}
@@ -238,20 +242,20 @@ export default function ComputerScienceDepartmentHod() {
               </motion.div>
 
               {/* Bio Section */}
-              <motion.div 
+              <motion.div
                 className="mt-8 bg-white rounded-2xl p-6 shadow-xl"
                 whileHover={{ y: -5 }}
               >
                 <h3 className="text-xl font-semibold mb-4">Biography</h3>
                 <div className="text-gray-700 leading-relaxed space-y-4">
                   <p>
-                    Ms. Meera Bai S took her BTech degree in Chemical Engineering from TKM College of Engineering Kollam, under the University of Kerala in 1990, with fourth rank. She completed MTech in Biotechnology and Biochemical Engineering from the University of Kerala in 2012 and currently she is doing Ph.D in Biotechnology. She also took Advanced Post Graduate Diploma in Computer Applications from IGNOU. She has published 8 papers in different journals and conferences.
+                    With over 20 years of teaching experience, 3 years in the industry, and 9 years in project consultancy, Prof. Meera Bai has a rich professional background. Her career includes roles as an engineer executive at MAS Combustible Pack Ltd., Palakkad, and district coordinator for the Science and Technology Entrepreneurship project. She joined Sree Buddha College of Engineering in July 2007 and has since played a key role in academic leadership.
                   </p>
                   <p>
-                    She has 14 years of teaching experience, 6 years of industrial experience and 9 years of project consultancy experience. She did her apprenticeship in Fertilizers and Chemicals Limited, Cochin Division, worked as an Engineer Executive in MAS Combustible Pack Ltd. Palakkad, guest lecturer in the Department of Polymer Science and Rubber Technology, University College of Engg, Thodupuzha, and as district coordinator, Science and Technology Entrepreneurship Development Project.
+                    An active researcher, she has published eight journal papers, contributed a book chapter, and secured student project funding from KTU and ANERT. A lifetime member of IIChE and BRSI, Prof. Meera Bai also serves on KTU's Board of Studies and key academic committees, including syllabus revision, examination, and valuation boards.
                   </p>
                   <p>
-                    She joined Sree Buddha College of Engineering in July 2007 and is currently the head of the Department of Biotechnology and Biochemical Engineering/Food Technology. She is a lifetime member of IIChE.
+                    She also held additional responsibilities as Deputy Warden of the Ladies Hostel, Examination Cell Coordinator, and Innovation and Entrepreneurship Development Cell Coordinator. She has attended over 65 training programs and conferences and organized several national and international events, significantly contributing to biotechnology education and research.
                   </p>
                 </div>
               </motion.div>

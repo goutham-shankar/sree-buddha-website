@@ -91,7 +91,7 @@ export default function ComputerScienceDepartmentFaculty() {
 
 
                                 <div className="img_section">
-                                    <img src={`/assets/images/departments/faculty/eee/${singleFaculty[0]}`} alt="" />
+                                    <img src={`/assets/images/departments/faculty/ft/${singleFaculty[0]}`} alt="" />
                                 </div>
 
                                 <div className="details_section">

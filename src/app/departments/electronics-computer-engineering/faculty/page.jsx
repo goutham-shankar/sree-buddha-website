@@ -14,12 +14,12 @@ import "./style.css"
 export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
-        ["pavitha.jpg", "Pavitha P. P.", "B.Tech, M.Tech", "HoD", "Electronics and Communication Engineering"],
-        ["ambika.jpg", "Ambika Sekhar", "M.Tech", "Assistant Professor", "Microwave and Television Engineering, IoT and Embedded Systems"],
-        ["saritha.jpg", "Saritha N. R.", "M.Tech", "Assistant Professor", "Applied Electronics, Nano Electronics"],
-        ["sabi.jpg", "Sabi S.", "M.Tech", "Assistant Professor", "Microwave and Television Engineering, Image Processing"],
-        ["jasmin.jpg", "Jasmin Basheer", "M.Tech", "Assistant Professor", "Industrial Instrumentation and Control, Industrial Automation and Control"],
-        ["pooja.jpg", "Pooja S. Mohan", "M.Tech", "Assistant Professor", "Optoelectronics and Communication Systems, Signals and Systems"],
+        ["pavitha.jpg", "Pavitha P. P.", "B.Tech, M.Tech", "HoD", " Electronics"],
+        ["ambika.jpg", "Ambika Sekhar", "M.Tech", "Assistant Professor", " Microwave and Television Engineering"],
+        ["saritha.jpg", "Saritha N. R.", "M.Tech", "Assistant Professor", "Applied Electronics"],
+        ["sabi.jpg", "Sabi S.", "M.Tech", "Assistant Professor", "Microwave and Television Engineering"],
+        ["jasmin.jpg", "Jasmin Basheer", "M.Tech", "Assistant Professor", " Industrial Instrumentation and Control"],
+        ["pooja.jpg", "Pooja S. Mohan", "M.Tech", "Assistant Professor", "Optoelectronics and Communication Systems "],
         ["sangeetha.jpg", "T. R. Sangeeta", "M.Tech", "Assistant Professor", "Communication Engineering"],
         ["chinchu.jpg", "Chinchu S.", "M.Tech", "Assistant Professor", "Communication Engineering"],
         ["hari.jpg", "Hari S.", "M.Tech", "Assistant Professor", "Wireless Networks and Applications"]

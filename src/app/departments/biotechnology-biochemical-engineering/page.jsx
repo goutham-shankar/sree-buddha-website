@@ -76,68 +76,61 @@ export default function ComputerScienceDepartment() {
       <section className="cs-dept-section">
         <h2 className="cs-dept-section-title">Department Profile</h2>
         <div className="cs-dept-profile-content">
-          <div className="cs-dept-profile-text">
-            <p>Established in 2002, the Department of Biotechnology & Biochemical Engineering at Sree Buddha College of Engineering is recognized for its excellence in teaching and research. Accredited NAAC (A) and the NBA since 2019. The department offers a multidisciplinary curriculum in molecular life sciences and engineering, with B.Tech, M.Tech, and Ph.D. programs focused on workforce development and research</p>
-            <br />
-            <p>The curriculum blends life sciences and engineering, covering microbiology, genetic engineering, bioinformatics, and bioprocess design. Supported by four PhD holders, the department emphasizes outcome-based education, innovation, and entrepreneurship</p>
-            <br />
-            <p>Collaborating with organizations like DBT, AYUSH, and Universiti Sains Malaysia, it focuses on molecular diagnostics, nanotechnology, bioprocessing, and biofuels. Student projects often result in publications in SCI and Scopus-indexed journals, including a pioneering human genome mapping project of Kerala’s ethnic populations</p>
-            <br />
-            <p>The department emphasizes academic rigor, research excellence, and industry collaboration, preparing students for professional success and lifelong learning.</p>
-          </div>
-          {/* <div className="cs-dept-profile-images">
-              {buildingImages.map((img, index) => (
-                <div key={index} className="cs-dept-building-image">
-                  <Image 
-                    src={img} 
-                    alt={`Computer Science Department Building ${index + 1}`}
-                    width={400}
-                    height={300}
-                  />
-                </div>
-              ))}
-            </div> */}
+        <div className="cs-dept-profile-text">
+  <p>Established in 2002, the Department of Biotechnology & Biochemical Engineering at Sree Buddha College of Engineering is a recognized centre for excellence in interdisciplinary education and research. Accredited by the NBA since 2019 and reaccredited in 2023, the department integrates molecular life sciences with engineering principles to address real-world challenges.</p>
+  
+  <p>It offers a four-year B.Tech, a two-year M.Tech, and Ph.D. programs, designed to equip students with strong theoretical foundations and practical skills. Emphasizing research-led teaching, industry collaboration, and hands-on learning, the department prepares graduates for impactful careers in biotechnology, healthcare, and sustainable development.</p>
+  
+  <p>The department houses two advanced research labs and specialized laboratories that offer hands-on training and support student-led projects under faculty guidance. Collaborations with reputed organizations enhance interdisciplinary research in areas like molecular diagnostics, nanotechnology, bioprocessing, and biofuels.</p>
+  
+  <p>Student research often results in publications in reputed journals. With a focus on academic rigor, research, and industry collaboration, the department equips students to become skilled, innovative, and industry-ready professionals.</p>
+</div>
         </div>
       </section>
 
       <section className="cs-dept-section">
         <h2 className="cs-dept-section-title">Department Highlights</h2>
         <div className="cs-dept-highlights-content">
-          <div className="highlights-card">
-            <h3 className="highlight-category">Academic Excellence</h3>
-            <ul>
-              <li>The department focuses on academic rigor, research excellence, and industry collaboration, preparing students for professional success. The department has two advanced research labs with experienced staff, offering hands-on training and in-house projects. </li>
-            </ul>
-          </div>
+  <div className="highlights-card">
+    <h3 className="highlight-category">Infrastructure & Resources</h3>
+    <ul>
+      <li>Well-equipped Research laboratories & Specialized laboratories.</li>
+      <li>Highly qualified, experienced and dedicated faculty.</li>
+      <li>Department library with a comprehensive collection of prescribed textbooks.</li>
+      <li>ICT-enabled smart classrooms.</li>
+    </ul>
+  </div>
 
-          <div className="highlights-card">
-            <h3 className="highlight-category">Industry Exposure and Research Collaborations</h3>
-            <ul>
-              <li>Students gain industry insights through seminars, workshops, and internships at NIT, IIT etc and reputed industries like,  ZETA Biosystem Bangalore, Biocon Bangalore, CFTRI Mysore , Synthite chemicals Kochi etc. Partnerships with NIIST, IIPM, NIFTEM, CTCRI Trivandrum, CFRD Cochin etc to enhance research opportunities</li>
-              <li>Presence of technology incubators and startup ecosystems for entrepreneurship</li>
-            </ul>
-          </div>
+  <div className="highlights-card">
+    <h3 className="highlight-category">Industry & Research Collaborations</h3>
+    <ul>
+      <li>Students gain industry insights through seminars, workshops, Industrial trainings and internships at University of Sains Malaysia, ZETA Biosystem Bangalore, Biocon Bangalore, CFTRI Mysore, Synthite chemicals Kochi, NIIST Trivandrum, IIPM Bangalore, NIFTEM Thanjavur, CTCRI Trivandrum, CFRD Cochin etc to enhance research opportunities.</li>
+      <li>Ayush, DBT-Biocare, ANERT, and KTU-CERD serve as key research collaborators, fostering increased student participation in research activities.</li>
+    </ul>
+  </div>
 
-          <div className="highlights-card">
-            <h3 className="highlight-category">Professional Memberships</h3>
-            <ul>
-              <li>The department holds memberships with IEI, IIChE, and ISTE Student Chapter, promoting professional growth</li>
-              <li>High-performance computing clusters for research</li>
-              <li>Access to industry-grade software, cloud platforms, and simulation tools</li>
-            </ul>
-          </div>
+  <div className="highlights-card">
+    <h3 className="highlight-category">Professional Memberships</h3>
+    <ul>
+      <li>The department holds memberships with IEI, Biotech Research Society of India (BRSI), Indian Institute of Chemical Engineers (IIChE) student chapter and ISTE Student Chapter, promoting professional growth.</li>
+    </ul>
+  </div>
 
-          <div className="highlights-card">
-            <h3 className="highlight-category">Innovation and Sustainability Initiatives</h3>
-            <ul>
-              <li>Biological Waste Composting Unit: Converts organic waste into compost for campus landscaping</li>
-              <li>Water Treatment Unit (Niranjal) : Provides safe drinking water across the campus.</li>
-              <li>Bio-Mushroom Cultivation Unit : Cultivates and sells mushrooms while training students in sustainable agriculture</li>
-              <li>Soap-Making Unit: Produces eco-friendly soaps, promoting self-sufficiency and bioproduct manufacturing</li>
-              <li>Consultancy Services - Water and Wastewater Quality Analysis Lab: State-approved lab ensuring compliance with environmental standards</li>
-            </ul>
-          </div>
-        </div>
+  <div className="highlights-card">
+    <h3 className="highlight-category">Innovation and Sustainability Initiatives & Entrepreneurship</h3>
+    <ul>
+      <li>The Department of Biotechnology & Biochemical Engineering actively promotes eco-friendly practices through innovative, hands-on initiatives that integrate biotechnology with sustainable development.</li>
+      <li>Key initiatives include a composting unit that converts organic waste into nutrient-rich compost, a water treatment unit supplying purified drinking water across campus, a bio-mushroom cultivation unit, Medicinal plant garden offering training in sustainable farming, and a soap-making unit producing eco-friendly soaps.</li>
+    </ul>
+  </div>
+
+  <div className="highlights-card">
+    <h3 className="highlight-category">Consultancy Services</h3>
+    <ul>
+      <li>Water and Wastewater Quality Analysis Laboratory: The Department of Biotechnology & Biochemical Engineering houses a State Pollution Control Board-approved Water and Wastewater Quality Analysis Lab. This facility offers professional consultancy services for assessing water and wastewater quality, supporting environmental compliance and promoting safe, sustainable water management practices.</li>
+    </ul>
+  </div>
+</div>
       </section>
 
       <section className="container mx-auto px-4 py-10">
