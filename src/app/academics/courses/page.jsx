@@ -135,7 +135,7 @@ export default function CoursesPage() {
       description: "Advanced research and application in biotechnology.",
       icon: "🔬",
       details: "Our M.Tech in Biotechnology program emphasizes research in biopharmaceuticals, environmental biotechnology, and genetic engineering with modern laboratory facilities.",
-      intake: 18,
+      intake: 6,
       duration: "2 Years",
       eligibility: "B.Tech/B.E in Biotechnology, Biochemical Engineering or equivalent"
     },
@@ -145,7 +145,7 @@ export default function CoursesPage() {
       description: "Advanced study in computer science and software engineering.",
       icon: "🖥️",
       details: "This program covers advanced algorithms, distributed systems, AI, and cybersecurity with opportunities for specialization and research in cutting-edge fields.",
-      intake: 24,
+      intake: 6,
       duration: "2 Years",
       eligibility: "B.Tech/B.E in CSE or equivalent"
     },
@@ -155,7 +155,7 @@ export default function CoursesPage() {
       description: "Specialization: Computer Integrated Manufacturing",
       icon: "🔧",
       details: "This M.Tech specialization focuses on CAD/CAM, automation, industrial robotics, and smart manufacturing with industry-relevant projects and training.",
-      intake: 24,
+      intake: 6,
       duration: "2 Years",
       eligibility: "B.Tech/B.E in Mechanical Engineering or equivalent"
     },
@@ -165,7 +165,7 @@ export default function CoursesPage() {
       description: "Specialization: Structural Engineering",
       icon: "🌉",
       details: "Our Structural Engineering specialization covers advanced structural analysis, earthquake engineering, and structural optimization with research opportunities.",
-      intake: 24,
+      intake: 12,
       duration: "2 Years",
       eligibility: "B.Tech/B.E in Civil Engineering or equivalent"
     },
@@ -175,7 +175,7 @@ export default function CoursesPage() {
       description: "Specialization: Electrical Machines",
       icon: "⚡",
       details: "This program specializes in electrical machine design, power electronics, drives, and renewable energy systems with advanced laboratory facilities.",
-      intake: 18,
+      intake: 6,
       duration: "2 Years",
       eligibility: "B.Tech/B.E in EEE or equivalent"
     }
