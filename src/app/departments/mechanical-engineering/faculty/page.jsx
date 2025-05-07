@@ -14,22 +14,21 @@ import "./style.css"
 export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
-        ["mech_faculty_1.jpg", "Dr K Krishnakumar", "Ph.D", "Professor", "Heat Transfer and Thermal Engineering"],
-        ["mech_faculty_2.jpg", "Dr Saji Varghese", "Ph.D", "Professor", "Manufacturing Engineering"],
+        ["mech_faculty_1.jpg", "Dr. K Krishnakumar", "Ph.D", "Professor", "Heat Transfer and Thermal Engineering"],
+        ["mech_faculty_2.jpg", "Dr. Saji Varghese", "Ph.D", "Professor", "Manufacturing Engineering"],
         ["mech_faculty_3.jpg", "Dr. M. S. Senthil Saravanan", "Ph.D", "Professor", "Thermal Engineering"],
         ["mech_faculty_4.jpg", "Dr. Trijo Tharayil", "Ph.D", "Associate Professor", "Thermal Engineering"],
         ["mech_faculty_5.jpg", "Dr. J.B. Sajin", "Ph.D", "Associate Professor", "Manufacturing Engineering"],
         ["mech_faculty_6.jpg", "Mr. Anilkumar A V", "M.Tech", "Assistant Professor", "Industrial Refrigeration and Cryogenic Engineering"],
-        ["mech_faculty_7.jpg", "Ms. Vidya. V", "M.E", "Assistant Professor", "Mechatronics"],
-        ["mech_faculty_8.jpg", "Mr. Venugopal. N", "M.Tech", "Assistant Professor", "Industrial Refrigeration and Cryogenic Engineering"],
-        ["mech_faculty_9.jpg", "Mr Sreekumar E N", "M.Tech", "Assistant Professor", "Industrial Refrigeration and Cryogenic Engineering"],
-        ["mech_faculty_10.jpg", "Mr. Kalesh K.K", "M.Tech", "Assistant Professor", "Production Engineering"],
+        ["mech_faculty_7.jpg", "Ms. Vidya V", "M.E", "Assistant Professor", "Mechatronics"],
+        ["mech_faculty_8.jpg", "Mr. Venugopal N", "M.Tech", "Assistant Professor", "Industrial Refrigeration and Cryogenic Engineering"],
+        ["mech_faculty_9.jpg", "Mr. Sreekumar E N", "M.Tech", "Assistant Professor", "Industrial Refrigeration and Cryogenic Engineering"],
+        ["mech_faculty_10.jpg", "Mr. Kalesh K K", "M.Tech", "Assistant Professor", "Production Engineering"],
         ["mech_faculty_14.jpg", "Mr. Ratheesh R", "M.Tech", "Assistant Professor", "Industrial Engineering and Management"],
-        ["mech_faculty_15.jpg", "Mr. Vaisakh P. S", "M.Tech", "Assistant Professor", "Production and Industrial Engineering"],
-        ["mech_faculty_16.jpg", "Mr. Jinan. S", "M.Tech", "Assistant Professor", "Industrial Refrigeration and Cryogenic Engineering"],
+        ["mech_faculty_15.jpg", "Mr. Vaisakh P S", "M.Tech", "Assistant Professor", "Production and Industrial Engineering"],
+        ["mech_faculty_16.jpg", "Mr. Jinan S", "M.Tech", "Assistant Professor", "Industrial Refrigeration and Cryogenic Engineering"],
         ["mech_faculty_17.jpg", "Ms. Kalpana Ashokan", "M.Tech", "Assistant Professor", "IC Engines and Turbo Machinery"],
         ["mech_faculty_18.jpg", "Mr. Harikrishnan G", "M.Tech", "Assistant Professor", "Machine Design"],
-        ["mech_faculty_19.jpg", "Mr. Anwar Rajeev", "M.Tech", "Assistant Professor", "Computer Integrated Manufacturing"],
         ["mech_faculty_20.jpg", "Mr. Prasanth V", "M.Tech", "Assistant Professor", "Propulsion Engineering"]
       ];
       

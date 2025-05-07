@@ -90,7 +90,7 @@ export default function ElectronicsComputerDepartmentAssociations() {
   const events = [
     {
       id: 'event1',
-      title: "ETA (ELECTRONICS TECHNOCRATS ASSOCIATION) INAUGURATION 2024-25 ACADEMIC YEAR",
+      title: "ETA (ELECTRONICS TECHNOCRATS ASSOCIATION) INAUGURATION 2023-2024 ACADEMIC YEAR",
       date: "December 12, 2024",
       content:
         "ETA (Electronics Technocrats Association)...",
