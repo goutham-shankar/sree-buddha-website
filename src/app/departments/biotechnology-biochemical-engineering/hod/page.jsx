@@ -252,7 +252,7 @@ export default function ComputerScienceDepartmentHod() {
                     With over 20 years of teaching experience, 3 years in the industry, and 9 years in project consultancy, Prof. Meera Bai has a rich professional background. Her career includes roles as an engineer executive at MAS Combustible Pack Ltd., Palakkad, and district coordinator for the Science and Technology Entrepreneurship project. She joined Sree Buddha College of Engineering in July 2007 and has since played a key role in academic leadership.
                   </p>
                   <p>
-                    An active researcher, she has published eight journal papers, contributed a book chapter, and secured student project funding from KTU and ANERT. A lifetime member of IIChE and BRSI, Prof. Meera Bai also serves on KTU's Board of Studies and key academic committees, including syllabus revision, examination, and valuation boards.
+                    An active researcher, she has published eight journal papers, contributed a book chapter, and secured student project funding from KTU and ANERT. A lifetime member of IIChE and BRSI, Prof. Meera Bai also serves on KTU&apos;s Board of Studies and key academic committees, including syllabus revision, examination, and valuation boards.
                   </p>
                   <p>
                     She also held additional responsibilities as Deputy Warden of the Ladies Hostel, Examination Cell Coordinator, and Innovation and Entrepreneurship Development Cell Coordinator. She has attended over 65 training programs and conferences and organized several national and international events, significantly contributing to biotechnology education and research.
