@@ -68,9 +68,9 @@ export default function HostelFacilities() {
                     <span>24-hour security and supervision</span>
                   </li>
                 </ul>
-                <button className="mt-4 bg-yellow-700 hover:bg-yellow-800 text-white px-4 py-2 rounded-md transition-colors">
+                {/* <button className="mt-4 bg-yellow-700 hover:bg-yellow-800 text-white px-4 py-2 rounded-md transition-colors">
                   View More Details
-                </button>
+                </button> */}
               </div>
             </div>
 
@@ -102,9 +102,9 @@ export default function HostelFacilities() {
                     <span>Female wardens available 24/7</span>
                   </li>
                 </ul>
-                <button className="mt-4 bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md transition-colors">
+                {/* <button className="mt-4 bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md transition-colors">
                   View More Details
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
@@ -163,17 +163,18 @@ export default function HostelFacilities() {
             <div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Boys Hostel Contact</h3>
               <p className="text-gray-600">
-                Chief Warden: Prof. John Smith<br />
-                Phone: (123) 456-7890<br />
-                Email: boys.hostel@college.edu
+                Chief Warden: Dr. K. Krishnakumar, Principal<br />
+                Asst Warden: Mr.R.Sadasivan<br />
+                Phone: +919446742781<br />
+                
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Girls Hostel Contact</h3>
               <p className="text-gray-600">
-                Chief Warden: Prof. Jane Doe<br />
-                Phone: (123) 456-7891<br />
-                Email: girls.hostel@college.edu
+                Matron: Ms.Sheeja<br />
+                Phone: 9526695470<br />
+               
               </p>
             </div>
           </div>

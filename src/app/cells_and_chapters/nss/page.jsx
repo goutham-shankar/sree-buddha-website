@@ -1,10 +1,50 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FileText, Calendar, Users, Award, MapPin, Clock, Download } from 'lucide-react';
 
 export default function NSS() {
-  // NSS activities data
+  // State for API data
+  const [nssData, setNssData] = useState(null);
+  const [galleryImages, setGalleryImages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch NSS data and gallery images on component mount
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Fetch NSS data
+        const nssResponse = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/nss?populate[Report][populate]=file&populate=NSS_UNIT`);
+        if (!nssResponse.ok) {
+          throw new Error('Failed to fetch NSS data');
+        }
+        const nssResult = await nssResponse.json();
+        
+        // Fetch gallery images
+        const galleryResponse = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/galleries?populate=*&pagination[limit]=100`);
+        if (!galleryResponse.ok) {
+          throw new Error('Failed to fetch gallery images');
+        }
+        const galleryResult = await galleryResponse.json();
+        
+        // Filter images where department = "NSS"
+        const nssImages = galleryResult.data.filter(item => item.Department === "NSS");
+        
+        setNssData(nssResult.data);
+        setGalleryImages(nssImages);
+        setLoading(false);
+      } catch (err) {
+        console.error("Error fetching data:", err);
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // NSS activities data (static)
   const activities = [
     {
       icon: <Users className="w-10 h-10 text-yellow-800" />,
@@ -28,86 +68,39 @@ export default function NSS() {
     }
   ];
 
-  // Upcoming NSS Events
-  const upcomingEvents = [
-    {
-      date: "April 12, 2025",
-      title: "Tree Plantation Drive",
-      location: "College Campus & Surrounding Areas",
-      time: "9:00 AM - 1:00 PM"
-    },
-    {
-      date: "April 25, 2025",
-      title: "Blood Donation Camp",
-      location: "Central Auditorium",
-      time: "10:00 AM - 4:00 PM"
-    },
-    {
-      date: "May 5, 2025",
-      title: "Road Safety Awareness Campaign",
-      location: "NSS Boys Higher Secondary School, Pandalam",
-      time: "2:00 PM - 5:00 PM"
-    }
-  ];
-
-  // Committee Members
-  const committeeMembers = [
-    {
-      position: "Program Officer",
-      name: "Dr. Rohit Menon",
-      department: "Civil Engineering"
-    },
-    {
-      position: "Student Coordinator",
-      name: "Anjali Thomas",
-      department: "Computer Science, Final Year"
-    },
-    {
-      position: "Secretary",
-      name: "Arjun Pillai",
-      department: "Electrical Engineering, Third Year"
-    },
-    {
-      position: "Treasurer",
-      name: "Divya Krishnan",
-      department: "Electronics & Communication, Third Year"
-    },
-    {
-      position: "Volunteer Lead",
-      name: "Mohammed Faisal",
-      department: "Mechanical Engineering, Second Year"
-    }
-  ];
-  
-  // Annual Reports
-  const annualReports = [
-    {
-      year: "2021-22",
-      path: "/assets/documents/cells-chapters/NSS-Report-1.pdf",
-      activities: "32 activities",
-      volunteers: "95 active volunteers",
-      hours: "2,800+ service hours"
-    },
-    {
-      year: "2020-21",
-      path: "/assets/documents/cells-chapters/NSS-Report-2.pdf",
-      activities: "28 activities",
-      volunteers: "86 active volunteers", 
-      hours: "2,200+ service hours"
-    },
-    {
-      year: "2019-20",
-      path: "/assets/documents/cells-chapters/NSS-Report-3.pdf",
-      activities: "35 activities",
-      volunteers: "102 active volunteers",
-      hours: "3,100+ service hours"
-    }
-  ];
-
   // Function to handle PDF viewing
   const handlePdfClick = (url) => {
-    window.open(url, '_blank');
+    // Make sure to prepend the STRAPI URL if the URL is relative
+    const fullUrl = url.startsWith('/') 
+      ? `${process.env.NEXT_PUBLIC_STRAPI}${url}` 
+      : url;
+    window.open(fullUrl, '_blank');
   };
+
+  // Loading state
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-96">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-yellow-800"></div>
+      </div>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className="text-center py-10">
+        <h2 className="text-2xl font-bold text-red-600 mb-4">Error Loading Data</h2>
+        <p className="text-gray-700">{error}</p>
+        <button 
+          onClick={() => window.location.reload()}
+          className="mt-4 bg-yellow-800 hover:bg-yellow-900 text-white px-4 py-2 rounded"
+        >
+          Try Again
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="mx-auto px-4 md:px-8 py-8 max-w-7xl">
@@ -155,7 +148,7 @@ export default function NSS() {
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <Award className="w-5 h-5 text-yellow-800 mr-2 mt-1" />
-                  <span>10 grace marks for regular NSS volunteers as per university regulations</span>
+                  <span>60 activity points for regular NSS volunteers as per KTU regulations</span>
                 </li>
                 <li className="flex items-start">
                   <Award className="w-5 h-5 text-green-800 mr-2 mt-1" />
@@ -177,34 +170,34 @@ export default function NSS() {
             </div>
           </div>
           
-          {/* Annual Reports */}
+          {/* Annual Reports - Fetched dynamically from API */}
           <div className="mb-10">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">Annual Reports</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {annualReports.map((report, index) => (
+              {nssData?.Report && nssData.Report.map((report, index) => (
                 <div 
                   key={index} 
                   className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow duration-300 cursor-pointer"
-                  onClick={() => handlePdfClick(report.path)}
+                  onClick={() => report.file && report.file[0] && handlePdfClick(report.file[0].url)}
                 >
                   <div className="flex flex-col h-full">
                     <div className="mb-4">
-                      <h3 className="text-xl font-semibold text-gray-800">NSS Report {report.year}</h3>
+                      <h3 className="text-xl font-semibold text-gray-800">{report.ReportHeading}</h3>
                       <div className="h-1 w-12 bg-yellow-800 my-2"></div>
                     </div>
                     <div className="flex-grow">
                       <ul className="text-gray-600 space-y-2 mb-6">
                         <li className="flex items-center text-sm">
                           <div className="h-2 w-2 rounded-full bg-yellow-800 mr-2"></div>
-                          {report.activities}
+                          Annual NSS activities document
                         </li>
                         <li className="flex items-center text-sm">
                           <div className="h-2 w-2 rounded-full bg-green-800 mr-2"></div>
-                          {report.volunteers}
+                          Published {new Date(report.file[0]?.publishedAt).toLocaleDateString()}
                         </li>
                         <li className="flex items-center text-sm">
                           <div className="h-2 w-2 rounded-full bg-green-800 mr-2"></div>
-                          {report.hours}
+                          {(report.file[0]?.size / 1024).toFixed(2)} MB
                         </li>
                       </ul>
                     </div>
@@ -220,7 +213,7 @@ export default function NSS() {
             </div>
           </div>
           
-          {/* Executive Committee */}
+          {/* Executive Committee - Fetched dynamically from API */}
           <div className="mb-10">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">NSS Unit Team</h2>
             <div className="overflow-x-auto">
@@ -233,113 +226,63 @@ export default function NSS() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
-                  {committeeMembers.map((member, index) => (
-                    <tr key={index} className="hover:bg-gray-50">
-                      <td className="py-3 px-6 text-sm text-gray-700">{member.position}</td>
-                      <td className="py-3 px-6 text-sm font-medium text-gray-900">{member.name}</td>
-                      <td className="py-3 px-6 text-sm text-gray-700">{member.department}</td>
-                    </tr>
-                  ))}
+                  {nssData?.NSS_UNIT && nssData.NSS_UNIT
+                    .sort((a, b) => a.priority - b.priority) // Sort by priority
+                    .map((member, index) => (
+                      <tr key={index} className="hover:bg-gray-50">
+                        <td className="py-3 px-6 text-sm text-gray-700">{member.Position}</td>
+                        <td className="py-3 px-6 text-sm font-medium text-gray-900">
+                          {/* Remove numbering from names if present */}
+                          {member.Name.includes('.') ? member.Name.split('. ')[1] : member.Name}
+                        </td>
+                        <td className="py-3 px-6 text-sm text-gray-700">{member.Department}</td>
+                      </tr>
+                    ))}
                 </tbody>
               </table>
             </div>
           </div>
           
-          {/* Upcoming Events
-          <div className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Upcoming Events</h2>
-            <div className="space-y-4">
-              {upcomingEvents.map((event, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-sm transition-shadow duration-300">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between">
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">{event.title}</h3>
-                      <div className="flex items-center text-gray-600 mb-1">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        <span>{event.date}</span>
-                      </div>
-                      <div className="flex items-center text-gray-600 mb-1">
-                        <Clock className="w-4 h-4 mr-2" />
-                        <span>{event.time}</span>
-                      </div>
-                      <div className="flex items-center text-gray-600">
-                        <MapPin className="w-4 h-4 mr-2" />
-                        <span>{event.location}</span>
-                      </div>
-                    </div>
-                    <Link 
-                      href="#"
-                      className="mt-4 md:mt-0 bg-yellow-800 hover:bg-yellow-900 text-white font-medium py-2 px-4 rounded flex items-center justify-center transition-colors duration-300 text-sm"
-                    >
-                      Register Now
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
-          
-          {/* Photo Gallery */}
+          {/* Photo Gallery - Fetched dynamically from API */}
           <div className="mb-10">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">Recent Activities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div className="rounded-lg overflow-hidden h-48 relative group">
-                <img src="/assets/images/cells-chapters/nss-1.png" alt="Road Safety Campaign" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-white font-medium">Road Safety Awareness Campaign</span>
+              {galleryImages && galleryImages.length > 0 ? (
+                galleryImages.slice(0, 6).map((item, index) => ( // Limit to 6 images
+                  item.images && item.images.length > 0 && (
+                    <div key={index} className="rounded-lg overflow-hidden h-48 relative group">
+                      <img 
+                        src={`${process.env.NEXT_PUBLIC_STRAPI}${item.images[0].formats?.small?.url || item.images[0].formats?.thumbnail?.url || item.images[0].url}`} 
+                        alt={`NSS Activity ${index + 1}`} 
+                        className="w-full h-full object-cover" 
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-white font-medium">
+                          NSS Activity - {new Date(item.date).toLocaleDateString()}
+                        </span>
+                      </div>
+                    </div>
+                  )
+                ))
+              ) : (
+                // Fallback if no images
+                <div className="col-span-full text-center py-10">
+                  <p className="text-gray-600">No recent activity images available.</p>
                 </div>
-              </div>
-              <div className="rounded-lg overflow-hidden h-48 relative group">
-                <img src="/api/placeholder/600/400" alt="Tree Plantation" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-white font-medium">Campus Cleaning Drive</span>
-                </div>
-              </div>
-              <div className="rounded-lg overflow-hidden h-48 relative group">
-                <img src="/api/placeholder/600/400" alt="Blood Donation Camp" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-white font-medium">Blood Donation Camp</span>
-                </div>
-              </div>
+              )}
             </div>
           </div>
-          
-          {/* Join section
-          <div className="text-center bg-amber-50 rounded-lg p-8 mb-6">
-            <h3 className="text-2xl font-bold text-gray-800 mb-3">Join NSS Unit</h3>
-            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              Become a part of our NSS family and contribute to meaningful community service while developing leadership skills 
-              and gaining valuable experience that will enhance both your academic journey and future career prospects.
-            </p>
-            <Link 
-              href="/nss-registration"
-              className="bg-yellow-800 hover:bg-yellow-900 text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 inline-flex items-center"
-            >
-              <Users className="mr-2 h-5 w-5" />
-              Register as NSS Volunteer
-            </Link>
-          </div> */}
           
           {/* Contact section */}
           <div className="mt-10 text-center">
             <h3 className="text-lg font-medium text-gray-700 mb-2">Contact NSS Unit</h3>
             <p className="text-gray-600">
-              Email: <a href="mailto:nss@sbcepattoor.ac.in" className="text-yellow-800 hover:underline">nss@sbcepattoor.ac.in</a> | 
-              Phone: <a href="tel:+914682222288" className="text-yellow-800 hover:underline">(0468) 2222288</a> |
-              Room: Administrative Block, Room 105
+              Email: <a href="mailto:sbcenss@sbcemail.in" className="text-yellow-800 hover:underline"> sbcenss@sbcemail.in</a> | 
+              Phone: <a href="tel:+9497377660" className="text-yellow-800 hover:underline">9497377660</a> |
+              Room: C Block, Room 303
             </p>
             <div className="flex justify-center space-x-4 mt-4">
-              <a href="https://facebook.com/sbcepattoornss" className="text-yellow-800 hover:text-yellow-900">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-                </svg>
-              </a>
-              <a href="https://twitter.com/sbcepattoornss" className="text-yellow-800 hover:text-yellow-900">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                </svg>
-              </a>
-              <a href="https://instagram.com/sbcepattoornss" className="text-yellow-800 hover:text-yellow-900">
+              <a href="https://www.instagram.com/nss.sbce/" className="text-yellow-800 hover:text-yellow-900">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                 </svg>

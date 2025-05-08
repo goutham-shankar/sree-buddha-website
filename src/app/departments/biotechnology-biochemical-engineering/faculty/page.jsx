@@ -15,13 +15,13 @@ export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
 
-        ["meera_bhai.jpg", "Prof. Meera Bai S", "HOD", "Professor", "Biotechnology"],
-        ["shamnamol.jpg", "Dr. Shanmamol G K", "Ph.D.", "Associate Professor", "Biotechnology"],
-        ["shilpa.jpg", "Dr. Shilpa Lekshmi L", "Ph.D.", "Assistant Professor", "Biotechnology"],
-        ["chinchu.jpg", "Ms. Chinchu Elezebeth", "M.Tech", "Assistant Professor", "Biotechnology"],
-        ["archana.jpg", "Dr. Archana Rajendran", "Ph.D.", "Assistant Professor", "Biotechnology"],
-        ["gopika.jpg", "Ms. Gobika Ajit", "M.Tech", "Assistant Professor", "Biotechnology"],
-        ["tamil.jpg", "Dr. Tamilmani Jayabalan", "Ph.D.", "Assistant Professor", "Biotechnology"]
+        ["meera_bhai.jpg", "Prof. Meera Bai S", "HOD", "Professor", "Biochemical engineering"],
+        ["shamnamol.jpg", "Dr. Shamnamol G K", "Ph.D.", "Associate Professor", "Biochemical engineering"],
+        ["shilpa.jpg", "Dr. Shilpa Lekshmi L", "Ph.D.", "Assistant Professor", "Biochemistry and virology"],
+        ["chinchu.jpg", "Ms. Chinchu Elezebeth", "M.Tech", "Assistant Professor", "Bioprocess Engineering"],
+        ["archana.jpg", "Dr. Archana Rajendran", "Ph.D.", "Assistant Professor", "Biomaterials and tissue engineering"],
+        ["gopika.jpg", "Ms. Gopika Ajit", "M.Tech", "Assistant Professor", "Chemical Engineering"],
+        ["tamil.jpg", "Dr. Tamilmani Jayabalan", "Ph.D.", "Assistant Professor", "Bioelectrochemical system"]
 
 
     ];
@@ -94,7 +94,7 @@ export default function ComputerScienceDepartmentFaculty() {
 
 
                                 <div className="img_section">
-                                    <img src={`/assets/images/departments/faculty/eee/${singleFaculty[0]}`} alt="" />
+                                    <img src={`/assets/images/departments/faculty/biot/${singleFaculty[0]}`} alt="" />
                                 </div>
 
                                 <div className="details_section">

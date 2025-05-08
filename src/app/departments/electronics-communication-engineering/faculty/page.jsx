@@ -14,12 +14,12 @@ import "./style.css"
 export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
-        ["ece_faculty_1.jpg", "Ms. Pavitha P P", "M.Tech", "HOD", "Electronics/ Communication Engineering"],
-        ["ece_faculty_2.jpg", "Ms. Ambika Sekhar", "M.Tech", "Assistant Professor", "Microwave and Television Engineering/ IoT and Embedded Systems"],
-        ["ece_faculty_3.jpg", "Ms. Saritha N R", "M.Tech", "Assistant Professor", "Applied Electronics/ Nano Electronics"],
-        ["ece_faculty_4.jpg", "Mr. Sabi S", "M.Tech", "Assistant Professor", "Microwave and Television Engineering/ Image Processing"],
-        ["ece_faculty_5.jpg", "Ms. Jasmin Basheer", "M.Tech", "Assistant Professor", "Industrial Instrumentation and Control / Industrial Automation and Control"],
-        ["ece_faculty_6.jpg", "Ms. Pooja S Mohan", "M.Tech", "Assistant Professor", "Optoelectronics and Communication Systems / Signals and Systems"],
+        ["ece_faculty_1.jpg", "Pavitha P. P.", "B.Tech, M.Tech", "HoD", " Electronics"],
+        ["ece_faculty_2.jpg", "Ambika Sekhar", "M.Tech", "Assistant Professor", " Microwave and Television Engineering"],
+        ["ece_faculty_3.jpg", "Saritha N. R.", "M.Tech", "Assistant Professor", "Applied Electronics"],
+        ["ece_faculty_4.jpg", "Sabi S.", "M.Tech", "Assistant Professor", "Microwave and Television Engineering"],
+        ["ece_faculty_5.jpg", "Jasmin Basheer", "M.Tech", "Assistant Professor", " Industrial Instrumentation and Control"],
+        ["ece_faculty_6.jpg", "Pooja S. Mohan", "M.Tech", "Assistant Professor", "Optoelectronics and Communication Systems "],
         ["ece_faculty_7.jpg", "Ms. T R Sangeeta", "M.Tech", "Assistant Professor", "Communication Engineering"],
         ["ece_faculty_8.jpg", "Ms. Chinchu S", "M.Tech", "Assistant Professor", "Communication Engineering"],
         ["ece_faculty_9.jpg", "Mr. Hari S", "M.Tech", "Assistant Professor", "Wireless Networks and Applications"]
