@@ -9,10 +9,10 @@ export default function page() {
       <br />
       <br />
 
-      <NAAC
+      {/* <NAAC
         name="mandatory disclosure 2024-2025"
         link="/assets/documents/mandatory_disclosure/mandatory_disclosure_2024-25.pdf"
-      />
+      /> */}
          <NAAC
         name="mandatory disclosure 2025-2026"
         link="/assets/documents/mandatory_disclosure/mandatory_disclosure_2025-26.pdf"

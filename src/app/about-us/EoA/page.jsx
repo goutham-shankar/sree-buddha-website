@@ -18,6 +18,20 @@ function Page() {
           path: `${process.env.NEXT_PUBLIC_STRAPI}/${item.EoA_pdf[0].url}`, // Full URL for the PDF
         }));
 
+        console.log(files)
+
+        for( let i = 0 ; i < files.length-1 ; i ++){
+          for ( let j = 0 ; j < files.length-2 ; j ++){
+
+            if (files[j].order < files[j+1].order){
+              let temp = files[j];
+              files[j] = files[j+1]
+              files[j+1]= temp;
+            }
+
+          }
+        }
+        
         setPdfFiles(files);
       } catch (error) {
         console.error('Error fetching PDF files:', error);
