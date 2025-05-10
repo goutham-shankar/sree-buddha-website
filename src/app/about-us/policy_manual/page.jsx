@@ -1,0 +1,46 @@
+"use client"
+
+import React from "react";
+import { useEffect, useState } from "react";
+import NAAC from "@/components/accreditation/NAAC/naac";
+import { useFieldArray } from "react-hook-form";
+
+export default function page() {
+
+  const [data, setData] = useState(null)
+
+  useEffect(() => {
+
+    fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/policy-manual?populate=*`).then((response) => {
+      return response.json()
+    }).then((jsondata) => {
+      setData(jsondata);
+      console.log(data)
+    })
+
+  }, [])
+
+  return (
+    <div className="page">
+      <h3 className="page_heading">Policy Manual</h3>
+      <hr />
+      <br />
+      <br />
+
+      {/* <NAAC
+        name="mandatory disclosure 2024-2025"
+        link="/assets/documents/mandatory_disclosure/mandatory_disclosure_2024-25.pdf"
+      /> */}
+      {
+        data == null ? "loading.." :
+
+          <NAAC
+            name={data.data.title}
+            link={`${process.env.NEXT_PUBLIC_STRAPI}${data.data.file.url}`}
+          />
+      }
+
+
+    </div>
+  );
+}

@@ -22,6 +22,18 @@ export default function Navbar() {
           name: "Mandatory Disclosure",
           link: "/about-us/mandatory_disclosure",
         },
+        {
+          name: "Service Manuals and Employment Policies",
+          link: "/about-us/service_mansuals_and_employment_policies",
+        },
+        {
+          name: "Administrative and Academic Bodies",
+          link: "/about-us/academic_and_administrative_bodies",
+        },
+        {
+          name: "Policy Manual",
+          link: "/about-us/policy_manual",
+        },
         { name: "AICTE EOA", link: "/about-us/EoA" },
         {
           name: "Student Code of Conduct and Ethics",
