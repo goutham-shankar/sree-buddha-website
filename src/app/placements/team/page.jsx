@@ -29,7 +29,7 @@ export default function Team() {
               <div className="text-gray-700 text-lg leading-relaxed">
                 <p className="mb-4">
                   A structured programme is implemented for enhancing the communication skill of students right from first year. 
-                  'Language Lab' helps students to improve their pronunciation and acquire linguistic skills. Regular Training 
+                  &apos;Language Lab&apos; helps students to improve their pronunciation and acquire linguistic skills. Regular Training 
                   programmes are arranged by experts in the field to enhance the overall personality of the students. The cell 
                   has started an in house training programme along with the routine academics. Exhaustive training is imparted 
                   to the students covering all aspects of soft skills, aptitude and technical skills. The course module designed 
