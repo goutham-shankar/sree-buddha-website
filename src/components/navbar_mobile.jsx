@@ -30,6 +30,7 @@ export default function NavbarMobile() {
                 { name: "Principal", link: "/about-us/principal", visible: false },
                 { name: "Organogram", link: "/about-us/oronogram", visible: false },
                 { name: "Mandatory Disclosure", link: "/about-us/mandatory_disclosure", visible: false },
+                {name: "Service Rules and Employment Policy",link: "/about-us/service_mansuals_and_employment_policies",visible: false},
                 { name: "AICTE EOA", link: "/about-us/EoA", visible: false },
                 { name: "Student Code of Conduct and Ethics", link: "/about-us/student_code_of_conduct", visible: false },
                 { name: "Internal Quality Assurance Cell", link: "/about-us/iqac", visible: false },

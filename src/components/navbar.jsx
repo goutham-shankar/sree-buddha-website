@@ -23,7 +23,7 @@ export default function Navbar() {
           link: "/about-us/mandatory_disclosure",
         },
         {
-          name: "Service Manuals and Employment Policies",
+          name: "Service Rules and Employment Policy",
           link: "/about-us/service_mansuals_and_employment_policies",
         },
         {
