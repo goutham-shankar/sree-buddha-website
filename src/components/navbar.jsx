@@ -143,7 +143,7 @@ export default function Navbar() {
       name: "Cells and Chapter",
       links: [
         {
-          name: "Various Cells and Committees",
+          name: "Academic and Administrative Bodies",
           link: "/cells_and_chapters/student-clubs",
         },
         { name: "IEEE", link: "/cells_and_chapters/ieee" },
