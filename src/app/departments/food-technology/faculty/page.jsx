@@ -15,11 +15,11 @@ export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
 
-        ["malu_ravi.jpg", "Dr. Malu Ravi", "Ph.D", "HOD", "Food processing"],
-        ["rincy.jpg", "Ms. Rincy Susan Raju", "M.Tech", "Asst. Professor", "Food technology"],
-        ["athulaya.jpg", "Ms. Athulya Krishnan", "MSc", "Asst. Professor", "Food technology"],
+        ["malu_ravi.jpg", "Dr. Malu Ravi", "Ph.D", "HOD", "Food Microbiology"],
+        ["rincy.jpg", "Ms. Rincy Susan Raju", "M.Tech", "Asst. Professor", "Food biotechnology"],
+        ["athulaya.jpg", "Ms. Athulya Krishnan", "MSc", "Asst. Professor", "Food technology and quality assurance"],
         ["Bindhya.jpg", "Dr. Bindhya K P", "Ph.D", "Asst. Professor", "Chemical Engineering"],
-        ["priy.jpg", "Ms. Priyadharshini S", "M.tech", "Asst. Professor", "Food technology"]
+        ["priy.jpg", "Ms. Priyadharshini S", "M.tech", "Asst. Professor", "Food Processing"]
 
     ];
 

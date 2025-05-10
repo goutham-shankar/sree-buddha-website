@@ -102,86 +102,12 @@ export default function FoodTechnologyPEOSPSO() {
       </section>
       
       {/* PG Program Section */}
-      <section>
-        <h2 className="text-2xl md:text-3xl font-bold text-yellow-900 mb-6 pb-2 border-b-2 ">
-          2. PG IN FOOD TECHNOLOGY (M.TECH)
-        </h2>
-        
-        {/* PEO Section */}
-        <div className="mb-8">
-          <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-3">
-            Program Educational Objectives (PEOs)
-          </h3>
-          <p className="mb-2">The Program Educational Objectives (PEOs) of the Post Graduate degree (M.Tech) in Food Technology program are presented below.</p>
-          <p className="font-medium mb-2">The graduates will:</p>
-          <ul className="space-y-3">
-            <li>
-              <span className="font-semibold">PEO I: </span>
-              Analyze complex problems in food processing and develop innovative solutions for the industry.
-            </li>
-            <li>
-              <span className="font-semibold">PEO II: </span>
-              Implement advanced technologies in food preservation, packaging, and quality control systems.
-            </li>
-            <li>
-              <span className="font-semibold">PEO III: </span>
-              Pursue research and leadership roles in food technology sectors and academic institutions.
-            </li>
-          </ul>
-        </div>
-        
-        {/* PO Section */}
-        <div className="mb-8">
-          <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-3">
-            Program Outcomes (POs)
-          </h3>
-          <p className="mb-2">The graduates will be able to:</p>
-          <ul className="space-y-3">
-            <li>
-              <span className="font-semibold">PO1: </span>
-              Conduct independent research in food technology to address industry challenges.
-            </li>
-            <li>
-              <span className="font-semibold">PO2: </span>
-              Document and present technical findings in professional formats.
-            </li>
-            <li>
-              <span className="font-semibold">PO3: </span>
-              Demonstrate expertise in specialized areas of food technology.
-            </li>
-            <li>
-              <span className="font-semibold">PO4: </span>
-              Design and test advanced food processing systems and novel products.
-            </li>
-            <li>
-              <span className="font-semibold">PO5: </span>
-              Collaborate effectively in multidisciplinary teams on food technology projects.
-            </li>
-            <li>
-              <span className="font-semibold">PO6: </span>
-              Commit to lifelong learning and ethical practices in food science and technology.
-            </li>
-          </ul>
-        </div>
-        
-        {/* PSO Section */}
-        <div>
-          <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-3">
-            Program Specific Outcomes (PSOs)
-          </h3>
-          <p className="mb-2">Food Technology graduates will be able to:</p>
-          <ul className="space-y-3">
-            <li>
-              <span className="font-semibold">PSO1: </span>
-              Develop and deliver novel designs/processes/products that could cater to the food technology industrial demands to improve the social ecosystems.
-            </li>
-            <li>
-              <span className="font-semibold">PSO2: </span>
-              Carryout research of appreciable significance and produce quality publication.
-            </li>
-          </ul>
-        </div>
-      </section>
+
+      {
+        /*
+         */
+      }
+      
     </div>
   );
 }
