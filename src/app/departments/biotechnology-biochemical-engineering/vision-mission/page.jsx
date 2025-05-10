@@ -85,7 +85,7 @@ export default function MechanicalEngineeringVisionMission() {
                         <ul className="text-gray-600 leading-relaxed space-y-3 list-disc pl-5">
                             <li> Provide quality education in Biotechnology and Biochemical Engineering.</li>
                             <li>Empower graduates for inculcating research culture with social commitment.</li>
-                            <li>Instil passion for lifelong learning for sustainable development.</li>
+                            <li>Instill passion for lifelong learning for sustainable development.</li>
                         </ul>
                     </motion.section>
 

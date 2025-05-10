@@ -173,24 +173,10 @@ const Page = () => {
       </div>
 
       <div className>
-        <div className="para-style">
-          "The National Board of Accreditation (NBA), India was initially
-          established by AICTE (All India Council of Technical Education) under
-          section 10(u) of AICTE act, in the year 1994, for periodic evaluations
-          of technical institutions & programs basis according to specified norms
-          and standards as recommended by AICTE council. NBA in its present form
-          came into existence as an autonomous body with effect from 7th January
-          2010, with the objective of Assurance of Quality and Relevance of
-          Education, especially of the programs in professional disciplines".The
-          purpose of the accreditation by NBA is to promote and recognize
-          excellence in technical education in colleges and universities—at both
-          the undergraduate and post graduate levels. Institutions, students,
-          employers, and the public at large all benefit from the external
-          verification of quality provided through the NBA accreditation process.
-          They also benefit from the process of continuous quality improvement
-          that is encouraged by the NBA's developmental approach to promote
-          excellence in technical education.
-        </div>
+      <div className="para-style">
+  {`"The National Board of Accreditation (NBA), India was initially established by AICTE (All India Council of Technical Education) under section 10(u) of AICTE act, in the year 1994, for periodic evaluations of technical institutions & programs basis according to specified norms and standards as recommended by AICTE council. NBA in its present form came into existence as an autonomous body with effect from 7th January 2010, with the objective of Assurance of Quality and Relevance of Education, especially of the programs in professional disciplines". The purpose of the accreditation by NBA is to promote and recognize excellence in technical education in colleges and universities—at both the undergraduate and post graduate levels. Institutions, students, employers, and the public at large all benefit from the external verification of quality provided through the NBA accreditation process. They also benefit from the process of continuous quality improvement that is encouraged by the NBA's developmental approach to promote excellence in technical education.`}
+</div>
+
       </div>
 
       <div className="sub-heading">NBA Accredited Departments</div>
