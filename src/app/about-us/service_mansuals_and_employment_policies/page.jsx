@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import NAAC from "@/components/accreditation/NAAC/naac";
 import { useFieldArray } from "react-hook-form";
 
-export default function page() {
+export default function Page() {
 
   const [data, setData] = useState(null)
 
