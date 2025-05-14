@@ -169,7 +169,7 @@ const Page = () => {
           className="img1"
           src="/assets/images/accreditation/NBA_RITS_2.png"
           alt="NBA Accreditation Logo"
-        />
+        />  
       </div>
 
       <div className>
@@ -179,7 +179,7 @@ const Page = () => {
 
       </div>
 
-      <div className="sub-heading">NBA Accredited Departments</div>
+      <div className="sub-heading">NBA 2025</div>
 
       {loading ? (
         <p>Loading NBA accreditation data...</p>
