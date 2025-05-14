@@ -6,45 +6,45 @@ import { FileText, Download } from 'lucide-react';
 export default function StudentClubs() {
   // Committee data with PDF links
   const committees = [
-    {
-      id: 1,
-      title: "Committee Page 1",
-      pdf: "/pdfs/Committees-pages-1.pdf"
-    },
-    {
-      id: 2,
-      title: "Committee Page 2",
-      pdf: "/pdfs/Committees-pages-2.pdf"
-    },
-    {
-      id: 3,
-      title: "Committee Page 3",
-      pdf: "/pdfs/Committees-pages-3.pdf"
-    },
-    {
-      id: 4,
-      title: "Committee Page 4",
-      pdf: "/pdfs/Committees-pages-4.pdf"
-    },
-    {
-      id: 5,
-      title: "Committee Page 5",
-      pdf: "/pdfs/Committees-pages-5.pdf"
-    },
-    {
-      id: 6,
-      title: "Committee Page 6",
-      pdf: "/pdfs/Committees-pages-6.pdf"
-    },
-    {
-      id: 7,
-      title: "Committee Page 7",
-      pdf: "/pdfs/Committees-pages-7.pdf"
-    },
+    // {
+    //   id: 1,
+    //   title: "Committee Page 1",
+    //   pdf: "/pdfs/Committees-pages-1.pdf"
+    // },
+    // {
+    //   id: 2,
+    //   title: "Committee Page 2",
+    //   pdf: "/pdfs/Committees-pages-2.pdf"
+    // },
+    // {
+    //   id: 3,
+    //   title: "Committee Page 3",
+    //   pdf: "/pdfs/Committees-pages-3.pdf"
+    // },
+    // {
+    //   id: 4,
+    //   title: "Committee Page 4",
+    //   pdf: "/pdfs/Committees-pages-4.pdf"
+    // },
+    // {
+    //   id: 5,
+    //   title: "Committee Page 5",
+    //   pdf: "/pdfs/Committees-pages-5.pdf"
+    // },
+    // {
+    //   id: 6,
+    //   title: "Committee Page 6",
+    //   pdf: "/pdfs/Committees-pages-6.pdf"
+    // },
+    // {
+    //   id: 7,
+    //   title: "Committee Page 7",
+    //   pdf: "/pdfs/Committees-pages-7.pdf"
+    // },
     {
       id: 8,
-      title: "Committee Page 8",
-      pdf: "/pdfs/Committees-pages-8.pdf"
+      title: "Academic and Administrative Bodies",
+      pdf: "/pdfs/Academic-and-Administrative-Bodies.pdf"
     }
   ];
 
@@ -53,7 +53,7 @@ export default function StudentClubs() {
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
         {/* Header section with title */}
         <div className="bg-gradient-to-r from-yellow-700 to-amber-500 p-6 md:p-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">Various Committees</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">Academic and Administrative Bodies</h1>
           <div className="h-1 w-20 bg-white opacity-70 mb-4"></div>
           <p className="text-white text-lg opacity-90">
             Download committee information and guidelines

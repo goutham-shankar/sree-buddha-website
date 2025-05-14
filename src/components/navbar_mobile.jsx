@@ -30,6 +30,7 @@ export default function NavbarMobile() {
                 { name: "Principal", link: "/about-us/principal", visible: false },
                 { name: "Organogram", link: "/about-us/oronogram", visible: false },
                 { name: "Mandatory Disclosure", link: "/about-us/mandatory_disclosure", visible: false },
+                {name: "Service Rules and Employment Policy",link: "/about-us/service_mansuals_and_employment_policies",visible: false},
                 { name: "AICTE EOA", link: "/about-us/EoA", visible: false },
                 { name: "Student Code of Conduct and Ethics", link: "/about-us/student_code_of_conduct", visible: false },
                 { name: "Internal Quality Assurance Cell", link: "/about-us/iqac", visible: false },
@@ -113,7 +114,7 @@ export default function NavbarMobile() {
             name: "Cells and Chapter",
             visible: false,
             links: [
-                { name: "Various Cells and Committees", link: "/cells_and_chapters/various_cells", visible: false },
+                { name: "Academic and Administrative Bodies", link: "/cells_and_chapters/various_cells", visible: false },
                 { name: "IEEE", link: "/cells_and_chapters/ieee", visible: false },
                 { name: "IE(I)", link: "/cells_and_chapters/ie_i", visible: false },
                 { name: "SAE India", link: "/cells_and_chapters/sae_india", visible: false },

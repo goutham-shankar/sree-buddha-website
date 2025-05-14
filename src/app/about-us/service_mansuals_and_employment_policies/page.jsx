@@ -22,7 +22,7 @@ export default function Page() {
 
   return (
     <div className="page">
-      <h3 className="page_heading">Service Manuals and Employment Policies</h3>
+      <h3 className="page_heading">Service Rules and Employment Policy</h3>
       <hr />
       <br />
       <br />

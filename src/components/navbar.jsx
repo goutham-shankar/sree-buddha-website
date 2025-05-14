@@ -23,7 +23,7 @@ export default function Navbar() {
           link: "/about-us/mandatory_disclosure",
         },
         {
-          name: "Service Manuals and Employment Policies",
+          name: "Service Rules and Employment Policy",
           link: "/about-us/service_mansuals_and_employment_policies",
         },
         {
@@ -143,7 +143,7 @@ export default function Navbar() {
       name: "Cells and Chapter",
       links: [
         {
-          name: "Various Cells and Committees",
+          name: "Academic and Administrative Bodies",
           link: "/cells_and_chapters/student-clubs",
         },
         { name: "IEEE", link: "/cells_and_chapters/ieee" },
