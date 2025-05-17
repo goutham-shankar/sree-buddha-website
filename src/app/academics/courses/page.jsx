@@ -258,6 +258,14 @@ export default function CoursesPage() {
                   Our B.Tech programs offer comprehensive engineering education with a focus on practical skills,
                   industry-relevant knowledge, and innovation.
                 </p>
+                <button
+                    className="bg-yellow-900 text-white mt-5 px-3 py-2 text-sm rounded-md hover:bg-yellow-800 transition-colors"
+                    onClick={() => {
+                    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdZkVC3f7rIeBlkVnW-One8uC1NnsHxQZtK013KVjP7ZKxzxg/viewform";
+                    }}
+                     >
+                    Apply Now
+                </button>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -363,6 +371,14 @@ export default function CoursesPage() {
                 <p className="text-gray-600">
                   Our M.Tech programs provide advanced knowledge and research opportunities in specialized engineering domains.
                 </p>
+                <button
+                    className="bg-yellow-900 text-white px-3 py-2 mt-5 text-sm rounded-md hover:bg-yellow-800 transition-colors"
+                    onClick={() => {
+                     window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe3RvBGmTslrxDMHBYn0vGufABqCvqUZnumUazbylQZ3J5lgQ/viewform";
+                     }}
+                      >
+                    Apply Now
+                    </button>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

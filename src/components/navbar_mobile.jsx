@@ -154,7 +154,7 @@ export default function NavbarMobile() {
                         { name: "Cycle3", link: "/accreditation/NAAC/Cycle3", visible: false },
                     ],
                 },
-                { name: "NBA", link: "/accreditation/nba", visible: false },
+                { name: "NBA", link: "/accreditation/NBA", visible: false },
                 { name: "NIRF", link: "/accreditation/nirf", visible: false },
                 { name: "ARIIA", link: "/accreditation/ariia", visible: false },
             ],
