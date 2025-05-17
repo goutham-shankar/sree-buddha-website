@@ -122,6 +122,7 @@ const ContactForm = () => {
                                         <h3 className="text-lg font-semibold mb-1">Phone</h3>
                                         <a href="tel:+919446014317" className="text-yellow-200 hover:text-white transition-colors">
                                             +91 9446014317
+                                            +91 85903 32548
                                         </a>
                                     </div>
                                 </div>
