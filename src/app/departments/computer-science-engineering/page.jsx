@@ -86,7 +86,7 @@ export default function ComputerScienceDepartment() {
       "Department association named CYBORG with active student participation"
     ],
     industry: [
-      "Management of Remote Centre for IIT Bombay",
+      // "Management of Remote Centre for IIT Bombay",
       "College membership of NASSCOM",
       "Regular invited lectures by experts from Industries and Academia"
     ],
@@ -251,21 +251,21 @@ export default function ComputerScienceDepartment() {
             transition={{ duration: 0.5 }}
           >
             <div className="cs-dept-profile-text text-lg space-y-4">
-              <p>
+              <p className='text-justify'>
                 Sree Buddha College of Engineering provides world-class infrastructure, state-of-the-art facilities, and an academic 
                 ambience that suit the requirements of the dynamic and highly competitive global environment. In this era of 
                 Information Technology, this institution offers courses in Computer Science and Engineering with the objective of imparting 
                 quality education to equip students with a solid and thorough understanding of the fundamentals and core subjects of Computer Engineering.
               </p>
                 
-              <p>
-                The Department of Computer Science and Engineering was established in the year 2002. At present the sanctioned intake is 60 
+              <p className='text-justify'>
+                The Department of Computer Science and Engineering was established in the year 2002. At present the sanctioned intake is 240 
                 with a provision of admitting six diploma holders in the third semester under lateral entry scheme. The department also offers 
-                M.Tech programme specialized in Computer Science and Engineering from the year 2011. The sanctioned intake at present is 18. 
+                M.Tech programme specialized in Computer Science and Engineering from the year 2011. The sanctioned intake at present is 6. 
                 This department is accredited by NBA since November 2019.
               </p>
 
-              <p>
+              <p className='text-justify'>
                 The department has well-experienced faculty with postgraduate and doctoral qualifications from prestigious institutions with 
                 many publications to their credit. The faculty members regularly update their skills by attending and organizing refresher 
                 courses in their areas of specialization.
