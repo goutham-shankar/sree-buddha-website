@@ -84,7 +84,7 @@ export default function Navbar() {
       name: "Departments",
       links: [
         {
-          name: "Basic Science and Humanities",
+          name: "Basic Science and Mathematics",
           link: "/departments/mathematics-and-basic-sciences",
         },
         {
