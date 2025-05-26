@@ -25,7 +25,7 @@ export default function ResearchPage() {
     useEffect(() => {
         async function fetchResearch() {
             try {
-                const response = await fetch('https://sbce.ac.in/api/api/researchs?populate=Research_media');
+                const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/researchs?populate=Research_media`);
                 if (!response.ok) throw new Error('Failed to fetch research data');
                 const data = await response.json();
                 setResearchData(data.data || []);
@@ -206,7 +206,7 @@ export default function ResearchPage() {
                                 {/* Loop through research data (duplicated for infinite scroll effect) */}
                                 {duplicatedResearch.map((research, index) => {
                                     const imageUrl = research.Research_media
-                                        ? `https://sbce.ac.in/api${research.Research_media.url}`
+                                        ? `${process.env.NEXT_PUBLIC_STRAPI}${research.Research_media.url}`
                                         : null;
 
                                     return (
