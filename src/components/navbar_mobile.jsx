@@ -84,7 +84,7 @@ export default function NavbarMobile() {
                 { name: "Computer Science and Engineering (Artificial Intelligence & Machine learning)", link: "/departments/artificial-intelligence-machine-learning", visible: false },
                 { name: "Electronics and Computer Engineering", link: "/departments/electronics-computer-engineering", visible: false },
                 { name: "Civil Engineering", link: "/departments/civil-engineering", visible: false },
-                { name: "Basic Science and Humanities", link: "/departments/mathematics-and-basic-sciences", visible: false },
+                { name: "Basic Science and Mathematics", link: "/departments/mathematics-and-basic-sciences", visible: false },
                 { name: "Food Technology", link: "/departments/food-technology", visible: false },
                 { name: "Biotechnology and Biochemical Engineering", link: "/departments/biotechnology-biochemical-engineering", visible: false },
             ],
