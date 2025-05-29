@@ -1,137 +1,41 @@
-.container {
-    padding-left: 10%;
-    padding-right: 10%;
-    font-weight: 400;
-    overflow-x: hidden;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-   
-  }
-  .title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 45px;
-    font-weight: 700;
-    line-height: 1.5em;
-    text-align: left;
-    color: #845714;
-    margin-top: 20px;
-  }
-  .heading {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 37.5px;
-    /* text-align: justify; */
-    margin-bottom: 20px;
-  }
-  .headingtwo {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 37.5px;
-    /* text-align: justify; */
-    margin-bottom: 20px;
+/* Add these styles to your existing CSS file */
+.pattern-diagonal-lines {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
+  background-size: 10px 10px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
   }
   
-
-.table-container {
-    overflow-x: hidden; /* Disable horizontal scrolling */
-    max-width: 60%;
-    padding-left: 10%;
+  table {
+    font-size: 0.875rem;
+  }
+  
+  th, td {
+    padding: 0.5rem 0.75rem;
+  }
 }
 
+/* Table styles */
 table {
-    width: 90%; /* Make the table take the full width */
-    border-collapse: collapse;
-    border: 1px solid #000;
-    text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
 }
 
-th, td {
-    border: 1px solid #000;
-    padding: 8px;
-    font-size: 1rem;
+th {
+  background-color: #78350f;
+  color: white;
+  font-weight: 600;
 }
 
-thead th {
-    font-weight: bold;
-    background-color: #f2f2f2;
-    text-align: center;
+tr:hover {
+  background-color: rgba(254, 243, 199, 0.5);
 }
 
 .division {
-    font-weight: bold;
-    background-color: #e8e8e8;
-    text-align: left;
-}
-
-
-/* Remove underline and set color to black for links */
-.btn {
-    text-decoration: none; /* Removes underline */
-    color: black; /* Changes text color to black */
-    padding: 10px 15px; /* Optional: Add padding for better styling */
-    display: inline-block; /* Keeps the button styling consistent */
-    border-radius: 20px; /* Optional: Round the corners */
-    text-align: center; /* Centers text inside the button */
-    cursor: pointer; /* Makes it look clickable */
-    margin-top: 1%;
-    background-color: #E6B66D;
-    width: 10vw;
-  }
-  
-  .btn:hover {
-    color: white; /* Changes text color on hover */
-    background-color: rgb(211, 145, 3);
-  }
-  .last{
-    display: flex;
-    flex-direction: column;
-  }
-  
-  @media (max-width: 1200px){
-.btn{
-    width: 20vw;
-}
-  }
-/* Responsive Design */
-@media (max-width: 480px) {
-    .body{
-        font-size: 14px;
-    }
-    
-    .title{
-        font-size: 25px;
-    }
-    .heading{
-        font-size: 18px;
-        margin-bottom: 0px;
-    }
-    .headingtwo{
-        font-size: 16px;
-        margin-bottom: 0px;
-    }
-    .table-container {
-        /* padding-left: 20px; */
-        padding-right: 10%;
-        overflow-x: hidden; /* Disable horizontal scrolling */
-        max-width: 90%;
-    }
-    th, td {
-        font-size: 0.8rem; /* Further reduce font size */
-        padding: 4px; /* Reduce padding */
-    }
-
-    .division td {
-        font-size: 0.9rem; /* Slightly larger for division */
-    }
-
-    table {
-        width: 100%; /* Ensure the table is responsive */
-    }
-
-    .paragraph{
-        font-size: 16px;
-    }
-    .btn{
-        width: 45vw;
-    }
+  background-color: #fef3c7;
+  font-weight: 600;
 }

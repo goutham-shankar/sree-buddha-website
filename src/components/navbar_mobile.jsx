@@ -166,7 +166,7 @@ export default function NavbarMobile() {
                 { name: "Alumni Registration", link: "/alumni/registration", visible: false },
                 { name: "Executive Body", link: "/alumni/executive_body", visible: false },
                 { name: "IPR", link: "/alumni/ipr", visible: false },
-                { name: "Alumni Reports", link: "/alumni/reports", visible: false },
+                { name: "Alumni Reports", link: "/alumni/alumni_reports", visible: false },
             ],
         },
         {

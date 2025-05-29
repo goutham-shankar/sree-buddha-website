@@ -167,27 +167,7 @@ export default function PlacementDetails() {
             </div>
           </div>
 
-          {/* Contact information */}
-          <div className="border-t border-gray-200 p-6 bg-white">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">Placement Office</h3>
-                <p className="text-gray-600">
-                  Head: Prof. Rajesh Kumar<br />
-                  Phone: (123) 456-7890<br />
-                  Email: corporate.relations@college.edu
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">Student Placement Coordinators</h3>
-                <p className="text-gray-600">
-                  Tech Department: Rahul Sharma<br />
-                  Management: Priya Patel<br />
-                  Email: placement.representatives@college.edu
-                </p>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </main>
     </div>
