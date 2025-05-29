@@ -110,7 +110,7 @@ export default function Consultancy() {
             <div className="bg-yellow-50 rounded-lg p-4 sm:p-6 shadow-sm">
               <h3 className="text-lg font-bold text-gray-900 mb-4">MODE OF PAYMENT</h3>
               <p className="text-sm sm:text-base text-gray-700 mb-4">
-                For details on analysis charges contact <span className="font-semibold">"The In-Charge, Research & Consultancy, BT & BCE Dept, OR, HoD, BT & BCE"</span> in the following:
+                For details on analysis charges contact <span className="font-semibold">&quot;The In-Charge, Research & Consultancy, BT & BCE Dept, OR, HoD, BT & BCE&quot;</span> in the following:
               </p>
               <div className="space-y-2">
                 <p className="text-sm sm:text-base">E-mail: <span className="font-semibold">bioresearchsbce@gmail.com</span></p>

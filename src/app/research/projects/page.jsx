@@ -466,7 +466,7 @@ export default function Projects() {
               <span className="text-yellow-800">{project.org}</span>
               {project.org === 'KSCSTE' && ' (Kerala State Council for Science, Technology and Environment)'} 
               {project.amount === "48.48 Lakhs" && ' under the Biotechnology Career Advancement and Re-orientation Programme (Bio-CARe) for women Scientists'} 
-              {' '}for the Project titled "{project.project}" in {project.year}.
+              {' '}for the Project titled &quot;{project.project}&quot; in {project.year}.
             </div>
           </li>
         ))}

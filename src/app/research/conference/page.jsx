@@ -31,7 +31,7 @@ export default function Conferences() {
           <div className="bg-yellow-50 rounded-lg p-4 sm:p-6 shadow-sm mb-6">
             <p className="text-sm sm:text-base text-gray-700 mb-6">
               Department of Electronics and Communication, Sree Buddha College of Engineering, Pattoor, Alappuzha, Kerala
-              organized an Online National Conference <span className="font-bold">"REVOLUTIONIZE ELECTRONICS AND COMMUNICATION TECHNOLOGIES"</span> on 23th 
+              organized an Online National Conference <span className="font-bold">&quot;REVOLUTIONIZE ELECTRONICS AND COMMUNICATION TECHNOLOGIES&quot;</span> on 23th 
               and 24th June 2022...
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -58,7 +58,7 @@ export default function Conferences() {
         {/* Expenditure Statement */}
         <section className="mb-8 sm:mb-12">
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 border-l-4 border-yellow-900 pl-3">
-            EXPENDITURE STATEMENT OF REACT'21
+            EXPENDITURE STATEMENT OF REACT&apos;21
           </h2>
           <div className="overflow-x-auto bg-white rounded-lg shadow-sm">
             <table className="min-w-full divide-y divide-gray-200">
@@ -84,11 +84,11 @@ export default function Conferences() {
         {/* National Conclave Section */}
         <section className="mb-8 sm:mb-12">
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 border-l-4 border-yellow-900 pl-3">
-            Two day National Conclave on 'Accreditation & Bench marking'
+            Two day National Conclave on &apos;Accreditation & Bench marking&apos;
           </h2>
           <div className="bg-yellow-50 rounded-lg p-4 sm:p-6 shadow-sm mb-6">
             <p className="text-sm sm:text-base text-gray-700 mb-6">
-              Two day National Conclave on 'Accreditation & Bench marking' conducted on 21 & 22 December 2018...
+              Two day National Conclave on &apos;Accreditation & Bench marking&apos; conducted on 21 & 22 December 2018...
             </p>
             <div className="relative h-64 sm:h-96">
               <Image 
@@ -104,7 +104,7 @@ export default function Conferences() {
         {/* E2F2 2018 Section */}
         <section className="mb-8 sm:mb-12">
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 border-l-4 border-yellow-900 pl-3">
-            2ND ANNUAL CONFERENCE SERIES ON "ENGINEERING EDUCATION FOR FACING THE FUTURE (E2F2 2018)"
+            2ND ANNUAL CONFERENCE SERIES ON &quot;ENGINEERING EDUCATION FOR FACING THE FUTURE (E2F2 2018)&quot;
           </h2>
           <div className="bg-yellow-50 rounded-lg p-4 sm:p-6 shadow-sm">
             <div className="prose prose-sm sm:prose-base text-gray-700">
