@@ -203,7 +203,7 @@ export default function ComputerScienceDepartment() {
       <div className="cs-dept-container bg-[#E6E6E6] text-gray-800 font-['Poppins',sans-serif] p-5 md:p-8">
         <header className="cs-dept-header py-6 mb-6 border-b-2 border-[#845714]">
           <h1 className="text-[#845714] text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
-          Department of Computer Science and Engineering
+          Department of Computer Science And Engineering
           </h1>
           <p className="text-lg md:text-xl">
             Innovation • Excellence • Future
@@ -259,7 +259,7 @@ export default function ComputerScienceDepartment() {
               </p>
                 
               <p className='text-justify'>
-                The Department of Computer Science and Engineering was established in the year 2002. At present the sanctioned intake is 240 
+                The Department of Computer Science And Engineering was established in the year 2002. At present the sanctioned intake is 240 
                 with a provision of admitting six diploma holders in the third semester under lateral entry scheme. The department also offers 
                 M.Tech programme specialized in Computer Science and Engineering from the year 2011. The sanctioned intake at present is 6. 
                 This department is accredited by NBA since November 2019.
