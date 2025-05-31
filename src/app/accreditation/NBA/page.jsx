@@ -247,7 +247,7 @@ const Page = () => {
                                       {file.FILES.map((doc) => (
                                         <li key={doc.id}>
                                           <a
-                                            href={`https://sbce.ac.in/api${doc.url}`}
+                                            href={`https://sbce.ac.in${doc.url}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                           >
