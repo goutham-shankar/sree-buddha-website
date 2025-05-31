@@ -105,11 +105,11 @@ export default function EventsPage() {
                   <div 
                     key={event.id} 
                     className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
-                    onClick={() => window.location.href = `/events/${event.documentId}`}
+                    onClick={() => window.location.href = `/news/${event.documentId}`}
                   >
                     <div className="relative h-48">
                     <img 
-  src={`${process.env.NEXT_PUBLIC_STRAPI}/${event.News_media.formats.medium.url}`}
+  src={`${process.env.NEXT_PUBLIC_STRAPI}${event.News_media.formats.medium.url}`}
 
   
   alt={event.Heading} 

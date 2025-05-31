@@ -19,6 +19,7 @@ export default function EventsPage() {
         }
         
         const data = await response.json();
+        console.log(data.data)
         setEvents(data.data);
         setError(null);
       } catch (error) {
@@ -109,7 +110,8 @@ export default function EventsPage() {
                   >
                     <div className="relative h-48">
                     <img 
-  src={`${process.env.NEXT_PUBLIC_STRAPI}/${event.Event_media.formats.medium.url}`}
+  // src={`${process.env.NEXT_PUBLIC_STRAPI}/${event.Event_media.formats.medium.url}`}
+  src={`${process.env.NEXT_PUBLIC_STRAPI}${event.Event_media.url}`}
 
   
   alt={event.Heading} 
