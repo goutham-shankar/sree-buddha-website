@@ -67,7 +67,7 @@ const Page = () => {
     const fetchNbaData = async () => {
       try {
         const response = await fetch(
-          "https://sbce.ac.in/api/api/nba?populate=NBA.file.FILES&pagination[limit]=500"
+          "https://sbce.ac.in/api/nba?populate=NBA.file.FILES&pagination[limit]=500"
         );
 
         if (!response.ok) {
@@ -234,7 +234,7 @@ const Page = () => {
                               }}
                               title="Copy link to this section"
                             >
-                              🔗
+                              🔗  
                             </button>
                           </div>
                           
