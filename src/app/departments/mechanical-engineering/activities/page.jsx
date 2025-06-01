@@ -24,7 +24,7 @@ export default function MechanicalEngineeringDepartmentActivities() {
       title: "IKR 2023 Season 8.0 GoKart Competition",
       category: "competition",
       date: "July 15, 2023",
-      location: "Buddh International Circuit, Noida",
+      location: "Buddh International Circuit,Noida",
       image: "/assets/images/departments/activities/gokart2.jpg",
       description: "Sree Buddha College of Engineering competed in the GoKart national championship conducted by ISIEINDIA (IKR 2023 Season 8.0) at Buddh International Circuit. A vehicle (GOKART) made by 30 students of Mechanical Engineering department was built for this competition. The vehicle can reach 0-100 kmph in 12 seconds.",
       coordinator: "Dr. Senthil Saravanan"
@@ -56,7 +56,7 @@ export default function MechanicalEngineeringDepartmentActivities() {
       date: "March 15, 2025",
       location: "Mechanical Lab",
       image: "/assets/images/departments/activities/workshop1.jpg",
-      description: "A hands-on workshop on cloud computing technologies including AWS, Azure, and Google Cloud Platform. Students will learn to deploy and manage applications in the cloud.",
+      description: "A hands-on workshop on cloud computing technologies including AWS, Azure,and Google Cloud Platform. Students will learn to deploy and manage applications in the cloud.",
       coordinator: "Dr. Anita Sharma"
     },
     {
@@ -108,7 +108,7 @@ export default function MechanicalEngineeringDepartmentActivities() {
             <h3 className="text-lg xxs:text-xl md:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 border-l-4 border-yellow-900 pl-2 sm:pl-3">
               Department Activities
             </h3>
-            <p className="text-xs xxs:text-sm md:text-base text-gray-700">
+            <p className="text-xs xxs:text-sm md:text-base text-gray-700 text-justify">
               The Department of Mechanical Engineering at Sree Buddha College of Engineering conducts 
               various activities throughout the academic year to enhance the technical skills and practical 
               knowledge of students. These activities include Go-Kart design competitions, electric vehicle prototyping workshops, 
@@ -172,8 +172,8 @@ export default function MechanicalEngineeringDepartmentActivities() {
                          <span className="text-xs sm:text-sm text-gray-600">{activity.date}</span>
                        </div>
                        
-                       <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-1 sm:mb-2 line-clamp-2">{activity.title}</h3>
-                       <p className="text-xs sm:text-sm text-gray-700 mb-2 sm:mb-4 line-clamp-3">{activity.description}</p>
+                       <h3 className="text-base sm:text-lg md:text-xl  font-bold text-gray-900 mb-1 sm:mb-2 ">{activity.title}</h3>
+                       <p className="text-xs sm:text-sm text-gray-700 mb-2 sm:mb-4 line-clamp-8 text-justify">{activity.description}</p>
                        
                        <div className="flex items-center justify-between mt-2 sm:mt-4 border-t border-gray-100 pt-2 sm:pt-3">
                          <div className="flex items-center">

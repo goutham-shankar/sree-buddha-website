@@ -48,7 +48,7 @@ const EventCard = ({ title, content, imageSrc, imageAlt, reverse = false, date =
             <h3 className="text-xl md:text-2xl font-bold text-gray-800">{title}</h3>
             <div className="prose prose-gray max-w-none">
               {typeof content === 'string' ? (
-                <p className="text-gray-700">{content}</p>
+                <p className="text-gray-700 text-justify">{content}</p>
               ) : (
                 content
               )}
@@ -75,7 +75,7 @@ const AssociationCard = ({ title, description, logo = null }) => (
       </div>
       <div className="prose prose-gray max-w-none">
         {typeof description === 'string' ? (
-          <p className="text-gray-700">{description}</p>
+          <p className="text-gray-700 text-justify">{description}</p>
         ) : (
           description
         )}
@@ -145,6 +145,12 @@ export default function ComputerScienceDepartmentAssociations() {
 
   return (
     <div className="bg-white min-h-screen">
+      <style jsx global>{`
+        .text-justify {
+          text-align: justify;
+        }
+      `}</style>
+      
       <header className="relative bg-gradient-to-b from-yellow-50 to-white">
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-yellow-900/10 pattern-diagonal-lines pattern-yellow-500/20 pattern-bg-white pattern-size-4" aria-hidden="true" />
@@ -199,7 +205,7 @@ export default function ComputerScienceDepartmentAssociations() {
                     <div className="bg-yellow-50 p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                       <div className="text-sm text-yellow-900 font-semibold mb-1">{event.date}</div>
                       <h4 className="text-lg font-bold mb-2">{event.title}</h4>
-                      <p className="text-gray-700 line-clamp-3">
+                      <p className="text-gray-700 line-clamp-3 text-justify">
                         {typeof event.content === 'string' ? event.content : 'Event details available'}
                       </p>
                     </div>
@@ -223,7 +229,7 @@ export default function ComputerScienceDepartmentAssociations() {
               <SectionHeader title="Get Involved" />
               <div className="bg-yellow-50 rounded-xl p-4 sm:p-6 md:p-8 shadow-md">
                 <h3 className="text-xl font-bold mb-4 text-yellow-900">Join Our Associations</h3>
-                <p className="text-gray-700 mb-6">
+                <p className="text-gray-700 mb-6 text-justify">
                   Get involved with our department associations to enhance your skills, network with professionals,
                   and participate in exciting events and competitions. These associations provide valuable opportunities
                   for personal and professional growth in the field of Biotechnology and Biochemical Engineering.
