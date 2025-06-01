@@ -72,11 +72,11 @@ useEffect(() => {
           <h2 className="cs-dept-section-title">Department Profile</h2>
           <div className="cs-dept-profile-content">
             <div className="cs-dept-profile-text">
-              <p>
+              <p className="text-justify">
               Sree Buddha College of Engineering is one of the pioneers in introducing the Bachelor Program for Electronics and Communication Engineering in Kerala. The department of Electronics & Communication Engineering (ECE), started in the year 2002, has carved a niche for itself by offering the most competent instructional programme to the students. At present the sanctioned intake is 60 with a provision of admitting six diploma holders in the third semester under lateral entry scheme. The department also offers M Tech programme in Embedded Systems from the year 2010 onwards. The sanctioned intake is 6.
               </p>
                 
-              <p>
+              <p className="text-justify">
               The Department of Electronics and Communication Engineering (ECE) at Sree Buddha College of Engineering is dedicated to academic excellence, innovation, and technological advancement. With a team of expert faculty, fully equipped laboratories and Industry collaboration we equip students with the skills and knowledge needed to bridge the gap between the Institute and Industry. The strong partnership with industries and regular hands-on workshops, imparts a strong culture of innovation in design and development of socially relevant and sustainable hardware projects. The research and innovation ecosystem in the department exposes our students into the ever-evolving world of telecommunications, semiconductor technology, IoT, AI-driven automation, robotics, and embedded systems
               </p>
             </div>
@@ -168,6 +168,10 @@ useEffect(() => {
                      </section>
                
         <style jsx>{`
+          .text-justify {
+            text-align: justify;
+          }
+          
           .cs-dept-container {
             background-color: #E6E6E6;
             color: #333;
@@ -350,8 +354,5 @@ useEffect(() => {
           }
         `}</style>
       </div>
-
-      
-
     );
   }

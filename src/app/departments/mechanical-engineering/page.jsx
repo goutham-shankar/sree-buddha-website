@@ -75,40 +75,26 @@ export default function MechanicalDepartment() {
         <h2 className="cs-dept-section-title">Department Profile</h2>
         <div className="cs-dept-profile-content">
           <div className="cs-dept-profile-text">
-            <p>The Department of Mechanical Engineering (ME) was started in the year 2004 with undergraduate program and started postgraduate program in Computer
+            <p className="text-justify">The Department of Mechanical Engineering (ME) was started in the year 2004 with undergraduate program and started postgraduate program in Computer
               Integrated Manufacturing (CIM) in the academic year 2011-12. The department has attracted highly qualified and experienced personnel from various streams
               of Mechanical Engineering as its faculty. The department is an approved research centre of APJ Abdul Kalam Technological University (KTU) for the Ph.D. program.
-              The department is accredited by NBA since November 2019. </p>
+              The department is accredited by NBA since November 2019.</p>
 
-            <p>
+            <p className="text-justify">
               The department houses state-of the-art instructional laboratories, project laboratories and research laboratories. The department provides supportive learning
               environment to both UG and PG levels to prepare students to take up leading positions in academia and industry globally. The robust and engaging curriculum, along
               with hands-on learning, will empower students to elevate their careers to the next level. To perceive latest technologies and opportunities relating to Mechanical
-              Engineering, the department has entered into MOUs with major industries and research institutions in the country to enhance students’ exposure to industry and research.
+              Engineering, the department has entered into MOUs with major industries and research institutions in the country to enhance students' exposure to industry and research.
             </p>
 
-            <p>The faculty members of the department are actively involved in research activities which has led to more than 50 lakhs of research funding from various central and state agencies.
+            <p className="text-justify">The faculty members of the department are actively involved in research activities which has led to more than 50 lakhs of research funding from various central and state agencies.
               In the recent years, the department has also organized many sponsored faculty development programs in association with AICTE and KTU.
             </p>
 
-            <p>
+            <p className="text-justify">
               Studying Mechanical Engineering at SBCE is not just a decision; it&apos;s a gateway to a future filled with excellence and innovation.
             </p>
-
-
           </div>
-          {/* <div className="cs-dept-profile-images">
-                        {buildingImages.map((img, index) => (
-                            <div key={index} className="cs-dept-building-image">
-                                <Image
-                                    src={img}
-                                    alt={`Computer Science Department Building ${index + 1}`}
-                                    width={400}
-                                    height={300}
-                                />
-                            </div>
-                        ))}
-                    </div> */}
         </div>
       </section>
 
@@ -166,8 +152,6 @@ export default function MechanicalDepartment() {
               <li>Continuous updates to incorporate emerging trends in mechanical engineering.</li>
             </ul>
           </div>
-
-
         </div>
       </section>
 
@@ -226,7 +210,9 @@ export default function MechanicalDepartment() {
             max-width: 100%;
           }
 
-          
+          .text-justify {
+            text-align: justify;
+          }
           
           .cs-dept-header {
             padding: 20px 0;
@@ -302,7 +288,6 @@ export default function MechanicalDepartment() {
           
           .cs-dept-profile-text {
             font-size: 1.1rem;
-             
           }
           
           /* Vertical building images */

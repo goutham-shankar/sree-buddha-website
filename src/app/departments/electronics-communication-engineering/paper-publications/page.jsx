@@ -60,6 +60,24 @@ const publicationsData = [
     details: "",
     year: 2024,
     type: "journal"
+  },
+   {
+    id: 7,
+    authors: ["Prof. Saritha N R"],
+    title: "Investigating Double Gate Lithium Niobate based metal ferroelectric metal insulator semiconductor (MFMIS) NCFETS through analytical modelling and simulation",
+    publication: " Prof. Saritha N R published paper titled Investigating Double Gate Lithium Niobate based metal ferroelectricmetal insulator semiconductor (MFMIS) NCFETS through analytical modelling and simulation in Suranaree J. Sci. Technol., October 2024",
+    details: "",
+    year: 2024,
+    type: "journal"
+  },
+  {
+    id: 8,
+    authors: ["Prof. T. R. Sangeeta"],
+    title: "Aperture coupled elliptic patch nanoantenna for low cost interchip/intrachip optical wireless communication",
+    publication: "Prof. T. R. Sangeeta published paper titled “Aperture coupled elliptic patch nanoantenna for low cost interchip/intrachip optical wireless communication” in International Journal of Communication Systems, August 2024",
+    details: "",
+    year: 2024,
+    type: "journal"
   }
 ];
 

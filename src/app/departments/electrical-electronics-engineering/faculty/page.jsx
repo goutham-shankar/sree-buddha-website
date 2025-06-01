@@ -16,7 +16,7 @@ export default function ComputerScienceDepartmentFaculty() {
     const faculty = [
         ["VINOD.jpg", "Dr. Vinod V P", "PhD", "HOD", "Power Systems"],
         ["eee_faculty1.jpg", "Sindhu V", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty2.jpg", "Abhilasha Parthan", "M.Tech", "Assistant Professor", "Industrial Drives and Control"],
+       
         ["eee_faculty3.jpg", "Juna John Daniel", "M.E", "Assistant Professor", "Power Electronics and Drives"],
     
         ["eee_faculty5.jpg", "Ananthu Vijayakumar", "M.Tech", "Assistant Professor", "Power Electronics & Power Systems"],
