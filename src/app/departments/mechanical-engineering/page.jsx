@@ -84,7 +84,7 @@ export default function MechanicalDepartment() {
               The department houses state-of the-art instructional laboratories, project laboratories and research laboratories. The department provides supportive learning
               environment to both UG and PG levels to prepare students to take up leading positions in academia and industry globally. The robust and engaging curriculum, along
               with hands-on learning, will empower students to elevate their careers to the next level. To perceive latest technologies and opportunities relating to Mechanical
-              Engineering, the department has entered into MOUs with major industries and research institutions in the country to enhance students' exposure to industry and research.
+              Engineering, the department has entered into MOUs with major industries and research institutions in the country to enhance student&apos;s exposure to industry and research.
             </p>
 
             <p className="text-justify">The faculty members of the department are actively involved in research activities which has led to more than 50 lakhs of research funding from various central and state agencies.
