@@ -67,7 +67,7 @@ const Management = () => {
         <img className="line" src={"/assets/Line_2.png"} alt="Line separator" />
 
         {/* Vice Chairman */}
-        <Person
+        {/* <Person
           name={managementData.Vice_chairman_name}
           position="Vice-Chairman"
           content={managementData.Vice_chairman_info}
@@ -76,7 +76,7 @@ const Management = () => {
               ? `${process.env.NEXT_PUBLIC_STRAPI}${managementData.Vice_chairman_image.url}`
               : "/assets/images/DharmaRajan.png"
           }
-        />
+        /> */}
         <img className="line" src={"/assets/Line_2.png"} alt="Line separator" />
 
         {/* Secretary */}
