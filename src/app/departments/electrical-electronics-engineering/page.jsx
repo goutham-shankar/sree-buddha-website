@@ -187,6 +187,12 @@ export default function ElectricalDepartment() {
 
   return (
       <div className="cs-dept-container bg-[#E6E6E6] text-gray-800 font-['Poppins',sans-serif] p-5 md:p-8">
+        <style jsx global>{`
+          .text-justify {
+            text-align: justify;
+          }
+        `}</style>
+
         <header className="cs-dept-header py-6 mb-6 border-b-2 border-[#845714]">
           <h1 className="text-[#845714] text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
             Department of Electrical and Electronics Engineering
@@ -237,21 +243,21 @@ export default function ElectricalDepartment() {
             transition={{ duration: 0.5 }}
           >
             <div className="cs-dept-profile-text text-lg space-y-4">
-              <p>
+              <p className="text-justify">
                 The department of Electrical and Electronics Engineering was established in 2004, as the sixth department 
                 of this college with an annual intake of 60 students. The Degree offered was B.Tech in Electrical and 
                 Electronics Engineering. An M.Tech programme in Electrical Machines was started in 2014 with an annual 
                 intake of 24 students.
               </p>
               
-              <p>
+              <p className="text-justify">
                 The department is dedicated to the promotion of excellence in Engineering education imparting knowledge 
                 to the students in the field of Electrical and Electronics Engineering so that they can successfully 
                 complete their graduation and get proper placement. Our students stands in a better position in Kerala 
                 Technological University and a good number of them occupy prestigious positions within the country and abroad.
               </p>
 
-              <p>
+              <p className="text-justify">
                 The laboratories are well equipped for the conduct of the existing courses. The facilities available in 
                 the department are sufficient to meet the requirements of B.Tech and M.Tech project works. The department 
                 has a well equipped computer center with internet access. In addition to the central library, there is a 
@@ -314,8 +320,6 @@ export default function ElectricalDepartment() {
                          )}
                        </div>
                      </section>
-               
       </div>
-   
   );
 }

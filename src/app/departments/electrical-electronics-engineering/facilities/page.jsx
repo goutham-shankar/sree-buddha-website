@@ -30,7 +30,7 @@ export default function EEEDepartmentFacilities() {
             description: 'This lab facilitates different AC and DC machines. This lab gives students an idea of starting, speed controlling, loading, and different other experiments in electrical machines.',
             image: '/assets/images/departments/facilities/eee/eee_facility2.jpg',
             inCharge: 'Mr. Sheleel F',
-            staff: 'Ms. Chitra P'
+            staff: 'Ms. Chithra P B'
         },
         {
             id: 'power-system',
@@ -38,7 +38,7 @@ export default function EEEDepartmentFacilities() {
             description: 'This lab facilitates different hardware and software experiments in power systems, including major experiments like impulse waveform generation, different types of relays, earth resistance measurement, cable, and transformer oil testing.',
             image: '/assets/images/departments/facilities/eee/eee_facility3.jpg',
             inCharge: 'Ms. Gayathri V',
-            staff: 'Ms. Chitra P'
+            staff: 'Ms. Chithra P B'
         },
         {
             id: 'measurement',
@@ -70,7 +70,7 @@ export default function EEEDepartmentFacilities() {
             description: 'This lab facilitates different types of servomotors, time response circuits, controllers, and control circuits.',
             image: '/assets/images/departments/facilities/eee/eee_facility7.jpg',
             inCharge: 'Mr. Vishnu J',
-            staff: 'Mr. Ratheesh'
+            staff: 'Mr. Ratheesh R'
         },
         {
             id: 'digital-embedded',
@@ -117,6 +117,12 @@ export default function EEEDepartmentFacilities() {
 
     return (
         <div className={`eee-department-facilities ${poppins.className}`}>
+            <style jsx global>{`
+                .text-justify {
+                    text-align: justify;
+                }
+            `}</style>
+            
             <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
                 <header className="mb-6 sm:mb-10 text-center">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-900 mb-2">
@@ -161,7 +167,7 @@ export default function EEEDepartmentFacilities() {
                     {/* Overview Tab */}
                     {activeTab === 'overview' && (
                         <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
-                            <p className="mb-4 sm:mb-6 text-sm sm:text-base text-gray-700 leading-relaxed">
+                            <p className="mb-4 sm:mb-6 text-sm sm:text-base text-gray-700 leading-relaxed text-justify">
                                 The Department of Electrical & Electronics Engineering is dedicated to the current needs of industry with the flexibility to tune its programmes according to the different requirements. Application of the state-of-the-art technology in various fields is one of the main focuses in the activities of the department. The department is well-equipped for training the students with a streamlined curriculum that provides an ambient atmosphere for learning and acquiring new skills. The department focuses on providing sound theoretical background as well as good practical exposure to the students for their future endeavors.
                             </p>
                             
@@ -190,7 +196,7 @@ export default function EEEDepartmentFacilities() {
                     {activeTab === 'research' && (
                         <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
                             <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-gray-800">Research and Consultancy</h3>
-                            <p className="mb-4 sm:mb-6 text-sm sm:text-base text-gray-700 leading-relaxed">
+                            <p className="mb-4 sm:mb-6 text-sm sm:text-base text-gray-700 leading-relaxed text-justify">
                                 In order to fit into the modern era of technology advancement, the Dept. of EEE lays considerable importance to in-house research. Due to the presence of a PG programme in the dept. in the area of Electrical Machines, much of the researches take place in this domain. These researches are carried out by the PG students, under the guidance of various faculties of the department. Some of the research topics in this domain are as follows:
                             </p>
                             
@@ -202,13 +208,13 @@ export default function EEEDepartmentFacilities() {
                                                 {index + 1}
                                             </div>
                                         </div>
-                                        <p className="text-xs sm:text-sm text-gray-700 flex-1">{topic}</p>
+                                        <p className="text-xs sm:text-sm text-gray-700 flex-1 text-justify">{topic}</p>
                                     </div>
                                 ))}
                             </div>
                             
                             <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-900">
-                                <p className="text-xs sm:text-sm text-gray-700">
+                                <p className="text-xs sm:text-sm text-gray-700 text-justify">
                                     To support these researches, in addition to the regular electrical machines lab, there is a full-fledged research lab in the department with custom-designed Induction Motor, BLDC motor and SRM motor drives and their controllers for analysis and advanced machine design & control software such as Maxwell, Simplorer, and MATLAB. Apart from the research carried out in the PG stream, many developments are also done by the UG students under the guidance of various faculties in the department.
                                 </p>
                             </div>
@@ -219,11 +225,11 @@ export default function EEEDepartmentFacilities() {
                     {activeTab === 'library' && (
                         <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
                             <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-gray-800">Department Library</h3>
-                            <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm text-gray-700">
-                                <p>
+                            <div className="space-y-3 sm:space-y-4">
+                                <p className="text-xs sm:text-sm text-gray-700 text-justify">
                                     Apart from a highly equipped Central Library, the Electrical and Electronics Engineering Department separately owns a standard library. This Department Library has several foreign and well-known publishers&apos; books and study materials related to Electrical Engineering along with the textbooks and reference books prescribed by the University of Kerala as part of the Electrical Engineering curriculum. The Department is proud as the Faculty Members and students rely on the library faithfully for their reference, development, and research activities.
                                 </p>
-                                <p>
+                                <p className="text-xs sm:text-sm text-gray-700 text-justify">
                                     Apart from the above-mentioned texts and references, the Department also takes the initiative in subscribing to various Technical Journals and Magazines. The Faculty Members and students having IEEE Membership help in updating the Department.
                                 </p>
                             </div>
@@ -264,7 +270,7 @@ export default function EEEDepartmentFacilities() {
                                         )}
                                         <div className="p-3 sm:p-4">
                                             <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">{lab.name}</h4>
-                                            <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-4 line-clamp-3 sm:line-clamp-none">{lab.description}</p>
+                                            <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-4 line-clamp-3 sm:line-clamp-none text-justify">{lab.description}</p>
                                             <div className="text-xs sm:text-sm text-gray-700">
                                                 <div className="flex flex-col sm:flex-row sm:items-start mb-1">
                                                     <span className="font-semibold sm:mr-2 sm:min-w-[100px]">Lab in Charge:</span>

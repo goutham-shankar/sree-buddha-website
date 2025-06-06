@@ -7,6 +7,15 @@ import { motion } from 'framer-motion';
 
 // Publication data structure
 const publicationsData = [
+    {
+    id: 1,
+    authors: ["Dr. Shamnamol G K"],
+    title: "Biosynthesis of zinc oxide nanoparticles using banana peduncle and its antimicrobial, antifungal, and photocatalytic degradation activity ",
+    publication: " Materials Research Innovation",
+    details: "https://doi.org/10.1080/14328917.2025.2487928 SCOPUS",
+    year: 2025,
+    type: "journal"
+  },
   {
     id: 1,
     authors: ["Prof. S. Meera Bai"],
