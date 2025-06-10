@@ -14,15 +14,15 @@ import "./style.css"
 export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
-        ["pavitha.jpg", "Pavitha P. P.", "B.Tech, M.Tech", "HoD", " Electronics"],
-        ["ambika.jpg", "Ambika Sekhar", "M.Tech", "Assistant Professor", " Microwave and Television Engineering"],
-        ["saritha.jpg", "Saritha N. R.", "M.Tech", "Assistant Professor", "Applied Electronics"],
-        ["sabi.jpg", "Sabi S.", "M.Tech", "Assistant Professor", "Microwave and Television Engineering"],
-        ["jasmin.jpg", "Jasmin Basheer", "M.Tech", "Assistant Professor", " Industrial Instrumentation and Control"],
-        ["pooja.jpg", "Pooja S. Mohan", "M.Tech", "Assistant Professor", "Optoelectronics and Communication Systems "],
-        ["sangeetha.jpg", "T. R. Sangeeta", "M.Tech", "Assistant Professor", "Communication Engineering"],
-        ["chinchu.jpg", "Chinchu S.", "M.Tech", "Assistant Professor", "Communication Engineering"],
-        ["hari.jpg", "Hari S.", "M.Tech", "Assistant Professor", "Wireless Networks and Applications"]
+        ["pavitha.jpg", "Ms .Pavitha P P", "B.Tech, M.Tech", "HoD", " Electronics"],
+        ["ambika.jpg", "Ms. Ambika Sekhar", "M.Tech", "Assistant Professor", " Microwave and Television Engineering"],
+        ["saritha.jpg", "Ms. Saritha N R", "M.Tech", "Assistant Professor", "Applied Electronics"],
+        ["sabi.jpg", "Mr. Sabi S", "M.Tech", "Assistant Professor", "Microwave and Television Engineering"],
+        ["jasmin.jpg", "Ms. Jasmin Basheer", "M.Tech", "Assistant Professor", " Industrial Instrumentation and Control"],
+        ["pooja.jpg", "Ms. Pooja S Mohan", "M.Tech", "Assistant Professor", "Optoelectronics and Communication Systems "],
+        ["sangeetha.jpg", "Ms. T R Sangeeta", "M.Tech", "Assistant Professor", "Communication Engineering"],
+        ["chinchu.jpg", "Ms. Chinchu S", "M.Tech", "Assistant Professor", "Communication Engineering"],
+        ["hari.jpg", "Mr. Hari S", "M.Tech", "Assistant Professor", "Wireless Networks and Applications"]
     ];
     
       

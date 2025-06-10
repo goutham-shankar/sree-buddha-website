@@ -315,7 +315,7 @@ export default function ComputerScienceDepartmentAchievements() {
                                                                                 />
                                                                             </div>
                                                                             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-yellow-900 text-white px-4 py-1 rounded-full text-sm font-bold">
-                                                                                9.4/10 CGPA
+                                                                            9.4/10 SGPA
                                                                             </div>
                                                                         </div>
                                                                     </div>
