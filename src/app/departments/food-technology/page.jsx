@@ -85,7 +85,7 @@ export default function ComputerScienceDepartment() {
      
      <p style={{ textAlign: "justify" }}>With a strong focus on Outcome-Based Education (OBE), the curriculum ensures graduates develop industry-relevant competencies, critical thinking abilities, and problem-solving skills. As an autonomous institution, the department continuously updates its programs to align with global food industry trends and regulatory standards.</p>
 
-     <p style={{ textAlign: "justify" }}>A student-centric approach is at the heart of the department's pedagogy, integrating experiential learning, industry collaborations, and research-driven projects. Faculty members, specializing in areas such as food safety, processing, biotechnology, and sustainable packaging, actively engage in research and consultancy, providing students with real-world exposure.</p>
+     <p style={{ textAlign: "justify" }}>A student-centric approach is at the heart of the department&apos;s pedagogy, integrating experiential learning, industry collaborations, and research-driven projects. Faculty members, specializing in areas such as food safety, processing, biotechnology, and sustainable packaging, actively engage in research and consultancy, providing students with real-world exposure.</p>
 
      <p style={{ textAlign: "justify" }}>With a commitment to innovation and societal impact, the department nurtures professionals who contribute to food security, safety, and sustainability, shaping graduates into leaders in the food technology sector.</p>
      
