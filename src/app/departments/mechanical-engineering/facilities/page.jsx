@@ -293,7 +293,6 @@ export default function MechanicalEngineeringDepartmentFacilities() {
       </div>
     </div>
   )}
-
           {/* Labs Tab */}
           {activeTab === 'labs' && (
             <div>
