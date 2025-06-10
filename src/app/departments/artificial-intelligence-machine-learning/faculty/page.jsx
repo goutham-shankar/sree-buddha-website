@@ -15,14 +15,14 @@ const poppins = Poppins({
 export default function AIDepartmentFaculty() {
 
     const faculty = [
-        ["ai_faculty_1.jpg", "Dr. Anil A.R", "M.Tech, PhD", "Associate Professor & HOD", "Digital Image Computing"],
+        ["ai_faculty_1.jpg", "Dr. Anil A R", "M.Tech, PhD", "Associate Professor & HOD", "Digital Image Computing"],
         ["ai_faculty_2.jpg", "Dr. Sunil S", "B.Tech, M.Tech, PhD", "Associate Professor", "Artificial Intelligence"],
-        ["ai_faculty_3.jpg", "Minu Lalitha Madhav", "B.Tech, M.Tech", "Assistant Professor", "Data Security"],
-        ["ai_faculty_4.jpg", "Parvathy S Kurup", "B.Tech, M.Tech", "Assistant Professor", "Machine Learning"],
-        ["ai_faculty_5.jpg", "Chinchu M.S", "B.Tech, M.Tech", "Assistant Professor", "Deep Learning"],
-        ["ai_faculty_6.jpg", "Divya M.K", "B.E, M.Tech", "Assistant Professor", "Artificial Intelligence"],
-        ["ai_faculty_7.jpg", "Lekshmi V.S", "B.Tech, M.Tech", "Assistant Professor", "Internet of Things"],
-        ["esther.jpg", "Esther Sara Thomson", " M.Tech", "Assistant Professor", "Computer Science and Engineering"]
+        ["ai_faculty_3.jpg", "Ms. Minu Lalitha Madhav", "B.Tech, M.Tech", "Assistant Professor", "Data Security"],
+        ["ai_faculty_4.jpg", "Ms. Parvathy S Kurup", "B.Tech, M.Tech", "Assistant Professor", "Machine Learning"],
+        ["ai_faculty_5.jpg", "Ms. Chinchu M S", "B.Tech, M.Tech", "Assistant Professor", "Deep Learning"],
+        ["ai_faculty_6.jpg", "Ms. Divya M K", "B.E, M.Tech", "Assistant Professor", "Artificial Intelligence"],
+        ["ai_faculty_7.jpg", "Ms. Lekshmi V S", "B.Tech, M.Tech", "Assistant Professor", "Internet of Things"],
+        ["esther.jpg", "Ms. Esther Sara Thomson", " M.Tech", "Assistant Professor", "Computer Science and Engineering"]
     ];
 
     return (

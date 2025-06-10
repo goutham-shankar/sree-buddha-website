@@ -15,19 +15,19 @@ export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
         ["civil_faculty_1.jpg", "Dr. Gouri Antherjanam", "Ph.D", "Professor & HoD", "Civil Engineering"],
-        ["civil_faculty_2.jpg", "Dr. Sivsankar S.", "Ph.D", "Professor", "Structural Engineering"],
+        ["civil_faculty_2.jpg", "Dr. Sivsankar S", "Ph.D", "Professor", "Structural Engineering"],
         ["civil_faculty_3.jpg", "Mr. Ashok Mathew", "M.Tech", "Assistant Professor", "Structural Engineering"],
-        ["civil_faculty_4.jpg", "Mr. Unnikrishnan S.", "M.Tech", "Assistant Professor", "Construction Engineering"],
-        ["civil_faculty_5.jpg", "Ms. Regi P. Mohan", "M.Tech", "Assistant Professor", "Environmental Geotechnology"],
+        ["civil_faculty_4.jpg", "Mr. Unnikrishnan S", "M.Tech", "Assistant Professor", "Construction Engineering"],
+        ["civil_faculty_5.jpg", "Ms. Regi P Mohan", "M.Tech", "Assistant Professor", "Environmental Geotechnology"],
         ["civil_faculty_6.jpg", "Ms. Sobha Elizabeth Thomas", "M.Tech", "Assistant Professor", "Structural Engineering"],
         ["civil_faculty_7.jpg", "Mr. Pradeep P", "M.Tech", "Assistant Professor", "Habitat Technology"],
-        ["civil_faculty_8.jpg", "Ms. Sreelekshmi S. (Leave)", "M.Tech", "Assistant Professor", "Transportation Engineering"],
+        ["civil_faculty_8.jpg", "Ms. Sreelekshmi S (Leave)", "M.Tech", "Assistant Professor", "Transportation Engineering"],
         ["civil_faculty_9.jpg", "Ms. Cinaya Tony", "M.Tech", "Assistant Professor", "Hydraulics Engineering"],
-        ["civil_faculty_10.jpg", "Ms. Ritzy R.", "M.Tech", "Assistant Professor", "Structural Engineering"],
+        ["civil_faculty_10.jpg", "Ms. Ritzy R", "M.Tech", "Assistant Professor", "Structural Engineering"],
         ["civil_faculty_11.jpg", "Ms. Namitha Chandran", "M.Tech", "Assistant Professor", "Civil Engineering"],
         ["civil_faculty_12.jpg", "Ms. Anusree Lal", "M.Tech", "Assistant Professor", "Structural Engineering"],
-        ["civil_faculty_13.jpg", "Mr. Sooraj S.", "M.Tech", "Assistant Professor", "Structural Engineering"],
-        ["aswathi.jpg", "Ms. Aswathy S. Kumar", "M.Tech", "Assistant Professor", "Structural Engineering"]
+        ["civil_faculty_13.jpg", "Mr. Sooraj S", "M.Tech", "Assistant Professor", "Structural Engineering"],
+        ["aswathi.jpg", "Ms. Aswathy S Kumar", "M.Tech", "Assistant Professor", "Structural Engineering"]
     ];
     
       

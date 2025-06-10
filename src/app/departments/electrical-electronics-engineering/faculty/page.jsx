@@ -15,14 +15,12 @@ export default function ComputerScienceDepartmentFaculty() {
 
     const faculty = [
         ["VINOD.jpg", "Dr. Vinod V P", "PhD", "HOD", "Power Systems"],
-        ["eee_faculty1.jpg", "Sindhu V", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-       
-        ["eee_faculty3.jpg", "Juna John Daniel", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-    
-        ["eee_faculty5.jpg", "Ananthu Vijayakumar", "M.Tech", "Assistant Professor", "Power Electronics & Power Systems"],
-        ["eee_faculty6.jpg", "Chama R Chandran", "M.E", "Assistant Professor", "Power Electronics and Drives"],
-        ["eee_faculty7.jpg", "Atheena A", "M.Tech", "Assistant Professor", "Power and Energy"],
-        ["eee_faculty8.jpg", "Athira B", "M.Tech", "Assistant Professor", "Power Systems"]
+        ["eee_faculty1.jpg", "Ms. Sindhu V", "M.E", "Assistant Professor", "Power Electronics and Drives"],
+        ["eee_faculty3.jpg", "Ms. Juna John Daniel", "M.E", "Assistant Professor", "Power Electronics and Drives"],
+        ["eee_faculty5.jpg", "Mr. Ananthu Vijayakumar", "M.Tech", "Assistant Professor", "Power Electronics & Power Systems"],
+        ["eee_faculty6.jpg", "Ms. Chama R Chandran", "M.E", "Assistant Professor", "Power Electronics and Drives"],
+        ["eee_faculty7.jpg", "Ms. Atheena A", "M.Tech", "Assistant Professor", "Power and Energy"],
+        ["eee_faculty8.jpg", "Ms. Athira B", "M.Tech", "Assistant Professor", "Power Systems"]
       ];
       
 

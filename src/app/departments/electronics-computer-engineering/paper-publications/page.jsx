@@ -7,7 +7,78 @@ import { motion } from 'framer-motion';
 
 // Publication data structure
 const publicationsData = [
-  
+  {
+    id: 1,
+    authors: ["Prof. Ambika sekhar"],
+    title: "Detecting pulmonary Embolism using deep learning algorithms",
+    publication: "Fifth International Conference on Electrical, Computer and Communication Technologies (ICECCT)",
+    details: "",
+    year: 2023,
+    type: "conference"
+  },
+  {
+    id: 2,
+    authors: ["Prof. Ambika sekhar"],
+    title: "Detecting and classifying pulmonary embolism using mobile Net with sliding window fusion algorithm",
+    publication: "International Conference on Recent Advances in Electrical, Electronics, Ubiquitous Communication and Computational Intelligence",
+    details: "",
+    year: 2024,
+    type: "conference"
+  },
+  {
+    id: 3,
+    authors: ["Prof. Sabi S"],
+    title: "Augmented reality for real world enhancement: Enabling object recognition and scenario interpretation through smart specs",
+    publication: "Recent Advance and Innovation in Science, Engineering, Technology and Management",
+    details: "",
+    year: 2024,
+    type: "conference"
+  },
+  {
+    id: 4,
+    authors: ["Prof. Hari S"],
+    title: "Speech Recognition For cerebral Palsy People Using Advanced Deep Learning Algorithms",
+    publication: "International journal of soft computing and Artificial Intelligence",
+    details: "",
+    year: 2024,
+    type: "journal"
+  },
+  {
+    id: 5,
+    authors: ["Prof. Ambika sekhar"],
+    title: "Scaled Siamese CNN based automatic classification algorithm for detecting pulmonary embolism",
+    publication: "Biomedical Engineering, Applications, Basis and Communication",
+    details: "",
+    year: 2024,
+    type: "journal"
+  },
+  {
+    id: 6,
+    authors: ["Prof. Pavitha P P"],
+    title: "RIOD: Reinforced image based object detection for unruly weather conditions",
+    publication: "Engineering, Technology and Applied Science research",
+    details: "",
+    year: 2024,
+    type: "journal"
+  },
+   {
+    id: 7,
+    authors: ["Prof. Saritha N R"],
+    title: "Investigating Double Gate Lithium Niobate based metal ferroelectric metal insulator semiconductor (MFMIS) NCFETS through analytical modelling and simulation",
+    publication: " Prof. Saritha N R published paper titled Investigating Double Gate Lithium Niobate based metal ferroelectricmetal insulator semiconductor (MFMIS) NCFETS through analytical modelling and simulation in Suranaree J. Sci. Technol., October 2024",
+    details: "",
+    year: 2024,
+    type: "journal"
+  },
+  {
+    id: 8,
+    authors: ["Prof. T. R. Sangeeta"],
+    title: "Aperture coupled elliptic patch nanoantenna for low cost interchip/intrachip optical wireless communication",
+    publication: "Prof. T. R. Sangeeta published paper titled “Aperture coupled elliptic patch nanoantenna for low cost interchip/intrachip optical wireless communication” in International Journal of Communication Systems, August 2024",
+    details: "",
+    year: 2024,
+    type: "journal"
+  }
 ];
 
 // Faculty members for filtering
