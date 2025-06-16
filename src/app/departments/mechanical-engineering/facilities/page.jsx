@@ -118,7 +118,7 @@ export default function MechanicalEngineeringDepartmentFacilities() {
       name: "CAD Lab",
       description: "CAD Lab has equipped with more than 85 Computer Systems with high end latest Configuration hardware. The software available include AutoCAD 2015, SolidWorks 2012, Pro/Engineer wildfire 3.0, SolidEdge, ANSYS 15, LS-DYNA, Materials Studio, MATLAB & Simulink, E Yantra (Design Software), I-DEAS, and CATIA V5R10 etc.",
       inCharge: "Mr.Arun.M",
-      staff: "Biju. K.C",
+      staff: "Biju K C",
       image: "/assets/images/departments/facilities/me/cad_lab.jpg",
       experiments: [
         "Structural analysis.",
@@ -160,7 +160,7 @@ export default function MechanicalEngineeringDepartmentFacilities() {
       name: "CIM Lab",
       description: "CIM laboratory is equipped with CNC production Lathe, CNC trainer Lathe, CNC Milling machine, Coordinate Measuring Machine, Vision Measuring Machine, Surface roughness tester and CADEM Software.",
       inCharge: "Mr.AnwarRajeev, Ms.Vidya.V",
-      staff: "Biju. K.C",
+      staff: "Biju K C",
       image: "/assets/images/departments/facilities/me/cim_lab.jpg",
       experiments: [
         "CNC part programming using CAM packages.",
@@ -174,7 +174,7 @@ export default function MechanicalEngineeringDepartmentFacilities() {
       name: "Mechanical Engineering Lab",
       description: "The equipments are used to conduct the various heat transfer experiments, to practice calibration of thermometer and pressure gauges and to do experiments on dynamics.",
       inCharge: "Mr. Renjith Raj.R",
-      staff: "Akhil Chandran, K.K.Subramanian",
+      staff: "Akhil Chandran, K K Subramanian",
       image: "/assets/images/departments/facilities/me/mechanical_engineering.jpg",
       experiments: [
         "Determination of LMTD and effectiveness of parallel flow, Counter flow and cross flow heat exchangers (double pipe heat exchanger)",
