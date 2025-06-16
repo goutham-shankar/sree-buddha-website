@@ -126,7 +126,7 @@ export default function ArtificialIntelligenceDepartment() {
             </section>
 
            <section className="container mx-auto px-4 py-10">
-                           <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 text-yellow-900 mb-6">
+                           <h2 className="text-3xl font-bold text-amber-800 pb-3 border-b-2 mb-6">
                              Department Gallery
                            </h2>
                    
