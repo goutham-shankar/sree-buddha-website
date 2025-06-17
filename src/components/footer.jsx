@@ -1,7 +1,37 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [rtiData, setRtiData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchRtiData = async () => {
+      try {
+        const response = await fetch('https://sbce.ac.in/api/rti?populate=*');
+        const data = await response.json();
+        setRtiData(data);
+      } catch (error) {
+        console.error('Error fetching RTI data:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchRtiData();
+  }, []);
+
+  const getRtiUrl = () => {
+    if (!rtiData || !rtiData.data || !rtiData.data.file || !rtiData.data.file.url) {
+      return '#';
+    }
+    
+    // Construct full URL with base domain
+    const baseUrl = 'https://sbce.ac.in';
+    return baseUrl + rtiData.data.file.url;
+  };
 
   return (
     <footer className="bg-black  list-none text-white pt-12 pb-6">
@@ -37,7 +67,16 @@ export default function Footer() {
               <li><a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors text-sm">NBA</a></li>
               <li><a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors text-sm">NAAC</a></li>
               <li><a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors text-sm">AICTE EoA</a></li>
-              
+              <li>
+                <a 
+                  href={getRtiUrl()} 
+                  className={`text-gray-400 hover:text-yellow-500 transition-colors text-sm ${isLoading ? 'opacity-50' : ''}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  RTI Cell
+                </a>
+              </li>
             </ul>
           </div>
 
