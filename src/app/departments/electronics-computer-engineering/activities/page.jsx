@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function erDepartmentActivities() {
+export default function ErDepartmentActivities() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
